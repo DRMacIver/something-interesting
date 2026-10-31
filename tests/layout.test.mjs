@@ -409,6 +409,31 @@ test("a last line stranded on its own beside the art doesn't count as fitting", 
   assert.equal(result.fits, false);
 });
 
+test("block text that would narrow sharply partway down doesn't count as fitting", () => {
+  // Full width at the top, then only the left half, as beside another
+  // character's balloon.
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, (_, y) => (y < 20 ? [[0, 200]] : [[0, 100]])),
+  };
+  const panel = makePanel(spec, 200, 100, 0);
+  const text = "aaaaaaaaa ".repeat(10);
+  assert.equal(layoutText(panel, text, opts({ align: "left" })).fits, true);
+  assert.equal(layoutText(panel, text, opts({ align: "left", block: true })).fits, false);
+});
+
+test("block text may sit wholly in a narrow space", () => {
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, () => [[0, 100]]),
+  };
+  const panel = makePanel(spec, 200, 100, 0);
+  const result = layoutText(panel, "aaaaaaaaa ".repeat(6), opts({ align: "left", block: true }));
+  assert.equal(result.fits, true);
+});
+
 test("lines around a broken word are still balanced", () => {
   const panel = panelWithHeadroom(100);
   // The long word has to be broken, but the lines before it can still be
@@ -435,4 +460,85 @@ test("text that isn't pushed aside stays where it is", () => {
   const panel = panelWithHeadroom(100);
   const result = layoutText(panel, "aaaa bbbb", opts({ align: "left", awayFromArt: true }));
   assert.equal(result.lines[0].x, 0);
+});
+
+test("short text with room to spare drops down towards the art", () => {
+  // Lots of headroom above the art, and only a line of text.
+  const panel = panelWithHeadroom(200);
+  const result = layoutText(panel, "aaaa bbbb", opts({ drop: true, keepGap: 15 }));
+  assert.deepEqual(result.lines.map((l) => l.text), ["aaaa bbbb"]);
+  const [line] = result.lines;
+  // The art starts at y = 200; the line ends 15 above it, give or take.
+  assert.ok(line.y + line.height <= 185 + 1e-9, `ends at ${line.y + line.height}`);
+  assert.ok(line.y + line.height > 180, `ends at ${line.y + line.height}`);
+});
+
+test("dropping never re-wraps the text", () => {
+  // The art beside the bottom of the headroom would force a narrower line.
+  const panel = panelWithHeadroom(200);
+  const result = layoutText(panel, "aaaa bbbb cccc dddd eeee", opts({ drop: true }));
+  const plain = layoutText(panel, "aaaa bbbb cccc dddd eeee", opts());
+  assert.deepEqual(result.lines.map((l) => l.text), plain.lines.map((l) => l.text));
+});
+
+test("text that fills its space stays at the top", () => {
+  // Two full-width lines fill the headroom; any lower and they'd re-wrap
+  // round the art.
+  const panel = panelWithHeadroom(20);
+  const result = layoutText(panel, "aaaa bbbb cccc dddd eeee ffff gggg hhhh", opts({ drop: true }));
+  assert.equal(result.lines[0].y, 0);
+});
+
+test("text drops no lower than the limit it's given", () => {
+  const panel = panelWithHeadroom(200);
+  const result = layoutText(panel, "aaaa bbbb", opts({ drop: true, dropLimit: 100 }));
+  const [line] = result.lines;
+  assert.ok(line.y + line.height <= 100 + 1e-9);
+  assert.ok(line.y + line.height > 95);
+});
+
+test("text moved away from the art goes no further than it's allowed", () => {
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, () => [[60, 200]]),
+  };
+  const panel = makePanel(spec, 200, 100, 0);
+  const result = layoutText(panel, "aaaa", opts({ align: "left", awayFromArt: true, awayLimit: 30 }));
+  assert.equal(result.lines[0].x, 90);
+});
+
+test("text dropped beside its speaker stays beside them", () => {
+  // Art down the left side; the text drops down beside it.
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, () => [[60, 200]]),
+  };
+  const panel = makePanel(spec, 200, 300, 0);
+  const result = layoutText(
+    panel,
+    "aaaa",
+    opts({ align: "left", awayFromArt: true, awayLimit: 30, drop: true, dropLimit: 250 }),
+  );
+  const [line] = result.lines;
+  assert.ok(line.y > 200, "it has dropped");
+  assert.equal(line.x, 60);
+});
+
+test("once the panels are sized, short text drops towards its speaker", () => {
+  // One panel needs lots of headroom; the other only has a few words, and
+  // its speaker's mouth is 10px into its art.
+  const spec = { ...artRightBlocked, drop: true, speakerY: 10, keepGap: 5 };
+  const result = fitPanels([artRightBlocked, spec], ["word ".repeat(40), "aaaa"], {
+    ...opts(),
+    cellWidth: 100,
+    padding: 0,
+  });
+  assert.equal(result.fits, true);
+  const panel = result.panels[1];
+  const [line] = result.layouts[1].lines;
+  const mouth = panel.artTop + 10 * panel.scale;
+  assert.ok(line.y + line.height <= mouth - 5 + 1e-9, `ends at ${line.y + line.height}, mouth at ${mouth}`);
+  assert.ok(line.y > 20, "it has dropped");
 });

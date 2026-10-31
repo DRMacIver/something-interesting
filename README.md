@@ -39,15 +39,37 @@ Everything is static. On GitHub, enable Pages for the repository with
   is built from Watterson's own lettering; see below.
 - `js/layout.js` is the text-flow engine: it places text line by line,
   using the widest gap the art leaves free at each height, keeps a straight
-  left edge unless the art pushes lines well aside, and finds the smallest
-  panel height that fits everything.
+  left edge unless the art pushes lines well aside, keeps a balloon's text
+  in one block rather than squeezing it into a gap partway down, finds the
+  smallest panel height that fits everything, and then drops short text
+  down towards whoever is speaking.
 - `js/balloon.js` shapes the speech balloons in Watterson's manner, as
   worked out in [docs/balloon-study.md](docs/balloon-study.md): balloons
   near the top of a panel hang from its border, outlines follow the text in
   smooth curves, and tails leave from wherever gives the clearest path to
-  the speaker's face.
-- `js/app.js` draws the comic on a canvas. The text is stored in the URL,
-  so links are shareable.
+  the speaker's face (running all the way down to them when the balloon
+  has had to go far away).
+- `js/comic.js` draws the comic on a canvas and reports what it drew;
+  `js/app.js` is the page around it. The text is stored in the URL, so
+  links are shareable.
+
+## Checking the lettering
+
+`js/checks.js` holds programmatic checks that the lettering looks
+reasonable: text stays in its panel and off the art, balloons enclose their
+text with room to spare, stay off the art and other balloons' text, have no
+sharp corners, and have tails that point at their speaker, end near them,
+aren't needlessly long and don't run into other balloons.
+<http://localhost:8765/tools/checks.html> draws the comic with texts of many
+lengths in each panel and runs the checks on each (`?only=<scenario name>`
+shows one at full size).
+
+## Tests
+
+```bash
+npm test
+uv run pytest
+```
 
 ## The font
 

@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 
-import { balloonOutline, balloonTail } from "../js/balloon.js";
+import { balloonOutline, balloonTail, clearOf } from "../js/balloon.js";
 
 const line = (x, y, width, height = 10) => ({ x, y, width, height });
 
@@ -232,6 +232,44 @@ test("the tail leaves the balloon towards the speaker", () => {
   assert.ok(Math.abs(tail.tip[1] - 140) < 1);
 });
 
+test("a balloon far from its speaker gets a long tail, ending within reach of them", () => {
+  // The speaker's head starts at y = 360, their mouth further on.
+  const head = ([, y]) => y < 360;
+  const tail = balloonTail(square, [50, 400], tailOptions({ reach: 30, isFree: head }));
+  // Within reach of the head (give or take the search's steps) and clear of it.
+  assert.ok(tail.tip[1] >= 325 && tail.tip[1] <= 355, `tip at ${tail.tip[1]}`);
+});
+
+test("a balloon near its speaker's head gets an ordinary tail, however far the mouth", () => {
+  const head = ([, y]) => y < 160;
+  const tail = balloonTail(square, [50, 400], tailOptions({ reach: 30, isFree: head }));
+  assert.ok(Math.abs(tail.tip[1] - 140) < 1, `tip at ${tail.tip[1]}`);
+});
+
+test("a balloon right by the art gets an ordinary tail, even with a clear run past it to the speaker", () => {
+  // A head just below the balloon's left half; the speaker's mouth is far
+  // off down to the right, with nothing in the way.
+  const head = ([x, y]) => !(x < 50 && y > 110);
+  const tail = balloonTail(square, [400, 400], tailOptions({ reach: 30, isFree: head }));
+  const base = [(tail.base[0][0] + tail.base[1][0]) / 2, (tail.base[0][1] + tail.base[1][1]) / 2];
+  const length = Math.hypot(tail.tip[0] - base[0], tail.tip[1] - base[1]);
+  // maxLength from the outline (the base cuts across the corner).
+  assert.ok(length <= 50, `${length} long`);
+});
+
+test("only the art, not other balloons, keeps a stranded balloon's tail short", () => {
+  // Another balloon just below this one's right side, which the tail must
+  // keep clear of.
+  const other = ([x, y]) => !(x > 75 && x < 200 && y > 105 && y < 300);
+  const head = ([, y]) => y < 360;
+  const tail = balloonTail(
+    square,
+    [50, 400],
+    tailOptions({ reach: 30, isFree: (p) => head(p) && other(p), isArtFree: head }),
+  );
+  assert.ok(tail.tip[1] >= 325, `tip at ${tail.tip[1]}`);
+});
+
 test("the tail stops short of the speaker", () => {
   const tail = balloonTail(square, [50, 120], tailOptions());
   assert.ok(tail.tip[1] <= 115 + 1e-6);
@@ -434,4 +472,28 @@ test("a sweep in under shorter last lines is one smooth curve", () => {
   // nowhere does it bend as tightly as twice an ordinary corner.
   const r = tightest(outline, ([x, y]) => x > 450 && y > 150 && y < 450);
   assert.ok(r > 2 * cap, `curves as tightly as ${r}`);
+});
+
+test("a point is clear of other balloons only outside them and a margin round them", () => {
+  const clear = clearOf([square], 10);
+  assert.equal(clear([50, 50]), false, "inside");
+  assert.equal(clear([105, 50]), false, "within the margin");
+  assert.equal(clear([115, 50]), true, "outside the margin");
+  assert.equal(clear([115, 115]), true, "off a corner");
+});
+
+test("a tail kept clear of another balloon leaves from elsewhere", () => {
+  // Another balloon right beside the direct route to the speaker.
+  const other = [
+    [110, 90],
+    [200, 90],
+    [200, 160],
+    [110, 160],
+  ];
+  const clear = clearOf([other], 5);
+  const tail = balloonTail(square, [150, 250], tailOptions({ isFree: clear }));
+  assert.ok(tail);
+  const [b1, b2] = tail.base;
+  const points = [b1, b2, tail.bend, tail.tip];
+  for (const p of points) assert.ok(clear(p), `${p} is too close to the other balloon`);
 });

@@ -507,7 +507,13 @@ function walk(polygon, k, t, distance) {
 // lets its tip get closest to the speaker, so it goes round a head in the
 // way rather than stopping at it. Its tip stops `gap` short of the speaker
 // and of anywhere isFree([x, y]) is false (the artwork), and it is between
-// minLength and maxLength long. A tail cut short by the art reads as
+// minLength and maxLength long, unless the balloon is stranded, with no
+// art within `reach` of it and so much open space on the way to the
+// speaker that it takes a longer tail to end within `reach` of them (or of
+// the art in the way, which is usually their head).
+// isArtFree(point) says whether a point is clear of the art alone (by
+// default, isFree).
+// A tail cut short by the art reads as
 // pointing at whatever it ran into, and so does one that points at the
 // speaker through some of the art (other than the last clearSight of the
 // way, round the speaker's mouth itself), so such tails count
@@ -524,18 +530,24 @@ export function balloonTail(
     blockedPenalty = 0,
     clearSight = null,
     curvePenalty = width,
+    reach = Infinity,
+    isArtFree = isFree,
   },
 ) {
   const step = width / 4;
   const outward = outwardSign(polygon);
+  const stranded =
+    reach < Infinity && !resampled(polygon, step).some((v) => artWithin(v, reach, 2 * step, isArtFree));
   let best = null;
+  // Try starting points every `step` along the outline.
+  let along = 0;
   for (let k = 0; k < polygon.length; k++) {
     const a = polygon[k];
     const b = polygon[(k + 1) % polygon.length];
     const edge = Math.hypot(b[0] - a[0], b[1] - a[1]);
     if (edge < 1e-9) continue;
     const normal = [((b[1] - a[1]) / edge) * outward, (-(b[0] - a[0]) / edge) * outward];
-    for (let along = 0; along < edge; along += step) {
+    for (; along < edge; along += step) {
       const t = along / edge;
       const p = [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
       const distance = Math.hypot(speaker[0] - p[0], speaker[1] - p[1]);
@@ -544,9 +556,13 @@ export function balloonTail(
       const dy = (speaker[1] - p[1]) / distance;
       // It has to head out of the balloon, not along or back across it.
       if (dx * normal[0] + dy * normal[1] < 0.2) continue;
-      // The longest tail, up to maxLength, whose curve keeps clear of the
-      // art and stops short of the speaker.
-      const full = Math.min(maxLength, distance - gap);
+      // The longest tail, up to maxLength (or as far as reach needs), whose
+      // curve keeps clear of the art and stops short of the speaker.
+      let open = 0;
+      if (stranded && distance - reach > maxLength) {
+        while (open < distance && isFree([p[0] + dx * open, p[1] + dy * open])) open += step;
+      }
+      const full = Math.min(Math.max(maxLength, open - reach), distance - gap);
       for (const curved of [false, true]) {
         let length = full;
         let shape = null;
@@ -569,6 +585,8 @@ export function balloonTail(
         if (!best || score < best.score) best = { k, t, ...shape, score };
       }
     }
+    // Carry the walk on round the next edge.
+    along -= edge;
   }
   if (!best) return null;
   return {
@@ -579,6 +597,30 @@ export function balloonTail(
     bend: best.bend,
     tip: best.tip,
   };
+}
+
+// The points of a polygon, leaving out any closer than `spacing` to the
+// last one kept.
+function resampled(polygon, spacing) {
+  const out = [polygon[0]];
+  for (const p of polygon) {
+    const last = out[out.length - 1];
+    if (Math.hypot(p[0] - last[0], p[1] - last[1]) >= spacing) out.push(p);
+  }
+  return out;
+}
+
+// Whether there's any art (anywhere isArtFree is false) within `radius` of
+// a point, looking every `step`.
+function artWithin([px, py], radius, step, isArtFree) {
+  for (let r = step; r <= radius; r += step) {
+    const n = Math.max(8, Math.ceil((2 * Math.PI * r) / step));
+    for (let k = 0; k < n; k++) {
+      const a = (2 * Math.PI * k) / n;
+      if (!isArtFree([px + r * Math.cos(a), py + r * Math.sin(a)])) return true;
+    }
+  }
+  return false;
 }
 
 // A tail `length` long from p, ending up heading along `direction`: straight,
@@ -611,4 +653,59 @@ function curveClear({ start, bend, tip }, gap, isFree) {
   const d = Math.hypot(dx, dy) || 1;
   for (let s = 1; s <= gap; s += 1) points.push([tip[0] + (dx / d) * s, tip[1] + (dy / d) * s]);
   return points.every(isFree);
+}
+
+// Whether points are clear of all the `polygons` (other balloons, say):
+// outside them and at least `margin` from their edges. Tails ask this of a
+// great many points, so it's worked out once on a grid half the margin
+// across, and looked up.
+export function clearOf(polygons, margin) {
+  const cell = Math.max(margin / 2, 0.5);
+  const grids = polygons.map((polygon) => {
+    const outline = coarsen(polygon, cell);
+    const xs = polygon.map((p) => p[0]);
+    const ys = polygon.map((p) => p[1]);
+    const x0 = Math.min(...xs) - margin;
+    const y0 = Math.min(...ys) - margin;
+    const w = Math.ceil((Math.max(...xs) + margin - x0) / cell) + 1;
+    const h = Math.ceil((Math.max(...ys) + margin - y0) / cell) + 1;
+    const blocked = new Uint8Array(w * h);
+    for (let j = 0; j < h; j++) {
+      for (let i = 0; i < w; i++) {
+        const p = [x0 + (i + 0.5) * cell, y0 + (j + 0.5) * cell];
+        blocked[j * w + i] = inside(outline, p) || distanceTo(outline, p) < margin ? 1 : 0;
+      }
+    }
+    return { x0, y0, w, h, blocked };
+  });
+  return ([px, py]) =>
+    grids.every(({ x0, y0, w, h, blocked }) => {
+      const i = Math.floor((px - x0) / cell);
+      const j = Math.floor((py - y0) / cell);
+      return i < 0 || j < 0 || i >= w || j >= h || !blocked[j * w + i];
+    });
+}
+
+// The polygon with points closer than `spacing` to the last one dropped.
+function coarsen(points, spacing) {
+  const out = [points[0]];
+  for (const p of points) {
+    const last = out[out.length - 1];
+    if (Math.hypot(p[0] - last[0], p[1] - last[1]) >= spacing) out.push(p);
+  }
+  return out;
+}
+
+function distanceTo(polygon, [px, py]) {
+  let best = Infinity;
+  for (let k = 0; k < polygon.length; k++) {
+    const [ax, ay] = polygon[k];
+    const [bx, by] = polygon[(k + 1) % polygon.length];
+    const dx = bx - ax;
+    const dy = by - ay;
+    const lengthSq = dx * dx + dy * dy;
+    const t = lengthSq ? Math.min(1, Math.max(0, ((px - ax) * dx + (py - ay) * dy) / lengthSq)) : 0;
+    best = Math.min(best, Math.hypot(px - (ax + dx * t), py - (ay + dy * t)));
+  }
+  return best;
 }

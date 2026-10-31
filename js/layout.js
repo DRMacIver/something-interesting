@@ -9,8 +9,8 @@
 // text may go on that row of the art. spec.reserved is a list of
 // [x0, y0, x1, y1] rectangles, in art pixels (y may be negative, above the
 // art), taken up by something else, such as another character's balloon.
-// spec.margin and spec.awayFromArt, if given, override the layout options of
-// the same names for that panel.
+// spec.margin, spec.awayFromArt, spec.awayLimit and spec.block, if given,
+// override the layout options of the same names for that panel.
 //
 // padding keeps text away from the panel's edges: a number, or {x, y} to
 // pad the sides and the top and bottom differently.
@@ -133,8 +133,9 @@ function firstPiece(word, width, fits) {
 //
 // options: measure(text, fontSize), fontSize, lineHeight (a multiple of the
 // font size), margin (clearance from the art), align ("left" | "center"),
-// minLineWidth (narrower gaps are skipped; defaults to 3 em), awayFromArt
-// (see moveAwayFromArt).
+// minLineWidth (narrower gaps are skipped; defaults to 3 em), startY (where
+// the first line goes; defaults to the top padding), awayFromArt and
+// awayLimit (see moveAwayFromArt), drop, dropLimit and keepGap (see drop).
 //
 // Left-aligned text keeps a straight left edge, as Watterson's does, unless
 // the art pushes some lines well aside: neighbouring lines all start where
@@ -143,7 +144,9 @@ function firstPiece(word, width, fits) {
 //
 // Line breaks are then chosen to even out the line lengths of each
 // paragraph (see balance), and a last line left on its own beside the art,
-// away from the rest of the text, counts as not fitting.
+// away from the rest of the text, counts as not fitting, as does text with
+// options.block set that would squeeze into a narrower space partway down
+// (see squeezed).
 export function layoutText(panel, text, options) {
   let result;
   if (options.align !== "left") {
@@ -162,22 +165,54 @@ export function layoutText(panel, text, options) {
   }
   if (!result.fits) return result;
   balance(result, options);
-  if (options.awayFromArt && options.align === "left") moveAwayFromArt(result, panel);
-  return { ...result, fits: !stranded(result) };
+  if (options.awayFromArt && options.align === "left") {
+    moveAwayFromArt(result, panel, options.awayLimit ?? Infinity);
+  }
+  result = { ...result, fits: !stranded(result) && !(options.block && squeezed(result)) };
+  if (options.drop && result.fits && result.lines.length) return drop(panel, text, options, result);
+  return result;
 }
 
-// Watterson tucks a balloon into the corner away from whoever it has had
-// to make room for: when lines have been pushed aside by the art, move each
-// run of them that share a left edge to the far side of their space, as far
-// as the tightest of them allows.
-function moveAwayFromArt({ lines }, panel) {
+// Text that has room to spare drops down towards whoever's speaking: as far
+// as it can go without its lines changing (no re-wrapping round the art)
+// and without its last line going below dropLimit, less keepGap. Once
+// there it stays beside them rather than moving away from the art.
+function drop(panel, text, options, result) {
+  const lines = result.lines.map((l) => l.text).join("\n");
+  const limit = options.dropLimit ?? Infinity;
+  const at = (offset) =>
+    layoutText(panel, text, { ...options, drop: false, awayFromArt: false, startY: panel.padY + offset });
+  const same = (layout) => {
+    const last = layout.lines[layout.lines.length - 1];
+    return (
+      layout.fits &&
+      layout.lines.map((l) => l.text).join("\n") === lines &&
+      last.y + last.height <= limit + 1e-9
+    );
+  };
+  let lo = 0;
+  let hi = panel.height;
+  while (hi - lo > 0.5) {
+    const mid = (lo + hi) / 2;
+    if (same(at(mid))) lo = mid;
+    else hi = mid;
+  }
+  const offset = Math.max(0, lo - (options.keepGap ?? 0));
+  return offset > 0 ? at(offset) : result;
+}
+
+// Watterson leaves room between a balloon and whoever it has had to make
+// room for: when lines have been pushed aside by the art, move each run of
+// them that share a left edge further away, as far as the tightest of them
+// allows but no more than `limit`.
+function moveAwayFromArt({ lines }, panel, limit) {
   let i = 0;
   while (i < lines.length) {
     let j = i;
     while (j + 1 < lines.length && Math.abs(lines[j + 1].x - lines[i].x) < 1e-6) j++;
     if (lines[i].x > panel.padX + 1e-6) {
       const run = lines.slice(i, j + 1);
-      const room = Math.min(...run.map((l) => l.interval[1] - (l.x + l.width)));
+      const room = Math.min(limit, ...run.map((l) => l.interval[1] - (l.x + l.width)));
       if (room > 0) for (const line of run) line.x += room;
     }
     i = j + 1;
@@ -191,6 +226,17 @@ function stranded({ lines, spaces }) {
   if (n < 2) return false;
   const roomy = alignedMinimums([spaces[n - 2], spaces[n - 1]]);
   return roomy[0] !== roomy[1];
+}
+
+// Text lettered as one block, as in a balloon, has room of much the same
+// width on every line: it doesn't narrow partway down to squeeze into a gap
+// (beside someone else's balloon, say) with less than BLOCK_SHARE of the
+// room of its widest line.
+const BLOCK_SHARE = 0.7;
+
+function squeezed({ lines }) {
+  const rooms = lines.map(({ interval: [a, b] }) => b - a);
+  return Math.min(...rooms) < BLOCK_SHARE * Math.max(...rooms);
 }
 
 // Re-break each paragraph's lines to even out their lengths, keeping the
@@ -335,7 +381,7 @@ function flow(panel, text, options, minimums) {
   const lines = [];
   // The space each line had, before any alignment.
   const spaces = [];
-  let y = panel.padY;
+  let y = options.startY ?? panel.padY;
   let overflow = false;
 
   const result = () => ({ lines, spaces, fits: !overflow, lineHeight, fontSize });
@@ -428,7 +474,39 @@ export function layoutColumn(text, { measure, fontSize, lineHeight = 1.2, width 
 // Lay out one text per panel spec, sharing a cell size, with the cells as
 // short as possible while still fitting every text and every reserved area
 // (but never shorter than the art).
+//
+// Then any panel whose spec says `drop` has its text dropped down towards
+// its speaker (see drop), no lower than spec.speakerY (in art pixels) less
+// spec.keepGap.
 export function fitPanels(specs, texts, options) {
+  const best = fitHeight(specs, texts, options);
+  if (!best.fits) return best;
+  best.layouts = best.layouts.map((layout, i) => {
+    const panel = best.panels[i];
+    const { spec } = panel;
+    if (!spec.drop) return layout;
+    return layoutText(panel, texts[i] ?? "", {
+      ...panelOptions(panel, options),
+      drop: true,
+      dropLimit:
+        spec.speakerY === undefined ? Infinity : panel.artTop + spec.speakerY * panel.scale,
+      keepGap: spec.keepGap ?? 0,
+    });
+  });
+  return best;
+}
+
+function panelOptions(panel, options) {
+  return {
+    ...options,
+    margin: panel.spec.margin ?? options.margin,
+    awayFromArt: panel.spec.awayFromArt ?? options.awayFromArt,
+    awayLimit: panel.spec.awayLimit ?? options.awayLimit,
+    block: panel.spec.block ?? options.block,
+  };
+}
+
+function fitHeight(specs, texts, options) {
   const { cellWidth, padding = 0, fontSize } = options;
   const artHeight = Math.max(
     ...specs.map((spec) => spec.height * (cellWidth / spec.width)),
@@ -439,11 +517,7 @@ export function fitPanels(specs, texts, options) {
       makePanel(spec, cellWidth, cellHeight, padding),
     );
     const layouts = panels.map((panel, i) =>
-      layoutText(panel, texts[i] ?? "", {
-        ...options,
-        margin: panel.spec.margin ?? options.margin,
-        awayFromArt: panel.spec.awayFromArt ?? options.awayFromArt,
-      }),
+      layoutText(panel, texts[i] ?? "", panelOptions(panel, options)),
     );
     const inside = panels.every((panel) =>
       reservedAreas(panel).every(([, y0]) => y0 >= 0),
