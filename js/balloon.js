@@ -602,7 +602,8 @@ export function balloonTail(
       // curve keeps clear of the art and stops short of the speaker.
       let open = 0;
       if (stranded && distance - reach > maxLength) {
-        while (open < distance && isFree([p[0] + dx * open, p[1] + dy * open])) open += step;
+        // A pixel at a time, so as not to step over a thin line of art.
+        while (open < distance && isFree([p[0] + dx * open, p[1] + dy * open])) open += 1;
       }
       const full = Math.min(Math.max(maxLength, open - reach), distance - gap);
       for (const curved of [false, true]) {
@@ -692,7 +693,10 @@ function sightClear(tip, speaker, slack, isFree) {
 // Whether a tail's curve, and a little way beyond its tip, is clear of the
 // art.
 function curveClear({ start, bend, tip }, gap, isFree) {
-  const points = quadratic(start, bend, tip, 24).slice(1);
+  // Points no more than 2px apart, so as not to step over a thin line of
+  // art, however long the tail.
+  const length = Math.hypot(bend[0] - start[0], bend[1] - start[1]) + Math.hypot(tip[0] - bend[0], tip[1] - bend[1]);
+  const points = quadratic(start, bend, tip, Math.max(24, Math.ceil(length / 2))).slice(1);
   const dx = tip[0] - bend[0];
   const dy = tip[1] - bend[1];
   const d = Math.hypot(dx, dy) || 1;

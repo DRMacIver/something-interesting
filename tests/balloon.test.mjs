@@ -291,6 +291,14 @@ test("art by the middle of a side, away from the corners, still keeps the tail s
   assert.ok(length <= 50, `${length} long`);
 });
 
+test("a long tail stops at a thin line of art across its way, not through it", () => {
+  // A stranded balloon, and a 2px line (a strand of hair, say) between it
+  // and its speaker.
+  const art = ([, y]) => !(y >= 300 && y < 302);
+  const tail = balloonTail(square, [50, 600], tailOptions({ reach: 30, isFree: art }));
+  assert.ok(tail.tip[1] < 300, `tip at ${tail.tip[1]}`);
+});
+
 test("the tail stops short of the speaker", () => {
   const tail = balloonTail(square, [50, 120], tailOptions());
   assert.ok(tail.tip[1] <= 115 + 1e-6);

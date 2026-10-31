@@ -182,7 +182,9 @@ export function checkSpeech(speech, others, { cap, panel, open, style, smoothnes
     }
   }
   const visible = stretches.flat();
-  const nearest = Math.min(...visible.flatMap((p) => boxes.map((b) => distanceToBox(p, b))));
+  // (A loop: a big balloon has too many points to spread into Math.min.)
+  let nearest = Infinity;
+  for (const p of visible) for (const b of boxes) nearest = Math.min(nearest, distanceToBox(p, b));
   if (nearest / cap < LIMITS.clearance) {
     problems.push(problem("clearance", `the outline comes within ${(nearest / cap).toFixed(2)} caps of the lettering`));
   }
