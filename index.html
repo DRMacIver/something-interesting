@@ -21,7 +21,8 @@
       <h1>Two Types of Things</h1>
       <p>
         Calvin's dad has a theory. Write it in the first three panels; the
-        text flows around the artwork and the panels grow to fit.
+        text flows around the artwork, the balloons fit themselves to it, and
+        the panels grow to make room.
       </p>
     </header>
 
@@ -39,6 +40,10 @@
           <span>Panel 3</span>
           <textarea id="text3" rows="6" spellcheck="true"></textarea>
         </label>
+        <label class="panel-text">
+          <span>Calvin's reply (panel 2)</span>
+          <textarea id="text4" rows="1" spellcheck="true"></textarea>
+        </label>
 
         <details class="options" open>
           <summary>Lettering</summary>
@@ -53,7 +58,7 @@
             </label>
             <label>
               <span>Size <output id="size-value"></output></span>
-              <input id="size" type="range" min="16" max="64" step="1" />
+              <input id="size" type="range" min="50" max="200" step="5" />
             </label>
             <label>
               <span>Ink weight <output id="weight-value"></output></span>
@@ -74,9 +79,13 @@
               <input id="caps" type="checkbox" />
               <span>ALL CAPS</span>
             </label>
-            <label class="check">
-              <input id="tails" type="checkbox" />
-              <span>Speech tails</span>
+            <label>
+              <span>Speech</span>
+              <select id="speech">
+                <option value="balloons">Balloons</option>
+                <option value="tails">Tails only</option>
+                <option value="none">Just text</option>
+              </select>
             </label>
           </div>
         </details>

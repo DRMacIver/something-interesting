@@ -339,3 +339,10 @@ test("middle alignment splits the difference", () => {
   assert.ok(Math.abs(y(bottom) - 20) < 0.5);
   assert.ok(Math.abs(y(middle) - y(bottom) / 2) < 0.5);
 });
+
+test("a region can keep text out of the headroom", () => {
+  const spec = { ...artRightBlocked, headroomFree: false };
+  const panel = makePanel(spec, 100, 80, 0);
+  assert.deepEqual(freeIntervals(panel, 0, 20, 0), []);
+  assert.deepEqual(freeIntervals(panel, 35, 45, 0), [[0, 40]]);
+});

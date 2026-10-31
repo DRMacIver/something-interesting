@@ -93,6 +93,10 @@ def trace(mean, cap, baseline):
     return pen, (columns[-1] + 1 - left) * scale
 
 
+def kern_id(label):
+    return glyph_name(label).replace(".", "_")
+
+
 def transformed(pen, transform):
     out = RecordingPen()
     pen.replay(TransformPen(out, transform))
@@ -162,8 +166,15 @@ def main():
 
     outlines = {}
     widths = {}
+    # Alternative forms, cycled through by the calt feature so that repeated
+    # letters aren't identical.
+    alternates = {}
     for label in labels:
-        outlines[label], widths[label] = trace(glyphs[label]["mean"], cap, baseline)
+        forms = glyphs[label]["variants"] or [glyphs[label]["mean"]]
+        traced = [trace(form, cap, baseline) for form in forms]
+        outlines[label], widths[label] = traced[0]
+        alternates[label] = [pen for pen, _ in traced[1:]]
+    cycle = max(len(alts) for alts in alternates.values()) + 1
 
     left, right, residuals = fit_spacing(data["gaps"], labels)
     side = {
@@ -221,20 +232,33 @@ def main():
         notdef.closePath()
     charstrings[".notdef"] = notdef.getCharString()
     metrics[".notdef"] = (500, 50)
-    charstrings["space"] = T2CharStringPen(space_width, None).getCharString()
-    metrics["space"] = (space_width, 0)
+    # Spaces come in as many forms as letters do, all alike, so that the
+    # cycle of alternates carries on from one word to the next.
+    for i in range(cycle):
+        name = "space" if i == 0 else f"space.alt{i}"
+        charstrings[name] = T2CharStringPen(space_width, None).getCharString()
+        metrics[name] = (space_width, 0)
+        if i:
+            names.append(name)
 
-    for label, pen in outlines.items():
-        name = glyph_name(label)
-        lsb, rsb = side[label]
+    def add(name, pen, lsb, rsb):
         x0, _, x1, _ = bounds(pen)
         advance = round(lsb + (x1 - x0) + rsb)
-        shift = lsb - x0
         cs = T2CharStringPen(advance, None)
-        pen.replay(TransformPen(cs, (1, 0, 0, 1, shift, 0)))
+        pen.replay(TransformPen(cs, (1, 0, 0, 1, lsb - x0, 0)))
         charstrings[name] = cs.getCharString()
         metrics[name] = (advance, round(lsb))
         names.append(name)
+
+    forms = {}
+    for label, pen in outlines.items():
+        name = glyph_name(label)
+        lsb, rsb = side[label]
+        add(name, pen, lsb, rsb)
+        forms[label] = [name]
+        for i, alternate in enumerate(alternates.get(label, []), start=1):
+            add(f"{name}.alt{i}", alternate, lsb, rsb)
+            forms[label].append(f"{name}.alt{i}")
 
     cmap = {0x20: "space", 0xA0: "space"}
     for label in outlines:
@@ -257,16 +281,34 @@ def main():
     letters = " ".join(
         glyph_name(label) for label in outlines if len(label) == 1 and label.isalnum()
     )
+    # Kerning applies to every form of a glyph.
+    kern_classes = []
     kerns = []
     for (a, b), (residual, count) in sorted(residuals.items()):
         value = round(residual * CAP_HEIGHT)
         if count >= MIN_KERN_PAIRS and abs(value) >= MIN_KERN:
-            kerns.append(f"  pos {glyph_name(a)} {glyph_name(b)} {value};")
+            kerns.append(f"  pos @k_{kern_id(a)} @k_{kern_id(b)} {value};")
+    for label, names_ in forms.items():
+        kern_classes.append(f"@k_{kern_id(label)} = [{' '.join(names_)}];")
+
+    # Rotate through the alternates: a glyph following form i of anything
+    # becomes form i + 1. Only characters with a full set take part.
+    cycled = [label for label, f in forms.items() if len(f) == cycle]
+    cycle_classes = []
+    for i in range(cycle):
+        members = [forms[label][i] for label in cycled]
+        members.append("space" if i == 0 else f"space.alt{i}")
+        cycle_classes.append(f"@cycle{i} = [{' '.join(members)}];")
+    cycle_rules = [
+        f"  sub @cycle{i} @cycle0' by @cycle{i + 1};" for i in range(cycle - 1)
+    ]
     features = f"""
 languagesystem DFLT dflt;
 languagesystem latn dflt;
 
 @letter = [{letters}];
+{chr(10).join(kern_classes)}
+{chr(10).join(cycle_classes)}
 
 # Watterson letters the pronoun I with serifs and an I inside a word as a
 # plain stroke.
@@ -274,6 +316,12 @@ feature calt {{
   ignore sub @letter I';
   ignore sub I' @letter;
   sub I' by I.pronoun;
+}} calt;
+
+feature calt {{
+  lookup cycle {{
+{chr(10).join(cycle_rules)}
+  }} cycle;
 }} calt;
 
 feature kern {{

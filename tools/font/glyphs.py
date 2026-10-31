@@ -31,6 +31,11 @@ FRAME_H = 260
 BASELINE = 190  # Row of the baseline in the frame.
 MAX_SAMPLES = 400
 AVERAGE = 40  # How many of the best samples to average.
+# Real lettering never repeats exactly, so well attested characters also get
+# VARIANTS alternative forms, each averaging a different handful of samples.
+# Averaging only a few keeps more of the hand-drawn irregularity.
+VARIANTS = 4
+VARIANT_SIZE = 6
 
 # The pronoun I is drawn with serifs; I inside words is a plain stroke.
 PRONOUN_I = "I.pronoun"
@@ -176,18 +181,26 @@ def best_shift(reference, frame, radius=6):
     return best
 
 
+def aligned_to(reference, frame):
+    dy, dx = best_shift(reference, ndimage.gaussian_filter(frame, 2))
+    return np.roll(frame, (dy, dx), axis=(0, 1))
+
+
 def build(frames, descs):
     centre = medoid(descs)
     order = np.argsort(np.linalg.norm(descs - descs[centre], axis=1))
     chosen = order[: max(1, min(AVERAGE, len(frames) // 2))]
     reference = ndimage.gaussian_filter(frames[centre], 2)
-    aligned = []
-    for i in chosen:
-        dy, dx = best_shift(reference, ndimage.gaussian_filter(frames[i], 2))
-        aligned.append(np.roll(frames[i], (dy, dx), axis=(0, 1)))
+    aligned = [aligned_to(reference, frames[i]) for i in chosen]
     mean = np.mean(aligned, axis=0)
+    variants = []
+    if len(frames) >= 2 * VARIANTS * VARIANT_SIZE:
+        for v in range(VARIANTS):
+            subset = order[v : VARIANTS * VARIANT_SIZE : VARIANTS]
+            variants.append(np.mean([aligned_to(reference, frames[i]) for i in subset], axis=0))
     return {
         "mean": mean,
+        "variants": variants,
         "medoid": frames[centre],
         "count": len(frames),
         "used": len(chosen),

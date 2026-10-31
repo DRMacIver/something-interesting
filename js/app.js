@@ -1,12 +1,24 @@
 import { fitPanels, tailFor } from "./layout.js";
+import { balloonOutline, balloonTail } from "./balloon.js";
 
-const CELL_WIDTH = 640;
-const GUTTER = 24;
-const OUTER = 24;
-const PADDING = 16;
-const ART_MARGIN = 10;
-const BORDER = 4;
+const CELL_WIDTH = 800;
+const GUTTER = 30;
+const OUTER = 30;
+const PADDING = 20;
+const BORDER = 5;
 const INK = "#111";
+
+// Speech balloon proportions, in multiples of the lettering's cap height,
+// measured from the strip.
+const BALLOON = {
+  padX: 0.55,
+  padY: 0.3,
+  radius: 0.6,
+  line: 0.1,
+  tailWidth: 0.6,
+  tailLength: 2.4,
+  tailGap: 0.45,
+};
 
 const FONTS = [
   { family: "Dad Lettering", label: "Watterson-style (from the strips)" },
@@ -22,6 +34,7 @@ const FONTS = [
 const UPLOADED_FONT = "Uploaded Font";
 
 const DEFAULTS = {
+  // Dad's lines in panels 1-3, then Calvin's reply in panel 2.
   texts: [
     "Playing a record? I'll show you something interesting.",
     "There are two types of websites: ones with a backend, and ones " +
@@ -29,25 +42,28 @@ const DEFAULTS = {
       "Your bank? Backend. A recipe blog? No backend.",
     "This meme generator? No backend.\n\nDespite all the text flowing " +
       "around the panels, it's just a static page.",
+    "Yeah...",
   ],
   font: "Dad Lettering",
-  size: 38,
+  // Percentage of the size of Watterson's lettering in the strip.
+  scale: 100,
   weight: 0,
-  spacing: 1.2,
+  spacing: 1.1,
   align: "center",
   caps: true,
-  tails: true,
+  speech: "balloons",
   mode: "grow",
   valign: "top",
   headroom: 0,
 };
+const CALVIN = 3;
 
 const $ = (id) => document.getElementById(id);
-const textareas = [$("text1"), $("text2"), $("text3")];
+const textareas = [$("text1"), $("text2"), $("text3"), $("text4")];
 const canvas = $("canvas");
 const ctx = canvas.getContext("2d");
 
-let panels = null;
+let assets = null;
 let images = null;
 let state = { ...DEFAULTS, texts: [...DEFAULTS.texts] };
 
@@ -67,10 +83,11 @@ function decodeState(hash) {
     const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
     const parsed = JSON.parse(new TextDecoder().decode(bytes));
     const merged = { ...DEFAULTS, ...parsed };
-    if (!Array.isArray(merged.texts) || merged.texts.length !== 3) {
+    if (!Array.isArray(merged.texts) || merged.texts.length < 3) {
       merged.texts = [...DEFAULTS.texts];
     }
-    merged.texts = merged.texts.map((t) => String(t));
+    // Links made before Calvin's reply was editable have three texts.
+    merged.texts = DEFAULTS.texts.map((t, i) => String(merged.texts[i] ?? t));
     return merged;
   } catch {
     return null;
@@ -107,12 +124,12 @@ function showState() {
     state.font = DEFAULTS.font;
   }
   $("font").value = state.font;
-  $("size").value = state.size;
+  $("size").value = state.scale;
   $("weight").value = state.weight;
   $("spacing").value = state.spacing;
   $("align").value = state.align;
   $("caps").checked = state.caps;
-  $("tails").checked = state.tails;
+  $("speech").value = state.speech;
   $("mode").value = state.mode;
   $("valign").value = state.valign;
   $("headroom").value = state.headroom;
@@ -120,7 +137,7 @@ function showState() {
 }
 
 function showValues() {
-  $("size-value").textContent = `${state.size}px`;
+  $("size-value").textContent = `${state.scale}%`;
   $("weight-value").textContent = state.weight.toFixed(2);
   $("spacing-value").textContent = state.spacing.toFixed(2);
   $("headroom-value").textContent = `${state.headroom}px`;
@@ -129,19 +146,19 @@ function showValues() {
 function readControls() {
   state.texts = textareas.map((t) => t.value);
   state.font = $("font").value;
-  state.size = Number($("size").value);
+  state.scale = Number($("size").value);
   state.weight = Number($("weight").value);
   state.spacing = Number($("spacing").value);
   state.align = $("align").value;
   state.caps = $("caps").checked;
-  state.tails = $("tails").checked;
+  state.speech = $("speech").value;
   state.mode = $("mode").value;
   state.valign = $("valign").value;
   state.headroom = Number($("headroom").value);
   showValues();
 }
 
-// --- Rendering -----------------------------------------------------------
+// --- Measuring -----------------------------------------------------------
 
 function fontString(size) {
   // Dad Lettering only covers what appears in the strips; anything else
@@ -164,6 +181,20 @@ function measure(text, size) {
   return width + state.weight;
 }
 
+// Height of the font's capitals as a fraction of its size.
+function capRatio() {
+  ctx.font = fontString(100);
+  return ctx.measureText("H").actualBoundingBoxAscent / 100;
+}
+
+// The font size whose capitals match Watterson's lettering in the strip,
+// scaled by the size setting.
+function fontSizeForScale() {
+  const panelScale =
+    CELL_WIDTH / (assets.panels.reduce((sum, p) => sum + p.width, 0) / assets.panels.length);
+  return (assets.capHeight * panelScale * (state.scale / 100)) / capRatio();
+}
+
 function displayText(text) {
   return state.caps ? text.toUpperCase() : text;
 }
@@ -173,26 +204,73 @@ function setStatus(message, warning = false) {
   $("status").classList.toggle("warning", warning);
 }
 
+// --- Layout --------------------------------------------------------------
+
+// Clearance between text and artwork. Balloons may overlap the art a
+// little, as they do in the strips, so this needn't leave room for them.
+function artMargin(cap) {
+  return 0.4 * cap;
+}
+
+function layoutOptions(fontSize) {
+  const cap = fontSize * capRatio();
+  return {
+    measure,
+    fontSize,
+    lineHeight: state.spacing,
+    margin: artMargin(cap),
+    align: state.align,
+    cellWidth: CELL_WIDTH,
+    padding: PADDING,
+    valign: state.valign,
+    minFontSize: 8,
+  };
+}
+
 function computeLayout() {
-  const specs = panels.map((p) => ({
+  const specs = assets.panels.map((p) => ({
     width: p.width,
     height: p.height,
     free: p.free ?? [],
   }));
-  return fitPanels(specs, [...state.texts.map(displayText), ""], {
-    measure,
-    fontSize: state.size,
-    lineHeight: state.spacing,
-    margin: ART_MARGIN,
-    align: state.align,
-    cellWidth: CELL_WIDTH,
-    padding: PADDING,
+  const texts = [...state.texts.slice(0, 3).map(displayText), ""];
+  const result = fitPanels(specs, texts, {
+    ...layoutOptions(fontSizeForScale()),
     mode: state.mode,
-    valign: state.valign,
     headroom: state.headroom,
-    minFontSize: 8,
+  });
+  result.calvin = layoutCalvin(result);
+  return result;
+}
+
+// Calvin's reply goes where his balloon was in the strip, centred, and is
+// made smaller if it doesn't fit there.
+function layoutCalvin(result) {
+  const meta = assets.panels[1];
+  const [x0, y0, x1, y1] = meta.calvinRegion;
+  const spec = {
+    width: meta.width,
+    height: meta.height,
+    headroomFree: false,
+    free: Array.from({ length: meta.height }, (_, row) =>
+      row >= y0 && row < y1 ? [[x0, x1]] : [],
+    ),
+  };
+  const artHeight = result.panels[1].height - result.panels[1].artTop;
+  const options = layoutOptions(result.fontSize);
+  return fitPanels([spec], [displayText(state.texts[CALVIN])], {
+    ...options,
+    // Inside his region, only the balloon itself needs room.
+    margin: state.speech === "balloons" ? BALLOON.padX * result.fontSize * capRatio() : 0,
+    align: "center",
+    padding: 0,
+    mode: "shrink",
+    valign: "middle",
+    headroom: result.cellHeight - artHeight,
   });
 }
+
+// --- Drawing -------------------------------------------------------------
 
 function drawLines(layout) {
   ctx.font = fontString(layout.fontSize);
@@ -211,13 +289,16 @@ function drawLines(layout) {
   }
 }
 
-function drawTail(layout, panel, mouth) {
+function speakerPoint(panel, point) {
+  return [point[0] * panel.scale, panel.artTop + point[1] * panel.scale];
+}
+
+function drawTail(layout, panel, speaker) {
   const fontSize = layout.fontSize;
-  const tail = tailFor(
-    layout,
-    [mouth[0] * panel.scale, panel.artTop + mouth[1] * panel.scale],
-    { gap: fontSize * 0.35, maxLength: fontSize * 1.4 },
-  );
+  const tail = tailFor(layout, speakerPoint(panel, speaker), {
+    gap: fontSize * 0.35,
+    maxLength: fontSize * 1.4,
+  });
   if (!tail) return;
   const [x0, y0] = tail.from;
   const [x1, y1] = tail.to;
@@ -234,8 +315,83 @@ function drawTail(layout, panel, mouth) {
   ctx.stroke();
 }
 
+// Whether a point in a cell is clear of the panel's artwork.
+function openAt(panel, meta, [x, y]) {
+  if (y < panel.artTop) return x >= 0 && x <= panel.width;
+  const row = meta.open?.[Math.floor((y - panel.artTop) / panel.scale)];
+  if (!row) return false;
+  const gx = x / panel.scale;
+  return row.some(([a, b]) => gx >= a && gx < b);
+}
+
+function polygonPath(points) {
+  ctx.moveTo(...points[0]);
+  for (const p of points.slice(1)) ctx.lineTo(...p);
+  ctx.closePath();
+}
+
+function tailPath({ base: [b1, b2], tip }) {
+  // Both sides bow the same way, giving the tail a slight curve.
+  const bend = (from, amount) => {
+    const dx = tip[0] - from[0];
+    const dy = tip[1] - from[1];
+    return [from[0] + dx / 2 - dy * amount, from[1] + dy / 2 + dx * amount];
+  };
+  ctx.moveTo(...b1);
+  ctx.quadraticCurveTo(...bend(b1, 0.12), ...tip);
+  ctx.quadraticCurveTo(...bend(b2, 0.12), ...b2);
+  ctx.closePath();
+}
+
+// The balloons for one panel: `speeches` is a list of {layout, speaker}.
+// All outlines are stroked at double width and then all are filled white,
+// which leaves just the outer edge of their union: balloons that touch
+// merge, and each tail opens into its balloon.
+function drawBalloons(panel, meta, speeches) {
+  const shapes = [];
+  const isFree = (p) => openAt(panel, meta, p);
+  for (const { layout, speaker } of speeches) {
+    if (!layout.lines.length) continue;
+    const cap = layout.fontSize * capRatio();
+    const outline = balloonOutline(layout.lines, {
+      padX: BALLOON.padX * cap,
+      padY: BALLOON.padY * cap,
+      radius: BALLOON.radius * cap,
+      isFree,
+    });
+    shapes.push({ outline, cap });
+    if (!speaker) continue;
+    const target = speakerPoint(panel, speaker);
+    const tail = balloonTail(outline, target, {
+      width: BALLOON.tailWidth * cap,
+      maxLength: BALLOON.tailLength * cap,
+      gap: BALLOON.tailGap * cap,
+      isFree,
+    });
+    if (tail) shapes.push({ tail, cap });
+  }
+  if (!shapes.length) return;
+  const trace = (shape) => {
+    ctx.beginPath();
+    if (shape.outline) polygonPath(shape.outline);
+    else tailPath(shape.tail);
+  };
+  ctx.lineJoin = "round";
+  ctx.strokeStyle = INK;
+  for (const shape of shapes) {
+    trace(shape);
+    ctx.lineWidth = 2 * BALLOON.line * shape.cap;
+    ctx.stroke();
+  }
+  ctx.fillStyle = "#fff";
+  for (const shape of shapes) {
+    trace(shape);
+    ctx.fill();
+  }
+}
+
 function render() {
-  if (!panels) return;
+  if (!assets) return;
   const result = computeLayout();
   const { cellHeight } = result;
   canvas.width = OUTER * 2 + CELL_WIDTH * 2 + GUTTER;
@@ -245,8 +401,14 @@ function render() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   result.panels.forEach((panel, i) => {
-    const meta = panels[i];
-    const layout = result.layouts[i];
+    const meta = assets.panels[i];
+    const speeches = [];
+    if (meta.speakers.dad) {
+      speeches.push({ layout: result.layouts[i], speaker: meta.speakers.dad });
+    }
+    if (meta.speakers.calvin) {
+      speeches.push({ layout: result.calvin.layouts[0], speaker: meta.speakers.calvin });
+    }
     const x = OUTER + (i % 2) * (CELL_WIDTH + GUTTER);
     const y = OUTER + Math.floor(i / 2) * (cellHeight + GUTTER);
 
@@ -257,17 +419,18 @@ function render() {
     ctx.clip();
     ctx.fillStyle = meta.background;
     ctx.fillRect(0, 0, CELL_WIDTH, cellHeight);
+    if (state.speech === "balloons") drawBalloons(panel, meta, speeches);
+    // Where the art is black ink on white, multiplying it in keeps every
+    // line of it visible even where a balloon overlaps it.
+    if (meta.background === "#fff") ctx.globalCompositeOperation = "multiply";
     ctx.imageSmoothingQuality = "high";
-    ctx.drawImage(
-      images[i],
-      0,
-      panel.artTop,
-      CELL_WIDTH,
-      meta.height * panel.scale,
-    );
-    drawLines(layout);
-    if (state.tails && meta.mouth && layout.lines.length) {
-      drawTail(layout, panel, meta.mouth);
+    ctx.drawImage(images[i], 0, panel.artTop, CELL_WIDTH, meta.height * panel.scale);
+    ctx.globalCompositeOperation = "source-over";
+    for (const { layout, speaker } of speeches) {
+      drawLines(layout);
+      if (state.speech === "tails" && layout.lines.length) {
+        drawTail(layout, panel, speaker);
+      }
     }
     ctx.restore();
 
@@ -276,6 +439,7 @@ function render() {
     ctx.strokeRect(x, y, CELL_WIDTH, cellHeight);
   });
 
+  const requested = fontSizeForScale();
   if (!result.fits) {
     setStatus(
       state.mode === "shrink"
@@ -283,8 +447,11 @@ function render() {
         : "Some text doesn't fit. Try shorter words or a smaller size.",
       true,
     );
-  } else if (state.mode === "shrink" && result.fontSize < state.size) {
-    setStatus(`Text shrunk to ${result.fontSize.toFixed(1)}px to fit.`);
+  } else if (!result.calvin.fits) {
+    setStatus("Calvin's reply is too long to fit in his corner of the panel.", true);
+  } else if (state.mode === "shrink" && result.fontSize < requested - 0.01) {
+    const shrunk = Math.round((state.scale * result.fontSize) / requested);
+    setStatus(`Text shrunk to ${shrunk}% to fit.`);
   } else {
     setStatus("");
   }
@@ -412,7 +579,7 @@ async function main() {
   for (const id of ["size", "weight", "spacing", "headroom"]) {
     $(id).addEventListener("input", onChange);
   }
-  for (const id of ["align", "caps", "tails", "mode", "valign"]) {
+  for (const id of ["align", "caps", "speech", "mode", "valign"]) {
     $(id).addEventListener("change", onChange);
   }
   $("font").addEventListener("change", onFontChange);
@@ -439,9 +606,8 @@ async function main() {
   });
 
   const response = await fetch("assets/panels.json");
-  const data = await response.json();
-  images = await Promise.all(data.panels.map((p) => loadImage(p.image)));
-  panels = data.panels;
+  assets = await response.json();
+  images = await Promise.all(assets.panels.map((p) => loadImage(p.image)));
   await ensureFontLoaded();
   // Fonts other than the selected one may finish loading later.
   document.fonts.addEventListener("loadingdone", () => {

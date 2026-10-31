@@ -6,7 +6,8 @@
 // cell width and anchored to the bottom. Everything above the art is free.
 //
 // spec.free[row] is a list of [start, end) intervals, in art pixels, where
-// text may go on that row of the art.
+// text may go on that row of the art. If spec.headroomFree is false, text
+// can't go above the art either.
 export function makePanel(spec, cellWidth, cellHeight, padding) {
   const scale = cellWidth / spec.width;
   const artHeight = spec.height * scale;
@@ -42,6 +43,7 @@ export function freeIntervals(panel, y0, y1, margin) {
   let intervals = [[padding, width - padding]];
   const top = y0 - margin;
   const bottom = y1 + margin;
+  if (spec.headroomFree === false && top < artTop) return [];
   if (bottom > artTop) {
     const firstRow = Math.max(0, Math.floor((top - artTop) / scale));
     const lastRow = Math.min(

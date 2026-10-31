@@ -23,16 +23,23 @@ Everything is static. On GitHub, enable Pages for the repository with
 
 ## How it works
 
-- `source/original-strip.png` is the original strip.
-- `tools/build_assets.py` cuts out the four panels, erases Dad's lettering,
-  upscales the line art, and records which parts of each panel are open
-  space (white space connected to the top of the panel) in
-  `assets/panels.json`. Re-run it with `uv run tools/build_assets.py`.
+- `tools/build_assets.py` takes the strip from a scan of *The Indispensable
+  Calvin and Hobbes* (not included in the repository; run it with
+  `uv run tools/build_assets.py calvin-and-hobbes.pdf`). It cuts out the four
+  panels from the scan's 1-bit ink layer, erases the lettering and balloons,
+  smooths away the scan's pixelation, and records where text may go
+  (`free`), where balloon tails may go (`open`) and how big Watterson's
+  lettering is (`capHeight`) in `assets/panels.json`. Panel 1 is extended a
+  little above the border, which crops Dad's head, with his hair rounded
+  off so it still looks right when the panel grows.
 - The default lettering, Dad Lettering (`assets/fonts/dad-lettering.woff2`),
   is built from Watterson's own lettering; see below.
 - `js/layout.js` is the text-flow engine: it places text line by line,
   using the widest gap the art leaves free at each height, and searches for
   the panel height or font size that makes everything fit.
+- `js/balloon.js` shapes the speech balloons in Watterson's manner: an oval
+  round a short remark, otherwise straight sides and rounded corners that
+  cut across ragged line ends where the art allows.
 - `js/app.js` draws the comic on a canvas and handles the controls. The
   current text and settings are stored in the URL, so links are shareable.
 
@@ -52,7 +59,10 @@ uv run tools/font/build_font.py build/glyphs.pkl assets/fonts/dad-lettering.woff
    keeps the words with exactly one shape per character as labelled samples.
 2. `glyphs.py` drops OCR misreadings (words that aren't English, and samples
    that look like a different, better attested character), then averages
-   the 40 samples most like each character's most typical one. Numbers are
+   the 40 samples most like each character's most typical one. Common
+   characters also get four alternative forms, each the average of a
+   different six samples, which the font cycles through so repeated letters
+   don't look stamped. Numbers are
    rare in the strips, so the digits 2-9 come from a few hand-picked
    instances.
 3. `build_font.py` traces the averaged bitmaps into outlines, fits side
