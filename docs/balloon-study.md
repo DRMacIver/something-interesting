@@ -77,13 +77,20 @@ The common forms, roughly in order of frequency:
   of roughly one cap). It never has sharp corners or straight diagonal
   cuts, and it isn't a box.
 - Where it meets the panel border it simply runs into it.
+- Corners are round, close to circular arcs, and small balloons are
+  rounder still: Calvin's three-line "THAT SEEMS REDUCTIVE"-sized balloons
+  are nearly as round as they are boxy.
+- When the art pushes a balloon aside, it tucks into the far corner of the
+  panel rather than pressing up against the speaker: in the original panel
+  1 the balloon sits in the top right corner, hanging from both borders,
+  leaving room for a short tail to Dad's face.
 
 ## Tails
 
-- A **narrow wedge**: two lines meeting at a point, about **0.4 cap** wide
-  where it leaves the balloon and around a cap long (rarely more than 1.3),
-  usually with a slight curve: it sets off straight out of the balloon and
-  bends round towards the speaker.
+- A **straight narrow wedge**: two lines meeting at a point, about **0.4
+  cap** wide where it leaves the balloon and around a cap long (rarely more
+  than 1.3). (An earlier version of these notes said tails curve; in this
+  strip they don't, and curved ones looked droopy.)
 - It leaves the balloon from the part of the outline that gives it the
   clearest path towards the speaker, usually the bottom edge, sometimes
   the side (the original panel 1's tail leaves the balloon's left side,
@@ -111,11 +118,10 @@ The common forms, roughly in order of frequency:
 3. Where the balloon comes within reach of a panel edge, let it run into
    the border instead of drawing a line alongside it, so most balloons
    hang from the top border as Watterson's do.
-4. Draw tails as narrow curved wedges, 0.4 cap at the base and up to
-   1.3 cap long, setting off straight out of the balloon and bending
-   towards the speaker, from whichever point of the balloon gives the
-   clearest path towards the speaker's face, with a clear line of sight
-   to it, stopping short of the art.
+4. Draw tails as straight narrow wedges, 0.4 cap at the base and up to
+   1.3 cap long, from whichever point of the balloon gives the clearest
+   path towards the speaker's face, with a clear line of sight to it,
+   stopping short of the art.
 5. Bow every edge of a balloon slightly, and join curves and straighter
    runs smoothly.
 6. Break lines to keep their lengths even, avoiding lone short words, and

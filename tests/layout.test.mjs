@@ -47,11 +47,13 @@ test("a band spanning headroom and art gets the intersection", () => {
   assert.deepEqual(freeIntervals(panel, 25, 35, 0), [[0, 40]]);
 });
 
-test("margin shrinks intervals horizontally and widens the band", () => {
+test("margin keeps text clear of the art, not the panel edges", () => {
   const panel = panelWithHeadroom(30);
-  assert.deepEqual(freeIntervals(panel, 0, 10, 5), [[5, 95]]);
-  // The band is 18..28 but the margin makes it reach into the art at 30.
-  assert.deepEqual(freeIntervals(panel, 18, 28, 5), [[5, 35]]);
+  // Nothing but panel edges: the margin doesn't apply (padding does).
+  assert.deepEqual(freeIntervals(panel, 0, 10, 5), [[0, 100]]);
+  // The band is 18..28 but the margin makes it reach into the art at 30,
+  // which ends at x = 40.
+  assert.deepEqual(freeIntervals(panel, 18, 28, 5), [[0, 35]]);
 });
 
 test("padding keeps text away from the panel edges", () => {
@@ -251,8 +253,9 @@ test("reserved areas can reach above the art", () => {
 test("the margin keeps text clear of reserved areas too", () => {
   const spec = { ...artRightBlocked, reserved: [[60, -20, 100, 10]] };
   const panel = makePanel(spec, 100, 80, 0);
-  // The reserved area starts at y = 10; within 5 of it, text keeps 5 away.
-  assert.deepEqual(freeIntervals(panel, 2, 7, 5), [[5, 55]]);
+  // The reserved area starts at y = 10; within 5 of it, text keeps 5 away
+  // (and the left of the interval is the panel edge, kept by padding).
+  assert.deepEqual(freeIntervals(panel, 2, 7, 5), [[0, 55]]);
 });
 
 test("panels grow until their reserved areas are inside them", () => {
@@ -354,7 +357,9 @@ test("lines pushed well aside by the art keep their own left edge", () => {
 });
 
 test("a panel can keep its text further from the art than the default", () => {
-  const text = "aaaa ".repeat(6);
+  // Beside the art, two of these words fit on a line without the margin
+  // and only one with it.
+  const text = "aaa ".repeat(8);
   const base = { ...opts(), cellWidth: 100, padding: 0, margin: 0 };
   const near = fitPanels([artRightBlocked], [text], base);
   const far = fitPanels([{ ...artRightBlocked, margin: 10 }], [text], base);
@@ -410,4 +415,24 @@ test("lines around a broken word are still balanced", () => {
   // evened out.
   const result = layoutText(panel, "aaaa bbbb cccc dddd eeee " + "x".repeat(30) + " ffff", opts());
   assert.deepEqual(result.lines.slice(0, 2).map((l) => l.text), ["aaaa bbbb cccc", "dddd eeee"]);
+});
+
+test("text pushed aside by the art can move to the far side of its space", () => {
+  // Art down the whole left side of the panel.
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, () => [[60, 200]]),
+  };
+  const panel = makePanel(spec, 200, 100, 0);
+  const result = layoutText(panel, "aaaa bbbb cccc", opts({ align: "left", awayFromArt: true }));
+  const right = Math.max(...result.lines.map((l) => l.x + l.width));
+  assert.ok(Math.abs(right - 200) < 1e-9, `ends at ${right}`);
+  assert.equal(new Set(result.lines.map((l) => l.x)).size, 1);
+});
+
+test("text that isn't pushed aside stays where it is", () => {
+  const panel = panelWithHeadroom(100);
+  const result = layoutText(panel, "aaaa bbbb", opts({ align: "left", awayFromArt: true }));
+  assert.equal(result.lines[0].x, 0);
 });

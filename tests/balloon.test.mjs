@@ -257,20 +257,16 @@ test("the tail base goes round corners", () => {
   assert.ok((onRight(b1) && onBottom(b2)) || (onBottom(b1) && onRight(b2)));
 });
 
-test("the tail sets off straight out of the balloon and curves towards the speaker", () => {
-  // A head under the middle of the balloon, with the speaker's mouth below
-  // it: the tail has to come down beside the head.
+test("a tail is a straight wedge", () => {
   const head = ([x, y]) => x > 25 && x < 75 && y > 110 && y < 250;
   const tail = balloonTail(square, [50, 300], tailOptions({ isFree: (p) => !head(p) }));
-  assert.ok(tail);
   const [b1, b2] = tail.base;
   const start = [(b1[0] + b2[0]) / 2, (b1[1] + b2[1]) / 2];
-  // It leaves the bottom edge heading straight down...
-  assert.ok(Math.abs(start[1] - 100) < 1e-6);
-  assert.ok(Math.abs(tail.bend[0] - start[0]) < 1e-6);
-  assert.ok(tail.bend[1] > start[1]);
-  // ...and curves in towards the mouth.
-  assert.ok(Math.abs(tail.tip[0] - 50) < Math.abs(start[0] - 50));
+  // The bend point lies on the straight line from the base to the tip.
+  const cross =
+    (tail.tip[0] - start[0]) * (tail.bend[1] - start[1]) -
+    (tail.tip[1] - start[1]) * (tail.bend[0] - start[0]);
+  assert.ok(Math.abs(cross) < 1e-6);
 });
 
 test("the tail goes round a head in the way rather than into it", () => {
@@ -321,4 +317,55 @@ test("a tail points at the speaker with a clear line of sight", () => {
   assert.ok(over.tip[0] > 55, "without the check it stops over the hair");
   const beside = balloonTail(square, speaker, { ...options, clearSight: 10 });
   assert.ok(beside.tip[0] < 55, `tip at ${beside.tip}`);
+});
+
+// Signed turns, in degrees, from each edge of the outline to the next.
+function turns(outline) {
+  const n = outline.length;
+  const out = [];
+  for (let i = 0; i < n; i++) {
+    const [ax, ay] = outline[(i - 1 + n) % n];
+    const [bx, by] = outline[i];
+    const [cx, cy] = outline[(i + 1) % n];
+    let turn = Math.atan2(cy - by, cx - bx) - Math.atan2(by - ay, bx - ax);
+    while (turn > Math.PI) turn -= 2 * Math.PI;
+    while (turn < -Math.PI) turn += 2 * Math.PI;
+    out.push((turn * 180) / Math.PI);
+  }
+  return out;
+}
+
+test("corners are rounded as fully as a circular arc", () => {
+  const lines = [line(0, 0, 100), line(0, 10, 100), line(0, 20, 100)];
+  const outline = balloonOutline(lines, options);
+  // The padded box's top right corner is at (110, -6). A circular arc of
+  // radius r leaves (sqrt 2 - 1) r between the corner and the curve.
+  const gap = Math.min(...outline.map(([x, y]) => Math.hypot(x - 110, y + 6)));
+  assert.ok(gap >= 0.9 * (Math.SQRT2 - 1) * options.radius, `only ${gap} from the corner`);
+});
+
+test("small balloons get rounder corners", () => {
+  const lines = [line(0, 0, 40), line(0, 10, 40), line(0, 20, 40)];
+  const outline = balloonOutline(lines, { ...options, roundness: 0.4 });
+  // The text is 40 by 30, so corners are rounded over 12 (more than the
+  // radius of 8).
+  const gap = Math.min(...outline.map(([x, y]) => Math.hypot(x - 50, y + 6)));
+  assert.ok(gap >= 0.9 * (Math.SQRT2 - 1) * 12, `only ${gap} from the corner`);
+});
+
+test("without art in the way, a balloon sweeping down several steps is convex", () => {
+  const lines = [line(0, 0, 200), line(0, 10, 200), line(0, 20, 150), line(0, 30, 100), line(0, 40, 60)];
+  const outline = balloonOutline(lines, options);
+  enclosesLines(outline, lines);
+  const t = turns(outline);
+  const sign = Math.sign(t.reduce((a, b) => a + b, 0));
+  const against = Math.min(...t.map((x) => x * sign));
+  assert.ok(against > -0.5, `turns back by ${against}`);
+});
+
+test("rounding never cuts into the text", () => {
+  const lines = [line(40, 8, 100), line(40, 18, 100), line(40, 28, 60)];
+  // Even asked for very round corners, and hanging from the top border.
+  const outline = balloonOutline(lines, { ...options, roundness: 1, panel });
+  enclosesLines(outline, lines);
 });

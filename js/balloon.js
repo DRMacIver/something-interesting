@@ -15,7 +15,7 @@
 // so that once the panel is clipped it hangs from the border.
 export function balloonOutline(
   lines,
-  { padX, padY, radius, isFree, ovalLines = 1, panel = null, bow = 0.03 },
+  { padX, padY, radius, isFree, ovalLines = 1, panel = null, bow = 0.03, roundness = 0 },
 ) {
   if (!lines.length) return null;
   const boxes = lines.map((l) => ({
@@ -36,7 +36,15 @@ export function balloonOutline(
     ...hull(envelope(boxes, 1), 1, isFree),
     ...hull(envelope(boxes, -1), -1, isFree).reverse(),
   ];
-  return smooth(corners, radius, isFree, bow);
+  // Smaller balloons are rounder: corners are rounded over at least
+  // `roundness` of the text block's shorter side. But a circular corner
+  // cuts (sqrt 2 - 1) of its radius off the corner, which mustn't reach the
+  // text, so no more than the padding allows.
+  const textWidth = Math.max(...lines.map((l) => l.x + l.width)) - Math.min(...lines.map((l) => l.x));
+  const textHeight = Math.max(...lines.map((l) => l.y + l.height)) - Math.min(...lines.map((l) => l.y));
+  const roundest = (0.8 * Math.hypot(padX, padY)) / (Math.SQRT2 - 1);
+  const rounding = Math.min(roundest, Math.max(radius, roundness * Math.min(textWidth, textHeight)));
+  return smooth(simplify(corners), rounding, isFree, bow);
 }
 
 // Push out past the panel's edges any box sides that come within reach of
@@ -154,43 +162,65 @@ function triangleClear(a, b, c, isFree) {
   return true;
 }
 
+// Drop repeated points and points in the middle of straight runs.
+function simplify(points) {
+  const same = (a, b) => Math.abs(a[0] - b[0]) < 1e-9 && Math.abs(a[1] - b[1]) < 1e-9;
+  const distinct = points.filter((v, i) => !same(v, points[(i + 1) % points.length]));
+  const n = distinct.length;
+  return distinct.filter((v, i) => {
+    const p = distinct[(i - 1 + n) % n];
+    const q = distinct[(i + 1) % n];
+    const cross = (v[0] - p[0]) * (q[1] - v[1]) - (v[1] - p[1]) * (q[0] - v[0]);
+    return Math.abs(cross) > 1e-9;
+  });
+}
+
 // Turn the corners of the outline into a smooth curve, the way Watterson
-// draws balloons: every corner is rounded over about `radius`, and every
-// edge between corners bows gently outwards, by `bow` of its length (no
-// pen line of his is ruler-straight). Slanting edges, where the balloon
-// sweeps in under shorter lines, bow further, into an arc towards where the
-// side and the bottom would meet. Bows are kept off the artwork. Finally the
-// joins are smoothed by cutting corners off (Chaikin's algorithm).
+// draws balloons. Every corner becomes a circular arc over about `radius`,
+// or over half of a slanting edge (where the balloon sweeps in under
+// shorter lines), so that a run of steps becomes one continuous curve.
+// What's left of each edge bows gently outwards, by `bow` of its length (no
+// pen line of his is ruler-straight), but never so much that it turns back
+// against the corners either side of it, and never onto the artwork.
+// Finally the joins are smoothed by cutting corners off (Chaikin's
+// algorithm).
 function smooth(polygon, radius, isFree, bow) {
   const n = polygon.length;
   const outward = outwardSign(polygon);
-  // Where each corner's rounding starts and ends.
-  const rounding = polygon.map((v, i) => {
+  const slanted = (a, b) => Math.abs(a[0] - b[0]) > 1e-6 && Math.abs(a[1] - b[1]) > 1e-6;
+  const corners = polygon.map((v, i) => {
     const p = polygon[(i - 1 + n) % n];
     const q = polygon[(i + 1) % n];
     const lp = Math.hypot(p[0] - v[0], p[1] - v[1]);
     const lq = Math.hypot(q[0] - v[0], q[1] - v[1]);
-    const r = Math.min(radius, lp / 3, lq / 3);
+    const rp = slanted(p, v) ? lp / 2 : Math.min(radius, lp / 2);
+    const rq = slanted(v, q) ? lq / 2 : Math.min(radius, lq / 2);
+    const turn = turnAngle(p, v, q);
     return {
-      before: lp ? [v[0] + ((p[0] - v[0]) / lp) * r, v[1] + ((p[1] - v[1]) / lp) * r] : v,
-      after: lq ? [v[0] + ((q[0] - v[0]) / lq) * r, v[1] + ((q[1] - v[1]) / lq) * r] : v,
+      v,
+      turn,
+      before: lp ? [v[0] + ((p[0] - v[0]) / lp) * rp, v[1] + ((p[1] - v[1]) / lp) * rp] : v,
+      after: lq ? [v[0] + ((q[0] - v[0]) / lq) * rq, v[1] + ((q[1] - v[1]) / lq) * rq] : v,
     };
   });
-  const out = [];
-  for (let i = 0; i < n; i++) {
-    const v = polygon[i];
-    const { before, after } = rounding[i];
-    out.push(...quadratic(before, v, after, 8));
-    // The edge from this corner to the next.
-    const a = after;
-    const b = rounding[(i + 1) % n].before;
+  // Each edge between roundings, bowed out a little.
+  const edges = corners.map((corner, i) => {
+    const next = corners[(i + 1) % n];
+    const a = corner.after;
+    const b = next.before;
     const length = Math.hypot(b[0] - a[0], b[1] - a[1]);
-    if (length < 1e-6) continue;
+    const along = polygon[(i + 1) % n];
+    const v = corner.v;
+    const span = Math.hypot(along[0] - v[0], along[1] - v[1]);
+    const direction = [(along[0] - v[0]) / span, (along[1] - v[1]) / span];
+    if (length < 1e-6) return { a, b, control: a, start: direction, end: direction };
     const normal = [((b[1] - a[1]) / length) * outward, (-(b[0] - a[0]) / length) * outward];
+    // A quadratic bowing by h leaves its ends at atan(4h / length) to the
+    // straight line; keep that to half the turn at the corner either side,
+    // so the outline stays convex there.
+    const tilt = Math.min(Math.abs(corner.turn), Math.abs(next.turn)) / 2;
+    const amount = Math.min(bow * length, radius / 2, (length * Math.tan(tilt)) / 4);
     const mid = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
-    let amount = Math.min(bow * length, radius / 2);
-    const sweep = sweepBow(polygon, i);
-    if (sweep) amount = Math.max(amount, sweep * (length / Math.hypot(polygon[(i + 1) % n][0] - v[0], polygon[(i + 1) % n][1] - v[1])));
     let control = mid;
     for (const share of [1, 0.5, 0.25]) {
       const c = [mid[0] + normal[0] * amount * 2 * share, mid[1] + normal[1] * amount * 2 * share];
@@ -199,9 +229,37 @@ function smooth(polygon, radius, isFree, bow) {
         break;
       }
     }
-    out.push(...quadratic(a, control, b, 16).slice(1, -1));
+    const unit = (from, to) => {
+      const d = Math.hypot(to[0] - from[0], to[1] - from[1]);
+      return [(to[0] - from[0]) / d, (to[1] - from[1]) / d];
+    };
+    return { a, b, control, start: unit(a, control), end: unit(control, b) };
+  });
+  const out = [];
+  for (let i = 0; i < n; i++) {
+    const { v, before, after } = corners[i];
+    // Round the corner with an arc that leaves the incoming edge, and joins
+    // the outgoing one, along their own directions.
+    const into = edges[(i - 1 + n) % n].end;
+    const outOf = edges[i].start;
+    const turn = Math.abs(Math.atan2(into[0] * outOf[1] - into[1] * outOf[0], into[0] * outOf[0] + into[1] * outOf[1]));
+    // A circular arc's control points sit this far along its tangents.
+    const k = turn < 1e-6 ? 0 : (4 / 3) * Math.tan(turn / 4) / Math.tan(turn / 2);
+    const rIn = Math.hypot(v[0] - before[0], v[1] - before[1]);
+    const rOut = Math.hypot(v[0] - after[0], v[1] - after[1]);
+    const c1 = [before[0] + into[0] * rIn * k, before[1] + into[1] * rIn * k];
+    const c2 = [after[0] - outOf[0] * rOut * k, after[1] - outOf[1] * rOut * k];
+    out.push(...cubic(before, c1, c2, after, 12));
+    const { a, b, control } = edges[i];
+    if (Math.hypot(b[0] - a[0], b[1] - a[1]) > 1e-6) {
+      out.push(...quadratic(a, control, b, 16).slice(1, -1));
+    }
   }
-  let points = out;
+  // Where two roundings meet, one curve starts where the last ended.
+  let points = out.filter((p, i) => {
+    const q = out[(i + 1) % out.length];
+    return Math.hypot(q[0] - p[0], q[1] - p[1]) > 1e-6;
+  });
   for (let round = 0; round < 2; round++) {
     const next = [];
     for (let i = 0; i < points.length; i++) {
@@ -213,6 +271,14 @@ function smooth(polygon, radius, isFree, bow) {
     points = next;
   }
   return points;
+}
+
+// How far the direction turns at v, going from p to v to q, in radians.
+function turnAngle(p, v, q) {
+  let turn = Math.atan2(q[1] - v[1], q[0] - v[0]) - Math.atan2(v[1] - p[1], v[0] - p[0]);
+  while (turn > Math.PI) turn -= 2 * Math.PI;
+  while (turn < -Math.PI) turn += 2 * Math.PI;
+  return turn;
 }
 
 // Points along the quadratic curve from a to b with control point c.
@@ -229,6 +295,20 @@ function quadratic(a, c, b, steps) {
   return points;
 }
 
+// Points along the cubic curve from a to b with control points c1 and c2.
+function cubic(a, c1, c2, b, steps) {
+  const points = [];
+  for (let k = 0; k <= steps; k++) {
+    const t = k / steps;
+    const s = 1 - t;
+    points.push([
+      s * s * s * a[0] + 3 * s * s * t * c1[0] + 3 * s * t * t * c2[0] + t * t * t * b[0],
+      s * s * s * a[1] + 3 * s * s * t * c1[1] + 3 * s * t * t * c2[1] + t * t * t * b[1],
+    ]);
+  }
+  return points;
+}
+
 // 1 if an edge's left-hand normal, (dy, -dx), points out of the polygon,
 // -1 if it points in.
 function outwardSign(polygon) {
@@ -239,32 +319,6 @@ function outwardSign(polygon) {
     area += ax * by - bx * ay;
   }
   return area > 0 ? 1 : -1;
-}
-
-// How far the slanting edge from corner i should bow out: half way from
-// the straight line to where the edges before and after it would meet if
-// carried on. Zero if the edge isn't slanting or they don't meet beyond it.
-function sweepBow(polygon, i) {
-  const n = polygon.length;
-  const before = polygon[(i - 1 + n) % n];
-  const u = polygon[i];
-  const w = polygon[(i + 1) % n];
-  const after = polygon[(i + 2) % n];
-  if (Math.abs(u[0] - w[0]) < 1e-6 || Math.abs(u[1] - w[1]) < 1e-6) return 0;
-  const d1 = [u[0] - before[0], u[1] - before[1]];
-  const d2 = [after[0] - w[0], after[1] - w[1]];
-  // Solve u + s d1 = w - t d2, that is s d1 + t d2 = w - u.
-  const det = d1[0] * d2[1] - d1[1] * d2[0];
-  if (Math.abs(det) < 1e-9) return 0;
-  const rx = w[0] - u[0];
-  const ry = w[1] - u[1];
-  const s = (rx * d2[1] - ry * d2[0]) / det;
-  const t = (d1[0] * ry - d1[1] * rx) / det;
-  if (s <= 0 || t <= 0) return 0;
-  const corner = [u[0] + d1[0] * s, u[1] + d1[1] * s];
-  const length = Math.hypot(rx, ry);
-  const distance = Math.abs(rx * (u[1] - corner[1]) - ry * (u[0] - corner[0])) / length;
-  return distance / 4;
 }
 
 function ovalAround(lines, padX, padY) {
@@ -341,10 +395,8 @@ function walk(polygon, k, t, distance) {
 
 // A tail for the balloon with outline `polygon`, pointing at `speaker`:
 // {base: [p, q], bend, tip} where p and q lie on the outline `width` apart,
-// or null if there's no room for one. Like Watterson's, it sets off
-// straight out of the balloon and curves round towards the speaker: its
-// centre line is a curve from the middle of the base to the tip, with
-// control point `bend`.
+// or null if there's no room for one. Like Watterson's, it is a straight
+// wedge pointing at the speaker; `bend` is the middle of its centre line.
 //
 // The tail can leave from anywhere on the outline; it leaves from wherever
 // lets its tip get closest to the speaker, so it goes round a head in the
@@ -384,7 +436,7 @@ export function balloonTail(
       let length = full;
       let shape = null;
       while (length >= minLength) {
-        shape = tailShape(p, normal, [dx, dy], length);
+        shape = tailShape(p, [dx, dy], length);
         if (curveClear(shape, gap, isFree)) break;
         shape = null;
         length -= step;
@@ -413,11 +465,10 @@ export function balloonTail(
   };
 }
 
-// A tail `length` long from p: it sets off along `normal` and ends up
-// heading along `direction`.
-function tailShape(p, normal, direction, length) {
+// A straight tail `length` long from p, heading along `direction`.
+function tailShape(p, direction, length) {
   const tip = [p[0] + direction[0] * length, p[1] + direction[1] * length];
-  const bend = [p[0] + normal[0] * length * 0.5, p[1] + normal[1] * length * 0.5];
+  const bend = [p[0] + direction[0] * length * 0.5, p[1] + direction[1] * length * 0.5];
   return { tip, bend, start: p };
 }
 

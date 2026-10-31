@@ -22,6 +22,9 @@ const BALLOON = {
   padX: 0.7,
   padY: 0.36,
   radius: 1,
+  // Smaller balloons are rounder: corners round over at least this share
+  // of the text's shorter side.
+  roundness: 0.3,
   line: 0.1,
   // A balloon comes out of the panel border rather than running alongside
   // it when it comes within about a cap of it.
@@ -204,6 +207,7 @@ function computeLayout() {
     free: p.free ?? [],
     reserved: p === calvinMeta ? calvin.reserved : [],
     margin: (p.speech === "balloon" ? BALLOON_MARGIN : ART_MARGIN) * cap,
+    awayFromArt: p.speech === "balloon",
   }));
   // The gaps are measured to the lettering itself, which sits in the middle
   // of its line's spacing.
@@ -328,6 +332,7 @@ function drawBalloons(panel, meta, speeches, cap) {
       padX: BALLOON.padX * cap,
       padY: BALLOON.padY * cap,
       radius: BALLOON.radius * cap,
+      roundness: BALLOON.roundness,
       ovalLines: 1,
       isFree: (p) => !inside(p) || isFree(p),
       panel: { x0: 0, y0: 0, x1: panel.width, y1: panel.height, reach: BALLOON.reach * cap },

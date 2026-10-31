@@ -9,8 +9,8 @@
 // text may go on that row of the art. spec.reserved is a list of
 // [x0, y0, x1, y1] rectangles, in art pixels (y may be negative, above the
 // art), taken up by something else, such as another character's balloon.
-// spec.margin, if given, is how far its text keeps from the art, in place
-// of the layout's default.
+// spec.margin and spec.awayFromArt, if given, override the layout options of
+// the same names for that panel.
 //
 // padding keeps text away from the panel's edges: a number, or {x, y} to
 // pad the sides and the top and bottom differently.
@@ -64,8 +64,8 @@ export function reservedAreas(panel) {
 }
 
 // The horizontal intervals where a line occupying y0..y1 may go, keeping
-// `margin` clear of the art and reserved areas on every side and `padding`
-// clear of the panel edges.
+// `margin` clear of the art and reserved areas on every side, and the
+// panel's padding clear of its edges.
 export function freeIntervals(panel, y0, y1, margin) {
   const { padX, width, scale, artTop, spec } = panel;
   let intervals = [[padX, width - padX]];
@@ -85,7 +85,12 @@ export function freeIntervals(panel, y0, y1, margin) {
       intervals = intersect(intervals, free);
     }
   }
-  intervals = intervals.map(([a, b]) => [a + margin, b - margin]);
+  // Keep clear of the art, but not of the panel's own edges (padding does
+  // that).
+  intervals = intervals.map(([a, b]) => [
+    a <= padX ? a : a + margin,
+    b >= width - padX ? b : b - margin,
+  ]);
   for (const [rx0, ry0, rx1, ry1] of reservedAreas(panel)) {
     if (ry1 + margin > y0 && ry0 - margin < y1) {
       intervals = subtract(intervals, [rx0 - margin, rx1 + margin]);
@@ -128,7 +133,8 @@ function firstPiece(word, width, fits) {
 //
 // options: measure(text, fontSize), fontSize, lineHeight (a multiple of the
 // font size), margin (clearance from the art), align ("left" | "center"),
-// minLineWidth (narrower gaps are skipped; defaults to 3 em).
+// minLineWidth (narrower gaps are skipped; defaults to 3 em), awayFromArt
+// (see moveAwayFromArt).
 //
 // Left-aligned text keeps a straight left edge, as Watterson's does, unless
 // the art pushes some lines well aside: neighbouring lines all start where
@@ -156,7 +162,26 @@ export function layoutText(panel, text, options) {
   }
   if (!result.fits) return result;
   balance(result, options);
+  if (options.awayFromArt && options.align === "left") moveAwayFromArt(result, panel);
   return { ...result, fits: !stranded(result) };
+}
+
+// Watterson tucks a balloon into the corner away from whoever it has had
+// to make room for: when lines have been pushed aside by the art, move each
+// run of them that share a left edge to the far side of their space, as far
+// as the tightest of them allows.
+function moveAwayFromArt({ lines }, panel) {
+  let i = 0;
+  while (i < lines.length) {
+    let j = i;
+    while (j + 1 < lines.length && Math.abs(lines[j + 1].x - lines[i].x) < 1e-6) j++;
+    if (lines[i].x > panel.padX + 1e-6) {
+      const run = lines.slice(i, j + 1);
+      const room = Math.min(...run.map((l) => l.interval[1] - (l.x + l.width)));
+      if (room > 0) for (const line of run) line.x += room;
+    }
+    i = j + 1;
+  }
 }
 
 // Whether the last line is on its own, pushed well aside by the art from
@@ -417,6 +442,7 @@ export function fitPanels(specs, texts, options) {
       layoutText(panel, texts[i] ?? "", {
         ...options,
         margin: panel.spec.margin ?? options.margin,
+        awayFromArt: panel.spec.awayFromArt ?? options.awayFromArt,
       }),
     );
     const inside = panels.every((panel) =>
