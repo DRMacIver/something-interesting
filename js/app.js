@@ -478,10 +478,11 @@ async function copyImage() {
   } catch (error) {
     console.error("Couldn't copy the image:", error);
     flash($("copy-image"), "Couldn't copy");
-    setStatus(
-      "This browser won't let the page copy the image. Use Download PNG, or right-click the comic and copy it from there.",
-      true,
-    );
+    // Browsers only let pages use the clipboard over https or on localhost.
+    const why = window.isSecureContext
+      ? "This browser won't let the page copy the image."
+      : "Browsers only let pages copy images when they're served over https or from localhost.";
+    setStatus(`${why} Use Download PNG, or right-click the comic and copy it from there.`, true);
   }
 }
 
