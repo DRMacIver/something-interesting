@@ -43,13 +43,12 @@ const ART_MARGIN = 0.4;
 const BALLOON_MARGIN = BALLOON.padX + 0.8;
 
 const DEFAULTS = [
-  "Playing a record? I'll show you something interesting.",
-  "There are two types of websites: ones with a backend, and ones " +
-    "without. Everything falls into one of these two categories. " +
-    "Your bank? Backend. A recipe blog? No backend.",
-  "This meme generator? No backend.\n\nDespite all the text flowing " +
-    "around the panels, it's just a static page.",
-  "Yeah...",
+  "Vibecoding something? Let me show you something interesting.",
+  "There are two types of vibecoded projects: piracy, and extremely " +
+    "bespoke artisanal itch scratching. Everything falls into one or the other.",
+  "Your Discord clone? Piracy. My Discord clone? Itch scratching.\n\n" +
+    "Despite literally copying Calvin and Hobbes, this site is itch scratching.",
+  "That seems reductive.",
 ];
 // Dad's lines in panels 1-3, then Calvin's reply in panel 2.
 const CALVIN = 3;
