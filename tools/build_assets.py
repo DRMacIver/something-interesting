@@ -80,8 +80,9 @@ PANELS = [
         "speech": "balloon",
         # Calvin's reply is lettered in a column of this width, centred
         # where his balloon was, with its last line far enough above his
-        # head to leave room for a tail; longer replies grow upwards.
-        "calvin_column": (1330, 1630, 2490),
+        # head to leave room for a tail hooking round towards him; longer
+        # replies grow upwards.
+        "calvin_column": (1330, 1630, 2520),
     },
     {
         "box": (1763, 1877, 2550, 2907),

@@ -53,7 +53,10 @@ test("a panel with room to spare shows more of its scene below", () => {
 });
 
 test("a panel with no room to spare shows only the original art", () => {
-  const report = drawComic(canvas(), comic, DEFAULTS);
+  // Panel 3's text is what sizes the panels, so it fills its panel.
+  const texts = [...DEFAULTS];
+  texts[2] = wall("Yellow, black. Yellow, black.", 12);
+  const report = drawComic(canvas(), comic, texts);
   assert.equal(report.panels[2].meta.height, assets.panels[2].height);
 });
 

@@ -11,7 +11,8 @@
 // art), taken up by something else, such as another character's balloon.
 // spec.margin, spec.awayFromArt, spec.awayLimit, spec.block and
 // spec.maxLineWidth, if given, override the layout options of the same
-// names for that panel.
+// names for that panel; spec.aboveSpeaker keeps the text above spec.speakerY
+// less spec.keepGap.
 //
 // padding keeps text away from the panel's edges: a number, or {x, y} to
 // pad the sides and the top and bottom differently.
@@ -151,7 +152,7 @@ function firstPiece(word, width, fits) {
 // paragraph (see balance), and a last line left on its own beside the art,
 // away from the rest of the text, counts as not fitting, as does text with
 // options.block set that would squeeze into a narrower space partway down
-// (see squeezed).
+// (see squeezed), and text whose last line comes below options.bottomLimit.
 export function layoutText(panel, text, options) {
   let result;
   if (options.align !== "left") {
@@ -175,7 +176,10 @@ export function layoutText(panel, text, options) {
   }
   result = {
     ...result,
-    fits: !stranded(result) && !(options.block && (squeezed(result) || gapped(result))),
+    fits:
+      !stranded(result) &&
+      !(options.block && (squeezed(result) || gapped(result))) &&
+      !(options.bottomLimit !== undefined && bottom(result) > options.bottomLimit + 1e-9),
   };
   if (options.drop && result.fits && result.lines.length) result = drop(panel, text, options, result);
   if (options.centreOn !== undefined && result.fits && result.lines.length) {
@@ -186,17 +190,19 @@ export function layoutText(panel, text, options) {
 
 // A balloon sits in the middle of the room its lines have, as long as it
 // still spans its speaker (at x = speakerX), or starts no more than `slack`
-// past them, so that its tail can come down beside them; otherwise it
-// keeps as near them as it can.
+// past them, so that its tail can come down beside them; if it can't do
+// that anywhere, it stays where it is (beside them, with room for a tail).
 function centre({ lines }, speakerX, slack = 0) {
   const roomLeft = Math.max(...lines.map((l) => l.interval[0]));
   const roomRight = Math.min(...lines.map((l) => l.interval[1]));
   const left = Math.min(...lines.map((l) => l.x));
   const width = Math.max(...lines.map((l) => l.x + l.width)) - left;
   if (roomRight - roomLeft < width) return;
-  let target = (roomLeft + roomRight - width) / 2;
-  target = Math.min(Math.max(target, speakerX - width), speakerX + slack);
-  target = Math.min(Math.max(target, roomLeft), roomRight - width);
+  // Where it may go and still span (or nearly span) the speaker.
+  const lo = Math.max(roomLeft, speakerX - width);
+  const hi = Math.min(roomRight - width, speakerX + slack);
+  if (lo > hi) return;
+  const target = Math.min(Math.max((roomLeft + roomRight - width) / 2, lo), hi);
   for (const line of lines) line.x += target - left;
 }
 
@@ -280,6 +286,11 @@ function stranded({ lines, spaces }) {
 // (beside someone else's balloon, say) with less than BLOCK_SHARE of the
 // room of its widest line, and it has no gaps (see gapped).
 const BLOCK_SHARE = 0.7;
+
+// How far down the text's last line comes.
+function bottom({ lines }) {
+  return lines.length ? lines[lines.length - 1].y + lines[lines.length - 1].height : -Infinity;
+}
 
 // Whether lettering that should be one block has a gap in it partway
 // down: a line pushed further down than the blank lines between paragraphs
@@ -622,6 +633,12 @@ function panelOptions(panel, options) {
     awayLimit: panel.spec.awayLimit ?? options.awayLimit,
     block: panel.spec.block ?? options.block,
     maxLineWidth: panel.spec.maxLineWidth ?? options.maxLineWidth,
+    // Text in a balloon ends above its speaker's mouth, so that its tail
+    // can come down to them.
+    bottomLimit:
+      panel.spec.aboveSpeaker && panel.spec.speakerY !== undefined
+        ? panel.artTop + panel.spec.speakerY * panel.scale - (panel.spec.keepGap ?? 0)
+        : options.bottomLimit,
   };
 }
 

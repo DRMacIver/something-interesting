@@ -60,6 +60,8 @@ export const BALLOON = {
   // gets a long tail, reaching to within this of them.
   tailReach: 2,
 };
+// How strongly Calvin's tail favours hooking round towards him (in caps).
+const CALVIN_HOOK = 2.2;
 // The pen stroke beside loose lettering.
 const STROKE = { pad: 0.35, length: 1.2, line: 0.12 };
 // Clearance between text and artwork: loose lettering can come close;
@@ -239,6 +241,7 @@ export function drawComic(canvas, { assets, images, signature }, given) {
       awayLimit: AWAY_LIMIT * cap,
       drop: Boolean(p.speakers.dad),
       centre: styles[i] === "balloon",
+      aboveSpeaker: styles[i] === "balloon",
       centreSlack: 3 * cap,
       // Beyond the side padding, a balloon this far from the side floats
       // free of it (see BALLOON.reach).
@@ -594,6 +597,9 @@ function drawBalloons(ctx, panel, meta, speeches, cap) {
       gap: BALLOON.tailGap * cap,
       blockedPenalty: 2 * cap,
       clearSight: 1.5 * cap,
+      levelPenalty: 1.5 * cap,
+      // Calvin's tail hooks round towards him, as in the original.
+      hookBonus: speech.who === "calvin" ? CALVIN_HOOK * cap : 0,
       reach: BALLOON.tailReach * cap,
       isFree: (p) => isFree(p) && others(p),
       isArtFree: (p) => !inside(p) || isFree(p),

@@ -299,6 +299,38 @@ test("a long tail stops at a thin line of art across its way, not through it", (
   assert.ok(tail.tip[1] < 300, `tip at ${tail.tip[1]}`);
 });
 
+test("a tail comes down to its speaker rather than across or up", () => {
+  // The speaker is level with the lower part of the balloon's left side.
+  const speaker = [-60, 70];
+  const level = balloonTail(square, speaker, tailOptions({ maxLength: 60 }));
+  const descending = balloonTail(square, speaker, tailOptions({ maxLength: 60, levelPenalty: 20 }));
+  const drop = ({ bend, tip }) => (tip[1] - bend[1]) / Math.hypot(tip[0] - bend[0], tip[1] - bend[1]);
+  assert.ok(drop(level) < 0.2, "without the penalty it goes straight across");
+  assert.ok(drop(descending) > 0.3, `it comes down at ${drop(descending)}`);
+});
+
+test("a tail can hook round towards its speaker, off a corner, as Calvin's does", () => {
+  // The speaker is below and to the right of the balloon.
+  const speaker = [160, 300];
+  const plain = balloonTail(square, speaker, tailOptions());
+  const hooked = balloonTail(square, speaker, tailOptions({ hookBonus: 40 }));
+  // How far the tail turns, in degrees, from leaving the balloon to its tip.
+  const turn = ({ base, bend, tip }) => {
+    const m = [(base[0][0] + base[1][0]) / 2, (base[0][1] + base[1][1]) / 2];
+    const a = [bend[0] - m[0], bend[1] - m[1]];
+    const b = [tip[0] - bend[0], tip[1] - bend[1]];
+    const cos = (a[0] * b[0] + a[1] * b[1]) / (Math.hypot(...a) * Math.hypot(...b));
+    return (Math.acos(Math.max(-1, Math.min(1, cos))) * 180) / Math.PI;
+  };
+  assert.ok(turn(plain) < 15, `without it, near enough straight: ${turn(plain)}`);
+  assert.ok(turn(hooked) > 30, `with it, a hook turning ${turn(hooked)}`);
+  // ...whose end still points at the speaker.
+  const end = [hooked.tip[0] - hooked.bend[0], hooked.tip[1] - hooked.bend[1]];
+  const to = [speaker[0] - hooked.tip[0], speaker[1] - hooked.tip[1]];
+  const cos = (end[0] * to[0] + end[1] * to[1]) / (Math.hypot(...end) * Math.hypot(...to));
+  assert.ok(cos > Math.cos(Math.PI / 6), `pointing ${Math.acos(cos)} away`);
+});
+
 test("the tail stops short of the speaker", () => {
   const tail = balloonTail(square, [50, 120], tailOptions());
   assert.ok(tail.tip[1] <= 115 + 1e-6);

@@ -778,3 +778,24 @@ test("balanced lines fit their space even when word widths don't simply add up",
     assert.ok(line.x + line.width <= 100 + 1e-9, `${line.text} ends at ${line.x + line.width}`);
   }
 });
+
+test("a balloon that can't span its speaker stays as far from the art as it was moved", () => {
+  // Art down the left side, with the speaker in it at x = 30; the text is
+  // moved away from the art by up to 20, leaving room for a tail.
+  const spec = { width: 200, height: 100, free: Array.from({ length: 100 }, () => [[60, 200]]) };
+  const panel = makePanel(spec, 200, 100, 0);
+  const result = layoutText(
+    panel,
+    "aaaa",
+    opts({ align: "left", awayFromArt: true, awayLimit: 20, centreOn: 30 }),
+  );
+  assert.equal(result.lines[0].x, 80);
+});
+
+test("text that must end above its speaker's mouth doesn't fit if it runs below it", () => {
+  const panel = panelWithHeadroom(20);
+  const text = "aaaa bbbb cccc dddd eeee ffff gggg hhhh";
+  assert.equal(layoutText(panel, text, opts({ align: "left" })).fits, true);
+  assert.equal(layoutText(panel, text, opts({ align: "left", bottomLimit: 15 })).fits, false);
+  assert.equal(layoutText(panel, "aaaa", opts({ align: "left", bottomLimit: 15 })).fits, true);
+});

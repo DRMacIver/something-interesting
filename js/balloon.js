@@ -559,7 +559,10 @@ function walk(polygon, k, t, distance) {
 // pointing at whatever it ran into, and so does one that points at the
 // speaker through some of the art (other than the last clearSight of the
 // way, round the speaker's mouth itself), so such tails count
-// blockedPenalty further from the speaker than they really are.
+// blockedPenalty further from the speaker than they really are; and one
+// that arrives level, or from below, up to levelPenalty further. A curved
+// tail that hooks round towards the speaker can be favoured, by up to
+// hookBonus (the more it turns, the more), as Watterson draws Calvin's.
 export function balloonTail(
   polygon,
   speaker,
@@ -572,8 +575,10 @@ export function balloonTail(
     blockedPenalty = 0,
     clearSight = null,
     curvePenalty = width,
+    levelPenalty = 0,
     reach = Infinity,
     isArtFree = isFree,
+    hookBonus = 0,
   },
 ) {
   const step = width / 4;
@@ -624,7 +629,16 @@ export function balloonTail(
           (clearSight !== null && !sightClear(shape.tip, speaker, clearSight, isFree))
             ? blockedPenalty
             : 0;
-        const score = miss + blocked + (curved ? curvePenalty : 0) + 0.05 * distance;
+        // Watterson's tails come down to the speaker: one arriving level, or
+        // from below, counts as further away the less it descends.
+        const arrival = [shape.tip[0] - shape.bend[0], shape.tip[1] - shape.bend[1]];
+        const drop = arrival[1] / (Math.hypot(...arrival) || 1);
+        const level = (levelPenalty * Math.max(0, MIN_DROP - drop)) / MIN_DROP;
+        // A curved tail that hooks round towards the speaker, leaving the
+        // balloon at an angle to them, can be favoured, by up to hookBonus.
+        const turn = Math.acos(Math.max(-1, Math.min(1, dx * normal[0] + dy * normal[1])));
+        const hook = curved ? hookBonus * Math.min(1, turn / (Math.PI / 4)) : 0;
+        const score = miss + blocked + level + (curved ? curvePenalty : 0) - hook + 0.05 * distance;
         if (!best || score < best.score) best = { k, t, ...shape, score };
       }
     }
@@ -668,6 +682,10 @@ function artWithin([px, py], radius, step, isArtFree) {
   }
   return false;
 }
+
+// How steeply (the sine of the angle below level) a tail should come down to
+// its speaker before it counts as arriving level.
+const MIN_DROP = 0.34;
 
 // A tail `length` long from p, ending up heading along `direction`: straight,
 // or if `normal` is given, setting off along it and curving round.
