@@ -87,7 +87,7 @@ PANELS = [
         "box": (1763, 1877, 2550, 2907),
         # Dad's shoulder runs off the left edge; the rest of it is drawn in
         # tools/extensions/panel3-left.png. Below is the rest of the scene,
-        # Dad on his chair and Calvin on the floor
+        # Dad down on one knee and Calvin on the floor
         # (tools/extensions/panel3-below.png), shown when there's room.
         "extend": {"left": EXTEND // 2, "right": EXTEND, "below": 800},
         "extensions": {"left": "panel3-left.png", "below": "panel3-below.png"},
