@@ -82,6 +82,21 @@
         scenarios.push({ name: `everything: ${n} words`, texts: [0, 1, 2, 3].map(() => words(Math.min(n, 30))) });
       }
       scenarios.push({ name: "defaults", texts: [...DEFAULTS] });
+      // A wall of short lines, which don't get any shorter for more width.
+      const BEE =
+        "According to all known laws of aviation, there is no way a bee should be able to fly.\n" +
+        "Its wings are too small to get its fat little body off the ground.\n" +
+        "The bee, of course, flies anyway because bees don't care what humans think is impossible.\n" +
+        "Yellow, black. Yellow, black. Yellow, black. Yellow, black.\nOoh, black and yellow!\n" +
+        "Let's shake it up a little.\nBarry! Breakfast is ready!\nComing!\nHang on a second.\n" +
+        "Hello?\nBarry?\nAdam?\nCan you believe this is happening?\nI can't.\nI'll pick you up.\n" +
+        "Looking sharp.\nUse the stairs, your father paid good money for those.\n" +
+        "Sorry. I'm excited.\nHere's the graduate.";
+      for (const [slot, name] of SLOTS.slice(0, 3).entries()) {
+        const texts = [...DEFAULTS];
+        texts[slot] = BEE;
+        scenarios.push({ name: `${name}: bee movie`, texts });
+      }
 
       const only = new URLSearchParams(location.search).get("only");
       const comic = await loadComic("../");

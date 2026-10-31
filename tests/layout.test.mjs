@@ -8,6 +8,8 @@ import {
   makePanel,
   layoutColumn,
   chooseWidth,
+  artWindow,
+  openBeyond,
 } from "../js/layout.js";
 
 // Every character is half the font size wide, spaces included.
@@ -573,8 +575,9 @@ test("cells widen in proportion as they grow taller", () => {
   const heightAt = (w) => 100 + 20000 / w;
   const fitAt = (w) => ({ cellHeight: heightAt(w), fits: true });
   const { width, result } = chooseWidth(fitAt, { minWidth: 100, maxWidth: 400, aspect: 1, step: 1 });
-  // Square cells: w = 100 + 20000 / w, so w is about 200.
-  assert.ok(Math.abs(width - 200) <= 1, `width ${width}`);
+  // Square cells: w = 100 + 20000 / w, so w is about 200 (or a little
+  // less, where that's hardly any bigger).
+  assert.ok(width >= 196 && width <= 200, `width ${width}`);
   assert.equal(result.cellHeight, heightAt(width));
 });
 
@@ -584,6 +587,51 @@ test("cells keep their width when the text fits in proportion", () => {
 });
 
 test("cells widen no further than the widest they can be", () => {
-  const fitAt = (w) => ({ cellHeight: 1000 + w, fits: true });
-  assert.equal(chooseWidth(fitAt, { minWidth: 100, maxWidth: 400, aspect: 1, step: 1 }).width, 400);
+  // Wider is always a little shorter, but never in proportion.
+  const fitAt = (w) => ({ cellHeight: 1000 + 40000 / w, fits: true });
+  const { width } = chooseWidth(fitAt, { minWidth: 100, maxWidth: 400, aspect: 1, step: 1 });
+  // As wide as it can be, or near enough to make no real difference.
+  assert.ok(width > 350 && width <= 400, `width ${width}`);
+});
+
+test("art extended both ways is shown centred on the original", () => {
+  // 100 wide, extended 20 to the left and 20 to the right; shown 120 wide.
+  assert.deepEqual(artWindow({ width: 100, left: 20, extendedWidth: 140 }, 120), [10, 130]);
+});
+
+test("art extended only to the right is shown from its left edge", () => {
+  assert.deepEqual(artWindow({ width: 100, extendedWidth: 140 }, 120), [0, 120]);
+});
+
+test("art shown wider than one side's extension takes the rest from the other", () => {
+  // Only 5 to spare on the right, so the rest comes from the left.
+  assert.deepEqual(artWindow({ width: 100, left: 30, extendedWidth: 135 }, 130), [5, 135]);
+});
+
+test("art that ends in plain background is centred however wide it's shown", () => {
+  const meta = { width: 100, left: 20, extendedWidth: 140, openLeft: true, openRight: true };
+  assert.deepEqual(artWindow(meta, 300), [-80, 220]);
+});
+
+test("art open on the right only is shown from as far left as it goes", () => {
+  const meta = { width: 100, extendedWidth: 140, openRight: true };
+  assert.deepEqual(artWindow(meta, 300), [0, 300]);
+});
+
+test("free space reaching the end of art that ends in background goes on past it", () => {
+  const rows = [[[0, 40], [60, 140]], [[0, 140]], [[10, 30]]];
+  assert.deepEqual(openBeyond(rows, 140), [[[0, 40], [60, Infinity]], [[0, Infinity]], [[10, 30]]]);
+});
+
+test("cells widen no further than it takes to save height", () => {
+  // The text needs 250 of height however wide the cell is beyond 150: as
+  // with lines that don't wrap. Square cells would be 250 wide.
+  const fitAt = (w) => ({ cellHeight: w < 150 ? 1000 : 250, fits: true });
+  const { width } = chooseWidth(fitAt, { minWidth: 100, maxWidth: 400, aspect: 1, step: 1 });
+  assert.equal(width, 150);
+});
+
+test("free space reaching the last whole grid cell of the art counts as reaching its edge", () => {
+  // Art 597.5 grid cells wide, rounded to 598; the grid holds 597 of them.
+  assert.deepEqual(openBeyond([[[10, 597]]], 598), [[[10, Infinity]]]);
 });

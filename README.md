@@ -35,13 +35,15 @@ Everything is static. On GitHub, enable Pages for the repository with
   loose with a pen stroke towards Dad) and where Calvin's reply goes. Large
   solid blacks (Dad's trousers, the night in panel 4) are only in the
   scan's low resolution background layer, so they're merged in from there.
-  Each panel's art is extended to the right so the panels can widen: with
-  blank background, except in panel 2, where Calvin runs off the edge. The
-  rest of him (`tools/extensions/panel2.png`) was drawn by Codex's image
-  generation from the panel, then thresholded to the scan's 1-bit ink so it
-  is smoothed like the rest. Watterson's signature is cut out of panel 4
-  (`assets/signature.png`) so it can sit in the corner however wide the
-  panel is.
+  Panels can widen to any width, so wherever the art runs off a panel's
+  edge it is finished off: the rest of Calvin in panel 2
+  (`tools/extensions/panel2-right.png`) and the far end of his bed in panel
+  4 (`tools/extensions/panel4-left.png`), drawn by Codex's image generation
+  from the panel and thresholded to the scan's 1-bit ink so that they're
+  smoothed like the rest. Beyond that the panels are plain background, as
+  far as they need to go; panel 4's bed stays in the middle. Watterson's
+  signature is cut out of panel 4 (`assets/signature.png`) so it can sit in
+  the corner however wide the panel is.
 - The lettering, Dad Lettering (`assets/fonts/dad-lettering.woff2`),
   is built from Watterson's own lettering; see below.
 - `js/layout.js` is the text-flow engine: it places text line by line,
@@ -50,8 +52,10 @@ Everything is static. On GitHub, enable Pages for the repository with
   in one block rather than squeezing it into a gap partway down, finds the
   smallest panel height that fits everything, and then drops short text
   down towards whoever is speaking. Panels that need more room grow
-  keeping the original panels' proportions, as wide as the extended art
-  allows, and only taller after that.
+  keeping the original panels' proportions, but only as wide as saves
+  height: text that won't get shorter with more width (short lines that
+  don't wrap) makes them taller instead. A real wall of text is lettered
+  loose, with a pen stroke towards Dad, as in panel 3 of the original.
 - `js/balloon.js` shapes the speech balloons in Watterson's manner, as
   worked out in [docs/balloon-study.md](docs/balloon-study.md): balloons
   near the top of a panel hang from its border, outlines follow the text in

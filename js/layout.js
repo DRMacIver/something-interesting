@@ -568,31 +568,76 @@ function fitHeight(specs, texts, options) {
   return best;
 }
 
-// The width for cells that need room for text: the narrowest, from
-// minWidth up in steps of `step`, at which the cell is no taller than
-// width / aspect, so cells keep their proportions as they grow; or
-// maxWidth if even that is too tall. fitAt(width) lays the comic out at a
-// width, returning {cellHeight, fits}. Returns {width, result}.
+// The width for cells that need room for text. Cells grow keeping their
+// proportions (width / height = aspect) where that helps: the aim is the
+// smallest cell as measured by the smallest box of those proportions that
+// holds it, and among cells within SIZE_SLACK of that, the narrowest. So
+// cells widen as far as it saves height (until they are in proportion),
+// but text whose height doesn't come down with more width (short lines
+// that don't wrap) just makes them taller. Widths go from minWidth to
+// maxWidth in steps of `step`; fitAt(width) lays the comic out at a width,
+// returning {cellHeight, fits}. Returns {width, result}.
+const SIZE_SLACK = 0.01;
+
 export function chooseWidth(fitAt, { minWidth, maxWidth, aspect, step }) {
-  const ok = (result, width) => result.fits && result.cellHeight <= width / aspect + 1e-9;
-  let result = fitAt(minWidth);
-  if (ok(result, minWidth) || maxWidth <= minWidth) return { width: minWidth, result };
-  const widest = fitAt(maxWidth);
-  if (!ok(widest, maxWidth)) return { width: maxWidth, result: widest };
-  // Too tall at lo, in proportion at hi.
-  let lo = minWidth;
-  let hi = maxWidth;
-  result = widest;
-  while (hi - lo > step) {
-    const mid = lo + Math.max(step, Math.floor((hi - lo) / 2 / step) * step);
-    if (mid >= hi) break;
-    const candidate = fitAt(mid);
-    if (ok(candidate, mid)) {
-      hi = mid;
-      result = candidate;
-    } else {
-      lo = mid;
+  const inProportion = (result, width) => result.fits && result.cellHeight <= width / aspect + 1e-9;
+  // Binary search for the narrowest width passing `ok`, given that `width`
+  // (with `result`, its layout) does.
+  const narrowest = (ok, { width, result: widest }) => {
+    let lo = minWidth;
+    let hi = width;
+    let result = widest;
+    while (hi - lo > step) {
+      const mid = lo + Math.max(step, Math.floor((hi - lo) / 2 / step) * step);
+      if (mid >= hi) break;
+      const candidate = fitAt(mid);
+      if (ok(candidate, mid)) {
+        hi = mid;
+        result = candidate;
+      } else {
+        lo = mid;
+      }
     }
+    return { width: hi, result };
+  };
+
+  const narrow = fitAt(minWidth);
+  if (inProportion(narrow, minWidth) || maxWidth <= minWidth) return { width: minWidth, result: narrow };
+  const wide = fitAt(maxWidth);
+  // The size of the smallest cell: where it comes into proportion, or at
+  // its widest if it never does.
+  let size;
+  let best;
+  if (inProportion(wide, maxWidth)) {
+    best = narrowest(inProportion, { width: maxWidth, result: wide });
+    size = best.width;
+  } else {
+    best = { width: maxWidth, result: wide };
+    size = wide.cellHeight * aspect;
   }
-  return { width: hi, result };
+  const smallEnough = (result) => result.fits && result.cellHeight * aspect <= size * (1 + SIZE_SLACK);
+  if (smallEnough(narrow)) return { width: minWidth, result: narrow };
+  return narrowest(smallEnough, best);
+}
+
+// Which stretch of a panel's art, [start, end] in art pixels, to show in a
+// cell `shown` art pixels wide. The art is spec.width wide, extended by
+// spec.left (if any) on the left, to spec.extendedWidth in all: the
+// original is kept in the middle as far as the extensions allow.
+// Beyond a side marked openLeft or openRight there's only background, so
+// the window can go on past it.
+export function artWindow({ width, left = 0, extendedWidth, openLeft, openRight }, shown) {
+  const extra = Math.max(0, shown - width);
+  const leftRoom = openLeft ? Infinity : left;
+  const rightRoom = openRight ? Infinity : extendedWidth - left - width;
+  const before = Math.min(leftRoom, Math.max(extra / 2, extra - rightRoom));
+  const start = left - before;
+  return [start, openRight ? start + shown : Math.min(extendedWidth, start + shown)];
+}
+
+// Rows of intervals (free or open space) for art `width` wide that ends in
+// plain background on the right: those that reach its edge (or its last
+// whole grid cell) go on forever.
+export function openBeyond(rows, width) {
+  return rows.map((row) => row.map(([a, b]) => [a, b >= width - 1 ? Infinity : b]));
 }

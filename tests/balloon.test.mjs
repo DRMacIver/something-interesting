@@ -123,13 +123,15 @@ test("even the straight sides bow out a little", () => {
 });
 
 test("the outline sweeps in under shorter last lines", () => {
-  const lines = [line(0, 0, 100), line(0, 10, 100), line(0, 20, 40)];
+  // (Under one short line the sweep would be too shallow to be worth it:
+  // see "a sweep far longer than it is deep keeps a round corner".)
+  const lines = [line(0, 0, 100), line(0, 10, 100), line(0, 20, 40), line(0, 30, 40), line(0, 40, 40)];
   const outline = balloonOutline(lines, options);
   enclosesLines(outline, lines);
   // Not a box: the bottom right corner is cut away...
-  assert.ok(!inside(outline, [105, 33]));
-  // ...by a sweep, not a step: there's balloon beside the short line.
-  assert.ok(inside(outline, [70, 28]));
+  assert.ok(!inside(outline, [105, 53]));
+  // ...by a sweep, not a step: there's balloon beside the short lines.
+  assert.ok(inside(outline, [70, 48]));
   assert.ok(sharpestTurn(outline) < 10);
 });
 
@@ -279,6 +281,14 @@ test("only the art, not other balloons, keeps a stranded balloon's tail short", 
     tailOptions({ reach: 30, isFree: (p) => head(p) && other(p), isArtFree: head }),
   );
   assert.ok(tail.tip[1] >= 325, `tip at ${tail.tip[1]}`);
+});
+
+test("art by the middle of a side, away from the corners, still keeps the tail short", () => {
+  // A head just under the middle of the bottom edge; the mouth far off.
+  const head = ([x, y]) => !(x > 40 && x < 60 && y > 110);
+  const tail = balloonTail(square, [400, 400], tailOptions({ reach: 30, isFree: head }));
+  const length = Math.hypot(tail.tip[0] - (tail.base[0][0] + tail.base[1][0]) / 2, tail.tip[1] - (tail.base[0][1] + tail.base[1][1]) / 2);
+  assert.ok(length <= 50, `${length} long`);
 });
 
 test("the tail stops short of the speaker", () => {
@@ -505,6 +515,23 @@ test("a last line a little narrower than the one above gets an ordinary rounded 
   enclosesLines(outline, lines);
   // The bottom corners are as round as any other corner.
   const r = tightest(outline, ([, y]) => y > 700);
+  assert.ok(r > 0.5 * cap, `curves as tightly as ${r}`);
+});
+
+test("a sweep far longer than it is deep keeps a round corner", () => {
+  // A long first line and a much shorter second one: the sweep under the
+  // second line is far wider than it is deep.
+  const cap = 46;
+  const lines = [line(40, 400, 880, 72), line(40, 472, 540, 72)];
+  const outline = balloonOutline(lines, {
+    padX: 0.7 * cap,
+    padY: 0.36 * cap,
+    radius: cap,
+    roundness: 0.3,
+    isFree: () => true,
+  });
+  enclosesLines(outline, lines);
+  const r = tightest(outline, ([x]) => x > 600);
   assert.ok(r > 0.5 * cap, `curves as tightly as ${r}`);
 });
 

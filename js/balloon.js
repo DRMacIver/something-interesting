@@ -145,20 +145,33 @@ function hull(points, side, isFree) {
 // Whether the triangle a, b, c (the area a shortcut from a to c would add)
 // is clear of the artwork.
 function triangleClear(a, b, c, isFree) {
-  const size = Math.max(
-    Math.hypot(c[0] - a[0], c[1] - a[1]),
-    Math.hypot(b[0] - a[0], b[1] - a[1]),
-    Math.hypot(c[0] - b[0], c[1] - b[1]),
-  );
-  const steps = Math.max(2, Math.ceil(size / 2));
-  for (let i = 0; i <= steps; i++) {
-    for (let j = 0; j <= steps - i; j++) {
-      const u = i / steps;
-      const v = j / steps;
-      const w = 1 - u - v;
-      const p = [a[0] * w + b[0] * u + c[0] * v, a[1] * w + b[1] * u + c[1] * v];
-      if (!isFree(p)) return false;
+  // Every 2 pixels across each row of the triangle, every 2 pixels down,
+  // and its corners.
+  if (![a, b, c].every(isFree)) return false;
+  const ys = [a[1], b[1], c[1]];
+  const top = Math.min(...ys);
+  const bottom = Math.max(...ys);
+  const edges = [
+    [a, b],
+    [b, c],
+    [c, a],
+  ];
+  for (let y = top; y <= bottom; y += 2) {
+    let from = Infinity;
+    let to = -Infinity;
+    for (const [p, q] of edges) {
+      if ((p[1] <= y && y <= q[1]) || (q[1] <= y && y <= p[1])) {
+        const x = p[1] === q[1] ? null : p[0] + ((q[0] - p[0]) * (y - p[1])) / (q[1] - p[1]);
+        for (const at of x === null ? [p[0], q[0]] : [x]) {
+          from = Math.min(from, at);
+          to = Math.max(to, at);
+        }
+      }
     }
+    for (let x = from; x <= to; x += 2) {
+      if (!isFree([x, y])) return false;
+    }
+    if (from <= to && !isFree([to, y])) return false;
   }
   return true;
 }
@@ -263,17 +276,16 @@ function smooth(polygon, radius, isFree, bow, sweeps = new Map()) {
       // A sweep: drawn below as one curve from where it starts to where it
       // ends, or, where it starts or ends nearer the corner than an
       // ordinary rounding would, from where that would.
+      // And a sweep far wider than it is deep (or the other way round)
+      // would turn as sharply as a thin ellipse's ends, so it spreads no
+      // further along its long side than keeps it as round as an ordinary
+      // corner, and carries on straight from there.
       const run = sweeps.get(i);
-      const ends = at(Math.min(radius, lp / 2), Math.min(radius, lq / 2));
-      const further = (end, u) =>
-        Math.hypot(end[0] - v[0], end[1] - v[1]) > Math.hypot(u[0] - v[0], u[1] - v[1]) ? end : u;
-      return {
-        v,
-        turn,
-        before: further(ends.before, run[0]),
-        after: further(ends.after, run[run.length - 1]),
-        run,
-      };
+      const reach = (u) => Math.hypot(u[0] - v[0], u[1] - v[1]);
+      let rp = Math.max(Math.min(radius, lp / 2), reach(run[0]));
+      let rq = Math.max(Math.min(radius, lq / 2), reach(run[run.length - 1]));
+      [rp, rq] = [Math.min(rp, (rq * rq) / radius), Math.min(rq, (rp * rp) / radius)];
+      return { v, turn, ...at(rp, rq), run };
     }
     const rp = slanted(p, v) ? lp / 2 : Math.min(radius, lp / 2);
     const rq = slanted(v, q) ? lq / 2 : Math.min(radius, lq / 2);
@@ -368,11 +380,11 @@ function turnAngle(p, v, q) {
 // far as it must to keep the corners of the lines it sweeps round (the rest
 // of `run`) inside the balloon.
 function sweepCurve(v, run, u, w, into, outOf, isFree) {
-  // A run's end that the curve starts or ends beyond is rounded off like
-  // any other corner.
+  // A run's end that the curve starts or ends short of or beyond is rounded
+  // off like any other corner.
+  const same = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]) < 1e-6;
   const kept = run.filter(
-    (point, k) =>
-      (k > 0 || point === u) && (k < run.length - 1 || point === w),
+    (point, k) => (k > 0 || same(point, u)) && (k < run.length - 1 || same(point, w)),
   );
   const reachU = Math.hypot(v[0] - u[0], v[1] - u[1]);
   const reachW = Math.hypot(v[0] - w[0], v[1] - w[1]);
@@ -558,7 +570,7 @@ export function balloonTail(
   const step = width / 4;
   const outward = outwardSign(polygon);
   const stranded =
-    reach < Infinity && !resampled(polygon, step).some((v) => artWithin(v, reach, 2 * step, isArtFree));
+    reach < Infinity && !alongOutline(polygon, step).some((v) => artWithin(v, reach, 2 * step, isArtFree));
   let best = null;
   // Try starting points every `step` along the outline.
   let along = 0;
@@ -620,13 +632,16 @@ export function balloonTail(
   };
 }
 
-// The points of a polygon, leaving out any closer than `spacing` to the
-// last one kept.
-function resampled(polygon, spacing) {
-  const out = [polygon[0]];
-  for (const p of polygon) {
-    const last = out[out.length - 1];
-    if (Math.hypot(p[0] - last[0], p[1] - last[1]) >= spacing) out.push(p);
+// Points every `spacing` or so all round a polygon.
+function alongOutline(polygon, spacing) {
+  const out = [];
+  for (let k = 0; k < polygon.length; k++) {
+    const a = polygon[k];
+    const b = polygon[(k + 1) % polygon.length];
+    const pieces = Math.max(1, Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / spacing));
+    for (let i = 0; i < pieces; i++) {
+      out.push([a[0] + ((b[0] - a[0]) * i) / pieces, a[1] + ((b[1] - a[1]) * i) / pieces]);
+    }
   }
   return out;
 }
@@ -691,10 +706,35 @@ export function clearOf(polygons, margin) {
     const w = Math.ceil((Math.max(...xs) + margin - x0) / cell) + 1;
     const h = Math.ceil((Math.max(...ys) + margin - y0) / cell) + 1;
     const blocked = new Uint8Array(w * h);
+    const centre = (i, j) => [x0 + (i + 0.5) * cell, y0 + (j + 0.5) * cell];
+    // Inside: fill each row between where the outline crosses it.
     for (let j = 0; j < h; j++) {
-      for (let i = 0; i < w; i++) {
-        const p = [x0 + (i + 0.5) * cell, y0 + (j + 0.5) * cell];
-        blocked[j * w + i] = inside(outline, p) || distanceTo(outline, p) < margin ? 1 : 0;
+      const y = y0 + (j + 0.5) * cell;
+      const crossings = [];
+      for (let k = 0; k < outline.length; k++) {
+        const [ax, ay] = outline[k];
+        const [bx, by] = outline[(k + 1) % outline.length];
+        if (ay > y !== by > y) crossings.push(ax + ((bx - ax) * (y - ay)) / (by - ay));
+      }
+      crossings.sort((a, b) => a - b);
+      for (let c = 0; c + 1 < crossings.length; c += 2) {
+        const from = Math.max(0, Math.ceil((crossings[c] - x0) / cell - 0.5));
+        const to = Math.min(w - 1, Math.floor((crossings[c + 1] - x0) / cell - 0.5));
+        for (let i = from; i <= to; i++) blocked[j * w + i] = 1;
+      }
+    }
+    // Within the margin: look only near each edge.
+    for (let k = 0; k < outline.length; k++) {
+      const a = outline[k];
+      const b = outline[(k + 1) % outline.length];
+      const i0 = Math.max(0, Math.floor((Math.min(a[0], b[0]) - margin - x0) / cell));
+      const i1 = Math.min(w - 1, Math.ceil((Math.max(a[0], b[0]) + margin - x0) / cell));
+      const j0 = Math.max(0, Math.floor((Math.min(a[1], b[1]) - margin - y0) / cell));
+      const j1 = Math.min(h - 1, Math.ceil((Math.max(a[1], b[1]) + margin - y0) / cell));
+      for (let j = j0; j <= j1; j++) {
+        for (let i = i0; i <= i1; i++) {
+          if (!blocked[j * w + i] && distanceTo([a, b], centre(i, j)) < margin) blocked[j * w + i] = 1;
+        }
       }
     }
     return { x0, y0, w, h, blocked };

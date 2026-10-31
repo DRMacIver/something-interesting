@@ -27,10 +27,10 @@ PAGE = 246
 ART_SCALE = 2
 # The layout grid (free space, mouths, lettering size) is at this multiple.
 GRID_SCALE = 0.5
-# Every panel's art is extended this far to the right (in scan pixels), so
-# that panels can widen to make room for long text. Where the art runs off
-# the right edge, the extension is drawn to match (see EXTENSIONS);
-# otherwise it's background.
+# Every panel's art is extended by this much (in scan pixels), so that
+# panels can widen to make room for long text: to the right, unless the
+# panel says otherwise. Where the art runs off an edge, the extension there
+# is drawn to match (see EXTENSIONS); otherwise it's background.
 EXTEND = 400
 EXTENSIONS = ROOT / "tools" / "extensions"
 
@@ -51,9 +51,9 @@ PANELS = [
     },
     {
         "box": (924, 1877, 1717, 2907),
-        # Calvin runs off the right edge; his extension is drawn in
-        # tools/extensions/panel2.png.
-        "extension": "panel2.png",
+        # Calvin runs off the right edge; the rest of him is drawn in
+        # tools/extensions/panel2-right.png.
+        "extensions": {"right": "panel2-right.png"},
         # Both balloons and their lettering, steering around Dad's head and
         # Calvin's hair.
         "erase": [[(924, 1877), (1720, 1877), (1720, 2545), (1612, 2545),
@@ -96,6 +96,10 @@ PANELS = [
         "speakers": {},
         "text_bottom": None,
         "dark": True,
+        # Extended both ways, so that Calvin's bed stays in the middle; its
+        # far end is drawn in tools/extensions/panel4-left.png.
+        "extend": {"left": EXTEND // 2, "right": EXTEND // 2},
+        "extensions": {"left": "panel4-left.png"},
     },
 ]
 
@@ -220,13 +224,20 @@ def panel_art(ink, background, panel):
 
 
 def extended(art, panel):
-    """The art with EXTEND more columns on the right."""
-    if "extension" in panel:
-        extra = np.asarray(Image.open(EXTENSIONS / panel["extension"]).convert("L")) < 128
-        assert extra.shape == (art.shape[0], EXTEND), extra.shape
-    else:
-        extra = np.full((art.shape[0], EXTEND), bool(panel.get("dark")))
-    return np.hstack([art, extra])
+    """The art with its extensions on either side, and how many columns
+    were added on the left."""
+    widths = panel.get("extend", {"left": 0, "right": EXTEND})
+    # Text layout works in the original art's coordinates.
+    assert widths["left"] == 0 or panel["text_bottom"] is None
+
+    def extension(side):
+        if side in panel.get("extensions", {}):
+            extra = np.asarray(Image.open(EXTENSIONS / panel["extensions"][side]).convert("L")) < 128
+            assert extra.shape == (art.shape[0], widths[side]), extra.shape
+            return extra
+        return np.full((art.shape[0], widths[side]), bool(panel.get("dark")))
+
+    return np.hstack([extension("left"), art, extension("right")]), widths["left"]
 
 
 def cut_signature(art, panel, name):
@@ -263,7 +274,7 @@ def main():
         art, heights = panel_art(ink, background, panel)
         lettering.extend(heights)
         signature = cut_signature(art, panel, "signature.png") if "signature" in panel else None
-        art = extended(art, panel)
+        art, left = extended(art, panel)
         smooth(art).save(OUT / f"panel{number}.png", optimize=True)
 
         def grid(point):
@@ -275,6 +286,12 @@ def main():
             # The original width; the art goes on to extendedWidth.
             "width": round((x1 - x0) * GRID_SCALE),
             "extendedWidth": round(art.shape[1] * GRID_SCALE),
+            # How much of the extended art is on the left.
+            "left": round(left * GRID_SCALE),
+            # Whether the art ends in plain background on that side, so that
+            # the panel can widen past it.
+            "openLeft": bool((art[:, 0] == bool(panel.get("dark"))).all()),
+            "openRight": bool((art[:, -1] == bool(panel.get("dark"))).all()),
             "height": round((y1 - y0) * GRID_SCALE),
             "background": "#000" if panel.get("dark") else "#fff",
             "speakers": {name: grid(p) for name, p in panel["speakers"].items()},
