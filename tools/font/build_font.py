@@ -33,6 +33,14 @@ UPSAMPLE = 4
 MIN_PAIRS = 3  # Pairs seen fewer times than this don't inform spacing.
 MIN_KERN_PAIRS = 8
 MIN_KERN = 15  # Smaller corrections aren't worth a kerning pair.
+# Symbols the book has none of, lettered in Watterson's hand by Codex's
+# image generation from the glyphs above: a sheet of 260x260 cells, five
+# across, one per character in DRAWN_ORDER, on the same baseline and at the
+# same cap height as the glyph bitmaps.
+DRAWN = Path(__file__).parent / "drawn.png"
+DRAWN_ORDER = "#$%&*+<=>@[\\]^_`{|}~"
+DRAWN_CELL = 260
+DRAWN_ACROSS = 5
 
 NAMES = {
     "!": "exclam",
@@ -54,6 +62,27 @@ NAMES = {
     "8": "eight",
     "9": "nine",
     "I.pronoun": "I.pronoun",
+    "/": "slash",
+    "#": "numbersign",
+    "$": "dollar",
+    "%": "percent",
+    "&": "ampersand",
+    "*": "asterisk",
+    "+": "plus",
+    "<": "less",
+    "=": "equal",
+    ">": "greater",
+    "@": "at",
+    "[": "bracketleft",
+    "\\": "backslash",
+    "]": "bracketright",
+    "^": "asciicircum",
+    "_": "underscore",
+    "`": "grave",
+    "{": "braceleft",
+    "|": "bar",
+    "}": "braceright",
+    "~": "asciitilde",
 }
 
 
@@ -214,7 +243,16 @@ def main():
     NAMES[":"] = "colon"
     NAMES[";"] = "semicolon"
     NAMES['"'] = "quotedbl"
-    NAMES["/"] = "slash"
+    sheet = np.asarray(Image.open(DRAWN).convert("L")) < 128
+    typical_side = tuple(np.median([s[k] for s in side.values()]) for k in (0, 1))
+    for i, char in enumerate(DRAWN_ORDER):
+        row, column = divmod(i, DRAWN_ACROSS)
+        cell = sheet[
+            row * DRAWN_CELL : (row + 1) * DRAWN_CELL,
+            column * DRAWN_CELL : (column + 1) * DRAWN_CELL,
+        ]
+        outlines[char], widths[char] = trace(cell.astype(np.float32), cap, baseline)
+        side[char] = typical_side
 
     spaces = [s for s in data["spaces"] if s < 1.5]
     typical_left = np.median([l for l, _ in side.values()])

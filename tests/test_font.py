@@ -118,3 +118,10 @@ def test_slash_is_a_stroke_leaning_right_from_the_baseline_to_cap_height(font):
     top = [x for x, y in points if y > 0.8 * max(ys)]
     bottom = [x for x, y in points if y < 0.2 * max(ys)]
     assert min(top) > max(bottom) - 0.05 * cap
+
+
+def test_covers_every_printable_ascii_character(font):
+    # Anything missing is lettered in the browser's fallback font instead.
+    cmap = font.getBestCmap()
+    missing = [chr(c) for c in range(33, 127) if c not in cmap]
+    assert not missing, " ".join(missing)

@@ -120,8 +120,10 @@ uv run tools/font/build_font.py build/glyphs.pkl assets/fonts/dad-lettering.woff
    bearings and kerning pairs to the letter spacing measured in the book,
    and builds the font. Lowercase maps to the capitals, and a contextual
    rule gives the pronoun I its serifs, as Watterson draws it. A few glyphs
-   (`:` `;` `"` `…` dashes, and `6`, a turned 9) are put together from
-   others.
+   (`:` `;` `"` `…` dashes, `/`, and `6`, a turned 9) are put together from
+   others, and symbols the book has none of (`# $ % & * + < = > @ [ \ ] ^
+   _ \` { | } ~`) were lettered by Codex's image generation from the
+   glyphs above (`tools/font/drawn.png`).
 
 ## Tests
 
