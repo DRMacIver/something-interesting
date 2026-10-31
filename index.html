@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Two Types of Things</title>
+    <meta
+      name="description"
+      content="Make your own &quot;Calvin's dad explains there are two types of things&quot; meme."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comic+Neue:wght@400;700&family=Gochi+Hand&family=Kalam:wght@400;700&family=Noto+Sans+Mono&family=Patrick+Hand+SC&family=Schoolbell&family=Short+Stack&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Two Types of Things</h1>
+      <p>
+        Calvin's dad has a theory. Write it in the first three panels; the
+        text flows around the artwork and the panels grow to fit.
+      </p>
+    </header>
+
+    <main>
+      <section class="editor" aria-label="Meme text and options">
+        <label class="panel-text">
+          <span>Panel 1</span>
+          <textarea id="text1" rows="3" spellcheck="true"></textarea>
+        </label>
+        <label class="panel-text">
+          <span>Panel 2</span>
+          <textarea id="text2" rows="6" spellcheck="true"></textarea>
+        </label>
+        <label class="panel-text">
+          <span>Panel 3</span>
+          <textarea id="text3" rows="6" spellcheck="true"></textarea>
+        </label>
+
+        <details class="options" open>
+          <summary>Lettering</summary>
+          <div class="grid">
+            <label>
+              <span>Font</span>
+              <select id="font"></select>
+            </label>
+            <label>
+              <span>Own font</span>
+              <input id="font-file" type="file" accept=".ttf,.otf,.woff,.woff2" />
+            </label>
+            <label>
+              <span>Size <output id="size-value"></output></span>
+              <input id="size" type="range" min="16" max="64" step="1" />
+            </label>
+            <label>
+              <span>Ink weight <output id="weight-value"></output></span>
+              <input id="weight" type="range" min="0" max="3" step="0.25" />
+            </label>
+            <label>
+              <span>Line spacing <output id="spacing-value"></output></span>
+              <input id="spacing" type="range" min="0.9" max="1.6" step="0.05" />
+            </label>
+            <label>
+              <span>Alignment</span>
+              <select id="align">
+                <option value="center">Centred</option>
+                <option value="left">Left</option>
+              </select>
+            </label>
+            <label class="check">
+              <input id="caps" type="checkbox" />
+              <span>ALL CAPS</span>
+            </label>
+            <label class="check">
+              <input id="tails" type="checkbox" />
+              <span>Speech tails</span>
+            </label>
+          </div>
+        </details>
+
+        <details class="options" open>
+          <summary>Fitting</summary>
+          <div class="grid">
+            <label>
+              <span>When text is long</span>
+              <select id="mode">
+                <option value="grow">Make the panels taller</option>
+                <option value="shrink">Make the text smaller</option>
+              </select>
+            </label>
+            <label>
+              <span>Text position</span>
+              <select id="valign">
+                <option value="top">Top of panel</option>
+                <option value="middle">Middle</option>
+                <option value="bottom">Close to Dad</option>
+              </select>
+            </label>
+            <label>
+              <span>Extra space <output id="headroom-value"></output></span>
+              <input id="headroom" type="range" min="0" max="600" step="10" />
+            </label>
+          </div>
+        </details>
+
+        <div class="actions">
+          <button id="download" type="button" class="primary">Download PNG</button>
+          <button id="copy-image" type="button">Copy image</button>
+          <button id="copy-link" type="button">Copy link</button>
+          <button id="reset" type="button">Reset</button>
+        </div>
+        <p id="status" role="status"></p>
+      </section>
+
+      <section class="preview" aria-label="Preview">
+        <canvas id="canvas" aria-label="The generated comic"></canvas>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Artwork from <i>Calvin and Hobbes</i> by Bill Watterson, 5 June 1990.
+        This page runs entirely in your browser.
+      </p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
