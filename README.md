@@ -37,9 +37,11 @@ Everything is static. On GitHub, enable Pages for the repository with
   scan's low resolution background layer, so they're merged in from there.
   Panels can widen to any width, so wherever the art runs off a panel's
   edge it is finished off: Dad's back and trailing leg in panel 1
-  (`tools/extensions/panel1-left.png`), the rest of Calvin in panel 2
-  (`tools/extensions/panel2-right.png`) and the far end of his bed in panel
-  4 (`tools/extensions/panel4-left.png`), drawn by Codex's image generation
+  (`tools/extensions/panel1-left.png`), Dad on his chair and the rest of
+  Calvin in panel 2 (`tools/extensions/panel2-{left,right}.png`), Dad's
+  shoulder in panel 3 (`tools/extensions/panel3-left.png`) and the far end
+  of Calvin's bed in panel 4 (`tools/extensions/panel4-left.png`), drawn by
+  Codex's image generation
   from the panel and thresholded to the scan's 1-bit ink so that they're
   smoothed like the rest. Beyond that the panels are plain background, as
   far as they need to go; panel 4's bed stays in the middle. Watterson's

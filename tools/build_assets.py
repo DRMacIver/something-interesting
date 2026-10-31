@@ -54,10 +54,11 @@ PANELS = [
         "speech": "balloon",
     },
     {
-        "box": (924, 1877, 1717, 2907),
-        # Calvin runs off the right edge; the rest of him is drawn in
-        # tools/extensions/panel2-right.png.
-        "extensions": {"right": "panel2-right.png"},
+        "box": (926, 1877, 1717, 2907),
+        # Dad runs off the left edge and Calvin off the right; the rest of
+        # them is drawn in tools/extensions/panel2-{left,right}.png.
+        "extend": {"left": EXTEND // 2, "right": EXTEND},
+        "extensions": {"left": "panel2-left.png", "right": "panel2-right.png"},
         # Both balloons and their lettering, steering around Dad's head and
         # Calvin's hair.
         "erase": [[(924, 1877), (1720, 1877), (1720, 2545), (1612, 2545),
@@ -83,7 +84,11 @@ PANELS = [
         "calvin_column": (1330, 1630, 2490),
     },
     {
-        "box": (1755, 1877, 2550, 2907),
+        "box": (1763, 1877, 2550, 2907),
+        # Dad's shoulder runs off the left edge; the rest of it is drawn in
+        # tools/extensions/panel3-left.png.
+        "extend": {"left": EXTEND // 2, "right": EXTEND},
+        "extensions": {"left": "panel3-left.png"},
         "erase": [[(1755, 1877), (2550, 1877), (2550, 2620), (2220, 2620),
                    (2220, 2460), (1755, 2460)]],
         "speakers": {"dad": (2010, 2770)},
