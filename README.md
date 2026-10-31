@@ -1,9 +1,10 @@
 # Two Types of Things
 
 A static, backend-free generator for the "Calvin's dad explains there are two
-types of things" meme. Type Dad's lines into the first three panels and the
-text flows around the artwork; long text either makes the panels taller or
-shrinks the lettering to fit.
+types of things" meme. Type Dad's lines (and Calvin's reply) and you get the
+comic, lettered the way the original strip is: the text flows around the
+artwork, sits in balloons in the panels that have them, and the panels grow
+to make room for long text.
 
 ## Running locally
 
@@ -29,18 +30,22 @@ Everything is static. On GitHub, enable Pages for the repository with
   panels from the scan's 1-bit ink layer, erases the lettering and balloons,
   smooths away the scan's pixelation, and records where text may go
   (`free`), where balloon tails may go (`open`) and how big Watterson's
-  lettering is (`capHeight`) in `assets/panels.json`. Large solid blacks (Dad's trousers, the night in panel 4) are only in the
+  lettering is (`capHeight`) in `assets/panels.json`, along with how each
+  panel's dialogue is lettered in the original (`speech`: in a balloon, or
+  loose with a pen stroke towards Dad) and where Calvin's reply goes. Large
+  solid blacks (Dad's trousers, the night in panel 4) are only in the
   scan's low resolution background layer, so they're merged in from there.
-- The default lettering, Dad Lettering (`assets/fonts/dad-lettering.woff2`),
+- The lettering, Dad Lettering (`assets/fonts/dad-lettering.woff2`),
   is built from Watterson's own lettering; see below.
 - `js/layout.js` is the text-flow engine: it places text line by line,
-  using the widest gap the art leaves free at each height, and searches for
-  the panel height or font size that makes everything fit.
+  using the widest gap the art leaves free at each height, keeps a straight
+  left edge unless the art pushes lines well aside, and finds the smallest
+  panel height that fits everything.
 - `js/balloon.js` shapes the speech balloons in Watterson's manner: an oval
   round a short remark, otherwise straight sides and rounded corners that
   cut across ragged line ends where the art allows.
-- `js/app.js` draws the comic on a canvas and handles the controls. The
-  current text and settings are stored in the URL, so links are shareable.
+- `js/app.js` draws the comic on a canvas. The text is stored in the URL,
+  so links are shareable.
 
 ## The font
 

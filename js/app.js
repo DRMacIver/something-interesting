@@ -1,4 +1,4 @@
-import { fitPanels, tailFor } from "./layout.js";
+import { fitPanels, layoutColumn, tailFor } from "./layout.js";
 import { balloonOutline, balloonTail } from "./balloon.js";
 
 const CELL_WIDTH = 800;
@@ -7,6 +7,9 @@ const OUTER = 30;
 const PADDING = 20;
 const BORDER = 5;
 const INK = "#111";
+const FONT = "Dad Lettering";
+// Line spacing as a multiple of the font size, measured from the strip.
+const LINE_HEIGHT = 1.1;
 
 // Speech balloon proportions, in multiples of the lettering's cap height,
 // measured from the strip.
@@ -19,44 +22,23 @@ const BALLOON = {
   tailLength: 2.4,
   tailGap: 0.45,
 };
+// Clearance between text and artwork, in cap heights. Balloons may overlap
+// the art a little, as they do in the strips.
+const ART_MARGIN = 0.4;
 
-const FONTS = [
-  { family: "Dad Lettering", label: "Watterson-style (from the strips)" },
-  { family: "Patrick Hand SC", label: "Patrick Hand SC" },
-  { family: "Gochi Hand", label: "Gochi Hand" },
-  { family: "Schoolbell", label: "Schoolbell" },
-  { family: "Kalam", label: "Kalam" },
-  { family: "Short Stack", label: "Short Stack" },
-  { family: "Architects Daughter", label: "Architects Daughter" },
-  { family: "Comic Neue", label: "Comic Neue" },
-  { family: "Noto Sans Mono", label: "Monospace (classic meme)" },
+const DEFAULTS = [
+  "Playing a record? I'll show you something interesting.",
+  "There are two types of websites: ones with a backend, and ones " +
+    "without. Everything falls into one of these two categories. " +
+    "Your bank? Backend. A recipe blog? No backend.",
+  "This meme generator? No backend.\n\nDespite all the text flowing " +
+    "around the panels, it's just a static page.",
+  "Yeah...",
 ];
-const UPLOADED_FONT = "Uploaded Font";
-
-const DEFAULTS = {
-  // Dad's lines in panels 1-3, then Calvin's reply in panel 2.
-  texts: [
-    "Playing a record? I'll show you something interesting.",
-    "There are two types of websites: ones with a backend, and ones " +
-      "without. Everything falls into one of these two categories. " +
-      "Your bank? Backend. A recipe blog? No backend.",
-    "This meme generator? No backend.\n\nDespite all the text flowing " +
-      "around the panels, it's just a static page.",
-    "Yeah...",
-  ],
-  font: "Dad Lettering",
-  // Percentage of the size of Watterson's lettering in the strip.
-  scale: 100,
-  weight: 0,
-  spacing: 1.1,
-  align: "center",
-  caps: true,
-  speech: "balloons",
-  mode: "grow",
-  valign: "top",
-  headroom: 0,
-};
+// Dad's lines in panels 1-3, then Calvin's reply in panel 2.
 const CALVIN = 3;
+// Calvin's reply is widened rather than going over this many lines.
+const CALVIN_MAX_LINES = 4;
 
 const $ = (id) => document.getElementById(id);
 const textareas = [$("text1"), $("text2"), $("text3"), $("text4")];
@@ -65,111 +47,46 @@ const ctx = canvas.getContext("2d");
 
 let assets = null;
 let images = null;
-let state = { ...DEFAULTS, texts: [...DEFAULTS.texts] };
+let texts = [...DEFAULTS];
 
-// --- State <-> URL -------------------------------------------------------
+// --- Texts <-> URL -------------------------------------------------------
 
-function encodeState(s) {
-  const bytes = new TextEncoder().encode(JSON.stringify(s));
+function encodeTexts(t) {
+  const bytes = new TextEncoder().encode(JSON.stringify({ texts: t }));
   let binary = "";
   for (const b of bytes) binary += String.fromCharCode(b);
   return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
-function decodeState(hash) {
+function textsFromUrl() {
+  const hash = location.hash.slice(1);
+  if (!hash) return null;
   try {
     const base64 = hash.replace(/-/g, "+").replace(/_/g, "/");
-    const binary = atob(base64);
-    const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+    const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
     const parsed = JSON.parse(new TextDecoder().decode(bytes));
-    const merged = { ...DEFAULTS, ...parsed };
-    if (!Array.isArray(merged.texts) || merged.texts.length < 3) {
-      merged.texts = [...DEFAULTS.texts];
-    }
+    if (!Array.isArray(parsed.texts)) return null;
     // Links made before Calvin's reply was editable have three texts.
-    merged.texts = DEFAULTS.texts.map((t, i) => String(merged.texts[i] ?? t));
-    return merged;
+    return DEFAULTS.map((t, i) => String(parsed.texts[i] ?? t));
   } catch {
     return null;
   }
 }
 
-function stateFromUrl() {
-  const hash = location.hash.slice(1);
-  return hash ? decodeState(hash) : null;
-}
-
 function saveToUrl() {
-  const shareable = { ...state };
-  if (shareable.font === UPLOADED_FONT) shareable.font = DEFAULTS.font;
-  history.replaceState(null, "", "#" + encodeState(shareable));
-}
-
-// --- Controls ------------------------------------------------------------
-
-function populateFonts() {
-  const select = $("font");
-  for (const { family, label } of FONTS) {
-    const option = document.createElement("option");
-    option.value = family;
-    option.textContent = label;
-    option.style.fontFamily = `"${family}"`;
-    select.append(option);
-  }
-}
-
-function showState() {
-  textareas.forEach((t, i) => (t.value = state.texts[i]));
-  if (![...$("font").options].some((o) => o.value === state.font)) {
-    state.font = DEFAULTS.font;
-  }
-  $("font").value = state.font;
-  $("size").value = state.scale;
-  $("weight").value = state.weight;
-  $("spacing").value = state.spacing;
-  $("align").value = state.align;
-  $("caps").checked = state.caps;
-  $("speech").value = state.speech;
-  $("mode").value = state.mode;
-  $("valign").value = state.valign;
-  $("headroom").value = state.headroom;
-  showValues();
-}
-
-function showValues() {
-  $("size-value").textContent = `${state.scale}%`;
-  $("weight-value").textContent = state.weight.toFixed(2);
-  $("spacing-value").textContent = state.spacing.toFixed(2);
-  $("headroom-value").textContent = `${state.headroom}px`;
-}
-
-function readControls() {
-  state.texts = textareas.map((t) => t.value);
-  state.font = $("font").value;
-  state.scale = Number($("size").value);
-  state.weight = Number($("weight").value);
-  state.spacing = Number($("spacing").value);
-  state.align = $("align").value;
-  state.caps = $("caps").checked;
-  state.speech = $("speech").value;
-  state.mode = $("mode").value;
-  state.valign = $("valign").value;
-  state.headroom = Number($("headroom").value);
-  showValues();
+  history.replaceState(null, "", "#" + encodeTexts(texts));
 }
 
 // --- Measuring -----------------------------------------------------------
 
 function fontString(size) {
-  // Dad Lettering only covers what appears in the strips; anything else
-  // falls back to the closest-looking web font.
-  return `${size}px "${state.font}", "Patrick Hand SC", cursive`;
+  return `${size}px "${FONT}", cursive`;
 }
 
 const widthCache = new Map();
 
 function measure(text, size) {
-  const key = `${state.font}\u0000${size}\u0000${text}`;
+  const key = `${size}\u0000${text}`;
   let width = widthCache.get(key);
   if (width === undefined) {
     ctx.font = fontString(size);
@@ -177,8 +94,7 @@ function measure(text, size) {
     if (widthCache.size > 50000) widthCache.clear();
     widthCache.set(key, width);
   }
-  // Stroking the letters to thicken them makes them a little wider.
-  return width + state.weight;
+  return width;
 }
 
 // Height of the font's capitals as a fraction of its size.
@@ -187,16 +103,12 @@ function capRatio() {
   return ctx.measureText("H").actualBoundingBoxAscent / 100;
 }
 
-// The font size whose capitals match Watterson's lettering in the strip,
-// scaled by the size setting.
-function fontSizeForScale() {
-  const panelScale =
-    CELL_WIDTH / (assets.panels.reduce((sum, p) => sum + p.width, 0) / assets.panels.length);
-  return (assets.capHeight * panelScale * (state.scale / 100)) / capRatio();
-}
-
-function displayText(text) {
-  return state.caps ? text.toUpperCase() : text;
+// The font size whose capitals match Watterson's lettering in the strip.
+function lettering() {
+  const panelWidth =
+    assets.panels.reduce((sum, p) => sum + p.width, 0) / assets.panels.length;
+  const cap = (assets.capHeight * CELL_WIDTH) / panelWidth;
+  return { cap, fontSize: cap / capRatio() };
 }
 
 function setStatus(message, warning = false) {
@@ -206,68 +118,104 @@ function setStatus(message, warning = false) {
 
 // --- Layout --------------------------------------------------------------
 
-// Clearance between text and artwork. Balloons may overlap the art a
-// little, as they do in the strips, so this needn't leave room for them.
-function artMargin(cap) {
-  return 0.4 * cap;
-}
-
-function layoutOptions(fontSize) {
-  const cap = fontSize * capRatio();
+// Calvin's reply, lettered in a column just above his head in panel 2. It
+// grows upwards, and the space it takes (with its balloon) is reserved so
+// that Dad's text flows around it.
+function layoutCalvin(meta, fontSize, cap) {
+  const [x0, x1, bottom] = meta.calvinColumn;
+  const scale = CELL_WIDTH / meta.width;
+  const padX = (BALLOON.padX * cap) / scale;
+  const padY = (BALLOON.padY * cap) / scale;
+  const lay = (width) =>
+    layoutColumn(texts[CALVIN].toUpperCase(), {
+      measure,
+      fontSize,
+      lineHeight: LINE_HEIGHT,
+      width: width * scale,
+    });
+  // The open space, beside Dad's head, that a column `height` tall can use.
+  const room = (height) => {
+    const [a, b] = openSpan(meta, bottom - height / scale, bottom, (x0 + x1) / 2);
+    return [Math.max(a, PADDING / scale) + padX, Math.min(b, meta.width - PADDING / scale) - padX];
+  };
+  // A longer reply gets a wider column rather than a tall thin one, as far
+  // as the open space allows.
+  let width = x1 - x0;
+  let column = lay(width);
+  while (column.lines.length > CALVIN_MAX_LINES) {
+    const wider = width * 1.15;
+    const candidate = lay(wider);
+    const [a, b] = room(candidate.height);
+    if (wider > b - a) break;
+    width = wider;
+    column = candidate;
+  }
+  // Centred where his balloon was, but kept within the open space.
+  const [a, b] = room(column.height);
+  const middle = Math.min(Math.max((x0 + x1) / 2, a + width / 2), b - width / 2);
+  column.left = middle - width / 2;
+  if (!column.lines.length) return { column, reserved: [] };
+  const used = Math.max(...column.lines.map((l) => l.width)) / scale;
   return {
-    measure,
-    fontSize,
-    lineHeight: state.spacing,
-    margin: artMargin(cap),
-    align: state.align,
-    cellWidth: CELL_WIDTH,
-    padding: PADDING,
-    valign: state.valign,
-    minFontSize: 8,
+    column,
+    reserved: [
+      [
+        middle - used / 2 - padX,
+        bottom - column.height / scale - padY,
+        middle + used / 2 + padX,
+        bottom + padY,
+      ],
+    ],
   };
 }
 
+// The stretch of open space (in art pixels) containing x = `centre` on
+// every row from y0 to y1, ignoring rows above the art.
+function openSpan(meta, y0, y1, centre) {
+  let span = [0, meta.width];
+  for (let row = Math.max(0, Math.floor(y0)); row < Math.min(meta.height, Math.ceil(y1)); row++) {
+    const here = (meta.open[row] ?? []).find(([a, b]) => a <= centre && centre < b);
+    if (!here) return [centre, centre];
+    span = [Math.max(span[0], here[0]), Math.min(span[1], here[1])];
+  }
+  return span;
+}
+
 function computeLayout() {
+  const { cap, fontSize } = lettering();
+  const calvinMeta = assets.panels.find((p) => p.calvinColumn);
+  const calvin = layoutCalvin(calvinMeta, fontSize, cap);
   const specs = assets.panels.map((p) => ({
     width: p.width,
     height: p.height,
     free: p.free ?? [],
+    reserved: p === calvinMeta ? calvin.reserved : [],
   }));
-  const texts = [...state.texts.slice(0, 3).map(displayText), ""];
-  const result = fitPanels(specs, texts, {
-    ...layoutOptions(fontSizeForScale()),
-    mode: state.mode,
-    headroom: state.headroom,
+  const result = fitPanels(specs, [...texts.slice(0, 3).map((t) => t.toUpperCase()), ""], {
+    measure,
+    fontSize,
+    lineHeight: LINE_HEIGHT,
+    margin: ART_MARGIN * cap,
+    align: "left",
+    cellWidth: CELL_WIDTH,
+    padding: PADDING,
   });
-  result.calvin = layoutCalvin(result);
-  return result;
-}
 
-// Calvin's reply goes where his balloon was in the strip, centred, and is
-// made smaller if it doesn't fit there.
-function layoutCalvin(result) {
-  const meta = assets.panels[1];
-  const [x0, y0, x1, y1] = meta.calvinRegion;
-  const spec = {
-    width: meta.width,
-    height: meta.height,
-    headroomFree: false,
-    free: Array.from({ length: meta.height }, (_, row) =>
-      row >= y0 && row < y1 ? [[x0, x1]] : [],
-    ),
+  // Place Calvin's lines in the panel, now that its size is known.
+  const index = assets.panels.indexOf(calvinMeta);
+  const panel = result.panels[index];
+  const [, , bottom] = calvinMeta.calvinColumn;
+  const left = calvin.column.left * panel.scale;
+  const top = panel.artTop + bottom * panel.scale - calvin.column.height;
+  result.calvin = {
+    panel: index,
+    layout: {
+      fontSize,
+      lineHeight: calvin.column.lineHeight,
+      lines: calvin.column.lines.map((l) => ({ ...l, x: left + l.x, y: top + l.y })),
+    },
   };
-  const artHeight = result.panels[1].height - result.panels[1].artTop;
-  const options = layoutOptions(result.fontSize);
-  return fitPanels([spec], [displayText(state.texts[CALVIN])], {
-    ...options,
-    // Inside his region, only the balloon itself needs room.
-    margin: state.speech === "balloons" ? BALLOON.padX * result.fontSize * capRatio() : 0,
-    align: "center",
-    padding: 0,
-    mode: "shrink",
-    valign: "middle",
-    headroom: result.cellHeight - artHeight,
-  });
+  return result;
 }
 
 // --- Drawing -------------------------------------------------------------
@@ -275,17 +223,11 @@ function layoutCalvin(result) {
 function drawLines(layout) {
   ctx.font = fontString(layout.fontSize);
   ctx.fillStyle = INK;
-  ctx.strokeStyle = INK;
-  ctx.lineJoin = "round";
-  ctx.lineWidth = state.weight;
   ctx.textBaseline = "alphabetic";
   // Centre the capital letters vertically in each line box.
   const capHeight = ctx.measureText("H").actualBoundingBoxAscent;
   for (const line of layout.lines) {
-    const baseline = line.y + (line.height + capHeight) / 2;
-    const x = line.x + state.weight / 2;
-    ctx.fillText(line.text, x, baseline);
-    if (state.weight > 0) ctx.strokeText(line.text, x, baseline);
+    ctx.fillText(line.text, line.x, line.y + (line.height + capHeight) / 2);
   }
 }
 
@@ -293,7 +235,8 @@ function speakerPoint(panel, point) {
   return [point[0] * panel.scale, panel.artTop + point[1] * panel.scale];
 }
 
-function drawTail(layout, panel, speaker) {
+// Lettering without a balloon gets a quick pen stroke towards the speaker.
+function drawStroke(layout, panel, speaker) {
   const fontSize = layout.fontSize;
   const tail = tailFor(layout, speakerPoint(panel, speaker), {
     gap: fontSize * 0.35,
@@ -302,7 +245,7 @@ function drawTail(layout, panel, speaker) {
   if (!tail) return;
   const [x0, y0] = tail.from;
   const [x1, y1] = tail.to;
-  // A slight bow, as if drawn with a quick flick of the pen.
+  // A slight bow, as if drawn with a flick of the pen.
   const bow = 0.12;
   const cx = (x0 + x1) / 2 - (y1 - y0) * bow;
   const cy = (y0 + y1) / 2 + (x1 - x0) * bow;
@@ -347,40 +290,37 @@ function tailPath({ base: [b1, b2], tip }) {
 // All outlines are stroked at double width and then all are filled white,
 // which leaves just the outer edge of their union: balloons that touch
 // merge, and each tail opens into its balloon.
-function drawBalloons(panel, meta, speeches) {
+function drawBalloons(panel, meta, speeches, cap) {
   const shapes = [];
   const isFree = (p) => openAt(panel, meta, p);
   for (const { layout, speaker } of speeches) {
     if (!layout.lines.length) continue;
-    const cap = layout.fontSize * capRatio();
     const outline = balloonOutline(layout.lines, {
       padX: BALLOON.padX * cap,
       padY: BALLOON.padY * cap,
       radius: BALLOON.radius * cap,
+      ovalLines: 1,
       isFree,
     });
-    shapes.push({ outline, cap });
-    if (!speaker) continue;
-    const target = speakerPoint(panel, speaker);
-    const tail = balloonTail(outline, target, {
+    shapes.push(outline);
+    const tail = balloonTail(outline, speakerPoint(panel, speaker), {
       width: BALLOON.tailWidth * cap,
       maxLength: BALLOON.tailLength * cap,
       gap: BALLOON.tailGap * cap,
       isFree,
     });
-    if (tail) shapes.push({ tail, cap });
+    if (tail) shapes.push(tail);
   }
-  if (!shapes.length) return;
   const trace = (shape) => {
     ctx.beginPath();
-    if (shape.outline) polygonPath(shape.outline);
-    else tailPath(shape.tail);
+    if (Array.isArray(shape)) polygonPath(shape);
+    else tailPath(shape);
   };
   ctx.lineJoin = "round";
   ctx.strokeStyle = INK;
+  ctx.lineWidth = 2 * BALLOON.line * cap;
   for (const shape of shapes) {
     trace(shape);
-    ctx.lineWidth = 2 * BALLOON.line * shape.cap;
     ctx.stroke();
   }
   ctx.fillStyle = "#fff";
@@ -392,6 +332,7 @@ function drawBalloons(panel, meta, speeches) {
 
 function render() {
   if (!assets) return;
+  const { cap } = lettering();
   const result = computeLayout();
   const { cellHeight } = result;
   canvas.width = OUTER * 2 + CELL_WIDTH * 2 + GUTTER;
@@ -406,8 +347,8 @@ function render() {
     if (meta.speakers.dad) {
       speeches.push({ layout: result.layouts[i], speaker: meta.speakers.dad });
     }
-    if (meta.speakers.calvin) {
-      speeches.push({ layout: result.calvin.layouts[0], speaker: meta.speakers.calvin });
+    if (result.calvin.panel === i) {
+      speeches.push({ layout: result.calvin.layout, speaker: meta.speakers.calvin });
     }
     const x = OUTER + (i % 2) * (CELL_WIDTH + GUTTER);
     const y = OUTER + Math.floor(i / 2) * (cellHeight + GUTTER);
@@ -419,7 +360,7 @@ function render() {
     ctx.clip();
     ctx.fillStyle = meta.background;
     ctx.fillRect(0, 0, CELL_WIDTH, cellHeight);
-    if (state.speech === "balloons") drawBalloons(panel, meta, speeches);
+    if (meta.speech === "balloon") drawBalloons(panel, meta, speeches, cap);
     // Where the art is black ink on white, multiplying it in keeps every
     // line of it visible even where a balloon overlaps it.
     if (meta.background === "#fff") ctx.globalCompositeOperation = "multiply";
@@ -428,8 +369,8 @@ function render() {
     ctx.globalCompositeOperation = "source-over";
     for (const { layout, speaker } of speeches) {
       drawLines(layout);
-      if (state.speech === "tails" && layout.lines.length) {
-        drawTail(layout, panel, speaker);
+      if (meta.speech === "loose" && layout.lines.length) {
+        drawStroke(layout, panel, speaker);
       }
     }
     ctx.restore();
@@ -439,22 +380,7 @@ function render() {
     ctx.strokeRect(x, y, CELL_WIDTH, cellHeight);
   });
 
-  const requested = fontSizeForScale();
-  if (!result.fits) {
-    setStatus(
-      state.mode === "shrink"
-        ? "That's too much text even at the smallest size. Add some extra space or let the panels grow."
-        : "Some text doesn't fit. Try shorter words or a smaller size.",
-      true,
-    );
-  } else if (!result.calvin.fits) {
-    setStatus("Calvin's reply is too long to fit in his corner of the panel.", true);
-  } else if (state.mode === "shrink" && result.fontSize < requested - 0.01) {
-    const shrunk = Math.round((state.scale * result.fontSize) / requested);
-    setStatus(`Text shrunk to ${shrunk}% to fit.`);
-  } else {
-    setStatus("");
-  }
+  setStatus(result.fits ? "" : "Some of that text doesn't fit.", !result.fits);
 }
 
 let pending = false;
@@ -467,26 +393,13 @@ function scheduleRender() {
   });
 }
 
-function onChange() {
-  readControls();
-  saveToUrl();
-  scheduleRender();
+function showTexts() {
+  textareas.forEach((t, i) => (t.value = texts[i]));
 }
 
-async function ensureFontLoaded() {
-  if (state.font === UPLOADED_FONT) return;
-  try {
-    await document.fonts.load(`20px "${state.font}"`, "AaBb");
-  } catch {
-    // Fall back to whatever the browser has; still render something.
-  }
-}
-
-async function onFontChange() {
-  readControls();
+function onInput() {
+  texts = textareas.map((t) => t.value);
   saveToUrl();
-  await ensureFontLoaded();
-  widthCache.clear();
   scheduleRender();
 }
 
@@ -539,26 +452,6 @@ async function copyLink() {
   }
 }
 
-async function useUploadedFont(file) {
-  try {
-    const face = new FontFace(UPLOADED_FONT, await file.arrayBuffer());
-    await face.load();
-    document.fonts.add(face);
-    const select = $("font");
-    let option = [...select.options].find((o) => o.value === UPLOADED_FONT);
-    if (!option) {
-      option = document.createElement("option");
-      option.value = UPLOADED_FONT;
-      select.append(option);
-    }
-    option.textContent = `Uploaded: ${file.name}`;
-    select.value = UPLOADED_FONT;
-    await onFontChange();
-  } catch {
-    setStatus("Couldn't read that font file.", true);
-  }
-}
-
 // --- Start up ------------------------------------------------------------
 
 function loadImage(src) {
@@ -571,49 +464,36 @@ function loadImage(src) {
 }
 
 async function main() {
-  populateFonts();
-  state = stateFromUrl() ?? state;
-  showState();
+  texts = textsFromUrl() ?? texts;
+  showTexts();
 
-  for (const t of textareas) t.addEventListener("input", onChange);
-  for (const id of ["size", "weight", "spacing", "headroom"]) {
-    $(id).addEventListener("input", onChange);
-  }
-  for (const id of ["align", "caps", "speech", "mode", "valign"]) {
-    $(id).addEventListener("change", onChange);
-  }
-  $("font").addEventListener("change", onFontChange);
-  $("font-file").addEventListener("change", (e) => {
-    const file = e.target.files[0];
-    if (file) useUploadedFont(file);
-  });
+  for (const t of textareas) t.addEventListener("input", onInput);
   $("download").addEventListener("click", download);
   $("copy-image").addEventListener("click", copyImage);
   $("copy-link").addEventListener("click", copyLink);
-  $("reset").addEventListener("click", async () => {
-    state = { ...DEFAULTS, texts: [...DEFAULTS.texts] };
-    showState();
+  $("reset").addEventListener("click", () => {
+    texts = [...DEFAULTS];
+    showTexts();
     history.replaceState(null, "", location.pathname);
-    await onFontChange();
+    scheduleRender();
   });
-  window.addEventListener("hashchange", async () => {
-    const fromUrl = stateFromUrl();
+  window.addEventListener("hashchange", () => {
+    const fromUrl = textsFromUrl();
     if (fromUrl) {
-      state = fromUrl;
-      showState();
-      await onFontChange();
+      texts = fromUrl;
+      showTexts();
+      scheduleRender();
     }
   });
 
   const response = await fetch("assets/panels.json");
   assets = await response.json();
   images = await Promise.all(assets.panels.map((p) => loadImage(p.image)));
-  await ensureFontLoaded();
-  // Fonts other than the selected one may finish loading later.
-  document.fonts.addEventListener("loadingdone", () => {
-    widthCache.clear();
-    scheduleRender();
-  });
+  try {
+    await document.fonts.load(`20px "${FONT}"`, "AB");
+  } catch {
+    // Render with whatever the browser has rather than nothing.
+  }
   render();
 }
 

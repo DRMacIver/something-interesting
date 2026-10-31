@@ -6,8 +6,9 @@
 // cell width and anchored to the bottom. Everything above the art is free.
 //
 // spec.free[row] is a list of [start, end) intervals, in art pixels, where
-// text may go on that row of the art. If spec.headroomFree is false, text
-// can't go above the art either.
+// text may go on that row of the art. spec.reserved is a list of
+// [x0, y0, x1, y1] rectangles, in art pixels (y may be negative, above the
+// art), taken up by something else, such as another character's balloon.
 export function makePanel(spec, cellWidth, cellHeight, padding) {
   const scale = cellWidth / spec.width;
   const artHeight = spec.height * scale;
@@ -35,15 +36,35 @@ function intersect(a, b) {
   return out;
 }
 
+function subtract(intervals, [x0, x1]) {
+  return intervals.flatMap(([a, b]) => {
+    if (x1 <= a || x0 >= b) return [[a, b]];
+    const out = [];
+    if (x0 > a) out.push([a, x0]);
+    if (x1 < b) out.push([x1, b]);
+    return out;
+  });
+}
+
+// The reserved rectangles of a panel in cell coordinates.
+export function reservedAreas(panel) {
+  const { scale, artTop, spec } = panel;
+  return (spec.reserved ?? []).map(([x0, y0, x1, y1]) => [
+    x0 * scale,
+    artTop + y0 * scale,
+    x1 * scale,
+    artTop + y1 * scale,
+  ]);
+}
+
 // The horizontal intervals where a line occupying y0..y1 may go, keeping
-// `margin` clear of the art on every side and `padding` clear of the panel
-// edges.
+// `margin` clear of the art and reserved areas on every side and `padding`
+// clear of the panel edges.
 export function freeIntervals(panel, y0, y1, margin) {
   const { padding, width, scale, artTop, spec } = panel;
   let intervals = [[padding, width - padding]];
   const top = y0 - margin;
   const bottom = y1 + margin;
-  if (spec.headroomFree === false && top < artTop) return [];
   if (bottom > artTop) {
     const firstRow = Math.max(0, Math.floor((top - artTop) / scale));
     const lastRow = Math.min(
@@ -58,8 +79,14 @@ export function freeIntervals(panel, y0, y1, margin) {
       intervals = intersect(intervals, free);
     }
   }
+  intervals = intervals.map(([a, b]) => [a + margin, b - margin]);
+  for (const [rx0, ry0, rx1, ry1] of reservedAreas(panel)) {
+    if (ry1 + margin > y0 && ry0 - margin < y1) {
+      intervals = subtract(intervals, [rx0 - margin, rx1 + margin]);
+    }
+  }
   return intervals
-    .map(([a, b]) => [Math.max(a + margin, padding), Math.min(b - margin, width - padding)])
+    .map(([a, b]) => [Math.max(a, padding), Math.min(b, width - padding)])
     .filter(([a, b]) => b > a);
 }
 
@@ -78,17 +105,16 @@ function paragraphs(text) {
     .map((line) => line.split(/\s+/).filter(Boolean));
 }
 
-// Split a word that is too long for any line into pieces that fit `width`.
-function breakWord(word, width, fits) {
-  const pieces = [];
-  let rest = word;
-  while (rest.length) {
-    let n = 1;
-    while (n < rest.length && fits(rest.slice(0, n + 1), width)) n++;
-    pieces.push(rest.slice(0, n));
-    rest = rest.slice(n);
+// The longest start of a word too long for a line that fits in `width`:
+// preferably ending just after punctuation (as in a web address), otherwise
+// wherever it has to.
+function firstPiece(word, width, fits) {
+  let n = 1;
+  while (n < word.length && fits(word.slice(0, n + 1), width)) n++;
+  for (let k = n; k > 1; k--) {
+    if ("/.-_?&=,:".includes(word[k - 1])) return word.slice(0, k);
   }
-  return pieces;
+  return word.slice(0, n);
 }
 
 // Lay `text` out in `panel` from the top down. Returns the positioned lines,
@@ -96,9 +122,54 @@ function breakWord(word, width, fits) {
 //
 // options: measure(text, fontSize), fontSize, lineHeight (a multiple of the
 // font size), margin (clearance from the art), align ("left" | "center"),
-// minLineWidth (narrower gaps are skipped; defaults to 3 em), startY (where
-// the first line goes; defaults to the top padding).
+// minLineWidth (narrower gaps are skipped; defaults to 3 em).
+//
+// Left-aligned text keeps a straight left edge, as Watterson's does, unless
+// the art pushes some lines well aside: neighbouring lines all start where
+// the furthest right of them has to, so long as that leaves each of them at
+// least ALIGN_SHARE of the widest one's space.
 export function layoutText(panel, text, options) {
+  if (options.align !== "left") return flow(panel, text, options, []);
+  let minimums = [];
+  let result = flow(panel, text, options, minimums);
+  for (let round = 0; round < 12; round++) {
+    const next = alignedMinimums(result.spaces);
+    if (next.every((m, i) => m === minimums[i]) && next.length === minimums.length) {
+      break;
+    }
+    minimums = next;
+    result = flow(panel, text, options, minimums);
+  }
+  return result;
+}
+
+const ALIGN_SHARE = 0.5;
+
+// The left edge for each line: the furthest right start among a run of
+// neighbouring lines' spaces ([start, end]), where starting them all there
+// still leaves each enough room.
+function alignedMinimums(spaces) {
+  const out = [];
+  let group = [];
+  const edge = (g) => Math.max(...g.map(([a]) => a));
+  const roomy = (g) => {
+    const shortest = Math.min(...g.map(([, b]) => b)) - edge(g);
+    const widest = Math.max(...g.map(([a, b]) => b - a));
+    return shortest >= ALIGN_SHARE * widest;
+  };
+  const finish = () => {
+    for (let k = 0; k < group.length; k++) out.push(edge(group));
+    group = [];
+  };
+  for (const space of spaces) {
+    if (group.length && !roomy([...group, space])) finish();
+    group.push(space);
+  }
+  if (group.length) finish();
+  return out;
+}
+
+function flow(panel, text, options, minimums) {
   const { measure, fontSize, align = "center" } = options;
   const lineHeight = fontSize * (options.lineHeight ?? 1.2);
   const margin = options.margin ?? 0;
@@ -109,10 +180,12 @@ export function layoutText(panel, text, options) {
   const fits = (s, width) => measure(s, fontSize) <= width;
 
   const lines = [];
-  let y = options.startY ?? panel.padding;
+  // The space each line had, before any alignment.
+  const spaces = [];
+  let y = panel.padding;
   let overflow = false;
 
-  const result = () => ({ lines, fits: !overflow, lineHeight, fontSize });
+  const result = () => ({ lines, spaces, fits: !overflow, lineHeight, fontSize });
 
   const place = (words, interval) => {
     const content = words.join(" ");
@@ -136,7 +209,12 @@ export function layoutText(panel, text, options) {
         overflow = true;
         return result();
       }
-      const interval = widest(freeIntervals(panel, y, y + lineHeight, margin));
+      const space = widest(freeIntervals(panel, y, y + lineHeight, margin));
+      // Lines beyond those seen last time go with the last group.
+      const minimum = minimums.length
+        ? minimums[Math.min(lines.length, minimums.length - 1)]
+        : -Infinity;
+      const interval = space && [Math.max(space[0], minimum), space[1]];
       const width = interval ? interval[1] - interval[0] : 0;
       if (!interval || width < Math.min(minLineWidth, fullWidth)) {
         y += step;
@@ -148,101 +226,71 @@ export function layoutText(panel, text, options) {
           y += step;
           continue;
         }
-        words.splice(0, 1, ...breakWord(words[0], width, fits));
+        // Too long for any line: the first piece gets a line to itself.
+        const piece = firstPiece(words[0], width, fits);
+        words[0] = words[0].slice(piece.length);
+        spaces.push(space);
+        place([piece], interval);
+        continue;
       }
       const line = [words.shift()];
       while (words.length && fits([...line, words[0]].join(" "), width)) {
         line.push(words.shift());
       }
+      spaces.push(space);
       place(line, interval);
     }
   }
   return result();
 }
 
-// Lay out one text per panel spec, sharing a cell size and font size.
-//
-// mode "grow": keep the font size and make the cells as short as possible
-// while still fitting every text (but never shorter than the art plus
-// `headroom`).
-// mode "shrink": keep the cells at the art height plus `headroom` and use the
-// largest font size (up to the requested one) that fits every text.
-//
-// valign: "top" puts text at the top of each panel, "bottom" moves it as far
-// down as it can go while still fitting, "middle" halfway between the two.
-export function fitPanels(specs, texts, options) {
-  const best = fitTop(specs, texts, options);
-  const valign = options.valign ?? "top";
-  if (valign === "top" || !best.fits) return best;
-  const share = valign === "middle" ? 0.5 : 1;
-  best.layouts = best.layouts.map((layout, i) => {
-    if (!layout.lines.length) return layout;
-    const panel = best.panels[i];
-    const at = (offset) =>
-      layoutText(panel, texts[i], {
-        ...options,
-        fontSize: best.fontSize,
-        startY: panel.padding + offset,
-      });
-    let lo = 0;
-    let hi = panel.height;
-    while (hi - lo > 0.5) {
-      const mid = (lo + hi) / 2;
-      if (at(mid).fits) lo = mid;
-      else hi = mid;
-    }
-    return at(lo * share);
+// Lay text out in a column of the given width, each line centred, from
+// y = 0 down. Returns the lines and the total height.
+export function layoutColumn(text, { measure, fontSize, lineHeight = 1.2, width }) {
+  const spec = { width, height: 1, free: [] };
+  const panel = makePanel(spec, width, Infinity, 0);
+  const layout = layoutText(panel, text, {
+    measure,
+    fontSize,
+    lineHeight,
+    align: "center",
+    minLineWidth: 0,
   });
-  return best;
+  const lines = layout.lines;
+  const height = lines.length ? lines[lines.length - 1].y + layout.lineHeight : 0;
+  return { lines, height, lineHeight: layout.lineHeight, fontSize };
 }
 
-function fitTop(specs, texts, options) {
-  const { cellWidth, padding = 0, mode = "grow", headroom = 0 } = options;
+// Lay out one text per panel spec, sharing a cell size, with the cells as
+// short as possible while still fitting every text and every reserved area
+// (but never shorter than the art).
+export function fitPanels(specs, texts, options) {
+  const { cellWidth, padding = 0, fontSize } = options;
   const artHeight = Math.max(
     ...specs.map((spec) => spec.height * (cellWidth / spec.width)),
   );
 
-  const attempt = (cellHeight, fontSize) => {
+  const attempt = (cellHeight) => {
     const panels = specs.map((spec) =>
       makePanel(spec, cellWidth, cellHeight, padding),
     );
     const layouts = panels.map((panel, i) =>
-      layoutText(panel, texts[i] ?? "", { ...options, fontSize }),
+      layoutText(panel, texts[i] ?? "", options),
+    );
+    const inside = panels.every((panel) =>
+      reservedAreas(panel).every(([, y0]) => y0 >= 0),
     );
     return {
       cellHeight,
       fontSize,
       panels,
       layouts,
-      fits: layouts.every((layout) => layout.fits),
+      fits: inside && layouts.every((layout) => layout.fits),
     };
   };
 
-  if (mode === "shrink") {
-    const cellHeight = artHeight + headroom;
-    let best = attempt(cellHeight, options.fontSize);
-    if (best.fits) return best;
-    let lo = options.minFontSize ?? 4;
-    let hi = options.fontSize;
-    best = attempt(cellHeight, lo);
-    if (!best.fits) return best;
-    while (hi - lo > 0.25) {
-      const mid = (lo + hi) / 2;
-      const candidate = attempt(cellHeight, mid);
-      if (candidate.fits) {
-        lo = mid;
-        best = candidate;
-      } else {
-        hi = mid;
-      }
-    }
-    return best;
-  }
-
-  const fontSize = options.fontSize;
   const step = options.step ?? fontSize / 2;
-  const base = artHeight + headroom;
-  let best = attempt(base, fontSize);
+  let best = attempt(artHeight);
   if (best.fits) return best;
 
   // Double the extra height until it fits, then binary search back down.
@@ -250,7 +298,7 @@ function fitTop(specs, texts, options) {
   let lo = 0;
   let hi = step;
   for (;;) {
-    const candidate = attempt(base + hi, fontSize);
+    const candidate = attempt(artHeight + hi);
     if (candidate.fits) {
       best = candidate;
       break;
@@ -262,7 +310,7 @@ function fitTop(specs, texts, options) {
   while (hi - lo > step) {
     const mid = lo + Math.ceil((hi - lo) / 2 / step) * step;
     if (mid >= hi) break;
-    const candidate = attempt(base + mid, fontSize);
+    const candidate = attempt(artHeight + mid);
     if (candidate.fits) {
       hi = mid;
       best = candidate;

@@ -39,6 +39,9 @@ PANELS = [
         "erase": [[(320, 1870), (881, 1870), (881, 2310), (320, 2310)]],
         "speakers": {"dad": (270, 2065)},
         "text_bottom": 2520,
+        # How the dialogue is lettered in the original: in a balloon, or
+        # loose in the panel with just a stroke towards the speaker.
+        "speech": "balloon",
     },
     {
         "box": (924, 1877, 1720, 2907),
@@ -55,9 +58,12 @@ PANELS = [
              (1288, 2306), (1218, 2306)],
         ],
         "speakers": {"dad": (1200, 2485), "calvin": (1600, 2720)},
-        "text_bottom": 2380,
-        # Where Calvin's reply goes: the space his balloon was in.
-        "calvin_region": (1330, 2390, 1600, 2600),
+        "text_bottom": 2560,
+        "speech": "balloon",
+        # Calvin's reply is lettered in a column of this width, centred
+        # where his balloon was, with its last line just above his head;
+        # longer replies grow upwards.
+        "calvin_column": (1330, 1630, 2530),
     },
     {
         "box": (1755, 1877, 2550, 2907),
@@ -65,6 +71,7 @@ PANELS = [
                    (2220, 2460), (1755, 2460)]],
         "speakers": {"dad": (2010, 2770)},
         "text_bottom": 2600,
+        "speech": "loose",
     },
     {
         # Inside the edges of the black, where it's solid.
@@ -215,9 +222,11 @@ def main():
             else free_rows(art, panel["text_bottom"] - y0),
             "open": None if panel.get("dark") else open_rows(art),
         }
-        if "calvin_region" in panel:
-            rx0, ry0, rx1, ry1 = panel["calvin_region"]
-            entry["calvinRegion"] = grid((rx0, ry0)) + grid((rx1, ry1))
+        if "speech" in panel:
+            entry["speech"] = panel["speech"]
+        if "calvin_column" in panel:
+            cx0, cx1, bottom = panel["calvin_column"]
+            entry["calvinColumn"] = grid((cx0, bottom))[:1] + grid((cx1, bottom))
         meta.append(entry)
 
     # Letters are most of what was erased; their typical height is the

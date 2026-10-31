@@ -6,6 +6,7 @@ import {
   layoutText,
   fitPanels,
   makePanel,
+  layoutColumn,
   tailFor,
 } from "../js/layout.js";
 
@@ -200,8 +201,7 @@ test("growing finds the smallest headroom that fits every panel", () => {
     ...opts(),
     cellWidth: 100,
     padding: 0,
-    mode: "grow",
-    step: 1,
+        step: 1,
   });
   assert.equal(result.fits, true);
   assert.equal(result.fontSize, 10);
@@ -220,51 +220,8 @@ test("growing never shrinks below the art", () => {
     ...opts(),
     cellWidth: 100,
     padding: 0,
-    mode: "grow",
-  });
+      });
   assert.equal(result.cellHeight, 50);
-});
-
-test("extra headroom is added on top of the art", () => {
-  const result = fitPanels([artRightBlocked], ["hi"], {
-    ...opts(),
-    cellWidth: 100,
-    padding: 0,
-    mode: "shrink",
-    headroom: 25,
-  });
-  assert.equal(result.cellHeight, 75);
-});
-
-test("shrinking finds a font size that fits", () => {
-  const text = "word ".repeat(30);
-  const result = fitPanels([artRightBlocked], [text], {
-    ...opts({ fontSize: 40 }),
-    cellWidth: 100,
-    padding: 0,
-    mode: "shrink",
-    headroom: 0,
-  });
-  assert.equal(result.fits, true);
-  assert.ok(result.fontSize < 40);
-  assert.equal(result.cellHeight, 50);
-  const bigger = layoutText(
-    makePanel(artRightBlocked, 100, 50, 0),
-    text,
-    opts({ fontSize: result.fontSize + 0.5 }),
-  );
-  assert.equal(bigger.fits, false);
-});
-
-test("shrinking keeps the requested size when the text already fits", () => {
-  const result = fitPanels([artRightBlocked], ["hi"], {
-    ...opts(),
-    cellWidth: 100,
-    padding: 0,
-    mode: "shrink",
-    headroom: 0,
-  });
-  assert.equal(result.fontSize, 10);
 });
 
 test("panels with different art sizes share a cell height", () => {
@@ -273,10 +230,82 @@ test("panels with different art sizes share a cell height", () => {
     ...opts(),
     cellWidth: 100,
     padding: 0,
-    mode: "grow",
-  });
+      });
   assert.equal(result.cellHeight, 50);
   assert.equal(result.panels[1].artTop, 30);
+});
+
+test("reserved areas are kept clear of text", () => {
+  const spec = { ...artRightBlocked, reserved: [[0, 10, 20, 30]] };
+  const panel = makePanel(spec, 100, 80, 0);
+  // Art starts at y = 30, so the reserved area covers y 40..60 and x 0..20.
+  assert.deepEqual(freeIntervals(panel, 45, 50, 0), [[20, 40]]);
+  assert.deepEqual(freeIntervals(panel, 35, 38, 0), [[0, 40]]);
+});
+
+test("reserved areas can reach above the art", () => {
+  const spec = { ...artRightBlocked, reserved: [[60, -20, 100, 10]] };
+  const panel = makePanel(spec, 100, 80, 0);
+  assert.deepEqual(freeIntervals(panel, 15, 20, 0), [[0, 60]]);
+});
+
+test("the margin keeps text clear of reserved areas too", () => {
+  const spec = { ...artRightBlocked, reserved: [[60, -20, 100, 10]] };
+  const panel = makePanel(spec, 100, 80, 0);
+  // The reserved area starts at y = 10; within 5 of it, text keeps 5 away.
+  assert.deepEqual(freeIntervals(panel, 2, 7, 5), [[5, 55]]);
+});
+
+test("panels grow until their reserved areas are inside them", () => {
+  // The reserved area starts 25px above the top of the art.
+  const spec = { ...artRightBlocked, reserved: [[60, -25, 100, 10]] };
+  const result = fitPanels([spec], [""], { ...opts(), cellWidth: 100, padding: 0, step: 1 });
+  assert.equal(result.fits, true);
+  assert.equal(result.cellHeight, 75);
+});
+
+test("a column wraps text to its width and centres each line", () => {
+  const { lines, height } = layoutColumn("aaa bbb ccc d", {
+    measure,
+    fontSize: 10,
+    lineHeight: 1,
+    width: 30,
+  });
+  assert.deepEqual(
+    lines.map((l) => [l.text, l.x, l.y]),
+    [
+      ["aaa", 7.5, 0],
+      ["bbb", 7.5, 10],
+      ["ccc d", 2.5, 20],
+    ],
+  );
+  assert.equal(height, 30);
+});
+
+test("a column breaks words longer than its width", () => {
+  const { lines } = layoutColumn("a".repeat(12), {
+    measure,
+    fontSize: 10,
+    lineHeight: 1,
+    width: 40,
+  });
+  assert.deepEqual(lines.map((l) => l.text.length), [8, 4]);
+});
+
+test("an empty column has no lines", () => {
+  const { lines, height } = layoutColumn("  ", { measure, fontSize: 10, lineHeight: 1, width: 40 });
+  assert.deepEqual(lines, []);
+  assert.equal(height, 0);
+});
+
+test("long words break after punctuation where they can", () => {
+  const panel = panelWithHeadroom(100);
+  // 20 characters fit on a line.
+  const result = layoutText(panel, "example.github.io/something-interesting", opts());
+  assert.deepEqual(
+    result.lines.map((l) => l.text),
+    ["example.github.io/", "something-", "interesting"],
+  );
 });
 
 test("the tail starts below the text and points at the mouth", () => {
@@ -297,52 +326,48 @@ test("there is no tail without text", () => {
   assert.equal(tailFor(layout, [60, 100], { gap: 2, maxLength: 20 }), null);
 });
 
-test("layout can start lower down", () => {
-  const panel = panelWithHeadroom(100);
-  const result = layoutText(panel, "aa", opts({ startY: 25 }));
-  assert.equal(result.lines[0].y, 25);
+// Art whose right edge creeps rightwards as it goes down, like the back of
+// a head: at row y it covers x < y / 2.
+const slopedArt = {
+  width: 200,
+  height: 100,
+  free: Array.from({ length: 100 }, (_, y) => [[Math.floor(y / 2), 200]]),
+};
+
+test("left-aligned lines share a left edge where the art only nudges them", () => {
+  const panel = makePanel(slopedArt, 200, 100, 0);
+  const result = layoutText(panel, "aaaa ".repeat(30), opts({ align: "left" }));
+  const lefts = new Set(result.lines.map((l) => l.x));
+  assert.equal(lefts.size, 1);
+  // ...and that edge clears the art for every line.
+  for (const line of result.lines) {
+    const lastRow = line.y + line.height - 1;
+    assert.ok(line.x >= Math.floor(lastRow / 2));
+  }
 });
 
-test("bottom alignment moves text as far down as it will go", () => {
-  const result = fitPanels([artRightBlocked], ["aaaa bb"], {
-    ...opts(),
-    cellWidth: 100,
-    padding: 0,
-    mode: "shrink",
-    headroom: 30,
-    valign: "bottom",
-  });
-  const [line] = result.layouts[0].lines;
-  // The single line has to stay in the 40px-wide gap beside the art, and it
-  // can go right down to the bottom of the panel.
-  assert.equal(line.text, "aaaa bb");
-  assert.ok(line.y + line.height <= 80);
-  assert.ok(line.y + line.height > 79);
-  assert.ok(result.layouts[0].fits);
-});
-
-test("middle alignment splits the difference", () => {
-  const base = {
-    ...opts(),
-    cellWidth: 100,
-    padding: 0,
-    mode: "shrink",
-    headroom: 30,
+test("lines keep a shared left edge when that still leaves them half the width", () => {
+  // Free across the full width at the top, only right of x = 90 below.
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, (_, y) => (y < 30 ? [[0, 200]] : [[90, 200]])),
   };
-  // Text too wide for the gap beside the art, so it must stay in the headroom.
-  const text = "a".repeat(15);
-  const top = fitPanels([artRightBlocked], [text], { ...base, valign: "top" });
-  const bottom = fitPanels([artRightBlocked], [text], { ...base, valign: "bottom" });
-  const middle = fitPanels([artRightBlocked], [text], { ...base, valign: "middle" });
-  const y = (r) => r.layouts[0].lines[0].y;
-  assert.equal(y(top), 0);
-  assert.ok(Math.abs(y(bottom) - 20) < 0.5);
-  assert.ok(Math.abs(y(middle) - y(bottom) / 2) < 0.5);
+  const panel = makePanel(spec, 200, 100, 0);
+  const result = layoutText(panel, "aaaa ".repeat(30), opts({ align: "left" }));
+  assert.deepEqual(new Set(result.lines.map((l) => l.x)), new Set([90]));
 });
 
-test("a region can keep text out of the headroom", () => {
-  const spec = { ...artRightBlocked, headroomFree: false };
-  const panel = makePanel(spec, 100, 80, 0);
-  assert.deepEqual(freeIntervals(panel, 0, 20, 0), []);
-  assert.deepEqual(freeIntervals(panel, 35, 45, 0), [[0, 40]]);
+test("lines pushed well aside by the art keep their own left edge", () => {
+  // Free across the full width at the top, only right of x = 120 below.
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, (_, y) => (y < 30 ? [[0, 200]] : [[120, 200]])),
+  };
+  const panel = makePanel(spec, 200, 100, 0);
+  const result = layoutText(panel, "aaaa ".repeat(30), opts({ align: "left" }));
+  const lefts = result.lines.map((l) => l.x);
+  assert.equal(lefts[0], 0);
+  assert.equal(lefts[lefts.length - 1], 120);
 });

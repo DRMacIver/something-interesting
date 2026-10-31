@@ -53,7 +53,7 @@ header {
 
 h1 {
   margin: 0 0 4px;
-  font-family: "Patrick Hand SC", system-ui, sans-serif;
+  font-family: "Dad Lettering", system-ui, sans-serif;
   font-size: 2.4rem;
   font-weight: normal;
   letter-spacing: 0.02em;
@@ -83,8 +83,7 @@ main {
   gap: 12px;
 }
 
-.panel-text span,
-.grid label > span {
+.panel-text span {
   display: block;
   font-size: 0.85rem;
   font-weight: 600;
@@ -93,8 +92,6 @@ main {
 }
 
 textarea,
-select,
-input[type="file"],
 button {
   font: inherit;
   color: inherit;
@@ -110,66 +107,9 @@ textarea {
 }
 
 textarea:focus,
-select:focus,
 button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
-}
-
-select {
-  width: 100%;
-  padding: 6px 8px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--card);
-}
-
-input[type="file"] {
-  width: 100%;
-  font-size: 0.85rem;
-}
-
-input[type="range"] {
-  width: 100%;
-  accent-color: var(--accent);
-}
-
-output {
-  font-weight: normal;
-  font-variant-numeric: tabular-nums;
-}
-
-.options {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--card);
-  padding: 8px 12px 12px;
-}
-
-.options summary {
-  cursor: pointer;
-  font-weight: 600;
-  padding: 2px 0;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 14px;
-  margin-top: 8px;
-}
-
-.grid .check {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.grid .check span {
-  margin: 0;
-  color: var(--fg);
-  font-weight: normal;
-  font-size: 0.95rem;
 }
 
 .actions {
