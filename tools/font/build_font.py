@@ -203,6 +203,10 @@ def main():
     x0, y0, x1, y1 = bounds(outlines["9"])
     outlines["6"] = transformed(outlines["9"], (-1, 0, 0, -1, x0 + x1, y0 + y1))
     side["6"] = side["9"]
+    # The book has no slashes to speak of; Watterson's would be a stroke
+    # like the I's, leaning over to the right.
+    outlines["/"] = transformed(outlines["I"], (1, 0, 0.45, 1, 0, 0))
+    side["/"] = side["I"]
     for label, stretch in (("endash", 1.8), ("emdash", 3.2)):
         outlines[label] = transformed(outlines["-"], (stretch, 0, 0, 1, 0, 0))
         side[label] = side["-"]
@@ -210,6 +214,7 @@ def main():
     NAMES[":"] = "colon"
     NAMES[";"] = "semicolon"
     NAMES['"'] = "quotedbl"
+    NAMES["/"] = "slash"
 
     spaces = [s for s in data["spaces"] if s < 1.5]
     typical_left = np.median([l for l, _ in side.values()])

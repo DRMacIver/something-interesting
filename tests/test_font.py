@@ -96,3 +96,25 @@ def test_alternates_are_kerned_like_the_original(shaper):
     assert plain_advances[0] - font.get_glyph_h_advance(order.index(plain[0])) == (
         later_advances[1] - font.get_glyph_h_advance(order.index(later[1]))
     )
+
+
+def test_slash_is_a_stroke_leaning_right_from_the_baseline_to_cap_height(font):
+    # Without its own glyph, the browser letters / in some other font.
+    cmap = font.getBestCmap()
+    assert ord("/") in cmap
+    glyphs = font.getGlyphSet()
+    from fontTools.pens.recordingPen import RecordingPen
+
+    pen = RecordingPen()
+    glyphs[cmap[ord("/")]].draw(pen)
+    points = [p for _, args in pen.value for p in args]
+    xs = [x for x, _ in points]
+    ys = [y for _, y in points]
+    cap = font["OS/2"].sCapHeight
+    # From the baseline up to about cap height, not down below the line.
+    assert min(ys) > -0.1 * cap
+    assert 0.85 * cap < max(ys) < 1.15 * cap
+    # Leaning right: the top is further right than the bottom.
+    top = [x for x, y in points if y > 0.8 * max(ys)]
+    bottom = [x for x, y in points if y < 0.2 * max(ys)]
+    assert min(top) > max(bottom) - 0.05 * cap
