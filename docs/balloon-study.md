@@ -116,9 +116,9 @@ The common forms, roughly in order of frequency:
    towards the speaker, from whichever point of the balloon gives the
    clearest path towards the speaker's face, with a clear line of sight
    to it, stopping short of the art.
-6. Bow every edge of a balloon slightly, and join curves and straighter
+5. Bow every edge of a balloon slightly, and join curves and straighter
    runs smoothly.
-7. Break lines to keep their lengths even, avoiding lone short words, and
+6. Break lines to keep their lengths even, avoiding lone short words, and
    don't strand a last line on its own beside the art.
-5. Keep loose lettering with a pen stroke for the panel that has it in the
+7. Keep loose lettering with a pen stroke for the panel that has it in the
    original (panel 3).
