@@ -112,3 +112,12 @@ test("a long tail from a balloon that is already beside the speaker is caught", 
   // An ordinary tail there is fine.
   assert.ok(!names(checkSpeech(good, [], { cap, panel, open: head, style: "balloon" })).includes("tail-length"));
 });
+
+test("how far a tail ends from its speaker is judged at the art's scale, not the lettering's", () => {
+  // The lettering is half its usual size: the tail ends 8 of its caps (4 of
+  // the art's) above the speaker.
+  const speech = { ...good, speaker: [150, 225] };
+  const small = { cap, panel, open, style: "balloon" };
+  assert.ok(names(checkSpeech(speech, [], small)).includes("tail-reach"));
+  assert.ok(!names(checkSpeech(speech, [], { ...small, artCap: 2 * cap })).includes("tail-reach"));
+});

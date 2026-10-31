@@ -159,8 +159,10 @@ function speakerPoint(panel, point) {
 
 // Draw the comic for `texts` (Dad's lines in panels 1-3, then Calvin's
 // reply) onto `canvas`, resizing it to fit. Returns what was drawn:
-// {fits, cap, scale, clipped, panels: [{x, y, panel, meta, speech, speeches}]},
-// where `clipped` lists the texts too long to letter in full, and each
+// {fits, cap, lettering, scale, clipped, panels: [{x, y, panel, meta,
+// speech, speeches}]}, where `lettering` is the lettering's size as a share
+// of the original, `clipped` lists the texts too long to letter in full, and
+// each
 // speech is {who, lines, speaker, outline, tail, stroke} in cell
 // coordinates.
 export function drawComic(canvas, { assets, images, signature }, given) {
@@ -346,7 +348,7 @@ export function drawComic(canvas, { assets, images, signature }, given) {
   ctx.fillStyle = "#fff";
   ctx.fillRect(0, 0, width, height);
 
-  const report = { fits: result.fits, cap, cellWidth, cellHeight, scale, clipped, panels: [] };
+  const report = { fits: result.fits, cap, lettering, cellWidth, cellHeight, scale, clipped, panels: [] };
   result.panels.forEach((panel, i) => {
     const meta = assets.panels[i];
     const view = views[i];

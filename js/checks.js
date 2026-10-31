@@ -102,8 +102,9 @@ function artWithin([px, py], radius, step, open) {
 // Problems with one speech: {who, lines, speaker, outline, tail, stroke},
 // in a panel {width, height}, with `others` the other speeches in the
 // panel. open(point) says whether a point is clear of the art; style is
-// "balloon" or "loose".
-export function checkSpeech(speech, others, { cap, panel, open, style, smoothness = false }) {
+// "balloon" or "loose". cap is the lettering's cap height, and artCap what
+// it would be at its original size, for measuring against the art.
+export function checkSpeech(speech, others, { cap, artCap = cap, panel, open, style, smoothness = false }) {
   const problems = [];
   const { lines, speaker } = speech;
   if (!lines.length) return problems;
@@ -145,7 +146,9 @@ export function checkSpeech(speech, others, { cap, panel, open, style, smoothnes
     while (run < distance && open([tail.tip[0] + (toSpeaker[0] * run) / distance, tail.tip[1] + (toSpeaker[1] * run) / distance])) {
       run += cap / 4;
     }
-    const reach = Math.min(run, distance) / cap;
+    // (Measured at the art's scale: the lettering is smaller for a lot of
+    // text, but the speaker isn't.)
+    const reach = Math.min(run, distance) / artCap;
     if (reach > LIMITS.reach) {
       problems.push(problem(`${what}-reach`, `ends ${reach.toFixed(1)} caps short of the speaker`));
     }
@@ -233,6 +236,7 @@ export function checkComic(report) {
       const style = s.who === "calvin" ? "balloon" : speech;
       const found = checkSpeech(s, speeches.filter((o) => o !== s), {
         cap: report.cap,
+        artCap: report.cap / report.lettering,
         panel,
         // Outside the panel there's no art, only the border.
         open: ([x, y]) =>
