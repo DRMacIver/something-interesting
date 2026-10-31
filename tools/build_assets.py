@@ -36,16 +36,14 @@ PANELS = [
         "box": (60, 1920, 881, 2902),
         # Dad's balloon and lettering. Only ink lying entirely inside these
         # regions is erased, so artwork that pokes into them survives.
-        "erase": [[(320, 1920), (881, 1920), (881, 2310), (320, 2310)]],
+        "erase": [[(320, 1876), (881, 1876), (881, 2310), (320, 2310)]],
         "speakers": {"dad": (270, 2065)},
         "text_bottom": 2520,
-        # The panel border crops the top of Dad's head, which looks wrong
-        # once the panel grows taller for the text. Add a little space above
-        # the art and round off his hair where the border cut it.
-        "extend_top": 26,
-        "hair": (202.5, 1920, 32, 20),
-        # A strand of hair also cut flat by the border.
-        "wipe": [[(284, 1920), (318, 1920), (318, 1926), (284, 1926)]],
+        # Dad's head pokes up through the top border, so take the art from
+        # above it and remove the border on either side of his head.
+        "art_top": 1876,
+        "wipe": [[(60, 1876), (160, 1876), (160, 1921), (60, 1921)],
+                 [(330, 1876), (881, 1876), (881, 1921), (330, 1921)]],
     },
     {
         "box": (924, 1920, 1720, 2902),
@@ -193,26 +191,15 @@ def main():
     meta = []
     lettering = []
     for number, panel in enumerate(PANELS, start=1):
-        x0, top, x1, y1 = panel["box"]
-        extend = panel.get("extend_top", 0)
-        y0 = top - extend
+        x0, y0, x1, y1 = panel["box"]
+        y0 = panel.get("art_top", y0)
 
         def local(points):
             return [((x - x0), (y - y0)) for x, y in points]
 
-        art = np.vstack([
-            np.zeros((extend, x1 - x0), dtype=bool),
-            ink[top:y1, x0:x1],
-        ])
-        if "hair" in panel:
-            cx, cy, rx, ry = panel["hair"]
-            cap = Image.new("L", (x1 - x0, y1 - y0), 0)
-            ImageDraw.Draw(cap).pieslice(
-                [cx - rx - x0, cy - ry - y0, cx + rx - x0, cy + ry - y0], 180, 360, fill=1
-            )
-            art = art | np.asarray(cap).astype(bool)
-        if panel.get("dark"):
-            art = art | (background[y0:y1, x0:x1] < 110)
+        # Solid blacks (Dad's trousers, the night in panel 4) are only in
+        # the low resolution background layer.
+        art = ink[y0:y1, x0:x1] | (background[y0:y1, x0:x1] < 110)
         art = wipe(art, [local(p) for p in panel.get("wipe", [])])
         art, heights = erase(art, [local(p) for p in panel["erase"]])
         lettering.extend(heights)
