@@ -535,6 +535,26 @@ test("a sweep far longer than it is deep keeps a round corner", () => {
   assert.ok(r > 0.5 * cap, `curves as tightly as ${r}`);
 });
 
+test("a near-vertical side is a side, not part of a sweep that cuts across lines below it", () => {
+  // Dad's wall of text in a balloon (in pixels, with a cap height of 46):
+  // the top lines are a little wider than a line far below them, then the
+  // last few lines are shorter.
+  const cap = 46;
+  const rights = [
+    1533, 1489, 1526, 1426, 1378, 1533, 1468, 1399, 1420, 1420, 1259, 1341, 1371, 834, 1128, 801, 806, 783,
+    1192, 1003, 1268, 1015, 1519, 1247, 1319, 993,
+  ];
+  const lines = rights.map((right, i) => line(618, 72 * i, right - 618, 72));
+  const outline = balloonOutline(lines, {
+    padX: 0.7 * cap,
+    padY: 0.36 * cap,
+    radius: cap,
+    roundness: 0.3,
+    isFree: () => true,
+  });
+  enclosesLines(outline, lines);
+});
+
 test("a point is clear of other balloons only outside them and a margin round them", () => {
   const clear = clearOf([square], 10);
   assert.equal(clear([50, 50]), false, "inside");

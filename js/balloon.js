@@ -189,6 +189,17 @@ function simplify(points) {
   });
 }
 
+// Whether an edge slants, as a sweep under shorter lines does, rather than
+// running (near enough) straight across or down, as a side does: a line a
+// little narrower than one far above it leaves only a slight slant, which
+// is still a side.
+function slanted(a, b) {
+  const dx = Math.abs(a[0] - b[0]);
+  const dy = Math.abs(a[1] - b[1]);
+  return Math.min(dx, dy) > Math.max(SIDE_SLANT * Math.max(dx, dy), 1e-6);
+}
+const SIDE_SLANT = 0.1;
+
 // Turn the corners of the outline into a smooth curve, the way Watterson
 // draws balloons. Every corner becomes a circular arc over about `radius`,
 // or over half of a slanting edge (where the balloon sweeps in under
@@ -208,7 +219,6 @@ function simplify(points) {
 // rounding must keep inside the balloon.
 function mergeSweeps(points, isFree) {
   const n = points.length;
-  const slanted = (a, b) => Math.abs(a[0] - b[0]) > 1e-6 && Math.abs(a[1] - b[1]) > 1e-6;
   const sweeps = new Map();
   // Start just after a corner, so that no run wraps round the end.
   const start = points.findIndex((v, i) => !slanted(points[(i - 1 + n) % n], v));
@@ -259,7 +269,6 @@ function meeting(before, u, w, after) {
 function smooth(polygon, radius, isFree, bow, sweeps = new Map()) {
   const n = polygon.length;
   const outward = outwardSign(polygon);
-  const slanted = (a, b) => Math.abs(a[0] - b[0]) > 1e-6 && Math.abs(a[1] - b[1]) > 1e-6;
   const corners = polygon.map((v, i) => {
     const p = polygon[(i - 1 + n) % n];
     const q = polygon[(i + 1) % n];
