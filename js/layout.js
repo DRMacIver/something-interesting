@@ -526,8 +526,9 @@ export function layoutColumn(text, { measure, fontSize, lineHeight = 1.2, width 
 
 // Lay out one text per panel spec, sharing a cell size, with the cells as
 // short as possible while still fitting every text and every reserved area
-// (but never shorter than the art). The cells are options.cellWidth wide,
-// with the art scaled to options.artWidth (by default, the cell width).
+// (but never shorter than the art), or options.cellHeight tall if that's
+// given. The cells are options.cellWidth wide, with the art scaled to
+// options.artWidth (by default, the cell width).
 //
 // Then any panel whose spec says `drop` has its text dropped down towards
 // its speaker (see drop), no lower than spec.speakerY (in art pixels) less
@@ -591,6 +592,7 @@ function fitHeight(specs, texts, options) {
     };
   };
 
+  if (options.cellHeight !== undefined) return attempt(options.cellHeight);
   const step = options.step ?? fontSize / 2;
   let best = attempt(artHeight);
   if (best.fits) return best;

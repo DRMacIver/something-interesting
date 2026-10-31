@@ -43,3 +43,16 @@ test("a speech that fills its panel is lettered loose", () => {
   const report = drawComic(canvas(), comic, texts);
   assert.equal(report.panels[2].speech, "loose");
 });
+
+test("a panel with room to spare shows more of its scene below", () => {
+  const texts = [...DEFAULTS];
+  texts[1] = wall("Yellow, black. Yellow, black.", 40);
+  const report = drawComic(canvas(), comic, texts);
+  const { meta } = report.panels[2];
+  assert.ok(meta.height > assets.panels[2].height, `shows ${meta.height} of ${meta.extendedHeight}`);
+});
+
+test("a panel with no room to spare shows only the original art", () => {
+  const report = drawComic(canvas(), comic, DEFAULTS);
+  assert.equal(report.panels[2].meta.height, assets.panels[2].height);
+});

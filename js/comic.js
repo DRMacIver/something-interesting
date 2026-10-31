@@ -182,13 +182,15 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
   // The gaps are measured to the lettering itself, which sits in the middle
   // of its line's spacing.
   const leading = (LINE_HEIGHT * fontSize - cap) / 2;
-  // The comic laid out with cells `cellWidth` wide, each panel's dialogue
-  // lettered as `styles` says.
-  const layoutAt = (cellWidth, styles = speeches) => {
-    // Each panel as seen at this width, with as much of its art as shows.
-    const views = assets.panels.map((meta) =>
-      shiftedView(meta, artWindow(meta, (cellWidth * meta.width) / CELL_WIDTH)[0]),
-    );
+  // The comic laid out with cells `cellWidth` wide (and `cellHeight` tall,
+  // if given), each panel's dialogue lettered as `styles` says, and
+  // `lower[i]` more of panel i's art showing below the original.
+  const layoutAt = (cellWidth, styles = speeches, lower = {}, cellHeight = undefined) => {
+    // Each panel as seen at this size, with as much of its art as shows.
+    const views = assets.panels.map((meta, i) => {
+      const view = shiftedView(meta, artWindow(meta, (cellWidth * meta.width) / CELL_WIDTH)[0]);
+      return lower[i] ? { ...view, height: meta.height + lower[i] } : view;
+    });
     const calvin = layoutCalvin(views[calvinIndex], texts[CALVIN].toUpperCase(), measure, fontSize, cap, cellWidth);
     const specs = views.map((p, i) => ({
       width: p.width,
@@ -217,6 +219,7 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
       margin: ART_MARGIN * cap,
       align: "left",
       cellWidth,
+      cellHeight,
       artWidth: CELL_WIDTH,
       padding: { x: SIDE_GAP * cap, y: Math.max(0, TOP_GAP * cap - leading) },
     });
@@ -247,6 +250,40 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
     if (ballooned.fits && ballooned.cellHeight <= result.cellHeight + 1e-6) {
       speeches = styles;
       result = ballooned;
+    }
+  });
+  // A panel whose art goes on below shows as much more of it as fits
+  // without its lettering changing: a wider shot, in the space the
+  // lettering didn't need.
+  const lower = {};
+  assets.panels.forEach((meta, i) => {
+    const extra = (meta.extendedHeight ?? meta.height) - meta.height;
+    if (extra <= 0) return;
+    const lettering = (r) => r.layouts[i].lines.map((l) => l.text).join("\n");
+    const before = lettering(result);
+    const showing = (b) => layoutAt(cellWidth, speeches, { ...lower, [i]: b }, result.cellHeight);
+    let lo = 0;
+    let hi = extra;
+    let best = null;
+    const step = (cap * meta.width) / CELL_WIDTH;
+    while (hi - lo > step) {
+      const mid = (lo + hi) / 2;
+      const candidate = showing(mid);
+      if (candidate.fits && lettering(candidate) === before) {
+        lo = mid;
+        best = candidate;
+      } else {
+        hi = mid;
+      }
+    }
+    const all = showing(extra);
+    if (all.fits && lettering(all) === before) {
+      lo = extra;
+      best = all;
+    }
+    if (best) {
+      lower[i] = lo;
+      result = best;
     }
   });
   const { cellHeight, calvin, views } = result;
@@ -306,16 +343,17 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
     const from = Math.max(0, start);
     const to = Math.min(meta.extendedWidth, end);
     const perArt = image.width / meta.extendedWidth;
+    const rows = image.height * (view.height / (meta.extendedHeight ?? meta.height));
     ctx.drawImage(
       image,
       from * perArt,
       0,
       (to - from) * perArt,
-      image.height,
+      rows,
       (from - start) * panel.scale,
       panel.artTop,
       (to - from) * panel.scale,
-      meta.height * panel.scale,
+      view.height * panel.scale,
     );
     ctx.globalCompositeOperation = "source-over";
     if (meta.signature) {
@@ -323,7 +361,7 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
       ctx.drawImage(
         signature,
         cellWidth - (right + width) * panel.scale,
-        panel.artTop + (meta.height - bottom - height) * panel.scale,
+        panel.artTop + (view.height - bottom - height) * panel.scale,
         width * panel.scale,
         height * panel.scale,
       );

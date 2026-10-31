@@ -741,3 +741,12 @@ test("a balloon can centre a little way past its speaker, with its tail coming d
   const result = layoutText(panel, "aaaaaaaaaaaa", opts({ align: "left", centreOn: 10, centreSlack: 15 }));
   assert.equal(result.lines[0].x, 20);
 });
+
+test("panels can be laid out at a given cell height", () => {
+  const options = { ...opts(), cellWidth: 100, padding: 0 };
+  const fixed = fitPanels([artRightBlocked], ["aaaa"], { ...options, cellHeight: 120 });
+  assert.equal(fixed.cellHeight, 120);
+  assert.equal(fixed.fits, true);
+  const tooShort = fitPanels([artRightBlocked], ["word ".repeat(40)], { ...options, cellHeight: 50 });
+  assert.equal(tooShort.fits, false);
+});

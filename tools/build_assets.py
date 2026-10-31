@@ -86,9 +86,11 @@ PANELS = [
     {
         "box": (1763, 1877, 2550, 2907),
         # Dad's shoulder runs off the left edge; the rest of it is drawn in
-        # tools/extensions/panel3-left.png.
-        "extend": {"left": EXTEND // 2, "right": EXTEND},
-        "extensions": {"left": "panel3-left.png"},
+        # tools/extensions/panel3-left.png. Below is the rest of the scene,
+        # Dad on his chair and Calvin on the floor
+        # (tools/extensions/panel3-below.png), shown when there's room.
+        "extend": {"left": EXTEND // 2, "right": EXTEND, "below": 800},
+        "extensions": {"left": "panel3-left.png", "below": "panel3-below.png"},
         "erase": [[(1755, 1877), (2550, 1877), (2550, 2620), (2220, 2620),
                    (2220, 2460), (1755, 2460)]],
         "speakers": {"dad": (2010, 2770)},
@@ -234,18 +236,24 @@ def panel_art(ink, background, panel):
 
 
 def extended(art, panel):
-    """The art with its extensions on either side, and how many columns
-    were added on the left."""
+    """The art with its extensions on either side (and below), and how many
+    columns were added on the left."""
     widths = panel.get("extend", {"left": 0, "right": EXTEND})
 
-    def extension(side):
+    def extension(side, shape):
         if side in panel.get("extensions", {}):
             extra = np.asarray(Image.open(EXTENSIONS / panel["extensions"][side]).convert("L")) < 128
-            assert extra.shape == (art.shape[0], widths[side]), extra.shape
+            assert extra.shape == shape, extra.shape
             return extra
-        return np.full((art.shape[0], widths[side]), bool(panel.get("dark")))
+        return np.full(shape, bool(panel.get("dark")))
 
-    return np.hstack([extension("left"), art, extension("right")]), widths["left"]
+    h = art.shape[0]
+    wide = np.hstack(
+        [extension("left", (h, widths["left"])), art, extension("right", (h, widths["right"]))]
+    )
+    # Some panels go on below too, for a wider shot when there's room.
+    below = widths.get("below", 0)
+    return np.vstack([wide, extension("below", (below, wide.shape[1]))]), widths["left"]
 
 
 def cut_signature(art, panel, name):
@@ -303,6 +311,7 @@ def main():
             "openLeft": bool(panel.get("centre")) and bool((art[:, 0] == bool(panel.get("dark"))).all()),
             "openRight": bool((art[:, -1] == bool(panel.get("dark"))).all()),
             "height": round((y1 - y0) * GRID_SCALE),
+            "extendedHeight": round(art.shape[0] * GRID_SCALE),
             "background": "#000" if panel.get("dark") else "#fff",
             "speakers": {name: grid(p) for name, p in panel["speakers"].items()},
             "free": None
