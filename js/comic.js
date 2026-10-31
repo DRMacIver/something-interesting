@@ -94,7 +94,8 @@ function loadImage(src) {
 
 // The panel art and its description, with the lettering font loaded.
 export async function loadComic(base = "") {
-  const response = await fetch(base + "assets/panels.json");
+  // Always checked with the server: it holds the art's versioned URLs.
+  const response = await fetch(base + "assets/panels.json", { cache: "no-cache" });
   const assets = await response.json();
   for (const meta of assets.panels) {
     if (!meta.openRight) continue;

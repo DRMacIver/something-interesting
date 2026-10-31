@@ -12,10 +12,23 @@ The page fetches its assets, so serve it over HTTP rather than opening the
 file directly:
 
 ```bash
-python3 -m http.server 8765
+uv run tools/serve.py
 ```
 
-Then open <http://localhost:8765>.
+Then open <http://localhost:8765>. (It's an ordinary static file server,
+except that it tells browsers not to use cached files without checking.)
+
+## Updating assets
+
+Every asset URL the pages use carries a hash of the file's contents
+(`?v=...`), so browsers fetch a file again exactly when it has changed.
+After changing the code, the stylesheet, the font or the art, run
+
+```bash
+uv run tools/version_assets.py
+```
+
+(`uv run pytest` fails until you do).
 
 ## Deploying
 
