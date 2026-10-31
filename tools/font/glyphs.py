@@ -1,5 +1,5 @@
 # /// script
-# dependencies = ["numpy", "scipy", "pillow", "wordfreq"]
+# dependencies = ["numpy", "scipy", "pillow", "wordfreq", "scikit-image"]
 # ///
 """Turn the extracted letter samples into one clean bitmap per character.
 
@@ -23,6 +23,7 @@ from collections import defaultdict
 import numpy as np
 from PIL import Image
 from scipy import ndimage
+from skimage.morphology import skeletonize
 from wordfreq import zipf_frequency
 
 CAP = 120  # Cap height, in pixels, of the normalised bitmaps.
@@ -220,12 +221,18 @@ def spacing_data(words):
     return gaps
 
 
-def stroke_weight(bitmap):
-    """Roughly how thick a glyph's strokes are, in pixels: twice its ink area
-    over the length of its edge (for a long stroke, its width)."""
-    ink = bitmap > 0.5
-    edge = ink & ~ndimage.binary_erosion(ink)
-    return 2 * ink.sum() / max(1, edge.sum())
+def stroke_weight(bitmap, upsample=4):
+    """How thick a glyph's strokes are, in pixels: twice the median distance
+    from its skeleton to the edge of the ink, measured as the font build
+    will trace it (smoothed, and upsampled for a finer edge)."""
+    smooth = ndimage.gaussian_filter(bitmap, 0.7)
+    h, w = smooth.shape
+    big = Image.fromarray((np.clip(smooth, 0, 1) * 255).astype(np.uint8)).resize(
+        (w * upsample, h * upsample), Image.BICUBIC
+    )
+    ink = np.asarray(big) > 127
+    depth = ndimage.distance_transform_edt(ink)
+    return 2 * float(np.median(depth[skeletonize(ink)])) / upsample
 
 
 def thinned(bitmap, weight):
@@ -285,7 +292,9 @@ def main():
     # The book's few hand-lettered numbers are often in heavier lettering
     # (they're taken from lettering of any weight), so they're thinned to
     # the letters' weight.
-    typical = float(np.median([stroke_weight(g["mean"]) for l, g in glyphs.items() if l.isalpha()]))
+    typical = float(
+        np.median([stroke_weight((g["variants"] or [g["mean"]])[0]) for l, g in glyphs.items() if l.isalpha()])
+    )
     for label, glyph in glyphs.items():
         if label.isdigit():
             glyph["mean"] = thinned(glyph["mean"], typical)

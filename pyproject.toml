@@ -6,7 +6,14 @@ requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
-dev = ["pytest", "fonttools", "brotli", "uharfbuzz"]
+dev = [
+    "pytest",
+    "fonttools",
+    "brotli",
+    "uharfbuzz",
+    "pillow>=13.0.0",
+    "scikit-image>=0.26.0",
+]
 
 [tool.uv]
 package = false

@@ -127,23 +127,36 @@ def test_covers_every_printable_ascii_character(font):
     assert not missing, " ".join(missing)
 
 
-def stroke_weight(font, char):
-    """Roughly how thick a glyph's strokes are: twice its ink area over the
-    length of its outline (for a long stroke, its width)."""
-    from fontTools.pens.areaPen import AreaPen
-    from fontTools.pens.perimeterPen import PerimeterPen
+def stroke_thickness(font_path, char):
+    """How thick a glyph's strokes are, rendered 300px high: twice the
+    median distance from its skeleton to the edge of the ink."""
+    import numpy as np
+    from PIL import Image, ImageDraw, ImageFont
+    from scipy import ndimage
+    from skimage.morphology import skeletonize
 
-    glyphs = font.getGlyphSet()
-    glyph = glyphs[font.getBestCmap()[ord(char)]]
-    area, perimeter = AreaPen(glyphs), PerimeterPen(glyphs)
-    glyph.draw(area)
-    glyph.draw(perimeter)
-    return 2 * abs(area.value) / perimeter.value
+    font = ImageFont.truetype(font_path, 300)
+    image = Image.new("L", (400, 400), 255)
+    ImageDraw.Draw(image).text((20, 20), char, font=font, fill=0)
+    ink = np.asarray(image) < 128
+    return 2 * float(np.median(ndimage.distance_transform_edt(ink)[skeletonize(ink)]))
 
 
-def test_digits_are_no_bolder_than_the_letters(font):
+@pytest.fixture(scope="module")
+def font_file(font, tmp_path_factory):
+    path = tmp_path_factory.mktemp("font") / "dad-lettering.otf"
+    font.flavor = None
+    font.save(path)
+    return str(path)
+
+
+def test_digits_are_no_bolder_than_the_letters(font_file):
     # The book's few hand-lettered numbers are often in heavier lettering.
-    letters = sorted(stroke_weight(font, c) for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    letters = sorted(stroke_thickness(font_file, c) for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
     typical = letters[len(letters) // 2]
-    heavy = {c: round(stroke_weight(font, c)) for c in "0123456789" if stroke_weight(font, c) > 1.1 * typical}
-    assert not heavy, f"letters' typical weight is {typical:.0f}: {heavy}"
+    heavy = {
+        c: round(t, 1)
+        for c in "0123456789"
+        if (t := stroke_thickness(font_file, c)) > 1.05 * typical
+    }
+    assert not heavy, f"letters' typical stroke is {typical:.1f}: {heavy}"
