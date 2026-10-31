@@ -1,5 +1,6 @@
 import { fitPanels, layoutColumn } from "./layout.js";
 import { balloonOutline, balloonTail } from "./balloon.js";
+import { copyCanvas, copyText } from "./clipboard.js";
 
 const CELL_WIDTH = 800;
 const GUTTER = 30;
@@ -471,21 +472,26 @@ async function download() {
 async function copyImage() {
   try {
     render();
-    await navigator.clipboard.write([
-      new ClipboardItem({ "image/png": canvasBlob() }),
-    ]);
+    await copyCanvas(canvas);
     flash($("copy-image"), "Copied!");
-  } catch {
+    setStatus("");
+  } catch (error) {
+    console.error("Couldn't copy the image:", error);
     flash($("copy-image"), "Couldn't copy");
+    setStatus(
+      "This browser won't let the page copy the image. Use Download PNG, or right-click the comic and copy it from there.",
+      true,
+    );
   }
 }
 
 async function copyLink() {
   saveToUrl();
   try {
-    await navigator.clipboard.writeText(location.href);
+    await copyText(location.href);
     flash($("copy-link"), "Copied!");
-  } catch {
+  } catch (error) {
+    console.error("Couldn't copy the link:", error);
     flash($("copy-link"), "Couldn't copy");
   }
 }
