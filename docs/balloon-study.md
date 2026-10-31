@@ -52,7 +52,9 @@ The common forms, roughly in order of frequency:
   the lettering to the line above it (border or balloon): median **0.45
   cap** (middle half 0.28–0.63).
 - Lines are **left-aligned** with a straight left edge, ragged right.
-  Short remarks are often centred.
+  Short remarks are often centred. The rag is gentle: line lengths are
+  fairly even, and he doesn't leave a lone short word on a line or strand
+  the end of a sentence on its own beside the art.
 - Text runs nearly the full width of the panel when it needs to, keeping
   about **0.7 cap** from the side borders (median 0.72 on the left, more on
   the ragged right).
@@ -66,7 +68,9 @@ The common forms, roughly in order of frequency:
 - Gap from the bottom of the lettering to the balloon line below it:
   median **0.65 cap** (middle half 0.52–1.06).
 - The line is a single confident pen stroke, about two thirds the weight
-  of the lettering, with no wobble.
+  of the lettering, with no wobble, but **never ruler-straight**: even the
+  sides of a boxy balloon bow out slightly, and where a curve meets a
+  straighter run there's no corner, just a continuous change of direction.
 - It **follows the overall shape of the text in smooth curves**: where the
   last lines are shorter, the outline sweeps in under them in a long curve
   rather than stepping, and the corners are generously rounded (a radius
@@ -76,18 +80,23 @@ The common forms, roughly in order of frequency:
 
 ## Tails
 
-- A **narrow wedge**: two lines meeting at a point, about **0.5 cap** wide
-  where it leaves the balloon and **1–2 cap** long, often with a slight
-  curve.
+- A **narrow wedge**: two lines meeting at a point, about **0.4 cap** wide
+  where it leaves the balloon and around a cap long (rarely more than 1.3),
+  usually with a slight curve: it sets off straight out of the balloon and
+  bends round towards the speaker.
 - It leaves the balloon from the part of the outline that gives it the
   clearest path towards the speaker, usually the bottom edge, sometimes
   the side (the original panel 1's tail leaves the balloon's left side,
   pointing at Dad's nose).
 - It **points at the speaker's mouth or face**, so its direction alone says
   who is talking, and it **stops short of them**, typically half a cap to
-  a cap away. It goes round heads rather than pointing through them: in
-  the original panel 2 Dad's tail comes down beside his head, angled
-  towards his face, rather than straight down at his scalp.
+  a cap away. There's always a **clear line of sight** from its tip to the
+  face: it goes round heads rather than pointing through them. In the
+  original panel 2 Dad's tail comes down beside his head, angled towards
+  his face, rather than straight down at his scalp; Calvin's "YEAH…" tail
+  comes down to the left of his hair, towards the front of his face,
+  rather than onto his hair. A tail that stops at the art, or points
+  through it, reads as pointing at that bit of the art.
 - Loose lettering gets a single short stroke instead, in the same
   direction.
 
@@ -102,9 +111,14 @@ The common forms, roughly in order of frequency:
 3. Where the balloon comes within reach of a panel edge, let it run into
    the border instead of drawing a line alongside it, so most balloons
    hang from the top border as Watterson's do.
-4. Draw tails as narrow wedges, 0.5 cap at the base and up to about 2 cap
-   long, from whichever point of the balloon gives the clearest path
-   towards the speaker's face, pointing at it and stopping short of the
-   art.
+4. Draw tails as narrow curved wedges, 0.4 cap at the base and up to
+   1.3 cap long, setting off straight out of the balloon and bending
+   towards the speaker, from whichever point of the balloon gives the
+   clearest path towards the speaker's face, with a clear line of sight
+   to it, stopping short of the art.
+6. Bow every edge of a balloon slightly, and join curves and straighter
+   runs smoothly.
+7. Break lines to keep their lengths even, avoiding lone short words, and
+   don't strand a last line on its own beside the art.
 5. Keep loose lettering with a pen stroke for the panel that has it in the
    original (panel 3).

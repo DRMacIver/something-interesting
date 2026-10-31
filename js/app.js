@@ -1,4 +1,4 @@
-import { fitPanels, layoutColumn, tailFor } from "./layout.js";
+import { fitPanels, layoutColumn } from "./layout.js";
 import { balloonOutline, balloonTail } from "./balloon.js";
 
 const CELL_WIDTH = 800;
@@ -26,11 +26,13 @@ const BALLOON = {
   // A balloon comes out of the panel border rather than running alongside
   // it when it comes within about a cap of it.
   reach: 1.2,
-  tailWidth: 0.5,
-  tailLength: 2,
+  tailWidth: 0.4,
+  tailLength: 1.3,
   tailMinLength: 0.35,
-  tailGap: 0.3,
+  tailGap: 0.45,
 };
+// The pen stroke beside loose lettering.
+const STROKE = { pad: 0.35, length: 1.2, line: 0.12 };
 // Clearance between text and artwork: loose lettering can come close;
 // lettering in a balloon leaves room for the balloon and a short tail.
 const ART_MARGIN = 0.4;
@@ -250,25 +252,35 @@ function speakerPoint(panel, point) {
   return [point[0] * panel.scale, panel.artTop + point[1] * panel.scale];
 }
 
-// Lettering without a balloon gets a quick pen stroke towards the speaker.
-function drawStroke(layout, panel, speaker) {
-  const fontSize = layout.fontSize;
-  const tail = tailFor(layout, speakerPoint(panel, speaker), {
-    gap: fontSize * 0.35,
-    maxLength: fontSize * 1.4,
+// Lettering without a balloon gets a quick pen stroke towards the speaker,
+// finding its way round the art the way a balloon's tail does: it's a tail
+// for an invisible box round the text, drawn as a single line.
+function drawStroke(layout, panel, meta, speaker, cap) {
+  const pad = STROKE.pad * cap;
+  const x0 = Math.min(...layout.lines.map((l) => l.x)) - pad;
+  const x1 = Math.max(...layout.lines.map((l) => l.x + l.width)) + pad;
+  const y0 = Math.min(...layout.lines.map((l) => l.y)) - pad;
+  const y1 = Math.max(...layout.lines.map((l) => l.y + l.height)) + pad;
+  const box = [
+    [x0, y0],
+    [x1, y0],
+    [x1, y1],
+    [x0, y1],
+  ];
+  const tail = balloonTail(box, speakerPoint(panel, speaker), {
+    width: 0.2 * cap,
+    maxLength: STROKE.length * cap,
+    minLength: 0.4 * cap,
+    gap: BALLOON.tailGap * cap,
+    isFree: (p) => openAt(panel, meta, p),
   });
   if (!tail) return;
-  const [x0, y0] = tail.from;
-  const [x1, y1] = tail.to;
-  // A slight bow, as if drawn with a flick of the pen.
-  const bow = 0.12;
-  const cx = (x0 + x1) / 2 - (y1 - y0) * bow;
-  const cy = (y0 + y1) / 2 + (x1 - x0) * bow;
+  const [b1, b2] = tail.base;
   ctx.beginPath();
-  ctx.moveTo(x0, y0);
-  ctx.quadraticCurveTo(cx, cy, x1, y1);
+  ctx.moveTo((b1[0] + b2[0]) / 2, (b1[1] + b2[1]) / 2);
+  ctx.quadraticCurveTo(...tail.bend, ...tail.tip);
   ctx.strokeStyle = INK;
-  ctx.lineWidth = Math.max(2.5, fontSize * 0.09);
+  ctx.lineWidth = STROKE.line * cap;
   ctx.lineCap = "round";
   ctx.stroke();
 }
@@ -290,16 +302,14 @@ function polygonPath(points) {
   ctx.closePath();
 }
 
-function tailPath({ base: [b1, b2], tip }) {
-  // Both sides bow the same way, giving the tail a slight curve.
-  const bend = (from, amount) => {
-    const dx = tip[0] - from[0];
-    const dy = tip[1] - from[1];
-    return [from[0] + dx / 2 - dy * amount, from[1] + dy / 2 + dx * amount];
-  };
+// A tail as a narrow wedge along its curved centre line: each side curves
+// from one end of the base to the tip, alongside the centre line.
+function tailPath({ base: [b1, b2], bend, tip }) {
+  const mid = [(b1[0] + b2[0]) / 2, (b1[1] + b2[1]) / 2];
+  const side = (b) => [bend[0] + (b[0] - mid[0]) / 2, bend[1] + (b[1] - mid[1]) / 2];
   ctx.moveTo(...b1);
-  ctx.quadraticCurveTo(...bend(b1, 0.12), ...tip);
-  ctx.quadraticCurveTo(...bend(b2, 0.12), ...b2);
+  ctx.quadraticCurveTo(...side(b1), ...tip);
+  ctx.quadraticCurveTo(...side(b2), ...b2);
   ctx.closePath();
 }
 
@@ -328,6 +338,8 @@ function drawBalloons(panel, meta, speeches, cap) {
       maxLength: BALLOON.tailLength * cap,
       minLength: BALLOON.tailMinLength * cap,
       gap: BALLOON.tailGap * cap,
+      blockedPenalty: 2 * cap,
+      clearSight: 1.5 * cap,
       isFree,
     });
     if (tail) shapes.push(tail);
@@ -391,7 +403,7 @@ function render() {
     for (const { layout, speaker } of speeches) {
       drawLines(layout);
       if (meta.speech === "loose" && layout.lines.length) {
-        drawStroke(layout, panel, speaker);
+        drawStroke(layout, panel, meta, speaker, cap);
       }
     }
     ctx.restore();

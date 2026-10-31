@@ -134,19 +134,141 @@ function firstPiece(word, width, fits) {
 // the art pushes some lines well aside: neighbouring lines all start where
 // the furthest right of them has to, so long as that leaves each of them at
 // least ALIGN_SHARE of the widest one's space.
+//
+// Line breaks are then chosen to even out the line lengths of each
+// paragraph (see balance), and a last line left on its own beside the art,
+// away from the rest of the text, counts as not fitting.
 export function layoutText(panel, text, options) {
-  if (options.align !== "left") return flow(panel, text, options, []);
-  let minimums = [];
-  let result = flow(panel, text, options, minimums);
-  for (let round = 0; round < 12; round++) {
-    const next = alignedMinimums(result.spaces);
-    if (next.every((m, i) => m === minimums[i]) && next.length === minimums.length) {
-      break;
-    }
-    minimums = next;
+  let result;
+  if (options.align !== "left") {
+    result = flow(panel, text, options, []);
+  } else {
+    let minimums = [];
     result = flow(panel, text, options, minimums);
+    for (let round = 0; round < 12; round++) {
+      const next = alignedMinimums(result.spaces);
+      if (next.every((m, i) => m === minimums[i]) && next.length === minimums.length) {
+        break;
+      }
+      minimums = next;
+      result = flow(panel, text, options, minimums);
+    }
   }
-  return result;
+  if (!result.fits) return result;
+  balance(result, options);
+  return { ...result, fits: !stranded(result) };
+}
+
+// Whether the last line is on its own, pushed well aside by the art from
+// the line before it.
+function stranded({ lines, spaces }) {
+  const n = lines.length;
+  if (n < 2) return false;
+  const roomy = alignedMinimums([spaces[n - 2], spaces[n - 1]]);
+  return roomy[0] !== roomy[1];
+}
+
+// Re-break each paragraph's lines to even out their lengths, keeping the
+// same line positions and spaces: Knuth-style, minimising the squared
+// leftover space of every line but the last, with a penalty for ending on
+// a lone short word. The last paragraph may use fewer lines than before.
+function balance(result, { measure, fontSize, align = "center" }) {
+  const { lines, spaces } = result;
+  const groups = [];
+  for (let i = 0; i < lines.length; i++) {
+    const last = groups[groups.length - 1];
+    if (last && lines[last[0]].paragraph === lines[i].paragraph) last.push(i);
+    else groups.push([i]);
+  }
+  // Pieces of broken words stay on their own lines; the runs of lines
+  // between them are balanced separately.
+  const runs = [];
+  groups.forEach((group, g) => {
+    let run = [];
+    const finish = (endsParagraph) => {
+      if (run.length) runs.push({ run, endsParagraph, final: endsParagraph && g === groups.length - 1 });
+      run = [];
+    };
+    for (const i of group) {
+      if (lines[i].piece) {
+        finish(false);
+        runs.push({ run: [i], fixed: true });
+      } else {
+        run.push(i);
+      }
+    }
+    finish(true);
+  });
+  const keep = [];
+  const keepSpaces = [];
+  for (const { run: group, fixed, endsParagraph, final } of runs) {
+    const slots = group.map((i) => lines[i]);
+    const words = slots.flatMap((l) => l.text.split(" "));
+    if (fixed || slots.length < 2) {
+      for (const i of group) {
+        keep.push(lines[i]);
+        keepSpaces.push(spaces[i]);
+      }
+      continue;
+    }
+    const widthOf = (i, j) => measure(words.slice(i, j).join(" "), fontSize);
+    const room = slots.map((l) => l.interval[1] - l.interval[0]);
+    const n = words.length;
+    const m = slots.length;
+    // cost[k][j]: best cost of setting the first j words in the first k lines.
+    const cost = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(Infinity));
+    const from = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(-1));
+    cost[0][0] = 0;
+    for (let k = 1; k <= m; k++) {
+      for (let j = 1; j <= n; j++) {
+        for (let i = j - 1; i >= 0; i--) {
+          const width = widthOf(i, j);
+          if (width > room[k - 1] + 1e-9) break;
+          if (cost[k - 1][i] === Infinity) continue;
+          const slack = (room[k - 1] - width) / room[k - 1];
+          // The last line of a paragraph can be as short as it likes,
+          // as long as it isn't a lone short word.
+          const here =
+            j === n && endsParagraph
+              ? j - i === 1 && n > 1 && width < 0.5 * room[k - 1] ? 0.2 : 0
+              : slack * slack;
+          if (cost[k - 1][i] + here < cost[k][j]) {
+            cost[k][j] = cost[k - 1][i] + here;
+            from[k][j] = i;
+          }
+        }
+      }
+    }
+    let used = m;
+    if (final) {
+      for (let k = 1; k < m; k++) {
+        if (cost[k][n] + 0.02 * k < cost[used][n] + 0.02 * used) used = k;
+      }
+    }
+    if (cost[used][n] === Infinity) {
+      for (const i of group) {
+        keep.push(lines[i]);
+        keepSpaces.push(spaces[i]);
+      }
+      continue;
+    }
+    const breaks = [n];
+    for (let k = used, j = n; k > 0; k--) {
+      j = from[k][j];
+      breaks.unshift(j);
+    }
+    for (let k = 0; k < used; k++) {
+      const slot = slots[k];
+      const content = words.slice(breaks[k], breaks[k + 1]).join(" ");
+      const width = measure(content, fontSize);
+      const [a, b] = slot.interval;
+      const x = align === "center" ? a + (b - a - width) / 2 : a;
+      keep.push({ ...slot, text: content, x, width });
+      keepSpaces.push(spaces[group[k]]);
+    }
+  }
+  result.lines = keep;
+  result.spaces = keepSpaces;
 }
 
 const ALIGN_SHARE = 0.5;
@@ -193,18 +315,29 @@ function flow(panel, text, options, minimums) {
 
   const result = () => ({ lines, spaces, fits: !overflow, lineHeight, fontSize });
 
-  const place = (words, interval) => {
+  let paragraphIndex = 0;
+  const place = (words, interval, piece = false) => {
     const content = words.join(" ");
     const width = measure(content, fontSize);
     const x =
       align === "center"
         ? interval[0] + (interval[1] - interval[0] - width) / 2
         : interval[0];
-    lines.push({ text: content, x, y, width, height: lineHeight });
+    lines.push({
+      text: content,
+      x,
+      y,
+      width,
+      height: lineHeight,
+      interval,
+      paragraph: paragraphIndex,
+      piece,
+    });
     y += lineHeight;
   };
 
   for (const paragraph of paragraphs(text)) {
+    paragraphIndex++;
     if (paragraph.length === 0) {
       y += lineHeight;
       continue;
@@ -236,7 +369,7 @@ function flow(panel, text, options, minimums) {
         const piece = firstPiece(words[0], width, fits);
         words[0] = words[0].slice(piece.length);
         spaces.push(space);
-        place([piece], interval);
+        place([piece], interval, true);
         continue;
       }
       const line = [words.shift()];
@@ -328,25 +461,4 @@ export function fitPanels(specs, texts, options) {
     }
   }
   return best;
-}
-
-// A short speech tail from the edge of the text towards the speaker's mouth,
-// or null if there is no text. Returns {from, to} in cell coordinates.
-export function tailFor(layout, mouth, { gap, maxLength }) {
-  if (!layout.lines.length) return null;
-  const [mx, my] = mouth;
-  let best = null;
-  for (const line of layout.lines) {
-    const px = Math.min(Math.max(mx, line.x), line.x + line.width);
-    const py = Math.min(Math.max(my, line.y), line.y + line.height);
-    const distance = Math.hypot(mx - px, my - py);
-    if (!best || distance < best.distance) best = { px, py, distance };
-  }
-  const { px, py, distance } = best;
-  if (distance <= 2 * gap) return null;
-  const dx = (mx - px) / distance;
-  const dy = (my - py) / distance;
-  const length = Math.min(maxLength, (distance - 2 * gap) * 0.6);
-  const from = [px + dx * gap, py + dy * gap];
-  return { from, to: [from[0] + dx * length, from[1] + dy * length] };
 }

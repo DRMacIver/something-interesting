@@ -57,9 +57,11 @@ PANELS = [
             [(1218, 2280), (1345, 2280), (1345, 2395), (1288, 2395),
              (1288, 2306), (1218, 2306)],
         ],
-        # Speakers are marked at their mouths; tails find their own way
-        # there round anything in the way.
-        "speakers": {"dad": (1200, 2485), "calvin": (1585, 2800)},
+        # Speakers are marked just in front of their mouths. Tails find
+        # their own way there round anything in the way, with a clear line
+        # of sight (Calvin's comes down beside his hair, as in the
+        # original, rather than onto it).
+        "speakers": {"dad": (1200, 2485), "calvin": (1515, 2800)},
         "text_bottom": 2560,
         "speech": "balloon",
         # Calvin's reply is lettered in a column of this width, centred

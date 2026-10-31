@@ -84,7 +84,7 @@ test("an oval that would hit the art becomes a tighter shape", () => {
   });
   enclosesLines(outline, lines);
   const [, , , y1] = bounds(outline);
-  assert.ok(y1 <= 112 + 6 + 1e-6);
+  assert.ok(y1 < 120);
 });
 
 test("a block of text gets a padded outline with no corners", () => {
@@ -92,11 +92,23 @@ test("a block of text gets a padded outline with no corners", () => {
   const outline = balloonOutline(lines, options);
   enclosesLines(outline, lines);
   const [x0, y0, x1, y1] = bounds(outline);
-  assert.ok(x0 >= -10 - 1e-6 && x0 < -9, `left ${x0}`);
-  assert.ok(x1 <= 110 + 1e-6 && x1 > 109, `right ${x1}`);
-  assert.ok(y0 >= -6 - 1e-6 && y0 < -5, `top ${y0}`);
-  assert.ok(y1 <= 36 + 1e-6 && y1 > 35, `bottom ${y1}`);
-  assert.ok(sharpestTurn(outline) < 20, `turns by ${sharpestTurn(outline)}`);
+  // Padded all round, give or take a gentle bow.
+  assert.ok(x0 >= -10 - 4 && x0 < -9, `left ${x0}`);
+  assert.ok(x1 <= 110 + 4 && x1 > 109, `right ${x1}`);
+  assert.ok(y0 >= -6 - 4 && y0 < -5, `top ${y0}`);
+  assert.ok(y1 <= 36 + 4 && y1 > 35, `bottom ${y1}`);
+  assert.ok(sharpestTurn(outline) < 10, `turns by ${sharpestTurn(outline)}`);
+});
+
+test("even the straight sides bow out a little", () => {
+  const lines = [line(0, 0, 100), line(0, 10, 100), line(0, 20, 100), line(0, 30, 100)];
+  const outline = balloonOutline(lines, options);
+  // Further out at the middle of each side than near its ends.
+  const rightAt = (y) => Math.max(...outline.filter(([, py]) => Math.abs(py - y) < 1.5).map(([x]) => x));
+  assert.ok(rightAt(20) > rightAt(4) + 0.5);
+  assert.ok(rightAt(20) > rightAt(36) + 0.5);
+  const bottomAt = (x) => Math.max(...outline.filter(([px]) => Math.abs(px - x) < 1.5).map(([, y]) => y));
+  assert.ok(bottomAt(50) > bottomAt(5) + 0.5);
 });
 
 test("the outline sweeps in under shorter last lines", () => {
@@ -107,7 +119,13 @@ test("the outline sweeps in under shorter last lines", () => {
   assert.ok(!inside(outline, [105, 33]));
   // ...by a sweep, not a step: there's balloon beside the short line.
   assert.ok(inside(outline, [70, 28]));
-  assert.ok(sharpestTurn(outline) < 20);
+  assert.ok(sharpestTurn(outline) < 10);
+});
+
+test("where a sweep meets a straight side there's no corner", () => {
+  const lines = [line(0, 0, 200), line(0, 10, 200), line(0, 20, 60), line(0, 30, 60), line(0, 40, 60)];
+  const outline = balloonOutline(lines, options);
+  assert.ok(sharpestTurn(outline) < 10, `turns by ${sharpestTurn(outline)}`);
 });
 
 test("the sides come straight down to the widest line", () => {
@@ -239,6 +257,22 @@ test("the tail base goes round corners", () => {
   assert.ok((onRight(b1) && onBottom(b2)) || (onBottom(b1) && onRight(b2)));
 });
 
+test("the tail sets off straight out of the balloon and curves towards the speaker", () => {
+  // A head under the middle of the balloon, with the speaker's mouth below
+  // it: the tail has to come down beside the head.
+  const head = ([x, y]) => x > 25 && x < 75 && y > 110 && y < 250;
+  const tail = balloonTail(square, [50, 300], tailOptions({ isFree: (p) => !head(p) }));
+  assert.ok(tail);
+  const [b1, b2] = tail.base;
+  const start = [(b1[0] + b2[0]) / 2, (b1[1] + b2[1]) / 2];
+  // It leaves the bottom edge heading straight down...
+  assert.ok(Math.abs(start[1] - 100) < 1e-6);
+  assert.ok(Math.abs(tail.bend[0] - start[0]) < 1e-6);
+  assert.ok(tail.bend[1] > start[1]);
+  // ...and curves in towards the mouth.
+  assert.ok(Math.abs(tail.tip[0] - 50) < Math.abs(start[0] - 50));
+});
+
 test("the tail goes round a head in the way rather than into it", () => {
   // A head right under the balloon, between it and the speaker's mouth.
   const head = ([x, y]) => x > 25 && x < 75 && y > 110 && y < 250;
@@ -256,4 +290,35 @@ test("the tail goes round a head in the way rather than into it", () => {
     ((tail.tip[0] - mx) * dx + (tail.tip[1] - my) * dy) /
     (Math.hypot(tail.tip[0] - mx, tail.tip[1] - my) * Math.hypot(dx, dy));
   assert.ok(cos > 0.98);
+});
+
+test("a tail that would run into the art gives way to one that ends in the open", () => {
+  // Hair right under the right-hand part of the balloon, with the speaker
+  // just inside it. The nearest tails run straight into the hair, which
+  // reads as pointing at the hair.
+  const hair = ([x, y]) => x > 55 && x < 105 && y > 118 && y < 240;
+  const options = tailOptions({ maxLength: 20, isFree: (p) => !hair(p) });
+  const speaker = [80, 125];
+  // How much shorter than it could have been the tail is.
+  const shortfall = (tail) => {
+    const [b1, b2] = tail.base;
+    const start = [(b1[0] + b2[0]) / 2, (b1[1] + b2[1]) / 2];
+    const length = Math.hypot(tail.tip[0] - start[0], tail.tip[1] - start[1]);
+    const room = Math.hypot(speaker[0] - start[0], speaker[1] - start[1]) - options.gap;
+    return Math.min(options.maxLength, room) - length;
+  };
+  assert.ok(shortfall(balloonTail(square, speaker, options)) > 1, "without a penalty it is cut short");
+  assert.ok(shortfall(balloonTail(square, speaker, { ...options, blockedPenalty: 20 })) < 1);
+});
+
+test("a tail points at the speaker with a clear line of sight", () => {
+  // A cap of hair between the balloon and the speaker's mouth: a tail
+  // stopping above the hair would point through it at the mouth.
+  const hair = ([x, y]) => x > 55 && x < 105 && y > 130 && y < 160;
+  const options = tailOptions({ maxLength: 15, isFree: (p) => !hair(p), blockedPenalty: 50 });
+  const speaker = [60, 200];
+  const over = balloonTail(square, speaker, options);
+  assert.ok(over.tip[0] > 55, "without the check it stops over the hair");
+  const beside = balloonTail(square, speaker, { ...options, clearSight: 10 });
+  assert.ok(beside.tip[0] < 55, `tip at ${beside.tip}`);
 });

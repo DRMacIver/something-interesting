@@ -7,7 +7,6 @@ import {
   fitPanels,
   makePanel,
   layoutColumn,
-  tailFor,
 } from "../js/layout.js";
 
 // Every character is half the font size wide, spaces included.
@@ -308,24 +307,6 @@ test("long words break after punctuation where they can", () => {
   );
 });
 
-test("the tail starts below the text and points at the mouth", () => {
-  const panel = panelWithHeadroom(100);
-  const layout = layoutText(panel, "aaaa", opts());
-  // Line box is x 0..20, y 0..10.
-  const tail = tailFor(layout, [60, 100], { gap: 2, maxLength: 20 });
-  assert.ok(tail.from[1] > 10);
-  assert.ok(tail.to[0] > tail.from[0]);
-  assert.ok(tail.to[1] > tail.from[1]);
-  const length = Math.hypot(tail.to[0] - tail.from[0], tail.to[1] - tail.from[1]);
-  assert.ok(length <= 20 + 1e-9);
-});
-
-test("there is no tail without text", () => {
-  const panel = panelWithHeadroom(100);
-  const layout = layoutText(panel, "", opts());
-  assert.equal(tailFor(layout, [60, 100], { gap: 2, maxLength: 20 }), null);
-});
-
 // Art whose right edge creeps rightwards as it goes down, like the back of
 // a head: at row y it covers x < y / 2.
 const slopedArt = {
@@ -388,4 +369,45 @@ test("padding can differ across and down", () => {
   const result = layoutText(panel, "aa", opts());
   assert.equal(result.lines[0].x, 7);
   assert.equal(result.lines[0].y, 3);
+});
+
+test("line breaks are balanced rather than leaving a lone word", () => {
+  const panel = panelWithHeadroom(100);
+  // Filling each line greedily would give "aaaa bbbb cccc dddd" / "eeee".
+  const result = layoutText(panel, "aaaa bbbb cccc dddd eeee", opts());
+  assert.deepEqual(
+    result.lines.map((l) => l.text),
+    ["aaaa bbbb cccc", "dddd eeee"],
+  );
+});
+
+test("balancing never makes a line too long for its space", () => {
+  const panel = panelWithHeadroom(10);
+  const result = layoutText(panel, "aaaa bbbb cccc dddd eeee ffff gggg", opts({ align: "left" }));
+  for (const line of result.lines) {
+    const [[a, b]] = freeIntervals(panel, line.y, line.y + line.height, 0);
+    assert.ok(line.x >= a - 1e-9 && line.x + line.width <= b + 1e-9, line.text);
+  }
+});
+
+test("a last line stranded on its own beside the art doesn't count as fitting", () => {
+  // Full width at the top, then only a narrow gap on the right.
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, (_, y) => (y < 20 ? [[0, 200]] : [[150, 200]])),
+  };
+  const panel = makePanel(spec, 200, 100, 0);
+  // Two full lines, and one word left over for the gap beside the art.
+  const text = "aaaaaaaaa ".repeat(8) + "bbbb";
+  const result = layoutText(panel, text, opts({ align: "left" }));
+  assert.equal(result.fits, false);
+});
+
+test("lines around a broken word are still balanced", () => {
+  const panel = panelWithHeadroom(100);
+  // The long word has to be broken, but the lines before it can still be
+  // evened out.
+  const result = layoutText(panel, "aaaa bbbb cccc dddd eeee " + "x".repeat(30) + " ffff", opts());
+  assert.deepEqual(result.lines.slice(0, 2).map((l) => l.text), ["aaaa bbbb cccc", "dddd eeee"]);
 });
