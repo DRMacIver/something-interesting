@@ -10,6 +10,7 @@ import {
   chooseWidth,
   artWindow,
   openBeyond,
+  shiftedView,
 } from "../js/layout.js";
 
 // Every character is half the font size wide, spaces included.
@@ -240,10 +241,10 @@ test("panels with different art sizes share a cell height", () => {
 });
 
 test("reserved areas are kept clear of text", () => {
-  const spec = { ...artRightBlocked, reserved: [[0, 10, 20, 30]] };
+  const spec = { ...artRightBlocked, reserved: [[20, 10, 30, 30]] };
   const panel = makePanel(spec, 100, 80, 0);
-  // Art starts at y = 30, so the reserved area covers y 40..60 and x 0..20.
-  assert.deepEqual(freeIntervals(panel, 45, 50, 0), [[20, 40]]);
+  // Art starts at y = 30, so the reserved area covers y 40..60 and x 20..30.
+  assert.deepEqual(freeIntervals(panel, 45, 50, 0), [[0, 20]]);
   assert.deepEqual(freeIntervals(panel, 35, 38, 0), [[0, 40]]);
 });
 
@@ -634,4 +635,109 @@ test("cells widen no further than it takes to save height", () => {
 test("free space reaching the last whole grid cell of the art counts as reaching its edge", () => {
   // Art 597.5 grid cells wide, rounded to 598; the grid holds 597 of them.
   assert.deepEqual(openBeyond([[[10, 597]]], 598), [[[10, Infinity]]]);
+});
+
+test("nothing is lettered to the right of a reserved area, which would be read first", () => {
+  // Another character's balloon in the middle of the rows y = 40..60.
+  const spec = { ...artRightBlocked, reserved: [[40, -60, 60, -40]] };
+  const panel = makePanel(spec, 100, 150, 0);
+  assert.deepEqual(freeIntervals(panel, 45, 55, 0), [[0, 40]]);
+});
+
+test("dropping stops before a line would be pushed aside by the art", () => {
+  // Art on the left from y = 50 of the art down, sloping steeply out to
+  // the right like the top of a head.
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, (_, y) => (y < 50 ? [[0, 200]] : [[(y - 50) * 6, 200]])),
+  };
+  const panel = makePanel(spec, 200, 300, 0);
+  // A long line above a short one: lower down, the short one would be
+  // pushed further aside than the long one can follow.
+  const result = layoutText(panel, "a".repeat(20) + "\nbb", opts({ align: "left", drop: true }));
+  assert.ok(result.lines[0].y > 100, "it has dropped");
+  const [first, last] = result.lines.map((l) => l.x);
+  assert.equal(last, first, "the lines keep a common left edge");
+});
+
+test("a balloon's text goes in the middle of its room, if it still spans its speaker", () => {
+  const panel = panelWithHeadroom(200);
+  // 60 wide in a 100 wide panel; the speaker is at x = 30.
+  const result = layoutText(panel, "aaaaaaaaaaaa", opts({ align: "left", centreOn: 30 }));
+  assert.equal(result.lines[0].x, 20);
+});
+
+test("a balloon's text stays as near its speaker as it can if it can't span them", () => {
+  // Art down the left side; the speaker is in it, at x = 30.
+  const spec = { width: 200, height: 100, free: Array.from({ length: 100 }, () => [[60, 200]]) };
+  const panel = makePanel(spec, 200, 100, 0);
+  const result = layoutText(panel, "aaaa", opts({ align: "left", centreOn: 30 }));
+  assert.equal(result.lines[0].x, 60);
+});
+
+test("a panel seen from part way into its art has everything shifted to match", () => {
+  const meta = {
+    width: 100,
+    free: [[[0, 40], [60, Infinity]]],
+    open: [[[10, 20]]],
+    speakers: { dad: [50, 5] },
+    calvinColumn: [70, 90, 30],
+  };
+  const view = shiftedView(meta, 10);
+  assert.deepEqual(view.free, [[[-10, 30], [50, Infinity]]]);
+  assert.deepEqual(view.open, [[[0, 10]]]);
+  assert.deepEqual(view.speakers, { dad: [40, 5] });
+  assert.deepEqual(view.calvinColumn, [60, 80, 30]);
+  assert.equal(view.start, 10);
+  assert.equal(shiftedView(meta, 0).start, 0);
+});
+
+test("lines are no longer than maxLineWidth, however wide the space", () => {
+  const panel = panelWithHeadroom(200);
+  const result = layoutText(panel, "aaaa bbbb cccc dddd eeee ffff", opts({ align: "left", maxLineWidth: 50 }));
+  assert.ok(result.lines.length > 1);
+  for (const line of result.lines) assert.ok(line.width <= 50, `${line.text} is ${line.width} wide`);
+});
+
+test("a word longer than maxLineWidth gets a line to itself where there's space for it", () => {
+  const panel = panelWithHeadroom(200);
+  const result = layoutText(panel, "aaaa " + "x".repeat(14) + " bbbb", opts({ align: "left", maxLineWidth: 50 }));
+  assert.equal(result.fits, true);
+  assert.deepEqual(result.lines.map((l) => l.text), ["aaaa", "x".repeat(14), "bbbb"]);
+});
+
+test("a balloon that floats free drops only as far as it still floats free", () => {
+  // Art on the left (a head) from y = 50 of the art down; a speaker at x = 30.
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, (_, y) => (y < 50 ? [[0, 200]] : [[60, 200]])),
+  };
+  const panel = makePanel(spec, 200, 300, 0);
+  const options = opts({ align: "left", drop: true, centreOn: 30, floatGap: 20 });
+  // 130 wide: beside the head it would come within 10 of the right side.
+  const wide = layoutText(panel, "a".repeat(26), options);
+  assert.ok(wide.lines[0].y + wide.lines[0].height <= 250, "it stays above the head");
+  // 40 wide: there's room for it to float beside the head.
+  const narrow = layoutText(panel, "a".repeat(8), options);
+  assert.ok(narrow.lines[0].y > 250, "it drops beside the head");
+});
+
+test("lines before a word longer than maxLineWidth are still balanced", () => {
+  const panel = panelWithHeadroom(200);
+  // Filling each line would leave "e" on its own before the long word.
+  const text = "aaaa bbbb cccc dddd e " + "x".repeat(14);
+  const result = layoutText(panel, text, opts({ align: "left", maxLineWidth: 50 }));
+  const texts = result.lines.map((l) => l.text);
+  assert.equal(texts[texts.length - 1], "x".repeat(14));
+  assert.ok(!texts.includes("e"), texts.join(" / "));
+});
+
+test("a balloon can centre a little way past its speaker, with its tail coming down to their side", () => {
+  const panel = panelWithHeadroom(200);
+  // 60 wide in a 100 wide panel; the speaker is at x = 10, and the text
+  // may start up to 15 past them.
+  const result = layoutText(panel, "aaaaaaaaaaaa", opts({ align: "left", centreOn: 10, centreSlack: 15 }));
+  assert.equal(result.lines[0].x, 20);
 });

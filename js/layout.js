@@ -9,8 +9,9 @@
 // text may go on that row of the art. spec.reserved is a list of
 // [x0, y0, x1, y1] rectangles, in art pixels (y may be negative, above the
 // art), taken up by something else, such as another character's balloon.
-// spec.margin, spec.awayFromArt, spec.awayLimit and spec.block, if given,
-// override the layout options of the same names for that panel.
+// spec.margin, spec.awayFromArt, spec.awayLimit, spec.block and
+// spec.maxLineWidth, if given, override the layout options of the same
+// names for that panel.
 //
 // padding keeps text away from the panel's edges: a number, or {x, y} to
 // pad the sides and the top and bottom differently.
@@ -94,9 +95,10 @@ export function freeIntervals(panel, y0, y1, margin) {
     a <= padX ? a : a + margin,
     b >= width - padX ? b : b - margin,
   ]);
-  for (const [rx0, ry0, rx1, ry1] of reservedAreas(panel)) {
+  // Nor beside a reserved area on its right: that would be read after it.
+  for (const [rx0, ry0, , ry1] of reservedAreas(panel)) {
     if (ry1 + margin > y0 && ry0 - margin < y1) {
-      intervals = subtract(intervals, [rx0 - margin, rx1 + margin]);
+      intervals = subtract(intervals, [rx0 - margin, Infinity]);
     }
   }
   return intervals
@@ -172,17 +174,54 @@ export function layoutText(panel, text, options) {
     moveAwayFromArt(result, panel, options.awayLimit ?? Infinity);
   }
   result = { ...result, fits: !stranded(result) && !(options.block && squeezed(result)) };
-  if (options.drop && result.fits && result.lines.length) return drop(panel, text, options, result);
+  if (options.drop && result.fits && result.lines.length) result = drop(panel, text, options, result);
+  if (options.centreOn !== undefined && result.fits && result.lines.length) {
+    centre(result, options.centreOn, options.centreSlack);
+  }
   return result;
+}
+
+// A balloon sits in the middle of the room its lines have, as long as it
+// still spans its speaker (at x = speakerX), or starts no more than `slack`
+// past them, so that its tail can come down beside them; otherwise it
+// keeps as near them as it can.
+function centre({ lines }, speakerX, slack = 0) {
+  const roomLeft = Math.max(...lines.map((l) => l.interval[0]));
+  const roomRight = Math.min(...lines.map((l) => l.interval[1]));
+  const left = Math.min(...lines.map((l) => l.x));
+  const width = Math.max(...lines.map((l) => l.x + l.width)) - left;
+  if (roomRight - roomLeft < width) return;
+  let target = (roomLeft + roomRight - width) / 2;
+  target = Math.min(Math.max(target, speakerX - width), speakerX + slack);
+  target = Math.min(Math.max(target, roomLeft), roomRight - width);
+  for (const line of lines) line.x += target - left;
 }
 
 // Text that has room to spare drops down towards whoever's speaking: as far
 // as it can go without its lines changing (no re-wrapping round the art)
-// and without its last line going below dropLimit, less keepGap. Once
-// there it stays beside them rather than moving away from the art.
+// and without its last line going below dropLimit, less keepGap; and
+// without the art pushing any of its lines aside unless it pushes them all
+// alike; and text whose balloon would float free of the panel's sides (see
+// floatGap) only drops as far as it still would. Once there it stays
+// beside them rather than moving away from the art.
 function drop(panel, text, options, result) {
   const lines = result.lines.map((l) => l.text).join("\n");
+  // Where each line starts relative to the first: the art may push them
+  // aside together, but not one by one.
+  const indents = (layout) => layout.lines.map((l) => l.x - layout.lines[0].x);
+  const shape = indents(result);
   const limit = options.dropLimit ?? Infinity;
+  // Whether the text, once centred, keeps floatGap clear of the panel's
+  // sides (so its balloon floats free rather than hanging from one).
+  const floats = (layout) => {
+    if (options.floatGap === undefined) return true;
+    const lines = layout.lines.map((l) => ({ ...l }));
+    if (options.centreOn !== undefined) centre({ lines }, options.centreOn, options.centreSlack);
+    const left = Math.min(...lines.map((l) => l.x));
+    const right = Math.max(...lines.map((l) => l.x + l.width));
+    return Math.min(left - panel.padX, panel.width - panel.padX - right) >= options.floatGap;
+  };
+  const floating = floats(result);
   const at = (offset) =>
     layoutText(panel, text, { ...options, drop: false, awayFromArt: false, startY: panel.padY + offset });
   const same = (layout) => {
@@ -190,6 +229,8 @@ function drop(panel, text, options, result) {
     return (
       layout.fits &&
       layout.lines.map((l) => l.text).join("\n") === lines &&
+      indents(layout).every((x, i) => Math.abs(x - shape[i]) < 1e-6) &&
+      (!floating || floats(layout)) &&
       last.y + last.height <= limit + 1e-9
     );
   };
@@ -246,7 +287,7 @@ function squeezed({ lines }) {
 // same line positions and spaces: Knuth-style, minimising the squared
 // leftover space of every line but the last, with a penalty for ending on
 // a lone short word. The last paragraph may use fewer lines than before.
-function balance(result, { measure, fontSize, align = "center" }) {
+function balance(result, { measure, fontSize, align = "center", maxLineWidth = Infinity }) {
   const { lines, spaces } = result;
   const groups = [];
   for (let i = 0; i < lines.length; i++) {
@@ -254,8 +295,8 @@ function balance(result, { measure, fontSize, align = "center" }) {
     if (last && lines[last[0]].paragraph === lines[i].paragraph) last.push(i);
     else groups.push([i]);
   }
-  // Pieces of broken words stay on their own lines; the runs of lines
-  // between them are balanced separately.
+  // Pieces of broken words, and words too long for a line, stay on their
+  // own lines; the runs of lines between them are balanced separately.
   const runs = [];
   groups.forEach((group, g) => {
     let run = [];
@@ -286,7 +327,7 @@ function balance(result, { measure, fontSize, align = "center" }) {
       continue;
     }
     const widthOf = (i, j) => measure(words.slice(i, j).join(" "), fontSize);
-    const room = slots.map((l) => l.interval[1] - l.interval[0]);
+    const room = slots.map((l) => Math.min(l.interval[1] - l.interval[0], maxLineWidth));
     const n = words.length;
     const m = slots.length;
     // cost[k][j]: best cost of setting the first j words in the first k lines.
@@ -376,6 +417,7 @@ function flow(panel, text, options, minimums) {
   const lineHeight = fontSize * (options.lineHeight ?? 1.2);
   const margin = options.margin ?? 0;
   const minLineWidth = options.minLineWidth ?? fontSize * 3;
+  const maxLineWidth = options.maxLineWidth ?? Infinity;
   const step = lineHeight / 4;
   const limit = panel.height - panel.padY;
   const fullWidth = panel.width - 2 * panel.padX;
@@ -428,12 +470,20 @@ function flow(panel, text, options, minimums) {
         ? minimums[Math.min(lines.length, minimums.length - 1)]
         : -Infinity;
       const interval = space && [Math.max(space[0], minimum), space[1]];
-      const width = interval ? interval[1] - interval[0] : 0;
+      const width = interval ? Math.min(interval[1] - interval[0], maxLineWidth) : 0;
       if (!interval || width < Math.min(minLineWidth, fullWidth)) {
         y += step;
         continue;
       }
       if (!fits(words[0], width)) {
+        if (fits(words[0], interval[1] - interval[0])) {
+          // Longer than a line should be, but there's room for it here on a
+          // line of its own (which, like a piece of a broken word, stays
+          // there when the lines around it are balanced).
+          spaces.push(space);
+          place([words.shift()], interval, true);
+          continue;
+        }
         if (fits(words[0], fullWidth)) {
           // There may be a wider gap further down.
           y += step;
@@ -481,7 +531,8 @@ export function layoutColumn(text, { measure, fontSize, lineHeight = 1.2, width 
 //
 // Then any panel whose spec says `drop` has its text dropped down towards
 // its speaker (see drop), no lower than spec.speakerY (in art pixels) less
-// spec.keepGap.
+// spec.keepGap; and if its spec says `centre`, moved across into the
+// middle of its room (see centre) as long as it still spans spec.speakerX.
 export function fitPanels(specs, texts, options) {
   const best = fitHeight(specs, texts, options);
   if (!best.fits) return best;
@@ -495,6 +546,9 @@ export function fitPanels(specs, texts, options) {
       dropLimit:
         spec.speakerY === undefined ? Infinity : panel.artTop + spec.speakerY * panel.scale,
       keepGap: spec.keepGap ?? 0,
+      centreOn: spec.centre && spec.speakerX !== undefined ? spec.speakerX * panel.scale : undefined,
+      floatGap: spec.floatGap,
+      centreSlack: spec.centreSlack,
     });
   });
   return best;
@@ -507,6 +561,7 @@ function panelOptions(panel, options) {
     awayFromArt: panel.spec.awayFromArt ?? options.awayFromArt,
     awayLimit: panel.spec.awayLimit ?? options.awayLimit,
     block: panel.spec.block ?? options.block,
+    maxLineWidth: panel.spec.maxLineWidth ?? options.maxLineWidth,
   };
 }
 
@@ -640,4 +695,21 @@ export function artWindow({ width, left = 0, extendedWidth, openLeft, openRight 
 // whole grid cell) go on forever.
 export function openBeyond(rows, width) {
   return rows.map((row) => row.map(([a, b]) => [a, b >= width - 1 ? Infinity : b]));
+}
+
+// A panel's description as seen with its art shown from x = `start` (in
+// art pixels) on: everything in it that's placed across the art moved to
+// match.
+export function shiftedView(meta, start) {
+  const rows = (r) => r && r.map((row) => row.map(([a, b]) => [a - start, b - start]));
+  return {
+    ...meta,
+    start,
+    free: rows(meta.free),
+    open: rows(meta.open),
+    speakers: Object.fromEntries(Object.entries(meta.speakers ?? {}).map(([k, [x, y]]) => [k, [x - start, y]])),
+    ...(meta.calvinColumn && {
+      calvinColumn: [meta.calvinColumn[0] - start, meta.calvinColumn[1] - start, meta.calvinColumn[2]],
+    }),
+  };
 }

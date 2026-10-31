@@ -39,7 +39,11 @@ EXTENSIONS = ROOT / "tools" / "extensions"
 # black right to its edge).
 PANELS = [
     {
-        "box": (60, 1870, 879, 2906),
+        "box": (62, 1870, 879, 2903),
+        # Dad's back and trailing leg run off the left edge; the rest of him
+        # is drawn in tools/extensions/panel1-left.png.
+        "extend": {"left": EXTEND // 2, "right": EXTEND},
+        "extensions": {"left": "panel1-left.png"},
         # Dad's balloon and lettering. Only ink lying entirely inside these
         # regions is erased, so artwork that pokes into them survives.
         "erase": [[(320, 1870), (881, 1870), (881, 2310), (320, 2310)]],
@@ -99,6 +103,7 @@ PANELS = [
         # Extended both ways, so that Calvin's bed stays in the middle; its
         # far end is drawn in tools/extensions/panel4-left.png.
         "extend": {"left": EXTEND // 2, "right": EXTEND // 2},
+        "centre": True,
         "extensions": {"left": "panel4-left.png"},
     },
 ]
@@ -227,8 +232,6 @@ def extended(art, panel):
     """The art with its extensions on either side, and how many columns
     were added on the left."""
     widths = panel.get("extend", {"left": 0, "right": EXTEND})
-    # Text layout works in the original art's coordinates.
-    assert widths["left"] == 0 or panel["text_bottom"] is None
 
     def extension(side):
         if side in panel.get("extensions", {}):
@@ -277,9 +280,10 @@ def main():
         art, left = extended(art, panel)
         smooth(art).save(OUT / f"panel{number}.png", optimize=True)
 
+        # Positions across the panel are measured across the extended art.
         def grid(point):
             x, y = point
-            return [round((x - x0) * GRID_SCALE, 1), round((y - y0) * GRID_SCALE, 1)]
+            return [round((x - x0 + left) * GRID_SCALE, 1), round((y - y0) * GRID_SCALE, 1)]
 
         entry = {
             "image": f"assets/panel{number}.png",
@@ -289,8 +293,9 @@ def main():
             # How much of the extended art is on the left.
             "left": round(left * GRID_SCALE),
             # Whether the art ends in plain background on that side, so that
-            # the panel can widen past it.
-            "openLeft": bool((art[:, 0] == bool(panel.get("dark"))).all()),
+            # the panel can widen past it (on the left, only for art that's
+            # kept in the middle).
+            "openLeft": bool(panel.get("centre")) and bool((art[:, 0] == bool(panel.get("dark"))).all()),
             "openRight": bool((art[:, -1] == bool(panel.get("dark"))).all()),
             "height": round((y1 - y0) * GRID_SCALE),
             "background": "#000" if panel.get("dark") else "#fff",

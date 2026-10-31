@@ -3,7 +3,7 @@
 // what it drew, which the page uses to report problems and the checks page
 // uses to judge the result.
 
-import { artWindow, chooseWidth, fitPanels, layoutColumn, openBeyond } from "./layout.js";
+import { artWindow, chooseWidth, fitPanels, layoutColumn, openBeyond, shiftedView } from "./layout.js";
 import { balloonOutline, balloonTail, clearOf } from "./balloon.js";
 
 // The width of a panel's original art, and so of a cell when there isn't
@@ -65,6 +65,10 @@ const LOOSE_LINES = 3.5;
 // And in the panels Dad has a balloon in, a real wall of text (this many
 // lines' worth or more) is lettered loose too.
 const WALL_LINES = 8;
+// Lettering in a balloon runs no longer a line than this share of the
+// original panel's width allows, however wide the panel has grown: it's
+// a balloon, not a wall of text.
+const BALLOON_MEASURE = 1.25;
 
 export const DEFAULTS = [
   "Vibecoding something? Let me show you something interesting.",
@@ -165,30 +169,44 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
   const lineWidth = CELL_WIDTH - 2 * SIDE_GAP * cap;
 
   // How each panel's dialogue is lettered: loose for a lot of text, as in
-  // panel 3 of the original, and otherwise in a balloon.
+  // panel 3 of the original, and otherwise in a balloon. (But see below:
+  // loose lettering is only for text that has to fill its panel.)
   const speechFor = (meta, text) => {
     const lines = measure(text.toUpperCase(), fontSize) / lineWidth;
     return lines >= (meta.speech === "loose" ? LOOSE_LINES : WALL_LINES) ? "loose" : "balloon";
   };
-  const speeches = assets.panels.map((meta, i) => (meta.speech ? speechFor(meta, texts[i] ?? "") : null));
+  let speeches = assets.panels.map((meta, i) => (meta.speech ? speechFor(meta, texts[i] ?? "") : null));
 
   const calvinMeta = assets.panels.find((p) => p.calvinColumn);
+  const calvinIndex = assets.panels.indexOf(calvinMeta);
   // The gaps are measured to the lettering itself, which sits in the middle
   // of its line's spacing.
   const leading = (LINE_HEIGHT * fontSize - cap) / 2;
-  // The comic laid out with cells `cellWidth` wide.
-  const layoutAt = (cellWidth) => {
-    const calvin = layoutCalvin(calvinMeta, texts[CALVIN].toUpperCase(), measure, fontSize, cap, cellWidth);
-    const specs = assets.panels.map((p, i) => ({
+  // The comic laid out with cells `cellWidth` wide, each panel's dialogue
+  // lettered as `styles` says.
+  const layoutAt = (cellWidth, styles = speeches) => {
+    // Each panel as seen at this width, with as much of its art as shows.
+    const views = assets.panels.map((meta) =>
+      shiftedView(meta, artWindow(meta, (cellWidth * meta.width) / CELL_WIDTH)[0]),
+    );
+    const calvin = layoutCalvin(views[calvinIndex], texts[CALVIN].toUpperCase(), measure, fontSize, cap, cellWidth);
+    const specs = views.map((p, i) => ({
       width: p.width,
       height: p.height,
       free: p.free ?? [],
-      reserved: p === calvinMeta ? calvin.reserved : [],
-      margin: (speeches[i] === "balloon" ? BALLOON_MARGIN : ART_MARGIN) * cap,
-      awayFromArt: speeches[i] === "balloon",
-      block: speeches[i] === "balloon",
+      reserved: i === calvinIndex ? calvin.reserved : [],
+      margin: (styles[i] === "balloon" ? BALLOON_MARGIN : ART_MARGIN) * cap,
+      awayFromArt: styles[i] === "balloon",
+      block: styles[i] === "balloon",
+      maxLineWidth: styles[i] === "balloon" ? BALLOON_MEASURE * lineWidth : Infinity,
       awayLimit: AWAY_LIMIT * cap,
       drop: Boolean(p.speakers.dad),
+      centre: styles[i] === "balloon",
+      centreSlack: 3 * cap,
+      // Beyond the side padding, a balloon this far from the side floats
+      // free of it (see BALLOON.reach).
+      floatGap: styles[i] === "balloon" ? (BALLOON.reach + 0.2) * cap : undefined,
+      speakerX: p.speakers.dad?.[0],
       speakerY: p.speakers.dad?.[1],
       keepGap: KEEP_GAP * cap,
     }));
@@ -202,7 +220,7 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
       artWidth: CELL_WIDTH,
       padding: { x: SIDE_GAP * cap, y: Math.max(0, TOP_GAP * cap - leading) },
     });
-    return { ...result, calvin };
+    return { ...result, calvin, views };
   };
   const artHeight = Math.max(...assets.panels.map((p) => (p.height * CELL_WIDTH) / p.width));
   const maxWidth = Math.min(
@@ -211,16 +229,29 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
       p.openRight || p.openLeft ? Infinity : (p.extendedWidth * CELL_WIDTH) / p.width,
     ),
   );
-  const { width: cellWidth, result } = chooseWidth(layoutAt, {
+  const chosen = chooseWidth((width) => layoutAt(width), {
     minWidth: CELL_WIDTH,
     maxWidth: Math.floor(maxWidth),
     aspect: CELL_WIDTH / artHeight,
     step: cap,
   });
-  const { cellHeight, calvin } = result;
+  const cellWidth = chosen.width;
+  let result = chosen.result;
+  // Loose lettering is for text pushed right up to the edges of its panel.
+  // Where another panel has made the panels big enough that a balloon
+  // fits anyway, it gets one.
+  speeches.forEach((style, i) => {
+    if (style !== "loose") return;
+    const styles = speeches.map((s, j) => (j === i ? "balloon" : s));
+    const ballooned = layoutAt(cellWidth, styles);
+    if (ballooned.fits && ballooned.cellHeight <= result.cellHeight + 1e-6) {
+      speeches = styles;
+      result = ballooned;
+    }
+  });
+  const { cellHeight, calvin, views } = result;
 
   // Place Calvin's lines in the panel, now that its size is known.
-  const calvinIndex = assets.panels.indexOf(calvinMeta);
   const calvinPanel = result.panels[calvinIndex];
   const calvinLeft = calvin.column.left * calvinPanel.scale;
   const calvinTop =
@@ -239,16 +270,17 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
   const report = { fits: result.fits, cap, cellWidth, cellHeight, panels: [] };
   result.panels.forEach((panel, i) => {
     const meta = assets.panels[i];
+    const view = views[i];
     const said = [];
-    if (meta.speakers.dad) {
+    if (view.speakers.dad) {
       said.push({
         who: "dad",
         lines: result.layouts[i].lines,
-        speaker: speakerPoint(panel, meta.speakers.dad),
+        speaker: speakerPoint(panel, view.speakers.dad),
       });
     }
     if (i === calvinIndex) {
-      said.push({ who: "calvin", lines: calvinLines, speaker: speakerPoint(panel, meta.speakers.calvin) });
+      said.push({ who: "calvin", lines: calvinLines, speaker: speakerPoint(panel, view.speakers.calvin) });
     }
     const x = OUTER + (i % 2) * (cellWidth + GUTTER);
     const y = OUTER + Math.floor(i / 2) * (cellHeight + GUTTER);
@@ -262,7 +294,7 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
     ctx.fillRect(0, 0, cellWidth, cellHeight);
     // Calvin always has a balloon; Dad as his panel's style says.
     const ballooned = said.filter((s) => s.who === "calvin" || speeches[i] === "balloon");
-    drawBalloons(ctx, panel, meta, ballooned, cap);
+    drawBalloons(ctx, panel, view, ballooned, cap);
     // Where the art is black ink on white, multiplying it in keeps every
     // line of it visible even where a balloon overlaps it.
     if (meta.background === "#fff") ctx.globalCompositeOperation = "multiply";
@@ -300,7 +332,7 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
       drawLines(ctx, speech.lines, fontSize);
       if (!ballooned.includes(speech) && speech.lines.length) {
         const balloons = ballooned.filter((s) => s.outline).map((s) => s.outline);
-        speech.stroke = drawStroke(ctx, speech, panel, meta, cap, balloons);
+        speech.stroke = drawStroke(ctx, speech, panel, view, cap, balloons);
       }
     }
     ctx.restore();
@@ -308,7 +340,7 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
     ctx.strokeStyle = INK;
     ctx.lineWidth = BORDER;
     ctx.strokeRect(x, y, cellWidth, cellHeight);
-    report.panels.push({ x, y, panel, meta, speech: speeches[i], speeches: said });
+    report.panels.push({ x, y, panel, meta: view, speech: speeches[i], speeches: said });
   });
   return report;
 }

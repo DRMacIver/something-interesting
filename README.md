@@ -36,7 +36,8 @@ Everything is static. On GitHub, enable Pages for the repository with
   solid blacks (Dad's trousers, the night in panel 4) are only in the
   scan's low resolution background layer, so they're merged in from there.
   Panels can widen to any width, so wherever the art runs off a panel's
-  edge it is finished off: the rest of Calvin in panel 2
+  edge it is finished off: Dad's back and trailing leg in panel 1
+  (`tools/extensions/panel1-left.png`), the rest of Calvin in panel 2
   (`tools/extensions/panel2-right.png`) and the far end of his bed in panel
   4 (`tools/extensions/panel4-left.png`), drawn by Codex's image generation
   from the panel and thresholded to the scan's 1-bit ink so that they're
@@ -54,8 +55,12 @@ Everything is static. On GitHub, enable Pages for the repository with
   down towards whoever is speaking. Panels that need more room grow
   keeping the original panels' proportions, but only as wide as saves
   height: text that won't get shorter with more width (short lines that
-  don't wrap) makes them taller instead. A real wall of text is lettered
-  loose, with a pen stroke towards Dad, as in panel 3 of the original.
+  don't wrap) makes them taller instead. A real wall of text that fills
+  its panel is lettered loose, with a pen stroke towards Dad, as in panel 3
+  of the original; given room, it gets a balloon. Balloons keep to lines
+  not much longer than the original panel's, float free and centred where
+  there's room; and Dad's lettering never sits to the right of Calvin's
+  balloon, where it would be read after Calvin's reply.
 - `js/balloon.js` shapes the speech balloons in Watterson's manner, as
   worked out in [docs/balloon-study.md](docs/balloon-study.md): balloons
   near the top of a panel hang from its border, outlines follow the text in
