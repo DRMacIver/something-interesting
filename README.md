@@ -4,7 +4,7 @@ A static, backend-free generator for the "Calvin's dad explains there are two
 types of things" meme. Type Dad's lines (and Calvin's reply) and you get the
 comic, lettered the way the original strip is: the text flows around the
 artwork, sits in balloons in the panels that have them, and the panels grow
-to make room for long text.
+to make room for long text, wider as well as taller.
 
 ## Running locally
 
@@ -35,6 +35,13 @@ Everything is static. On GitHub, enable Pages for the repository with
   loose with a pen stroke towards Dad) and where Calvin's reply goes. Large
   solid blacks (Dad's trousers, the night in panel 4) are only in the
   scan's low resolution background layer, so they're merged in from there.
+  Each panel's art is extended to the right so the panels can widen: with
+  blank background, except in panel 2, where Calvin runs off the edge. The
+  rest of him (`tools/extensions/panel2.png`) was drawn by Codex's image
+  generation from the panel, then thresholded to the scan's 1-bit ink so it
+  is smoothed like the rest. Watterson's signature is cut out of panel 4
+  (`assets/signature.png`) so it can sit in the corner however wide the
+  panel is.
 - The lettering, Dad Lettering (`assets/fonts/dad-lettering.woff2`),
   is built from Watterson's own lettering; see below.
 - `js/layout.js` is the text-flow engine: it places text line by line,
@@ -42,7 +49,9 @@ Everything is static. On GitHub, enable Pages for the repository with
   left edge unless the art pushes lines well aside, keeps a balloon's text
   in one block rather than squeezing it into a gap partway down, finds the
   smallest panel height that fits everything, and then drops short text
-  down towards whoever is speaking.
+  down towards whoever is speaking. Panels that need more room grow
+  keeping the original panels' proportions, as wide as the extended art
+  allows, and only taller after that.
 - `js/balloon.js` shapes the speech balloons in Watterson's manner, as
   worked out in [docs/balloon-study.md](docs/balloon-study.md): balloons
   near the top of a panel hang from its border, outlines follow the text in

@@ -14,8 +14,11 @@
 //
 // padding keeps text away from the panel's edges: a number, or {x, y} to
 // pad the sides and the top and bottom differently.
-export function makePanel(spec, cellWidth, cellHeight, padding) {
-  const scale = cellWidth / spec.width;
+//
+// The art is scaled to fill the cell's width, unless `scale` is given: a
+// cell wider than its art at that scale has the rest of the art's free rows
+// (art extended to the right, say) beside it.
+export function makePanel(spec, cellWidth, cellHeight, padding, scale = cellWidth / spec.width) {
   const artHeight = spec.height * scale;
   return {
     spec,
@@ -473,7 +476,8 @@ export function layoutColumn(text, { measure, fontSize, lineHeight = 1.2, width 
 
 // Lay out one text per panel spec, sharing a cell size, with the cells as
 // short as possible while still fitting every text and every reserved area
-// (but never shorter than the art).
+// (but never shorter than the art). The cells are options.cellWidth wide,
+// with the art scaled to options.artWidth (by default, the cell width).
 //
 // Then any panel whose spec says `drop` has its text dropped down towards
 // its speaker (see drop), no lower than spec.speakerY (in art pixels) less
@@ -508,13 +512,14 @@ function panelOptions(panel, options) {
 
 function fitHeight(specs, texts, options) {
   const { cellWidth, padding = 0, fontSize } = options;
+  const artWidth = options.artWidth ?? cellWidth;
   const artHeight = Math.max(
-    ...specs.map((spec) => spec.height * (cellWidth / spec.width)),
+    ...specs.map((spec) => spec.height * (artWidth / spec.width)),
   );
 
   const attempt = (cellHeight) => {
     const panels = specs.map((spec) =>
-      makePanel(spec, cellWidth, cellHeight, padding),
+      makePanel(spec, cellWidth, cellHeight, padding, artWidth / spec.width),
     );
     const layouts = panels.map((panel, i) =>
       layoutText(panel, texts[i] ?? "", panelOptions(panel, options)),
@@ -561,4 +566,33 @@ function fitHeight(specs, texts, options) {
     }
   }
   return best;
+}
+
+// The width for cells that need room for text: the narrowest, from
+// minWidth up in steps of `step`, at which the cell is no taller than
+// width / aspect, so cells keep their proportions as they grow; or
+// maxWidth if even that is too tall. fitAt(width) lays the comic out at a
+// width, returning {cellHeight, fits}. Returns {width, result}.
+export function chooseWidth(fitAt, { minWidth, maxWidth, aspect, step }) {
+  const ok = (result, width) => result.fits && result.cellHeight <= width / aspect + 1e-9;
+  let result = fitAt(minWidth);
+  if (ok(result, minWidth) || maxWidth <= minWidth) return { width: minWidth, result };
+  const widest = fitAt(maxWidth);
+  if (!ok(widest, maxWidth)) return { width: maxWidth, result: widest };
+  // Too tall at lo, in proportion at hi.
+  let lo = minWidth;
+  let hi = maxWidth;
+  result = widest;
+  while (hi - lo > step) {
+    const mid = lo + Math.max(step, Math.floor((hi - lo) / 2 / step) * step);
+    if (mid >= hi) break;
+    const candidate = fitAt(mid);
+    if (ok(candidate, mid)) {
+      hi = mid;
+      result = candidate;
+    } else {
+      lo = mid;
+    }
+  }
+  return { width: hi, result };
 }

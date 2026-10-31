@@ -3,9 +3,12 @@
 // what it drew, which the page uses to report problems and the checks page
 // uses to judge the result.
 
-import { fitPanels, layoutColumn } from "./layout.js";
+import { chooseWidth, fitPanels, layoutColumn } from "./layout.js";
 import { balloonOutline, balloonTail, clearOf } from "./balloon.js";
 
+// The width of a panel's original art, and so of a cell when there isn't
+// much to say. Cells with a lot to say grow, keeping the original panels'
+// proportions, as far as the art (extended to the right) allows.
 const CELL_WIDTH = 800;
 const GUTTER = 30;
 const OUTER = 30;
@@ -63,7 +66,7 @@ export const DEFAULTS = [
   "There are two types of vibecoded projects: piracy, and extremely " +
     "bespoke artisanal itch scratching. Everything falls into one or the other.",
   "A Discord clone? Piracy. A custom desktop environment? Itch scratching.\n\n" +
-    "Despite literally copying Calvin and Hobbes, drmaciver.github.io/something-interesting is itch scratching.",
+    "Despite literally being based on Bill Watterson's copyrighted work, drmaciver.github.io/something-interesting is itch scratching.",
   "That seems reductive.",
 ];
 // Dad's lines in panels 1-3, then Calvin's reply in panel 2.
@@ -85,12 +88,14 @@ export async function loadComic(base = "") {
   const response = await fetch(base + "assets/panels.json");
   const assets = await response.json();
   const images = await Promise.all(assets.panels.map((p) => loadImage(base + p.image)));
+  const signed = assets.panels.find((p) => p.signature);
+  const signature = signed && (await loadImage(base + signed.signature.image));
   try {
     await document.fonts.load(`20px "${FONT}"`, "AB");
   } catch {
     // Render with whatever the browser has rather than nothing.
   }
-  return { assets, images };
+  return { assets, images, signature };
 }
 
 function fontString(size) {
@@ -111,7 +116,7 @@ export function openAt(panel, meta, [x, y]) {
 // The stretch of open space (in art pixels) containing x = `centre` on
 // every row from y0 to y1, ignoring rows above the art.
 function openSpan(meta, y0, y1, centre) {
-  let span = [0, meta.width];
+  let span = [0, meta.extendedWidth];
   for (let row = Math.max(0, Math.floor(y0)); row < Math.min(meta.height, Math.ceil(y1)); row++) {
     const here = (meta.open[row] ?? []).find(([a, b]) => a <= centre && centre < b);
     if (!here) return [centre, centre];
@@ -129,7 +134,7 @@ function speakerPoint(panel, point) {
 // {fits, cap, panels: [{x, y, panel, meta, speech, speeches}]}, where each
 // speech is {who, lines, speaker, outline, tail, stroke} in cell
 // coordinates.
-export function drawComic(canvas, { assets, images }, texts) {
+export function drawComic(canvas, { assets, images, signature }, texts) {
   const ctx = canvas.getContext("2d");
   const widths = new Map();
   const measure = (text, size) => {
@@ -159,33 +164,46 @@ export function drawComic(canvas, { assets, images }, texts) {
   const speeches = assets.panels.map((meta, i) => (meta.speech ? speechFor(meta, texts[i] ?? "") : null));
 
   const calvinMeta = assets.panels.find((p) => p.calvinColumn);
-  const calvin = layoutCalvin(calvinMeta, texts[CALVIN].toUpperCase(), measure, fontSize, cap);
-  const specs = assets.panels.map((p, i) => ({
-    width: p.width,
-    height: p.height,
-    free: p.free ?? [],
-    reserved: p === calvinMeta ? calvin.reserved : [],
-    margin: (speeches[i] === "balloon" ? BALLOON_MARGIN : ART_MARGIN) * cap,
-    awayFromArt: speeches[i] === "balloon",
-    block: speeches[i] === "balloon",
-    awayLimit: AWAY_LIMIT * cap,
-    drop: Boolean(p.speakers.dad),
-    speakerY: p.speakers.dad?.[1],
-    keepGap: KEEP_GAP * cap,
-  }));
   // The gaps are measured to the lettering itself, which sits in the middle
   // of its line's spacing.
   const leading = (LINE_HEIGHT * fontSize - cap) / 2;
-  const result = fitPanels(specs, [...texts.slice(0, 3).map((t) => t.toUpperCase()), ""], {
-    measure,
-    fontSize,
-    lineHeight: LINE_HEIGHT,
-    margin: ART_MARGIN * cap,
-    align: "left",
-    cellWidth: CELL_WIDTH,
-    padding: { x: SIDE_GAP * cap, y: Math.max(0, TOP_GAP * cap - leading) },
+  // The comic laid out with cells `cellWidth` wide.
+  const layoutAt = (cellWidth) => {
+    const calvin = layoutCalvin(calvinMeta, texts[CALVIN].toUpperCase(), measure, fontSize, cap, cellWidth);
+    const specs = assets.panels.map((p, i) => ({
+      width: p.width,
+      height: p.height,
+      free: p.free ?? [],
+      reserved: p === calvinMeta ? calvin.reserved : [],
+      margin: (speeches[i] === "balloon" ? BALLOON_MARGIN : ART_MARGIN) * cap,
+      awayFromArt: speeches[i] === "balloon",
+      block: speeches[i] === "balloon",
+      awayLimit: AWAY_LIMIT * cap,
+      drop: Boolean(p.speakers.dad),
+      speakerY: p.speakers.dad?.[1],
+      keepGap: KEEP_GAP * cap,
+    }));
+    const result = fitPanels(specs, [...texts.slice(0, 3).map((t) => t.toUpperCase()), ""], {
+      measure,
+      fontSize,
+      lineHeight: LINE_HEIGHT,
+      margin: ART_MARGIN * cap,
+      align: "left",
+      cellWidth,
+      artWidth: CELL_WIDTH,
+      padding: { x: SIDE_GAP * cap, y: Math.max(0, TOP_GAP * cap - leading) },
+    });
+    return { ...result, calvin };
+  };
+  const artHeight = Math.max(...assets.panels.map((p) => (p.height * CELL_WIDTH) / p.width));
+  const maxWidth = Math.min(...assets.panels.map((p) => (p.extendedWidth * CELL_WIDTH) / p.width));
+  const { width: cellWidth, result } = chooseWidth(layoutAt, {
+    minWidth: CELL_WIDTH,
+    maxWidth: Math.floor(maxWidth),
+    aspect: CELL_WIDTH / artHeight,
+    step: cap,
   });
-  const { cellHeight } = result;
+  const { cellHeight, calvin } = result;
 
   // Place Calvin's lines in the panel, now that its size is known.
   const calvinIndex = assets.panels.indexOf(calvinMeta);
@@ -199,12 +217,12 @@ export function drawComic(canvas, { assets, images }, texts) {
     y: calvinTop + l.y,
   }));
 
-  canvas.width = OUTER * 2 + CELL_WIDTH * 2 + GUTTER;
+  canvas.width = OUTER * 2 + cellWidth * 2 + GUTTER;
   canvas.height = Math.ceil(OUTER * 2 + cellHeight * 2 + GUTTER);
   ctx.fillStyle = "#fff";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  const report = { fits: result.fits, cap, cellHeight, panels: [] };
+  const report = { fits: result.fits, cap, cellWidth, cellHeight, panels: [] };
   result.panels.forEach((panel, i) => {
     const meta = assets.panels[i];
     const said = [];
@@ -218,16 +236,16 @@ export function drawComic(canvas, { assets, images }, texts) {
     if (i === calvinIndex) {
       said.push({ who: "calvin", lines: calvinLines, speaker: speakerPoint(panel, meta.speakers.calvin) });
     }
-    const x = OUTER + (i % 2) * (CELL_WIDTH + GUTTER);
+    const x = OUTER + (i % 2) * (cellWidth + GUTTER);
     const y = OUTER + Math.floor(i / 2) * (cellHeight + GUTTER);
 
     ctx.save();
     ctx.translate(x, y);
     ctx.beginPath();
-    ctx.rect(0, 0, CELL_WIDTH, cellHeight);
+    ctx.rect(0, 0, cellWidth, cellHeight);
     ctx.clip();
     ctx.fillStyle = meta.background;
-    ctx.fillRect(0, 0, CELL_WIDTH, cellHeight);
+    ctx.fillRect(0, 0, cellWidth, cellHeight);
     // Calvin always has a balloon; Dad as his panel's style says.
     const ballooned = said.filter((s) => s.who === "calvin" || speeches[i] === "balloon");
     drawBalloons(ctx, panel, meta, ballooned, cap);
@@ -235,8 +253,31 @@ export function drawComic(canvas, { assets, images }, texts) {
     // line of it visible even where a balloon overlaps it.
     if (meta.background === "#fff") ctx.globalCompositeOperation = "multiply";
     ctx.imageSmoothingQuality = "high";
-    ctx.drawImage(images[i], 0, panel.artTop, CELL_WIDTH, meta.height * panel.scale);
+    // As much of the (extended) art as the cell is wide.
+    const image = images[i];
+    const shown = Math.min(1, cellWidth / (meta.extendedWidth * panel.scale));
+    ctx.drawImage(
+      image,
+      0,
+      0,
+      image.width * shown,
+      image.height,
+      0,
+      panel.artTop,
+      meta.extendedWidth * panel.scale * shown,
+      meta.height * panel.scale,
+    );
     ctx.globalCompositeOperation = "source-over";
+    if (meta.signature) {
+      const { right, bottom, width, height } = meta.signature;
+      ctx.drawImage(
+        signature,
+        cellWidth - (right + width) * panel.scale,
+        panel.artTop + (meta.height - bottom - height) * panel.scale,
+        width * panel.scale,
+        height * panel.scale,
+      );
+    }
     for (const speech of said) {
       drawLines(ctx, speech.lines, fontSize);
       if (!ballooned.includes(speech) && speech.lines.length) {
@@ -247,19 +288,21 @@ export function drawComic(canvas, { assets, images }, texts) {
 
     ctx.strokeStyle = INK;
     ctx.lineWidth = BORDER;
-    ctx.strokeRect(x, y, CELL_WIDTH, cellHeight);
+    ctx.strokeRect(x, y, cellWidth, cellHeight);
     report.panels.push({ x, y, panel, meta, speech: speeches[i], speeches: said });
   });
   return report;
 }
 
-// Calvin's reply, lettered in a column just above his head in panel 2. It
-// grows upwards, and the space it takes (with its balloon) is reserved so
-// that Dad's text flows around it.
-function layoutCalvin(meta, text, measure, fontSize, cap) {
+// Calvin's reply, lettered in a column just above his head in panel 2, in
+// a cell `cellWidth` wide. It grows upwards, and the space it takes (with
+// its balloon) is reserved so that Dad's text flows around it.
+function layoutCalvin(meta, text, measure, fontSize, cap, cellWidth) {
   const [x0, x1, bottom] = meta.calvinColumn;
   const scale = CELL_WIDTH / meta.width;
-  const side = (SIDE_GAP * cap) / scale;
+  // His balloon floats free of the panel's sides, rather than coming near
+  // enough to hang from one.
+  const side = ((BALLOON.reach + 0.2) * cap) / scale;
   const padX = (BALLOON.padX * cap) / scale;
   const padY = (BALLOON.padY * cap) / scale;
   const lay = (width) =>
@@ -267,7 +310,7 @@ function layoutCalvin(meta, text, measure, fontSize, cap) {
   // The open space, beside Dad's head, that a column `height` tall can use.
   const room = (height) => {
     const [a, b] = openSpan(meta, bottom - height / scale, bottom, (x0 + x1) / 2);
-    return [Math.max(a, side) + padX, Math.min(b, meta.width - side) - padX];
+    return [Math.max(a, side) + padX, Math.min(b, cellWidth / scale - side) - padX];
   };
   // A longer reply gets a wider column rather than a tall thin one, as far
   // as the open space allows.

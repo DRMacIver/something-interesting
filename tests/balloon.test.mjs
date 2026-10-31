@@ -75,6 +75,17 @@ test("a short remark gets an oval", () => {
   }
 });
 
+test("a long remark's oval has blunt ends", () => {
+  // A one-line remark several times as long as it is tall (in pixels, with
+  // a cap height of 46).
+  const cap = 46;
+  const lines = [line(333, 200, 418, 72)];
+  const outline = balloonOutline(lines, { padX: 0.7 * cap, padY: 0.36 * cap, radius: cap, isFree: () => true });
+  enclosesLines(outline, lines);
+  const r = tightest(outline, () => true);
+  assert.ok(r > 0.6 * cap, `curves as tightly as ${r}`);
+});
+
 test("an oval that would hit the art becomes a tighter shape", () => {
   const lines = [line(100, 100, 60, 12)];
   const outline = balloonOutline(lines, {
@@ -472,6 +483,29 @@ test("a sweep in under shorter last lines is one smooth curve", () => {
   // nowhere does it bend as tightly as twice an ordinary corner.
   const r = tightest(outline, ([x, y]) => x > 450 && y > 150 && y < 450);
   assert.ok(r > 2 * cap, `curves as tightly as ${r}`);
+});
+
+test("a last line a little narrower than the one above gets an ordinary rounded corner", () => {
+  // Calvin's reply in panel 2, centred: the third line is the widest and
+  // the last is a little narrower on both sides.
+  const cap = 46;
+  const lines = [
+    line(424, 463, 312, 72),
+    line(489, 535, 183, 72),
+    line(405, 607, 351, 72),
+    line(414, 678, 333, 72),
+  ];
+  const outline = balloonOutline(lines, {
+    padX: 0.7 * cap,
+    padY: 0.36 * cap,
+    radius: cap,
+    roundness: 0.3,
+    isFree: () => true,
+  });
+  enclosesLines(outline, lines);
+  // The bottom corners are as round as any other corner.
+  const r = tightest(outline, ([, y]) => y > 700);
+  assert.ok(r > 0.5 * cap, `curves as tightly as ${r}`);
 });
 
 test("a point is clear of other balloons only outside them and a margin round them", () => {

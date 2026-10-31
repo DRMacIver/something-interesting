@@ -261,9 +261,19 @@ function smooth(polygon, radius, isFree, bow, sweeps = new Map()) {
     });
     if (sweeps.has(i)) {
       // A sweep: drawn below as one curve from where it starts to where it
-      // ends.
+      // ends, or, where it starts or ends nearer the corner than an
+      // ordinary rounding would, from where that would.
       const run = sweeps.get(i);
-      return { v, turn, before: run[0], after: run[run.length - 1], run };
+      const ends = at(Math.min(radius, lp / 2), Math.min(radius, lq / 2));
+      const further = (end, u) =>
+        Math.hypot(end[0] - v[0], end[1] - v[1]) > Math.hypot(u[0] - v[0], u[1] - v[1]) ? end : u;
+      return {
+        v,
+        turn,
+        before: further(ends.before, run[0]),
+        after: further(ends.after, run[run.length - 1]),
+        run,
+      };
     }
     const rp = slanted(p, v) ? lp / 2 : Math.min(radius, lp / 2);
     const rq = slanted(v, q) ? lq / 2 : Math.min(radius, lq / 2);
@@ -305,7 +315,7 @@ function smooth(polygon, radius, isFree, bow, sweeps = new Map()) {
   for (let i = 0; i < n; i++) {
     const { v, before, after, run } = corners[i];
     if (run) {
-      out.push(...sweepCurve(v, run, edges[(i - 1 + n) % n].end, edges[i].start, isFree));
+      out.push(...sweepCurve(v, run, before, after, edges[(i - 1 + n) % n].end, edges[i].start, isFree));
     } else {
       // Round the corner with an arc that leaves the incoming edge, and
       // joins the outgoing one, along their own directions.
@@ -351,14 +361,19 @@ function turnAngle(p, v, q) {
   return turn;
 }
 
-// A sweep round corner v from the first point of `run` to the last: one
-// curve that leaves the edge before it and joins the edge after it along
+// A sweep round corner v from u to w (the first and last points of `run`,
+// unless the sweep has to start or end further out): one curve that leaves
+// the edge before it and joins the edge after it along
 // their own directions (`into` and `outOf`), bowing out towards v only as
 // far as it must to keep the corners of the lines it sweeps round (the rest
 // of `run`) inside the balloon.
-function sweepCurve(v, run, into, outOf, isFree) {
-  const u = run[0];
-  const w = run[run.length - 1];
+function sweepCurve(v, run, u, w, into, outOf, isFree) {
+  // A run's end that the curve starts or ends beyond is rounded off like
+  // any other corner.
+  const kept = run.filter(
+    (point, k) =>
+      (k > 0 || point === u) && (k < run.length - 1 || point === w),
+  );
   const reachU = Math.hypot(v[0] - u[0], v[1] - u[1]);
   const reachW = Math.hypot(v[0] - w[0], v[1] - w[1]);
   let curve = null;
@@ -371,7 +386,7 @@ function sweepCurve(v, run, into, outOf, isFree) {
       32,
     );
     const cut = [...curve, v];
-    const keeps = run.every((point) => !inside(cut, point) || nearCurve(curve, point, 1.5));
+    const keeps = kept.every((point) => !inside(cut, point) || nearCurve(curve, point, 1.5));
     if (keeps && curve.every(isFree)) break;
   }
   return curve;
@@ -431,14 +446,20 @@ function ovalAround(lines, padX, padY) {
   const hx = (x1 - x0) / 2;
   const hy = (y1 - y0) / 2;
   // Tall enough to leave room above and below the text, then just wide
-  // enough for the ellipse to clear the text's corners.
+  // enough for the oval to clear the text's corners. A short remark's oval
+  // is an ellipse; a long one's would come to a point at each end, so it is
+  // squared off a little (a superellipse, |x/a|^p + |y/b|^p = 1), to keep
+  // its ends round.
   const b = hy * 1.45 + padY;
-  const a = hx / Math.sqrt(1 - (hy / b) ** 2) + padX * 0.5;
+  const ellipse = hx / Math.sqrt(1 - (hy / b) ** 2) + padX * 0.5;
+  const p = Math.min(3, Math.max(2, 2 + 0.5 * (ellipse / b - 3)));
+  const a = hx / (1 - (hy / b) ** p) ** (1 / p) + padX * 0.5;
+  const power = (v) => Math.sign(v) * Math.abs(v) ** (2 / p);
   const points = [];
-  const n = 96;
+  const n = 128;
   for (let k = 0; k < n; k++) {
     const t = (2 * Math.PI * k) / n;
-    points.push([cx + a * Math.cos(t), cy + b * Math.sin(t)]);
+    points.push([cx + a * power(Math.cos(t)), cy + b * power(Math.sin(t))]);
   }
   return points;
 }

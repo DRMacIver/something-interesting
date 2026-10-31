@@ -5,7 +5,7 @@
 the lettering and speech balloons, smooth away the scan's pixelation, and
 work out where text is allowed to flow in each panel.
 
-Writes assets/panel{1..4}.png and assets/panels.json.
+Writes assets/panel{1..4}.png, assets/signature.png and assets/panels.json.
 
 Usage: uv run tools/build_assets.py calvin-and-hobbes.pdf
 """
@@ -27,13 +27,19 @@ PAGE = 246
 ART_SCALE = 2
 # The layout grid (free space, mouths, lettering size) is at this multiple.
 GRID_SCALE = 0.5
+# Every panel's art is extended this far to the right (in scan pixels), so
+# that panels can widen to make room for long text. Where the art runs off
+# the right edge, the extension is drawn to match (see EXTENSIONS);
+# otherwise it's background.
+EXTEND = 400
+EXTENSIONS = ROOT / "tools" / "extensions"
 
 # All coordinates are scan pixels on the page. Boxes are the panel
 # interiors, inside the drawn borders (panel 3 has no border, and panel 4 is
 # black right to its edge).
 PANELS = [
     {
-        "box": (60, 1870, 881, 2906),
+        "box": (60, 1870, 879, 2906),
         # Dad's balloon and lettering. Only ink lying entirely inside these
         # regions is erased, so artwork that pokes into them survives.
         "erase": [[(320, 1870), (881, 1870), (881, 2310), (320, 2310)]],
@@ -44,7 +50,10 @@ PANELS = [
         "speech": "balloon",
     },
     {
-        "box": (924, 1877, 1720, 2907),
+        "box": (924, 1877, 1717, 2907),
+        # Calvin runs off the right edge; his extension is drawn in
+        # tools/extensions/panel2.png.
+        "extension": "panel2.png",
         # Both balloons and their lettering, steering around Dad's head and
         # Calvin's hair.
         "erase": [[(924, 1877), (1720, 1877), (1720, 2545), (1612, 2545),
@@ -79,8 +88,11 @@ PANELS = [
     },
     {
         # Inside the edges of the black, where it's solid.
-        "box": (2588, 1890, 3376, 2911),
+        "box": (2588, 1890, 3372, 2911),
         "erase": [],
+        # Watterson's signature, which moves to the bottom right corner
+        # however wide the panel is.
+        "signature": (3176, 2840, 3300, 2890),
         "speakers": {},
         "text_bottom": None,
         "dark": True,
@@ -192,6 +204,55 @@ def grid_rows(free):
     return rows
 
 
+def panel_art(ink, background, panel):
+    """A panel's art, 1-bit at scan resolution, with the lettering and
+    balloons erased; and the heights of the pieces erased."""
+    x0, y0, x1, y1 = panel["box"]
+
+    def local(points):
+        return [((x - x0), (y - y0)) for x, y in points]
+
+    # Solid blacks (Dad's trousers, the night in panel 4) are only in the
+    # low resolution background layer.
+    art = ink[y0:y1, x0:x1] | (background[y0:y1, x0:x1] < 110)
+    art = wipe(art, [local(p) for p in panel.get("wipe", [])])
+    return erase(art, [local(p) for p in panel["erase"]])
+
+
+def extended(art, panel):
+    """The art with EXTEND more columns on the right."""
+    if "extension" in panel:
+        extra = np.asarray(Image.open(EXTENSIONS / panel["extension"]).convert("L")) < 128
+        assert extra.shape == (art.shape[0], EXTEND), extra.shape
+    else:
+        extra = np.full((art.shape[0], EXTEND), bool(panel.get("dark")))
+    return np.hstack([art, extra])
+
+
+def cut_signature(art, panel, name):
+    """Take the white signature out of the black of the panel, save it as a
+    white image of its own, and return where it was relative to the bottom
+    right corner (in grid pixels)."""
+    x0, y0 = panel["box"][:2]
+    sx0, sy0, sx1, sy1 = panel["signature"]
+    region = (slice(sy0 - y0, sy1 - y0), slice(sx0 - x0, sx1 - x0))
+    letters = ~art[region]
+    art[region] = True
+    coverage = 255 - np.asarray(smooth(letters))
+    image = np.zeros(coverage.shape + (4,), dtype=np.uint8)
+    image[..., :3] = 255
+    image[..., 3] = coverage
+    Image.fromarray(image).save(OUT / name, optimize=True)
+    h, w = art.shape
+    return {
+        "image": f"assets/{name}",
+        "width": round((sx1 - sx0) * GRID_SCALE),
+        "height": round((sy1 - sy0) * GRID_SCALE),
+        "right": round((w - (sx1 - x0)) * GRID_SCALE),
+        "bottom": round((h - (sy1 - y0)) * GRID_SCALE),
+    }
+
+
 def main():
     ink, background = layers(sys.argv[1])
     OUT.mkdir(exist_ok=True)
@@ -199,16 +260,10 @@ def main():
     lettering = []
     for number, panel in enumerate(PANELS, start=1):
         x0, y0, x1, y1 = panel["box"]
-
-        def local(points):
-            return [((x - x0), (y - y0)) for x, y in points]
-
-        # Solid blacks (Dad's trousers, the night in panel 4) are only in
-        # the low resolution background layer.
-        art = ink[y0:y1, x0:x1] | (background[y0:y1, x0:x1] < 110)
-        art = wipe(art, [local(p) for p in panel.get("wipe", [])])
-        art, heights = erase(art, [local(p) for p in panel["erase"]])
+        art, heights = panel_art(ink, background, panel)
         lettering.extend(heights)
+        signature = cut_signature(art, panel, "signature.png") if "signature" in panel else None
+        art = extended(art, panel)
         smooth(art).save(OUT / f"panel{number}.png", optimize=True)
 
         def grid(point):
@@ -217,7 +272,9 @@ def main():
 
         entry = {
             "image": f"assets/panel{number}.png",
+            # The original width; the art goes on to extendedWidth.
             "width": round((x1 - x0) * GRID_SCALE),
+            "extendedWidth": round(art.shape[1] * GRID_SCALE),
             "height": round((y1 - y0) * GRID_SCALE),
             "background": "#000" if panel.get("dark") else "#fff",
             "speakers": {name: grid(p) for name, p in panel["speakers"].items()},
@@ -228,6 +285,8 @@ def main():
         }
         if "speech" in panel:
             entry["speech"] = panel["speech"]
+        if signature:
+            entry["signature"] = signature
         if "calvin_column" in panel:
             cx0, cx1, bottom = panel["calvin_column"]
             entry["calvinColumn"] = grid((cx0, bottom))[:1] + grid((cx1, bottom))

@@ -7,6 +7,7 @@ import {
   fitPanels,
   makePanel,
   layoutColumn,
+  chooseWidth,
 } from "../js/layout.js";
 
 // Every character is half the font size wide, spaces included.
@@ -541,4 +542,48 @@ test("once the panels are sized, short text drops towards its speaker", () => {
   const mouth = panel.artTop + 10 * panel.scale;
   assert.ok(line.y + line.height <= mouth - 5 + 1e-9, `ends at ${line.y + line.height}, mouth at ${mouth}`);
   assert.ok(line.y > 20, "it has dropped");
+});
+
+test("a panel wider than its art keeps the art at the scale it's given", () => {
+  const panel = makePanel(artRightBlocked, 150, 100, 0, 1);
+  assert.equal(panel.scale, 1);
+  assert.equal(panel.artTop, 50);
+  // The art's free rows reach past its original width; beyond them is the
+  // rest of the panel.
+  assert.deepEqual(freeIntervals(panel, 60, 70, 0), [[0, 40]]);
+});
+
+test("with artWidth set, wider cells give text more room beside the art", () => {
+  // The art is 100 wide and free on the left, with its free rows running
+  // on past it, as art extended to the right does.
+  const spec = {
+    width: 100,
+    height: 50,
+    free: Array.from({ length: 50 }, () => [[0, 40], [60, 300]]),
+  };
+  const options = { ...opts(), padding: 0, artWidth: 100 };
+  const narrow = fitPanels([spec], ["aaaa ".repeat(20)], { ...options, cellWidth: 100 });
+  const wide = fitPanels([spec], ["aaaa ".repeat(20)], { ...options, cellWidth: 200 });
+  assert.equal(wide.panels[0].scale, 1);
+  assert.ok(wide.cellHeight < narrow.cellHeight, `${wide.cellHeight} vs ${narrow.cellHeight}`);
+});
+
+test("cells widen in proportion as they grow taller", () => {
+  // Fitting the text takes area 20000 above art 100x100, at any width.
+  const heightAt = (w) => 100 + 20000 / w;
+  const fitAt = (w) => ({ cellHeight: heightAt(w), fits: true });
+  const { width, result } = chooseWidth(fitAt, { minWidth: 100, maxWidth: 400, aspect: 1, step: 1 });
+  // Square cells: w = 100 + 20000 / w, so w is about 200.
+  assert.ok(Math.abs(width - 200) <= 1, `width ${width}`);
+  assert.equal(result.cellHeight, heightAt(width));
+});
+
+test("cells keep their width when the text fits in proportion", () => {
+  const fitAt = () => ({ cellHeight: 90, fits: true });
+  assert.equal(chooseWidth(fitAt, { minWidth: 100, maxWidth: 400, aspect: 1, step: 1 }).width, 100);
+});
+
+test("cells widen no further than the widest they can be", () => {
+  const fitAt = (w) => ({ cellHeight: 1000 + w, fits: true });
+  assert.equal(chooseWidth(fitAt, { minWidth: 100, maxWidth: 400, aspect: 1, step: 1 }).width, 400);
 });
