@@ -371,3 +371,13 @@ test("lines pushed well aside by the art keep their own left edge", () => {
   assert.equal(lefts[0], 0);
   assert.equal(lefts[lefts.length - 1], 120);
 });
+
+test("a panel can keep its text further from the art than the default", () => {
+  const text = "aaaa ".repeat(6);
+  const base = { ...opts(), cellWidth: 100, padding: 0, margin: 0 };
+  const near = fitPanels([artRightBlocked], [text], base);
+  const far = fitPanels([{ ...artRightBlocked, margin: 10 }], [text], base);
+  // With more clearance, lines beside the art have less room, so the
+  // panel has to grow more.
+  assert.ok(far.cellHeight > near.cellHeight);
+});

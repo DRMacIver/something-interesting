@@ -25,6 +25,34 @@ function bounds(polygon) {
 
 const options = { padX: 10, padY: 6, radius: 8, isFree: () => true };
 
+// Whether the outline is a rounded box with these bounds: it fills them
+// apart from the corners.
+function isBox(outline, [x0, y0, x1, y1]) {
+  const [bx0, by0, bx1, by1] = bounds(outline);
+  if ([bx0 - x0, by0 - y0, bx1 - x1, by1 - y1].some((d) => Math.abs(d) > 1e-6)) return false;
+  const inset = options.radius;
+  for (let x = x0 + inset; x <= x1 - inset; x += 2) {
+    for (let y = y0 + inset; y <= y1 - inset; y += 2) {
+      if (!inside(outline, [x, y])) return false;
+    }
+  }
+  for (let x = x0 + 0.5; x < x1; x += 2) {
+    if (!inside(outline, [x, (y0 + y1) / 2])) return false;
+  }
+  // A rounded corner, unlike a corner cut off diagonally, still covers a
+  // point a little way in from the corner.
+  const d = 0.4 * inset;
+  for (const corner of [
+    [x0 + d, y0 + d],
+    [x1 - d, y0 + d],
+    [x0 + d, y1 - d],
+    [x1 - d, y1 - d],
+  ]) {
+    if (!inside(outline, corner)) return false;
+  }
+  return true;
+}
+
 function enclosesLines(outline, lines) {
   for (const l of lines) {
     for (const corner of [
@@ -86,16 +114,16 @@ test("a block of text gets a box with straight sides and round corners", () => {
   assert.ok(!inside(outline, [-9, -5]));
 });
 
-test("ragged line ends are joined by a straight edge", () => {
+test("ragged line ends are squared off into a box", () => {
   const lines = [line(0, 0, 100), line(0, 10, 100), line(0, 20, 40)];
   const outline = balloonOutline(lines, options);
   enclosesLines(outline, lines);
-  // Beside the short last line, the edge runs diagonally rather than in a
-  // step, so this point near the step's inner corner is inside.
-  assert.ok(inside(outline, [80, 26]));
+  // Beside the short last line the balloon keeps its full width.
+  assert.ok(inside(outline, [100, 30]));
+  assert.ok(isBox(outline, [-10, -6, 110, 36]));
 });
 
-test("an edge that would cross the art keeps to the text instead", () => {
+test("a box that would cover the art steps in around it", () => {
   const lines = [line(0, 0, 100), line(0, 10, 100), line(0, 20, 40)];
   // The art starts just clear of the last wide line's padding.
   const art = ([x, y]) => x > 60 && y > 28;
@@ -106,12 +134,35 @@ test("an edge that would cross the art keeps to the text instead", () => {
   enclosesLines(outline, lines);
   assert.ok(!inside(outline, [80, 30]));
   for (const p of outline) assert.ok(!art(p), `${p} is on the art`);
+  // The step is square, not a diagonal: the corner of the wide part is
+  // still inside.
+  assert.ok(inside(outline, [100, 24]));
 });
 
-test("a notch beside a short line is bridged", () => {
+test("a notch beside a short line is filled in", () => {
   const lines = [line(0, 0, 100), line(0, 10, 60), line(0, 20, 100)];
   const outline = balloonOutline(lines, options);
-  assert.ok(inside(outline, [100, 15]));
+  assert.ok(isBox(outline, [-10, -6, 110, 36]));
+});
+
+test("centred lines of different lengths get a box round the widest", () => {
+  const lines = [line(20, 0, 40), line(0, 10, 80), line(10, 20, 60)];
+  const outline = balloonOutline(lines, options);
+  assert.ok(isBox(outline, [-10, -6, 90, 36]));
+});
+
+test("the edges run straight up and down or across, apart from the corners", () => {
+  const lines = [line(0, 0, 100), line(0, 10, 100), line(0, 20, 40)];
+  const art = ([x, y]) => x > 60 && y > 28;
+  const outline = balloonOutline(lines, { ...options, isFree: (p) => !art(p) });
+  // Long edges (longer than a rounded corner) are axis-aligned.
+  for (let i = 0; i < outline.length; i++) {
+    const [ax, ay] = outline[i];
+    const [bx, by] = outline[(i + 1) % outline.length];
+    if (Math.hypot(bx - ax, by - ay) > options.radius) {
+      assert.ok(Math.abs(bx - ax) < 1e-9 || Math.abs(by - ay) < 1e-9, `${[ax, ay]} -> ${[bx, by]}`);
+    }
+  }
 });
 
 const square = [

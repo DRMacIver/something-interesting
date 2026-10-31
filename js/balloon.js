@@ -4,10 +4,10 @@
 
 // The outline of a speech balloon around `lines` (boxes with x, y, width,
 // height), as a closed polygon of [x, y] points, in the manner of
-// Watterson's balloons: an oval round a short remark, and otherwise
-// straight sides with rounded corners, cutting diagonally across ragged
-// line ends. isFree([x, y]) says whether a point is clear of the artwork;
-// the balloon only takes a shortcut, or an oval shape, where it stays clear.
+// Watterson's balloons: an oval round a short remark, and otherwise a box
+// with rounded corners, squared off round ragged line ends. Where the box
+// would cover the artwork, it steps in around it. isFree([x, y]) says
+// whether a point is clear of the artwork.
 export function balloonOutline(
   lines,
   { padX, padY, radius, isFree, ovalLines = 2 },
@@ -25,10 +25,18 @@ export function balloonOutline(
     left: l.x - padX,
     right: l.x + l.width + padX,
   }));
-  const outline = [
-    ...hull(envelope(boxes, 1), 1, isFree),
-    ...hull(envelope(boxes, -1), -1, isFree).reverse(),
-  ];
+  // Widen each line's box out to the full width of the block, unless that
+  // would cover some of the art.
+  const left = Math.min(...boxes.map((b) => b.left));
+  const right = Math.max(...boxes.map((b) => b.right));
+  for (const b of boxes) {
+    if (rectangleClear(b.right, b.top, right, b.bottom, isFree)) b.right = right;
+    if (rectangleClear(left, b.top, b.left, b.bottom, isFree)) b.left = left;
+  }
+  const outline = simplify([
+    ...envelope(boxes, 1),
+    ...envelope(boxes, -1).reverse(),
+  ]);
   return roundCorners(outline, radius);
 }
 
@@ -72,49 +80,28 @@ function ovalAround(lines, padX, padY) {
   return points;
 }
 
-// One side of the balloon, from top to bottom: drop any corner that a
-// straight edge can cut across without crossing the artwork. `side` is 1 for
-// the right-hand side and -1 for the left.
-function hull(points, side, isFree) {
-  const stack = [];
-  for (const c of points) {
-    while (stack.length >= 2) {
-      const a = stack[stack.length - 2];
-      const b = stack[stack.length - 1];
-      const across =
-        c[1] - a[1] < 1e-9
-          ? side > 0
-            ? Math.max(a[0], c[0])
-            : Math.min(a[0], c[0])
-          : a[0] + ((c[0] - a[0]) * (b[1] - a[1])) / (c[1] - a[1]);
-      const inward = side * (b[0] - across) <= 1e-9;
-      if (!inward || !triangleClear(a, b, c, isFree)) break;
-      stack.pop();
+// Whether the rectangle x0..x1, y0..y1 is clear of the artwork.
+function rectangleClear(x0, y0, x1, y1, isFree) {
+  if (x1 <= x0) return true;
+  for (let x = x0; x <= x1; x += 2) {
+    for (let y = y0; y <= y1; y += 2) {
+      if (!isFree([x, y])) return false;
     }
-    stack.push(c);
   }
-  return stack;
+  return isFree([x1, y1]);
 }
 
-// Whether the triangle a, b, c (the area a shortcut from a to c would add)
-// is clear of the artwork.
-function triangleClear(a, b, c, isFree) {
-  const size = Math.max(
-    Math.hypot(c[0] - a[0], c[1] - a[1]),
-    Math.hypot(b[0] - a[0], b[1] - a[1]),
-    Math.hypot(c[0] - b[0], c[1] - b[1]),
-  );
-  const steps = Math.max(2, Math.ceil(size / 2));
-  for (let i = 0; i <= steps; i++) {
-    for (let j = 0; j <= steps - i; j++) {
-      const u = i / steps;
-      const v = j / steps;
-      const w = 1 - u - v;
-      const p = [a[0] * w + b[0] * u + c[0] * v, a[1] * w + b[1] * u + c[1] * v];
-      if (!isFree(p)) return false;
-    }
-  }
-  return true;
+// Drop repeated points and points in the middle of straight runs.
+function simplify(points) {
+  const same = (a, b) => Math.abs(a[0] - b[0]) < 1e-9 && Math.abs(a[1] - b[1]) < 1e-9;
+  const distinct = points.filter((v, i) => !same(v, points[(i + 1) % points.length]));
+  const n = distinct.length;
+  return distinct.filter((v, i) => {
+    const p = distinct[(i - 1 + n) % n];
+    const q = distinct[(i + 1) % n];
+    const cross = (v[0] - p[0]) * (q[1] - v[1]) - (v[1] - p[1]) * (q[0] - v[0]);
+    return Math.abs(cross) > 1e-9;
+  });
 }
 
 function roundCorners(points, radius) {

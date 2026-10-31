@@ -16,15 +16,17 @@ const LINE_HEIGHT = 1.1;
 const BALLOON = {
   padX: 0.55,
   padY: 0.3,
-  radius: 0.6,
+  radius: 0.9,
   line: 0.1,
-  tailWidth: 0.6,
-  tailLength: 2.4,
+  tailWidth: 0.7,
+  tailLength: 1.6,
   tailGap: 0.45,
 };
-// Clearance between text and artwork, in cap heights. Balloons may overlap
-// the art a little, as they do in the strips.
+// Clearance between text and artwork, in cap heights: loose lettering can
+// come close; lettering in a balloon leaves room for the balloon and a gap
+// between it and the art.
 const ART_MARGIN = 0.4;
+const BALLOON_MARGIN = BALLOON.padX + BALLOON.line + 0.35;
 
 const DEFAULTS = [
   "Playing a record? I'll show you something interesting.",
@@ -190,6 +192,7 @@ function computeLayout() {
     height: p.height,
     free: p.free ?? [],
     reserved: p === calvinMeta ? calvin.reserved : [],
+    margin: (p.speech === "balloon" ? BALLOON_MARGIN : ART_MARGIN) * cap,
   }));
   const result = fitPanels(specs, [...texts.slice(0, 3).map((t) => t.toUpperCase()), ""], {
     measure,

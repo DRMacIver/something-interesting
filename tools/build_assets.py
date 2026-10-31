@@ -57,13 +57,15 @@ PANELS = [
             [(1218, 2280), (1345, 2280), (1345, 2395), (1288, 2395),
              (1288, 2306), (1218, 2306)],
         ],
-        "speakers": {"dad": (1200, 2485), "calvin": (1600, 2720)},
+        # Calvin's tail aims down the clear space left of his hair, as it
+        # does in the original, rather than into his hair.
+        "speakers": {"dad": (1200, 2485), "calvin": (1500, 2780)},
         "text_bottom": 2560,
         "speech": "balloon",
         # Calvin's reply is lettered in a column of this width, centred
-        # where his balloon was, with its last line just above his head;
-        # longer replies grow upwards.
-        "calvin_column": (1330, 1630, 2530),
+        # where his balloon was, with its last line far enough above his
+        # head to leave room for a tail; longer replies grow upwards.
+        "calvin_column": (1330, 1630, 2490),
     },
     {
         "box": (1755, 1877, 2550, 2907),

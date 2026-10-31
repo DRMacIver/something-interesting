@@ -9,6 +9,8 @@
 // text may go on that row of the art. spec.reserved is a list of
 // [x0, y0, x1, y1] rectangles, in art pixels (y may be negative, above the
 // art), taken up by something else, such as another character's balloon.
+// spec.margin, if given, is how far its text keeps from the art, in place
+// of the layout's default.
 export function makePanel(spec, cellWidth, cellHeight, padding) {
   const scale = cellWidth / spec.width;
   const artHeight = spec.height * scale;
@@ -275,7 +277,10 @@ export function fitPanels(specs, texts, options) {
       makePanel(spec, cellWidth, cellHeight, padding),
     );
     const layouts = panels.map((panel, i) =>
-      layoutText(panel, texts[i] ?? "", options),
+      layoutText(panel, texts[i] ?? "", {
+        ...options,
+        margin: panel.spec.margin ?? options.margin,
+      }),
     );
     const inside = panels.every((panel) =>
       reservedAreas(panel).every(([, y0]) => y0 >= 0),
