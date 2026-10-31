@@ -750,3 +750,19 @@ test("panels can be laid out at a given cell height", () => {
   const tooShort = fitPanels([artRightBlocked], ["word ".repeat(40)], { ...options, cellHeight: 50 });
   assert.equal(tooShort.fits, false);
 });
+
+test("block text with a gap partway down, where a long word skipped past the art, doesn't count as fitting", () => {
+  // Full width, then 30px where only the left 80 is free, then full width.
+  const spec = {
+    width: 200,
+    height: 100,
+    free: Array.from({ length: 100 }, (_, y) => (y >= 30 && y < 60 ? [[0, 80]] : [[0, 200]])),
+  };
+  const panel = makePanel(spec, 200, 100, 0);
+  // Three full lines, then a word 100 wide that only fits below the gap.
+  const text = "aaaa ".repeat(24) + "x".repeat(20) + " bbbb";
+  const loose = layoutText(panel, text, opts({ align: "left" }));
+  assert.equal(loose.fits, true);
+  assert.ok(loose.lines[3].y >= 60, "the long word skips down");
+  assert.equal(layoutText(panel, text, opts({ align: "left", block: true })).fits, false);
+});

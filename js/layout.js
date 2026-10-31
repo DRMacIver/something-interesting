@@ -173,7 +173,10 @@ export function layoutText(panel, text, options) {
   if (options.awayFromArt && options.align === "left") {
     moveAwayFromArt(result, panel, options.awayLimit ?? Infinity);
   }
-  result = { ...result, fits: !stranded(result) && !(options.block && squeezed(result)) };
+  result = {
+    ...result,
+    fits: !stranded(result) && !(options.block && (squeezed(result) || gapped(result))),
+  };
   if (options.drop && result.fits && result.lines.length) result = drop(panel, text, options, result);
   if (options.centreOn !== undefined && result.fits && result.lines.length) {
     centre(result, options.centreOn, options.centreSlack);
@@ -275,8 +278,19 @@ function stranded({ lines, spaces }) {
 // Text lettered as one block, as in a balloon, has room of much the same
 // width on every line: it doesn't narrow partway down to squeeze into a gap
 // (beside someone else's balloon, say) with less than BLOCK_SHARE of the
-// room of its widest line.
+// room of its widest line, and it has no gaps (see gapped).
 const BLOCK_SHARE = 0.7;
+
+// Whether lettering that should be one block has a gap in it partway
+// down: a line pushed further down than the blank lines between paragraphs
+// account for (by a long word looking for room below the art, say).
+function gapped({ lines, lineHeight }) {
+  for (let i = 1; i < lines.length; i++) {
+    const skipped = Math.max(1, lines[i].paragraph - lines[i - 1].paragraph);
+    if (lines[i].y - lines[i - 1].y > skipped * lineHeight + 1e-6) return true;
+  }
+  return false;
+}
 
 function squeezed({ lines }) {
   const rooms = lines.map(({ interval: [a, b] }) => b - a);
