@@ -128,7 +128,8 @@ uv run tools/font/build_font.py build/glyphs.pkl assets/fonts/dad-lettering.woff
    different six samples, which the font cycles through so repeated letters
    don't look stamped. Numbers are
    rare in the strips, so the digits 2-9 come from a few hand-picked
-   instances.
+   instances; they're often in heavier lettering, so the digits are
+   thinned to the letters' stroke weight.
 3. `build_font.py` traces the averaged bitmaps into outlines, fits side
    bearings and kerning pairs to the letter spacing measured in the book,
    and builds the font. Lowercase maps to the capitals, and a contextual

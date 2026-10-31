@@ -125,3 +125,25 @@ def test_covers_every_printable_ascii_character(font):
     cmap = font.getBestCmap()
     missing = [chr(c) for c in range(33, 127) if c not in cmap]
     assert not missing, " ".join(missing)
+
+
+def stroke_weight(font, char):
+    """Roughly how thick a glyph's strokes are: twice its ink area over the
+    length of its outline (for a long stroke, its width)."""
+    from fontTools.pens.areaPen import AreaPen
+    from fontTools.pens.perimeterPen import PerimeterPen
+
+    glyphs = font.getGlyphSet()
+    glyph = glyphs[font.getBestCmap()[ord(char)]]
+    area, perimeter = AreaPen(glyphs), PerimeterPen(glyphs)
+    glyph.draw(area)
+    glyph.draw(perimeter)
+    return 2 * abs(area.value) / perimeter.value
+
+
+def test_digits_are_no_bolder_than_the_letters(font):
+    # The book's few hand-lettered numbers are often in heavier lettering.
+    letters = sorted(stroke_weight(font, c) for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    typical = letters[len(letters) // 2]
+    heavy = {c: round(stroke_weight(font, c)) for c in "0123456789" if stroke_weight(font, c) > 1.1 * typical}
+    assert not heavy, f"letters' typical weight is {typical:.0f}: {heavy}"

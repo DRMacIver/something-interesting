@@ -220,6 +220,35 @@ def spacing_data(words):
     return gaps
 
 
+def stroke_weight(bitmap):
+    """Roughly how thick a glyph's strokes are, in pixels: twice its ink area
+    over the length of its edge (for a long stroke, its width)."""
+    ink = bitmap > 0.5
+    edge = ink & ~ndimage.binary_erosion(ink)
+    return 2 * ink.sum() / max(1, edge.sum())
+
+
+def thinned(bitmap, weight):
+    """The glyph with its strokes pulled in evenly all round until they're
+    `weight` thick (or as it was, if it's already no thicker)."""
+    ink = bitmap > 0.5
+    # How far each pixel is inside the ink (negative outside it).
+    depth = ndimage.distance_transform_edt(ink) - ndimage.distance_transform_edt(~ink)
+    out = bitmap
+    lo, hi = 0.0, stroke_weight(bitmap)
+    for _ in range(12):
+        if stroke_weight(bitmap) <= weight:
+            break
+        mid = (lo + hi) / 2
+        candidate = np.clip(depth - mid + 0.5, 0, 1).astype(np.float32)
+        if stroke_weight(candidate) > weight:
+            lo = mid
+        else:
+            hi = mid
+            out = candidate
+    return out
+
+
 def main():
     words = pickle.load(open(sys.argv[1], "rb"))
     words = [w for w in words if plausible(w)]
@@ -253,6 +282,14 @@ def main():
             continue
         glyphs[label] = build([frames[i] for i in kept], descs[label][kept])
         print(label, len(frames), "->", len(kept), "averaged", glyphs[label]["used"])
+    # The book's few hand-lettered numbers are often in heavier lettering
+    # (they're taken from lettering of any weight), so they're thinned to
+    # the letters' weight.
+    typical = float(np.median([stroke_weight(g["mean"]) for l, g in glyphs.items() if l.isalpha()]))
+    for label, glyph in glyphs.items():
+        if label.isdigit():
+            glyph["mean"] = thinned(glyph["mean"], typical)
+            glyph["variants"] = [thinned(v, typical) for v in glyph["variants"]]
     words = [w for w in words if id(w) in normal]
     spaces = [w["space_before"] for w in words if "space_before" in w]
     with open(sys.argv[2], "wb") as f:
