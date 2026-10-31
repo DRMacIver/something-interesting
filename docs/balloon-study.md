@@ -77,11 +77,12 @@ The common forms, roughly in order of frequency:
   of roughly one cap). It never has sharp corners or straight diagonal
   cuts, and it isn't a box.
 - Where it meets the panel border it simply runs into it.
-- Corners are round, close to circular arcs, and as generous as the text
-  allows: where a last line is shorter, the side and the bottom are one
-  continuous curve with no recognisable corner. Small balloons are rounder
-  still: a three-line balloon like Calvin's is nearly as round as it is
-  boxy.
+- Corners are round, close to circular arcs, and small balloons are
+  rounder still: a three-line balloon like Calvin's is nearly as round as
+  it is boxy.
+- Where the outline sweeps in under shorter last lines, the sweep is one
+  continuous curve from the side into the bottom, with no recognisable
+  corners where it starts or ends.
 - When the art pushes a balloon aside, it tucks into the far corner of the
   panel rather than pressing up against the speaker: in the original panel
   1 the balloon sits in the top right corner, hanging from both borders,
@@ -127,8 +128,9 @@ The common forms, roughly in order of frequency:
    long, from whichever point of the balloon gives the clearest path
    towards the speaker's face, with a clear line of sight to it, stopping
    short of the art; straight, unless curving round gets usefully closer.
-5. Bow every edge of a balloon slightly, round every corner as generously
-   as the text allows, and join curves and straighter runs smoothly.
+5. Bow every edge of a balloon slightly, draw each sweep under shorter
+   lines as one continuous curve, and join curves and straighter runs
+   smoothly.
 6. Break lines to keep their lengths even, avoiding lone short words, and
    don't strand a last line on its own beside the art.
 7. Keep loose lettering with a pen stroke for the panel that has it in the

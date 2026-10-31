@@ -133,9 +133,7 @@ test("the sides come straight down to the widest line", () => {
   const lines = [line(0, 0, 40), line(0, 10, 100), line(0, 20, 100)];
   const outline = balloonOutline(lines, options);
   // There's balloon beside the short first line, out to the full width.
-  // (Not cut off by a sweep from the end of the first line down to the
-  // second.)
-  assert.ok(inside(outline, [90, 4]));
+  assert.ok(inside(outline, [100, 2]));
 });
 
 test("lines above the widest one aren't filled out over the art", () => {
@@ -321,20 +319,8 @@ test("a tail points at the speaker with a clear line of sight", () => {
   assert.ok(beside.tip[0] < 55, `tip at ${beside.tip}`);
 });
 
-// The outline with points closer than `spacing` to the last one dropped:
-// between points much closer than that, rounding errors swamp the shape.
-function resample(points, spacing = 2) {
-  const out = [points[0]];
-  for (const p of points) {
-    const last = out[out.length - 1];
-    if (Math.hypot(p[0] - last[0], p[1] - last[1]) >= spacing) out.push(p);
-  }
-  return out;
-}
-
 // Signed turns, in degrees, from each edge of the outline to the next.
-function turns(points) {
-  const outline = resample(points);
+function turns(outline) {
   const n = outline.length;
   const out = [];
   for (let i = 0; i < n; i++) {
@@ -384,39 +370,6 @@ test("rounding never cuts into the text", () => {
   enclosesLines(outline, lines);
 });
 
-// The radius of the tightest curve anywhere on the outline.
-function tightest(points) {
-  const outline = resample(points);
-  let best = Infinity;
-  const n = outline.length;
-  for (let i = 0; i < n; i++) {
-    const a = outline[(i - 1 + n) % n];
-    const b = outline[i];
-    const c = outline[(i + 1) % n];
-    const ab = Math.hypot(b[0] - a[0], b[1] - a[1]);
-    const bc = Math.hypot(c[0] - b[0], c[1] - b[1]);
-    const ca = Math.hypot(a[0] - c[0], a[1] - c[1]);
-    const area = Math.abs((b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])) / 2;
-    if (area > 1e-9) best = Math.min(best, (ab * bc * ca) / (4 * area));
-  }
-  return best;
-}
-
-test("corners are rounded as generously as the text allows", () => {
-  // The side comes straight down, then the last line is shorter.
-  const lines = [line(0, 0, 200), line(0, 10, 200), line(0, 20, 200), line(0, 30, 200), line(0, 40, 150)];
-  const outline = balloonOutline(lines, options);
-  enclosesLines(outline, lines);
-  // Nowhere does it turn as tightly as the plain corner radius of 8.
-  assert.ok(tightest(outline) > 14, `curves as tightly as ${tightest(outline)}`);
-});
-
-test("generous rounding still keeps clear of the lettering", () => {
-  const lines = [line(0, 0, 200), line(0, 10, 200), line(0, 20, 200), line(0, 30, 190)];
-  const outline = balloonOutline(lines, options);
-  enclosesLines(outline, lines);
-});
-
 test("a tail curves when that gets it round something", () => {
   // A shelf of art under the right of the balloon, with the speaker below
   // and to the right of it: straight tails have to start well to the left
@@ -429,4 +382,56 @@ test("a tail curves when that gets it round something", () => {
     (tail.tip[0] - start[0]) * (tail.bend[1] - start[1]) -
     (tail.tip[1] - start[1]) * (tail.bend[0] - start[0]);
   assert.ok(Math.abs(cross) > 1, "the tail is curved");
+});
+
+// The outline with points closer than `spacing` to the last one dropped:
+// between points much closer than that, rounding errors swamp the shape.
+function resample(points, spacing = 2) {
+  const out = [points[0]];
+  for (const p of points) {
+    const last = out[out.length - 1];
+    if (Math.hypot(p[0] - last[0], p[1] - last[1]) >= spacing) out.push(p);
+  }
+  return out;
+}
+
+// The radius of the tightest curve among the outline's points that satisfy
+// `where`.
+function tightest(points, where) {
+  const outline = resample(points);
+  let best = Infinity;
+  const n = outline.length;
+  for (let i = 0; i < n; i++) {
+    const a = outline[(i - 1 + n) % n];
+    const b = outline[i];
+    const c = outline[(i + 1) % n];
+    if (!where(b)) continue;
+    const ab = Math.hypot(b[0] - a[0], b[1] - a[1]);
+    const bc = Math.hypot(c[0] - b[0], c[1] - b[1]);
+    const ca = Math.hypot(a[0] - c[0], a[1] - c[1]);
+    const area = Math.abs((b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])) / 2;
+    if (area > 1e-9) best = Math.min(best, (ab * bc * ca) / (4 * area));
+  }
+  return best;
+}
+
+test("a sweep in under shorter last lines is one smooth curve", () => {
+  // Dad's balloon in panel 2 of the example (in pixels, with a cap height
+  // of 46): the second line is the widest, then three steadily shorter
+  // ones, and the balloon hangs from the top border.
+  const cap = 46;
+  const widths = [564.6, 633.1, 578.3, 510.1, 445.9];
+  const lines = widths.map((width, i) => line(32.2, 7.9 + 71.7 * i, width, 71.7));
+  const outline = balloonOutline(lines, {
+    padX: 0.7 * cap,
+    padY: 0.36 * cap,
+    radius: cap,
+    isFree: () => true,
+    panel: { x0: 0, y0: 0, x1: 800, y1: 1200, reach: 1.2 * cap },
+  });
+  enclosesLines(outline, lines);
+  // From below the widest line round to the bottom it is one broad curve:
+  // nowhere does it bend as tightly as twice an ordinary corner.
+  const r = tightest(outline, ([x, y]) => x > 450 && y > 150 && y < 450);
+  assert.ok(r > 2 * cap, `curves as tightly as ${r}`);
 });

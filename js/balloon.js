@@ -44,16 +44,8 @@ export function balloonOutline(
   const textHeight = Math.max(...lines.map((l) => l.y + l.height)) - Math.min(...lines.map((l) => l.y));
   const roundest = (0.8 * Math.hypot(padX, padY)) / (Math.SQRT2 - 1);
   const rounding = Math.min(roundest, Math.max(radius, roundness * Math.min(textWidth, textHeight)));
-  // The lettering itself, which the outline's curves mustn't come within a
-  // quarter of the padding of.
-  const clearance = Math.min(padX, padY) / 4;
-  const keepOut = lines.map((l) => [
-    l.x - clearance,
-    l.y - clearance,
-    l.x + l.width + clearance,
-    l.y + l.height + clearance,
-  ]);
-  return smooth(simplify(corners), rounding, isFree, bow, keepOut);
+  const { polygon, sweeps } = mergeSweeps(simplify(corners), isFree);
+  return smooth(polygon, rounding, isFree, bow, sweeps);
 }
 
 // Push out past the panel's edges any box sides that come within reach of
@@ -193,43 +185,89 @@ function simplify(points) {
 // against the corners either side of it, and never onto the artwork.
 // Finally the joins are smoothed by cutting corners off (Chaikin's
 // algorithm).
-function smooth(polygon, radius, isFree, bow, keepOut) {
+// Where the outline sweeps in under shorter lines it goes down a run of
+// slanting edges. Rounding each of their corners separately makes a curve
+// that bends, straightens and bends again; Watterson draws the sweep as one
+// curve. So replace each such run, where the art allows, by the single
+// corner where the edges either side of it would meet if carried on; that
+// corner is then rounded right round (see smooth). Returns the new polygon
+// and, for each such corner's index, the corners it replaced, which the
+// rounding must keep inside the balloon.
+function mergeSweeps(points, isFree) {
+  const n = points.length;
+  const slanted = (a, b) => Math.abs(a[0] - b[0]) > 1e-6 && Math.abs(a[1] - b[1]) > 1e-6;
+  const sweeps = new Map();
+  // Start just after a corner, so that no run wraps round the end.
+  const start = points.findIndex((v, i) => !slanted(points[(i - 1 + n) % n], v));
+  if (start < 0) return { polygon: points, sweeps };
+  const at = (i) => points[(start + i) % n];
+  const out = [];
+  let i = 0;
+  while (i < n) {
+    if (!slanted(at(i), at(i + 1))) {
+      out.push(at(i));
+      i++;
+      continue;
+    }
+    let j = i;
+    while (j < n && slanted(at(j), at(j + 1))) j++;
+    const run = [];
+    for (let k = i; k <= j; k++) run.push(at(k));
+    const corner = meeting(at(i - 1 + n), run[0], run[run.length - 1], at(j + 1));
+    const clear =
+      corner && run.every((a, k) => k === 0 || triangleClear(run[k - 1], a, corner, isFree));
+    if (clear) {
+      sweeps.set(out.length, run);
+      out.push(corner);
+    } else {
+      out.push(...run);
+    }
+    i = j + 1;
+  }
+  return { polygon: out, sweeps };
+}
+
+// Where the line through `before` and u, carried on past u, meets the line
+// through w and `after`, carried back past w; null if they don't.
+function meeting(before, u, w, after) {
+  const d1 = [u[0] - before[0], u[1] - before[1]];
+  const d2 = [after[0] - w[0], after[1] - w[1]];
+  // Solve u + s d1 = w - t d2, that is s d1 + t d2 = w - u.
+  const det = d1[0] * d2[1] - d1[1] * d2[0];
+  if (Math.abs(det) < 1e-9) return null;
+  const rx = w[0] - u[0];
+  const ry = w[1] - u[1];
+  const s = (rx * d2[1] - ry * d2[0]) / det;
+  const t = (d1[0] * ry - d1[1] * rx) / det;
+  if (s <= 0 || t <= 0) return null;
+  return [u[0] + d1[0] * s, u[1] + d1[1] * s];
+}
+
+function smooth(polygon, radius, isFree, bow, sweeps = new Map()) {
   const n = polygon.length;
   const outward = outwardSign(polygon);
-  const clear = (points) =>
-    points.every(
-      (p) => isFree(p) && !keepOut.some(([x0, y0, x1, y1]) => p[0] > x0 && p[0] < x1 && p[1] > y0 && p[1] < y1),
-    );
+  const slanted = (a, b) => Math.abs(a[0] - b[0]) > 1e-6 && Math.abs(a[1] - b[1]) > 1e-6;
   const corners = polygon.map((v, i) => {
     const p = polygon[(i - 1 + n) % n];
     const q = polygon[(i + 1) % n];
     const lp = Math.hypot(p[0] - v[0], p[1] - v[1]);
     const lq = Math.hypot(q[0] - v[0], q[1] - v[1]);
     const turn = turnAngle(p, v, q);
-    const at = (r) => {
-      const rp = Math.min(r, lp / 2);
-      const rq = Math.min(r, lq / 2);
-      return {
-        v,
-        turn,
-        before: lp ? [v[0] + ((p[0] - v[0]) / lp) * rp, v[1] + ((p[1] - v[1]) / lp) * rp] : v,
-        after: lq ? [v[0] + ((q[0] - v[0]) / lq) * rq, v[1] + ((q[1] - v[1]) / lq) * rq] : v,
-      };
-    };
-    // Round the corner as generously as possible, up to half of each edge,
-    // so long as the curve keeps clear of the text and the art; never less
-    // than `radius` unless even that would hit them.
-    let r = Math.max(lp, lq) / 2;
-    while (r > radius) {
-      const corner = at(r);
-      if (clear(arc(corner, corner.before, corner.after, v))) return corner;
-      r *= 0.85;
+    const at = (rp, rq) => ({
+      v,
+      turn,
+      before: lp ? [v[0] + ((p[0] - v[0]) / lp) * rp, v[1] + ((p[1] - v[1]) / lp) * rp] : v,
+      after: lq ? [v[0] + ((q[0] - v[0]) / lq) * rq, v[1] + ((q[1] - v[1]) / lq) * rq] : v,
+    });
+    if (sweeps.has(i)) {
+      // A sweep: drawn below as one curve from where it starts to where it
+      // ends.
+      const run = sweeps.get(i);
+      return { v, turn, before: run[0], after: run[run.length - 1], run };
     }
-    for (r = Math.min(r, radius); r > 0.5; r *= 0.7) {
-      const corner = at(r);
-      if (clear(arc(corner, corner.before, corner.after, v))) return corner;
-    }
-    return at(0);
+    const rp = slanted(p, v) ? lp / 2 : Math.min(radius, lp / 2);
+    const rq = slanted(v, q) ? lq / 2 : Math.min(radius, lq / 2);
+    return at(rp, rq);
   });
   // Each edge between roundings, bowed out a little.
   const edges = corners.map((corner, i) => {
@@ -265,19 +303,23 @@ function smooth(polygon, radius, isFree, bow, keepOut) {
   });
   const out = [];
   for (let i = 0; i < n; i++) {
-    const { v, before, after } = corners[i];
-    // Round the corner with an arc that leaves the incoming edge, and joins
-    // the outgoing one, along their own directions.
-    const into = edges[(i - 1 + n) % n].end;
-    const outOf = edges[i].start;
-    const turn = Math.abs(Math.atan2(into[0] * outOf[1] - into[1] * outOf[0], into[0] * outOf[0] + into[1] * outOf[1]));
-    // A circular arc's control points sit this far along its tangents.
-    const k = turn < 1e-6 ? 0 : (4 / 3) * Math.tan(turn / 4) / Math.tan(turn / 2);
-    const rIn = Math.hypot(v[0] - before[0], v[1] - before[1]);
-    const rOut = Math.hypot(v[0] - after[0], v[1] - after[1]);
-    const c1 = [before[0] + into[0] * rIn * k, before[1] + into[1] * rIn * k];
-    const c2 = [after[0] - outOf[0] * rOut * k, after[1] - outOf[1] * rOut * k];
-    out.push(...cubic(before, c1, c2, after, 12));
+    const { v, before, after, run } = corners[i];
+    if (run) {
+      out.push(...sweepCurve(v, run, edges[(i - 1 + n) % n].end, edges[i].start, isFree));
+    } else {
+      // Round the corner with an arc that leaves the incoming edge, and
+      // joins the outgoing one, along their own directions.
+      const into = edges[(i - 1 + n) % n].end;
+      const outOf = edges[i].start;
+      const turn = Math.abs(Math.atan2(into[0] * outOf[1] - into[1] * outOf[0], into[0] * outOf[0] + into[1] * outOf[1]));
+      // A circular arc's control points sit this far along its tangents.
+      const k = turn < 1e-6 ? 0 : (4 / 3) * Math.tan(turn / 4) / Math.tan(turn / 2);
+      const rIn = Math.hypot(v[0] - before[0], v[1] - before[1]);
+      const rOut = Math.hypot(v[0] - after[0], v[1] - after[1]);
+      const c1 = [before[0] + into[0] * rIn * k, before[1] + into[1] * rIn * k];
+      const c2 = [after[0] - outOf[0] * rOut * k, after[1] - outOf[1] * rOut * k];
+      out.push(...cubic(before, c1, c2, after, 12));
+    }
     const { a, b, control } = edges[i];
     if (Math.hypot(b[0] - a[0], b[1] - a[1]) > 1e-6) {
       out.push(...quadratic(a, control, b, 16).slice(1, -1));
@@ -309,14 +351,34 @@ function turnAngle(p, v, q) {
   return turn;
 }
 
-// Points along a circular-ish arc rounding corner v from `before` to
-// `after`, along the corner's own edges.
-function arc({ turn }, before, after, v) {
-  const t = Math.abs(turn);
-  const k = t < 1e-6 ? 0 : (4 / 3) * Math.tan(t / 4) / Math.tan(t / 2);
-  const c1 = [before[0] + (v[0] - before[0]) * k, before[1] + (v[1] - before[1]) * k];
-  const c2 = [after[0] + (v[0] - after[0]) * k, after[1] + (v[1] - after[1]) * k];
-  return cubic(before, c1, c2, after, 12);
+// A sweep round corner v from the first point of `run` to the last: one
+// curve that leaves the edge before it and joins the edge after it along
+// their own directions (`into` and `outOf`), bowing out towards v only as
+// far as it must to keep the corners of the lines it sweeps round (the rest
+// of `run`) inside the balloon.
+function sweepCurve(v, run, into, outOf, isFree) {
+  const u = run[0];
+  const w = run[run.length - 1];
+  const reachU = Math.hypot(v[0] - u[0], v[1] - u[1]);
+  const reachW = Math.hypot(v[0] - w[0], v[1] - w[1]);
+  let curve = null;
+  for (const pull of [0.5, 0.6, 0.7, 0.8, 0.9, 1]) {
+    curve = cubic(
+      u,
+      [u[0] + into[0] * reachU * pull, u[1] + into[1] * reachU * pull],
+      [w[0] - outOf[0] * reachW * pull, w[1] - outOf[1] * reachW * pull],
+      w,
+      32,
+    );
+    const cut = [...curve, v];
+    const keeps = run.every((point) => !inside(cut, point) || nearCurve(curve, point, 1.5));
+    if (keeps && curve.every(isFree)) break;
+  }
+  return curve;
+}
+
+function nearCurve(curve, point, distance) {
+  return curve.some(([x, y]) => Math.hypot(x - point[0], y - point[1]) <= distance);
 }
 
 // Points along the quadratic curve from a to b with control point c.
