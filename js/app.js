@@ -9,6 +9,7 @@ const BORDER = 4;
 const INK = "#111";
 
 const FONTS = [
+  { family: "Dad Lettering", label: "Watterson-style (from the strips)" },
   { family: "Patrick Hand SC", label: "Patrick Hand SC" },
   { family: "Gochi Hand", label: "Gochi Hand" },
   { family: "Schoolbell", label: "Schoolbell" },
@@ -29,9 +30,9 @@ const DEFAULTS = {
     "This meme generator? No backend.\n\nDespite all the text flowing " +
       "around the panels, it's just a static page.",
   ],
-  font: "Patrick Hand SC",
-  size: 40,
-  weight: 0.75,
+  font: "Dad Lettering",
+  size: 38,
+  weight: 0,
   spacing: 1.2,
   align: "center",
   caps: true,
@@ -143,7 +144,9 @@ function readControls() {
 // --- Rendering -----------------------------------------------------------
 
 function fontString(size) {
-  return `${size}px "${state.font}", cursive`;
+  // Dad Lettering only covers what appears in the strips; anything else
+  // falls back to the closest-looking web font.
+  return `${size}px "${state.font}", "Patrick Hand SC", cursive`;
 }
 
 const widthCache = new Map();

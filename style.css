@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Dad Lettering";
+  src: url("assets/fonts/dad-lettering.woff2") format("woff2");
+  font-display: block;
+}
+
 :root {
   --bg: #f6f3ec;
   --fg: #1d1b18;

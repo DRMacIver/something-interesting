@@ -1,0 +1,15 @@
+[project]
+name = "calvins-dad-tools"
+version = "0.1.0"
+description = "Asset and font build tools for the Two Types of Things meme generator"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest", "fonttools", "brotli", "uharfbuzz"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
