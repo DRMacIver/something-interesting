@@ -1,4 +1,4 @@
-# Two Types of Things
+# Something Interesting
 
 A static, backend-free generator for the "Calvin's dad explains there are two
 types of things" meme. Type Dad's lines (and Calvin's reply) and you get the
@@ -28,12 +28,21 @@ After changing the code, the stylesheet, the font or the art, run
 uv run tools/version_assets.py
 ```
 
+Links to the page are previewed with an image of the default comic,
+`assets/preview.png`. If the default text or the art changes, open
+<http://localhost:8765/tools/preview.html>, save the image it shows over
+`assets/preview.png`, and run `tools/version_assets.py` again.
+
 (`uv run pytest` fails until you do).
 
 ## Deploying
 
 Everything is static. On GitHub, enable Pages for the repository with
-"Deploy from a branch", pointing at the root of the default branch.
+"Deploy from a branch", pointing at the root of the default branch. The
+link preview tags in `index.html` assume the site is at
+<https://drmaciver.github.io/something-interesting/> (a repository named
+`something-interesting`); change `SITE` in `tools/version_assets.py` and the
+tags if it isn't.
 
 ## How it works
 

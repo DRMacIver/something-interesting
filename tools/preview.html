@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Link Preview</title>
+    <link rel="stylesheet" href="../style.css?v=08579b29cf" />
+    <style>
+      body {
+        padding: 16px;
+      }
+      #preview {
+        max-width: 600px;
+        width: 100%;
+        background: #fff;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "../js/app.js": "../js/app.js?v=1089b94d57",
+          "../js/balloon.js": "../js/balloon.js?v=3f9519a6b5",
+          "../js/checks.js": "../js/checks.js?v=9a06bf4caf",
+          "../js/clipboard.js": "../js/clipboard.js?v=c7602cc6de",
+          "../js/comic.js": "../js/comic.js?v=75692baa46",
+          "../js/layout.js": "../js/layout.js?v=473097137d"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Link preview</h1>
+    <p>
+      The default comic, as the image link previews show. If the default text
+      or the art has changed, save this as <code>assets/preview.png</code> and
+      run <code>uv run tools/version_assets.py</code>.
+    </p>
+    <img id="preview" alt="The default comic" />
+
+    <script type="module">
+      import { DEFAULTS, drawComic, loadComic } from "../js/comic.js";
+
+      // Link previews are shown small; this is plenty.
+      const WIDTH = 1200;
+
+      const comic = await loadComic("../");
+      const full = document.createElement("canvas");
+      drawComic(full, comic, DEFAULTS);
+      const canvas = document.createElement("canvas");
+      canvas.width = WIDTH;
+      canvas.height = Math.round((full.height * WIDTH) / full.width);
+      const ctx = canvas.getContext("2d");
+      ctx.imageSmoothingQuality = "high";
+      ctx.drawImage(full, 0, 0, canvas.width, canvas.height);
+      const url = canvas.toDataURL("image/png");
+      document.getElementById("preview").src = url;
+      window.previewUrl = url;
+    </script>
+  </body>
+</html>

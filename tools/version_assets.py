@@ -6,8 +6,9 @@ changed, and use what they have cached otherwise.
 - the pages' URLs for style.css and js/app.js, and an import map sending
   every module in js/ to its versioned URL (so that the modules' imports of
   each other, by plain paths, are versioned too);
-- panels.json's URLs for the panel art. (panels.json itself is always
-  fetched afresh.)
+- panels.json's URLs for the panel art (panels.json itself is always
+  fetched afresh);
+- the link preview image's URL in the page.
 
 Run it after changing any of them: uv run tools/version_assets.py
 """
@@ -19,8 +20,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FONT = "assets/fonts/dad-lettering.woff2"
+# Link previews need the preview image's full URL.
+SITE = "https://drmaciver.github.io/something-interesting/"
+PREVIEW = "assets/preview.png"
 # Each page, and the path from it to the root.
-PAGES = {"index.html": "", "tools/checks.html": "../"}
+PAGES = {"index.html": "", "tools/checks.html": "../", "tools/preview.html": "../"}
 
 
 def digest(path):
@@ -57,6 +61,7 @@ def updated():
         html = (ROOT / page).read_text()
         html = versioned(html, f"{prefix}style.css", css_version)
         html = versioned(html, f"{prefix}js/app.js", digest(ROOT / "js/app.js"))
+        html = versioned(html, SITE + PREVIEW, digest(ROOT / PREVIEW))
         block = re.compile(r'<script type="importmap">.*?</script>', re.S)
         if block.search(html):
             html = block.sub(lambda _: import_map(prefix), html)
