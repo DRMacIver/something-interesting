@@ -340,52 +340,89 @@ function balance(result, { measure, fontSize, align = "center", maxLineWidth = I
       }
       continue;
     }
-    const widthOf = (i, j) => measure(words.slice(i, j).join(" "), fontSize);
     const room = slots.map((l) => Math.min(l.interval[1] - l.interval[0], maxLineWidth));
     const n = words.length;
     const m = slots.length;
-    // cost[k][j]: best cost of setting the first j words in the first k lines.
-    const cost = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(Infinity));
-    const from = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(-1));
-    cost[0][0] = 0;
-    for (let k = 1; k <= m; k++) {
-      for (let j = 1; j <= n; j++) {
-        for (let i = j - 1; i >= 0; i--) {
-          const width = widthOf(i, j);
-          if (width > room[k - 1] + 1e-9) break;
-          if (cost[k - 1][i] === Infinity) continue;
-          const slack = (room[k - 1] - width) / room[k - 1];
-          // The last line of a paragraph can be as short as it likes,
-          // as long as it isn't a lone short word.
-          const here =
-            j === n && endsParagraph
-              ? j - i === 1 && n > 1 && width < 0.5 * room[k - 1] ? 0.2 : 0
-              : slack * slack;
-          if (cost[k - 1][i] + here < cost[k][j]) {
-            cost[k][j] = cost[k - 1][i] + here;
-            from[k][j] = i;
+    // The width of words i to j as a line: estimated from the words' own
+    // widths, which is quick, or measured, which is exact (each once: the
+    // search asks for the same ones over and over).
+    const space = measure("a a", fontSize) - 2 * measure("a", fontSize);
+    const before = [0];
+    for (const word of words) before.push(before[before.length - 1] + measure(word, fontSize));
+    const estimate = (i, j) => before[j] - before[i] + (j - i - 1) * space;
+    const widths = new Map();
+    const exact = (i, j) => {
+      const key = i * (n + 1) + j;
+      let width = widths.get(key);
+      if (width === undefined) {
+        width = measure(words.slice(i, j).join(" "), fontSize);
+        widths.set(key, width);
+      }
+      return width;
+    };
+    // The best breaks with widths from widthOf: {used, from}, or null if
+    // there are none.
+    const solve = (widthOf) => {
+      // cost[k][j]: best cost of setting the first j words in the first k lines.
+      const cost = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(Infinity));
+      const from = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(-1));
+      cost[0][0] = 0;
+      for (let k = 1; k <= m; k++) {
+        for (let j = 1; j <= n; j++) {
+          for (let i = j - 1; i >= 0; i--) {
+            const width = widthOf(i, j);
+            if (width > room[k - 1] + 1e-9) break;
+            if (cost[k - 1][i] === Infinity) continue;
+            const slack = (room[k - 1] - width) / room[k - 1];
+            // The last line of a paragraph can be as short as it likes,
+            // as long as it isn't a lone short word.
+            const here =
+              j === n && endsParagraph
+                ? j - i === 1 && n > 1 && width < 0.5 * room[k - 1] ? 0.2 : 0
+                : slack * slack;
+            if (cost[k - 1][i] + here < cost[k][j]) {
+              cost[k][j] = cost[k - 1][i] + here;
+              from[k][j] = i;
+            }
           }
         }
       }
-    }
-    let used = m;
-    if (final) {
-      for (let k = 1; k < m; k++) {
-        if (cost[k][n] + 0.02 * k < cost[used][n] + 0.02 * used) used = k;
+      let used = m;
+      if (final) {
+        for (let k = 1; k < m; k++) {
+          if (cost[k][n] + 0.02 * k < cost[used][n] + 0.02 * used) used = k;
+        }
       }
+      return cost[used][n] === Infinity ? null : { used, from };
+    };
+    const lineBreaks = ({ used, from }) => {
+      const out = [n];
+      for (let k = used, j = n; k > 0; k--) {
+        j = from[k][j];
+        out.unshift(j);
+      }
+      return out;
+    };
+    // Estimated widths can be a little out (kerning, alternate forms), so
+    // if any line chosen with them is really too long, choose again
+    // exactly.
+    let solved = solve(estimate);
+    if (solved) {
+      const b = lineBreaks(solved);
+      const tooLong = b.slice(0, -1).some((i, k) => exact(i, b[k + 1]) > room[k] + 1e-9);
+      if (tooLong) solved = solve(exact);
+    } else {
+      solved = solve(exact);
     }
-    if (cost[used][n] === Infinity) {
+    if (!solved) {
       for (const i of group) {
         keep.push(lines[i]);
         keepSpaces.push(spaces[i]);
       }
       continue;
     }
-    const breaks = [n];
-    for (let k = used, j = n; k > 0; k--) {
-      j = from[k][j];
-      breaks.unshift(j);
-    }
+    const { used } = solved;
+    const breaks = lineBreaks(solved);
     for (let k = 0; k < used; k++) {
       const slot = slots[k];
       const content = words.slice(breaks[k], breaks[k + 1]).join(" ");
@@ -407,22 +444,30 @@ const ALIGN_SHARE = 0.5;
 // still leaves each enough room.
 function alignedMinimums(spaces) {
   const out = [];
-  let group = [];
-  const edge = (g) => Math.max(...g.map(([a]) => a));
-  const roomy = (g) => {
-    const shortest = Math.min(...g.map(([, b]) => b)) - edge(g);
-    const widest = Math.max(...g.map(([a, b]) => b - a));
-    return shortest >= ALIGN_SHARE * widest;
-  };
+  // The current group: how many lines, the furthest right start, the
+  // nearest end, and the widest space.
+  let count = 0;
+  let edge = -Infinity;
+  let end = Infinity;
+  let widest = 0;
   const finish = () => {
-    for (let k = 0; k < group.length; k++) out.push(edge(group));
-    group = [];
+    for (let k = 0; k < count; k++) out.push(edge);
+    count = 0;
+    edge = -Infinity;
+    end = Infinity;
+    widest = 0;
   };
-  for (const space of spaces) {
-    if (group.length && !roomy([...group, space])) finish();
-    group.push(space);
+  for (const [a, b] of spaces) {
+    if (count) {
+      const shortest = Math.min(end, b) - Math.max(edge, a);
+      if (shortest < ALIGN_SHARE * Math.max(widest, b - a)) finish();
+    }
+    count++;
+    edge = Math.max(edge, a);
+    end = Math.min(end, b);
+    widest = Math.max(widest, b - a);
   }
-  if (group.length) finish();
+  if (count) finish();
   return out;
 }
 
@@ -612,7 +657,9 @@ function fitHeight(specs, texts, options) {
   if (best.fits) return best;
 
   // Double the extra height until it fits, then binary search back down.
-  const maxExtra = options.maxExtra ?? artHeight * 50;
+  // Text this long is a joke, but it should still fit; this only stops the
+  // search for something that never will.
+  const maxExtra = options.maxExtra ?? artHeight * 2000;
   let lo = 0;
   let hi = step;
   for (;;) {

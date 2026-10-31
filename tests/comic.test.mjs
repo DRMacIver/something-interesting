@@ -56,3 +56,48 @@ test("a panel with no room to spare shows only the original art", () => {
   const report = drawComic(canvas(), comic, DEFAULTS);
   assert.equal(report.panels[2].meta.height, assets.panels[2].height);
 });
+
+test("a whole film script in one box still makes a comic browsers can draw", () => {
+  // About 9,000 words in short lines, like the Bee Movie script pasted
+  // into one box.
+  const words = "according to all known laws of aviation there is no way a bee should be able to fly".split(" ");
+  const lines = [];
+  for (let n = 0; n < 9000; ) {
+    const k = 3 + ((lines.length * 7) % 12);
+    lines.push(Array.from({ length: k }, (_, i) => words[(n + i) % words.length]).join(" "));
+    n += k;
+  }
+  const texts = [...DEFAULTS];
+  texts[1] = lines.join("\n");
+  const target = canvas();
+  const started = performance.now();
+  const report = drawComic(target, comic, texts);
+  assert.ok(performance.now() - started < 10000, "it doesn't hang the page");
+  assert.equal(report.fits, true);
+  // Only so much of it is lettered, ending with an ellipsis.
+  assert.deepEqual(report.clipped, [1]);
+  const lettered = report.panels[1].speeches.find((s) => s.who === "dad").lines;
+  assert.ok(lettered[lettered.length - 1].text.endsWith("…"));
+  // Safari's limits, the strictest: 16,384 pixels a side, 16.7 megapixels.
+  assert.ok(target.width <= 16384 && target.height <= 16384, `${target.width} x ${target.height}`);
+  assert.ok(target.width * target.height <= 16777216, `${target.width} x ${target.height}`);
+});
+
+test("a lot of text is lettered smaller, down to a limit", () => {
+  const normal = drawComic(canvas(), comic, DEFAULTS).cap;
+  const some = [...DEFAULTS];
+  some[1] = "Yellow, black. Yellow, black. ".repeat(20);
+  const lots = [...DEFAULTS];
+  lots[1] = "Yellow, black. Yellow, black. ".repeat(150);
+  const smaller = drawComic(canvas(), comic, some).cap;
+  const smallest = drawComic(canvas(), comic, lots).cap;
+  assert.ok(smaller < normal, `${smaller} vs ${normal}`);
+  assert.ok(smallest < smaller, `${smallest} vs ${smaller}`);
+  assert.ok(smallest >= 0.6 * normal - 1e-9, `${smallest} vs ${normal}`);
+});
+
+test("ordinary text is lettered at the original size", () => {
+  const texts = [...DEFAULTS];
+  texts[1] = "Every point on the record goes round once a minute but the ones near the edge have much further to go.";
+  assert.equal(drawComic(canvas(), comic, texts).cap, drawComic(canvas(), comic, DEFAULTS).cap);
+});

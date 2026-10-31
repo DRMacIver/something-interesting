@@ -11,7 +11,20 @@ import { balloonOutline, balloonTail, clearOf } from "./balloon.js";
 // proportions, as far as the art (extended to the sides) allows, or up to
 // MAX_WIDTH where the art ends in plain background.
 const CELL_WIDTH = 800;
-const MAX_WIDTH = 4 * CELL_WIDTH;
+const MAX_WIDTH = 16 * CELL_WIDTH;
+// Texts longer than this are lettered only this far (to a word break),
+// ending with an ellipsis: any more would be too slow to lay out, and too
+// small to read once the comic was scaled down to a size browsers can draw.
+export const MAX_TEXT = 5000;
+// The most room, in full lines of lettering at its original size, the
+// longest text takes before the lettering gets smaller; and the smallest it
+// gets, as a share of the original size.
+const ROOMY_LINES = 12;
+const MIN_LETTERING = 0.6;
+// The biggest canvas every browser will draw (Safari's limits are the
+// strictest); a comic bigger than this is drawn scaled down to fit.
+const MAX_CANVAS_SIDE = 16384;
+const MAX_CANVAS_AREA = 16777216;
 const GUTTER = 30;
 const OUTER = 30;
 const BORDER = 5;
@@ -146,11 +159,21 @@ function speakerPoint(panel, point) {
 
 // Draw the comic for `texts` (Dad's lines in panels 1-3, then Calvin's
 // reply) onto `canvas`, resizing it to fit. Returns what was drawn:
-// {fits, cap, panels: [{x, y, panel, meta, speech, speeches}]}, where each
+// {fits, cap, scale, clipped, panels: [{x, y, panel, meta, speech, speeches}]},
+// where `clipped` lists the texts too long to letter in full, and each
 // speech is {who, lines, speaker, outline, tail, stroke} in cell
 // coordinates.
-export function drawComic(canvas, { assets, images, signature }, texts) {
+export function drawComic(canvas, { assets, images, signature }, given) {
   const ctx = canvas.getContext("2d");
+  // Only so much of any one text is lettered.
+  const clipped = [];
+  const texts = given.map((text, i) => {
+    if (text.length <= MAX_TEXT) return text;
+    clipped.push(i);
+    const cut = text.slice(0, MAX_TEXT);
+    const end = cut.search(/\s\S*$/);
+    return (end > 0 ? cut.slice(0, end) : cut).trimEnd() + "…";
+  });
   const widths = new Map();
   const measure = (text, size) => {
     const key = `${size}\u0000${text}`;
@@ -165,7 +188,16 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
   ctx.font = fontString(100);
   const capRatio = ctx.measureText("H").actualBoundingBoxAscent / 100;
   const panelWidth = assets.panels.reduce((sum, p) => sum + p.width, 0) / assets.panels.length;
-  const cap = (assets.capHeight * CELL_WIDTH) / panelWidth;
+  // Lettered at the size Watterson letters, unless there's a lot to say:
+  // then smaller, so that the longest text takes no more room than
+  // ROOMY_LINES full lines would have, but never smaller than MIN_LETTERING
+  // of the original size.
+  const originalCap = (assets.capHeight * CELL_WIDTH) / panelWidth;
+  const originalSize = originalCap / capRatio;
+  const fullLine = CELL_WIDTH - 2 * SIDE_GAP * originalCap;
+  const longest = Math.max(...texts.map((t) => measure((t ?? "").toUpperCase(), originalSize)));
+  const lettering = Math.min(1, Math.max(MIN_LETTERING, Math.sqrt((ROOMY_LINES * fullLine) / Math.max(1, longest))));
+  const cap = originalCap * lettering;
   const fontSize = cap / capRatio;
   const lineWidth = CELL_WIDTH - 2 * SIDE_GAP * cap;
 
@@ -300,12 +332,21 @@ export function drawComic(canvas, { assets, images, signature }, texts) {
     y: calvinTop + l.y,
   }));
 
-  canvas.width = OUTER * 2 + cellWidth * 2 + GUTTER;
-  canvas.height = Math.ceil(OUTER * 2 + cellHeight * 2 + GUTTER);
+  const width = OUTER * 2 + cellWidth * 2 + GUTTER;
+  const height = OUTER * 2 + cellHeight * 2 + GUTTER;
+  const scale = Math.min(
+    1,
+    MAX_CANVAS_SIDE / width,
+    MAX_CANVAS_SIDE / height,
+    Math.sqrt(MAX_CANVAS_AREA / (width * height)),
+  );
+  canvas.width = Math.floor(width * scale);
+  canvas.height = Math.floor(height * scale);
+  ctx.setTransform(scale, 0, 0, scale, 0, 0);
   ctx.fillStyle = "#fff";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillRect(0, 0, width, height);
 
-  const report = { fits: result.fits, cap, cellWidth, cellHeight, panels: [] };
+  const report = { fits: result.fits, cap, cellWidth, cellHeight, scale, clipped, panels: [] };
   result.panels.forEach((panel, i) => {
     const meta = assets.panels[i];
     const view = views[i];

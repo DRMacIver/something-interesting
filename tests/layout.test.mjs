@@ -766,3 +766,15 @@ test("block text with a gap partway down, where a long word skipped past the art
   assert.ok(loose.lines[3].y >= 60, "the long word skips down");
   assert.equal(layoutText(panel, text, opts({ align: "left", block: true })).fits, false);
 });
+
+test("balanced lines fit their space even when word widths don't simply add up", () => {
+  // Every line costs 12 more than its characters, so adding up the widths
+  // of its words underestimates it.
+  const lumpy = (text, fontSize) => (text.length ? text.length * fontSize * 0.5 + 12 : 0);
+  const panel = panelWithHeadroom(200);
+  const result = layoutText(panel, "aaaa bbbb cccc dddd eeee ffff gggg hhhh iiii jjjj", opts({ measure: lumpy }));
+  assert.equal(result.fits, true);
+  for (const line of result.lines) {
+    assert.ok(line.x + line.width <= 100 + 1e-9, `${line.text} ends at ${line.x + line.width}`);
+  }
+});

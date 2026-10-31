@@ -1,4 +1,4 @@
-import { DEFAULTS, drawComic, loadComic } from "./comic.js";
+import { DEFAULTS, MAX_TEXT, drawComic, loadComic } from "./comic.js";
 import { copyCanvas, copyText } from "./clipboard.js";
 
 const $ = (id) => document.getElementById(id);
@@ -43,8 +43,11 @@ function setStatus(message, warning = false) {
 
 function render() {
   if (!comic) return;
-  const { fits } = drawComic(canvas, comic, texts);
-  setStatus(fits ? "" : "Some of that text doesn't fit.", !fits);
+  const { fits, clipped } = drawComic(canvas, comic, texts);
+  if (!fits) setStatus("Some of that text doesn't fit.", true);
+  else if (clipped.length) {
+    setStatus(`That's a lot! Only the first ${MAX_TEXT.toLocaleString("en")} characters of a box are lettered.`, true);
+  } else setStatus("");
 }
 
 let pending = false;
