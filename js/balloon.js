@@ -44,7 +44,16 @@ export function balloonOutline(
   const textHeight = Math.max(...lines.map((l) => l.y + l.height)) - Math.min(...lines.map((l) => l.y));
   const roundest = (0.8 * Math.hypot(padX, padY)) / (Math.SQRT2 - 1);
   const rounding = Math.min(roundest, Math.max(radius, roundness * Math.min(textWidth, textHeight)));
-  return smooth(simplify(corners), rounding, isFree, bow);
+  // The lettering itself, which the outline's curves mustn't come within a
+  // quarter of the padding of.
+  const clearance = Math.min(padX, padY) / 4;
+  const keepOut = lines.map((l) => [
+    l.x - clearance,
+    l.y - clearance,
+    l.x + l.width + clearance,
+    l.y + l.height + clearance,
+  ]);
+  return smooth(simplify(corners), rounding, isFree, bow, keepOut);
 }
 
 // Push out past the panel's edges any box sides that come within reach of
@@ -184,24 +193,43 @@ function simplify(points) {
 // against the corners either side of it, and never onto the artwork.
 // Finally the joins are smoothed by cutting corners off (Chaikin's
 // algorithm).
-function smooth(polygon, radius, isFree, bow) {
+function smooth(polygon, radius, isFree, bow, keepOut) {
   const n = polygon.length;
   const outward = outwardSign(polygon);
-  const slanted = (a, b) => Math.abs(a[0] - b[0]) > 1e-6 && Math.abs(a[1] - b[1]) > 1e-6;
+  const clear = (points) =>
+    points.every(
+      (p) => isFree(p) && !keepOut.some(([x0, y0, x1, y1]) => p[0] > x0 && p[0] < x1 && p[1] > y0 && p[1] < y1),
+    );
   const corners = polygon.map((v, i) => {
     const p = polygon[(i - 1 + n) % n];
     const q = polygon[(i + 1) % n];
     const lp = Math.hypot(p[0] - v[0], p[1] - v[1]);
     const lq = Math.hypot(q[0] - v[0], q[1] - v[1]);
-    const rp = slanted(p, v) ? lp / 2 : Math.min(radius, lp / 2);
-    const rq = slanted(v, q) ? lq / 2 : Math.min(radius, lq / 2);
     const turn = turnAngle(p, v, q);
-    return {
-      v,
-      turn,
-      before: lp ? [v[0] + ((p[0] - v[0]) / lp) * rp, v[1] + ((p[1] - v[1]) / lp) * rp] : v,
-      after: lq ? [v[0] + ((q[0] - v[0]) / lq) * rq, v[1] + ((q[1] - v[1]) / lq) * rq] : v,
+    const at = (r) => {
+      const rp = Math.min(r, lp / 2);
+      const rq = Math.min(r, lq / 2);
+      return {
+        v,
+        turn,
+        before: lp ? [v[0] + ((p[0] - v[0]) / lp) * rp, v[1] + ((p[1] - v[1]) / lp) * rp] : v,
+        after: lq ? [v[0] + ((q[0] - v[0]) / lq) * rq, v[1] + ((q[1] - v[1]) / lq) * rq] : v,
+      };
     };
+    // Round the corner as generously as possible, up to half of each edge,
+    // so long as the curve keeps clear of the text and the art; never less
+    // than `radius` unless even that would hit them.
+    let r = Math.max(lp, lq) / 2;
+    while (r > radius) {
+      const corner = at(r);
+      if (clear(arc(corner, corner.before, corner.after, v))) return corner;
+      r *= 0.85;
+    }
+    for (r = Math.min(r, radius); r > 0.5; r *= 0.7) {
+      const corner = at(r);
+      if (clear(arc(corner, corner.before, corner.after, v))) return corner;
+    }
+    return at(0);
   });
   // Each edge between roundings, bowed out a little.
   const edges = corners.map((corner, i) => {
@@ -279,6 +307,16 @@ function turnAngle(p, v, q) {
   while (turn > Math.PI) turn -= 2 * Math.PI;
   while (turn < -Math.PI) turn += 2 * Math.PI;
   return turn;
+}
+
+// Points along a circular-ish arc rounding corner v from `before` to
+// `after`, along the corner's own edges.
+function arc({ turn }, before, after, v) {
+  const t = Math.abs(turn);
+  const k = t < 1e-6 ? 0 : (4 / 3) * Math.tan(t / 4) / Math.tan(t / 2);
+  const c1 = [before[0] + (v[0] - before[0]) * k, before[1] + (v[1] - before[1]) * k];
+  const c2 = [after[0] + (v[0] - after[0]) * k, after[1] + (v[1] - after[1]) * k];
+  return cubic(before, c1, c2, after, 12);
 }
 
 // Points along the quadratic curve from a to b with control point c.
@@ -395,8 +433,13 @@ function walk(polygon, k, t, distance) {
 
 // A tail for the balloon with outline `polygon`, pointing at `speaker`:
 // {base: [p, q], bend, tip} where p and q lie on the outline `width` apart,
-// or null if there's no room for one. Like Watterson's, it is a straight
-// wedge pointing at the speaker; `bend` is the middle of its centre line.
+// or null if there's no room for one. Its centre line is the curve from the
+// middle of the base to the tip with control point `bend`. Like Watterson's
+// tails it is usually a straight wedge pointing at the speaker, but where
+// that helps it get round something it can instead set off straight out of
+// the balloon and curve round towards them; a curved tail counts
+// curvePenalty (by default its width) further from the speaker, so it's
+// only used when it gets usefully closer.
 //
 // The tail can leave from anywhere on the outline; it leaves from wherever
 // lets its tip get closest to the speaker, so it goes round a head in the
@@ -410,7 +453,16 @@ function walk(polygon, k, t, distance) {
 export function balloonTail(
   polygon,
   speaker,
-  { width, maxLength, minLength, gap, isFree, blockedPenalty = 0, clearSight = null },
+  {
+    width,
+    maxLength,
+    minLength,
+    gap,
+    isFree,
+    blockedPenalty = 0,
+    clearSight = null,
+    curvePenalty = width,
+  },
 ) {
   const step = width / 4;
   const outward = outwardSign(polygon);
@@ -433,25 +485,27 @@ export function balloonTail(
       // The longest tail, up to maxLength, whose curve keeps clear of the
       // art and stops short of the speaker.
       const full = Math.min(maxLength, distance - gap);
-      let length = full;
-      let shape = null;
-      while (length >= minLength) {
-        shape = tailShape(p, [dx, dy], length);
-        if (curveClear(shape, gap, isFree)) break;
-        shape = null;
-        length -= step;
+      for (const curved of [false, true]) {
+        let length = full;
+        let shape = null;
+        while (length >= minLength) {
+          shape = tailShape(p, [dx, dy], length, curved ? normal : null);
+          if (curveClear(shape, gap, isFree)) break;
+          shape = null;
+          length -= step;
+        }
+        if (!shape) continue;
+        // Get as close to the speaker as possible; among tails that get
+        // equally close, take the most direct.
+        const miss = Math.hypot(speaker[0] - shape.tip[0], speaker[1] - shape.tip[1]);
+        const blocked =
+          length < full - 1e-9 ||
+          (clearSight !== null && !sightClear(shape.tip, speaker, clearSight, isFree))
+            ? blockedPenalty
+            : 0;
+        const score = miss + blocked + (curved ? curvePenalty : 0) + 0.05 * distance;
+        if (!best || score < best.score) best = { k, t, ...shape, score };
       }
-      if (!shape) continue;
-      // Get as close to the speaker as possible; among tails that get
-      // equally close, take the most direct.
-      const miss = Math.hypot(speaker[0] - shape.tip[0], speaker[1] - shape.tip[1]);
-      const blocked =
-        length < full - 1e-9 ||
-        (clearSight !== null && !sightClear(shape.tip, speaker, clearSight, isFree))
-          ? blockedPenalty
-          : 0;
-      const score = miss + blocked + 0.05 * distance;
-      if (!best || score < best.score) best = { k, t, ...shape, score };
     }
   }
   if (!best) return null;
@@ -465,10 +519,12 @@ export function balloonTail(
   };
 }
 
-// A straight tail `length` long from p, heading along `direction`.
-function tailShape(p, direction, length) {
+// A tail `length` long from p, ending up heading along `direction`: straight,
+// or if `normal` is given, setting off along it and curving round.
+function tailShape(p, direction, length, normal = null) {
   const tip = [p[0] + direction[0] * length, p[1] + direction[1] * length];
-  const bend = [p[0] + direction[0] * length * 0.5, p[1] + direction[1] * length * 0.5];
+  const towards = normal ?? direction;
+  const bend = [p[0] + towards[0] * length * 0.5, p[1] + towards[1] * length * 0.5];
   return { tip, bend, start: p };
 }
 

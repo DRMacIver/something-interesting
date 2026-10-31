@@ -77,9 +77,11 @@ The common forms, roughly in order of frequency:
   of roughly one cap). It never has sharp corners or straight diagonal
   cuts, and it isn't a box.
 - Where it meets the panel border it simply runs into it.
-- Corners are round, close to circular arcs, and small balloons are
-  rounder still: Calvin's three-line "THAT SEEMS REDUCTIVE"-sized balloons
-  are nearly as round as they are boxy.
+- Corners are round, close to circular arcs, and as generous as the text
+  allows: where a last line is shorter, the side and the bottom are one
+  continuous curve with no recognisable corner. Small balloons are rounder
+  still: a three-line balloon like Calvin's is nearly as round as it is
+  boxy.
 - When the art pushes a balloon aside, it tucks into the far corner of the
   panel rather than pressing up against the speaker: in the original panel
   1 the balloon sits in the top right corner, hanging from both borders,
@@ -87,10 +89,13 @@ The common forms, roughly in order of frequency:
 
 ## Tails
 
-- A **straight narrow wedge**: two lines meeting at a point, about **0.4
-  cap** wide where it leaves the balloon and around a cap long (rarely more
-  than 1.3). (An earlier version of these notes said tails curve; in this
-  strip they don't, and curved ones looked droopy.)
+- A **narrow wedge**: two lines meeting at a point, about **0.4 cap** wide
+  where it leaves the balloon and around a cap long (rarely more than 1.3).
+  He uses both **straight and curved** tails: straight ones where the way
+  to the speaker is clear (the original panel 1), and ones that set off
+  straight out of the balloon and curve round towards the speaker where
+  that gets them round something (Calvin's "YEAH…" in the original panel
+  2). A curve where a straight tail would do looks droopy.
 - It leaves the balloon from the part of the outline that gives it the
   clearest path towards the speaker, usually the bottom edge, sometimes
   the side (the original panel 1's tail leaves the balloon's left side,
@@ -118,12 +123,12 @@ The common forms, roughly in order of frequency:
 3. Where the balloon comes within reach of a panel edge, let it run into
    the border instead of drawing a line alongside it, so most balloons
    hang from the top border as Watterson's do.
-4. Draw tails as straight narrow wedges, 0.4 cap at the base and up to
-   1.3 cap long, from whichever point of the balloon gives the clearest
-   path towards the speaker's face, with a clear line of sight to it,
-   stopping short of the art.
-5. Bow every edge of a balloon slightly, and join curves and straighter
-   runs smoothly.
+4. Draw tails as narrow wedges, 0.4 cap at the base and up to 1.3 cap
+   long, from whichever point of the balloon gives the clearest path
+   towards the speaker's face, with a clear line of sight to it, stopping
+   short of the art; straight, unless curving round gets usefully closer.
+5. Bow every edge of a balloon slightly, round every corner as generously
+   as the text allows, and join curves and straighter runs smoothly.
 6. Break lines to keep their lengths even, avoiding lone short words, and
    don't strand a last line on its own beside the art.
 7. Keep loose lettering with a pen stroke for the panel that has it in the
