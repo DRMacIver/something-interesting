@@ -29,9 +29,7 @@ Everything is static. On GitHub, enable Pages for the repository with
   panels from the scan's 1-bit ink layer, erases the lettering and balloons,
   smooths away the scan's pixelation, and records where text may go
   (`free`), where balloon tails may go (`open`) and how big Watterson's
-  lettering is (`capHeight`) in `assets/panels.json`. Dad's head pokes up
-  through panel 1's top border, so that panel's art starts above the border.
-  Large solid blacks (Dad's trousers, the night in panel 4) are only in the
+  lettering is (`capHeight`) in `assets/panels.json`. Large solid blacks (Dad's trousers, the night in panel 4) are only in the
   scan's low resolution background layer, so they're merged in from there.
 - The default lettering, Dad Lettering (`assets/fonts/dad-lettering.woff2`),
   is built from Watterson's own lettering; see below.

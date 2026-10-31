@@ -33,23 +33,18 @@ GRID_SCALE = 0.5
 # black right to its edge).
 PANELS = [
     {
-        "box": (60, 1920, 881, 2902),
+        "box": (60, 1870, 881, 2906),
         # Dad's balloon and lettering. Only ink lying entirely inside these
         # regions is erased, so artwork that pokes into them survives.
-        "erase": [[(320, 1876), (881, 1876), (881, 2310), (320, 2310)]],
+        "erase": [[(320, 1870), (881, 1870), (881, 2310), (320, 2310)]],
         "speakers": {"dad": (270, 2065)},
         "text_bottom": 2520,
-        # Dad's head pokes up through the top border, so take the art from
-        # above it and remove the border on either side of his head.
-        "art_top": 1876,
-        "wipe": [[(60, 1876), (160, 1876), (160, 1921), (60, 1921)],
-                 [(330, 1876), (881, 1876), (881, 1921), (330, 1921)]],
     },
     {
-        "box": (924, 1920, 1720, 2902),
+        "box": (924, 1877, 1720, 2907),
         # Both balloons and their lettering, steering around Dad's head and
         # Calvin's hair.
-        "erase": [[(924, 1920), (1720, 1920), (1720, 2545), (1612, 2545),
+        "erase": [[(924, 1877), (1720, 1877), (1720, 2545), (1612, 2545),
                    (1602, 2588), (1518, 2592), (1500, 2640), (1318, 2640),
                    (1318, 2420), (1310, 2280), (924, 2270)]],
         # Dad's balloon outline runs into his hair, which would make it part
@@ -65,14 +60,15 @@ PANELS = [
         "calvin_region": (1330, 2390, 1600, 2600),
     },
     {
-        "box": (1755, 1920, 2550, 2902),
-        "erase": [[(1755, 1920), (2550, 1920), (2550, 2620), (2220, 2620),
+        "box": (1755, 1877, 2550, 2907),
+        "erase": [[(1755, 1877), (2550, 1877), (2550, 2620), (2220, 2620),
                    (2220, 2460), (1755, 2460)]],
         "speakers": {"dad": (2010, 2770)},
         "text_bottom": 2600,
     },
     {
-        "box": (2581, 1911, 3380, 2913),
+        # Inside the edges of the black, where it's solid.
+        "box": (2588, 1890, 3376, 2911),
         "erase": [],
         "speakers": {},
         "text_bottom": None,
@@ -192,7 +188,6 @@ def main():
     lettering = []
     for number, panel in enumerate(PANELS, start=1):
         x0, y0, x1, y1 = panel["box"]
-        y0 = panel.get("art_top", y0)
 
         def local(points):
             return [((x - x0), (y - y0)) for x, y in points]
