@@ -11,6 +11,9 @@
 // art), taken up by something else, such as another character's balloon.
 // spec.margin, if given, is how far its text keeps from the art, in place
 // of the layout's default.
+//
+// padding keeps text away from the panel's edges: a number, or {x, y} to
+// pad the sides and the top and bottom differently.
 export function makePanel(spec, cellWidth, cellHeight, padding) {
   const scale = cellWidth / spec.width;
   const artHeight = spec.height * scale;
@@ -18,7 +21,8 @@ export function makePanel(spec, cellWidth, cellHeight, padding) {
     spec,
     width: cellWidth,
     height: cellHeight,
-    padding,
+    padX: padding?.x ?? padding,
+    padY: padding?.y ?? padding,
     scale,
     artTop: cellHeight - artHeight,
   };
@@ -63,8 +67,8 @@ export function reservedAreas(panel) {
 // `margin` clear of the art and reserved areas on every side and `padding`
 // clear of the panel edges.
 export function freeIntervals(panel, y0, y1, margin) {
-  const { padding, width, scale, artTop, spec } = panel;
-  let intervals = [[padding, width - padding]];
+  const { padX, width, scale, artTop, spec } = panel;
+  let intervals = [[padX, width - padX]];
   const top = y0 - margin;
   const bottom = y1 + margin;
   if (bottom > artTop) {
@@ -88,7 +92,7 @@ export function freeIntervals(panel, y0, y1, margin) {
     }
   }
   return intervals
-    .map(([a, b]) => [Math.max(a, padding), Math.min(b, width - padding)])
+    .map(([a, b]) => [Math.max(a, padX), Math.min(b, width - padX)])
     .filter(([a, b]) => b > a);
 }
 
@@ -177,14 +181,14 @@ function flow(panel, text, options, minimums) {
   const margin = options.margin ?? 0;
   const minLineWidth = options.minLineWidth ?? fontSize * 3;
   const step = lineHeight / 4;
-  const limit = panel.height - panel.padding;
-  const fullWidth = panel.width - 2 * panel.padding;
+  const limit = panel.height - panel.padY;
+  const fullWidth = panel.width - 2 * panel.padX;
   const fits = (s, width) => measure(s, fontSize) <= width;
 
   const lines = [];
   // The space each line had, before any alignment.
   const spaces = [];
-  let y = panel.padding;
+  let y = panel.padY;
   let overflow = false;
 
   const result = () => ({ lines, spaces, fits: !overflow, lineHeight, fontSize });

@@ -41,9 +41,11 @@ Everything is static. On GitHub, enable Pages for the repository with
   using the widest gap the art leaves free at each height, keeps a straight
   left edge unless the art pushes lines well aside, and finds the smallest
   panel height that fits everything.
-- `js/balloon.js` shapes the speech balloons in Watterson's manner: an oval
-  round a one-line remark, otherwise a box with rounded corners that steps
-  in only where it would otherwise cover the art.
+- `js/balloon.js` shapes the speech balloons in Watterson's manner, as
+  worked out in [docs/balloon-study.md](docs/balloon-study.md): balloons
+  near the top of a panel hang from its border, outlines follow the text in
+  smooth curves, and tails leave from wherever gives the clearest path to
+  the speaker's face.
 - `js/app.js` draws the comic on a canvas. The text is stored in the URL,
   so links are shareable.
 

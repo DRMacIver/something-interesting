@@ -381,3 +381,11 @@ test("a panel can keep its text further from the art than the default", () => {
   // panel has to grow more.
   assert.ok(far.cellHeight > near.cellHeight);
 });
+
+test("padding can differ across and down", () => {
+  const panel = makePanel(artRightBlocked, 100, 80, { x: 7, y: 3 });
+  assert.deepEqual(freeIntervals(panel, 3, 13, 0), [[7, 93]]);
+  const result = layoutText(panel, "aa", opts());
+  assert.equal(result.lines[0].x, 7);
+  assert.equal(result.lines[0].y, 3);
+});

@@ -4,29 +4,37 @@ import { balloonOutline, balloonTail } from "./balloon.js";
 const CELL_WIDTH = 800;
 const GUTTER = 30;
 const OUTER = 30;
-const PADDING = 20;
 const BORDER = 5;
 const INK = "#111";
 const FONT = "Dad Lettering";
 // Line spacing as a multiple of the font size, measured from the strip.
 const LINE_HEIGHT = 1.1;
 
-// Speech balloon proportions, in multiples of the lettering's cap height,
-// measured from the strip.
+// Proportions of Watterson's lettering and balloons, in multiples of the
+// lettering's cap height, measured from the book (docs/balloon-study.md).
+// Dialogue starts this far below the top of the panel and this far in from
+// its sides.
+const TOP_GAP = 0.45;
+const SIDE_GAP = 0.7;
 const BALLOON = {
-  padX: 0.55,
-  padY: 0.3,
-  radius: 0.9,
+  // Space between the lettering and the balloon line, beyond the line
+  // spacing: 0.65 cap below the last line and 0.7 at the sides in all.
+  padX: 0.7,
+  padY: 0.36,
+  radius: 1,
   line: 0.1,
-  tailWidth: 0.7,
-  tailLength: 1.6,
-  tailGap: 0.45,
+  // A balloon comes out of the panel border rather than running alongside
+  // it when it comes within about a cap of it.
+  reach: 1.2,
+  tailWidth: 0.5,
+  tailLength: 2,
+  tailMinLength: 0.35,
+  tailGap: 0.3,
 };
-// Clearance between text and artwork, in cap heights: loose lettering can
-// come close; lettering in a balloon leaves room for the balloon and a gap
-// between it and the art.
+// Clearance between text and artwork: loose lettering can come close;
+// lettering in a balloon leaves room for the balloon and a short tail.
 const ART_MARGIN = 0.4;
-const BALLOON_MARGIN = BALLOON.padX + BALLOON.line + 0.35;
+const BALLOON_MARGIN = BALLOON.padX + 0.8;
 
 const DEFAULTS = [
   "Playing a record? I'll show you something interesting.",
@@ -126,6 +134,7 @@ function setStatus(message, warning = false) {
 function layoutCalvin(meta, fontSize, cap) {
   const [x0, x1, bottom] = meta.calvinColumn;
   const scale = CELL_WIDTH / meta.width;
+  const side = (SIDE_GAP * cap) / scale;
   const padX = (BALLOON.padX * cap) / scale;
   const padY = (BALLOON.padY * cap) / scale;
   const lay = (width) =>
@@ -138,7 +147,7 @@ function layoutCalvin(meta, fontSize, cap) {
   // The open space, beside Dad's head, that a column `height` tall can use.
   const room = (height) => {
     const [a, b] = openSpan(meta, bottom - height / scale, bottom, (x0 + x1) / 2);
-    return [Math.max(a, PADDING / scale) + padX, Math.min(b, meta.width - PADDING / scale) - padX];
+    return [Math.max(a, side) + padX, Math.min(b, meta.width - side) - padX];
   };
   // A longer reply gets a wider column rather than a tall thin one, as far
   // as the open space allows.
@@ -194,6 +203,9 @@ function computeLayout() {
     reserved: p === calvinMeta ? calvin.reserved : [],
     margin: (p.speech === "balloon" ? BALLOON_MARGIN : ART_MARGIN) * cap,
   }));
+  // The gaps are measured to the lettering itself, which sits in the middle
+  // of its line's spacing.
+  const leading = (LINE_HEIGHT * fontSize - cap) / 2;
   const result = fitPanels(specs, [...texts.slice(0, 3).map((t) => t.toUpperCase()), ""], {
     measure,
     fontSize,
@@ -201,7 +213,7 @@ function computeLayout() {
     margin: ART_MARGIN * cap,
     align: "left",
     cellWidth: CELL_WIDTH,
-    padding: PADDING,
+    padding: { x: SIDE_GAP * cap, y: Math.max(0, TOP_GAP * cap - leading) },
   });
 
   // Place Calvin's lines in the panel, now that its size is known.
@@ -261,9 +273,11 @@ function drawStroke(layout, panel, speaker) {
   ctx.stroke();
 }
 
-// Whether a point in a cell is clear of the panel's artwork.
+// Whether a point in a cell is clear of the panel's artwork (points outside
+// the panel aren't).
 function openAt(panel, meta, [x, y]) {
-  if (y < panel.artTop) return x >= 0 && x <= panel.width;
+  if (x < 0 || x > panel.width || y < 0 || y > panel.height) return false;
+  if (y < panel.artTop) return true;
   const row = meta.open?.[Math.floor((y - panel.artTop) / panel.scale)];
   if (!row) return false;
   const gx = x / panel.scale;
@@ -296,6 +310,8 @@ function tailPath({ base: [b1, b2], tip }) {
 function drawBalloons(panel, meta, speeches, cap) {
   const shapes = [];
   const isFree = (p) => openAt(panel, meta, p);
+  // Whatever of a balloon lies outside the panel is cut off by its border.
+  const inside = ([x, y]) => x >= 0 && x <= panel.width && y >= 0 && y <= panel.height;
   for (const { layout, speaker } of speeches) {
     if (!layout.lines.length) continue;
     const outline = balloonOutline(layout.lines, {
@@ -303,12 +319,14 @@ function drawBalloons(panel, meta, speeches, cap) {
       padY: BALLOON.padY * cap,
       radius: BALLOON.radius * cap,
       ovalLines: 1,
-      isFree,
+      isFree: (p) => !inside(p) || isFree(p),
+      panel: { x0: 0, y0: 0, x1: panel.width, y1: panel.height, reach: BALLOON.reach * cap },
     });
     shapes.push(outline);
     const tail = balloonTail(outline, speakerPoint(panel, speaker), {
       width: BALLOON.tailWidth * cap,
       maxLength: BALLOON.tailLength * cap,
+      minLength: BALLOON.tailMinLength * cap,
       gap: BALLOON.tailGap * cap,
       isFree,
     });
