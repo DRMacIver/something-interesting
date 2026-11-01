@@ -121,3 +121,12 @@ test("how far a tail ends from its speaker is judged at the art's scale, not the
   assert.ok(names(checkSpeech(speech, [], small)).includes("tail-reach"));
   assert.ok(!names(checkSpeech(speech, [], { ...small, artCap: 2 * cap })).includes("tail-reach"));
 });
+
+test("a tail or pen stroke drawn over the art is caught", () => {
+  // Art right where the tail runs.
+  const art = ([x, y]) => !(x > 140 && x < 160 && y > 130 && y < 140);
+  assert.ok(names(checkSpeech(good, [], { cap, panel, open: art, style: "balloon" })).includes("tail-over-art"));
+  const loose = { ...good, outline: undefined, tail: undefined, stroke: good.tail };
+  assert.ok(names(checkSpeech(loose, [], { cap, panel, open: art, style: "loose" })).includes("stroke-over-art"));
+  assert.ok(!names(checkSpeech(good, [], { cap, panel, open, style: "balloon" })).includes("tail-over-art"));
+});

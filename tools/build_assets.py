@@ -27,6 +27,9 @@ PAGE = 246
 ART_SCALE = 2
 # The layout grid (free space, mouths, lettering size) is at this multiple.
 GRID_SCALE = 0.5
+# Gaps in the art's outlines up to about twice this (in scan pixels) count
+# as closed when working out what space the art encloses.
+CLOSE_GAPS = 8
 # Every panel's art is extended by this much (in scan pixels), so that
 # panels can widen to make room for long text: to the right, unless the
 # panel says otherwise. Where the art runs off an edge, the extension there
@@ -203,9 +206,20 @@ def free_rows(ink, text_bottom):
 
 
 def open_rows(ink):
-    """For each row of the layout grid, the intervals clear of artwork
-    anywhere in the panel; speech balloon tails can go there."""
-    return grid_rows(~ndimage.binary_dilation(ink, iterations=3))
+    """For each row of the layout grid, the intervals clear of artwork and
+    out in the open: background reached from the top or sides of the panel,
+    not space the art encloses (inside a face or a pair of glasses, say, or a
+    figure cut off by the bottom of the panel). Balloon tails can go there."""
+    clear = ~ndimage.binary_dilation(ink, iterations=3)
+    # Hand-inked outlines don't always quite meet, so what's enclosed is
+    # worked out with the ink thickened enough to close small gaps, and what
+    # that finds outside grown back up to the lines.
+    closed = ~ndimage.binary_dilation(ink, iterations=CLOSE_GAPS)
+    labels, _ = ndimage.label(closed)
+    edges = np.concatenate([labels[0], labels[:, 0], labels[:, -1]])
+    outside = np.isin(labels, list(set(edges[edges > 0].tolist())))
+    outside = ndimage.binary_dilation(outside, iterations=CLOSE_GAPS - 3)
+    return grid_rows(clear & outside)
 
 
 def grid_rows(free):

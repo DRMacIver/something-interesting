@@ -13,6 +13,9 @@ dev = [
     "uharfbuzz",
     "pillow>=13.0.0",
     "scikit-image>=0.26.0",
+    "numpy>=2.5.4",
+    "scipy>=1.18.1",
+    "pymupdf>=2.0",
 ]
 
 [tool.uv]

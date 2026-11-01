@@ -135,6 +135,21 @@ export function checkSpeech(speech, others, { cap, artCap = cap, panel, open, st
   }
 
   const aimed = (tail, what) => {
+    // The tail itself keeps off the art (past where it leaves its balloon or
+    // lettering).
+    const start = [(tail.base[0][0] + tail.base[1][0]) / 2, (tail.base[0][1] + tail.base[1][1]) / 2];
+    for (let k = 1; k <= 40; k++) {
+      const t = k / 40;
+      const u = 1 - t;
+      const point = [
+        u * u * start[0] + 2 * u * t * tail.bend[0] + t * t * tail.tip[0],
+        u * u * start[1] + 2 * u * t * tail.bend[1] + t * t * tail.tip[1],
+      ];
+      if (t > 0.1 && !open(point)) {
+        problems.push(problem(`${what}-over-art`, `drawn over the art at ${point.map((v) => v.toFixed(0))}`));
+        break;
+      }
+    }
     const direction = [tail.tip[0] - tail.bend[0], tail.tip[1] - tail.bend[1]];
     const toSpeaker = [speaker[0] - tail.tip[0], speaker[1] - tail.tip[1]];
     const off = angleBetween(direction, toSpeaker);

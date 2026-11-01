@@ -12,6 +12,9 @@ import { balloonOutline, balloonTail, clearOf } from "./balloon.js";
 // MAX_WIDTH where the art ends in plain background.
 const CELL_WIDTH = 800;
 const MAX_WIDTH = 16 * CELL_WIDTH;
+// Growing cells aim for proportions a little wider than the original
+// panels', for more words to a line.
+const WIDER = 1.1;
 // Texts longer than this are lettered only this far (to a word break),
 // ending with an ellipsis: any more would be too slow to lay out, and too
 // small to read once the comic was scaled down to a size browsers can draw.
@@ -273,7 +276,7 @@ export function drawComic(canvas, { assets, images, signature }, given) {
   const chosen = chooseWidth((width) => layoutAt(width), {
     minWidth: CELL_WIDTH,
     maxWidth: Math.floor(maxWidth),
-    aspect: CELL_WIDTH / artHeight,
+    aspect: (CELL_WIDTH / artHeight) * WIDER,
     step: cap,
   });
   const cellWidth = chosen.width;
