@@ -1,0 +1,22 @@
+{
+  "source": "assets/emoji-concepts/hobbes-front-v1.png",
+  "method": "Diagonal strip removal and rigid integer translation; no image generation",
+  "pawTranslations": [
+    [
+      96,
+      -80
+    ],
+    [
+      86,
+      -90
+    ]
+  ],
+  "removedAxisLength": 124.45079348883237,
+  "cutEnd": -60,
+  "shoulderFade": [
+    375,
+    485
+  ],
+  "facePixelPreservation": "All source pixels with -55 <= (x-y)/sqrt(2) <= 370 remain byte-identical",
+  "sourcePreserved": true
+}

@@ -17,6 +17,7 @@ dev = [
     "scipy>=1.18.1",
     "pymupdf>=2.0",
     "fontmake>=3.12.2",
+    "potracer>=0.0.4",
 ]
 
 [tool.uv]

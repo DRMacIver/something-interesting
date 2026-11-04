@@ -8,6 +8,14 @@ to make room for long text, wider as well as taller.
 
 ## Running locally
 
+The [custom adventure emoji set](assets/emoji-concepts/README.md) supplies sixteen
+hand-drawn designs, including snow goons, dinosaurs, space objects, and the
+approved Hobbes tiger forms. The Unicode sampler's **An entirely ordinary
+afternoon** comic shows the complete set; the linked notes include a rendered
+font review and reproducible build instructions.
+The [emoji build pipeline](docs/emoji-build-pipeline.md) caches prepared glyph
+assets and assembles these replacements into the main emoji font.
+
 The page fetches its assets, so serve it over HTTP rather than opening the
 file directly:
 
@@ -19,7 +27,7 @@ Then open <http://localhost:8765>. (It's an ordinary static file server,
 except that it tells browsers not to use cached files without checking.)
 
 The [Unicode sampler](sampler.html), at <http://localhost:8765/sampler.html>,
-shows 24 complete comics with different scripts, emoji, mathematical letters,
+shows 25 complete comics with different scripts, emoji, mathematical letters,
 combining marks and diagrams. Filter or search the examples, open one in the
 editor, or download its full-size PNG. Previews render as you scroll.
 

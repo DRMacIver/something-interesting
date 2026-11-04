@@ -34,7 +34,7 @@ class Font:
     def __init__(self, path):
         self.path = local_path(path)
         self.sha256 = hashlib.sha256(self.path.read_bytes()).hexdigest()
-        self.tt = TTFont(self.path)
+        self.tt = TTFont(self.path,recalcBBoxes=False,recalcTimestamp=False)
         # HarfBuzz needs decoded sfnt bytes, not the browser's WOFF2 wrapper.
         self.tt.flavor = None
         stream = io.BytesIO(); self.tt.save(stream)

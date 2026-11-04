@@ -1,0 +1,7 @@
+Create one hand-drawn cardboard-box emoji, using the two supplied PDF crops as drawing references for the box only. The first reference shows economical ink lines and a broad flap; the second shows the low open box and its casually open rectangular flaps. These are style and construction references, not scenes to reproduce.
+
+Draw a simple ordinary open cardboard box in good condition, three-quarter view from slightly above, with an open top and broad intact flaps. Use expressive, slightly uneven black pen strokes, sparse interior detail, and a restrained warm ochre cardboard colour wash. Keep the box's proportions squat and friendly, with clear readable front and side planes. The charm should come from the drawing, not from added decoration. It should feel drawn for the same comic as the references, not like a mathematically perfect vector icon or a glossy emoji.
+
+Keep the surfaces mostly clean and the edges straight but hand-drawn. No tears, ragged edges, dents, broken corners, tape patches or dirt. At most one or two subtle crease marks. No machine parts, dials, controls, antennae, pipes, writing, labels or symbols. No people, animals, characters, speech bubbles, grass or background scenery from the references.
+
+One complete isolated box centred on a plain opaque white background, generous white margin, no ground shadow, no text, no grid. Clear silhouette and bold enough ink to remain readable at inline emoji size.

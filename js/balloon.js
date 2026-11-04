@@ -586,8 +586,10 @@ function walk(polygon, k, t, distance) {
 // speaker through some of the art (other than the last clearSight of the
 // way, round the speaker's mouth itself), so such tails count
 // blockedPenalty further from the speaker than they really are; and one
-// that arrives level, or from below, up to levelPenalty further. A curved
-// tail that hooks round towards the speaker can be favoured, by up to
+// that arrives level, or from below, up to levelPenalty further.
+// Sideways arrival can also count up to sidewaysPenalty further,
+// preferring a downward approach to a head over a diagonal beside it.
+// A curved tail that hooks round towards the speaker can be favoured, by up to
 // hookBonus (the more it turns, the more), as Watterson draws Calvin's.
 export function balloonTail(
   polygon,
@@ -602,6 +604,7 @@ export function balloonTail(
     clearSight = null,
     curvePenalty = width,
     levelPenalty = 0,
+    sidewaysPenalty = 0,
     reach = Infinity,
     isArtFree = isFree,
     hookBonus = 0,
@@ -660,11 +663,14 @@ export function balloonTail(
         const arrival = [shape.tip[0] - shape.bend[0], shape.tip[1] - shape.bend[1]];
         const drop = arrival[1] / (Math.hypot(...arrival) || 1);
         const level = (levelPenalty * Math.max(0, MIN_DROP - drop)) / MIN_DROP;
+        // A short route down to the top of a head reads better than a longer
+        // diagonal sneaking beside it just to get closer to the mouth.
+        const sideways = sidewaysPenalty * Math.abs(arrival[0]) / (Math.hypot(...arrival) || 1);
         // A curved tail that hooks round towards the speaker, leaving the
         // balloon at an angle to them, can be favoured, by up to hookBonus.
         const turn = Math.acos(Math.max(-1, Math.min(1, dx * normal[0] + dy * normal[1])));
         const hook = curved ? hookBonus * Math.min(1, turn / (Math.PI / 4)) : 0;
-        const score = miss + blocked + level + (curved ? curvePenalty : 0) - hook + 0.05 * distance;
+        const score = miss + blocked + level + sideways + (curved ? curvePenalty : 0) - hook + 0.05 * distance;
         if (!best || score < best.score) best = { k, t, ...shape, score };
       }
     }

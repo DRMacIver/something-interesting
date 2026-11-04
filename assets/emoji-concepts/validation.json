@@ -1,0 +1,292 @@
+{
+  "implementation": "Main Dad Emoji colour/ink pair; no adventure runtime font",
+  "checks": {
+    "javascript": {
+      "cases": 380,
+      "elapsedSeconds": 15.340275292001024,
+      "limitSeconds": 30.0,
+      "exitCode": 0
+    },
+    "focusedPython": {
+      "uniqueCases": 16,
+      "releaseCases": 11,
+      "rendererCasesRetained": 5,
+      "release": {
+        "elapsedSeconds": 17.575446791001013,
+        "limitSeconds": 25.0,
+        "exitCode": 0
+      },
+      "priorCompleteScope": {
+        "elapsedSeconds": 17.324923708001734,
+        "limitSeconds": 25.0,
+        "exitCode": 0
+      }
+    }
+  },
+  "coldBuild": {
+    "elapsedSeconds": 6.922782041001483,
+    "limitSeconds": 15.0,
+    "exitCode": 0
+  },
+  "rebuild": "rebuild-check.json",
+  "visualReview": "production-review.png",
+  "visualScope": "Actual compiled main-font outlines; browser screenshot not taken.",
+  "sizeTradeoff": "Lossless untransformed WOFF2/Brotli quality 5; about 3.7 MiB per font instead of 3.0 MiB.",
+  "previousWarmBuild": {
+    "cacheHits": 16,
+    "cacheMisses": 0,
+    "keys": [
+      "486028a5f6a2bee2e2b0b875ff6490bf53ed95abc90f129aa2ffb9a4b525bb66",
+      "2e163ee74ceb9f82d59b706a3a25388892bff45974e7fcb1b42148d91bfdbc88",
+      "90685d093ee2a7fb3bb354f9af2deea2f230247d31b4ba20d81ae19c9792af90",
+      "a9d8820b6dd78d43b014a15b4a00d1e837702f6c0a4590419ba656f8831602e9",
+      "8c1db38b789e949633ac418cb175a9c2509ccd40b7a38b805f488d5b0770f0a5",
+      "fa2d88b22dfa0071fa933e270c359cda12ce20f100bc69f9a9f3ff6d48ecbfd0",
+      "c6af7ce00736f7a0108182353740ec2a2b66e3a53a477ba1c2f11d7ed171e607",
+      "518379284ea33da60ca329c24016c0a07a145e1c0794a7f6790c0354b3db32b0",
+      "b1f3a92f41144085decffcd20394c8e1a56339b757a3091645aef63668350c9b",
+      "4737b46df62764848c18b7c40f6e7560789602ce5514c8c20ea70bd6a63c7cea",
+      "5e520cb046d6f2420a33df2f87c9e00c99033240d83cbd834627a6ce6a508e98",
+      "cec4ed4c897a65f09edcecd6ac4881b654fda54dcb055dfbbcc99950f42b1e2a",
+      "a0cbf30cc535c2195018d0722e7d5a78f5747c25a2d5c22829822aa890d4aadc",
+      "96048bf2bc63f83f8d3af0e0b902934cafeaa901fa04b3c7d9a4609e6e3e0243",
+      "aad5ddb447184db7187f6fb9178e3d114ecbe58089bbdd524ed73c3971dbad6a",
+      "97c242a32ace27907a10481f46f0816f1f11a36f92adeed7637ca480a0ea8253"
+    ],
+    "preparationSeconds": 0.5923409169990919,
+    "assemblySeconds": 0.9103064999981143,
+    "elapsedSeconds": 1.5026476669991098,
+    "outputSha256": "933980e74d7ffb548072089cdef155ffbad18a58c04a8981e6baa9ff75e8285f"
+  },
+  "frontHalfBuild": {
+    "cacheHits": 15,
+    "cacheMisses": 1,
+    "keys": [
+      "bfb956afeee9d629d61af5dc1ce2e36fdf99b523adf8daa7713cad47a4f0a387",
+      "e2e6816813fd8d22a7d5d5e5485aa1cc81c64ed3ec8addefa67a4efd6bdd036b",
+      "088b9360321f53946f79a923863c3f1a9317131c579ec6394503f300b503988c",
+      "4bd82bdd9e00a47a34d7a2c73d9898ff36119ce18321b8bd52ac3d4d525d71ac",
+      "ff98b22022d7a6d6c42380cd50a03eba8d61678d4fb4db03ed9dab887b11f43c",
+      "983e3732674008a51aab4a5f67964bea0200f6ab3e78a929efdd102273bd1029",
+      "e804ce8ae90d4515202669752c892b0f164124d8354d60dc1aa55ee365724219",
+      "43a9a97b16b33279053525b83b83c639b54f28c89b333a83ddbb4656defa2f0c",
+      "c108d6ef41b4f251eebd7907a85b055a5d9f0bd04f203ea097e14145ed19340d",
+      "8f92fc78472b6427ce61169901feee7b6742da05ca5e84c8d8182ae05c498d50",
+      "ed8f004febc765eb06c426764bd399ca7a9297f83b9c2fa51fbf4054f267aa93",
+      "b3128935c5acf585723fc46b952322d30f7d1d10fd259a0a54bf201a8870e0bf",
+      "492fdc91a98b2a44e839760f1eb912cb4854255e142cea76f549a05df6f4642a",
+      "3dd852a32955c09038edac1e1f0203ad80a13dcc698dbfff58baa454a3865bf3",
+      "1e51de86b91c147fe782a4f294e432ed519eb2e4c507cb680b6bd78951a2a7b6",
+      "0a12f756c48fd8af85e40edd582c2f6f5fd2ddf4ba878644e441ea1d9957301f"
+    ],
+    "preparationSeconds": 0.9017038749989297,
+    "assemblySeconds": 1.0486465840003802,
+    "elapsedSeconds": 1.950350625000283,
+    "outputSha256": "422d61f12859f76c39e3ee7193d68d49fcf00166947142c32c6a81db94eca39b",
+    "boundedReceipt": {
+      "elapsedSeconds": 2.640683875000832,
+      "limitSeconds": 15.0,
+      "exitCode": 0
+    }
+  },
+  "sharpnessReview": {
+    "glyphs": [
+      "\ud83d\udc05",
+      "\ud83d\udc2f"
+    ],
+    "resolution": 1024,
+    "nativeQuadraticCurves": true,
+    "otherGlyphRecordsPreserved": 10194,
+    "pythonChecks": 13,
+    "javascriptFocusedChecks": 14,
+    "pythonElapsedSeconds": 19.381805166001868,
+    "comparison": "output/font-review/hobbes-sharpness/comparison.png",
+    "sourceArtworkUnchanged": true
+  },
+  "compactReview": {
+    "source": "hobbes-compact-v2.png",
+    "imageTool": "imagegen CLI / gpt-image-2",
+    "prompt": "hobbes-compact-v2-prompt.txt",
+    "comparison": "output/font-review/hobbes-compact/comparison.png",
+    "changes": "Larger head, foreshortened arms, more frontal pose; both Hobbes optical scales 1.5, face stroke 0.008em and pounce 0.006em",
+    "javascriptChecks": 381,
+    "pythonChecks": 13,
+    "javascriptSeconds": 15.286282916000346,
+    "pythonSeconds": 19.520673874998465,
+    "status": "rejected; previous art and optical settings restored"
+  },
+  "restoration": {
+    "activePounce": "hobbes-front-v1.png",
+    "readabilityConcern": "open",
+    "colourFontEqualsPreCompactVersion": true
+  },
+  "upsideDownReview": {
+    "source": "hobbes-upside-down-v1.png",
+    "pdfPage": 246,
+    "panel": "bottom right",
+    "generated": false,
+    "comparison": "output/font-review/hobbes-upside/comparison.png",
+    "checks": {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_adventure_emoji.py",
+        "tests/test_versions.py",
+        "tests/test_page.py"
+      ],
+      "limitSeconds": 30.0,
+      "startedUtc": "2026-11-04T23:20:19.254838+00:00",
+      "status": "terminal",
+      "log": "/tmp/hobbes-upside-tests.log",
+      "childPid": 54967,
+      "processGroupId": 54967,
+      "exitCode": 0,
+      "timedOut": false,
+      "elapsedSeconds": 1.5255914160006796
+    },
+    "build": {
+      "command": [
+        ".venv/bin/python",
+        "tools/font/build_emoji.py"
+      ],
+      "limitSeconds": 15.0,
+      "startedUtc": "2026-11-04T23:20:00.464986+00:00",
+      "status": "terminal",
+      "log": "/tmp/hobbes-upside-build.log",
+      "childPid": 54803,
+      "processGroupId": 54803,
+      "exitCode": 0,
+      "timedOut": false,
+      "elapsedSeconds": 3.0858431669985293
+    }
+  },
+  "standing254Review": {
+    "source": "hobbes-standing-254-v1.png",
+    "pdfPage": 254,
+    "panel": "top left",
+    "generated": false,
+    "comparison": "output/font-review/hobbes-standing/comparison.png",
+    "checks": {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_adventure_emoji.py",
+        "tests/test_versions.py",
+        "tests/test_page.py"
+      ],
+      "limitSeconds": 30.0,
+      "startedUtc": "2026-11-04T23:22:41.301485+00:00",
+      "status": "terminal",
+      "log": "/tmp/hobbes-standing-tests.log",
+      "childPid": 55898,
+      "processGroupId": 55898,
+      "exitCode": 0,
+      "timedOut": false,
+      "elapsedSeconds": 1.4288121669997054
+    },
+    "build": {
+      "command": [
+        ".venv/bin/python",
+        "tools/font/build_emoji.py"
+      ],
+      "limitSeconds": 15.0,
+      "startedUtc": "2026-11-04T23:22:23.043528+00:00",
+      "status": "terminal",
+      "log": "/tmp/hobbes-standing-build.log",
+      "childPid": 55743,
+      "processGroupId": 55743,
+      "exitCode": 0,
+      "timedOut": false,
+      "elapsedSeconds": 2.9863380000024335
+    }
+  },
+  "upsideDownCleanup": {
+    "source": "hobbes-upside-down-v2.png",
+    "generated": false,
+    "strokeRatio": 0.002,
+    "scale": 1.4,
+    "comparison": "output/font-review/hobbes-clean/comparison.png",
+    "checks": {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_adventure_emoji.py",
+        "tests/test_versions.py",
+        "tests/test_page.py"
+      ],
+      "limitSeconds": 30.0,
+      "startedUtc": "2026-11-04T23:27:05.402695+00:00",
+      "status": "terminal",
+      "log": "/tmp/hobbes-clean-tests.log",
+      "childPid": 57165,
+      "processGroupId": 57165,
+      "exitCode": 0,
+      "timedOut": false,
+      "elapsedSeconds": 1.5790513749998354
+    },
+    "javascriptChecks": 74,
+    "javascriptPassed": true,
+    "build": {
+      "command": [
+        ".venv/bin/python",
+        "tools/font/build_emoji.py"
+      ],
+      "limitSeconds": 15.0,
+      "startedUtc": "2026-11-04T23:26:44.383101+00:00",
+      "status": "terminal",
+      "log": "/tmp/hobbes-clean-build.log",
+      "childPid": 57002,
+      "processGroupId": 57002,
+      "exitCode": 0,
+      "timedOut": false,
+      "elapsedSeconds": 3.148149041997385
+    }
+  },
+  "commitChecks": {
+    "python": {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_emoji_glyph_cache.py",
+        "tests/test_adventure_emoji.py",
+        "tests/test_versions.py",
+        "tests/test_page.py"
+      ],
+      "limitSeconds": 30.0,
+      "startedUtc": "2026-11-04T23:29:01.654795+00:00",
+      "status": "terminal",
+      "log": "/tmp/emoji-commit-python.log",
+      "childPid": 57844,
+      "processGroupId": 57844,
+      "exitCode": 0,
+      "timedOut": false,
+      "elapsedSeconds": 18.57805854200342
+    },
+    "js": {
+      "command": [
+        "node",
+        "--test",
+        "tests/adventure-emoji.test.mjs",
+        "tests/emoji-routing.test.mjs",
+        "tests/comic.test.mjs"
+      ],
+      "limitSeconds": 30.0,
+      "startedUtc": "2026-11-04T23:29:01.654551+00:00",
+      "status": "terminal",
+      "log": "/tmp/emoji-commit-js.log",
+      "childPid": 57843,
+      "processGroupId": 57843,
+      "exitCode": 0,
+      "timedOut": false,
+      "elapsedSeconds": 15.092957749999186
+    }
+  }
+}

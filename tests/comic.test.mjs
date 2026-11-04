@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 
 import { DEFAULTS, drawComic, makeFontString } from "../js/comic.js";
 import { openBeyond } from "../js/layout.js";
+import { samples } from "../js/unicode-samples.js";
 
 test('loaded variation fonts cannot replace ordinary Han or math fallback',()=>{
   const families=['Dad CJK Variants','Dad Math Variants','Dad Egyptian Variants','Ordinary Script'];
@@ -38,6 +39,22 @@ const context = new Proxy(
   { get: (t, k) => (k in t ? t[k] : () => {}), set: (t, k, v) => ((t[k] = v), true) },
 );
 const canvas = () => ({ getContext: () => context, width: 0, height: 0 });
+
+test('the adventure sampler tail descends above Dad instead of leaving the far panel edge',()=>{
+ for(const units of [text=>[...text].length,text=>text.length]){
+  const ctx=new Proxy({font:'10px x',measureText(text){
+    const size=parseFloat(this.font);
+    return {width:units(text)*size*.55,actualBoundingBoxAscent:size*.7,actualBoundingBoxDescent:0};
+  }},{get:(t,k)=>k in t?t[k]:()=>{},set:(t,k,v)=>(t[k]=v,true)});
+  const result=drawComic({getContext:()=>ctx},comic,samples.find(s=>s.id==='custom-adventure').texts);
+  const panel=result.panels[2];const speech=panel.speeches.find(s=>s.who==='dad');
+  const tail=speech.tail??speech.stroke;assert.ok(tail);
+  const start=tail.base[0].map((v,i)=>(v+tail.base[1][i])/2);
+  const direction=[tail.tip[0]-tail.bend[0],tail.tip[1]-tail.bend[1]];
+  assert.ok(start[0]>panel.panel.width*.1,'tail starts above the head, clear of the left border');
+  assert.ok(Math.abs(direction[0])/direction[1]<Math.tan(Math.PI/9),'arrives within 20 degrees of vertical');
+ }
+});
 
 const wall = (sentence, n) => Array.from({ length: n }, () => sentence).join("\n");
 

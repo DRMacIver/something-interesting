@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "method": "Cold and warm main-font assembly byte equality; single-cell invalidation; unchanged legacy glyph/cmap/GSUB preservation tests",
+  "files": {
+    "assets/fonts/dad-emoji.woff2": "c7ce7f1cc48bcc96c47c38c8d36eeacdd415fff9a545a7ff0343057e5d822b54",
+    "assets/fonts/dad-emoji-ink.woff2": "602009b1759bd8e6f332ac973e2560295b5cb2e61ca6a6e0611f9f58dbb2feaa",
+    "js/emoji-manifest.js": "4469194a9cc0df090b50d10a2b29edd5e12d9eb2a0bc9a486149b343edf51921"
+  }
+}

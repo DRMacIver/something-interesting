@@ -3,7 +3,7 @@ import { nativeShapingText } from "./native-shaping.js";
 import { paragraphDirection, bidiParagraph } from "./direction.js";
 import { graphemes } from "./unicode.js";
 import { measureGrid } from "./grid.js";
-import { needsEmojiRouting, routeDirectionalRun, splitEmojiRuns } from "./emoji-routing.js";
+import { needsEmojiRouting, routeDirectionalRun, splitEmojiRuns, emojiStrokeRatio, emojiScaleFactor } from "./emoji-routing.js";
 import { hasVietnameseMarks, splitVietnameseMarks } from "./vietnamese-marks.js";
 import { hasCombiningAnnotations, combiningInk } from './combining-annotations.js';
 import { hasMixedHieroglyphs, hieroglyphStroke, splitHieroglyphRuns, reserveEgyptianStroke } from './hieroglyph-optics.js';
@@ -29,7 +29,7 @@ export function createTextMeasurer(ctx, fontString) {
     // Detailed ink drawings need more room than a capital letter to read at
     // dialogue size. Measure at the same larger size used for painting so
     // wrapping, balloon geometry and exports reserve the actual ink.
-    const actualSize = size * (policy === 'custom' ? 1.4 : nativeOnly ? 1 : textScale(text));
+    const actualSize = size * (policy === 'custom' ? emojiScaleFactor(text) : nativeOnly ? 1 : textScale(text));
     if (!nativeOnly) {
       const arranged=egyptianInk(text,actualSize,(t,s,p,d='ltr')=>rawInk(t,s,d,p,true),direction);
       if (arranged) {
@@ -45,7 +45,7 @@ export function createTextMeasurer(ctx, fontString) {
     const metrics = ctx.measureText(nativeShapingText(text));
     const finite = (value, fallback) => Number.isFinite(value) ? value : fallback;
     const advance = finite(metrics.width, 0);
-    const strokeWidth = policy === "custom" ? actualSize * 0.018
+    const strokeWidth = policy === "custom" ? actualSize * emojiStrokeRatio(text)
       : Math.max(hieroglyphStroke(text,actualSize),scriptStroke(text,actualSize));
     const spread = strokeWidth / 2;
     const left = Math.max(0, finite(metrics.actualBoundingBoxLeft, 0) + spread);

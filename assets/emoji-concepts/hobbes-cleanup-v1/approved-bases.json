@@ -1,0 +1,21 @@
+{
+  "status": "approved-as-emoji-bases",
+  "approvedOn": "2026-11-04",
+  "approval": "User accepted both cleaned images as the basis for emoji.",
+  "sprites": [
+    {
+      "emoji": "🐯",
+      "codepoint": "U+1F42F",
+      "file": "face-cli.png",
+      "role": "tiger face",
+      "sourceCutout": "../hobbes-source-v4/face.png"
+    },
+    {
+      "emoji": "🐅",
+      "codepoint": "U+1F405",
+      "file": "pounce.png",
+      "role": "tiger",
+      "sourceCutout": "../hobbes-source-v4/pounce.png"
+    }
+  ]
+}

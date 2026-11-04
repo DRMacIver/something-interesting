@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="530" viewBox="0 0 600 530">
+  <!-- Plain box planes reconstructed from the open-flap boxes on PDF pages
+       183 and 251. Sparse hand-set paths; no distressed surfaces or controls. -->
+  <g stroke="#211b16" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M113 196 L298 142 L486 201 L298 279 Z" fill="#9d6d3b"/>
+    <path d="M113 196 L298 260 L300 468 L117 391 Z" fill="#dca363"/>
+    <path d="M298 260 L486 201 L479 399 L300 468 Z" fill="#c28a50"/>
+    <path d="M113 196 L59 147 L245 99 L298 142 Z" fill="#edbb7b"/>
+    <path d="M298 142 L347 94 L535 151 L486 201 Z" fill="#e7b173"/>
+    <path d="M113 196 L298 260 L244 315 L58 248 Z" fill="#eab476"/>
+    <path d="M298 260 L486 201 L543 248 L354 315 Z" fill="#e0a96d"/>
+  </g>
+</svg>

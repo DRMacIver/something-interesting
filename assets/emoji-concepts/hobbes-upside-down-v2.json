@@ -1,0 +1,7 @@
+{
+  "source": "assets/emoji-concepts/hobbes-upside-down-v1.png",
+  "sourceSha256": "26c4b449749b463349580bf2f39356470d6f0c6246f811290276c3386cb68266",
+  "pdfPage": 246,
+  "method": "Tiny pinhole closing; Gaussian ink-edge smoothing sigma 0.65 / threshold 0.58; blue-fringe removal; no image generation or anatomy changes",
+  "opticalStrokeRatio": 0.002
+}

@@ -1,0 +1,26 @@
+{
+  "26C4": {
+    "file": "snow-goon-and-box-v2.png",
+    "crop": [
+      0,
+      0,
+      1086,
+      724
+    ]
+  },
+  "1F4E6": {
+    "file": "box-cli-v1.png"
+  },
+  "1F405": {
+    "file": "hobbes-upside-down-v2.png",
+    "strokeRatio": 0.002,
+    "resolution": 1024,
+    "curves": true,
+    "preserveGreys": true
+  },
+  "1F42F": {
+    "file": "hobbes-cleanup-v1/face-cli.png",
+    "resolution": 1024,
+    "curves": true
+  }
+}

@@ -13,6 +13,7 @@ test('a leading keycap combining mark is text rather than an unsupported emoji',
 });
 import {readFileSync} from 'node:fs';
 import emoji from '../js/emoji-manifest.js';
+const expectedCustomRun=text=>({text,emojiPolicy:'custom'});
 import {emojiPolicy,fontRuns,routeDirectionalRun} from '../js/emoji-routing.js';
 import {createTextMeasurer} from '../js/text-metrics.js';
 import {requiredFonts} from '../js/fonts.js';
@@ -529,7 +530,7 @@ test('reviewed signs retain qualification and compound medical routing',()=>{
 test('reviewed expressions route every qualification and retain earlier compounds',()=>{
  const sources=JSON.parse(readFileSync(new URL('../data/font-sources/noto-emoji-expressions-svg.json',import.meta.url),'utf8'));
  for(const source of sources.files) for(const text of source.include_sequences) {
-  assert.equal(emojiPolicy(text),'custom');assert.deepEqual(fontRuns(text),[{text,emojiPolicy:'custom'}]);
+  assert.equal(emojiPolicy(text),'custom');assert.deepEqual(fontRuns(text),[expectedCustomRun(text)]);
  }
  for(const text of ['😮‍💨','😵‍💫','⛓️‍💥']) assert.equal(emojiPolicy(text),'custom');
 });
@@ -621,7 +622,7 @@ test('unregistered regional pairs and incomplete flag clusters retain native rou
 test('all 34 reviewed book and mail qualification forms route as custom emoji',()=>{
  const spec=JSON.parse(readFileSync(new URL('../data/font-sources/noto-emoji-book-mail-svg.json',import.meta.url),'utf8'));
  const forms=spec.files.flatMap(e=>e.include_sequences??[]);assert.equal(forms.length,34);
- for(const text of forms){assert.equal(emojiPolicy(text),'custom',text);assert.deepEqual(fontRuns(text),[{text,emojiPolicy:'custom'}]);}
+ for(const text of forms){assert.equal(emojiPolicy(text),'custom',text);assert.deepEqual(fontRuns(text),[expectedCustomRun(text)]);}
 });
 
 test('book and mail boundaries preserve exact routing without capturing malformed clusters',()=>{
@@ -646,7 +647,7 @@ test('all 79 final object forms route as exact custom emoji',()=>{
  const families=['office-locks','tools-instruments','places-weather','other-objects','globes','phoenix','air-water','road-infrastructure','ground-vehicles'];
  const forms=families.flatMap(family=>JSON.parse(readFileSync(new URL(`../data/font-sources/noto-emoji-${family}-svg.json`,import.meta.url),'utf8')).files.flatMap(e=>e.include_sequences??[]));
  assert.equal(forms.length,79);
- for(const text of forms){assert.equal(emojiPolicy(text),'custom',text);assert.deepEqual(fontRuns(text),[{text,emojiPolicy:'custom'}]);}
+ for(const text of forms){assert.equal(emojiPolicy(text),'custom',text);assert.deepEqual(fontRuns(text),[expectedCustomRun(text)]);}
  for(const text of ['🐦‍🔥‍🔥','🚲🏻','🌏‍🌍','🚑️‍🚒'])assert.equal(emojiPolicy(text),'native',text);
  assert.ok(fontRuns('🐦‍🔥🐦🔥🚲⛽🛼🇬🇧').every(r=>r.emojiPolicy==='custom'));
 });

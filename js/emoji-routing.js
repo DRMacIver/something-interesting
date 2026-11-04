@@ -11,6 +11,11 @@ import { standaloneFontSpans } from './standalone-fonts.js';
 import { formatFontSpans, hasFormatSigns } from './format-fonts.js';
 
 const supported = new Set(emoji.sequences);
+const opticsFor = text => emoji.customOptics?.[text.replace(/[\u202a-\u202e\u2066-\u2069]/gu,'')];
+export function emojiStrokeRatio(text) {
+  return opticsFor(text)?.strokeRatio ?? .018;
+}
+export const emojiScaleFactor = text => opticsFor(text)?.scale ?? 1.4;
 const spacedTone = /^([\p{Zs}])([\u{1f3fb}-\u{1f3ff}])$/u;
 
 // GB9 groups a modifier with a preceding space. A space is not a skin-tone

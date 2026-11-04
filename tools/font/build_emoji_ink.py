@@ -1,19 +1,23 @@
 """Derive matching monochrome outlines for optical emoji strokes on canvas."""
-import hashlib,json
+import hashlib,json,copy
 from pathlib import Path
 from fontTools.ttLib import TTFont
 ROOT=Path(__file__).resolve().parents[2]
 
 
-def build_ink(output_root=None):
+def build_ink(output_root=None,source_font=None):
     output_root=ROOT if output_root is None else Path(output_root)
-    font=TTFont(output_root/'assets/fonts/dad-emoji.woff2',recalcTimestamp=False)
+    font=copy.deepcopy(source_font) if source_font is not None else TTFont(output_root/'assets/fonts/dad-emoji.woff2',recalcTimestamp=False)
     for tag in ['COLR','CPAL']:del font[tag]
     for record in font['name'].names:
         if record.nameID in {1,3,4,6,16}:
             text=record.toUnicode().replace('Dad Emoji','Dad Emoji Ink').replace('DadEmoji','DadEmojiInk')
             record.string=text.encode(record.getEncoding())
-    path=output_root/'assets/fonts/dad-emoji-ink.woff2';font.save(path)
+    path=output_root/'assets/fonts/dad-emoji-ink.woff2'
+    if source_font is not None:
+        from emoji_font_assembly import save_webfont
+        save_webfont(font,path)
+    else:font.save(path)
     return dict(family='Dad Emoji Ink',file=str(path.relative_to(output_root)),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),bytes=path.stat().st_size)
 
 

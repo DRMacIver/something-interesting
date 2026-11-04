@@ -602,6 +602,7 @@ function drawStroke(ctx, { lines, speaker }, panel, meta, cap, balloons) {
     maxLength: STROKE.length * cap,
     minLength: 0.4 * cap,
     gap: BALLOON.tailGap * cap,
+    sidewaysPenalty: 3 * cap,
     // Like a tail, it keeps off the other balloons, and reaches all the way
     // to a speaker left far below.
     isFree: (p) => openAt(panel, meta, p) && others(p),
@@ -693,6 +694,7 @@ function drawBalloons(ctx, panel, meta, speeches, cap, topRequiresRight=false) {
       blockedPenalty: 2 * cap,
       clearSight: 1.5 * cap,
       levelPenalty: 1.5 * cap,
+      sidewaysPenalty: speech.who === 'dad' ? 3 * cap : 0,
       // Calvin's tail hooks round towards him, as in the original.
       hookBonus: speech.who === "calvin" ? CALVIN_HOOK * cap : 0,
       reach: BALLOON.tailReach * cap,
