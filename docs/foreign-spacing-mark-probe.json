@@ -1,0 +1,135 @@
+{
+  "status": "Historical loading-only pre-fix probe. Nonjoining spacing-vowel variants now preserve native prefixes and paint unsupported tails as native fragments. Loading alone did not prove paint: see docs/spacing-variation-review.json for actual raster/source evidence and limits.",
+  "probes": [
+    {
+      "text": "\ud835\udccf\ufe02\u0903",
+      "mark": 2307,
+      "expectedNativeFamily": "Dad Math Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Math Variants"
+      ],
+      "nativeFamilyLoaded": true
+    },
+    {
+      "text": "\u8c48\ufe00\u0903",
+      "mark": 2307,
+      "expectedNativeFamily": "Dad CJK Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script 19ff2d6f18f8",
+        "Dad Script c42aa33047b1"
+      ],
+      "nativeFamilyLoaded": false
+    },
+    {
+      "text": "\ud835\udccf\ufe02\u093e",
+      "mark": 2366,
+      "expectedNativeFamily": "Dad Math Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Math Variants"
+      ],
+      "nativeFamilyLoaded": true
+    },
+    {
+      "text": "\u8c48\ufe00\u093e",
+      "mark": 2366,
+      "expectedNativeFamily": "Dad CJK Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script 19ff2d6f18f8",
+        "Dad Script c42aa33047b1"
+      ],
+      "nativeFamilyLoaded": false
+    },
+    {
+      "text": "\ud835\udccf\ufe02\u09bf",
+      "mark": 2495,
+      "expectedNativeFamily": "Dad Math Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script c5b1e8b8b27e",
+        "Dad Script 6b5f778a9ecc"
+      ],
+      "nativeFamilyLoaded": false
+    },
+    {
+      "text": "\u8c48\ufe00\u09bf",
+      "mark": 2495,
+      "expectedNativeFamily": "Dad CJK Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script c42aa33047b1",
+        "Dad Script c5b1e8b8b27e"
+      ],
+      "nativeFamilyLoaded": false
+    },
+    {
+      "text": "\ud835\udccf\ufe02\u0bc6",
+      "mark": 3014,
+      "expectedNativeFamily": "Dad Math Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script 6b5f778a9ecc",
+        "Dad Script 1bdaddc5cf48"
+      ],
+      "nativeFamilyLoaded": false
+    },
+    {
+      "text": "\u8c48\ufe00\u0bc6",
+      "mark": 3014,
+      "expectedNativeFamily": "Dad CJK Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script c42aa33047b1",
+        "Dad Script 1bdaddc5cf48"
+      ],
+      "nativeFamilyLoaded": false
+    },
+    {
+      "text": "\ud835\udccf\ufe02\u102b",
+      "mark": 4139,
+      "expectedNativeFamily": "Dad Math Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Math Variants",
+        "Dad Script 54ad4c07122e"
+      ],
+      "nativeFamilyLoaded": true
+    },
+    {
+      "text": "\u8c48\ufe00\u102b",
+      "mark": 4139,
+      "expectedNativeFamily": "Dad CJK Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad CJK Variants",
+        "Dad Script 54ad4c07122e"
+      ],
+      "nativeFamilyLoaded": true
+    },
+    {
+      "text": "\ud835\udccf\ufe02\u17be",
+      "mark": 6078,
+      "expectedNativeFamily": "Dad Math Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script 0b7d51ba5bbc",
+        "Dad Script 6b5f778a9ecc"
+      ],
+      "nativeFamilyLoaded": false
+    },
+    {
+      "text": "\u8c48\ufe00\u17be",
+      "mark": 6078,
+      "expectedNativeFamily": "Dad CJK Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script c42aa33047b1",
+        "Dad Script 0b7d51ba5bbc"
+      ],
+      "nativeFamilyLoaded": false
+    }
+  ]
+}

@@ -1,0 +1,7753 @@
+{
+  "status": "reference inventory; renderer subset tracked in egyptian-insertion-build.json",
+  "source_commit": "d06068439ff23fff99bfd058a5ab44a43183ecd9",
+  "license": "MIT (metadata), OFL (font)",
+  "coordinate_system": {
+    "hfu": 315,
+    "vfu": 310,
+    "vbase": -284,
+    "sb": 105,
+    "chu": 6,
+    "vhu": 6
+  },
+  "scope_note": "Font-specific cells and offsets. Do not apply to a different font or assume a generic corner rectangle.",
+  "signs": 188,
+  "mapped_signs": 185,
+  "areas": 328,
+  "entries": [
+    {
+      "source_glyph": "A14",
+      "codepoints": [
+        77840
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -924,
+        -284,
+        923,
+        1472
+      ],
+      "areas": [
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A16",
+      "codepoints": [
+        77843
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -611,
+        -284,
+        610,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A17",
+      "codepoints": [
+        77844
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -728,
+        -284,
+        728,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "x",
+          "offset_twentieths": 1,
+          "source_value": "21x1"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A18",
+      "codepoints": [
+        77846
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -580,
+        -284,
+        579,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A26",
+      "codepoints": [
+        77854
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -578,
+        -284,
+        578,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A28",
+      "codepoints": [
+        77856
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -670,
+        -284,
+        669,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "13y2"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "13y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A30",
+      "codepoints": [
+        77858
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -525,
+        -284,
+        525,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "14"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A40",
+      "codepoints": [
+        77869
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -577,
+        -284,
+        576,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A41",
+      "codepoints": [
+        77871
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -519,
+        -284,
+        519,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A43",
+      "codepoints": [
+        77874
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -493,
+        -284,
+        493,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A45",
+      "codepoints": [
+        77877
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -528,
+        -284,
+        528,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A50",
+      "codepoints": [
+        77883
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -677,
+        -284,
+        677,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        }
+      ]
+    },
+    {
+      "source_glyph": "A55",
+      "codepoints": [
+        77888
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        898
+      ],
+      "areas": [
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        }
+      ]
+    },
+    {
+      "source_glyph": "B1",
+      "codepoints": [
+        77904
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -543,
+        -284,
+        543,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "C1",
+      "codepoints": [
+        77914
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -484,
+        -284,
+        483,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "C2a",
+      "codepoints": [
+        77916
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -471,
+        -284,
+        470,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            3,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "C9",
+      "codepoints": [
+        77925
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -466,
+        -284,
+        466,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            3,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "C10",
+      "codepoints": [
+        77926
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -444,
+        -284,
+        443,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            3,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D3",
+      "codepoints": [
+        77944
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        621
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D17",
+      "codepoints": [
+        77959
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        669
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            3,
+            2
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D28",
+      "codepoints": [
+        77971
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -682,
+        -284,
+        682,
+        1079
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "24"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D28o",
+      "codepoints": [],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -681.916748046875,
+        -283.8682861328125,
+        681.916748046875,
+        1078.96533203125
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        },
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "24"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D32",
+      "codepoints": [
+        77976
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -690,
+        -284,
+        689,
+        1431
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            5,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "24"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D36",
+      "codepoints": [
+        77981
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        398
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            5,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "51"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "43"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D40",
+      "codepoints": [
+        77985
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        462
+      ],
+      "areas": [
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D41",
+      "codepoints": [
+        77986
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        524
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D42",
+      "codepoints": [
+        77987
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        445
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            5,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "51"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D45",
+      "codepoints": [
+        77990
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        687
+      ],
+      "areas": [
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D52",
+      "codepoints": [
+        78008
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        498
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D53",
+      "codepoints": [
+        78010
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        593
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": "x",
+          "offset_twentieths": 1,
+          "source_value": "41x1"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D54",
+      "codepoints": [
+        78011
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -668,
+        -284,
+        668,
+        745
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            5,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D55",
+      "codepoints": [
+        78013
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -668,
+        -284,
+        668,
+        745
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D56",
+      "codepoints": [
+        78014
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -454,
+        -284,
+        454,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            3,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            5
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "15"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D58",
+      "codepoints": [
+        78016
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -538,
+        -284,
+        537,
+        1477
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "24"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D60",
+      "codepoints": [
+        78018
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -611,
+        -284,
+        610,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "D66",
+      "codepoints": [
+        78024
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -943,
+        -284,
+        942,
+        849
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E1",
+      "codepoints": [
+        78034
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        941,
+        1368
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E3",
+      "codepoints": [
+        78036
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1379
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E6",
+      "codepoints": [
+        78039
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E7",
+      "codepoints": [
+        78040
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E8",
+      "codepoints": [
+        78041
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1482
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E8a",
+      "codepoints": [
+        78042
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -886,
+        -284,
+        885,
+        1575
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E9",
+      "codepoints": [
+        78043
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1232
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            5,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "51"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E10",
+      "codepoints": [
+        78045
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1232
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E11",
+      "codepoints": [
+        78046
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -285,
+        942,
+        1232
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E15",
+      "codepoints": [
+        78050
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            5,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "52"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E16",
+      "codepoints": [
+        78051
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E16a",
+      "codepoints": [
+        78052
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E17",
+      "codepoints": [
+        78053
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1316
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E17a",
+      "codepoints": [
+        78054
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -876,
+        -284,
+        875,
+        1512
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E18",
+      "codepoints": [
+        78055
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E19",
+      "codepoints": [
+        78056
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -872,
+        -284,
+        871,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E20",
+      "codepoints": [
+        78057
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E20a",
+      "codepoints": [
+        78058
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -773,
+        -284,
+        772,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E21",
+      "codepoints": [
+        78059
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        979
+      ],
+      "areas": [
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E22",
+      "codepoints": [
+        78060
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -285,
+        942,
+        810
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E23",
+      "codepoints": [
+        78061
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        612
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E27",
+      "codepoints": [
+        78065
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -524,
+        -284,
+        524,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E29",
+      "codepoints": [
+        78068
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -773,
+        -284,
+        772,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E31",
+      "codepoints": [
+        78070
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -839,
+        -284,
+        838,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E32",
+      "codepoints": [
+        78071
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1198
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E34",
+      "codepoints": [
+        78073
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        894
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "12y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E38",
+      "codepoints": [
+        78077
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1223
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "E100",
+      "codepoints": [
+        78044
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        921
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F1",
+      "codepoints": [
+        78078
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -508,
+        -284,
+        507,
+        791
+      ],
+      "areas": [
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F4",
+      "codepoints": [
+        78082
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        921
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "33"
+        },
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "33"
+        },
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            3,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "33"
+        },
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            5,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        },
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            5,
+            2
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            3,
+            2
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F5",
+      "codepoints": [
+        78083
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -747,
+        -284,
+        747,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F6",
+      "codepoints": [
+        78084
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -819,
+        -284,
+        819,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F13",
+      "codepoints": [
+        78091
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -874,
+        -284,
+        873,
+        898
+      ],
+      "areas": [
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "24"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F13a",
+      "codepoints": [
+        78092
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -821,
+        -284,
+        820,
+        612
+      ],
+      "areas": [
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F16",
+      "codepoints": [
+        78095
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        787
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F18",
+      "codepoints": [
+        78097
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        302
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F19",
+      "codepoints": [
+        78098
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        612
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F20",
+      "codepoints": [
+        78099
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1232
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            5,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "54"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "43"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "33"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            3,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            3,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F29",
+      "codepoints": [
+        78109
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -773,
+        -284,
+        772,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F30",
+      "codepoints": [
+        78110
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1058
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F39",
+      "codepoints": [
+        78122
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -768,
+        -284,
+        767,
+        1232
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F40",
+      "codepoints": [
+        78123
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1449
+      ],
+      "areas": [
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F45",
+      "codepoints": [
+        78128
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -515,
+        -284,
+        515,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "14"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "14"
+        }
+      ]
+    },
+    {
+      "source_glyph": "F45a",
+      "codepoints": [
+        78129
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -528,
+        -284,
+        527,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "14"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "14"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G1",
+      "codepoints": [
+        78143
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -888,
+        -284,
+        888,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G2",
+      "codepoints": [
+        78144
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "12y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G3",
+      "codepoints": [
+        78145
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -887,
+        -284,
+        886,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 5,
+          "source_value": "21y5"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G4",
+      "codepoints": [
+        78146
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -887,
+        -284,
+        886,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "12y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G5",
+      "codepoints": [
+        78147
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1560
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "12y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G6",
+      "codepoints": [
+        78148
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -924,
+        -284,
+        924,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "12y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G6a",
+      "codepoints": [
+        78149
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G7",
+      "codepoints": [
+        78150
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -663,
+        -284,
+        662,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G8",
+      "codepoints": [
+        78153
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -707,
+        -284,
+        706,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G9",
+      "codepoints": [
+        78154
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -758,
+        -284,
+        758,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G10",
+      "codepoints": [
+        78155
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G11a",
+      "codepoints": [
+        78157
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -859,
+        -284,
+        859,
+        1362
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G13",
+      "codepoints": [
+        78159
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1388
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "33"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G14",
+      "codepoints": [
+        78160
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 1,
+          "source_value": "22y1"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G15",
+      "codepoints": [
+        78161
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G17",
+      "codepoints": [
+        78163
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -892,
+        -284,
+        892,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "12y2"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G18",
+      "codepoints": [
+        78164
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -1072,
+        -283,
+        1072,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "12y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G20",
+      "codepoints": [
+        78166
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1575
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G21",
+      "codepoints": [
+        78168
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "21y2"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G22",
+      "codepoints": [
+        78169
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -944,
+        -284,
+        943,
+        1232
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "21y2"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G23",
+      "codepoints": [
+        78170
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1421
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "21y2"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G25",
+      "codepoints": [
+        78172
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1402
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            3,
+            3
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            2,
+            2
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G26",
+      "codepoints": [
+        78173
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -768,
+        -284,
+        767,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G26a",
+      "codepoints": [
+        78174
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G27",
+      "codepoints": [
+        78175
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1084
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 3,
+          "source_value": "22y3"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G28",
+      "codepoints": [
+        78176
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -944,
+        -284,
+        944,
+        882
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 4,
+          "source_value": "22y4"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G31",
+      "codepoints": [
+        78179
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -935,
+        -284,
+        935,
+        1434
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G32",
+      "codepoints": [
+        78180
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G33",
+      "codepoints": [
+        78181
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1506
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G34",
+      "codepoints": [
+        78182
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -706,
+        -284,
+        706,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 1,
+          "source_value": "22y1"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G35",
+      "codepoints": [
+        78183
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1201
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 3,
+          "source_value": "21y3"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G36",
+      "codepoints": [
+        78184
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        969
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 4,
+          "source_value": "11y4"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G37",
+      "codepoints": [
+        78186
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1106
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 4,
+          "source_value": "11y4"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G38",
+      "codepoints": [
+        78188
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -941,
+        -284,
+        940,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 1,
+          "source_value": "21y1"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G39",
+      "codepoints": [
+        78189
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 1,
+          "source_value": "21y1"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            3
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            2
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            3,
+            3
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            2,
+            2
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            4,
+            2
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            2,
+            2
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G41",
+      "codepoints": [
+        78191
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1347
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G42",
+      "codepoints": [
+        78192
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1064
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 3,
+          "source_value": "21y3"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G43",
+      "codepoints": [
+        78193
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -611,
+        -284,
+        611,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "11y2"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G44",
+      "codepoints": [
+        78195
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -817,
+        -284,
+        816,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "11y2"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G45",
+      "codepoints": [
+        78196
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -901,
+        -284,
+        901,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "22y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G47",
+      "codepoints": [
+        78199
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1502
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G50",
+      "codepoints": [
+        78202
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -933,
+        -284,
+        932,
+        1197
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "12y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "G53",
+      "codepoints": [
+        78205
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -848,
+        -284,
+        848,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        }
+      ]
+    },
+    {
+      "source_glyph": "I1",
+      "codepoints": [
+        78216
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            5,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "52"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            5,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "52"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "I3",
+      "codepoints": [
+        78218
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        317
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "I5",
+      "codepoints": [
+        78220
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        612
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "I7",
+      "codepoints": [
+        78223
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -1049,
+        -284,
+        1048,
+        1291
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "I8",
+      "codepoints": [
+        78224
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -768,
+        -284,
+        767,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "I9",
+      "codepoints": [
+        78225
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        301
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "I10",
+      "codepoints": [
+        78227
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1575
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            5,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "54"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "43"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            5,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "51"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            3,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            4
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            3,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            3,
+            5
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            3,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "I10a",
+      "codepoints": [
+        78228
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1575
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            5,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "54"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "43"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            5,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "51"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            3,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "I11",
+      "codepoints": [
+        78229
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1575
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            5,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "54"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "43"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            5,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "51"
+        },
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            3,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "L1",
+      "codepoints": [
+        78243
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -611,
+        -284,
+        611,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "M9",
+      "codepoints": [
+        78264
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -943,
+        -284,
+        942,
+        1301
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            5,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "52"
+        }
+      ]
+    },
+    {
+      "source_glyph": "M10",
+      "codepoints": [
+        78265
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -768,
+        -284,
+        767,
+        1232
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            5
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        }
+      ]
+    },
+    {
+      "source_glyph": "M26",
+      "codepoints": [
+        78295
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -611,
+        -284,
+        611,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "M27",
+      "codepoints": [
+        78296
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "N2",
+      "codepoints": [
+        78320
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "N3",
+      "codepoints": [
+        78321
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -768,
+        -284,
+        767,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "N11",
+      "codepoints": [
+        78329
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        302
+      ],
+      "areas": [
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "N36",
+      "codepoints": [
+        78360
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        179
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "N37",
+      "codepoints": [
+        78361
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        131
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            5,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "51"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O1",
+      "codepoints": [
+        78416
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -768,
+        -284,
+        767,
+        525
+      ],
+      "areas": [
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            5,
+            3
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        },
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            5,
+            3
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O6",
+      "codepoints": [
+        78423
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -383,
+        -284,
+        383,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            3,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 2,
+          "source_value": "23y2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O13a",
+      "codepoints": [],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            3
+          ],
+          "offset_axis": "x",
+          "offset_twentieths": 1,
+          "source_value": "33x1"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O14",
+      "codepoints": [
+        78440
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -860,
+        -284,
+        859,
+        1431
+      ],
+      "areas": [
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "44"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O16",
+      "codepoints": [
+        78442
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        921
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O17",
+      "codepoints": [
+        78443
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -882,
+        -284,
+        881,
+        921
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O18",
+      "codepoints": [
+        78444
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -906,
+        -284,
+        905,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "43"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O26",
+      "codepoints": [
+        78456
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -538,
+        -284,
+        537,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "24"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O32",
+      "codepoints": [
+        78464
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -611,
+        -284,
+        611,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        },
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "13"
+        }
+      ]
+    },
+    {
+      "source_glyph": "O36",
+      "codepoints": [
+        78469
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -516,
+        -284,
+        515,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "14"
+        }
+      ]
+    },
+    {
+      "source_glyph": "Q2",
+      "codepoints": [
+        78505
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        921
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "R8",
+      "codepoints": [
+        78521
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -412,
+        -284,
+        412,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            3,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "24"
+        }
+      ]
+    },
+    {
+      "source_glyph": "R12",
+      "codepoints": [
+        78526
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -860,
+        -284,
+        859,
+        941
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "R13",
+      "codepoints": [
+        78527
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -768,
+        -284,
+        767,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            5,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "S1",
+      "codepoints": [
+        78545
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -611,
+        -284,
+        611,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "22"
+        }
+      ]
+    },
+    {
+      "source_glyph": "S2",
+      "codepoints": [
+        78546
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "S14",
+      "codepoints": [
+        78560
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        943,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "x",
+          "offset_twentieths": 2,
+          "source_value": "22x2"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "x",
+          "offset_twentieths": 2,
+          "source_value": "22x2"
+        }
+      ]
+    },
+    {
+      "source_glyph": "S22",
+      "codepoints": [
+        78571
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        935
+      ],
+      "areas": [
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        }
+      ]
+    },
+    {
+      "source_glyph": "S28",
+      "codepoints": [
+        78579
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "23"
+        }
+      ]
+    },
+    {
+      "source_glyph": "T5",
+      "codepoints": [
+        78604
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "T6",
+      "codepoints": [
+        78605
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "T7a",
+      "codepoints": [
+        78607
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -454,
+        -284,
+        454,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            3,
+            6
+          ],
+          "insertion_cell": [
+            2,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "24"
+        }
+      ]
+    },
+    {
+      "source_glyph": "T14",
+      "codepoints": [
+        78617
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -264,
+        -284,
+        263,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            2,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "14"
+        }
+      ]
+    },
+    {
+      "source_glyph": "T32",
+      "codepoints": [
+        78636
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1132
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            2
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 4,
+          "source_value": "22y4"
+        }
+      ]
+    },
+    {
+      "source_glyph": "U1",
+      "codepoints": [
+        78643
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "34"
+        }
+      ]
+    },
+    {
+      "source_glyph": "U2",
+      "codepoints": [
+        78644
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1130
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            3,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "34"
+        },
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "U15",
+      "codepoints": [
+        78659
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        560
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            4,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "42"
+        }
+      ]
+    },
+    {
+      "source_glyph": "U19",
+      "codepoints": [
+        78663
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        621
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "U21",
+      "codepoints": [
+        78665
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        308
+      ],
+      "areas": [
+        {
+          "control": 78900,
+          "name": "te",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            3,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "31"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "V6",
+      "codepoints": [
+        78705
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -383,
+        -284,
+        383,
+        1087
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            2,
+            3
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "V7",
+      "codepoints": [
+        78706
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -383,
+        -284,
+        383,
+        1087
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            2,
+            3
+          ],
+          "insertion_cell": [
+            1,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "11"
+        }
+      ]
+    },
+    {
+      "source_glyph": "V10",
+      "codepoints": [
+        78711
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        745
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            5,
+            3
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "V10n",
+      "codepoints": [],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -515.0,
+        -283.885009765625,
+        514.0,
+        1599.885009765625
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            4
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "34"
+        }
+      ]
+    },
+    {
+      "source_glyph": "V12",
+      "codepoints": [
+        78716
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        935
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            5,
+            3
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "V15",
+      "codepoints": [
+        78721
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1082
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            5
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": "y",
+          "offset_twentieths": 6,
+          "source_value": "21y6"
+        }
+      ]
+    },
+    {
+      "source_glyph": "V22",
+      "codepoints": [
+        78740
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        921
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            4,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "43"
+        }
+      ]
+    },
+    {
+      "source_glyph": "V23",
+      "codepoints": [
+        78741
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        921
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            4,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "43"
+        }
+      ]
+    },
+    {
+      "source_glyph": "V23a",
+      "codepoints": [
+        78742
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -862,
+        -284,
+        861,
+        486
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            4,
+            3
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "43"
+        }
+      ]
+    },
+    {
+      "source_glyph": "W4",
+      "codepoints": [
+        78771
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            6
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "Z6",
+      "codepoints": [
+        78833
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -933,
+        -284,
+        932,
+        779
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            6,
+            4
+          ],
+          "insertion_cell": [
+            3,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "32"
+        }
+      ]
+    },
+    {
+      "source_glyph": "Z10",
+      "codepoints": [
+        78837
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        612
+      ],
+      "areas": [
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        },
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "Z11",
+      "codepoints": [
+        78838
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -611,
+        -284,
+        611,
+        1576
+      ],
+      "areas": [
+        {
+          "control": 78899,
+          "name": "bs",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        },
+        {
+          "control": 78901,
+          "name": "be",
+          "container_cell": [
+            4,
+            6
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    },
+    {
+      "source_glyph": "J7",
+      "codepoints": [
+        78867
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        445
+      ],
+      "areas": [
+        {
+          "control": 78898,
+          "name": "ts",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            4,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "41"
+        },
+        {
+          "control": 78906,
+          "name": "ti",
+          "container_cell": [
+            6,
+            3
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "J13",
+      "codepoints": [
+        78875
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        147
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "J15",
+      "codepoints": [
+        78877
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -942,
+        -284,
+        942,
+        157
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            6,
+            2
+          ],
+          "insertion_cell": [
+            2,
+            1
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "21"
+        }
+      ]
+    },
+    {
+      "source_glyph": "J19",
+      "codepoints": [
+        78881
+      ],
+      "source_glyph_present": true,
+      "source_bounds": [
+        -514,
+        -284,
+        513,
+        921
+      ],
+      "areas": [
+        {
+          "control": 78905,
+          "name": "mi",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        },
+        {
+          "control": 78907,
+          "name": "bi",
+          "container_cell": [
+            4,
+            4
+          ],
+          "insertion_cell": [
+            1,
+            2
+          ],
+          "offset_axis": null,
+          "offset_twentieths": 0,
+          "source_value": "12"
+        }
+      ]
+    }
+  ]
+}

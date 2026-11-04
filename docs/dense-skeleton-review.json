@@ -1,0 +1,845 @@
+{
+  "date": "2026-11-03",
+  "status": "Historical accepted offline style oracle; scalable production candidate now documented in docs/dense-native-adapter-review.json.",
+  "selectedDirection": {
+    "module": "tools/font/skeleton_fluid_dense_pen.py",
+    "kernel": "tools/font/dense_skeleton_kernel.py",
+    "settings": {
+      "normalization": "component median native medial radius",
+      "pressureVariation": 0.18,
+      "radiusSmoothingSigmaPixels": 5,
+      "counterClearanceGrowthCap": 0.25,
+      "nativeTipCap": "max(nativeRadius*1.35, componentMedian*.45)",
+      "flexAmplitudes": [
+        0.005,
+        0.003,
+        0
+      ],
+      "resolution": 1024,
+      "minimumComponentAreaRatio": 0.75,
+      "maximumComponentAreaRatio": 1.2,
+      "minimumCounterOverlap": 0.75,
+      "branchesPruned": 0
+    },
+    "rationale": "Finer, smoother ink with bowed contours; preserve extreme rare details instead of forcing every glyph toward monoline."
+  },
+  "reviewedArtifact": "output/font-review/skeleton-fluid-dense-pen/guarded-comparison.png",
+  "artifactSha256": "f8fe694a32417151330a1596b30aa35a1b0cdb8b0dfbb1bedbc570e393c15ec6",
+  "completeFieldChecks": [
+    {
+      "sourceNumber": 176,
+      "size": 384,
+      "sourceTopology": [
+        11,
+        5
+      ],
+      "candidateTopology": [
+        11,
+        5
+      ],
+      "status": "pass",
+      "checks": {
+        "componentAreaRatios": [
+          1.0160294266527183,
+          0.8652769135034225,
+          0.9984825493171472,
+          1.011983223487118,
+          0.969589565463954,
+          0.9681356455911321,
+          0.8753186220959872,
+          1.0085127339243,
+          0.9579461389891039,
+          0.9847110529268749,
+          0.9634185820653933
+        ],
+        "counterOverlap": [
+          0.9863554757630162,
+          0.979342956694873,
+          0.9466868120008634,
+          0.9391449194891727,
+          0.9859134889015367
+        ],
+        "minimumComponentAreaRatio": 0.75
+      }
+    },
+    {
+      "sourceNumber": 183,
+      "size": 384,
+      "sourceTopology": [
+        46,
+        6
+      ],
+      "candidateTopology": [
+        46,
+        6
+      ],
+      "status": "pass",
+      "checks": {
+        "componentAreaRatios": [
+          0.8463879073419709,
+          0.8346946352329683,
+          1.0214241308402277,
+          0.9552238805970149,
+          0.8973375278140105,
+          1.0132921908378827,
+          1.0,
+          0.8445107585990262,
+          1.0,
+          0.8673076923076923,
+          1.0073307460112118,
+          0.8566775244299675,
+          0.8033112582781456,
+          0.9164810690423163,
+          0.8082505729564553,
+          0.9718954248366013,
+          0.8582995951417004,
+          0.821219076766131,
+          1.1362507012903742,
+          1.028231910384499,
+          0.9946933962264151,
+          0.9619771863117871,
+          0.8486170563055647,
+          0.8547497879558948,
+          1.0904098014364174,
+          0.7654320987654321,
+          0.8611509318042188,
+          0.800702370500439,
+          0.9874758462749589,
+          1.0,
+          1.0,
+          0.8452685421994884,
+          0.9350350989151245,
+          0.9138333009520109,
+          0.882426360459311,
+          0.9019443513241703,
+          1.0,
+          1.0572239300070938,
+          0.9472433460076045,
+          1.0132078586759121,
+          1.1894971513500123,
+          0.8952402641767251,
+          1.0,
+          0.8838428922115599,
+          1.1150153609831028,
+          1.018758730792257
+        ],
+        "counterOverlap": [
+          0.7784,
+          0.8069565217391305,
+          1.0,
+          0.9331730769230769,
+          1.0,
+          1.0
+        ],
+        "minimumComponentAreaRatio": 0.75
+      }
+    },
+    {
+      "sourceNumber": 197,
+      "size": 384,
+      "sourceTopology": [
+        16,
+        5
+      ],
+      "candidateTopology": [
+        16,
+        5
+      ],
+      "status": "pass",
+      "checks": {
+        "componentAreaRatios": [
+          1.123982540993276,
+          0.9954722872755659,
+          0.9978675007108331,
+          1.0494635193133046,
+          1.1271507412617683,
+          0.8498772360575236,
+          0.854679802955665,
+          1.0503586800573887,
+          0.9605367008681925,
+          0.9069563949248942,
+          0.8144972720187061,
+          0.9636534839924671,
+          0.7970511708586296,
+          0.8781785925487877,
+          1.0,
+          0.90084522402981
+        ],
+        "counterOverlap": [
+          0.9618852951785499,
+          0.9076809453471196,
+          0.8703852327447833,
+          1.0,
+          0.968228325255789
+        ],
+        "minimumComponentAreaRatio": 0.75
+      }
+    },
+    {
+      "sourceNumber": 198,
+      "size": 384,
+      "sourceTopology": [
+        36,
+        20
+      ],
+      "candidateTopology": [
+        36,
+        20
+      ],
+      "status": "pass",
+      "checks": {
+        "componentAreaRatios": [
+          0.9149854887803497,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0611239414934566,
+          0.9635584482536409,
+          1.0229188140423209,
+          1.0,
+          0.7946756729909605,
+          0.924487594390507,
+          1.0,
+          0.7679403541472507,
+          0.9473355537052456,
+          1.0867816091954023,
+          1.0,
+          1.0,
+          1.0,
+          0.8563548102383054,
+          0.9968294229549778,
+          0.9694244604316546,
+          0.9218472468916519,
+          0.9432404540763674,
+          1.0,
+          0.8851674641148325,
+          0.8183254344391785,
+          0.9492084432717678,
+          1.0,
+          0.9125989920806336,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "counterOverlap": [
+          0.9306264027749439,
+          0.9802155096272743,
+          1.0,
+          0.924,
+          1.0,
+          0.9846736386584926,
+          1.0,
+          1.0,
+          1.0,
+          0.9265974557683871,
+          1.0,
+          0.9192380952380952,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9659296028880866,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "minimumComponentAreaRatio": 0.75
+      }
+    },
+    {
+      "sourceNumber": 199,
+      "size": 384,
+      "sourceTopology": [
+        46,
+        14
+      ],
+      "candidateTopology": [
+        46,
+        14
+      ],
+      "status": "pass",
+      "checks": {
+        "componentAreaRatios": [
+          0.8175857083849649,
+          0.8536031776054473,
+          1.0,
+          0.8346693386773547,
+          0.8362427265170407,
+          1.0,
+          1.016976556184317,
+          1.0,
+          0.9647757526110997,
+          0.9511876075731498,
+          0.8535995796111403,
+          1.0,
+          1.0,
+          0.9095697980684812,
+          1.0081702642727457,
+          1.0,
+          0.9182813816343723,
+          0.9840166782487839,
+          0.9663162924032489,
+          0.8982929278439248,
+          0.9558323895809739,
+          1.0,
+          0.8960078055126433,
+          0.8980826412385933,
+          0.9510747185261003,
+          0.8513745704467354,
+          0.784957627118644,
+          0.8740801308258381,
+          1.0,
+          0.8376888379752273,
+          0.9224664709150068,
+          1.0,
+          1.0,
+          0.7868852459016393,
+          0.9885103809715783,
+          0.8718112244897959,
+          1.0,
+          0.7561136814276272,
+          0.9231678486997635,
+          0.9761042722664736,
+          0.7504587155963303,
+          0.9205882352941176,
+          0.9010356731875719,
+          0.8258547008547008,
+          1.011572856391373,
+          0.8846657929226737
+        ],
+        "counterOverlap": [
+          1.0,
+          0.9583789704271632,
+          1.0,
+          1.0,
+          1.0,
+          0.9227799227799228,
+          0.9637404580152672,
+          0.9036672140120416,
+          0.9434523809523809,
+          0.9782919847328244,
+          0.9177631578947368,
+          1.0,
+          0.9768606870229007,
+          0.9068767908309455
+        ],
+        "minimumComponentAreaRatio": 0.75
+      }
+    }
+  ],
+  "sources": [
+    {
+      "number": 176,
+      "source": "assets/fonts/scripts/042e43ff081e.woff2",
+      "sample": "𘬀𘭃𘮆𘯉𘰌𘱏𘲒𘳕",
+      "glyphs": 8,
+      "adapted": 8,
+      "nativeRetained": 0,
+      "retentions": [],
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GDEF": true,
+        "hmtx": true
+      }
+    },
+    {
+      "number": 183,
+      "source": "assets/fonts/scripts/b18cf2344e84.woff2",
+      "sample": "𗏻𗒍𗔟𗖱𗙄𗛖𗝨𗟺",
+      "glyphs": 8,
+      "adapted": 7,
+      "nativeRetained": 1,
+      "retentions": [
+        {
+          "glyph": "u1748D",
+          "status": "retained-field-guard",
+          "strength": 1,
+          "sourceTopology": [
+            6,
+            3
+          ],
+          "skeletonPixels": 6180,
+          "skeletonRetained": true,
+          "branchesPruned": 0,
+          "componentAreaRatios": [
+            0.8093135377475387,
+            0.8931841302136317,
+            0.7508394232668378,
+            0.9332468773462562,
+            0.9472620978849744,
+            0.90894256575416
+          ],
+          "counterOverlap": [
+            0.8935619779732427,
+            0.8985409652076318,
+            0.900214354349915
+          ],
+          "minimumComponentAreaRatio": 0.75,
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.7999864825286683,
+              0.8864869447270262,
+              0.752617025478965,
+              0.9232816872568426,
+              0.9428239111138318,
+              0.9109608158883521
+            ],
+            "counterOverlap": [
+              0.9014709143321753,
+              0.8915824915824916,
+              0.8949663685416512
+            ],
+            "minimumComponentAreaRatio": 0.75
+          },
+          "flex": {
+            "method": "injective-native-contour-field-experiment",
+            "amplitude": 0.003,
+            "lipschitzBound": 0.02827433388230814,
+            "segments": 3093,
+            "tolerance": 0.2,
+            "limitations": [
+              "Nonjoining isolated experiment only",
+              "Adaptive quadratic approximation is not exact continuous field",
+              "Requires native-counter and visual checks before production"
+            ]
+          },
+          "completeFieldPixelGuard": {
+            "status": "restored-source",
+            "reason": "Component mass outside finer-ink bounds"
+          },
+          "previousStatus": "candidate"
+        }
+      ],
+      "nativeTableChecks": {
+        "hmtx": true
+      }
+    },
+    {
+      "number": 197,
+      "source": "assets/fonts/scripts/b3e108cd8e7e.woff2",
+      "sample": "ᄀᄤᅉᅯᆔᆸᇝ〲",
+      "glyphs": 8,
+      "adapted": 7,
+      "nativeRetained": 1,
+      "retentions": [
+        {
+          "glyph": "uni11DD",
+          "status": "retained-field-guard",
+          "strength": 1,
+          "sourceTopology": [
+            1,
+            1
+          ],
+          "skeletonPixels": 2036,
+          "skeletonRetained": true,
+          "branchesPruned": 0,
+          "componentAreaRatios": [
+            0.9827151668453805
+          ],
+          "counterOverlap": [
+            0.9631304437193289
+          ],
+          "minimumComponentAreaRatio": 0.75,
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9806255899846947
+            ],
+            "counterOverlap": [
+              0.9598931168263919
+            ],
+            "minimumComponentAreaRatio": 0.75
+          },
+          "flex": {
+            "method": "injective-native-contour-field-experiment",
+            "amplitude": 0.005,
+            "lipschitzBound": 0.0471238898038469,
+            "segments": 1157,
+            "tolerance": 0.2,
+            "limitations": [
+              "Nonjoining isolated experiment only",
+              "Adaptive quadratic approximation is not exact continuous field",
+              "Requires native-counter and visual checks before production"
+            ]
+          },
+          "completeFieldPixelGuard": {
+            "status": "restored-source",
+            "reason": "Changed topology"
+          },
+          "previousStatus": "candidate"
+        }
+      ],
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GDEF": true,
+        "hmtx": true
+      }
+    },
+    {
+      "number": 198,
+      "source": "assets/fonts/scripts/9f38c185324b.woff2",
+      "sample": "𭟃𭡕𭣨𭥺𭨌𭪟𭬱𭯂",
+      "glyphs": 8,
+      "adapted": 4,
+      "nativeRetained": 4,
+      "retentions": [
+        {
+          "glyph": "u2D7C3",
+          "status": "retained",
+          "reason": "Changed topology",
+          "completeFieldPixelGuard": {
+            "status": "pass",
+            "checks": {
+              "componentAreaRatios": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "counterOverlap": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "minimumComponentAreaRatio": 0.75
+            }
+          }
+        },
+        {
+          "glyph": "u2D855",
+          "status": "retained-field-guard",
+          "strength": 0.75,
+          "sourceTopology": [
+            4,
+            0
+          ],
+          "skeletonPixels": 5132,
+          "skeletonRetained": true,
+          "branchesPruned": 0,
+          "componentAreaRatios": [
+            0.9986165474422999,
+            1.0327311395718426,
+            0.7809023107959409,
+            0.9994253474036151
+          ],
+          "counterOverlap": [],
+          "minimumComponentAreaRatio": 0.75,
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9986840329329194,
+              1.0320416939328785,
+              0.7815136324734075,
+              1.0005572388813428
+            ],
+            "counterOverlap": [],
+            "minimumComponentAreaRatio": 0.75
+          },
+          "flex": {
+            "amplitude": 0
+          },
+          "completeFieldPixelGuard": {
+            "status": "restored-source",
+            "reason": "Changed topology"
+          },
+          "previousStatus": "candidate"
+        },
+        {
+          "glyph": "u2DA0C",
+          "status": "retained",
+          "reason": "Changed topology",
+          "completeFieldPixelGuard": {
+            "status": "pass",
+            "checks": {
+              "componentAreaRatios": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "counterOverlap": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "minimumComponentAreaRatio": 0.75
+            }
+          }
+        },
+        {
+          "glyph": "u2DBC2",
+          "status": "retained-field-guard",
+          "strength": 0.5,
+          "sourceTopology": [
+            5,
+            1
+          ],
+          "skeletonPixels": 7538,
+          "skeletonRetained": true,
+          "branchesPruned": 0,
+          "componentAreaRatios": [
+            0.950849148388527,
+            0.9862238822128396,
+            0.848159855497855,
+            0.810391363022942,
+            0.9521217338464655
+          ],
+          "counterOverlap": [
+            0.9330050031269543
+          ],
+          "minimumComponentAreaRatio": 0.75,
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9499932265175679,
+              0.9864133376637436,
+              0.8436441634680515,
+              0.8159581646423751,
+              0.9503367429613125
+            ],
+            "counterOverlap": [
+              0.9384771732332708
+            ],
+            "minimumComponentAreaRatio": 0.75
+          },
+          "flex": {
+            "method": "injective-native-contour-field-experiment",
+            "amplitude": 0.003,
+            "lipschitzBound": 0.02827433388230814,
+            "segments": 5313,
+            "tolerance": 0.2,
+            "limitations": [
+              "Nonjoining isolated experiment only",
+              "Adaptive quadratic approximation is not exact continuous field",
+              "Requires native-counter and visual checks before production"
+            ]
+          },
+          "completeFieldPixelGuard": {
+            "status": "restored-source",
+            "reason": "Changed topology"
+          },
+          "previousStatus": "candidate"
+        }
+      ],
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GDEF": true,
+        "hmtx": true
+      }
+    },
+    {
+      "number": 199,
+      "source": "assets/fonts/scripts/6170ad79af61.woff2",
+      "sample": "𲞤𲠸𲣊𲥛𲧮𲪀𲬒𲮣",
+      "glyphs": 8,
+      "adapted": 5,
+      "nativeRetained": 3,
+      "retentions": [
+        {
+          "glyph": "u327A4",
+          "status": "retained-field-guard",
+          "strength": 1,
+          "sourceTopology": [
+            4,
+            2
+          ],
+          "skeletonPixels": 6185,
+          "skeletonRetained": true,
+          "branchesPruned": 0,
+          "componentAreaRatios": [
+            0.9435758891004916,
+            0.8738515711579022,
+            0.9046560454489317,
+            0.7916993599008879
+          ],
+          "counterOverlap": [
+            0.9759071671407756,
+            0.9674362767166163
+          ],
+          "minimumComponentAreaRatio": 0.75,
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9285397936135347,
+              0.8718675151038502,
+              0.9056440657033469,
+              0.7997315713400784
+            ],
+            "counterOverlap": [
+              0.9744328037188649,
+              0.9740390593178554
+            ],
+            "minimumComponentAreaRatio": 0.75
+          },
+          "flex": {
+            "method": "injective-native-contour-field-experiment",
+            "amplitude": 0.005,
+            "lipschitzBound": 0.0471238898038469,
+            "segments": 2776,
+            "tolerance": 0.2,
+            "limitations": [
+              "Nonjoining isolated experiment only",
+              "Adaptive quadratic approximation is not exact continuous field",
+              "Requires native-counter and visual checks before production"
+            ]
+          },
+          "completeFieldPixelGuard": {
+            "status": "restored-source",
+            "reason": "Changed topology"
+          },
+          "previousStatus": "candidate"
+        },
+        {
+          "glyph": "u3295B",
+          "status": "retained-field-guard",
+          "strength": 0.75,
+          "sourceTopology": [
+            3,
+            2
+          ],
+          "skeletonPixels": 5568,
+          "skeletonRetained": true,
+          "branchesPruned": 0,
+          "componentAreaRatios": [
+            1.0763789736267704,
+            0.9311731888745148,
+            0.7544176197790071
+          ],
+          "counterOverlap": [
+            0.9701492537313433,
+            0.9540420071587763
+          ],
+          "minimumComponentAreaRatio": 0.75,
+          "vectorChecks": {
+            "componentAreaRatios": [
+              1.076551294044278,
+              0.9183174320827943,
+              0.7586823936416098
+            ],
+            "counterOverlap": [
+              0.9805614783226724,
+              0.9583642871614777
+            ],
+            "minimumComponentAreaRatio": 0.75
+          },
+          "flex": {
+            "method": "injective-native-contour-field-experiment",
+            "amplitude": 0.005,
+            "lipschitzBound": 0.0471238898038469,
+            "segments": 2576,
+            "tolerance": 0.2,
+            "limitations": [
+              "Nonjoining isolated experiment only",
+              "Adaptive quadratic approximation is not exact continuous field",
+              "Requires native-counter and visual checks before production"
+            ]
+          },
+          "completeFieldPixelGuard": {
+            "status": "restored-source",
+            "reason": "Component mass outside finer-ink bounds"
+          },
+          "previousStatus": "candidate"
+        },
+        {
+          "glyph": "u32BA3",
+          "status": "retained-field-guard",
+          "strength": 1,
+          "sourceTopology": [
+            5,
+            1
+          ],
+          "skeletonPixels": 7401,
+          "skeletonRetained": true,
+          "branchesPruned": 0,
+          "componentAreaRatios": [
+            0.9842141863699583,
+            0.985466576802892,
+            0.8162876459741856,
+            0.9192552972639375,
+            0.9818487257231828
+          ],
+          "counterOverlap": [
+            0.9458333333333333
+          ],
+          "minimumComponentAreaRatio": 0.75,
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9845213259156236,
+              0.982219226763066,
+              0.816379840196681,
+              0.9206953301789755,
+              0.974965172498566
+            ],
+            "counterOverlap": [
+              0.9390046296296296
+            ],
+            "minimumComponentAreaRatio": 0.75
+          },
+          "flex": {
+            "method": "injective-native-contour-field-experiment",
+            "amplitude": 0.005,
+            "lipschitzBound": 0.0471238898038469,
+            "segments": 4501,
+            "tolerance": 0.2,
+            "limitations": [
+              "Nonjoining isolated experiment only",
+              "Adaptive quadratic approximation is not exact continuous field",
+              "Requires native-counter and visual checks before production"
+            ]
+          },
+          "completeFieldPixelGuard": {
+            "status": "restored-source",
+            "reason": "Merged or lost native component"
+          },
+          "previousStatus": "candidate"
+        }
+      ],
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GDEF": true,
+        "hmtx": true
+      }
+    }
+  ],
+  "observations": [
+    "At22/44px Khitan gains visible fluent pen strokes; full native stacked sample has complete bounds.",
+    "Tangut and rare Han gain materially finer ink while native short strokes/counters retain their identities in these samples. Changes are deliberately smaller where dense detail constrains them.",
+    "Radius smoothing, native taper caps and small injective contour flex reduce the earlier pressure clots and rigid serif contrast.",
+    "31/40 sample drawings are transformed;9 source originals are explicitly retained after per-glyph or exact full-field pixel-position rejection. These are native bundled source drawings, not hidden system fallback.",
+    "The source197 review includes all original eight contributed Jamo/punctuation glyphs; it is not evidence for every Han glyph in Jigmo.ttf."
+  ],
+  "nativeSealDisposition": "Coordinator and reviewer retain sampled native Seal Sans provisionally: already naturally tapered, flowing native ink; protect139 identities and existingAGPL source obligations.",
+  "adapter": {
+    "module": "tools/font/dense_skeleton_adapter.py",
+    "status": "Not wired to production; independent recipe/cache hash preserves first15 cache validity.",
+    "cacheKey": "Kernel/recipe bytes, native SVG geometry, glyph seed name, native em and hmtx. Source file hash omitted to deduplicate repeated shard GSUB closure with identical native drawings.",
+    "fallback": "After guarded reink failure, tries injective native contour flex at.005/.003 with exact native bounding box and1024/384 guards; unchanged source is explicitly recorded when both fail.",
+    "performanceFirstTrial": {
+      "coldGlyphs": 40,
+      "coldSeconds": 55.99,
+      "warmSeconds": 3.91,
+      "warmHits": 40,
+      "notes": "Small rare-dense sample, not full200k workload;16phase guard addition is still being benchmarked.",
+      "conservativeSerial200kHours": 77.76,
+      "idealEightWorkerHours": 9.72
+    }
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_dense_skeleton.py",
+    "result": "2passed in1.41s,7 knownPyMuPDF/SWIG deprecation warnings",
+    "scope": "Source centerline/counter/short stroke preservation and cached native shaping/bbox identity."
+  },
+  "remaining": [
+    "Use frozen dense_native_adapter pipeline and its source-specific proofs for intentional production integration.",
+    "Do not mass apply the historical expensive skeleton or16phase experiment; it remains an offline style oracle."
+  ],
+  "followup": "docs/dense-native-adapter-review.json"
+}

@@ -1,0 +1,49 @@
+<!doctype html><meta charset="utf-8"><title>Variant mark fallback probe</title>
+<style>body{font:14px monospace}canvas{border:1px solid #aaa}section{margin:1em}h2{font-size:16px}</style>
+<h1>Variant mark fallback probe</h1><pre id="summary">Running…</pre><main></main>
+<script type="module">
+import {loadTextFonts,requiredFonts} from '../js/fonts.js';
+import {nativeVariationFont} from '../js/font-variations.js';
+const samples=['㐂\u{e0101}','\u{20000}\u{e0100}','\u{30654}\u{e0101}','豈\ufe00','𝓏\ufe02'];
+const results=[];
+const unicodeData=await (await fetch('../data/unicode/18.0.0/UnicodeData.txt')).text();
+const marks=unicodeData.split('\n').filter(s=>s.split(';')[2]?.startsWith('M')).map(s=>parseInt(s.split(';')[0],16)).filter(cp=>!(cp>=0xfe00&&cp<=0xfe0f)&&!(cp>=0xe0100&&cp<=0xe01ef));
+const markRange=marks.map(cp=>'U+'+cp.toString(16)).join(',');
+let aliasCounter=0;
+
+for(const sequence of samples){
+ const variant=nativeVariationFont(sequence),marked=sequence+'\u0301';
+ const loaded=await loadTextFonts([sequence,marked]);
+ const fallback=requiredFonts([marked]).fonts.map(f=>JSON.stringify(f.family)).join(',');
+ const stack=JSON.stringify(variant.family)+','+fallback;
+ const aliases=[];
+ const markFonts=[...requiredFonts([marked]).fonts,{file:'assets/fonts/dad-lettering-unicode.woff2'}];
+ for(const descriptor of markFonts){
+  const family='Probe marks '+aliasCounter++;
+  const face=await new FontFace(family,'url("../'+descriptor.file+'")',{unicodeRange:markRange}).load();document.fonts.add(face);aliases.push(JSON.stringify(family));
+ }
+ const restrictedStack=JSON.stringify(variant.family)+','+aliases.join(',');
+ const section=document.createElement('section');section.innerHTML='<h2>'+sequence+': variant only / marked forced variant / marked current fallback / mark-only fallback</h2>';document.querySelector('main').append(section);
+ const canvases=[];
+ for(const [text,font] of [[sequence,stack],[marked,stack],[marked,fallback],[marked,restrictedStack]]){
+  const c=document.createElement('canvas');c.width=220;c.height=240;section.append(c);const ctx=c.getContext('2d');ctx.font='120px '+font;ctx.textBaseline='alphabetic';ctx.fillText(text,35,185);canvases.push(c);
+ }
+ const pixels=c=>c.getContext('2d').getImageData(0,130,220,100).data;
+ const a=pixels(canvases[0]),b=pixels(canvases[1]),c=pixels(canvases[2]);
+ const difference=(a,b)=>a.reduce((n,v,i)=>n+(v!==b[i]),0);
+ results.push({sequence,variant:variant.family,loaded:loaded.families,currentLoadsVariant:requiredFonts([marked]).fonts.some(f=>f.family===variant.family),forcedBasePixelDifferences:difference(a,b),currentBasePixelDifferences:difference(a,c),restrictedBasePixelDifferences:difference(a,pixels(canvases[3])),restrictedFullPixelDifferences:difference(canvases[0].getContext('2d').getImageData(0,0,220,240).data,canvases[3].getContext('2d').getImageData(0,0,220,240).data)});
+}
+const [bridge]=await (await fetch('../output/font-review/marked-cjk-prototype.json')).json();
+const bridgeFace=await new FontFace(bridge.family,'url("../'+bridge.file+'")').load();document.fonts.add(bridgeFace);
+const sequence=samples[0],variant=nativeVariationFont(sequence);
+const section=document.createElement('section');section.innerHTML='<h2>Prototype: native variant / copied variant / copied variant plus accent</h2>';document.querySelector('main').append(section);
+const canvases=[];
+for(const [text,family] of [[sequence,variant.family],[sequence,bridge.family],[sequence+'\u0301',bridge.family]]){
+ const c=document.createElement('canvas');c.width=220;c.height=240;section.append(c);const ctx=c.getContext('2d');ctx.font='120px "'+family+'"';ctx.fillText(text,35,185);canvases.push(c);
+}
+const difference=(a,b)=>a.reduce((n,v,i)=>n+(v!==b[i]),0);
+const pixels=c=>c.getContext('2d').getImageData(0,0,220,240).data;
+const base=c=>c.getContext('2d').getImageData(0,130,220,100).data;
+results.push({prototype:bridge.family,unmarkedPixelDifferences:difference(pixels(canvases[0]),pixels(canvases[1])),accentPixelDifferences:difference(pixels(canvases[1]),pixels(canvases[2])),baseRegionDifferences:difference(base(canvases[0]),base(canvases[2]))});
+document.querySelector('#summary').textContent=JSON.stringify(results,null,2);
+</script>

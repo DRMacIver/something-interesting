@@ -1,0 +1,253 @@
+{
+  "date": "2026-11-03",
+  "status": "Guarded-source sample experiment and explicit disposition; not a completion declaration",
+  "command": ".venv/bin/python tools/font/supplemental_pressure.py --numbers 21,93,94,113,139 --output output/font-review/guarded-pressure",
+  "renderCommand": ".venv/bin/python tools/font/render_specimen.py --spec output/font-review/guarded-pressure/spec.json --output output/font-review/guarded-pressure/comparison",
+  "artifacts": [
+    "output/font-review/guarded-pressure/comparison.png",
+    "output/font-review/guarded-pressure/comparison.svg",
+    "output/font-review/guarded-pressure/comparison.json",
+    "output/font-review/guarded-pressure/review.json"
+  ],
+  "visualInspection": {
+    "dialogueSize": 22,
+    "detailSize": 44,
+    "observations": [
+      "Math geometric outlines gain clear variable stroke pressure, keeping visible enclosure, slash and alphabet distinctions in these samples.",
+      "Mayan bars retain counts and separated dots; candidate bars have expressive thick/thin variation without merging.",
+      "Ogham samples retain continuous shared stem with pressure protected at advance boundaries.",
+      "Music/SignWriting retain source identity in these samples; fine changes are subtle at22px and clearer at44px. Do not treat mere topology success as sufficient style proof for every tiny sign."
+    ],
+    "technicalEvidence": "40 of40sample glyphs passed raster and vector component/counter guards; native shaping glyph identities, advances and offsets unchanged."
+  },
+  "sources": [
+    {
+      "number": 9,
+      "source": "build/unicode-sources/unicodia/ArchaicCuneiformNumerals.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve each filled circle and every wedge/line count; pressure must not merge components.",
+      "baselineSample": "𒕐𒕼𒖩𒗕𒘁𒘭𒙚𒚆"
+    },
+    {
+      "number": 12,
+      "source": "build/unicode-sources/seal-sans/DadSealSans-Regular.otf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve dense seal counters. Native CFF source unsupported by current TTF-only prototype; modified artifact requires rebuilt AGPL corresponding source package.",
+      "baselineSample": "𽁬𽺦𾥈𾽪𿍦𿕃𿡕𿰲"
+    },
+    {
+      "number": 20,
+      "source": "build/unicode-sources/noto/NotoKufiArabic-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve angular joins, contextual GSUB and mark anchors; protect the exact advance boundaries.",
+      "baselineSample": "؆ݹﮋﰩﲷ﵇﷽ﻼ"
+    },
+    {
+      "number": 21,
+      "source": "build/unicode-sources/noto/NotoMusic-Regular.ttf",
+      "status": "sample pressure candidate visually reviewed; full production scope pending",
+      "constraint": "Preserve flag/stem/ornament identity, original zero-advance marks and attachment offsets; tiny standalone signs may retain native outline if treatment cannot be visible safely.",
+      "baselineSample": "𝀀𝁈𝂑𝃙𝄮𝆘𝇥𝉅",
+      "candidate": "output/font-review/guarded-pressure/21.ttf",
+      "shapingUnchanged": true,
+      "acceptedSampleGlyphs": 8,
+      "sampleGlyphs": 8
+    },
+    {
+      "number": 36,
+      "source": "build/unicode-sources/noto/NotoSansBuhid-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve diagonal stroke proportions and native direction; conservative pressure.",
+      "baselineSample": "᜵ᝁᝃᝆᝉᝌᝎᝑ"
+    },
+    {
+      "number": 45,
+      "source": "build/unicode-sources/noto/NotoSansCuneiform-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve wedge direction, count and gaps; dense detail reduction required.",
+      "baselineSample": "𒀀𒂰𒅠𒈐𒋁𒍱𒒓𒕃"
+    },
+    {
+      "number": 50,
+      "source": "build/unicode-sources/noto/NotoSansDuployan-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve shorthand joining, original advances and relative widths.",
+      "baselineSample": "⌈𛰑𛰥𛰺𛱎𛱣𛱼𛲟"
+    },
+    {
+      "number": 67,
+      "source": "build/unicode-sources/noto/NotoSansIndicSiyaqNumbers-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve calligraphic numeral overhangs; full source bounds rather than atlas fixed rows.",
+      "baselineSample": "𞱱𞱻𞲄𞲎𞲗𞲡𞲪𞲴"
+    },
+    {
+      "number": 80,
+      "source": "build/unicode-sources/noto/NotoSansLaoLooped-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve concentric counters of the two supplemental native forms.",
+      "baselineSample": "๏๛"
+    },
+    {
+      "number": 93,
+      "source": "build/unicode-sources/noto/NotoSansMath-Regular.ttf",
+      "status": "sample pressure candidate visually reviewed; full production scope pending",
+      "constraint": "Preserve alphabet/style/enclosure distinctions, slashes, original metrics, variation tables and GPOS repairs.",
+      "baselineSample": "↚⏥⧅⬗𝔛𝙣𝞤🟘",
+      "candidate": "output/font-review/guarded-pressure/93.ttf",
+      "shapingUnchanged": true,
+      "acceptedSampleGlyphs": 8,
+      "sampleGlyphs": 8
+    },
+    {
+      "number": 94,
+      "source": "build/unicode-sources/noto/NotoSansMayanNumerals-Regular.ttf",
+      "status": "sample pressure candidate visually reviewed; full production scope pending",
+      "constraint": "Preserve every dot/bar count and their separations.",
+      "baselineSample": "𝋠𝋣𝋥𝋨𝋫𝋮𝋰𝋳",
+      "candidate": "output/font-review/guarded-pressure/94.ttf",
+      "shapingUnchanged": true,
+      "acceptedSampleGlyphs": 8,
+      "sampleGlyphs": 8
+    },
+    {
+      "number": 113,
+      "source": "build/unicode-sources/noto/NotoSansOgham-Regular.ttf",
+      "status": "sample pressure candidate visually reviewed; full production scope pending",
+      "constraint": "Preserve exact shared Ogham stem at advance boundaries; no independent positional jitter.",
+      "baselineSample": "ᚁᚅᚉᚍᚐᚔᚘ᚜",
+      "candidate": "output/font-review/guarded-pressure/113.ttf",
+      "shapingUnchanged": true,
+      "acceptedSampleGlyphs": 8,
+      "sampleGlyphs": 8
+    },
+    {
+      "number": 119,
+      "source": "build/unicode-sources/noto/NotoSansOldPersian-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve every wedge count and direction.",
+      "baselineSample": "𐎠𐎧𐎮𐎵𐎼𐏃𐏎𐏕"
+    },
+    {
+      "number": 139,
+      "source": "build/unicode-sources/noto/NotoSansSignWriting-Regular.ttf",
+      "status": "sample pressure candidate visually reviewed; full production scope pending",
+      "constraint": "Preserve fill/direction/rotation distinctions and small gaps; no algorithmic rotation of glyph identities.",
+      "baselineSample": "𝠀𝡎𝢛𝣩𝤷𝦅𝧒𝪋",
+      "candidate": "output/font-review/guarded-pressure/139.ttf",
+      "shapingUnchanged": true,
+      "acceptedSampleGlyphs": 8,
+      "sampleGlyphs": 8
+    },
+    {
+      "number": 166,
+      "source": "build/unicode-sources/noto/NotoSansUgaritic-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve wedge counts and directions.",
+      "baselineSample": "𐎀𐎄𐎉𐎍𐎑𐎕𐎚𐎟"
+    },
+    {
+      "number": 176,
+      "source": "build/unicode-sources/noto/NotoSerifKhitanSmallScript-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve stacked native shaping, complete ink bounds and small components.",
+      "baselineSample": "𘬀𘭃𘮆𘯉𘰌𘱏𘲒𘳕"
+    },
+    {
+      "number": 181,
+      "source": "build/unicode-sources/noto/NotoSerifOldUyghur-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve joined native forms and small counters; boundary protection and whole-sentence comparisons.",
+      "baselineSample": "𐽰𐽳𐽶𐽹𐽼𐽿𐾆𐾉"
+    },
+    {
+      "number": 183,
+      "source": "build/unicode-sources/noto/NotoSerifTangut-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve dense native counters and short strokes; reduce pressure relative to prose.",
+      "baselineSample": "𗏻𗒍𗔟𗖱𗙄𗛖𗝨𗟺"
+    },
+    {
+      "number": 191,
+      "source": "build/unicode-sources/unicodia/ScheherazadeNew-Regular.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve native crowns, contextual joining, mark positions and fine details.",
+      "baselineSample": "࢏𐻂𐻆𐻛𐻠𐻥𐻩𐻮"
+    },
+    {
+      "number": 192,
+      "source": "build/unicode-sources/ufs/UFSZeroExt.otf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Native CFF glyphs require a contour-preserving CFF treatment or reviewed conversion; mixed music/historical forms need category guards.",
+      "baselineSample": "՘𘷮𘺳𘽬𙀤𙃝𙆣🟿"
+    },
+    {
+      "number": 193,
+      "source": "build/unicode-sources/unicodia/UnicodiaCunei.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve wedge count/direction and counters.",
+      "baselineSample": "𒑯𒑶𒑷𒑹𒑺𒑼𒑽𒑿"
+    },
+    {
+      "number": 195,
+      "source": "build/unicode-sources/unicodia/UnicodiaFunky.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Mixed symbols/alternate alphabets require distinction-preserving per-glyph treatment, not uniform thickening.",
+      "baselineSample": "౜𐥓𝼣𝽑𝽾𝿰𞁐🩗"
+    },
+    {
+      "number": 197,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve native short strokes and small counters; CC0 source remains pinned.",
+      "baselineSample": "ᄀᄤᅉᅯᆔᆸᇝ〲"
+    },
+    {
+      "number": 198,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo2.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve dense CJK counters and serif/short-stroke distinctions; source-specific sampling plus full inventory topology checks.",
+      "baselineSample": "𭟃𭡕𭣨𭥺𭨌𭪟𭬱𭯂"
+    },
+    {
+      "number": 199,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo3.ttf",
+      "status": "guarded adaptation proposed; production pending",
+      "constraint": "Preserve dense CJK counters and short strokes; no glyph identity normalization.",
+      "baselineSample": "𲞤𲠸𲣊𲥛𲧮𲪀𲬒𲮣"
+    }
+  ],
+  "retainCategories": [
+    {
+      "sourceNumber": 102,
+      "disposition": "Retain exact structural NotoSansMono geometry; block/legacy alignment is semantic. Comic character comes from surrounding lettering, not a cell-breaking per-glyph warp."
+    },
+    {
+      "sourceNumber": 150,
+      "disposition": "Retain attached Syriac mark and native GPOS, baseline nonpen specimen shows coherent placement."
+    },
+    {
+      "sourceNumber": 177,
+      "disposition": "Retain attached Khojki mark and native GPOS, baseline nonpen specimen shows coherent placement."
+    },
+    {
+      "sourceNumber": 188,
+      "disposition": "No novel visible repertoire under production precedence; do not claim this source as routed Nushu style."
+    },
+    {
+      "sourceNumber": 161,
+      "disposition": "Control/space-only source; no visible style requirement."
+    }
+  ],
+  "limitations": [
+    "Only the atlas sample-shaped glyphs were treated, not full font inventory.",
+    "No production fonts or generated manifests changed by this experiment.",
+    "Native topology guards do not prove every sign identity, weight distinction, or arbitrary joining expression.",
+    "NotoSansMath includes existing specialist hand adaptations; do not blindly reprocess already adapted subsets."
+  ],
+  "inspectionSha256": {
+    "output/font-review/guarded-pressure/comparison.png": "112cfb1b1cd2390177ce9ee734ba2b51f38477eda2246db53cfc3deb446ba8d4",
+    "output/font-review/guarded-pressure/review.json": "b0db9d6263ffe8bbdc9c1cce046ec51152816165aefe20de66afd2215e931038",
+    "tools/font/supplemental_pressure.py": "e19692303d882adbf71798c7ce9b7064a606304ef87c7bd51fa3be402f41f5eb"
+  }
+}

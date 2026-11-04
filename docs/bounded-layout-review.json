@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-03",
+  "status": "implemented and focused/source/fullJS/fullbrowser verified;72unmatched Egyptian outputs remain",
+  "changes": {
+    "proseGrid": "Sparse inline box/Braille/block symbols keep proportional wrapping; clear framed/dense/pure diagrams retain fixed cells and original grid glyph font.",
+    "dictionary": "Emergency splitting preserves Thai/Lao/Khmer/Myanmar dictionary units, and cannot break before dependent M marks even where UAX29 separates Mc. Oversize protected words report overflow for column growth or fitting.",
+    "egyptian": "Matched native regions retain source overlap/overflow and reserve complete envelopes. Source observations are recorded rather than rejected by a non-native empty-rectangle rule. Damaged insertion containers use the existing quarter-surface treatment before children."
+  },
+  "evidence": {
+    "focusedGridDictionary": {
+      "tests": 22,
+      "log": "/tmp/bounded-layout-final-focused-js.log"
+    },
+    "focusedEgyptian": {
+      "tests": 23,
+      "log": "/tmp/native-insertion-layout-js.log"
+    },
+    "fullJS": {
+      "tests": 356,
+      "passed": 356,
+      "seconds": 13.3,
+      "log": "/tmp/bounded-layout-final-full-js.log"
+    },
+    "source": {
+      "tests": 7,
+      "seconds": 14.73,
+      "log": "/tmp/native-insertion-geometry-source.log"
+    },
+    "builder": {
+      "session": 30377,
+      "status": "terminal0",
+      "log": "/tmp/native-insertion-geometry-build.log"
+    },
+    "focusedBrowser": [
+      "grid-symbols-in-prose",
+      "dictionary-mixed-controls",
+      "egyptian-enclosure-damage",
+      "egyptian-native-region-overlaps"
+    ],
+    "visual": "All four actual strips reviewed. Prose reflows; native Myanmar words retain their final spacing vowel with no orphan dotted circle; damaged signs stay inside enclosures; six matched native insertion groups now have actual content instead of helper boxes. Focused failure/geometry arrays empty after fixes.",
+    "fullBrowser": {
+      "cases": 673,
+      "failures": [],
+      "geometry": []
+    },
+    "generalBrowser": {
+      "cases": 33,
+      "failed": []
+    }
+  },
+  "egyptianNativeTemplates": {
+    "accepted": 910,
+    "originalUnchanged": 428,
+    "newSourceGeometryObservations": 482,
+    "unmodifiedSingle": 253,
+    "unmodifiedMultiple": 212,
+    "mirrored": 411,
+    "rotated": 24,
+    "rotatedMirrored": 10,
+    "unmatched": 72,
+    "baseline": "output/font-review/pre-native-insertion-geometry/",
+    "remainingProbe": "docs/egyptian-unmatched-output-probe.json"
+  },
+  "references": [
+    "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-11/",
+    "docs/egyptian-insertion-review.json",
+    "data/unicode/18.0.0/LineBreak.txt"
+  ],
+  "limits": [
+    "Native geometry observations are not a claim of collision freedom or complete typography.72unmatched outputs still require work.",
+    "Dictionary quality depends on host browser dictionaries. Source-specific segmentation and native-reader feedback may differ; no configuration was added.",
+    "Ambiguous inline diagram/prose cases use a documented density/frame heuristic.",
+    "Source-family/style and final product review remain incomplete.",
+    "Full Python suite started before these changes; current focused source checks cover updated builder/manifests and new scope separately."
+  ],
+  "sha256": {
+    "js/grid.js": "4420838ab8a7ac7d4a06bdcda8d91f7bb9aa2fdd2ba6519d81f3c0a29936994f",
+    "js/dictionary-breaks.js": "dea1779b783bd215e7fa6a952887cb529d170fa382ca4e53d289ecf16d395e35",
+    "js/line-breaks.js": "c1906bebe7965c43155a0baf2d4a274adc89e3e8f990b84049620a3f94c01932",
+    "js/layout.js": "d1d49bbd8bba947a9281d9e0417bba3934ad797229e23e3a7d3a36fdca257b80",
+    "js/egyptian-layout.js": "5c8ef73be194f131f8bb92e44d688fa32178498540d72d8dde771ff13190083e",
+    "js/egyptian-insertion-manifest.js": "68954847e150e2d685e8ebb590780882e5482027dff654ff0996ba6dbed6e46b",
+    "tools/font/build_egyptian_insertions.py": "105c2d13e6ef4f2491e0ca52d45fa17562309eae548f73d04a2c5d440fb8c88e",
+    "tests/grid.test.mjs": "299e1b62cc19649e88102d3bbc0cacb1a16f514fef3816f4e0492dbb394a7eca",
+    "tests/linebreak.test.mjs": "993aff572a8c13f6c61018d78b7f8496a382ee314df2d6b27ccc8a0ff4871757",
+    "tests/egyptian-layout.test.mjs": "5f37c7243bb9fed32ba5bb2fce4630e4c108df31d74d398f9d1ccd2c658e3010",
+    "tests/test_egyptian_insertion_build.py": "52743267edec429a6d8521fdc1870b8b9e659e5245bb2f2e4c8d8f24becd728f",
+    "tools/unicode-checks.html": "361235ef262e762c10cc971501380eede69bfb89b2330f0a60824d62d9a13c6a"
+  }
+}

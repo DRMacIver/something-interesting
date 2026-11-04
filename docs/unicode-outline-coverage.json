@@ -1,0 +1,1981 @@
+{
+  "unicode": "18.0.0",
+  "scope": "Assigned drawing requirements, including font-dependent prepended format signs: actual app single-character font loading, with positive outline/COLR-layer bounds or default isolated GSUB output in the first painted bundled font. Other controls/spaces/default-ignorables require separate behaviour evidence. Not semantic, linguistic, stylistic or full contextual rendering validation.",
+  "visibleRequirements": 172365,
+  "fontDependentFormatRequirements": 13,
+  "routedDrawingPresent": 172360,
+  "shapedEmptyRoots": [
+    {
+      "cp": 113681,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 181
+    },
+    {
+      "cp": 113682,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 181
+    },
+    {
+      "cp": 113683,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 180
+    },
+    {
+      "cp": 113684,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 179
+    },
+    {
+      "cp": 113685,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113686,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 180
+    },
+    {
+      "cp": 113687,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 180
+    },
+    {
+      "cp": 113688,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 267
+    },
+    {
+      "cp": 113693,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 179
+    },
+    {
+      "cp": 113694,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 179
+    },
+    {
+      "cp": 113695,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 179
+    },
+    {
+      "cp": 113696,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 179
+    },
+    {
+      "cp": 113697,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 173
+    },
+    {
+      "cp": 113698,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 173
+    },
+    {
+      "cp": 113699,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113700,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 265
+    },
+    {
+      "cp": 113701,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113702,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113707,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113708,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 176
+    },
+    {
+      "cp": 113709,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 176
+    },
+    {
+      "cp": 113710,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 176
+    },
+    {
+      "cp": 113711,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113721,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 184
+    },
+    {
+      "cp": 113730,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 91
+    },
+    {
+      "cp": 113740,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113741,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113742,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 174
+    },
+    {
+      "cp": 113747,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 182
+    },
+    {
+      "cp": 113750,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 174
+    },
+    {
+      "cp": 113752,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 180
+    },
+    {
+      "cp": 113753,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 182
+    },
+    {
+      "cp": 113754,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 180
+    },
+    {
+      "cp": 113760,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 174
+    },
+    {
+      "cp": 113767,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113768,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113769,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 178
+    },
+    {
+      "cp": 113787,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "outputGlyphs": 91
+    }
+  ],
+  "semanticBlankOrNativeContext": [
+    {
+      "cp": 10240,
+      "reason": "Braille pattern blank has zero dots; structural identity tested in tests/test_font_grid.py",
+      "routedSources": [
+        "assets/fonts/dad-grid.woff2"
+      ]
+    },
+    {
+      "cp": 73029,
+      "reason": "Masaram Gondi virama selects contextual base forms",
+      "routedSources": [
+        "assets/fonts/scripts/a469583d8b76.woff2"
+      ]
+    },
+    {
+      "cp": 73111,
+      "reason": "Gunjala Gondi virama selects contextual base forms",
+      "routedSources": [
+        "assets/fonts/scripts/0b535db09ad0.woff2"
+      ]
+    },
+    {
+      "cp": 78913,
+      "reason": "Egyptian full blank intentionally reserves whitespace; Unicode18 section11.4.3 and js/egyptian-layout.js verify spacing",
+      "routedSources": [
+        "assets/fonts/scripts/90fcad2ecf0c.woff2"
+      ]
+    },
+    {
+      "cp": 78914,
+      "reason": "Egyptian half blank intentionally reserves whitespace; Unicode18 section11.4.3 and js/egyptian-layout.js verify spacing",
+      "routedSources": [
+        "assets/fonts/scripts/90fcad2ecf0c.woff2"
+      ]
+    }
+  ],
+  "unexplainedDrawingGaps": [],
+  "routingGaps": [],
+  "fonts": [
+    {
+      "file": "assets/fonts/dad-lettering-unicode.woff2",
+      "sha256": "a2fec05b45025c0d380db5d5bcb545299ca1af1cb3fdfdf2e64270480b1d0142",
+      "requestedCharacters": 866
+    },
+    {
+      "file": "assets/fonts/scripts/b8ef0ccbaaf6.woff2",
+      "sha256": "ee6b954db2cae33bb372034250b2db14bde9d8dc0472e126948938e51292ca33",
+      "requestedCharacters": 160
+    },
+    {
+      "file": "assets/fonts/dad-emoji.woff2",
+      "sha256": "c9051af36798304c3cbef6fcdc296a73b6de0d2b951b294c59ae18d59febc5d4",
+      "requestedCharacters": 1435
+    },
+    {
+      "file": "assets/fonts/scripts/ee2777fce4d7.woff2",
+      "sha256": "c7c52b0c193bff73d639312d7c619fab7cf8a43d8aaf1d2f447cea9df4105ebd",
+      "requestedCharacters": 487
+    },
+    {
+      "file": "assets/fonts/scripts/727a08f0dff2.woff2",
+      "sha256": "8cd8c21371cd9855e5a1f86d72b094d37ea41bb505df3216761f9f4c0239e79c",
+      "requestedCharacters": 540
+    },
+    {
+      "file": "assets/fonts/scripts/19ff2d6f18f8.woff2",
+      "sha256": "6ceff8c02ccffa1d36156cc1a4b6d2c1960542ed021b236333420f7304c898ad",
+      "requestedCharacters": 124
+    },
+    {
+      "file": "assets/fonts/scripts/bfa39f1d9951.woff2",
+      "sha256": "c22403a48c26e89c2e1d666f45b98e7a622239987caad40d378312edf265cbb7",
+      "requestedCharacters": 977
+    },
+    {
+      "file": "assets/fonts/scripts/8edd0eb88f9d.woff2",
+      "sha256": "b6eb16391c3c18615932beabf1a95beacaf369e5ab70cf360dcc0d0e572dd74a",
+      "requestedCharacters": 165
+    },
+    {
+      "file": "assets/fonts/scripts/f0058b14e2fb.woff2",
+      "sha256": "a45680d28ec27595a6bf4a7ce88c4d948328269544e7a733a8d9fcfeeefb162d",
+      "requestedCharacters": 96
+    },
+    {
+      "file": "assets/fonts/scripts/1a10ab6b39c1.woff2",
+      "sha256": "a18a8966ff55e18e548f0319ad6f5646ff498afc47f4ebbe9ff054ba32fa17cd",
+      "requestedCharacters": 1293
+    },
+    {
+      "file": "assets/fonts/scripts/9f0e722e1340.woff2",
+      "sha256": "2c000eb95e7b6328d7eff51c7a342394cadbee56301c34797fb7835e3406ccad",
+      "requestedCharacters": 93
+    },
+    {
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "sha256": "d8bac4a68009e3c10a63b864798572f008511c97c142da8d292ef1c516d450a6",
+      "requestedCharacters": 1102
+    },
+    {
+      "file": "assets/fonts/scripts/000df19912cb.woff2",
+      "sha256": "73f4b98fc352d83f817d6dd221403a05ff8aeb3fb6f3a9fe6e1c097cc5daaffd",
+      "requestedCharacters": 77
+    },
+    {
+      "file": "assets/fonts/scripts/928677d275de.woff2",
+      "sha256": "532124b5721c5255c3e5deda832872ba52ada8744a2315746e824675c6574c06",
+      "requestedCharacters": 50
+    },
+    {
+      "file": "assets/fonts/scripts/f183cbedb1dc.woff2",
+      "sha256": "78ed036c447eb264aa4c3e93403dfeb755bcb9b7e5ded48f3847b3b470268ab8",
+      "requestedCharacters": 62
+    },
+    {
+      "file": "assets/fonts/scripts/33cf71c694e7.woff2",
+      "sha256": "9680047782861ab7c15f82920193c7872f1d3ddefe06149073cf2222d24eb544",
+      "requestedCharacters": 61
+    },
+    {
+      "file": "assets/fonts/scripts/d92e6e8d91a7.woff2",
+      "sha256": "f2ae0690ea999c8b56b3df53efe5ec1f27fb5680affe6df8956daad36cdb9a19",
+      "requestedCharacters": 29
+    },
+    {
+      "file": "assets/fonts/scripts/9610b484c0df.woff2",
+      "sha256": "e7e86742e914fed52fab9f413bf61c38fd2f42dd96b8930d34298dfb2655c1a0",
+      "requestedCharacters": 11
+    },
+    {
+      "file": "assets/fonts/scripts/da3a0b551617.woff2",
+      "sha256": "504f4dab564043d38121c0153616ff255ee8e3498472c7b0ead42e486f3219b1",
+      "requestedCharacters": 53
+    },
+    {
+      "file": "assets/fonts/scripts/e21eb9b44360.woff2",
+      "sha256": "079c8b0c0e01369530b13f5a7260a2bd2c4e0bb939ad9631198f80956fa48b1d",
+      "requestedCharacters": 114
+    },
+    {
+      "file": "assets/fonts/scripts/c5b1e8b8b27e.woff2",
+      "sha256": "7a9eb5ac16c44e35f3f662530d4fde355ec08e825954d6f1678ed1e6809e3ae4",
+      "requestedCharacters": 113
+    },
+    {
+      "file": "assets/fonts/scripts/2eaf55f803c0.woff2",
+      "sha256": "e99eae12b855dd10b4f0504f9714d6aa08ef217598e2a150c02589be9e9f82fb",
+      "requestedCharacters": 81
+    },
+    {
+      "file": "assets/fonts/scripts/44c5dd2c1a55.woff2",
+      "sha256": "dc4afbf8b4742d8cee3c9c4dfe9cc25963d479eb8117b574e69421ed025812b7",
+      "requestedCharacters": 91
+    },
+    {
+      "file": "assets/fonts/scripts/3d3c297b167c.woff2",
+      "sha256": "70726504c7205de27fa0eb058d01ffe2f40491f1f29e57c761ed5048433fa160",
+      "requestedCharacters": 93
+    },
+    {
+      "file": "assets/fonts/scripts/1bdaddc5cf48.woff2",
+      "sha256": "5d11ace7fb80fb18c7b634d18fcf9bed1bccf26dd867651295117cb41ef73a0c",
+      "requestedCharacters": 57
+    },
+    {
+      "file": "assets/fonts/scripts/26528008c167.woff2",
+      "sha256": "1a622eb8a6bca9163d9e395d89dfe3987a531d3f1513882998698e04208738f9",
+      "requestedCharacters": 101
+    },
+    {
+      "file": "assets/fonts/scripts/c4384aac992a.woff2",
+      "sha256": "51c9b0a9af606936140d8faac45df3cd49a707813fced9600062977ae8291afe",
+      "requestedCharacters": 100
+    },
+    {
+      "file": "assets/fonts/scripts/e789acc260ba.woff2",
+      "sha256": "d5784187ed8887c200853bee622eceffb2e5f3f56f14a6cb30ca49da8f2f55fa",
+      "requestedCharacters": 322
+    },
+    {
+      "file": "assets/fonts/scripts/878646f6c037.woff2",
+      "sha256": "9eaa36cfc412ab7e85be40c07386a49baa7f3044aa005bd5bcac213508fac7a7",
+      "requestedCharacters": 91
+    },
+    {
+      "file": "assets/fonts/scripts/b9fa785dbb61.woff2",
+      "sha256": "405d6eec1e5ff07325d9aed47e3e60351bf29a026e866ccd2010c936d58f2960",
+      "requestedCharacters": 118
+    },
+    {
+      "file": "assets/fonts/scripts/f2b416f52a98.woff2",
+      "sha256": "ae6290c3d9aa32fac03612677691033ce6e552f33e7cbb6f59011798ce954525",
+      "requestedCharacters": 111
+    },
+    {
+      "file": "assets/fonts/scripts/ad747a34aaa2.woff2",
+      "sha256": "7e4cb6b1958102171f23ff1940a011a6f4d4f2440912eef13b3cd6ad50a32625",
+      "requestedCharacters": 84
+    },
+    {
+      "file": "assets/fonts/scripts/214345627acd.woff2",
+      "sha256": "403befba692b1bfe6086b83afdbd23c7b4f131a84d1c062726bb0261e987769e",
+      "requestedCharacters": 2
+    },
+    {
+      "file": "assets/fonts/scripts/fd4afd983836.woff2",
+      "sha256": "d2b076b4f7e47d7f219c37d5237916d3a4e95319e6fbc1ba3a849de4818ceb99",
+      "requestedCharacters": 83
+    },
+    {
+      "file": "assets/fonts/scripts/940839283e88.woff2",
+      "sha256": "5176e6f2725b5669460a118195fb66737b99af57d4f8633bf6e99417ac1913af",
+      "requestedCharacters": 209
+    },
+    {
+      "file": "assets/fonts/scripts/54ad4c07122e.woff2",
+      "sha256": "950e6e594db255ffbe10ff1d2c976c53cd311740316ebc093e61c7810aacfa1e",
+      "requestedCharacters": 213
+    },
+    {
+      "file": "assets/fonts/scripts/2aa8d63e193c.woff2",
+      "sha256": "59e9b818c6346df1bbcb42daecfe62b8dff85af37dbe10108d0d6913687e4d6d",
+      "requestedCharacters": 81
+    },
+    {
+      "file": "assets/fonts/scripts/4c54b94174c8.woff2",
+      "sha256": "004a45e3a8e82f151ea5b03d26fc6f6fb123059e9c86675babc2d57368b97cda",
+      "requestedCharacters": 173
+    },
+    {
+      "file": "assets/fonts/scripts/b3e108cd8e7e.woff2",
+      "sha256": "b7821a761b753147b8f6b344f19878f8edadc9ed3dc6fac6963c46a20c2a77c3",
+      "requestedCharacters": 258
+    },
+    {
+      "file": "assets/fonts/scripts/179329f36c41.woff2",
+      "sha256": "b6200264df8520abc486822f8dbf978249fd5e40685debba7144138319ed0a88",
+      "requestedCharacters": 523
+    },
+    {
+      "file": "assets/fonts/scripts/53a65f364729.woff2",
+      "sha256": "b492eed35dea4535852bbc9d0586da0fc629dd1c830d29ee2ffd0051c6a34c71",
+      "requestedCharacters": 172
+    },
+    {
+      "file": "assets/fonts/scripts/a10ffd7c831d.woff2",
+      "sha256": "fc565905894766ff3de05c66f487a6995910b5c6d0b6cfb4c2a48e51c6d3cdc1",
+      "requestedCharacters": 726
+    },
+    {
+      "file": "assets/fonts/scripts/d6a941fbf533.woff2",
+      "sha256": "910ab72db3a1b0202bacc5400457bcabb0428662d4fce981c9e08042f3cfd857",
+      "requestedCharacters": 28
+    },
+    {
+      "file": "assets/fonts/scripts/21493f617cd3.woff2",
+      "sha256": "ddcd9e9fa58b6137b55cdf16f2af0d2868a4511cf07958fe7af976a9a489d637",
+      "requestedCharacters": 89
+    },
+    {
+      "file": "assets/fonts/scripts/42188069bb1f.woff2",
+      "sha256": "4fe2519949efa6f5e4879302c318513065792002d58e350c9cc7309b167ac0e3",
+      "requestedCharacters": 23
+    },
+    {
+      "file": "assets/fonts/scripts/5354043735b1.woff2",
+      "sha256": "94fdd5fcbef9f5a3e964f36a9a5381e877e579f6b3d4256071af2589bdd0f7bf",
+      "requestedCharacters": 21
+    },
+    {
+      "file": "assets/fonts/scripts/800feb52a77c.woff2",
+      "sha256": "cd1f5c637f5eb53bfd106c8645637ee30e054afa22df58434edc0d2740da5f6c",
+      "requestedCharacters": 22
+    },
+    {
+      "file": "assets/fonts/scripts/c95c550deb19.woff2",
+      "sha256": "896e1ac1a88ba48f22b305f301965ac1a0c32ceb3bf4b3ef7a0a0bbf7ecbb3cb",
+      "requestedCharacters": 18
+    },
+    {
+      "file": "assets/fonts/scripts/0b7d51ba5bbc.woff2",
+      "sha256": "bff29cd1ccc82f649529cba906c5b99c661e8a73fc6a5671146ec57cd89f4250",
+      "requestedCharacters": 144
+    },
+    {
+      "file": "assets/fonts/scripts/9478b0a4d3a0.woff2",
+      "sha256": "c02b7cb99c2a5568e7883b49d8862c3ff5fbd86ecc12d563473b79c7a3533db6",
+      "requestedCharacters": 166
+    },
+    {
+      "file": "assets/fonts/scripts/d98540329a63.woff2",
+      "sha256": "43e224a6e8cdcb604c57897e95ffb12dd4b0ad897e4ca59310a70a96ad08a969",
+      "requestedCharacters": 68
+    },
+    {
+      "file": "assets/fonts/scripts/0a6faf67d460.woff2",
+      "sha256": "967bc5e823ee78e119dedeef122227f6cc3ad7de1e09dc357a36b9c01452329f",
+      "requestedCharacters": 35
+    },
+    {
+      "file": "assets/fonts/scripts/65f72f449e56.woff2",
+      "sha256": "be832d3da688586032a2759e82168e07d2c3ebbc61d02d9fe47a922dc73f68f8",
+      "requestedCharacters": 83
+    },
+    {
+      "file": "assets/fonts/scripts/1327fda1d04d.woff2",
+      "sha256": "f5a7ce81459ac346bb97c8308344ea3c39d6b8968010c5dfe3f99ef3a6657c6d",
+      "requestedCharacters": 31
+    },
+    {
+      "file": "assets/fonts/scripts/1b47385f39b5.woff2",
+      "sha256": "d2fc9241958751026ede37b481f468da94aa5896d8f8d63e130fc6d06dd35b56",
+      "requestedCharacters": 127
+    },
+    {
+      "file": "assets/fonts/scripts/4593b99474d0.woff2",
+      "sha256": "fba8101df4458f32f9e1feb0dd72d3f695962da211d4c48c3ed51ce31cdcc77a",
+      "requestedCharacters": 124
+    },
+    {
+      "file": "assets/fonts/scripts/5372d8e63c7c.woff2",
+      "sha256": "e79739c939b3c3b2c381573185a8604f977854887cbd477566ec46a689505c21",
+      "requestedCharacters": 72
+    },
+    {
+      "file": "assets/fonts/scripts/738639b65b11.woff2",
+      "sha256": "cb03924743c9f5b9d98642283fb5a90dd8c83fa054fea9b34cf6780df227637a",
+      "requestedCharacters": 56
+    },
+    {
+      "file": "assets/fonts/scripts/a146f893d140.woff2",
+      "sha256": "e8b1ff7a86fd6ac29d0fd01152ba1f6c9d60d0444a86235c0e7f6d416e72719f",
+      "requestedCharacters": 74
+    },
+    {
+      "file": "assets/fonts/scripts/b3eaf1174a3c.woff2",
+      "sha256": "ff3dc6cba9e35c748a2214787f15b94e8e94f066ee55975f2b57246e80c37d1c",
+      "requestedCharacters": 48
+    },
+    {
+      "file": "assets/fonts/scripts/0d8fe7efe314.woff2",
+      "sha256": "c1a580306eca7b786381772c59e7ef7b473d9cd865dc24a50b2c3ceba135c1fe",
+      "requestedCharacters": 66
+    },
+    {
+      "file": "assets/fonts/scripts/8c9e0b9b549b.woff2",
+      "sha256": "35478814a0566d01eba63e6d53cc8af35a8f2dd97558331800d56de6aa270515",
+      "requestedCharacters": 561
+    },
+    {
+      "file": "assets/fonts/scripts/832249cb9eaa.woff2",
+      "sha256": "5d1013e25baa65cda8a82568354cb84ec6bdd0bc6e30cea44147cb8f9f640854",
+      "requestedCharacters": 1
+    },
+    {
+      "file": "assets/fonts/scripts/90fcad2ecf0c.woff2",
+      "sha256": "21820712a0b93e1fbc10f98ef6805895330c7299f24af31d4802804d4115ebdd",
+      "requestedCharacters": 1132
+    },
+    {
+      "file": "assets/fonts/scripts/0c8e6a663cf0.woff2",
+      "sha256": "e27031023885b6d17ca428b3ce0d0c6b4c749d074953fa9f2bac11a8fd5dbcad",
+      "requestedCharacters": 2495
+    },
+    {
+      "file": "assets/fonts/scripts/6b5f778a9ecc.woff2",
+      "sha256": "575572910c9c0bd9fc59e6a4e9bb5f21ca25abdb25dab93c03689e28473888a3",
+      "requestedCharacters": 2266
+    },
+    {
+      "file": "assets/fonts/scripts/9ad458ce052c.woff2",
+      "sha256": "38a16b229c7eb9a2d7b1204c8522e8c06b8587c07359dcfb3dac06007f7bb2ef",
+      "requestedCharacters": 230
+    },
+    {
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "sha256": "4d1b22c3ae6976bbe8681d6b2584c5cb9aa390a85196f933352c06507170a4f5",
+      "requestedCharacters": 147
+    },
+    {
+      "file": "assets/fonts/scripts/080dab6b14f3.woff2",
+      "sha256": "bffc5e213aaadbdbc820d6c9702839ae25ee9d9ecfc4fb77a7768ec2a7a478b8",
+      "requestedCharacters": 1194
+    },
+    {
+      "file": "assets/fonts/scripts/b63157a1bec2.woff2",
+      "sha256": "8a4d0d19112d178d62dc9509168166f6684c07db605c470fef996be117f8522a",
+      "requestedCharacters": 11
+    },
+    {
+      "file": "assets/fonts/dad-grid.woff2",
+      "sha256": "b53b1b8518722dd97234f46b09d69867986967855b67e39ea2f3d89b624f839c",
+      "requestedCharacters": 1317
+    },
+    {
+      "file": "assets/fonts/scripts/0d9ccc2cac0b.woff2",
+      "sha256": "a294a099bee5b45703ef8b0497fbdef8574640625110c1501709f030dec2c999",
+      "requestedCharacters": 223
+    },
+    {
+      "file": "assets/fonts/scripts/c35e72b9417c.woff2",
+      "sha256": "f87adc38643cf279dda7096113b3ce3d493d2f754e254b24855a04e59a734b70",
+      "requestedCharacters": 134
+    },
+    {
+      "file": "assets/fonts/scripts/f01220bb43e8.woff2",
+      "sha256": "da8347f64295300ca28ff998dde6fb37ade4f85312d26448b9f2589543926b53",
+      "requestedCharacters": 59
+    },
+    {
+      "file": "assets/fonts/scripts/4754ce858aae.woff2",
+      "sha256": "cb38cf6f213d510de3094a62a0c9b26688a43e1d7f9782de6d6494d0c02ba9cf",
+      "requestedCharacters": 1019
+    },
+    {
+      "file": "assets/fonts/scripts/4d4a4076be79.woff2",
+      "sha256": "da9e18f6f5d8e4e2ccb4a98490e36edce451d9fe5ef19f4a284a200ac01087a7",
+      "requestedCharacters": 569
+    },
+    {
+      "file": "assets/fonts/scripts/bb5d15a1cf3e.woff2",
+      "sha256": "e07ad37cae2739947434c64c520956967d7559c375edf0fb16ac258225890b0a",
+      "requestedCharacters": 1019
+    },
+    {
+      "file": "assets/fonts/scripts/1302b0d53a4b.woff2",
+      "sha256": "622046603f9cd51f5df9e1081ebee5e47a0264bac8af70d3e4bcc27b01d2f522",
+      "requestedCharacters": 1020
+    },
+    {
+      "file": "assets/fonts/scripts/5c93e5661f35.woff2",
+      "sha256": "a7e1f2906a150a5bc0f9f84120b325d4c9e76279730099aadf443d11a79480c5",
+      "requestedCharacters": 1019
+    },
+    {
+      "file": "assets/fonts/scripts/06413af9aa5e.woff2",
+      "sha256": "513964d6ae952cbd6971465b6c6b5a70dff0337cf0a732d2fee796f114fded41",
+      "requestedCharacters": 1019
+    },
+    {
+      "file": "assets/fonts/scripts/a7b49b87aff2.woff2",
+      "sha256": "e7d4b167922fa099ed0f0b0df24d4b03f5de23f21c3873919d1e0a6173031636",
+      "requestedCharacters": 1019
+    },
+    {
+      "file": "assets/fonts/scripts/2f6c77186c23.woff2",
+      "sha256": "5f77657990843ee2efa7da4794ad4249e02baf2468334160b76d4595c5466e8d",
+      "requestedCharacters": 1022
+    },
+    {
+      "file": "assets/fonts/scripts/eeb1a21f92b1.woff2",
+      "sha256": "28cad80bbba5bbbce2de6ce6478891a4feaf9b521637db382dc867356950adbf",
+      "requestedCharacters": 695
+    },
+    {
+      "file": "assets/fonts/scripts/d7d87601b14e.woff2",
+      "sha256": "6d13d13ca45be206e02b1f81c58099d88473e30d3ded8444ac4d49c73005efde",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/4160975392f3.woff2",
+      "sha256": "f9637d2263eaf316ec41e9e227ecf5d15bdac3f18f83a7077ad63960a74250bd",
+      "requestedCharacters": 527
+    },
+    {
+      "file": "assets/fonts/scripts/237a34fd003b.woff2",
+      "sha256": "963dea381594a9179a31c4522a414ea209ed4c4f9211847eec21a39b95acf4d2",
+      "requestedCharacters": 685
+    },
+    {
+      "file": "assets/fonts/scripts/cbff300817bb.woff2",
+      "sha256": "4c42d6e2c2e57b7fcb59860572da328785c09582df64132d7d6a70e4a81c1be3",
+      "requestedCharacters": 621
+    },
+    {
+      "file": "assets/fonts/scripts/80404b71ac83.woff2",
+      "sha256": "3221669c484ab48129ee94359d3ac1cb7535f520566a156ae6d1c7af9dd347c8",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/f4f154b0da3a.woff2",
+      "sha256": "a759d819f3d39e1b6c78b13e8066bc3a41da59efea7ea6e277ab6bf3e6d00963",
+      "requestedCharacters": 565
+    },
+    {
+      "file": "assets/fonts/scripts/b7b290cf755a.woff2",
+      "sha256": "8b0b367e685f0b9e779f910cb804d2eb45e5d9c949e01b330dd4a993ac4b3656",
+      "requestedCharacters": 604
+    },
+    {
+      "file": "assets/fonts/scripts/1be7b04b5bd7.woff2",
+      "sha256": "91640da9f2d4d9726210aa750ae690910cfbf43bafd43fbcbe49629f06ac48d3",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/6e0f02c49531.woff2",
+      "sha256": "e8fb7553e29753f0c3ff9eee465070bfbb603b6ad6cc9f78b13ad2efd66f94b9",
+      "requestedCharacters": 554
+    },
+    {
+      "file": "assets/fonts/scripts/fcb8628519f0.woff2",
+      "sha256": "378678abb7d2ef2ea89f81beb0b365e490f811567819da052ea6abedd986fc20",
+      "requestedCharacters": 607
+    },
+    {
+      "file": "assets/fonts/scripts/814e466f816f.woff2",
+      "sha256": "a32c8dd6238cc66b907138dd74cad8458dd963e26131a0c16349322a52706606",
+      "requestedCharacters": 632
+    },
+    {
+      "file": "assets/fonts/scripts/ae8fc8f598cd.woff2",
+      "sha256": "aaa469b38fa2bb38ad10e3ede871377c5a406d35b347ebf2a718505da25c81b1",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/2133af0e54e0.woff2",
+      "sha256": "d93b51e6388393afa3d4212a60427f98dfc3662c62d7305b7d5346bd561ad6d9",
+      "requestedCharacters": 666
+    },
+    {
+      "file": "assets/fonts/scripts/6fca9d9f0f85.woff2",
+      "sha256": "ff057d60d5ef390457bf0dac3f979c24a5f5019864c36db6f86572bdf3dc8444",
+      "requestedCharacters": 632
+    },
+    {
+      "file": "assets/fonts/scripts/0ea6b4f160bf.woff2",
+      "sha256": "8cee0303f01a04794b7284f2a48da7bcf031717b9e7a1df7daddd163dcbf5cdc",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/3cc594b9a064.woff2",
+      "sha256": "5bc106a79353ed9903031345e01b51696211cb7325cc083407283da38847b182",
+      "requestedCharacters": 620
+    },
+    {
+      "file": "assets/fonts/scripts/1e09facfaba0.woff2",
+      "sha256": "b4c2b02ba84b6936cc04c02956ffab057afbdb849971a5cde7f60731f969e96e",
+      "requestedCharacters": 619
+    },
+    {
+      "file": "assets/fonts/scripts/8333a9bf27a7.woff2",
+      "sha256": "d0a397a7ee63c975797e0cb6ffc171ecb6dbce04abc176e57f14196a824189a2",
+      "requestedCharacters": 644
+    },
+    {
+      "file": "assets/fonts/scripts/c42aa33047b1.woff2",
+      "sha256": "7545de35769db285ae132293ec7cdf24d8d370e50681160a3ece8a3c18c5ef5e",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/953347ea168a.woff2",
+      "sha256": "87ea96e66d9a61066837b0d97359543ad0207b531d27a1a8480af9bb2660410a",
+      "requestedCharacters": 681
+    },
+    {
+      "file": "assets/fonts/scripts/c7d9257448ab.woff2",
+      "sha256": "65e35fd21709037688c91ccbc2c1de70900003e93368f345c952bf6eac12b9ad",
+      "requestedCharacters": 672
+    },
+    {
+      "file": "assets/fonts/scripts/b1282fe07319.woff2",
+      "sha256": "099a973e58d149509cb83d5576fa2c9caa73e2c42dd738b6cbe0110724818969",
+      "requestedCharacters": 645
+    },
+    {
+      "file": "assets/fonts/scripts/6fdf6964cd2b.woff2",
+      "sha256": "d178ea4c8351c4b294a4a645baaf4120cf8d2ab6be31fbfc942729291af04cb4",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/c4981b171542.woff2",
+      "sha256": "1fea5afaf715ddd966d4439acef267bfa1575025e1ec59d591a4cba0a2bda113",
+      "requestedCharacters": 683
+    },
+    {
+      "file": "assets/fonts/scripts/816685862d81.woff2",
+      "sha256": "788ca84a8e6e02bf094f3481e64d91993e2f30bfa6785d4aec4945388bd12911",
+      "requestedCharacters": 709
+    },
+    {
+      "file": "assets/fonts/scripts/f6db51fff5dc.woff2",
+      "sha256": "9c3589a63cb51a671a90081b74b236d2b8f42e6ba0a30ee6f0d3b2b68e692272",
+      "requestedCharacters": 717
+    },
+    {
+      "file": "assets/fonts/scripts/8c456b438c24.woff2",
+      "sha256": "188d635778e2d09a173264327d41fa24bc3299aa8bd2d3521e56a6625c3a4840",
+      "requestedCharacters": 862
+    },
+    {
+      "file": "assets/fonts/scripts/d2fac7584522.woff2",
+      "sha256": "ae1ca75d2c98e274e1f8dc59a1687e9e4708b1012fa4e9bfa910a47bcb0b6e6b",
+      "requestedCharacters": 773
+    },
+    {
+      "file": "assets/fonts/scripts/ab9bed7b46c9.woff2",
+      "sha256": "0dc90b4041f3474b6e9bea224766e91a2dfd66be2f533a9b250b5df0735b09e7",
+      "requestedCharacters": 1220
+    },
+    {
+      "file": "assets/fonts/scripts/44c9fafd2a4d.woff2",
+      "sha256": "6634d2c6fe71d74f450e3e72d5001baa49ef836850349a55e42286f8e6d294b4",
+      "requestedCharacters": 300
+    },
+    {
+      "file": "assets/fonts/scripts/449ee77058ae.woff2",
+      "sha256": "4c099ab380e8d6edfd13da8ffc61147aba096fe0a77694bf550854e5e33b8b3b",
+      "requestedCharacters": 657
+    },
+    {
+      "file": "assets/fonts/scripts/5ff389a7e3ab.woff2",
+      "sha256": "61ab2ea9d6180b619792d0866f1608fabf45922c54b9f4de35c8ddb9b56a38f7",
+      "requestedCharacters": 45
+    },
+    {
+      "file": "assets/fonts/scripts/796984ff7020.woff2",
+      "sha256": "a275613f2604392ce4a6fba36fe7f8d7b0286648349b912c4be4fd6b9e648fa1",
+      "requestedCharacters": 56
+    },
+    {
+      "file": "assets/fonts/scripts/ba1867bf31f9.woff2",
+      "sha256": "574a034129726b93cdc2900f5db26aeea7156a95cde00c43d1bbfca892392ef3",
+      "requestedCharacters": 82
+    },
+    {
+      "file": "assets/fonts/scripts/b12620743be1.woff2",
+      "sha256": "0b22cac676e649c3857a12a3a68ed05715b449e4a5fbdfe39bc9f20ce0b0d3e3",
+      "requestedCharacters": 47
+    },
+    {
+      "file": "assets/fonts/scripts/ac7d5a40d682.woff2",
+      "sha256": "e773fb7ffad33933818c6b6fbfcd086668c25652a1d9bdf37501a0bade9a1cfc",
+      "requestedCharacters": 37
+    },
+    {
+      "file": "assets/fonts/scripts/538db1e715cc.woff2",
+      "sha256": "260f8f83610f43484d224bacf4248967bfdb4c46454764bb1c7fc4d00325b4a5",
+      "requestedCharacters": 29
+    },
+    {
+      "file": "assets/fonts/scripts/3b7718b155a3.woff2",
+      "sha256": "ed8ac0863833676410282249009517b7481a5e5dea085e0d779fbc4dc341f94b",
+      "requestedCharacters": 90
+    },
+    {
+      "file": "assets/fonts/scripts/095804bd7425.woff2",
+      "sha256": "433e0fc8f2388d81861ce2b4f0beb997f58487d64ed5f7042ab7771db11b9e4d",
+      "requestedCharacters": 83
+    },
+    {
+      "file": "assets/fonts/scripts/3f4e4829bf31.woff2",
+      "sha256": "2e8378426c561389a6ca4ac9769e7623095e79fc60e8147ef6bb6c81b771887d",
+      "requestedCharacters": 72
+    },
+    {
+      "file": "assets/fonts/scripts/8183cf64cdfd.woff2",
+      "sha256": "e447eb089053199596ff44f352f6635ecd0c025bc3f504b15c3102211b6e5c4d",
+      "requestedCharacters": 79
+    },
+    {
+      "file": "assets/fonts/scripts/0e61a054d8a6.woff2",
+      "sha256": "0980b7a156fbaa1cb8e29fa86fb0119964457cfd99a53472ac00f3250414200b",
+      "requestedCharacters": 777
+    },
+    {
+      "file": "assets/fonts/scripts/33677c14995e.woff2",
+      "sha256": "ac38b6d8356e3e4ed8ee3d323b824c6e072cf65af7afe8bc06b6b14d4046cdbc",
+      "requestedCharacters": 784
+    },
+    {
+      "file": "assets/fonts/scripts/bb1b38caa7da.woff2",
+      "sha256": "783f7dc623bdf17e076685c9459e88793095f8472681b7d8ff319f16a414b469",
+      "requestedCharacters": 840
+    },
+    {
+      "file": "assets/fonts/scripts/5f4da600957b.woff2",
+      "sha256": "c447d5302fb6829643050302dc33bce4f73597235e88f7fdabb520c1b3e08913",
+      "requestedCharacters": 800
+    },
+    {
+      "file": "assets/fonts/scripts/e5600250d875.woff2",
+      "sha256": "963a92a9442de9f85ad6ea63d03d2be92ded385daca7d5c8fbb058ae7deb2c43",
+      "requestedCharacters": 861
+    },
+    {
+      "file": "assets/fonts/scripts/cedb9a134fb9.woff2",
+      "sha256": "be20f8e312037d379283474181dab8bca657b721bd66e5f89a0f85b33c57f466",
+      "requestedCharacters": 796
+    },
+    {
+      "file": "assets/fonts/scripts/a78ab8885ab2.woff2",
+      "sha256": "b95dcc2012d11a93f414b969539a273525ff32e81deeb72c75916e0291883a7c",
+      "requestedCharacters": 727
+    },
+    {
+      "file": "assets/fonts/scripts/69461bccf3f7.woff2",
+      "sha256": "75033f9ea5c16568f70a37bcf6990185fd94d85971e76d768fbcb84392e03589",
+      "requestedCharacters": 843
+    },
+    {
+      "file": "assets/fonts/scripts/34a8f856f0af.woff2",
+      "sha256": "8eab6ebbdcf513611991d0d34416ccbae8ba02fd4bf5ae9d2d69ca8afe70af92",
+      "requestedCharacters": 842
+    },
+    {
+      "file": "assets/fonts/scripts/b499c3a2d1a1.woff2",
+      "sha256": "87aeee85b1c22707fd84dd7e734b013c7f030c068a0e50f9c3e0940d4d015f71",
+      "requestedCharacters": 837
+    },
+    {
+      "file": "assets/fonts/scripts/3daf5aa023d7.woff2",
+      "sha256": "bd50cc63aa3990e32f53202dc76011c5ff2cb57b36dfac25551b9f2771abcd87",
+      "requestedCharacters": 820
+    },
+    {
+      "file": "assets/fonts/scripts/0b0874ffdbd6.woff2",
+      "sha256": "876d1262b9ec4693b80268d1888b5e3b59067ea76ab9a70872e2bd29b841783a",
+      "requestedCharacters": 176
+    },
+    {
+      "file": "assets/fonts/scripts/42c56d8d472c.woff2",
+      "sha256": "7cc6d253db38b1b2a0f7083f1a8003334b76a69b8ee907ee5c83f7e7c202e7e7",
+      "requestedCharacters": 586
+    },
+    {
+      "file": "assets/fonts/scripts/cf529bea4288.woff2",
+      "sha256": "dd89a4952421c25905529232e25d1cc4d36f6afe6aef997fcc0d404decbddb96",
+      "requestedCharacters": 43
+    },
+    {
+      "file": "assets/fonts/scripts/02840f21e543.woff2",
+      "sha256": "e56d70666854d5f9579f8f04b2cafa89a2ae95322619e1cef1b88476cf73e389",
+      "requestedCharacters": 268
+    },
+    {
+      "file": "assets/fonts/scripts/453f7d9060d9.woff2",
+      "sha256": "c08acaba2831fb9868acc42a3896a1c45e816caf43a997f0d1bbb4528d63e566",
+      "requestedCharacters": 29
+    },
+    {
+      "file": "assets/fonts/scripts/c8a7fa7e7421.woff2",
+      "sha256": "6c5df812bd8e365c4afcf1a1bd455d94591443c2d8c03937d3389b1117200698",
+      "requestedCharacters": 49
+    },
+    {
+      "file": "assets/fonts/scripts/ced7eb13f610.woff2",
+      "sha256": "5f1cd4e4a3d7ca13e6ac77838bb28d5a3628787ef567701d8e03a80af542ec6d",
+      "requestedCharacters": 39
+    },
+    {
+      "file": "assets/fonts/scripts/08b182c9ed16.woff2",
+      "sha256": "11fc49bb0c96899fc101fc7cb6f9e74967677959c58c5229cf674b0496ad41a3",
+      "requestedCharacters": 27
+    },
+    {
+      "file": "assets/fonts/scripts/c902ddb3b7bf.woff2",
+      "sha256": "666fccfe29e72c46f2c9ca3f4bce6d79bb0f77503ee69764685c7a0e2aee9f36",
+      "requestedCharacters": 43
+    },
+    {
+      "file": "assets/fonts/scripts/85e50be5f399.woff2",
+      "sha256": "b3f56aceb4fd5b86065cdd96acd89990170f58520acf8d0d80b92d377e72ca4f",
+      "requestedCharacters": 31
+    },
+    {
+      "file": "assets/fonts/scripts/c49182cd5750.woff2",
+      "sha256": "c96d7160c21223dc11b722b5d9808f518b48ffcc1fc1cd09a3ccc15cbcfa9035",
+      "requestedCharacters": 50
+    },
+    {
+      "file": "assets/fonts/scripts/b577f3d951b7.woff2",
+      "sha256": "4a10c1663259a9c0fc411500d714cea5b4ce17e950650cf5c0323ade2e434941",
+      "requestedCharacters": 80
+    },
+    {
+      "file": "assets/fonts/scripts/64700a48e6e9.woff2",
+      "sha256": "03df5917799ac56f35d323a632e854e33eeb4664efa5cd6d297d052df3b94884",
+      "requestedCharacters": 48
+    },
+    {
+      "file": "assets/fonts/scripts/b188df0bbbd9.woff2",
+      "sha256": "5a36f0c8c3c904a1acbc0d55356564c93c7a279301783d2e52f24fa94cabb34b",
+      "requestedCharacters": 40
+    },
+    {
+      "file": "assets/fonts/scripts/0bc178c824ef.woff2",
+      "sha256": "aae34a87f803820195653295f5a98ab1e4170689cff884c1b6dda75dfc1257a6",
+      "requestedCharacters": 72
+    },
+    {
+      "file": "assets/fonts/scripts/e845a217b98b.woff2",
+      "sha256": "897635ae02594102f629c13ad052df79fe909cee35b063e71d57ad1fc3b5013b",
+      "requestedCharacters": 40
+    },
+    {
+      "file": "assets/fonts/scripts/6e4169f46cbb.woff2",
+      "sha256": "199d4d9c6cd8a84f0fa7f3089125023586206ff08eaa1a03ca789b9848a51c1a",
+      "requestedCharacters": 53
+    },
+    {
+      "file": "assets/fonts/scripts/6c59aadf7105.woff2",
+      "sha256": "83384bb37a59a595e44e553a87db7267325439098c68c93b729e64653c0b4474",
+      "requestedCharacters": 70
+    },
+    {
+      "file": "assets/fonts/scripts/3d142d156eb0.woff2",
+      "sha256": "0cc1d383687c2baa4c415d80466f6f7e560b03bf7894dd73bf616ad9abb0b695",
+      "requestedCharacters": 52
+    },
+    {
+      "file": "assets/fonts/scripts/063310161dc8.woff2",
+      "sha256": "ff1e17eb1cf71889c4339cdde4adc025a0ed976a567852b63b560893f8684c49",
+      "requestedCharacters": 341
+    },
+    {
+      "file": "assets/fonts/scripts/f433b5c42b25.woff2",
+      "sha256": "df62d3200fb20e7465a28137a8129b814ef0e3ef3c95bd1bf10dea61f0837d15",
+      "requestedCharacters": 55
+    },
+    {
+      "file": "assets/fonts/scripts/f0218d109a4e.woff2",
+      "sha256": "257547ebfb73dd94b7f289d8fd6718aca46fcbddd61ad443d9c28a8a54cbcfeb",
+      "requestedCharacters": 31
+    },
+    {
+      "file": "assets/fonts/scripts/e9b5e5128788.woff2",
+      "sha256": "3665ba5268d65c5789aa3cea8dcf367cfb95d9fab488ee24d32b6fc77a4f521c",
+      "requestedCharacters": 32
+    },
+    {
+      "file": "assets/fonts/scripts/a70407fa908a.woff2",
+      "sha256": "756d2def240af323f4ff3747f09262ba9d8507f2dd0d79995c7365497a21bbd5",
+      "requestedCharacters": 40
+    },
+    {
+      "file": "assets/fonts/scripts/d31ce6f59e32.woff2",
+      "sha256": "7df93a0c489ab8df12c175cf908187fc037827fd7a42cf77a3342f0ea42afc93",
+      "requestedCharacters": 26
+    },
+    {
+      "file": "assets/fonts/scripts/774440559cdc.woff2",
+      "sha256": "7cc8d367d1462d0a1156fb62438ce4edefa3ca17d398c87a2a9b41aa50000d37",
+      "requestedCharacters": 29
+    },
+    {
+      "file": "assets/fonts/scripts/10d0fa35decc.woff2",
+      "sha256": "9ec1fdbe232bb2950d174615f4d522121a4be1af00d93e81f1a538255830fe87",
+      "requestedCharacters": 27
+    },
+    {
+      "file": "assets/fonts/scripts/1c05b83e6a7a.woff2",
+      "sha256": "5e8e897adfd1a026799ec4045b6158b8d763045843607aa368018fa3e7718209",
+      "requestedCharacters": 122
+    },
+    {
+      "file": "assets/fonts/scripts/789957c6372c.woff2",
+      "sha256": "ca595b5e54547c04276ee663252cd9103a96eaa30029275c13683c1a89f1e1d2",
+      "requestedCharacters": 68
+    },
+    {
+      "file": "assets/fonts/scripts/4298161054eb.woff2",
+      "sha256": "0c990dc57c07965cdb291079e686060d121a66a37d90a7045f7369e12d3bed2c",
+      "requestedCharacters": 32
+    },
+    {
+      "file": "assets/fonts/scripts/589580b9d05b.woff2",
+      "sha256": "0696913e5fc6a546be1fc979bb3d3977275c75627212641fa091e6b2500f33e3",
+      "requestedCharacters": 32
+    },
+    {
+      "file": "assets/fonts/scripts/ffa67c02b05a.woff2",
+      "sha256": "277c525ff895b1592ca6537c68ffbbe6448a32bb5c9baf7d6082a9cd180cfd7e",
+      "requestedCharacters": 51
+    },
+    {
+      "file": "assets/fonts/scripts/b9f6bec12f0a.woff2",
+      "sha256": "6a81475cb1d155c8d44ef3ef8f1f7fef07da58fcf6e215cad60f8c05e5c04dd9",
+      "requestedCharacters": 61
+    },
+    {
+      "file": "assets/fonts/scripts/d4572392912b.woff2",
+      "sha256": "7e725433803755ff8a4392c9cf69fb8382aed4dfd5efa43897b263c13e0898db",
+      "requestedCharacters": 30
+    },
+    {
+      "file": "assets/fonts/scripts/8d39a1c56d33.woff2",
+      "sha256": "ac601d09b699535e72be7207c200d913060aea07f357551ca129ac8382cae027",
+      "requestedCharacters": 27
+    },
+    {
+      "file": "assets/fonts/scripts/15fb15108c0d.woff2",
+      "sha256": "920ebb7f0883a1cdb73f9b94fba23a2810f11a1a5d9b96980e516093d0a8a1aa",
+      "requestedCharacters": 29
+    },
+    {
+      "file": "assets/fonts/scripts/ec3993e082b5.woff2",
+      "sha256": "a5413e33fd88deade986f275f5f0f7fa28fbe2cfa8eec1bedbc1c1f455a299d9",
+      "requestedCharacters": 73
+    },
+    {
+      "file": "assets/fonts/scripts/ac27235812ef.woff2",
+      "sha256": "c08b591465e880186164f0b2586e9eb9cec370a25e8b68c8d9e8ede3a348a012",
+      "requestedCharacters": 108
+    },
+    {
+      "file": "assets/fonts/scripts/81fcc9ad5022.woff2",
+      "sha256": "150c83d7d72fa7a695b6b1744ecacbad9ecd5f607ddeeb642931f146c2ba93a1",
+      "requestedCharacters": 50
+    },
+    {
+      "file": "assets/fonts/scripts/0547843903dd.woff2",
+      "sha256": "412193aca6eab5e276b81b873441b633e012dd40e59057efbe59fe355eefed04",
+      "requestedCharacters": 69
+    },
+    {
+      "file": "assets/fonts/scripts/5b6e0d90343d.woff2",
+      "sha256": "21eec332f53a6a93d9b92a8d71e4232a08005efa08bc06c2243e42ec6cb091b4",
+      "requestedCharacters": 47
+    },
+    {
+      "file": "assets/fonts/scripts/158c38a18f0f.woff2",
+      "sha256": "8ee746bb18290705877c760f55c758a8a8e08257ab7571cb584da4a679fb0fa8",
+      "requestedCharacters": 40
+    },
+    {
+      "file": "assets/fonts/scripts/88f02f3abfda.woff2",
+      "sha256": "5c65cdc4936e3b76e6c87586e8f2fd772cdd2ba0ca8a110058623303dafb7fdc",
+      "requestedCharacters": 42
+    },
+    {
+      "file": "assets/fonts/scripts/7d309b636746.woff2",
+      "sha256": "e7dee21d26db3c5a4f8ff1fcc4026323a0460d3f7f30c3f9f19fb5f7f4765925",
+      "requestedCharacters": 26
+    },
+    {
+      "file": "assets/fonts/scripts/b800f574b29c.woff2",
+      "sha256": "cdc08ffee0bf267f46bc0e022db1297045772654b813c01d5f3e2631ce129014",
+      "requestedCharacters": 28
+    },
+    {
+      "file": "assets/fonts/scripts/0ff3f08974e1.woff2",
+      "sha256": "1d6a6053887cb0fba39d24d7e22d8278b6773bb200193445135e51e11df55a9e",
+      "requestedCharacters": 23
+    },
+    {
+      "file": "assets/fonts/scripts/c6ff9137f415.woff2",
+      "sha256": "42fc569ba55b7cad688161bc972e659c0f23b0d8e4353548ab747ccd42371a74",
+      "requestedCharacters": 115
+    },
+    {
+      "file": "assets/fonts/scripts/bd6f2e70d0a7.woff2",
+      "sha256": "58d69374c00adceaa80be20f04ba71bf4b7821536b58f8bd20dea9dcaf379daf",
+      "requestedCharacters": 68
+    },
+    {
+      "file": "assets/fonts/scripts/081aecdc8fd5.woff2",
+      "sha256": "b148c9ccca518d5cdfd38ddd24b23d35cac992b47aa3c378f2faf639b72eb7c9",
+      "requestedCharacters": 35
+    },
+    {
+      "file": "assets/fonts/scripts/201983fec778.woff2",
+      "sha256": "d7b26a6bde1a6a5e86720ff03dea31932a74a8cb3ede0b13e895df8822ba11dd",
+      "requestedCharacters": 39
+    },
+    {
+      "file": "assets/fonts/scripts/00765286a510.woff2",
+      "sha256": "3c8a9eb7ffe76c2a66842e473396f7cc992d0ba6ec38dc30dc2b9b4a7b0bab54",
+      "requestedCharacters": 104
+    },
+    {
+      "file": "assets/fonts/scripts/a9c765f7a268.woff2",
+      "sha256": "ced0f1b967b679e434c060cc54986cf1c12908e313f6d6ba3b3092e6969f596c",
+      "requestedCharacters": 64
+    },
+    {
+      "file": "assets/fonts/scripts/2cccbc6c0ca7.woff2",
+      "sha256": "3136dd2b794afb082fb7fab544507d35f36aa9bc2c1c74279875c00d6929d3f8",
+      "requestedCharacters": 1
+    },
+    {
+      "file": "assets/fonts/scripts/051e69c1be93.woff2",
+      "sha256": "5ebf100f1d6d615b7bc95e39aab4ec3db90882465bd427942ee1200760f432d1",
+      "requestedCharacters": 38
+    },
+    {
+      "file": "assets/fonts/scripts/94cca57feb0f.woff2",
+      "sha256": "a2b49366b301f910b91070b0014a2c8ef8323eab5a7b2531e6450db781068078",
+      "requestedCharacters": 69
+    },
+    {
+      "file": "assets/fonts/scripts/5380bb92d57e.woff2",
+      "sha256": "31da53a88826253fc2042134bd061887a2e678951ccbfce8ee675cbb8936e4f6",
+      "requestedCharacters": 80
+    },
+    {
+      "file": "assets/fonts/scripts/258a685fb4d2.woff2",
+      "sha256": "05ee7bf7ea935ac59c7baaceb0e4b720fc9c6c47fadcab066137e15880894652",
+      "requestedCharacters": 97
+    },
+    {
+      "file": "assets/fonts/scripts/77962cc59e6b.woff2",
+      "sha256": "1b8d4c428fccd061a0f890cd2f51fe8904a63bd955c6897918eb9d1251968c5c",
+      "requestedCharacters": 82
+    },
+    {
+      "file": "assets/fonts/scripts/8e384e7cb8bd.woff2",
+      "sha256": "2232f67e627704d6105cb26fe1d0e2798c942ae21b02870c5296907fda93c7e0",
+      "requestedCharacters": 92
+    },
+    {
+      "file": "assets/fonts/scripts/e9942374bf5b.woff2",
+      "sha256": "52ba746ec9ccec7e944d251d07e15a477c4fe17e2582d9ff78f80a0bdbd755ec",
+      "requestedCharacters": 79
+    },
+    {
+      "file": "assets/fonts/scripts/b205b918295e.woff2",
+      "sha256": "844592cd93b16a30e13979b765a992af87972acc544f954e26efa58b7342840f",
+      "requestedCharacters": 68
+    },
+    {
+      "file": "assets/fonts/scripts/cca262776eee.woff2",
+      "sha256": "b05706c2b593eb2e7261211fe8efa769a4f7800e4592262ada0827052434dc0f",
+      "requestedCharacters": 20
+    },
+    {
+      "file": "assets/fonts/scripts/2ac430abdd25.woff2",
+      "sha256": "6dc91f680989595a9fdf0218b9d264a2dc777966d3ef7a8406d5c26278ea62d1",
+      "requestedCharacters": 65
+    },
+    {
+      "file": "assets/fonts/scripts/e26445ed3fa4.woff2",
+      "sha256": "5821b44fe208a1b94896cfca53c1d94d045ccebe84220fbc8c09075ecf55c9cf",
+      "requestedCharacters": 60
+    },
+    {
+      "file": "assets/fonts/scripts/8c654e3ef425.woff2",
+      "sha256": "809463fc3fee31ae05531bb0dc4e0e64f48d7b61d6e96611c75b02ab21071902",
+      "requestedCharacters": 84
+    },
+    {
+      "file": "assets/fonts/scripts/e790ce86071a.woff2",
+      "sha256": "fe8921da5f8eb00ebab4683e9c872fba73b5462606ba845370a75f585bbc8e61",
+      "requestedCharacters": 72
+    },
+    {
+      "file": "assets/fonts/scripts/106ae0402071.woff2",
+      "sha256": "ae87b275b352e74ac15f29ef9f60751513e2434e7794858f160209321960709e",
+      "requestedCharacters": 72
+    },
+    {
+      "file": "assets/fonts/scripts/3b414b70e719.woff2",
+      "sha256": "d243c716fe1e8c40d5986578f74f188cd5d07d9a752f168ab97f08c9e9bf137c",
+      "requestedCharacters": 83
+    },
+    {
+      "file": "assets/fonts/scripts/cc6e5b751a38.woff2",
+      "sha256": "1e25ca098764df5f820bdb2a0adac3712131e6474ad1da41dae7274508ca7e80",
+      "requestedCharacters": 57
+    },
+    {
+      "file": "assets/fonts/scripts/11138da39427.woff2",
+      "sha256": "8bcca7f44ea22ac7013f3e99a3f6a86f58d5a6e4c560acd24ee93390809e42c9",
+      "requestedCharacters": 44
+    },
+    {
+      "file": "assets/fonts/scripts/715e87783d02.woff2",
+      "sha256": "502d05d57e07267df9dcf8474bb18c7f13fcb07728afafb12f9dcce958c52afc",
+      "requestedCharacters": 97
+    },
+    {
+      "file": "assets/fonts/scripts/ea056f4250d3.woff2",
+      "sha256": "6bfb119d34f225ade746ac88877cce081da3537338347e35e5a42b0e62605d87",
+      "requestedCharacters": 68
+    },
+    {
+      "file": "assets/fonts/scripts/a469583d8b76.woff2",
+      "sha256": "032e9e4c259fa81278d25e238208759f047a3fd188590edbf7eaec4658173f1b",
+      "requestedCharacters": 75
+    },
+    {
+      "file": "assets/fonts/scripts/0b535db09ad0.woff2",
+      "sha256": "6fd14172787646a0b86631fbf42d831ad12952b1bb281fdf685ee44570a3b5fa",
+      "requestedCharacters": 63
+    },
+    {
+      "file": "assets/fonts/scripts/4eec163ff41b.woff2",
+      "sha256": "b44fc040f97e269275bd5cfb82f22f0b5ce5e02eb5d2348da6a1a72032f523e6",
+      "requestedCharacters": 54
+    },
+    {
+      "file": "assets/fonts/scripts/e98eea895522.woff2",
+      "sha256": "4b711b2c5947c4c2943e14118b681e39003abe6a7f65e83e804b2bd17b9922e3",
+      "requestedCharacters": 25
+    },
+    {
+      "file": "assets/fonts/scripts/3d04444ca531.woff2",
+      "sha256": "bda3362cd4cd37931006fd382841318e461f1997314e03a0e6917c938ca40e34",
+      "requestedCharacters": 87
+    },
+    {
+      "file": "assets/fonts/scripts/fa32143afa11.woff2",
+      "sha256": "611345912ddd10784d2f890e6148ea547b58f7a9337a87d81bd49ef1efe1e7ef",
+      "requestedCharacters": 51
+    },
+    {
+      "file": "assets/fonts/scripts/819c3b953317.woff2",
+      "sha256": "490c3bde8c0bbb0ffbb2464ec3f1e1188c4facdc9237982078c4d46f65f5351f",
+      "requestedCharacters": 1234
+    },
+    {
+      "file": "assets/fonts/scripts/fae09e76bdd7.woff2",
+      "sha256": "8d1d13d8490a56d037bb3df45e208635096df76addfb6fcbe4159e3f68c6d91a",
+      "requestedCharacters": 12
+    },
+    {
+      "file": "assets/fonts/scripts/e24e3ab74ef8.woff2",
+      "sha256": "df07bea87861c63f09981201f814e17d07c45a4de2bc1ce69aa622137b19d64f",
+      "requestedCharacters": 311
+    },
+    {
+      "file": "assets/fonts/scripts/bae72ffd8363.woff2",
+      "sha256": "aa90eb94946515cf915cad8fed17dd106a4ae854f893fe046365bb621996bd48",
+      "requestedCharacters": 99
+    },
+    {
+      "file": "assets/fonts/scripts/5f5f565fbefa.woff2",
+      "sha256": "08a2d542dfe34ee05f94eb51ff9f846308ea11cc2cd722c8ec0e869573a0b1d6",
+      "requestedCharacters": 3976
+    },
+    {
+      "file": "assets/fonts/scripts/d4729c3e3f86.woff2",
+      "sha256": "13e3c532421e565dc92b5d0d2c0d8edd48204237266f8af44aa5f1b6c531b12a",
+      "requestedCharacters": 583
+    },
+    {
+      "file": "assets/fonts/scripts/f8fd08cb2111.woff2",
+      "sha256": "24443acdb5cd49294dda2cf605b6d70de782203547441cb50c7b39878e84a1c3",
+      "requestedCharacters": 58
+    },
+    {
+      "file": "assets/fonts/scripts/0dfc7890e0b9.woff2",
+      "sha256": "a9b6abed6d4d15c41922308ec901a3b53553b7580f0c4cb44ed416e3490b5617",
+      "requestedCharacters": 43
+    },
+    {
+      "file": "assets/fonts/scripts/a39a7b09d1f3.woff2",
+      "sha256": "faa9281202709d1b0fb77704fa98ce53878e615d07c98901e9c4da9c708a906f",
+      "requestedCharacters": 89
+    },
+    {
+      "file": "assets/fonts/scripts/f24bb83096a5.woff2",
+      "sha256": "97dd87242804b30db383210a5acf172b269199173ab21aaa368d17ced713ea58",
+      "requestedCharacters": 36
+    },
+    {
+      "file": "assets/fonts/scripts/cce737698e35.woff2",
+      "sha256": "6678912bc4ccb1cbc022d7508c50cb977736c5a95a53f70f7ab7a784dd4e75fa",
+      "requestedCharacters": 127
+    },
+    {
+      "file": "assets/fonts/scripts/e1b14437a8ec.woff2",
+      "sha256": "cc77ac41598c04c998f6cdcb823d256737899d23fe29fe65a1648e02a88eec30",
+      "requestedCharacters": 58
+    },
+    {
+      "file": "assets/fonts/scripts/4a4b504c577c.woff2",
+      "sha256": "efced87d047cccb186d441b37f6d2049fbb41739417a1dd1a138586483f24d95",
+      "requestedCharacters": 91
+    },
+    {
+      "file": "assets/fonts/scripts/cb7b0e110de3.woff2",
+      "sha256": "5f372dcac8b487b7d0d51ad21ba3052431030873ae5f3f7bf6da41214a970619",
+      "requestedCharacters": 50
+    },
+    {
+      "file": "assets/fonts/scripts/2a94cb6d32fa.woff2",
+      "sha256": "e4e2554a9029ee059f85483ee931032c3a9106f61e5537a64c593c6cd72c03cf",
+      "requestedCharacters": 149
+    },
+    {
+      "file": "assets/fonts/scripts/70a74823ddfe.woff2",
+      "sha256": "7501ef17c1d6e7cda4ff82c39f5a9ac902e997615b13224f84c5c4cbcbd22502",
+      "requestedCharacters": 1020
+    },
+    {
+      "file": "assets/fonts/scripts/be1fa581f03d.woff2",
+      "sha256": "65be546e0d30363e8ed2300ede0e68dbb7e1c725ba72d0ecd86e73b60f548fe6",
+      "requestedCharacters": 397
+    },
+    {
+      "file": "assets/fonts/scripts/042e43ff081e.woff2",
+      "sha256": "a5ea8e48ba9ac003c543e473443a1217fca5e5b2e9de0923bd818f147a8de6a2",
+      "requestedCharacters": 471
+    },
+    {
+      "file": "assets/fonts/scripts/b18cf2344e84.woff2",
+      "sha256": "4e792b4580e1ee31b9d3de1045a053e0491bd2b8695f00f5508a58a1d9eb4573",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/c1bc905ec1f5.woff2",
+      "sha256": "4b34a8629d205f0cf97e03ad4d4be7896e1ac891f19b071196e573d526fab1c8",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/803eeb517abd.woff2",
+      "sha256": "0591ad8c3ddeaf8e75cd4f9e6c25cca647c9148afb100c0ead228ab9705d73a4",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/b168fee5072b.woff2",
+      "sha256": "6a3f38a8ec6311d5a66b2b9ac53671457e5a5cffe6d851bdd31f29ca52316393",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/12dac0d700aa.woff2",
+      "sha256": "29a87b1dd32ca37df8f1cb3de45f90ebe44d72f42a915c48e6cbac4fba4e17f5",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/82b4210ecd4f.woff2",
+      "sha256": "a11314be15e29ac6a48d509e7fb85d16136961cb033bc0d5d24c7ec34b8a5fa9",
+      "requestedCharacters": 774
+    },
+    {
+      "file": "assets/fonts/scripts/4ab0e1dd91b7.woff2",
+      "sha256": "89c5c1f01b90b64ef437f390556c7d77e52e14fc5683509d5faa04e219100a00",
+      "requestedCharacters": 22
+    },
+    {
+      "file": "assets/fonts/scripts/3836a9d22fec.woff2",
+      "sha256": "751f67d34ca02c755d92816bcbb5cd0529f3c935124d54aa96b3ccf285c4fc44",
+      "requestedCharacters": 290
+    },
+    {
+      "file": "assets/fonts/scripts/24035b96a3ea.woff2",
+      "sha256": "08edf70d0f190cb51adcb4c2f1bdd1f301d20fc55f60c38694d440974ab3852c",
+      "requestedCharacters": 10
+    },
+    {
+      "file": "assets/fonts/scripts/3c671ced2faa.woff2",
+      "sha256": "ffd92d6e4f0b7c12ddc1beb17bbd546097b67477730b031f7908065e389ef1db",
+      "requestedCharacters": 185
+    },
+    {
+      "file": "assets/fonts/scripts/342fc9939b91.woff2",
+      "sha256": "76254094338528218386f936841dd7ac723de715fe666d51eccee2e713a978e5",
+      "requestedCharacters": 551
+    },
+    {
+      "file": "assets/fonts/scripts/9a35221942e7.woff2",
+      "sha256": "281e81edc11c8d3155ed2d9da5462d3f9194876e214acd7c72ab5f9153fb3ca0",
+      "requestedCharacters": 20
+    },
+    {
+      "file": "assets/fonts/scripts/78fa95ffc680.woff2",
+      "sha256": "6dd31f7e79b1e588a3c9893e13c3986e4d818c5c88eb8c36bc2b4a6ab750263d",
+      "requestedCharacters": 672
+    },
+    {
+      "file": "assets/fonts/scripts/845f635387c9.woff2",
+      "sha256": "6004cd4f6ddaf5ca16e34744935bd32b396876a411f402311fa9db2b09e6ad80",
+      "requestedCharacters": 71
+    },
+    {
+      "file": "assets/fonts/scripts/b55558c83b4e.woff2",
+      "sha256": "0f42966138f4fe789ed3d60e971d532c228a2754762a18dda3147483a12d2544",
+      "requestedCharacters": 31
+    },
+    {
+      "file": "assets/fonts/scripts/124bd4325cae.woff2",
+      "sha256": "6692aca50ce346eba7e8f2684c9c93f188570fd06cc4017f8c496623a7f4e5a7",
+      "requestedCharacters": 59
+    },
+    {
+      "file": "assets/fonts/scripts/769798427bcc.woff2",
+      "sha256": "84d828ce1227418acd742e6b63b964acc6faa95759bf20b1a69029d1be60cbb1",
+      "requestedCharacters": 42
+    },
+    {
+      "file": "assets/fonts/scripts/7aa60f94c4f0.woff2",
+      "sha256": "e8221060f00d4ca74aecaa0022f28d02f09fbba89afad0e82b4870e9ec346a31",
+      "requestedCharacters": 44
+    },
+    {
+      "file": "assets/fonts/scripts/744c7f2f4ec8.woff2",
+      "sha256": "f7250d20e45963f1a2fd921f69a6ebf8ff359dc5048d11d35201e58c636a6aee",
+      "requestedCharacters": 55
+    },
+    {
+      "file": "assets/fonts/scripts/1c1c03e4f91c.woff2",
+      "sha256": "3eea9d244f3f5126fd7d91bf4b5d86a6a1c6e92371a932c544e4b3575b78b17a",
+      "requestedCharacters": 213
+    },
+    {
+      "file": "assets/fonts/scripts/9164affa8eb1.woff2",
+      "sha256": "47b1b3cb675bdbc1e9e3dcf6f240b8c12445837f2752bf5e860b01fa0e833856",
+      "requestedCharacters": 88
+    },
+    {
+      "file": "assets/fonts/scripts/fc26f1407726.woff2",
+      "sha256": "d0489f932de8f7a34024b49de10f202c5439044ea0e7d1049527bbc497116ca3",
+      "requestedCharacters": 68
+    },
+    {
+      "file": "assets/fonts/scripts/8264e5ebbdb5.woff2",
+      "sha256": "8c41367675a01cf689cafa881f38c91fca45f40d87a4db6bb35563cebc472d0d",
+      "requestedCharacters": 61
+    },
+    {
+      "file": "assets/fonts/scripts/8c0e7ed85309.woff2",
+      "sha256": "bfc5dd07a55fbced6fba6c5539c68b289d1c35ed878c43dbf805ca1f2843c718",
+      "requestedCharacters": 853
+    },
+    {
+      "file": "assets/fonts/scripts/8e8522715759.woff2",
+      "sha256": "43b4e144ec202600e4c6a92f332f1cfe9eea76614138cafc7f1d38e8eef1cd09",
+      "requestedCharacters": 974
+    },
+    {
+      "file": "assets/fonts/scripts/79d686393eb1.woff2",
+      "sha256": "a6761afa0a8cd89b5cf906b2daededb92a3a51f2a365513a60a30e91449079e0",
+      "requestedCharacters": 1005
+    },
+    {
+      "file": "assets/fonts/scripts/1fd0fd1601d1.woff2",
+      "sha256": "651509ede240a5f8297fbfe8419704d0d6de7e84a1334f4f00e54ac8869532d6",
+      "requestedCharacters": 982
+    },
+    {
+      "file": "assets/fonts/scripts/c76a3f6f1199.woff2",
+      "sha256": "9ddc2c66bd12c216c8076cab5d9aac19c8e8a2aed2db6cb4f10fdc6fb1966239",
+      "requestedCharacters": 947
+    },
+    {
+      "file": "assets/fonts/scripts/bcf71eea7fab.woff2",
+      "sha256": "a88a9b5a6ddf43ee95e4a90c31e62ab02063d46066fe89949462bec7417cb59b",
+      "requestedCharacters": 972
+    },
+    {
+      "file": "assets/fonts/scripts/2d995f406a5b.woff2",
+      "sha256": "7e64bef9e4bca90b2ecafffc79a4a74d0490e97ff0562226b003291984462e75",
+      "requestedCharacters": 994
+    },
+    {
+      "file": "assets/fonts/scripts/771fb0f529d2.woff2",
+      "sha256": "7a3ccdf14cead1443fb991946b224001479dc92088c72ddccf666de364116c52",
+      "requestedCharacters": 991
+    },
+    {
+      "file": "assets/fonts/scripts/fdbb6b41deff.woff2",
+      "sha256": "5e1eed87452fcdfdcd6b21ae0eccffa84db8dc32461551f757ea539564f741d6",
+      "requestedCharacters": 957
+    },
+    {
+      "file": "assets/fonts/scripts/b48652fda01b.woff2",
+      "sha256": "c99cb8c3922a1ebd24ae21bd003850a98ab51df4892ffe9a871d442f047389c0",
+      "requestedCharacters": 995
+    },
+    {
+      "file": "assets/fonts/scripts/d9d2f841fa65.woff2",
+      "sha256": "b0824358af90b20f3c715c0f438d7b631639c44d9f9ed0a0b02e3f1fb61db69f",
+      "requestedCharacters": 985
+    },
+    {
+      "file": "assets/fonts/scripts/1e4e6627a9fd.woff2",
+      "sha256": "93a61e504b9da577fb592a22adc6aae2621b95471481feb1357fdf543ef11c51",
+      "requestedCharacters": 985
+    },
+    {
+      "file": "assets/fonts/scripts/499bb8fb2cb1.woff2",
+      "sha256": "468ce156309888e4b6646cd27733c250debe69b2f017e94105960c97dcbdece0",
+      "requestedCharacters": 971
+    },
+    {
+      "file": "assets/fonts/scripts/60f42d719a71.woff2",
+      "sha256": "bd7f34e2ddd34a3b94e5789002997e796a6c7d8cb2367e79f4a331ac80f7903a",
+      "requestedCharacters": 992
+    },
+    {
+      "file": "assets/fonts/scripts/44b34d8d13a9.woff2",
+      "sha256": "88b8317d09bac137467594816ab37259a7ddf1470d1b1b9237553f878459b9b8",
+      "requestedCharacters": 968
+    },
+    {
+      "file": "assets/fonts/scripts/518b2cb5d363.woff2",
+      "sha256": "93e4acba0f6c71ed5f48734a028484d242a2a043de7cf2bee420e7d1c5487a36",
+      "requestedCharacters": 996
+    },
+    {
+      "file": "assets/fonts/scripts/fd7f8bb47bb8.woff2",
+      "sha256": "87aecc65308f0690a54bd5c3c661e8585b71dd67f7ec67291ba22f43121e8a9a",
+      "requestedCharacters": 971
+    },
+    {
+      "file": "assets/fonts/scripts/08110d537c2d.woff2",
+      "sha256": "50f46e49dd6c05817d7a7b82a69f1d31644d2ac46007839f19d1b6428780488a",
+      "requestedCharacters": 990
+    },
+    {
+      "file": "assets/fonts/scripts/d832d61733cc.woff2",
+      "sha256": "1ceeb46ea8e423d7cf2df69a9bf79f01c787aa4529f7812179ea54d363d5c3dc",
+      "requestedCharacters": 980
+    },
+    {
+      "file": "assets/fonts/scripts/eb13e9ecfc3c.woff2",
+      "sha256": "43f98f58e9ba001ef26416bf6b3aef98b180bace7342a945201db8b98d5bf06c",
+      "requestedCharacters": 976
+    },
+    {
+      "file": "assets/fonts/scripts/45d98a63ee20.woff2",
+      "sha256": "7b32efa5fec7fb9f5a382859dfa2de21a9aafe51d349d8e57af7a6e618395cdc",
+      "requestedCharacters": 976
+    },
+    {
+      "file": "assets/fonts/scripts/1ebc6ab02da7.woff2",
+      "sha256": "b5917957936fe23887c8eb843c101602ed680e43b1727ab61fef0c498b35e87b",
+      "requestedCharacters": 979
+    },
+    {
+      "file": "assets/fonts/scripts/170fbaa035d7.woff2",
+      "sha256": "610e79131349a5a21a7740c08b67432cbc9aa9e09c6dd07a23b080e656f1d438",
+      "requestedCharacters": 981
+    },
+    {
+      "file": "assets/fonts/scripts/d032b755fc68.woff2",
+      "sha256": "c35f37ce2d990609cb907e78b0ced7be645f7c755bda67ad3ef230c6ab9772d3",
+      "requestedCharacters": 990
+    },
+    {
+      "file": "assets/fonts/scripts/e99b9d4f3d4a.woff2",
+      "sha256": "ee82a96f5b59734e12840e96171f3c1bb2bae3077cabb77f3918081742c9eef7",
+      "requestedCharacters": 963
+    },
+    {
+      "file": "assets/fonts/scripts/bcdc22c2ac2c.woff2",
+      "sha256": "6886fda06799da34240df01d0f87efcf22ca5f058bfb16922dd6e21820b338f8",
+      "requestedCharacters": 965
+    },
+    {
+      "file": "assets/fonts/scripts/af4f27d5de6b.woff2",
+      "sha256": "5d32ce946c6ac872906192e6a4c245efff98382a49d5fcc83a7c7dadeb245e59",
+      "requestedCharacters": 1006
+    },
+    {
+      "file": "assets/fonts/scripts/72ad0879515e.woff2",
+      "sha256": "1251817b99c66c9a9a062753b885831bfdc8b2236fce87d2cf7e5e33822719f3",
+      "requestedCharacters": 984
+    },
+    {
+      "file": "assets/fonts/scripts/a93877e25491.woff2",
+      "sha256": "390c48a41a9c2bf107a932551447fe847678fb1660ee90c833b0d9d7bcc49c4b",
+      "requestedCharacters": 970
+    },
+    {
+      "file": "assets/fonts/scripts/e674a21d6f72.woff2",
+      "sha256": "210f06df1126b2d0899c0b11c496b828b9cc2e19b90e69fe83fd183a011748a7",
+      "requestedCharacters": 988
+    },
+    {
+      "file": "assets/fonts/scripts/3d740bbe8b0e.woff2",
+      "sha256": "143c5b3ffc61158e0d9bda63f0abaf4133ebdd3325c8995910d5bfe350473ad5",
+      "requestedCharacters": 971
+    },
+    {
+      "file": "assets/fonts/scripts/277d839ae995.woff2",
+      "sha256": "04d1569ca0fb40eed6955a487f695020f37c8317dcd0b7c0955c11728ba23b69",
+      "requestedCharacters": 974
+    },
+    {
+      "file": "assets/fonts/scripts/3dfd5948f864.woff2",
+      "sha256": "a4b9b685f2f1ab6e23d60ce909f06c86bd9005bb4582c1a6537bef24c073754a",
+      "requestedCharacters": 987
+    },
+    {
+      "file": "assets/fonts/scripts/e43521b4bca7.woff2",
+      "sha256": "cd0e63c4a041805524391c96a67630fa4f08f97235fb5cf796efdf9366a4c842",
+      "requestedCharacters": 981
+    },
+    {
+      "file": "assets/fonts/scripts/db8f9639c8dc.woff2",
+      "sha256": "68ca3ab5244722bcecbc8771c31981bab1ccd7fa6ba07fec034fd81d6ee57851",
+      "requestedCharacters": 971
+    },
+    {
+      "file": "assets/fonts/scripts/5ac21dc0b10b.woff2",
+      "sha256": "7624f09ad2024c04b7d0d902618fe44491057a815e98211bde18a909ca7cbf97",
+      "requestedCharacters": 968
+    },
+    {
+      "file": "assets/fonts/scripts/e26e73b761da.woff2",
+      "sha256": "07dca6b054cebf8a7c5d11045b190379a789cf4702688490c76140ec6fad66cc",
+      "requestedCharacters": 983
+    },
+    {
+      "file": "assets/fonts/scripts/a3550d28227d.woff2",
+      "sha256": "d279d10a80cbbfce0b4ff2b8bfb072ae589e59ab217375753f0f6238494e6742",
+      "requestedCharacters": 970
+    },
+    {
+      "file": "assets/fonts/scripts/424652df058b.woff2",
+      "sha256": "177d01b33e1a25e483fd48bd3b633afb6b5196e4ed3aba297ad7b1a75df824d9",
+      "requestedCharacters": 992
+    },
+    {
+      "file": "assets/fonts/scripts/f6dfc26177a2.woff2",
+      "sha256": "e61fc181bf9671195dfcef7c5c5d3bcc0494a92d977393f05514146177aa5522",
+      "requestedCharacters": 984
+    },
+    {
+      "file": "assets/fonts/scripts/596fc9dcb83d.woff2",
+      "sha256": "71acdf96452afe65fe5351c69b6d8263d18d156b1d258c34fd604a61d58dedfa",
+      "requestedCharacters": 987
+    },
+    {
+      "file": "assets/fonts/scripts/f4b709b221ef.woff2",
+      "sha256": "aca5c4e6b791a393c8f163f7f97bd94b273776a4d98a7defaf2ca7f731c4959f",
+      "requestedCharacters": 962
+    },
+    {
+      "file": "assets/fonts/scripts/737a1c42f7d8.woff2",
+      "sha256": "9222a74a9169e886b6c2ad06d307134670e8bbfaced6edd2f525e01b345fa33e",
+      "requestedCharacters": 960
+    },
+    {
+      "file": "assets/fonts/scripts/dcde0e7c7905.woff2",
+      "sha256": "5ed70e06b38f31f1367e180ff9a783d9a4bdc93d36c82748e4e6a914d43845f0",
+      "requestedCharacters": 972
+    },
+    {
+      "file": "assets/fonts/scripts/d45515532210.woff2",
+      "sha256": "9c69a1fdb3ab8573320157b4994358192cd2e6015cbeb52402a05d91855bb57e",
+      "requestedCharacters": 996
+    },
+    {
+      "file": "assets/fonts/scripts/8cfba32c2306.woff2",
+      "sha256": "a45492d33878b65c10faae00ce8028985eb52e47ac329ded7b27dffe32cbf6e9",
+      "requestedCharacters": 1010
+    },
+    {
+      "file": "assets/fonts/scripts/53127e68761c.woff2",
+      "sha256": "b1fab9f653d7cae6fbc5180b391e1a7dc4f362a6c967249b9542d748dd1b9ac1",
+      "requestedCharacters": 983
+    },
+    {
+      "file": "assets/fonts/scripts/0745b55902a3.woff2",
+      "sha256": "0e0822703222baa3631ef098bcde2e657df817eb78b0fa76f4e2a9c310a3d609",
+      "requestedCharacters": 913
+    },
+    {
+      "file": "assets/fonts/scripts/0c3652c1b5a0.woff2",
+      "sha256": "4cd56d933b35962ac0c3d5cc7b48ea3728750fe425a7ec020c75d708cb38d22d",
+      "requestedCharacters": 966
+    },
+    {
+      "file": "assets/fonts/scripts/9095b0a86464.woff2",
+      "sha256": "00caa39608b97165cd935513f1ae3b720be63020440e3962d9c2d97fb03ed101",
+      "requestedCharacters": 805
+    },
+    {
+      "file": "assets/fonts/scripts/60a2cbd05ab6.woff2",
+      "sha256": "d30814c7ecc6292df0f7e9929bc462731c1d0b77c95d5950037f6946e28b8a0b",
+      "requestedCharacters": 990
+    },
+    {
+      "file": "assets/fonts/scripts/ddc99fd42144.woff2",
+      "sha256": "2b90388732e32377f47c76c413e9d215662c3f72fce5c4127d638e0cf5654472",
+      "requestedCharacters": 989
+    },
+    {
+      "file": "assets/fonts/scripts/3ca24ceb2177.woff2",
+      "sha256": "d6231350bd05f4ab0d5c82bebc277fea36dd28819f15d9acca4353107a11a213",
+      "requestedCharacters": 987
+    },
+    {
+      "file": "assets/fonts/scripts/5e99194501ba.woff2",
+      "sha256": "234b820b326811843d61e997cabbeedfbd8aa2137d847369900cc5c7948e859e",
+      "requestedCharacters": 954
+    },
+    {
+      "file": "assets/fonts/scripts/305d2ba17e36.woff2",
+      "sha256": "5180df9eb2287275dff5bd666426a9f6e7af88e6e8eb827b7815529dc3ab5a71",
+      "requestedCharacters": 974
+    },
+    {
+      "file": "assets/fonts/scripts/5d2fef1338d2.woff2",
+      "sha256": "2edd365aef87506e5efa87d9b86a8efb6a8eefc5c1d6faa431520c7148aaf842",
+      "requestedCharacters": 1014
+    },
+    {
+      "file": "assets/fonts/scripts/e2da2da20912.woff2",
+      "sha256": "1bef25d11b335e1f4107434e8b727d45de211ea27e2f83f22bb95544ea1aaba6",
+      "requestedCharacters": 1016
+    },
+    {
+      "file": "assets/fonts/scripts/9f38c185324b.woff2",
+      "sha256": "e8998fc169021a35413f460f5e15e20ff548a1161bdb4141d7d915b7689bdb6f",
+      "requestedCharacters": 1017
+    },
+    {
+      "file": "assets/fonts/scripts/12e561a6f1c5.woff2",
+      "sha256": "deb85cc93005da419c751cdd82a3cc0855328a4ddc677df9818b02770a6cfcd3",
+      "requestedCharacters": 1015
+    },
+    {
+      "file": "assets/fonts/scripts/d8b73b55290f.woff2",
+      "sha256": "6aae88db9eed4f18d88cfdbd7b2f11fbac7442a82fd408441b47ef7421a31de6",
+      "requestedCharacters": 1008
+    },
+    {
+      "file": "assets/fonts/scripts/57ba4b1b66f2.woff2",
+      "sha256": "dc411ceda49e4477601d73900f8dd7bc6a8b657467cb13c71bca55aea123730c",
+      "requestedCharacters": 1005
+    },
+    {
+      "file": "assets/fonts/scripts/4f86150381ec.woff2",
+      "sha256": "dbe30e3f8e83c64c5f6aa211bbf35d6ea72eaf165ac62c2e44757d9183f17926",
+      "requestedCharacters": 992
+    },
+    {
+      "file": "assets/fonts/scripts/c0d999b995ca.woff2",
+      "sha256": "3cd73a1e74121dc21eb240ba2955ea82226729ead75a2adabadc2a8334c3f979",
+      "requestedCharacters": 966
+    },
+    {
+      "file": "assets/fonts/scripts/4ee86a1a331b.woff2",
+      "sha256": "cb6aed980ca475502445348dec6f7c60fb10ee1c0ad6deebf86591dcb0e56926",
+      "requestedCharacters": 165
+    },
+    {
+      "file": "assets/fonts/scripts/b878a6b2605e.woff2",
+      "sha256": "d216ab731426154d29b2443f720c0299dffca6a753b71abf35ddeabd67bab0c2",
+      "requestedCharacters": 873
+    },
+    {
+      "file": "assets/fonts/scripts/56242f325484.woff2",
+      "sha256": "2c5ddfc3aa84be987d49bb4317cc69125575aed62ba43271f51845f43bd0f025",
+      "requestedCharacters": 986
+    },
+    {
+      "file": "assets/fonts/scripts/2cd4e764cc7d.woff2",
+      "sha256": "e807f988ba680d651c85599cc3502fd2b9caaafce62f15669d04d2db6b3f1315",
+      "requestedCharacters": 983
+    },
+    {
+      "file": "assets/fonts/scripts/61539a64bc8e.woff2",
+      "sha256": "e83f4a3c6ce342a14025cf5f3aa32bf731601761f43cbd4bc2b457803fe74c3b",
+      "requestedCharacters": 962
+    },
+    {
+      "file": "assets/fonts/scripts/959d8356df09.woff2",
+      "sha256": "c2dbf9a1dd78e027f7010f25c4273afd47dbc6bb4fcfaa7b8f402b7c4ed230f2",
+      "requestedCharacters": 971
+    },
+    {
+      "file": "assets/fonts/scripts/082e4b3f1657.woff2",
+      "sha256": "98873227c8b36548f714cd97c93423decd91d2206d13066df699656ddf8b9070",
+      "requestedCharacters": 1007
+    },
+    {
+      "file": "assets/fonts/scripts/491afd0fc0ae.woff2",
+      "sha256": "5f813c81326b35e2e8ee3a438c5ecce061d592993b6ab193563d38c6f90b87a2",
+      "requestedCharacters": 1018
+    },
+    {
+      "file": "assets/fonts/scripts/65df91a2eb37.woff2",
+      "sha256": "28d0e3e27592aa008df0fea0688f0df6e17a9f2e54cd4beefb32668bbd923b37",
+      "requestedCharacters": 1004
+    },
+    {
+      "file": "assets/fonts/scripts/313f7f155d21.woff2",
+      "sha256": "14ef427e97c2c2b3ed2a12b5e8fb52959c3e4b754f46b2d1f4cd76d205c1f13c",
+      "requestedCharacters": 998
+    },
+    {
+      "file": "assets/fonts/scripts/af428584470d.woff2",
+      "sha256": "ea92bfacdb65e107d1880f7c2228c72e25d015af4924c6e98f0d5623f30629d9",
+      "requestedCharacters": 1016
+    },
+    {
+      "file": "assets/fonts/scripts/6170ad79af61.woff2",
+      "sha256": "2073a22fbaf6a6d3d74d21c8f5d1c3c52c5983aff17893470a70fd841f59fcef",
+      "requestedCharacters": 1019
+    },
+    {
+      "file": "assets/fonts/scripts/1e7778d2e869.woff2",
+      "sha256": "32f846f7bceebbd0608f9a2331d03ca58f640dd3b0ab23df9853c2eff7c87026",
+      "requestedCharacters": 1014
+    },
+    {
+      "file": "assets/fonts/scripts/499186942202.woff2",
+      "sha256": "d97c0f066323505afa73024bc47ca9d1804f27c468ba2f64825557b4c88298f4",
+      "requestedCharacters": 1015
+    },
+    {
+      "file": "assets/fonts/scripts/de71cddb29d1.woff2",
+      "sha256": "6a2c73fd836f4ab4a5cf86c60d7ab2991d1cf5128028e4c7bfd0df9111dbacb8",
+      "requestedCharacters": 212
+    },
+    {
+      "file": "assets/fonts/scripts/11862dfc6c1d.woff2",
+      "sha256": "8f5bdbac92ee9235243743ec559e6d627e8ff4f6f46da7697f43a01293a1a387",
+      "requestedCharacters": 1018
+    },
+    {
+      "file": "assets/fonts/scripts/799ec7409810.woff2",
+      "sha256": "fa0e7eba6a8f97ef1c05bba19a0cba2ca624929195bd967dea0d1ab50553d830",
+      "requestedCharacters": 217
+    },
+    {
+      "file": "assets/fonts/scripts/96926b398fc1.woff2",
+      "sha256": "19baff43ce439436331a194c8b05d2eb742f1344ff9499db3967181d8cc7bf6c",
+      "requestedCharacters": 139
+    },
+    {
+      "file": "assets/fonts/scripts/c5b1dc08d0d9.woff2",
+      "sha256": "621e18b1f8c9f7423c7ed9760dbb7fdf94b20ece8d07c6a30b139b2a168346c0",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/456f8e6095c2.woff2",
+      "sha256": "49f2ade15f6f5d68508a4d76a4ffd0a191a3ca6389778d1aa05b46d01dbf1939",
+      "requestedCharacters": 1023
+    },
+    {
+      "file": "assets/fonts/scripts/2ba35609ece1.woff2",
+      "sha256": "94517c6348d83a06f14e03d0bc7af2c77d81e7c9791dc73ae6a09fc7fe553522",
+      "requestedCharacters": 1022
+    },
+    {
+      "file": "assets/fonts/scripts/ac9f8d77bbf1.woff2",
+      "sha256": "e5012a17191ce7c00319536aba7384f5783078560e1e83fa0cad5d54a15e5d85",
+      "requestedCharacters": 1017
+    },
+    {
+      "file": "assets/fonts/scripts/e8744d705707.woff2",
+      "sha256": "fe928f4adce495717ea7d77453b7607b65b3a350bdfdbab2ed85611658f7ee8d",
+      "requestedCharacters": 2
+    },
+    {
+      "file": "assets/fonts/scripts/ac824ec2c036.woff2",
+      "sha256": "4fe68d4311416d70fef4279f65476e14996774fce16b12bbe3a7387bb83dcb0c",
+      "requestedCharacters": 1023
+    },
+    {
+      "file": "assets/fonts/scripts/a990429f0e01.woff2",
+      "sha256": "e239088f923b3c7a826760d37443a51dcacd67db824b45a88738846a28bbbd5a",
+      "requestedCharacters": 1024
+    },
+    {
+      "file": "assets/fonts/scripts/4ddf86a37484.woff2",
+      "sha256": "59013dbccf40ce132e61e32bee226b1db8166a5ef647505ce5691cab9f94bd33",
+      "requestedCharacters": 1020
+    },
+    {
+      "file": "assets/fonts/scripts/a5999aa25643.woff2",
+      "sha256": "2a62491f72b2ba3bf7233a4d73e0de47f4326ce5c0cd1680dd2e01af9582d4d1",
+      "requestedCharacters": 1021
+    },
+    {
+      "file": "assets/fonts/scripts/4f969c1e3793.woff2",
+      "sha256": "867183010be85eefa8b6ccd2f9eee116a3cb87c3ed335ca831bec7fedbe4be0d",
+      "requestedCharacters": 1023
+    },
+    {
+      "file": "assets/fonts/scripts/3f931c1d7d45.woff2",
+      "sha256": "d7fa82f5f9f61d414b37cac2a265d41bbf4226053ccdc99ce2263d065f9eee23",
+      "requestedCharacters": 705
+    }
+  ],
+  "references": [
+    "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-11/"
+  ],
+  "limits": [
+    "Font-dependent format signs are counted as drawing requirements and also need contextual behaviour validation; other controls need separate behaviour evidence.",
+    "Single-character selection is not proof that a larger cluster or mixed-script run keeps the same font.",
+    "Positive geometry does not rule out a wrong drawing or a visible placeholder.",
+    "COLR v0 layers are inspected as outlines; final colour/alpha/pixel appearance still needs browser evidence.",
+    "Context-only exceptions require independent native shaping tests; they are not invented visible drawings.",
+    "Known semantic blanks use dedicated app layout; other dynamic compositors still require their own runtime evidence."
+  ]
+}

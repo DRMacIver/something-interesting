@@ -1,0 +1,129 @@
+{
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "🔫",
+      "path": "build/unicode-sources/noto-emoji-game-medical-svg/emoji_u1f52b.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f52b.svg",
+      "sha256": "32aa06a17e6176ccbbfc289df862f2a15218fca63dc5fe9c97a85b2cbd9816a9",
+      "git_blob_sha1": "2a90350cd220a93f51fb8909cf80292137e81eec",
+      "size": 3749,
+      "shapeElementsIncludingDefinitions": 14,
+      "include_sequences": [
+        "🔫"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "♠️",
+      "path": "build/unicode-sources/noto-emoji-game-medical-svg/emoji_u2660.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u2660.svg",
+      "sha256": "66b6c839efda09168121735b27a47d5e5786f20f7fa368a9cc519c419e8c00f2",
+      "git_blob_sha1": "9170850e961c849d0ca3b119703505ff176aebf8",
+      "size": 1528,
+      "shapeElementsIncludingDefinitions": 4,
+      "include_sequences": [
+        "♠️",
+        "♠"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "♥️",
+      "path": "build/unicode-sources/noto-emoji-game-medical-svg/emoji_u2665.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u2665.svg",
+      "sha256": "50f6f9b05fd129d5e2f15ad8ae1ad4d49727dd386591248380840b0283b027d6",
+      "git_blob_sha1": "46438bf3622a9573248b39a3e82e41d6e250d11c",
+      "size": 833,
+      "shapeElementsIncludingDefinitions": 2,
+      "include_sequences": [
+        "♥️",
+        "♥"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "♦️",
+      "path": "build/unicode-sources/noto-emoji-game-medical-svg/emoji_u2666.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u2666.svg",
+      "sha256": "dc6c4800c5c6bfdf838d327ee44bc53a68edd69f597d2d99680fce83024ee9de",
+      "git_blob_sha1": "e695cb4d6a21457dffa921279b91d60adb5eef9c",
+      "size": 848,
+      "shapeElementsIncludingDefinitions": 2,
+      "include_sequences": [
+        "♦️",
+        "♦"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "♣️",
+      "path": "build/unicode-sources/noto-emoji-game-medical-svg/emoji_u2663.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u2663.svg",
+      "sha256": "3cb31f97b44e05d552756df39aaacf09c5638134b5411d2ba35795d8b04e623e",
+      "git_blob_sha1": "1dd0bfb13060a80c34f551a1593b4f6e8dbbcbab",
+      "size": 1556,
+      "shapeElementsIncludingDefinitions": 3,
+      "include_sequences": [
+        "♣️",
+        "♣"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "♟️",
+      "path": "build/unicode-sources/noto-emoji-game-medical-svg/emoji_u265f.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u265f.svg",
+      "sha256": "985243ba8fa036f9c74bcd84b391a322c9edfbaa6237fcbc91635e79d3988c0a",
+      "git_blob_sha1": "e55720ad418946b7d31fe395142c22fb76fe4f21",
+      "size": 3887,
+      "shapeElementsIncludingDefinitions": 13,
+      "include_sequences": [
+        "♟️",
+        "♟"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🀄",
+      "path": "build/unicode-sources/noto-emoji-game-medical-svg/emoji_u1f004.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f004.svg",
+      "sha256": "6109eb414b9205a6b43326c6ac45dba2699f6958fd1f712d8f0c1043c4d34389",
+      "git_blob_sha1": "7473bc32f27939dc3282dac69a65ede19f057057",
+      "size": 2651,
+      "shapeElementsIncludingDefinitions": 9,
+      "include_sequences": [
+        "🀄"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🩸",
+      "path": "build/unicode-sources/noto-emoji-game-medical-svg/emoji_u1fa78.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1fa78.svg",
+      "sha256": "034f5179523a19394556625be78f54534bad0801a5eb8a0936b575f34ab48219",
+      "git_blob_sha1": "12b3c8e5c058521c8d0452fe3b00d9a456172a27",
+      "size": 848,
+      "shapeElementsIncludingDefinitions": 2,
+      "include_sequences": [
+        "🩸"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🩹",
+      "path": "build/unicode-sources/noto-emoji-game-medical-svg/emoji_u1fa79.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1fa79.svg",
+      "sha256": "6330f84906d80e76f775948b3ac81a62ceba11b99deee899043176a3e4f1181d",
+      "git_blob_sha1": "a17b0ebd444b82bf1c982e056d6ff9d71f32b723",
+      "size": 4375,
+      "shapeElementsIncludingDefinitions": 4,
+      "include_sequences": [
+        "🩹"
+      ],
+      "build_target": "emoji-artwork"
+    }
+  ]
+}

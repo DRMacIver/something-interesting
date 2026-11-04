@@ -1,0 +1,160 @@
+{
+  "status": "Publicconstructed-nativepreservationintegrated;actualpublic/native/semantic/field/localreviewPASS; finaldependentrefresh/fullsuite/fingerprint/auditclosurepending",
+  "sourceNumber": 195,
+  "source": "build/unicode-sources/unicodia/UnicodiaFunky.ttf",
+  "sourceSha256": "6ae19735dee1a7e64616de44a35e27e8329f80dff14171296173057e77bea18c",
+  "candidate": "output/font-review/final-checks/chemical-harpoons/staging/e789acc260ba.woff2",
+  "candidateSha256": "d5784187ed8887c200853bee622eceffb2e5f3f56f14a6cb30ca49da8f2f55fa",
+  "policySha256": "1d133e55e8b48ce3ab3b6eb7fce4c82bc7a95ab459a6036525b9baac0d3f8b0e",
+  "protectedNativeGids": [
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    312
+  ],
+  "construction": "Pinned raw source plus exact chemical_symbols.repair_isolobal and alphabet_ink.adapt scope/config. Frozen bodies are already hand-inked; direct identity to raw upstream curves is not claimed.",
+  "targets": {
+    "harpoon": "U+1F8D1 / GID312",
+    "geomantic": [
+      "U+1CEE0..U+1CEE5 / GID73..78",
+      "U+1CEE8..U+1CEEF / GID81..88"
+    ],
+    "otherGeomantic": "U+1CEE6/U+1CEE7 keep current pressure bodies because all original predicates already pass."
+  },
+  "guards": {
+    "equalHarpoonDifferenceMaximum": 6,
+    "currentBrokenWidths": [
+      1035,
+      1028
+    ],
+    "candidateWidths": [
+      1034,
+      1031
+    ],
+    "geomanticCenterErrorStrictMaximum": 4,
+    "geomanticDotGapStrictMinimum": 40,
+    "geomanticAdvance": 751,
+    "relaxed": false,
+    "all16OriginalGeomanticPredicates": "PASS",
+    "all16PatternsDistinct": true
+  },
+  "proof": "output/font-review/final-checks/chemical-harpoons/staging/proof.json",
+  "geomanticProof": "output/font-review/final-checks/chemical-harpoons/staging/geomantic-proof.json",
+  "chemicalFieldAndSemanticProof": "output/font-review/final-checks/chemical-harpoons/staging/field-and-semantic-proof.json",
+  "validation": {
+    "allGlyphNativeCacheConstructionProof": 326,
+    "otherCompiledGlyphsExact": 311,
+    "allLayoutAndMetricsExact": true,
+    "chemicalFieldChecks": 12,
+    "geomanticWholeFieldChecks": 2,
+    "fieldScales": [
+      384,
+      1024
+    ],
+    "harpoonSemanticPairs": 5,
+    "combinedMusicFunkyFixtures": 26
+  },
+  "localReview": {
+    "images": [
+      {
+        "file": "output/font-review/final-checks/chemical-harpoons/staging/geomantic-comparison.png",
+        "sha256": "75cd4e010d389bacaadacd401abde5a768f2e7c92d8d9cfde25e47b3d698530b",
+        "reviewer": "root",
+        "sizes": [
+          22,
+          44
+        ],
+        "accepted": true
+      },
+      {
+        "file": "output/font-review/final-checks/chemical-harpoons/staging/comparison.png",
+        "sha256": "2b201c134d78826d4e80fb73726d4ce282132d948b6aa4fd6d064b467440b733",
+        "reviewer": "root",
+        "sizes": [
+          22,
+          44
+        ],
+        "accepted": true
+      }
+    ],
+    "findings": "All16 four-row dot patterns retain clear distinct identity and native alignment beside Dad; allfive harpoon direction/length classes andcomplete10chemicalfield remain clear.",
+    "appRendererExecuted": false
+  },
+  "historicalHarpoonOnly": {
+    "status": "Historical harpoon-only constructed-native rescue accepted for its original scope; insufficient for later geomantic-centering finding; extended candidate under verification, neither published",
+    "sourceNumber": 195,
+    "source": "build/unicode-sources/unicodia/UnicodiaFunky.ttf",
+    "sourceSha256": "6ae19735dee1a7e64616de44a35e27e8329f80dff14171296173057e77bea18c",
+    "target": {
+      "codepoint": "U+1F8D1",
+      "gid": 312,
+      "glyph": "u1F8D1"
+    },
+    "construction": "Pinned raw source plus exact chemical_symbols.repair_isolobal and alphabet_ink.adapt scope/config; frozen body is already hand-inked and is not claimed identical to raw upstream curves.",
+    "defect": {
+      "currentWidths": [
+        1035,
+        1028
+      ],
+      "existingMaximumEqualPairDifference": 6,
+      "rescuedWidths": [
+        1034,
+        1031
+      ],
+      "guardRelaxed": false
+    },
+    "candidate": "output/font-review/final-checks/chemical-harpoons/staging/historical-harpoon-only/e789acc260ba.woff2",
+    "candidateSha256": "11c1e8a7c26c79f99c7c6f9f3b69225cccfc113dc97e05bb90a25dfc5dfbb142",
+    "proof": "output/font-review/final-checks/chemical-harpoons/staging/historical-harpoon-only/proof.json",
+    "fieldAndSemanticProof": "output/font-review/final-checks/chemical-harpoons/staging/historical-harpoon-only/field-and-semantic-proof.json",
+    "localReview": {
+      "image": "output/font-review/final-checks/chemical-harpoons/staging/historical-harpoon-only/comparison.png",
+      "sha256": "2b201c134d78826d4e80fb73726d4ce282132d948b6aa4fd6d064b467440b733",
+      "sizes": [
+        22,
+        44
+      ],
+      "reviewer": "root",
+      "accepted": true,
+      "findings": "Equal pair clear; unequal length classes and all direction tips intact; complete ten-symbol field remains legible beside Dad lettering.",
+      "appRendererExecuted": false
+    },
+    "validation": {
+      "fullNativeCacheGlyphProof": 326,
+      "otherCompiledGlyphsExact": 325,
+      "layoutMetricsExact": true,
+      "fieldChecks": 12,
+      "fieldScales": [
+        384,
+        1024
+      ],
+      "semanticHarpoonPairs": 5,
+      "chemicalPolicyFixtures": 12,
+      "combinedMusicChemicalFixtures": 24
+    },
+    "remaining": "Complete and inspect extended15-glyph Funky rescue without changing original centering/length bounds; await diagnostic terminal, ordinarytwofontbuild, dependentrefresh, freshcompletefullsuite/fingerprint.",
+    "archiveIndex": "output/font-review/final-checks/chemical-harpoons/staging/historical-harpoon-only/archive-index.json"
+  },
+  "remaining": "Await diagnostic actual terminal and resolveeveryfailure, applyacceptedtest/policybatch, normaltransactionalbuild onlyMusic+Funkychanged/379exact, reviewactualpublicbytes andrefreshdependencies, freshcompletefullsuite+fingerprint+30requirementclosure.",
+  "publicIntegration": {
+    "status": "Ordinarytransactionalbuildterminal0;actualfont/reportexactacceptedcandidate;actualpublicsemantic/fieldchecks androot22/44inspectionPASS",
+    "font": "assets/fonts/scripts/e789acc260ba.woff2",
+    "sha256": "d5784187ed8887c200853bee622eceffb2e5f3f56f14a6cb30ca49da8f2f55fa",
+    "report": "output/font-review/supplemental-production/3a36398c3a6e79696a04bf51b20d21cd6790b6476fd3efe7b004a96b951c1991-f853c8b8f6a75ad5d2c367f6a6237487a30adaf7ff4ea2f1759911e6d2086f2e-chemical-preserve-1d133e55e8b48ce3ab3b6eb7fce4c82bc7a95ab459a6036525b9baac0d3f8b0e.json",
+    "reportSha256": "4c180537f0ac357a8f1dc97f7ab94406c70df745a68462a209a7b12666802f29",
+    "continuity": "output/font-review/final-checks/chemical-harpoons/staging/two-policy-public-continuity.json",
+    "actualReview": "output/font-review/final-checks/final-public-policy-review/review.json",
+    "nativeProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json"
+  }
+}

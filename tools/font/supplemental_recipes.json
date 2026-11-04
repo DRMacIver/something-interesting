@@ -1,0 +1,587 @@
+{
+  "version": 1,
+  "method": "native-centred-distance-pressure-v1",
+  "resolution": 1024,
+  "sources": {
+    "NotoSansArmenian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "open-native-body"
+    },
+    "NotoSansBengali-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-headline-and-marks"
+    },
+    "NotoSansGeorgian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "rounded-native-body"
+    },
+    "NotoSansKhmer-Regular.ttf": {
+      "amount": 0.7,
+      "category": "dense-native-joining"
+    },
+    "NotoSansMyanmar-Regular.ttf": {
+      "amount": 0.7,
+      "category": "looped-native-body"
+    },
+    "NotoSansThai-Regular.ttf": {
+      "amount": 0.7,
+      "category": "looped-native-body"
+    },
+    "NotoSans-Regular.ttf": {
+      "amount": 0.7,
+      "category": "proportional-native-alphabets"
+    },
+    "NotoSansGurmukhi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-headline-and-marks"
+    },
+    "NotoSansHebrew-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-pointed-hebrew"
+    },
+    "NotoSansKannada-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-looped-clusters"
+    },
+    "NotoSansLao-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-looped-clusters"
+    },
+    "NotoSansMalayalam-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-looped-clusters"
+    },
+    "NotoSansSinhala-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-looped-clusters"
+    },
+    "NotoSansTamil-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-curved-bodies"
+    },
+    "NotoSansTelugu-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-curved-bodies"
+    },
+    "NotoSansGujarati-Regular.ttf": {
+      "amount": 0.7,
+      "category": "native-looped-clusters"
+    },
+    "Kedebideri-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansAdlam-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansBalinese-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansBamum-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansBassaVah-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansBatak-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansBrahmi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansBuginese-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansCanadianAboriginal-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansCarian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansCaucasianAlbanian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansChakma-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansCherokee-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansCoptic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansCypriot-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansCyproMinoan-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansDeseret-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansDevanagari-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansElbasan-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansElymaic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansGlagolitic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansGothic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansGrantha-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansGunjalaGondi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansGurungKhema.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansHanifiRohingya-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansHanunoo-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansHatran-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansImperialAramaic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansInscriptionalPahlavi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansInscriptionalParthian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansJavanese-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansKaithi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansKawi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansKayahLi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansKhojki-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansKhudawadi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansLepcha-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansLinearA-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansLinearB-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansLycian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansLydian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMahajani-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMandaic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansManichaean-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMarchen-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMasaramGondi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMedefaidrin-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMeeteiMayek-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMendeKikakui-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMeroitic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMiao-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansModi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMongolian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansMro-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansNKo-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansNabataean-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansNagMundari-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansNandinagari-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansNewTaiLue-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansNewa-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOlChiki-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOldHungarian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOldItalic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOldNorthArabian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOldPermic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOldSogdian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOldSouthArabian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOldTurkic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOriya-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOsage-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansOsmanya-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansPahawhHmong-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansPalmyrene-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansPauCinHau-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansPhagsPa-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansPhoenician-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansPsalterPahlavi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansRunic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSaurashtra-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSharada-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansShavian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSogdian-Regular.ttf": {
+      "amount": 0.25,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSoraSompeng-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSoyombo-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSundanese-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSunuwar-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSylotiNagri-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSymbols-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSymbols2-Regular.ttf": {
+      "amount": 0.45,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansSyriac-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansTaiLe-Regular.ttf": {
+      "amount": 0.45,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansTaiTham-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansTakri-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansTamilSupplement-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansTangsa-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansTifinagh-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansTirhuta-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansVai-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansVithkuqi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansWancho-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansWarangCiti-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansYi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSansZanabazarSquare-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSerifDogra-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSerifMakasar-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSerifNPHmong-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSerifOlOnal.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSerifTodhri-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSerifToto-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "NotoSerifYezidi-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "PadaukBook-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-source-body"
+    },
+    "KreativeSquare.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoMusic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoSansBuhid-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoSansCuneiform-Regular.ttf": {
+      "amount": 0.45,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoSansLaoLooped-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoSansMath-Regular.ttf": {
+      "amount": 0.45,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoSansMayanNumerals-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoSansOgham-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoSansOldPersian-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoSansSignWriting-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "NotoSansUgaritic-Regular.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "UnicodiaCunei.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-structural-or-symbolic"
+    },
+    "ArchaicCuneiformNumerals.ttf": {
+      "amount": 0.7,
+      "category": "guarded-numeric-components"
+    },
+    "NotoKufiArabic-Regular.ttf": {
+      "amount": 0.45,
+      "category": "guarded-native-angular-joining"
+    },
+    "NotoSansDuployan-Regular.ttf": {
+      "amount": 0.45,
+      "category": "guarded-native-shorthand-joining"
+    },
+    "NotoSansIndicSiyaqNumbers-Regular.ttf": {
+      "amount": 0.1,
+      "category": "guarded-native-cursive-numerals"
+    },
+    "UnicodiaFunky.ttf": {
+      "amount": 0.7,
+      "category": "guarded-native-symbol-and-alphabet-distinctions"
+    }
+  }
+}

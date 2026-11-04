@@ -1,0 +1,131 @@
+{
+  "scope": "Final fonts and dependent assets are integrated; strict catalog history reconciliation and a fresh full current suite remain.",
+  "updatedPinnedNativeLineageTests": [
+    "tests/test_font_cuneiform.py",
+    "tests/test_font_dives_myanmar.py",
+    "tests/test_font_jurchen_tangut.py",
+    "tests/test_font_supplemental_scripts.py",
+    "tests/test_font_arabic.py",
+    "tests/test_native_variation_packaging.py",
+    "tests/test_variation_mark_closure.py"
+  ],
+  "proof": "Pinned raw source drawings must match frozen native packaging. Approved finish is independently verified against source/method/recipe/report/native layout/cmap/frame and exact native fallback; TT and dense also verify exact native-derived cache output. Current output retains all semantic/shaping/metrics/distinctness checks. CFF also independently reconstructs native SFNT SHA and cache key and requires exact compiled quantized Type2 cached program bytes, with same-geometry mutation rejection.",
+  "focusedCommandAfterIntegration": ".venv/bin/python -m pytest -q tests/test_font_cuneiform.py tests/test_font_dives_myanmar.py tests/test_font_jurchen_tangut.py tests/test_font_supplemental_scripts.py tests/test_font_arabic.py tests/test_native_variation_packaging.py tests/test_variation_mark_closure.py tests/test_font_cjk_variants.py tests/test_font_marked_cjk.py tests/test_font_lxgw_seal.py tests/test_font_seal_sans.py tests/test_positional_marks.py tests/test_combining_outlines.py",
+  "knownPendingGates": [
+    "Authenticate marked-CJK catalog history through the approved dense parent and exact current copied glyph.",
+    "Pass the complete numeric-enclosure/catalog regression after strict ring/contentBounds and parent-lineage corrections.",
+    "Collect and fingerprint the corrected state; run the full Python suite from the beginning and verify final inputs unchanged."
+  ],
+  "unchangedExactIdentity": [
+    "Scheherazade native calligraphy",
+    "Standalone math variants retained native calligraphy",
+    "Seal Sans native source transform",
+    "Original primary handwriting outlines"
+  ],
+  "isolatedFixtureValidation": {
+    "log": "/tmp/unicode-lineage-helper-recheck.log",
+    "note": "Read actual log for authoritative count; source-specific public-font tests deferred",
+    "result": "..........                                                               [100%]\n=============================== warnings summary ===============================\n<frozen importlib._bootstrap>:491\n<frozen importlib._bootstrap>:491\n<frozen importlib._bootstrap>:491\n  <frozen importlib._bootstrap>:491: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute\n\n<frozen importlib._bootstrap>:491\n<frozen importlib._bootstrap>:491\n<frozen importlib._bootstrap>:491\n  <frozen importlib._bootstrap>:491: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute\n\n<frozen importlib._bootstrap>:491\n  <frozen importlib._bootstrap>:491: DeprecationWarning: builtin type swigvarlink has no __module__ attribute\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n10 passed, 7 warnings in 12.06s\n<sys>:0: DeprecationWarning: builtin type swigvarlink has no __module__ attribute"
+  },
+  "fullSuite": {
+    "firstFinalAttempt": {
+      "log": "/tmp/unicode-final-python.log",
+      "status": "terminal2 after KeyboardInterrupt following known catalog failure",
+      "passedBeforeStop": 42,
+      "failed": 1
+    },
+    "next": "Root restarts with -x -q after the complete strict catalog regression passes; no full pass is claimed yet."
+  },
+  "cubicCacheLineageValidation": {
+    "tests": 6,
+    "seconds": 12.23,
+    "log": "/tmp/unicode-cubic-cache-lineage-tests.log",
+    "real1301GlyphCandidate": "strict helper passed",
+    "fullCandidateLog": "/tmp/unicode-cubic-preserved-cache-lineage.log"
+  },
+  "sourceReviewMetadata": {
+    "schema": "tools/font/style_review.py review_for_source(source)",
+    "authentication": "Exact canonical stable decision hash, record/number/disposition/scope equality; only newly added styleReview removed from historical comparison after authentication",
+    "negativeFixtures": "forged decisionSha256 and forged disposition rejected",
+    "fixtures": "12 passed12.59s",
+    "log": "/tmp/unicode-reviewed-style-metadata-tests.log",
+    "styleTransition": "Only old style containing 'custom visual review pending' or 'specialist/style review pending' may become exact 'sampled source style disposition: '+review.disposition+'; native identities and guarded exceptions retained'; other native styles remain exact"
+  },
+  "glyphSetPerformanceHoist": {
+    "change": "Reuse immutable native/current GlyphSets outside TT/dense retained-record loops; all original glyph/cache/frame/drawing assertions unchanged",
+    "validationLog": "/tmp/unicode-lineage-glyphset-hoist-tests.log",
+    "result": "............                                                             [100%]\n=============================== warnings summary ===============================\n<frozen importlib._bootstrap>:491\n<frozen importlib._bootstrap>:491\n<frozen importlib._bootstrap>:491\n  <frozen importlib._bootstrap>:491: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute\n\n<frozen importlib._bootstrap>:491\n<frozen importlib._bootstrap>:491\n<frozen importlib._bootstrap>:491\n  <frozen importlib._bootstrap>:491: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute\n\n<frozen importlib._bootstrap>:491\n  <frozen importlib._bootstrap>:491: DeprecationWarning: builtin type swigvarlink has no __module__ attribute\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n12 passed, 7 warnings in 13.09s\n<sys>:0: DeprecationWarning: builtin type swigvarlink has no __module__ attribute",
+    "fullSignWriting": "No duplicate benchmark; B independent loaded-code smoke checked all37886 glyphs successfully"
+  },
+  "duployanPolicy": {
+    "module": "tools/font/duployan_source_preservation.py",
+    "review": "docs/duployan-source-preservation-review.json",
+    "tests": "tests/test_duployan_source_preservation.py",
+    "fixtures": "15passed15.02s combined",
+    "pending": "Only the fresh final full-suite/global completion gate remains; normal public build, actual22/44inspection and384/1024field guards passed."
+  },
+  "cuneiformPolicy": {
+    "module": "tools/font/cuneiform_source_preservation.py",
+    "review": "docs/cuneiform-source-preservation-review.json",
+    "tests": "tests/test_cuneiform_source_preservation.py",
+    "fixtures": "17passed13.89scombined",
+    "pending": "Only the fresh final full-suite/global completion gate remains; normal public build, actual22/44inspection and384/1024field guards passed."
+  },
+  "archaicNativeFlattening": {
+    "review": "docs/archaic-native-flattening-review.json",
+    "fixtureTests": "tests/test_archaic_native_flattening.py",
+    "strictActual410SourceLog": "/tmp/unicode-archaic-strict-policy-regression.log",
+    "combinedFixtures": "30passed12.60s"
+  },
+  "historicalCollectionReference": {
+    "tests": 2063,
+    "log": "/tmp/unicode-final-collection.log",
+    "status": "collection only, not pass"
+  },
+  "currentCollectedState": {
+    "tests": 2182,
+    "log": "/tmp/unicode-final-collection-r2.log",
+    "status": "terminal0 collection after strict catalog fixes; not a test pass"
+  },
+  "dependentCjkResult": {
+    "status": "terminal0",
+    "tests": 6,
+    "seconds": 835.1,
+    "log": "/tmp/unicode-final-cjk-domain-tests.log",
+    "proof": "All1002CJKvariants and92marked companions preserve donor/native/cache identity, actual copied drawings/instructions/metrics/UVS and mark positions."
+  },
+  "catalogBuild": {
+    "status": "terminal0",
+    "drawings": 1838,
+    "nativeContextRecords": 2,
+    "sources": 300,
+    "bytes": 9392408,
+    "log": "/tmp/unicode-final-combining-catalog.log"
+  },
+  "currentExecutionPolicy": "The fresh full suite includes every named focused target. Use additional focused runs to diagnose and verify concrete failures; do not repeat unchanged checks merely for a timestamp.",
+  "cubicWidthCorrection": {
+    "review": "docs/cubic-width-production-review.json",
+    "status": "Corrective normal build terminal0;1301exact drawings and semantic widths=hmtx; onlyUFSchanged,380otherfontSHAs identical.",
+    "fixtures": 43,
+    "publicDomainTests": 2,
+    "publicDomainLog": "/tmp/unicode-cubic-width-public-domain-tests.log"
+  },
+  "catalogHelperFixtures": {
+    "tests": 70,
+    "passed": 70,
+    "seconds": 1.37,
+    "log": "/tmp/unicode-catalog-lineage-combined-fixtures.log",
+    "scope": "Strict enclosure-derived geometry, native/donor/source/parent/copy/metric/UVS and cache-invalidation checks."
+  },
+  "catalogActualRegression": {
+    "session": 89925,
+    "status": "owner fresh poll confirms live, read-only, inputs frozen",
+    "log": "/tmp/unicode-final-numeric-enclosure-context-fixed.log"
+  },
+  "nextFullRun": {
+    "command": ".venv/bin/python -u -m pytest -x -q",
+    "gate": "Actual89925terminal0 and unchanged fingerprint",
+    "fingerprint": "output/font-review/final-checks/before-python-r2.json",
+    "files": 13887
+  }
+}

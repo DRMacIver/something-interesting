@@ -1,0 +1,112 @@
+{
+  "status": "Fast isolated experiment; not accepted for production or style closure",
+  "method": "smooth injective normalized native-rectangle field; adaptive quadratic approximation; exact native bounding box",
+  "performance": "~0.005seconds/glyph transform only, excludes raster guards and font build",
+  "visualFinding": "Khitan and sparse Jigmo forms gain gentle contour/width modulation; dense Tangut/Jigmo2/Jigmo3 largely retain native forms under conservative component-overlap guards. Original serif structure remains.",
+  "reviewedPNGPages": [
+    "output/font-review/contour-field/page-1.png",
+    "output/font-review/contour-field/page-2.png",
+    "output/font-review/contour-field/page-3.png",
+    "output/font-review/contour-field/page-4.png",
+    "output/font-review/contour-field/page-5.png"
+  ],
+  "constraints": [
+    "No production font/manifest or accepted pressure kernel changed",
+    "Continuous map Lipschitz bound3*pi*amplitude<1 ensures injectivity; quadratic approximation remains guarded",
+    "Source-component literal overlap guard rejects many shifted dense components even though continuous map preserves topology",
+    "Whole-field passes include explicitly retained native glyphs; do not count them as treated",
+    "May compose after separately accepted dense pen reconstruction; needs fresh visual/geometry checks"
+  ],
+  "rows": [
+    {
+      "sourceNumber": 176,
+      "amplitude": 0.03,
+      "sampleGlyphs": 8,
+      "adapted": 8,
+      "retained": 0,
+      "transformSeconds": 0.030952748842537403,
+      "wholeField": "pass"
+    },
+    {
+      "sourceNumber": 176,
+      "amplitude": 0.05,
+      "sampleGlyphs": 8,
+      "adapted": 6,
+      "retained": 2,
+      "transformSeconds": 0.02534799836575985,
+      "wholeField": "pass"
+    },
+    {
+      "sourceNumber": 183,
+      "amplitude": 0.03,
+      "sampleGlyphs": 8,
+      "adapted": 0,
+      "retained": 8,
+      "transformSeconds": 0.029773167334496975,
+      "wholeField": "pass"
+    },
+    {
+      "sourceNumber": 183,
+      "amplitude": 0.05,
+      "sampleGlyphs": 8,
+      "adapted": 0,
+      "retained": 8,
+      "transformSeconds": 0.03809491638094187,
+      "wholeField": "pass"
+    },
+    {
+      "sourceNumber": 197,
+      "amplitude": 0.03,
+      "sampleGlyphs": 8,
+      "adapted": 6,
+      "retained": 2,
+      "transformSeconds": 0.016778333112597466,
+      "wholeField": "pass"
+    },
+    {
+      "sourceNumber": 197,
+      "amplitude": 0.05,
+      "sampleGlyphs": 8,
+      "adapted": 6,
+      "retained": 2,
+      "transformSeconds": 0.020546376705169678,
+      "wholeField": "pass"
+    },
+    {
+      "sourceNumber": 198,
+      "amplitude": 0.03,
+      "sampleGlyphs": 8,
+      "adapted": 1,
+      "retained": 7,
+      "transformSeconds": 0.03206316754221916,
+      "wholeField": "pass"
+    },
+    {
+      "sourceNumber": 198,
+      "amplitude": 0.05,
+      "sampleGlyphs": 8,
+      "adapted": 0,
+      "retained": 8,
+      "transformSeconds": 0.04011245723813772,
+      "wholeField": "pass"
+    },
+    {
+      "sourceNumber": 199,
+      "amplitude": 0.03,
+      "sampleGlyphs": 8,
+      "adapted": 0,
+      "retained": 8,
+      "transformSeconds": 0.03531129192560911,
+      "wholeField": "pass"
+    },
+    {
+      "sourceNumber": 199,
+      "amplitude": 0.05,
+      "sampleGlyphs": 8,
+      "adapted": 0,
+      "retained": 8,
+      "transformSeconds": 0.04102516733109951,
+      "wholeField": "pass"
+    }
+  ]
+}

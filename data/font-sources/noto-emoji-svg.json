@@ -1,0 +1,134 @@
+{
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "files": [
+    {
+      "path": "build/unicode-sources/noto-emoji-svg-probe/LICENSE",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/LICENSE",
+      "sha256": "611ceab36dae96644ca84e8ace6873821790192bf6f73b0d0624a21b24b4b332",
+      "git_blob_sha1": "230517d8bd0f98a1c1789526878ed746ab2c939a",
+      "size": 574
+    },
+    {
+      "path": "build/unicode-sources/noto-emoji-svg-probe/emoji_u1f468_200d_1f37c.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f468_200d_1f37c.svg",
+      "sha256": "5107d747597093801e39562c58e29c49fa6551970ff76bae198ace2f5bfb8397",
+      "git_blob_sha1": "b3bbafbdec035fdb96dca0cf92fd592ef66465a3",
+      "size": 9565,
+      "include_sequences": [
+        "👨‍🍼",
+        "👨🏻‍🍼",
+        "👨🏼‍🍼",
+        "👨🏽‍🍼",
+        "👨🏾‍🍼",
+        "👨🏿‍🍼"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "path": "build/unicode-sources/noto-emoji-svg-probe/emoji_u1f469_200d_1f37c.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f469_200d_1f37c.svg",
+      "sha256": "9d216571fafc39014e3bb88d8476184ecb5569c11dd7f99db8ef722934f51011",
+      "git_blob_sha1": "9424d5c09993e40f214fb61d6945cc1b726f9921",
+      "size": 9382,
+      "include_sequences": [
+        "👩‍🍼",
+        "👩🏻‍🍼",
+        "👩🏼‍🍼",
+        "👩🏽‍🍼",
+        "👩🏾‍🍼",
+        "👩🏿‍🍼"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "path": "build/unicode-sources/noto-emoji-svg-probe/emoji_u1f930.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f930.svg",
+      "sha256": "74373cfef2f69c1dd5767cbf30c175205a430fc3a7bf4de8694010c5217ca035",
+      "git_blob_sha1": "ed9e6ed3f39c109949a6ecbc78431f50b9b80fde",
+      "size": 82287,
+      "include_sequences": [
+        "🤰",
+        "🤰🏻",
+        "🤰🏼",
+        "🤰🏽",
+        "🤰🏾",
+        "🤰🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "path": "build/unicode-sources/noto-emoji-svg-probe/emoji_u1f931.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f931.svg",
+      "sha256": "9d5d660ed2eb32d7ee0bf8491505ea3636d156d0ff4a75f83d25244eb3fdfa8d",
+      "git_blob_sha1": "feeee04ee6107189988d72c19abcdc820409e069",
+      "size": 8489,
+      "include_sequences": [
+        "🤱",
+        "🤱🏻",
+        "🤱🏼",
+        "🤱🏽",
+        "🤱🏾",
+        "🤱🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "path": "build/unicode-sources/noto-emoji-svg-probe/emoji_u1f9d1_200d_1f37c.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9d1_200d_1f37c.svg",
+      "sha256": "bf71116b9713e2e0b7b954463cc22f99e9bfee456babd053654d4176b775a7e1",
+      "git_blob_sha1": "831ae7d2522428e7f5be7302526f9ee33c2b45e0",
+      "size": 9889,
+      "include_sequences": [
+        "🧑‍🍼",
+        "🧑🏻‍🍼",
+        "🧑🏼‍🍼",
+        "🧑🏽‍🍼",
+        "🧑🏾‍🍼",
+        "🧑🏿‍🍼"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "path": "build/unicode-sources/noto-emoji-svg-probe/emoji_u1fac3.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1fac3.svg",
+      "sha256": "71eb6eea05c9b984d9b699fc275db76f847b7521f2734031e175fc528dea02c9",
+      "git_blob_sha1": "aeaa1ece2ec46a624f977ad58fdfe996d8c474f4",
+      "size": 12286,
+      "include_sequences": [
+        "🫃",
+        "🫃🏻",
+        "🫃🏼",
+        "🫃🏽",
+        "🫃🏾",
+        "🫃🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "path": "build/unicode-sources/noto-emoji-svg-probe/emoji_u1fac4.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1fac4.svg",
+      "sha256": "ba910e662861c0e30e5dc0d3c2f2e8ff73b4b01d105da7b600609fbed59a6162",
+      "git_blob_sha1": "e97b16c849f1010e0b0f275551f8cdabb9c72851",
+      "size": 13021,
+      "include_sequences": [
+        "🫄",
+        "🫄🏻",
+        "🫄🏼",
+        "🫄🏽",
+        "🫄🏾",
+        "🫄🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "path": "assets/fonts/licenses/NotoEmoji-SVG-Apache-2.0.txt",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358
+    }
+  ],
+  "scope": "Seven reviewed detailed pregnancy and feeding SVGs, converted to expressive ink with independent exposed-skin masks.",
+  "license": "Apache-2.0"
+}

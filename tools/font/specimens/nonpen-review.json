@@ -1,0 +1,49 @@
+{
+  "samples": [
+    {
+      "label": "1 ArefRuqaa-Regular.ttf",
+      "font": "assets/fonts/scripts/b8ef0ccbaaf6.woff2",
+      "text": "مرحبا بالعالم"
+    },
+    {
+      "label": "3 Gaegu-Regular.ttf",
+      "font": "assets/fonts/scripts/0c8e6a663cf0.woff2",
+      "text": "세상은 신기한 일로 가득해요"
+    },
+    {
+      "label": "15 DadTolong.ttf",
+      "font": "assets/fonts/scripts/4eec163ff41b.woff2",
+      "text": "𑶰𑶸𑶿𑷇𑷎𑷖𑷡𑷩"
+    },
+    {
+      "label": "18 KreativeSquare.ttf",
+      "font": "assets/fonts/scripts/24035b96a3ea.woff2",
+      "text": "𜳺𜳻𜺺𜺻𜺼𜺽𜺿🯺"
+    },
+    {
+      "label": "25 NotoSansAnatolianHieroglyphs-Regular.ttf",
+      "font": "assets/fonts/scripts/d4729c3e3f86.woff2",
+      "text": "𔐀𔑓𔒦𔓹𔕍𔖠𔗳𔙆"
+    },
+    {
+      "label": "102 NotoSansMono-Regular.ttf",
+      "font": "assets/fonts/scripts/b63157a1bec2.woff2",
+      "text": "⎺⎻⎽❘❚🙼🙾🙿"
+    },
+    {
+      "label": "150 NotoSansSyriacWestern-Regular.ttf",
+      "font": "assets/fonts/scripts/832249cb9eaa.woff2",
+      "text": "ܐ᷺ ܒ᷺"
+    },
+    {
+      "label": "177 NotoSerifKhojki-Regular.ttf",
+      "font": "assets/fonts/scripts/2cccbc6c0ca7.woff2",
+      "text": "𑈀𑉁 𑈊𑉁"
+    },
+    {
+      "label": "188 NotoTraditionalNushu-Regular.ttf",
+      "font": "assets/fonts/scripts/61c74f62907d.woff2",
+      "text": ", - . ⻚ ⼈ ⼥"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "caseId": "176",
+      "sourceNumber": 176,
+      "source": "build/unicode-sources/noto/NotoSerifKhitanSmallScript-Regular.ttf",
+      "font": "output/font-review/dense-native-baselines/042e43ff081e.woff2",
+      "originalFile": "assets/fonts/scripts/042e43ff081e.woff2",
+      "fontSha256": "97534534b8eafe6f330887b634b84f2da41359978fb013816c72df51e21cf4b3",
+      "text": "𘬀𘭃𘮆𘯉𘰌𘱏𘲒𘳕"
+    },
+    {
+      "caseId": "183",
+      "sourceNumber": 183,
+      "source": "build/unicode-sources/noto/NotoSerifTangut-Regular.ttf",
+      "font": "output/font-review/dense-native-baselines/b18cf2344e84.woff2",
+      "originalFile": "assets/fonts/scripts/b18cf2344e84.woff2",
+      "fontSha256": "0a8893958a8f73e0c4707388120750151c2315db91f65ad069f727dd4c4bcc4e",
+      "text": "𗏻𗒍𗔟𗖱𗙄𗛖𗝨𗟺"
+    },
+    {
+      "caseId": "197",
+      "sourceNumber": 197,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo.ttf",
+      "font": "output/font-review/dense-native-baselines/b3e108cd8e7e.woff2",
+      "originalFile": "assets/fonts/scripts/b3e108cd8e7e.woff2",
+      "fontSha256": "1c9b6634700f3a98518e4eea931b179cac50510891f16e960d334669fd2fe22f",
+      "text": "ᄀᄤᅉᅯᆔᆸᇝ〲"
+    },
+    {
+      "caseId": "198",
+      "sourceNumber": 198,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo2.ttf",
+      "font": "output/font-review/dense-native-baselines/9f38c185324b.woff2",
+      "originalFile": "assets/fonts/scripts/9f38c185324b.woff2",
+      "fontSha256": "92ed0765abbcc1e216a463714c7f48dcc930479519373774f6447312e02ad8b1",
+      "text": "𭟃𭡕𭣨𭥺𭨌𭪟𭬱𭯂"
+    },
+    {
+      "caseId": "199",
+      "sourceNumber": 199,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo3.ttf",
+      "font": "output/font-review/dense-native-baselines/6170ad79af61.woff2",
+      "originalFile": "assets/fonts/scripts/6170ad79af61.woff2",
+      "fontSha256": "87942dd78b102a9a3c5b24cf618023670028374d841bca885ab4004b767ffe3e",
+      "text": "𲞤𲠸𲣊𲥛𲧮𲪀𲬒𲮣"
+    },
+    {
+      "caseId": "197-han",
+      "sourceNumber": 197,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo.ttf",
+      "font": "output/font-review/dense-native-baselines/0b0874ffdbd6.woff2",
+      "originalFile": "assets/fonts/scripts/0b0874ffdbd6.woff2",
+      "fontSha256": "4b5fab9276d26bba90d162aa00ba05c155dc9117de72a8122fc651d224448f0c",
+      "text": "直画嗢全滋響嬨變"
+    },
+    {
+      "caseId": "197-extb",
+      "sourceNumber": 197,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo.ttf",
+      "font": "output/font-review/dense-native-baselines/4ab0e1dd91b7.woff2",
+      "originalFile": "assets/fonts/scripts/4ab0e1dd91b7.woff2",
+      "fontSha256": "5678ed8db110fdaa663f7e4fee1eb5720baf2ad1d56179ee001ad2302ce83a61",
+      "text": "𠀀"
+    }
+  ],
+  "hanRoutingEvidence": "output/font-review/dense-native-adapter/197-han-field.json"
+}

@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-03",
+  "status": "implemented/verified to the stated scope; final669browser corpus passed",
+  "scope": "Registered nonjoining variation bases followed by foreign spacing Mc vowels. Complete native clusters stay together; unsupported mark tails use separate native fragments.",
+  "changes": [
+    "Load registered native prefix font alongside all existing bundled mark sources.",
+    "Paint complete native nonjoining variation clusters with an explicit leading family even when a foreign Mc triggers a contextual script flag.",
+    "For incomplete native coverage, preserve prefix as one native shaped run and paint the unsupported mark tail with native fallback sources.",
+    "Keep grapheme segmentation, line-break units and logical/share input unchanged; Myanmar spacing-mark grapheme exceptions stay separate."
+  ],
+  "checks": {
+    "focusedJS": {
+      "tests": 1,
+      "combinations": 24,
+      "log": "/tmp/spacing-variation-native-fragments-js.log"
+    },
+    "fullJS": {
+      "tests": 353,
+      "passed": 353,
+      "seconds": 12.08,
+      "log": "/tmp/spacing-variation-final-full-js.log"
+    },
+    "source": {
+      "tests": 1,
+      "contexts": 6,
+      "seconds": 0.73,
+      "log": "/tmp/spacing-variation-source.log",
+      "scope": "Actual fallback fragments have nonempty glyphs, no notdef, packaged/source-identical shaping. Native Tamil O keeps its left/right decomposition around the native dotted-circle carrier."
+    },
+    "focusedBrowser": [
+      "native-spacing-variations",
+      "native-spacing-variation-complete"
+    ],
+    "focusedVisual": "Both actual comic strips reviewed. Foreign vowels visibly painted, mathematical/CJK forms retained, complete native forms and spacing-mark exceptions visible. No missing/emoji fallback or geometry failures.",
+    "raster": "Actual fontRuns/paint font stacks must show additional foreign-vowel ink. Where a selected native prefix discriminates a selector, the composed raster must still discriminate it. Every routed fragment must occur in actual comic paint runs.",
+    "fullBrowserPrior": {
+      "cases": 668,
+      "failures": [],
+      "geometry": []
+    },
+    "contextualSource": {
+      "tests": 2,
+      "seconds": 0.64,
+      "log": "/tmp/contextual-variation-final-source.log",
+      "review": "docs/contextual-variation-review.json"
+    },
+    "fullBrowser": {
+      "cases": 669,
+      "failures": [],
+      "geometry": []
+    }
+  },
+  "cjkNonDiscriminatingReference": {
+    "file": "assets/fonts/dad-cjk-variants.woff2",
+    "sha256": "d69213f8a04278067a6dd0e25cfdce46f9d59bca497e194914a282b50d7056be",
+    "base": "8C48",
+    "selector": "FE00",
+    "defaultGlyph": "u8C48",
+    "variationGlyph": "u8C48.vsFE00",
+    "decomposedCurvesIdentical": true
+  },
+  "limits": [
+    "Foreign cross-script syllables may show their licensed source shaper's dotted-circle invalid-syllable carrier. This is native fallback presentation, not an invented attachment rule for unrelated scripts.",
+    "Does not alter connected native bases, complete native joining, undefined mark selectors or exact emoji routing.",
+    "CJK default/UVS can have identical native curves; pixel inequality is only required where the isolated prefix actually discriminates them.",
+    "Source-family/style, broader contextual review and full Python suite remain incomplete."
+  ],
+  "sha256": {
+    "js/font-variations.js": "b372fabb91f64d827805e1f1c5f80b4a4067fd7421318bfea07498ca368b37b0",
+    "js/fonts.js": "a0c800b605ef467d456fed4ce858b134a52adeda7e0b26a61777d90ef6e99f3b",
+    "js/emoji-routing.js": "81ca4274597d6a185084a0224015bf6105d3e31ba92b93fc38b10cef89ec96eb",
+    "tests/spacing-variations.test.mjs": "c6ad421464951628dd9b7af48314b7cb4a2e0f107d93db83b6ecf86c4c050a54",
+    "tests/test_spacing_variations.py": "99d0b224c812c18cd1db1e80113f44e2cc028dded21cb0ff184c424ce9cb3631",
+    "tools/unicode-checks.html": "6bb4486d7ce91c77834c65ef76a517cbdedfdfa9c2bfb0cb184f1d724abcdc88"
+  }
+}

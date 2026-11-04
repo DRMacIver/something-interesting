@@ -1,0 +1,161 @@
+{
+  "unicode_version": "18.0.0",
+  "licence": "LICENSE.txt",
+  "files": [
+    {
+      "path": "18.0.0/ArabicShaping.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/ArabicShaping.txt",
+      "sha256": "8ccde4ebd070500a68e8bcb9d5514522fb0bebe57b9ebad3ff925b8e1e669f83"
+    },
+    {
+      "path": "18.0.0/BidiBrackets.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/BidiBrackets.txt",
+      "sha256": "4b3b62e4a14b84ee752808c810c602534921c09a4a1bf78cfbee566d66c125b3"
+    },
+    {
+      "path": "18.0.0/BidiCharacterTest.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/BidiCharacterTest.txt",
+      "sha256": "045b24d2c8ab066951bd32fe8c6b4de34647f72b5b1c7df0265f24ab53573e01"
+    },
+    {
+      "path": "18.0.0/BidiMirroring.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/BidiMirroring.txt",
+      "sha256": "cd54810ebf52f0e61a730c8b9cb25975de6c85f6d788a559b416afd548923fd6"
+    },
+    {
+      "path": "18.0.0/BidiTest.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/BidiTest.txt",
+      "sha256": "9af2f882a4ab50912e388f069a673b94eacd82fa6d07d20a3ff7f3c759e905aa"
+    },
+    {
+      "path": "18.0.0/Blocks.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/Blocks.txt",
+      "sha256": "a58f8d322f3c5e254f9f97b1cbf76a454a7e02de6ac35619a5e4f27aaabfd553"
+    },
+    {
+      "path": "18.0.0/DerivedAge.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/DerivedAge.txt",
+      "sha256": "58b04334e3a31f9612694bbc3f6bff4a302b7d424565bca9c47e30aa74f8dbac"
+    },
+    {
+      "path": "18.0.0/DerivedCoreProperties.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/DerivedCoreProperties.txt",
+      "sha256": "09c928886a178fcafd93c29e4bd59073a058e5a100b716d425cb563ab50f68c9"
+    },
+    {
+      "path": "18.0.0/DerivedNormalizationProps.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/DerivedNormalizationProps.txt",
+      "sha256": "98ac7f67d985fe781e317f6182e885e94cabb0c314769e6dd73e48b226931ccd"
+    },
+    {
+      "path": "18.0.0/EastAsianWidth.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/EastAsianWidth.txt",
+      "sha256": "a0cf29eacd00cfcaec4381c6b7c281685f18dbb4e7ff82b4076ccb342ca839aa"
+    },
+    {
+      "path": "18.0.0/LineBreak.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/LineBreak.txt",
+      "sha256": "ae8cf1970c73f3f1a12d77852df96c4b2b1723ca8b388e36bb5739250c6849de"
+    },
+    {
+      "path": "18.0.0/NamedSequences.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/NamedSequences.txt",
+      "sha256": "4666003f450ece06fb3f5d868c5d486622dc5275ff626a730ff0c94cbb303df0"
+    },
+    {
+      "path": "18.0.0/NormalizationTest.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/NormalizationTest.txt",
+      "sha256": "25a50d816764b04abfb4a646d3eb2b2a803284c3873d9a06757b94fe4513dde3"
+    },
+    {
+      "path": "18.0.0/PropList.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/PropList.txt",
+      "sha256": "f438f532e8737bb8a2702126cdf9c4af5e357c58c7acf9d9eb2fc7c1a1d955d6"
+    },
+    {
+      "path": "18.0.0/PropertyValueAliases.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/PropertyValueAliases.txt",
+      "sha256": "06c4c8eaf7b0bf34abe73b113da1215bd784ac254d4c223600b90267caa4bbbd"
+    },
+    {
+      "path": "18.0.0/ReadMe.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/ReadMe.txt",
+      "sha256": "b0ea442f29dee90584aacd3665a6e1ce87ffc917a4d31f34e1916d2d6f7f9205"
+    },
+    {
+      "path": "18.0.0/ScriptExtensions.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/ScriptExtensions.txt",
+      "sha256": "5c9d34a922f687726f2a8bcf57d49f905987e51f1b21b58c95a00fbe255cec23"
+    },
+    {
+      "path": "18.0.0/Scripts.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/Scripts.txt",
+      "sha256": "0071fd81b6aeae25f6e8bce8efec3066a6476a91b49bdb2f52dc76e817862a6a"
+    },
+    {
+      "path": "18.0.0/SealSources.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/SealSources.txt",
+      "sha256": "05ba2c220c4f34a0f1ef54676e7d2033963a9baed1acafd079f00f13da11aa90"
+    },
+    {
+      "path": "18.0.0/StandardizedVariants.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/StandardizedVariants.txt",
+      "sha256": "c7ae634a7e2bb0932258548a1e81df984fbb38e30cecf4269391d6a4f94581ac"
+    },
+    {
+      "path": "18.0.0/UnicodeData.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/UnicodeData.txt",
+      "sha256": "0736451de439ae7baf1425136617da495e09ee5afbe6e394374db7009ea08950"
+    },
+    {
+      "path": "18.0.0/auxiliary/GraphemeBreakProperty.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/auxiliary/GraphemeBreakProperty.txt",
+      "sha256": "0839dcb79e4ac639ecd538b1abf7c9d22e3f9dd265b7e182d33627aa4d75b45a"
+    },
+    {
+      "path": "18.0.0/auxiliary/GraphemeBreakTest.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/auxiliary/GraphemeBreakTest.txt",
+      "sha256": "b0cf047ee94485bbdc846de2b902f5f8a815f6b674f9d04223cddadd91c9df31"
+    },
+    {
+      "path": "18.0.0/auxiliary/LineBreakTest.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/auxiliary/LineBreakTest.txt",
+      "sha256": "fd9ff9eca411080085b41471bba79ae19d9db2e16924f9770b8509f1affd3f95"
+    },
+    {
+      "path": "18.0.0/emoji/emoji-data.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/emoji/emoji-data.txt",
+      "sha256": "80d00f8e616a0ef27fd6b8de3b758c06383b5d917e2977709578e68baf733bf1"
+    },
+    {
+      "path": "18.0.0/emoji/emoji-sequences.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/emoji/emoji-sequences.txt",
+      "sha256": "1823dce71f3dd9cb0ad1976797baee4ffbdc1909756f43af8ce4c57f732843a4"
+    },
+    {
+      "path": "18.0.0/emoji/emoji-test.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/emoji/emoji-test.txt",
+      "sha256": "8f3735cda1f92a779d78af67cf86066bb1f07143dc22f2ac29394d9bc57ab21a"
+    },
+    {
+      "path": "18.0.0/emoji/emoji-variation-sequences.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/emoji/emoji-variation-sequences.txt",
+      "sha256": "ff1707564aa1f1b2fcf4ec92d609d4cb26940bc0d4dcf07f5328ad6879e84da3"
+    },
+    {
+      "path": "18.0.0/emoji/emoji-zwj-sequences.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/emoji/emoji-zwj-sequences.txt",
+      "sha256": "f61b5213bdf85a57741a9f903cb38d0f39a3d13be6ff4aca3b39857e859a9191"
+    },
+    {
+      "path": "18.0.0/extracted/DerivedBidiClass.txt",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/extracted/DerivedBidiClass.txt",
+      "sha256": "d9e23222522551348ea1ccfbb4f62efbf98982afb95840f8959c08ed992c5607"
+    },
+    {
+      "path": "LICENSE.txt",
+      "url": "https://www.unicode.org/license.txt",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    }
+  ]
+}

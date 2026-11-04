@@ -1,0 +1,3785 @@
+{
+  "objective": "Complete docs/unicode-beta-brief.md",
+  "date": "2026-11-04",
+  "status": "Beta ready for human playtesting. Subsequent sampler typography refinements passed focused checks; the original2336-case whole-scope checkpoint remains historical.",
+  "briefSha256": "b7422ebb3c151d91bcf1ec65527c685b0aa9f01d44715f5eb4be63e6bc2f8006",
+  "statusDefinitions": {
+    "supported": "Current inspected implementation and targeted evidence support the beta requirement; stated practical limits remain explicit.",
+    "supported-with-limits": "Substantial direct evidence exists, but named final verification or practical review remains.",
+    "partial": "Known scoped implementation gap or insufficient evidence remains.",
+    "pending": "Named verification has started or is still missing."
+  },
+  "requirements": [
+    {
+      "id": "scope-release",
+      "requirement": "Verify the current released standard and pin authoritative data.",
+      "status": "supported",
+      "evidence": [
+        "data/unicode/sources.json",
+        "tests/test_unicode_inventory.py",
+        "https://www.unicode.org/releases/",
+        "https://www.unicode.org/versions/Unicode18.0.0/",
+        "data/unicode/18.0.0/UnicodeData.txt",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Unicode18 release/data pins are retained; the final complete regression and unchanged-input proof are recorded separately.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "scope-inventory",
+      "requirement": "Precisely inventory assigned public characters, sequences, controls and noncharacters/private use.",
+      "status": "supported",
+      "evidence": [
+        "tools/unicode/audit.py",
+        "data/unicode/18.0.0/UnicodeData.txt",
+        "docs/unicode-coverage.json",
+        "tests/test_unicode_inventory.py",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "All172365 visible requirements have bundled cmap entries. Presence remains distinct from shaping, style and semantic validation; generated coverage retains incomplete/validated0 fields.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "drawing-coverage",
+      "requirement": "All scoped visible characters reach real custom drawings; no placeholders or system fallback as completion.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/unicode/outline_audit.py",
+        "tests/test_outline_audit.py",
+        "docs/unicode-coverage.json",
+        "docs/unicode-outline-coverage.json",
+        "docs/tatweel-routing-review.json",
+        "docs/font-dependent-format-probe.json",
+        "docs/font-dependent-format-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Current outline audit has172360 positive first-painted drawings and5 explicit blank/context exceptions, with0 unexplained or routing gaps. Geometry does not itself certify identity.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "emoji-sequences",
+      "requirement": "Applicable standard emoji sequences and standalone components use custom artwork.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/emoji-manifest.js",
+        "js/emoji-routing.js",
+        "tests/test_font_emoji.py",
+        "tests/emoji-routing.test.mjs",
+        "docs/unicode-coverage.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "All3963fully-qualified emoji and5533exact forms retain custom routing/artwork provenance. The final complete suite includes an independent private-output emoji rebuild and verifies unchanged public products.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "variation-sequences",
+      "requirement": "Preserve standardized and applicable native variation selection, including marked clusters.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/font-variations.js",
+        "tests/font-variations.test.mjs",
+        "docs/positional-mark-review.json",
+        "docs/variation-combining-review.json",
+        "docs/cgj-variation-review.json",
+        "docs/foreign-spacing-mark-probe.json",
+        "docs/spacing-variation-review.json",
+        "docs/contextual-variation-review.json",
+        "output/font-review/final-cjk-continuity.json",
+        "output/font-review/final-marked-cjk-continuity.json",
+        "tests/test_native_variation_packaging.py",
+        "tests/test_font_cjk_variants.py",
+        "tests/test_font_marked_cjk.py",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "All1437standardized pairs and current contextual/native variation paths retain construction and routing proofs, including1002CJKpairs and92marked companions. Invalid cross-script tails can legitimately use native carriers.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "combining",
+      "requirement": "Native mark placement, stacks, enclosures and double diacritics work without changing logical input.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/combining-annotations.js",
+        "js/vietnamese-marks.js",
+        "tools/font/math_unicode_marks.py",
+        "tests/combining-annotations.test.mjs",
+        "docs/positional-mark-review.json",
+        "docs/numeric-enclosures-review.json",
+        "docs/cgj-variation-probe.json",
+        "js/combining-outline-manifest.js",
+        "tests/test_combining_outlines.py",
+        "tests/test_positional_marks.py",
+        "tests/test_catalog_enclosure_evidence.py",
+        "tests/test_marked_catalog_lineage.py",
+        "/tmp/unicode-final-numeric-enclosure-context-fixed.log",
+        "/tmp/unicode-catalog-lineage-combined-fixtures.log",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "The current catalog has1838drawable marks and2native-context records from300sources. Complete catalog/context regressions passed after performance fixes; arbitrary linguistic placement is not claimed.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "shaping",
+      "requirement": "Keep native joining, letterforms and native mark attachment in complete and mixed-script text.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/fonts.js",
+        "js/native-shaping.js",
+        "tests/test_font_scripts.py",
+        "tests/native-shaping.test.mjs",
+        "tests/fonts.test.mjs",
+        "tests/greek-fonts.test.mjs",
+        "output/font-review/supplemental-production/verification.json",
+        "output/font-review/dense-production/public-continuity.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Current Music612/Funky326 full native/cache/construction proofs,60Music contexts and28fields preserve original semantic bounds. Other regular/dense sources retain exact-byte continuity and native layout/metrics. Native-source proof is not exhaustive linguistic approval.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "bidi",
+      "requirement": "Bidirectional and mixed-direction text retains reading order across wrapping and overrides.",
+      "status": "supported",
+      "evidence": [
+        "js/direction.js",
+        "tests/bidi.test.mjs",
+        "tests/direction.test.mjs",
+        "tools/unicode-checks.html",
+        "docs/font-dependent-format-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Pinned bidi conformance and current direction/control/wrapping regressions pass. Dated676Unicode/33general browser evidence is retained with its original asset scope.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "graphemes",
+      "requirement": "Grapheme segmentation is pinned and editing/wrapping limits do not split clusters.",
+      "status": "supported",
+      "evidence": [
+        "js/unicode.js",
+        "tests/unicode.test.mjs",
+        "data/unicode/18.0.0/auxiliary/GraphemeBreakTest.txt",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Pinned grapheme conformance and source-offset/resource-limit checks preserve clusters independently of host Unicode data.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "linebreak",
+      "requirement": "Unicode line breaking replaces whitespace-only splitting and preserves controls and native clusters.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/line-breaks.js",
+        "js/dictionary-breaks.js",
+        "tests/linebreak.test.mjs",
+        "tests/layout.test.mjs",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Pinned line breaking and dependent-vowel/emergency-unit handling pass. Thai/Lao/Khmer/Myanmar host dictionary quality remains provisional; no all-language gate is added.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "measurement",
+      "requirement": "Measure and paint the same shaped/coloured/native geometry including overhangs and large emoji.",
+      "status": "supported",
+      "evidence": [
+        "js/text-metrics.js",
+        "js/comic.js",
+        "tests/text-metrics.test.mjs",
+        "tools/unicode-checks.html",
+        "docs/optical-browser-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Shared native/optical geometry and corrected CFFwidths retain equal measurement/painting frames and metrics. Dated optical browser evidence is not relabelled final-pressure execution.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "balloons",
+      "requirement": "Balloon sizing and panel growth handle extreme Unicode and protect the existing artwork.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/layout.js",
+        "js/balloon.js",
+        "js/checks.js",
+        "tests/layout.test.mjs",
+        "tools/checks.html",
+        "tools/unicode-checks.html",
+        "docs/product-unicode-smoke-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Ink-aware layout, cluster fitting and protected-art geometry pass the current regression checks. Dated app evidence and authorized local specimen/source validation remain separately scoped.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "export",
+      "requirement": "Exported comics agree with the preview and wait for the current render.",
+      "status": "supported",
+      "evidence": [
+        "js/app.js",
+        "js/comic.js",
+        "tests/comic.test.mjs",
+        "tools/unicode-checks.html",
+        "docs/product-unicode-smoke-review.json",
+        "docs/optical-browser-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Current-render waiting and existing preview/export semantics retain runtime regressions and dated editor/PNG evidence. No final-pressure clipboard/download execution is claimed; the user waived that interrupted browser check.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "case",
+      "requirement": "Remove destructive uppercasing while retaining source lettering and mathematical distinctions.",
+      "status": "supported",
+      "evidence": [
+        "js/comic.js",
+        "js/native-shaping.js",
+        "tests/comic.test.mjs",
+        "tests/test_font_alphabets.py",
+        "js/app.js",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Logical case/source text remain preserved. Capital-like existing lowercase drawings do not change stored text or mathematical/native alphabet distinctions.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "grid",
+      "requirement": "Box drawing, block elements, Braille and text diagrams retain structure with hand-inked treatment.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/grid.js",
+        "tools/font/build_grid.py",
+        "tests/grid.test.mjs",
+        "tests/test_font_grid.py",
+        "tools/unicode-checks.html",
+        "docs/unicode-outline-coverage.json",
+        "docs/bounded-layout-review.json",
+        "js/grid-manifest.js",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Dedicated structural box/block/Braille/diagram drawings and routing checks pass. Ambiguous diagram selection remains a documented heuristic; blank Braille is an explicit semantic exception.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "math",
+      "requirement": "Keep meaningful bold/italic/script/fraktur/monospace/fullwidth/enclosed distinctions.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/font/alphabet_ink.py",
+        "tests/test_font_alphabets.py",
+        "tests/test_font_math_variants.py",
+        "docs/math-variant-review.json",
+        "tools/unicode-checks.html",
+        "docs/math-variant-style-review.json",
+        "js/math-variant-manifest.js",
+        "tests/test_font_scripts.py",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Meaningful native mathematical distinctions,37standalone variation pairs and fullwidth/enclosed forms retain source/metric/context proofs. Actual harpoon/geomantic semantics pass original unchanged bounds; a full markup or score engine is outside scope.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "egyptian",
+      "requirement": "Egyptian sign identities, formats and approved visual direction work in actual comics.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/egyptian-layout.js",
+        "docs/egyptian-insertion-build.json",
+        "docs/egyptian-insertion-review.json",
+        "tests/egyptian-layout.test.mjs",
+        "tools/unicode-checks.html",
+        "docs/bounded-layout-review.json",
+        "docs/egyptian-unmatched-output-probe.json",
+        "docs/insertion-mirror-helper-review.json",
+        "js/egyptian-insertion-manifest.js",
+        "tests/test_egyptian_insertion_build.py",
+        "docs/optical-browser-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "All982enumerated insertion candidates,65mirror helpers and3native alternates are recovered. Egyptian.014em/Anatolian.010em shared optical rules pass; arbitrary-expression collision freedom and translation are not claimed.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "source-licensing",
+      "requirement": "Retain provenance, licences, required attribution, derivative names and redistribution/source obligations.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "data/font-sources",
+        "assets/fonts/licenses",
+        "index.html",
+        "tests/test_font_scripts.py",
+        "tests/test_font_seal_sans.py",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Pinned hashes, licences/notices, derivative names, SealSans corresponding source and local rebuild evidence are retained. Current preservation policies have exact raw-constructor provenance and native/cache proof; no new legal/expert approval gate is introduced.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "pdf-references",
+      "requirement": "Use the supplied PDF and approved generated studies as visual references, not glyph truth.",
+      "status": "supported",
+      "evidence": [
+        "output/imagegen/unicode-prototypes/design-decisions.json",
+        "docs/emoji-pen-translation.md",
+        "output/imagegen/emoji-production/palette-source.json",
+        "docs/unicode-beta-brief.md",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Approved PDF-grounded reference history/prompts remain retained; native sources define glyph identities. The final input closure includes the actual palette PDF, source art and dynamically read review inputs.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "colour",
+      "requirement": "Match meaning-bearing emoji colour to the PDF while retaining hand-inked outlines and distinctions.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "output/imagegen/emoji-production/palette-source.json",
+        "output/imagegen/emoji-production/skin-palette-source.json",
+        "output/imagegen/emoji-production/heart-palette-source.json",
+        "tools/font/emoji_faces.py",
+        "output/imagegen/emoji-production/glyph-review.json",
+        "docs/unicode-beta-brief.md",
+        "tests/test_font_emoji.py",
+        "js/emoji-manifest.js",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Meaningful-colour palette provenance and category-specific artwork/compiler checks pass. Published text-source policies do not change these emoji assets or palette distinctions.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "emoji-finish",
+      "requirement": "Use expressive procedural strength1.7, fine-detail guards and approved smooth pressure variation.",
+      "status": "supported",
+      "evidence": [
+        "tools/font/pen_translate.py",
+        "tools/font/emoji_faces.py",
+        "tools/font/emoji_licensed.py",
+        "docs/emoji-pen-translation.md",
+        "output/font-review/pen-translation/review.json",
+        "tests/test_font_emoji.py",
+        "js/emoji-manifest.js",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Approved expressive procedural strength1.7 with fine-detail reductions and smooth pressure variation remains implemented and checked. This is repeatable treatment, not a learned style model or all-glyph aesthetic certification.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "emoji-presence",
+      "requirement": "Keep approved1.4x custom emoji size and stronger ink in actual strips.",
+      "status": "supported",
+      "evidence": [
+        "js/text-metrics.js",
+        "js/comic.js",
+        "assets/fonts/dad-emoji-ink.woff2",
+        "tests/test_font_emoji_ink.py",
+        "tools/emoji-optical-review.html",
+        "docs/unicode-beta-brief.md",
+        "docs/product-unicode-smoke-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Approved1.4custom-emoji optical scale and stronger ink remain shared by measurement/painting and actual-strip evidence; no new approval is needed.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "visual-script-style",
+      "requirement": "Apply the approved accent/math/dense/Egyptian/script style at realistic comic sizes.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/font/alphabet_ink.py",
+        "tools/font/build_scripts.py",
+        "output/imagegen/unicode-prototypes/design-decisions.json",
+        "tools/unicode-checks.html",
+        "docs/source-style-review.json",
+        "docs/product-unicode-smoke-review.json",
+        "docs/unicode-beta-plan.md",
+        "docs/final-source-style-review.json",
+        "docs/unicode-style-dispositions.json",
+        "output/font-review/production-visual-match.json",
+        "docs/dense-production-review.json",
+        "docs/cubic-width-production-review.json",
+        "docs/final-policy-production-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "All199source decisions and17final22/44atlas pages are recorded, including actual published Music/Funky review and dense/native-retention evidence. Acceptance is sampled and does not claim native-reader or every-glyph linguistic approval.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "zalgo",
+      "requirement": "Allow approved overlapping/obscuring Zalgo marks without reserving an artificial clear corridor.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/font/build_glyphs.py",
+        "js/text-metrics.js",
+        "tools/unicode-checks.html",
+        "output/imagegen/unicode-prototypes/03-zalgo-v2.png",
+        "docs/unicode-beta-brief.md",
+        "tests/combining-annotations.test.mjs",
+        "tests/layout.test.mjs",
+        "docs/product-unicode-smoke-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Overlapping marks, cluster retention and full ink reservation remain intentional and tested; no clear base corridor was introduced. Dated strip evidence and local/source validation retain distinct scopes.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "character-art",
+      "requirement": "Preserve the existing Dad/Calvin artwork and inspect any necessary new art against original references.",
+      "status": "supported",
+      "evidence": [
+        "assets/panels.json",
+        "tools/build_assets.py",
+        "tools/unicode-checks.html",
+        "docs/product-unicode-smoke-review.json",
+        "tests/layout.test.mjs",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Existing Dad/Calvin art and protected-art layout are preserved; typography/native-policy changes introduce no new character faces.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "static-automatic",
+      "requirement": "Keep the product static, backend-free and automatic with no Unicode configuration.",
+      "status": "supported",
+      "evidence": [
+        "index.html",
+        "js/app.js",
+        "js/fonts.js",
+        "js/dictionary-breaks.js",
+        "README.md",
+        "js/emoji-routing.js",
+        "js/font-variations.js",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "The app remains static/backend-free with automatic script/font/variation/direction routing and no user language/font/account configuration.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "private-unassigned",
+      "requirement": "Handle private-use, unassigned and malformed input gracefully without inventing standard drawings.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/fonts.js",
+        "js/comic.js",
+        "js/share.js",
+        "tests/fonts.test.mjs",
+        "tools/unicode-checks.html",
+        "tools/unicode/audit.py",
+        "tests/unicode.test.mjs",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Private/unassigned drawings are not invented or counted as custom public coverage. Logical input and graceful malformed/resource-limit handling remain preserved; internal aliases are not advertised standardized sequences.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "reproducibility",
+      "requirement": "Provide a reproducible pipeline and separate versioned coverage, sequence, shaping, visual and browser evidence.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/font",
+        "tools/unicode",
+        "docs/unicode-progress.md",
+        "docs/unicode-coverage.json",
+        "docs/positional-mark-review.json",
+        "tests/font_baseline_checks.py",
+        "tests/test_font_cjk_variants.py",
+        "tests/test_font_marked_cjk.py",
+        "output/font-review/cubic-width-diagnosis/public-corrective-proof.json",
+        "output/font-review/final-checks/before-python.json",
+        "output/font-review/final-checks/before-python-r2.json",
+        "tests/test_marked_catalog_lineage.py",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "Actual private emoji reproduction preserved3font/manifest products byte-for-byte;780provenance leaves were intentionally republished after precise validation, and all1596emoji tests passed. No additional emoji/performance rerun is pending. Native/cache/public andCJK/marked continuity remain exact. The final2336-case scope is2327retained+9fresh, supported by earlier1952+263+121coverage and448437-path post-input equality. The final authorized delta is the two-line metadata-loop performance correction in an already-passed module; all9affected cases were deliberately rerun. Both earlier timeout masters retain timeout124.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "checks",
+      "requirement": "Run documented project tests, browser checks and asset hash updates.",
+      "status": "supported",
+      "evidence": [
+        "package.json",
+        "pyproject.toml",
+        "tools/checks.html",
+        "tools/version_assets.py",
+        "docs/unicode-beta-plan.md",
+        "/tmp/unicode-final-js.log",
+        "/tmp/unicode-final-cjk-domain-tests.log",
+        "/tmp/unicode-cubic-width-strict-fixtures.log",
+        "/tmp/unicode-cubic-width-public-domain-tests.log",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "All2336current cases are accounted by2327phase-complete retained passes plus9fresh affected-module passes under exact dependency continuity. Earlier coverage accrued as1952+263+121: the original2328-scope and384-case continuation masters remain timeout124; the121-case tail and final9-case metadata stage actually finished0. The metadata module had passed before its two-line performance correction, and all9module cases were rerun after that correction. Actual448437-path post-fingerprint equality and raw phase evidence are bound by the final whole-current-scope proof; no single-process full pass is claimed.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    {
+      "id": "corpus-handoff",
+      "requirement": "Maintain representative sentence/mixed-script/combining/emoji/layout/export cases and persistent progress for later playtesting.",
+      "status": "supported",
+      "evidence": [
+        "tools/unicode-checks.html",
+        "tools/checks.html",
+        "docs/unicode-progress.md",
+        "docs/positional-mark-review.json",
+        "docs/final-source-style-review.json",
+        "docs/final-policy-production-review.json",
+        "docs/product-unicode-smoke-review.json",
+        "output/final-checks/final-current-scope-proof.json"
+      ],
+      "remaining": "The676named Unicode/33general dated browser cases,199source atlas and hash-linked actual native/field/policy artifacts form the retained playtesting corpus. Dictionary, sampled-style and native-source limits remain explicit; expert feedback is permitted after beta.",
+      "finalClosureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    }
+  ],
+  "permittedAfterBeta": [
+    "Human playtesting and expert/native-reader feedback.",
+    "Publication-quality correctness for every possible script combination is not required by the brief."
+  ],
+  "notInventedRequirements": [
+    "A full mathematical markup/score typesetter.",
+    "All possible diagram grammars or user language configuration.",
+    "Mandatory expert approval before beta.",
+    "An unbounded list of browser/OS combinations without a stated target."
+  ],
+  "currentProcesses": [],
+  "next": [],
+  "completedAuditChecks": {
+    "outlineAudit": {
+      "session": 49339,
+      "status": "terminal0",
+      "drawings": 172360,
+      "explicitExceptions": 5,
+      "unexplained": 0,
+      "routingGaps": 0,
+      "log": "/tmp/format-final-outline.log"
+    },
+    "gridOutlineSource": {
+      "tests": 11,
+      "status": "passed",
+      "log": "/tmp/unicode-beta-grid-outline-regressions.log"
+    },
+    "javascript": {
+      "tests": 357,
+      "status": "passed",
+      "log": "/tmp/insertion-mirror-helpers-full-js.log"
+    },
+    "browserUnicode": {
+      "cases": 676,
+      "failures": [],
+      "geometry": []
+    },
+    "browserGeneral": {
+      "cases": 33,
+      "failed": []
+    },
+    "formatSource": {
+      "tests": 13,
+      "status": "passed",
+      "log": "/tmp/format-final-source.log"
+    },
+    "numericSource": {
+      "tests": 7,
+      "status": "passed",
+      "log": "/tmp/numeric-enclosure-source.log",
+      "strengthenedAreaRecheck": "/tmp/numeric-enclosure-final-source.log"
+    },
+    "cgjNativeInk": {
+      "tests": 1,
+      "status": "passed",
+      "log": "/tmp/cgj-variation-source.log"
+    },
+    "spacingNativeSource": {
+      "tests": 1,
+      "status": "passed",
+      "log": "/tmp/spacing-variation-source.log"
+    },
+    "contextualVariants": {
+      "tests": 2,
+      "status": "passed",
+      "log": "/tmp/contextual-variation-final-source.log",
+      "pairs": 128,
+      "contexts": 512,
+      "markInitialPairs": 1
+    },
+    "nativeInsertionSource": {
+      "tests": 9,
+      "status": "passed",
+      "log": "/tmp/insertion-mirror-helpers-current-source.log"
+    }
+  },
+  "inspectionSha256": {
+    "tools/unicode/outline_audit.py": "0240a2b415867b91ff700a8f5b2d3a8001e25bda489e92fbe14dca29cd92d6e2",
+    "js/fonts.js": "a0c800b605ef467d456fed4ce858b134a52adeda7e0b26a61777d90ef6e99f3b",
+    "js/emoji-routing.js": "81ca4274597d6a185084a0224015bf6105d3e31ba92b93fc38b10cef89ec96eb",
+    "js/grid-manifest.js": "bf48698af1ca2a3fa0c71b42ec4fcef180d078bddb565936a9cb2bdc43150e73",
+    "tools/font/build_grid.py": "8018fd25f7443eeb7465582b3af55fd46152f87f0a4c58f53aeacd96ab5833d1",
+    "docs/unicode-outline-coverage.json": "c9508c5824d0a39b230533025c78ebecb20c0eaf848d8f0e3eddcef1d175c485",
+    "tests/test_outline_audit.py": "81c87b402df05b07919b0ee6b9a5e4802a49ed38d222d886a0c83c17d47a7951",
+    "tools/unicode-checks.html": "ffac0cca3d8fca7e3e3a0d3b5f8189ef3c29a3114e582f7e2d82ec63b25ff1d0",
+    "js/standalone-fonts.js": "50f2da2d3424944fbf8c49656407cf1fdaedf76ece0e13da0d326226e50b3ff7",
+    "tests/standalone-fonts.test.mjs": "7a94f42d77023db8e6295b4264180302ad8d0cc5f4655f22683a20544b707ee5",
+    "tests/test_standalone_tatweel.py": "69b3faff4ef30c82ca6241ac234869ac0e2158df06ad29db1884a3c4714e2268",
+    "js/format-fonts.js": "4dff76861d4f88d8e4f79f853012c593cfe6e0c0182cef07195735d2c84faf4e",
+    "js/direction.js": "9860593d14f67d1cbeb9f7d2e555ab8ee1769eedc8be263c306787c2cbf9ce06",
+    "js/font-variations.js": "b372fabb91f64d827805e1f1c5f80b4a4067fd7421318bfea07498ca368b37b0",
+    "tests/format-glyphs.test.mjs": "8a70298a464c63939be21a5f41e7fbc1df056abfc419896d02c7d64b767d5f3a",
+    "tests/test_format_glyphs.py": "9ced70dd3eb6cee2fdd0bfef73e0dc93a898fcc52f09deb153b22166753b7a1d",
+    "js/combining-annotations.js": "26a7e9a8f97b810f4447b6dcaac8c4166c99941b08b74d2a9d7a62aeedcbd5be",
+    "js/combining-outline-manifest.js": "758cc6bf44a9b61951c30dfb208e232ea85b4019d908949e9527054f348e3c20",
+    "tools/font/build_combining_outlines.py": "bf7ff1faa65abcd86999a4a5bb7999a6e1ecdb696852eb2735cb14af3e32a5eb",
+    "tests/combining-annotations.test.mjs": "d08b22b90eb7d6141bbf6528409c5df882008b1ce20708017b3c56b7feb548b2",
+    "tests/test_combining_outlines.py": "d391dbb9ad8facff4ee16f4a88eaef8dc581180618c5c8fb197f29e73890c55f",
+    "tests/test_cgj_variations.py": "cfeab9afd34c2c1ef2850b68e5a866a9ccbfa50c9cfa770a605ccf2dff3eb454",
+    "tests/spacing-variations.test.mjs": "c6ad421464951628dd9b7af48314b7cb4a2e0f107d93db83b6ecf86c4c050a54",
+    "tests/test_spacing_variations.py": "99d0b224c812c18cd1db1e80113f44e2cc028dded21cb0ff184c424ce9cb3631",
+    "tests/test_contextual_variations.py": "fdc8a19774c9ece8951586990980d3198a61451aecb8ca779127057a37a546d9",
+    "js/grid.js": "4420838ab8a7ac7d4a06bdcda8d91f7bb9aa2fdd2ba6519d81f3c0a29936994f",
+    "js/dictionary-breaks.js": "dea1779b783bd215e7fa6a952887cb529d170fa382ca4e53d289ecf16d395e35",
+    "js/line-breaks.js": "c1906bebe7965c43155a0baf2d4a274adc89e3e8f990b84049620a3f94c01932",
+    "js/layout.js": "d1d49bbd8bba947a9281d9e0417bba3934ad797229e23e3a7d3a36fdca257b80",
+    "js/egyptian-layout.js": "5c8ef73be194f131f8bb92e44d688fa32178498540d72d8dde771ff13190083e",
+    "js/egyptian-insertion-manifest.js": "f4a3f7ab53656aa0b90d52914a4efe0f7d51b2f2448aaf69a20545407ca2ba65",
+    "tools/font/build_egyptian_insertions.py": "854d319ac5c8c020f2f821277e6f55288dbe316e15941da572ee9f568096f4f3",
+    "tests/grid.test.mjs": "299e1b62cc19649e88102d3bbc0cacb1a16f514fef3816f4e0492dbb394a7eca",
+    "tests/linebreak.test.mjs": "993aff572a8c13f6c61018d78b7f8496a382ee314df2d6b27ccc8a0ff4871757",
+    "tests/egyptian-layout.test.mjs": "5099b7a0df456b747f7c9fb50506e1c90259376c52aa7fa671623654e3d8aca6",
+    "tests/test_egyptian_insertion_build.py": "ffdac2f46eed9cff83a218d73a252c5c5456dd38485de3afd86c09c2a460005d",
+    "docs/egyptian-insertion-build.json": "132f2154fe3d35636cc430de2e0998e7e0a0d85317613cf3d38da05ff4a062f4"
+  },
+  "latestValidation": {
+    "date": "2026-11-04",
+    "scope": "Sampler feedback: accent anchors, emoji alignment, line/blank-row spacing, handwritten Greek and Cyrillic weight",
+    "javascript": {
+      "passed": 373,
+      "record": "output/font-review/alignment-feedback/js-complete-run.json"
+    },
+    "fonts": "Original-lettering preservation/canonical/stack checks pass; new optical-anchor and Greek checks pass, including all233 extended Greek canonical forms; both independent CJK companion source kinds rebuild byte-identically.",
+    "review": "docs/typography-alignment-feedback.md",
+    "artifacts": "output/font-review/alignment-feedback/",
+    "fullPythonScope": "Earlier2336-case proof is retained as a timestamped baseline; no full Python rerun is claimed after these refinements.",
+    "samplerSecondReview": {
+      "documentation": "docs/typography-alignment-feedback.md",
+      "javascript": {
+        "cases": 376,
+        "receipt": "output/font-review/sampler-followup/js-checks.json",
+        "seconds": 14.506
+      },
+      "focusedPython": {
+        "cases": 25,
+        "receipt": "output/font-review/sampler-followup/python-checks.json",
+        "seconds": 28.251
+      },
+      "visualReview": "output/font-review/sampler-followup/review.png",
+      "scope": "Focused sampler typography and balloon changes; original full Python checkpoint remains historical. No full-suite rerun."
+    }
+  },
+  "completedProcesses": [
+    {
+      "session": 15005,
+      "command": ".venv/bin/python -m pytest -q",
+      "log": "/tmp/unicode-beta-full-python.log",
+      "status": "terminal0;1994 passed,7 warnings in7526.40s; collected before latest focused Egyptian tests"
+    },
+    {
+      "status": "actual metadata-stage terminal0;9fresh cases, completing continuity-bound current2336scope",
+      "passed": 9,
+      "currentScopeCoveredCases": 2336,
+      "elapsedSeconds": 34.14244941622019,
+      "elapsedScope": "Metadata stage only",
+      "record": {
+        "file": "output/final-checks/final-metadata-validation-run.json",
+        "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+      },
+      "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json"
+    }
+  ],
+  "currentPlan": "docs/unicode-beta-plan.md",
+  "verificationInstruction": "User explicitly directs local renderer and no further browser/manual approval work. No download retries or browser requests; retain dated browser evidence, targeted optical browser results and current local/source/runtime checks separately.",
+  "latestIntegratedProduction": {
+    "status": "Current381public primary shards plus standardizedCJK and92marked companions integrated and reviewed",
+    "primaryManifestSha256": "7f5df7719a7f1187a49db3a0d721e6632ec4926141c6e41163e3d1141b3f4ac9",
+    "sourceDecisions": 199,
+    "sourceAtlas": "docs/final-source-style-review.json",
+    "nativePolicies": "docs/final-policy-production-review.json",
+    "nativeProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json",
+    "denseCjkMarkedContinuity": "output/final-checks/dependency-continuity/current-dependency-proof.json",
+    "wholeCurrentScope": {
+      "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+      "currentScopeCases": 2336,
+      "retainedPhaseCompleteCases": 2327,
+      "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+      "freshMetadataCases": 9,
+      "historicalAttempts": [
+        {
+          "scope": 2328,
+          "exitCode": 124
+        },
+        {
+          "scope": 384,
+          "exitCode": 124
+        }
+      ],
+      "continuationStatus": "actual terminal0",
+      "postFingerprint": "448437paths/hashes equal",
+      "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+      "tailOuter": {
+        "file": "output/final-checks/final-metadata-validation-run.json",
+        "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+      },
+      "tailMaster": {
+        "file": "output/final-checks/final-metadata-validation/result.json",
+        "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+      },
+      "tailElapsedSeconds": 34.14244941622019,
+      "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+      "retainedEvidence": {
+        "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+        "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+      },
+      "authorizedDelta": {
+        "tests/test_native_variation_packaging.py": {
+          "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+          "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+        }
+      },
+      "postProof": {
+        "file": "output/final-checks/after-final-metadata.json",
+        "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+      }
+    },
+    "historicalProductionStages": "historicalStatusBeforeContinuationClosure.latestIntegratedProduction"
+  },
+  "finalValidation": {
+    "status": "Historical original beta validation. Its hashes describe the pre-feedback state; see latestValidation for later sampler typography changes.",
+    "primaryManifestSha256": "7f5df7719a7f1187a49db3a0d721e6632ec4926141c6e41163e3d1141b3f4ac9",
+    "js": {
+      "tests": 367,
+      "passed": 367,
+      "failed": 0,
+      "duration_ms": 13573.818208,
+      "log": "/tmp/unicode-final-js-r3.log"
+    },
+    "python": {
+      "status": "Current2336case scope fully accounted under exact dependency continuity",
+      "coveredPassedCases": 2336,
+      "retained": {
+        "passed": 2327,
+        "scopeStages": "Earlier whole2336 proof minus nine affected module cases",
+        "scope": "Actual prior setup/call/teardownPASS with unchanged code/dependencies; timed-out master is not called pass"
+      },
+      "metadataCorrection": {
+        "passed": 9,
+        "phaseArtifacts": [
+          {
+            "file": "output/final-checks/final-metadata-validation/metadata-cases.json",
+            "sha256": "5568bdc84268d51e1d10f5663dfd22b6c41a0d1938b2d901e8c2f81393700926"
+          },
+          {
+            "file": "output/final-checks/final-metadata-validation/metadata-events.jsonl",
+            "sha256": "18f8af4966b6232daf4c842fc4bcad163dc1b6d2adfec0a83c06444194fa00d7"
+          }
+        ],
+        "evidence": {
+          "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+          "currentScopeCases": 2336,
+          "retainedPhaseCompleteCases": 2327,
+          "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+          "freshMetadataCases": 9,
+          "historicalAttempts": [
+            {
+              "scope": 2328,
+              "exitCode": 124
+            },
+            {
+              "scope": 384,
+              "exitCode": 124
+            }
+          ],
+          "continuationStatus": "actual terminal0",
+          "postFingerprint": "448437paths/hashes equal",
+          "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+          "tailOuter": {
+            "file": "output/final-checks/final-metadata-validation-run.json",
+            "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+          },
+          "tailMaster": {
+            "file": "output/final-checks/final-metadata-validation/result.json",
+            "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+          },
+          "tailElapsedSeconds": 34.14244941622019,
+          "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+          "retainedEvidence": {
+            "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+            "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+          },
+          "authorizedDelta": {
+            "tests/test_native_variation_packaging.py": {
+              "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+              "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+            }
+          },
+          "postProof": {
+            "file": "output/final-checks/after-final-metadata.json",
+            "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+          }
+        }
+      },
+      "historicalTimeouts": [
+        {
+          "scope": 2328,
+          "outerExitCode": 124,
+          "masterStatus": "timeout"
+        },
+        {
+          "scope": 384,
+          "outerExitCode": 124,
+          "masterStatus": "timeout"
+        }
+      ],
+      "priorEvidenceRetainedIn": "historicalValidationBeforeContinuationClosure",
+      "currentScopeCases": 2336
+    },
+    "assetVersions": {
+      "status": "terminal0",
+      "log": "/tmp/unicode-final-version-assets-r3.log"
+    },
+    "inputFingerprint": {
+      "status": "Actual448437-path current baseline/post-fingerprint equality passed",
+      "collector": "output/final-checks/collect_final_inputs.py",
+      "scopeControls": "output/final-checks/collector-omission-controls.json",
+      "baseline": "output/final-checks/metadata-final-baseline.json",
+      "record": "output/final-checks/native-variation-metadata-fix/application-rebase-receipt.json",
+      "postProof": "output/final-checks/after-final-metadata.json",
+      "postRecord": "output/final-checks/final-metadata-inputs-run.json",
+      "files": 448437,
+      "closureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    "coverageAndOutlines": "output/final-checks/current-font-data-audits/terminal-summary.json",
+    "publicPolicyFieldsAndLocalInspection": "output/font-review/final-checks/final-public-policy-review/review.json",
+    "publicPolicyNativeProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json",
+    "sourceAtlas": "docs/final-source-style-review.json",
+    "denseCjkMarkedContinuity": "output/final-checks/dependency-continuity/current-dependency-proof.json",
+    "combiningCatalog": {
+      "status": "terminal0 rebuild after public font policies",
+      "drawings": 1838,
+      "contextRecords": 2,
+      "sources": 300,
+      "bytes": 9392408,
+      "log": "/tmp/unicode-final-combining-catalog-r3.log"
+    },
+    "contextualNativeLineage": {
+      "tests": 17,
+      "passed": 17,
+      "seconds": 154.04,
+      "log": "/tmp/unicode-final-contextual-native-tests.log",
+      "scope": "128selectors512contexts, raw/frozen/currentnativeandcacheidentity, ordinarycontrols, CGJ/Padaukbehavior and11mutationfixtures"
+    },
+    "currentWholeScope": {
+      "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+      "currentScopeCases": 2336,
+      "retainedPhaseCompleteCases": 2327,
+      "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+      "freshMetadataCases": 9,
+      "historicalAttempts": [
+        {
+          "scope": 2328,
+          "exitCode": 124
+        },
+        {
+          "scope": 384,
+          "exitCode": 124
+        }
+      ],
+      "continuationStatus": "actual terminal0",
+      "postFingerprint": "448437paths/hashes equal",
+      "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+      "tailOuter": {
+        "file": "output/final-checks/final-metadata-validation-run.json",
+        "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+      },
+      "tailMaster": {
+        "file": "output/final-checks/final-metadata-validation/result.json",
+        "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+      },
+      "tailElapsedSeconds": 34.14244941622019,
+      "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+      "retainedEvidence": {
+        "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+        "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+      },
+      "authorizedDelta": {
+        "tests/test_native_variation_packaging.py": {
+          "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+          "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+        }
+      },
+      "postProof": {
+        "file": "output/final-checks/after-final-metadata.json",
+        "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+      }
+    }
+  },
+  "independentRequirementsReview": "output/font-review/final-checks/requirements-review-r2.json",
+  "independentReviewCurrentState": {
+    "scope": "All30requirements reconciled to the actual current-scope proof with explicit sampled/native-reader/dictionary/browser limits.",
+    "historicalR3Review": "output/final-checks/r3-requirements-review.json",
+    "finalReview": "output/final-checks/final-requirements-continuation-review.json",
+    "currentEvidence": {
+      "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+      "currentScopeCases": 2336,
+      "retainedPhaseCompleteCases": 2327,
+      "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+      "freshMetadataCases": 9,
+      "historicalAttempts": [
+        {
+          "scope": 2328,
+          "exitCode": 124
+        },
+        {
+          "scope": 384,
+          "exitCode": 124
+        }
+      ],
+      "continuationStatus": "actual terminal0",
+      "postFingerprint": "448437paths/hashes equal",
+      "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+      "tailOuter": {
+        "file": "output/final-checks/final-metadata-validation-run.json",
+        "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+      },
+      "tailMaster": {
+        "file": "output/final-checks/final-metadata-validation/result.json",
+        "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+      },
+      "tailElapsedSeconds": 34.14244941622019,
+      "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+      "retainedEvidence": {
+        "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+        "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+      },
+      "authorizedDelta": {
+        "tests/test_native_variation_packaging.py": {
+          "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+          "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+        }
+      },
+      "postProof": {
+        "file": "output/final-checks/after-final-metadata.json",
+        "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+      }
+    }
+  },
+  "diagnosticFailures": {
+    "status": "Historical13failure traces mapped to installed corrections; their case IDs are covered by the final current-scope proof.",
+    "originalDiagnostic": "output/final-checks/remainder-diagnostic/terminal-summary.json",
+    "traceCorrections": "output/final-checks/remainder-diagnostic/trace-to-fix.json",
+    "currentEvidence": {
+      "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+      "currentScopeCases": 2336,
+      "retainedPhaseCompleteCases": 2327,
+      "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+      "freshMetadataCases": 9,
+      "historicalAttempts": [
+        {
+          "scope": 2328,
+          "exitCode": 124
+        },
+        {
+          "scope": 384,
+          "exitCode": 124
+        }
+      ],
+      "continuationStatus": "actual terminal0",
+      "postFingerprint": "448437paths/hashes equal",
+      "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+      "tailOuter": {
+        "file": "output/final-checks/final-metadata-validation-run.json",
+        "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+      },
+      "tailMaster": {
+        "file": "output/final-checks/final-metadata-validation/result.json",
+        "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+      },
+      "tailElapsedSeconds": 34.14244941622019,
+      "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+      "retainedEvidence": {
+        "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+        "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+      },
+      "authorizedDelta": {
+        "tests/test_native_variation_packaging.py": {
+          "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+          "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+        }
+      },
+      "postProof": {
+        "file": "output/final-checks/after-final-metadata.json",
+        "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+      }
+    },
+    "historicalDetails": "historicalStatusBeforeContinuationClosure.diagnosticFailures"
+  },
+  "requirementsProseReconciliation": {
+    "status": "Actual guard verified",
+    "requirements": 30,
+    "scope": "Original requirements and canonical199source decisions retained; obsolete staging/running prose archived.",
+    "currentCorrection": "Music nativeGID588 and15Funky constructed-native glyphs are public with actual original semantic/field/native proofs; no tolerance waiver.",
+    "wholeCurrentScope": {
+      "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+      "currentScopeCases": 2336,
+      "retainedPhaseCompleteCases": 2327,
+      "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+      "freshMetadataCases": 9,
+      "historicalAttempts": [
+        {
+          "scope": 2328,
+          "exitCode": 124
+        },
+        {
+          "scope": 384,
+          "exitCode": 124
+        }
+      ],
+      "continuationStatus": "actual terminal0",
+      "postFingerprint": "448437paths/hashes equal",
+      "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+      "tailOuter": {
+        "file": "output/final-checks/final-metadata-validation-run.json",
+        "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+      },
+      "tailMaster": {
+        "file": "output/final-checks/final-metadata-validation/result.json",
+        "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+      },
+      "tailElapsedSeconds": 34.14244941622019,
+      "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+      "retainedEvidence": {
+        "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+        "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+      },
+      "authorizedDelta": {
+        "tests/test_native_variation_packaging.py": {
+          "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+          "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+        }
+      },
+      "postProof": {
+        "file": "output/final-checks/after-final-metadata.json",
+        "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+      }
+    }
+  },
+  "finalFingerprintScope": {
+    "status": "Actual448437-path current baseline/post-fingerprint equality passed",
+    "collector": "output/final-checks/collect_final_inputs.py",
+    "scopeControls": "output/final-checks/collector-omission-controls.json",
+    "baseline": "output/final-checks/metadata-final-baseline.json",
+    "record": "output/final-checks/native-variation-metadata-fix/application-rebase-receipt.json",
+    "postProof": "output/final-checks/after-final-metadata.json",
+    "postRecord": "output/final-checks/final-metadata-inputs-run.json",
+    "files": 448437,
+    "closureEvidence": {
+      "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+      "currentScopeCases": 2336,
+      "retainedPhaseCompleteCases": 2327,
+      "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+      "freshMetadataCases": 9,
+      "historicalAttempts": [
+        {
+          "scope": 2328,
+          "exitCode": 124
+        },
+        {
+          "scope": 384,
+          "exitCode": 124
+        }
+      ],
+      "continuationStatus": "actual terminal0",
+      "postFingerprint": "448437paths/hashes equal",
+      "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+      "tailOuter": {
+        "file": "output/final-checks/final-metadata-validation-run.json",
+        "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+      },
+      "tailMaster": {
+        "file": "output/final-checks/final-metadata-validation/result.json",
+        "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+      },
+      "tailElapsedSeconds": 34.14244941622019,
+      "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+      "retainedEvidence": {
+        "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+        "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+      },
+      "authorizedDelta": {
+        "tests/test_native_variation_packaging.py": {
+          "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+          "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+        }
+      },
+      "postProof": {
+        "file": "output/final-checks/after-final-metadata.json",
+        "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+      }
+    }
+  },
+  "dependentRefreshReview": {
+    "status": "Read-only builder review beforepublication; recheckactualdependencySHAs afterbuild",
+    "sources": [
+      "tools/font/build_cjk_variants.py",
+      "tools/font/build_marked_cjk_variants.py",
+      "tools/font/build_combining_outlines.py"
+    ],
+    "cjkVariants": "Pinnedstandardizeddata+rawJigmodonors+denseprofile; no wholeprimarymanifestSHA dependency.",
+    "markedCjk": "OnlyprimaryJigmoentrySHA andDad-lettering-unicode donor +builder/mathmarkshashes; unrelatedMusic/Funkychanges do notinvalidate copiedoutlines when379others exact.",
+    "combiningCatalog": "Readsprimaryentries andexactfontSHAs; ordinaryrebuild required afterMusic/Funkypublished.",
+    "scope": "NoCJKbuilderrununderdiagnostic; finalcontinuitymetadata stillmustbindcurrentactualSHAs."
+  },
+  "diagnosticTerminal": {
+    "session": 53910,
+    "exitCode": 1,
+    "passed": 2159,
+    "failed": 13,
+    "warnings": 7,
+    "seconds": 11628.62,
+    "log": "/tmp/unicode-remainder-diagnostic.log",
+    "index": "/tmp/unicode-remainder-diagnostic-index.json",
+    "allFailureTracesInspected": true,
+    "noAdditionalUnclassifiedFailures": true,
+    "scope": "Diagnostic only, not finalfullpass; excludedcorrectedcontext/catalogmodules."
+  },
+  "performanceConstraint": {
+    "instruction": "Do not run the three-hour suite/test again under any circumstances without first fixing its performance problems.",
+    "status": "Actual guard verified",
+    "currentFix": "Recorded pressure/cache/source-loader fixes, exact marked-prefix proof and bounded continuation; original timeouts stay historical.",
+    "remaining": "No further performance or emoji rerun required after actual current-scope guard pass.",
+    "currentWholeScope": {
+      "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+      "currentScopeCases": 2336,
+      "retainedPhaseCompleteCases": 2327,
+      "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+      "freshMetadataCases": 9,
+      "historicalAttempts": [
+        {
+          "scope": 2328,
+          "exitCode": 124
+        },
+        {
+          "scope": 384,
+          "exitCode": 124
+        }
+      ],
+      "continuationStatus": "actual terminal0",
+      "postFingerprint": "448437paths/hashes equal",
+      "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+      "tailOuter": {
+        "file": "output/final-checks/final-metadata-validation-run.json",
+        "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+      },
+      "tailMaster": {
+        "file": "output/final-checks/final-metadata-validation/result.json",
+        "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+      },
+      "tailElapsedSeconds": 34.14244941622019,
+      "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+      "retainedEvidence": {
+        "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+        "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+      },
+      "authorizedDelta": {
+        "tests/test_native_variation_packaging.py": {
+          "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+          "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+        }
+      },
+      "postProof": {
+        "file": "output/final-checks/after-final-metadata.json",
+        "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+      }
+    },
+    "historicalAttempts": "historicalStatusBeforeContinuationClosure.performanceConstraint"
+  },
+  "historicalValidationBeforePublicPolicies": {
+    "js": {
+      "tests": 367,
+      "passed": 367,
+      "failed": 0,
+      "duration_ms": 13349.34875,
+      "log": "/tmp/unicode-final-js.log"
+    },
+    "python": {
+      "collected": 2112,
+      "status": "terminal2 KeyboardInterrupt after known failure; NOT a successfulfullrun",
+      "failed": 1,
+      "passedBeforeStop": 42,
+      "seconds": 260.32,
+      "session": 30444,
+      "log": "/tmp/unicode-final-python.log",
+      "singleReproduction": {
+        "status": "terminal1",
+        "log": "/tmp/unicode-final-numeric-enclosure-failure.log",
+        "test": "test_numeric_enclosures_export_exact_native_parts_without_changing_catalog_drawings"
+      }
+    },
+    "assetVersions": {
+      "status": "terminal0",
+      "log": "/tmp/unicode-final-version-assets.log"
+    },
+    "inputFingerprint": "output/font-review/final-checks/before-python.json",
+    "coverage": {
+      "status": "post-corrective terminal0",
+      "log": "/tmp/unicode-corrected-final-coverage-audit.log"
+    },
+    "outline": {
+      "status": "terminal0 after CFF correction;172360positive+5exceptions;zero unexplained/routinggaps;all346auditedfontSHAscurrent",
+      "log": "/tmp/unicode-corrected-final-outline-audit.log"
+    },
+    "catalogDerivedGeometry": {
+      "fixtures": 70,
+      "fixtureLog": "/tmp/unicode-catalog-lineage-combined-fixtures.log",
+      "actualRegression": {
+        "session": 26654,
+        "status": "terminal1 after342.64s",
+        "resolved": "Ring/contentBounds checks pass",
+        "remaining": "Historical variant mark U+302A from marked-CJKfont changes through approveddense parent; primary-only lookup fails. Strict marked→parent native/cache/currentcopy proof needed."
+      },
+      "regressionLog": "/tmp/unicode-final-numeric-enclosure-fixed.log",
+      "scope": "Exact frozen/current outer+inner paths,bounds,signedareas and keycap/cancelled-circle contentBounds; source/category/licence/provenance remain strict.",
+      "contextRegression": {
+        "session": 89925,
+        "status": "terminal0",
+        "passed": 1,
+        "seconds": 1326.76,
+        "log": "/tmp/unicode-final-numeric-enclosure-context-fixed.log"
+      }
+    },
+    "nextPythonState": {
+      "collected": 2182,
+      "collectionStatus": "terminal0;collectionnotpass",
+      "collectionLog": "/tmp/unicode-final-collection-r2.log",
+      "inputFingerprint": "output/font-review/final-checks/before-python-r2.json",
+      "inputFiles": 13887,
+      "primaryRawSourcesVerified": 199,
+      "launchGate": "Actual89925terminal0, then unchangedinputfingerprint and launch-x-q fullsuite."
+    },
+    "pythonRestart": {
+      "collected": 2182,
+      "status": "terminal1;notpassed",
+      "session": 54417,
+      "command": ".venv/bin/python -u -m pytest -x -v --durations=10",
+      "log": "/tmp/unicode-final-python-r2.log",
+      "inputs": "output/font-review/final-checks/before-python-r2.json",
+      "prelaunchRecheck": "All13887filehashesand199canonicalstyledecisionsunchanged",
+      "passedBeforeStop": 72,
+      "failed": 1,
+      "seconds": 1805.31,
+      "failure": "tests/test_contextual_variants.py Mongolian117: direct raw/current curve equality after approved native pressure treatment"
+    },
+    "catalogWithinFull": {
+      "status": "all4catalogtests passed in actualfullr2",
+      "numericSeconds": 1330.26,
+      "variantMarkSeconds": 253.84,
+      "log": "/tmp/unicode-final-python-r2.log"
+    },
+    "contextualNativeLineage": {
+      "tests": 17,
+      "passed": 17,
+      "seconds": 154.04,
+      "log": "/tmp/unicode-final-contextual-native-tests.log",
+      "scope": "128selectors512contexts, raw/frozen/currentnativeandcacheidentity, ordinarycontrols, CGJ/Padaukbehavior and11mutationfixtures"
+    }
+  },
+  "emojiEquivalentPerformanceRepair": {
+    "publication": "output/font-review/final-checks/cropped-holes-public-integration/publication.json",
+    "liveControlsPassed": 22,
+    "independentPreparationsSeconds": [
+      0.439,
+      0.418,
+      0.429,
+      0.422
+    ],
+    "actualTwoCaseSeconds": 22.971,
+    "legacyNPZFilesUnchanged": 4006,
+    "publicFontChanges": 0,
+    "onlyIntentionalProvenanceLeavesChanged": 780
+  },
+  "historicalValidationBeforeContinuationClosure": {
+    "status": "Second final attempt TIMEOUT, incomplete; three batches pass, native partial. Post-fingerprint terminal0 confirms448436unchanged inputs.",
+    "primaryManifestSha256": "7f5df7719a7f1187a49db3a0d721e6632ec4926141c6e41163e3d1141b3f4ac9",
+    "js": {
+      "tests": 367,
+      "passed": 367,
+      "failed": 0,
+      "duration_ms": 13573.818208,
+      "log": "/tmp/unicode-final-js-r3.log"
+    },
+    "python": {
+      "status": "TIMEOUT inner1790s; outerterminal124 after1790.69s. Serial13/emoji1596/unit53 pass; native partial, no recorded assertion failure before first marked-CJK test interruption. Not a full-scope pass.",
+      "latestCollectionOnly": {
+        "cases": 2293,
+        "seconds": 1.5,
+        "log": "/tmp/unicode-final-collection-performance.log",
+        "record": "output/final-checks/collection-performance-run.json",
+        "scope": "Collection only; no tests executed"
+      },
+      "focusedActualPublic": {
+        "passed": 35,
+        "seconds": 37.96,
+        "log": "/tmp/unicode-public-policy-live-tests.log"
+      },
+      "focusedPerformanceControls": {
+        "passed": 162,
+        "seconds": 19.32,
+        "log": "/tmp/unicode-remaining-proof-dedup-controls.log"
+      },
+      "diagnostic": "output/final-checks/remainder-diagnostic/terminal-summary.json",
+      "failureCorrections": "output/final-checks/remainder-diagnostic/trace-to-fix.json",
+      "collected": 2328,
+      "record": "output/final-checks/final-parallel-validation-run.json",
+      "log": "/tmp/unicode-final-parallel-validation.log",
+      "seconds": 1790.6937110833824,
+      "terminalSummary": "output/final-checks/final-parallel-validation/result.json",
+      "master": "output/final-checks/final-parallel-validation/result.json",
+      "manifest": "output/final-checks/parallel-validation-manifest.json",
+      "historicalOneProcessAttempt": {
+        "log": "/tmp/unicode-final-python-complete.log",
+        "passedMarkers": 251,
+        "failedMarkers": 0,
+        "seconds": 1800.1015847502276,
+        "terminalSummary": "output/final-checks/final-attempt-30m/terminal-summary.json"
+      },
+      "exitCode": 124,
+      "completedBatches": {
+        "serial": 13,
+        "emoji": 1596,
+        "unit": 53
+      },
+      "nativeStatus": "Partial; interrupted first marked-CJK test, no recorded assertion failure."
+    },
+    "assetVersions": {
+      "status": "terminal0",
+      "log": "/tmp/unicode-final-version-assets-r3.log"
+    },
+    "inputFingerprint": {
+      "status": "Post-run terminal0:448436inputs unchanged,0missing;121.35s",
+      "collector": "output/final-checks/collect_final_inputs.py",
+      "scopeControls": "output/final-checks/collector-omission-controls.json",
+      "baseline": "output/final-checks/before-parallel-final.json",
+      "record": "output/final-checks/before-parallel-inputs-run.json",
+      "postProof": "output/final-checks/after-parallel-timeout.json",
+      "postRecord": "output/final-checks/post-parallel-inputs-run.json"
+    },
+    "coverageAndOutlines": "output/final-checks/current-font-data-audits/terminal-summary.json",
+    "publicPolicyFieldsAndLocalInspection": "output/font-review/final-checks/final-public-policy-review/review.json",
+    "publicPolicyNativeProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json",
+    "sourceAtlas": "docs/final-source-style-review.json",
+    "denseCjkMarkedContinuity": "output/final-checks/dependency-continuity/current-dependency-proof.json",
+    "combiningCatalog": {
+      "status": "terminal0 rebuild after public font policies",
+      "drawings": 1838,
+      "contextRecords": 2,
+      "sources": 300,
+      "bytes": 9392408,
+      "log": "/tmp/unicode-final-combining-catalog-r3.log"
+    },
+    "contextualNativeLineage": {
+      "tests": 17,
+      "passed": 17,
+      "seconds": 154.04,
+      "log": "/tmp/unicode-final-contextual-native-tests.log",
+      "scope": "128selectors512contexts, raw/frozen/currentnativeandcacheidentity, ordinarycontrols, CGJ/Padaukbehavior and11mutationfixtures"
+    }
+  },
+  "historicalRequirementsBeforeContinuationClosure": [
+    {
+      "id": "scope-release",
+      "requirement": "Verify the current released standard and pin authoritative data.",
+      "status": "supported",
+      "evidence": [
+        "data/unicode/sources.json",
+        "tests/test_unicode_inventory.py",
+        "https://www.unicode.org/releases/",
+        "https://www.unicode.org/versions/Unicode18.0.0/",
+        "data/unicode/18.0.0/UnicodeData.txt"
+      ],
+      "remaining": "Unicode 18.0.0 was verified against official release information on 2026-11-03 and its authoritative data files are pinned by hash. The old 1994-test result is historical; current full-suite results must be recorded separately after performance fixes."
+    },
+    {
+      "id": "scope-inventory",
+      "requirement": "Precisely inventory assigned public characters, sequences, controls and noncharacters/private use.",
+      "status": "supported",
+      "evidence": [
+        "tools/unicode/audit.py",
+        "data/unicode/18.0.0/UnicodeData.txt",
+        "docs/unicode-coverage.json",
+        "tests/test_unicode_inventory.py"
+      ],
+      "remaining": "The current post-publication audit covers 172873 assigned public points: 172365 drawing requirements and 521 behavioural requirements, overlapping by 13 font-dependent format signs. All 172365 visible cmap requirements are present, with 0 missing and all 481 referenced font hashes checked. This is presence evidence; sequence/shaping/style validation remains separately recorded."
+    },
+    {
+      "id": "drawing-coverage",
+      "requirement": "All scoped visible characters reach real custom drawings; no placeholders or system fallback as completion.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/unicode/outline_audit.py",
+        "tests/test_outline_audit.py",
+        "docs/unicode-coverage.json",
+        "docs/unicode-outline-coverage.json",
+        "docs/tatweel-routing-review.json",
+        "docs/font-dependent-format-probe.json",
+        "docs/font-dependent-format-review.json"
+      ],
+      "remaining": "The fresh post-publication routed-outline audit is terminal 0: 172360 positive first-painted drawings plus 5 named blank/context exceptions, 0 unexplained drawing gaps and 0 routing gaps. All 346 actual font hashes were checked. See output/final-checks/current-font-data-audits/terminal-summary.json. Geometry remains separate from native identity and sampled style evidence."
+    },
+    {
+      "id": "emoji-sequences",
+      "requirement": "Applicable standard emoji sequences and standalone components use custom artwork.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/emoji-manifest.js",
+        "js/emoji-routing.js",
+        "tests/test_font_emoji.py",
+        "tests/emoji-routing.test.mjs",
+        "docs/unicode-coverage.json"
+      ],
+      "remaining": "The bundled inventory includes 3963 fully-qualified emoji sequences and 5533 exact forms. Source/runtime checks separately cover routing, artwork/compiler provenance and native fallback. Public text-source policies leave emoji assets unchanged. Independent deterministic rebuild verification remains pending performance work; a private profiling build stopped at its hard 60-second deadline without changing public products."
+    },
+    {
+      "id": "variation-sequences",
+      "requirement": "Preserve standardized and applicable native variation selection, including marked clusters.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/font-variations.js",
+        "tests/font-variations.test.mjs",
+        "docs/positional-mark-review.json",
+        "docs/variation-combining-review.json",
+        "docs/cgj-variation-review.json",
+        "docs/foreign-spacing-mark-probe.json",
+        "docs/spacing-variation-review.json",
+        "docs/contextual-variation-review.json",
+        "output/font-review/final-cjk-continuity.json",
+        "output/font-review/final-marked-cjk-continuity.json",
+        "tests/test_native_variation_packaging.py",
+        "tests/test_font_cjk_variants.py",
+        "tests/test_font_marked_cjk.py"
+      ],
+      "remaining": "All 1437 standardized pairs are accounted for; current contextual/native-lineage checks pass 17 tests covering 128 selectors in 512 contexts and CGJ/Padauk behaviour. Current CJK domain 6 tests passed 835.10 s, including 1002 pairs and all 92 companions. Historical-test corrections are installed; a fresh complete-suite pass remains pending performance fixes. Invalid cross-script tails may legitimately use native dotted-circle carriers."
+    },
+    {
+      "id": "combining",
+      "requirement": "Native mark placement, stacks, enclosures and double diacritics work without changing logical input.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/combining-annotations.js",
+        "js/vietnamese-marks.js",
+        "tools/font/math_unicode_marks.py",
+        "tests/combining-annotations.test.mjs",
+        "docs/positional-mark-review.json",
+        "docs/numeric-enclosures-review.json",
+        "docs/cgj-variation-probe.json",
+        "js/combining-outline-manifest.js",
+        "tests/test_combining_outlines.py",
+        "tests/test_positional_marks.py",
+        "tests/test_catalog_enclosure_evidence.py",
+        "tests/test_marked_catalog_lineage.py",
+        "/tmp/unicode-final-numeric-enclosure-context-fixed.log",
+        "/tmp/unicode-catalog-lineage-combined-fixtures.log"
+      ],
+      "remaining": "The final rebuilt catalog contains 1838 drawable marks and 2 native-context records from 300 sources. Historical complete-catalog and strict lineage checks passed before the final text-source publication. The optimized scoped evidence batch preserves per-glyph checks and dependency validation; bounded actual-font measurements cover 1002 comparisons in 18.08 seconds. A fresh complete-suite result is still pending; these source proofs do not imply arbitrary linguistic placement."
+    },
+    {
+      "id": "shaping",
+      "requirement": "Keep native joining, letterforms and native mark attachment in complete and mixed-script text.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/fonts.js",
+        "js/native-shaping.js",
+        "tests/test_font_scripts.py",
+        "tests/native-shaping.test.mjs",
+        "tests/fonts.test.mjs",
+        "tests/greek-fonts.test.mjs",
+        "output/font-review/supplemental-production/verification.json",
+        "output/font-review/dense-production/public-continuity.json"
+      ],
+      "remaining": "Both actual published policies now pass original semantic bounds: Music preserves only the exact constructed-native low tremolo GID588; Funky preserves 14 constructed-native geomantic figures plus harpoon GID312. All 60 Music contexts, 28 combined/individual fields, 16 original geomantic predicates and original harpoon checks pass. All 612 Music and 326 Funky native/cache/raw-construction proofs pass; 144 other regular source hashes are unchanged. See output/font-review/final-checks/final-public-policy-review/. This is native/source validation, not exhaustive linguistic approval."
+    },
+    {
+      "id": "bidi",
+      "requirement": "Bidirectional and mixed-direction text retains reading order across wrapping and overrides.",
+      "status": "supported",
+      "evidence": [
+        "js/direction.js",
+        "tests/bidi.test.mjs",
+        "tests/direction.test.mjs",
+        "tools/unicode-checks.html",
+        "docs/font-dependent-format-review.json"
+      ],
+      "remaining": "Pinned bidi conformance and current application direction/control/numeric-prefix regressions are covered by the 367-test JavaScript pass. Dated full browser evidence remains 676 Unicode cases and 33 general scenarios; it is not re-labelled as execution of the final pressure assets."
+    },
+    {
+      "id": "graphemes",
+      "requirement": "Grapheme segmentation is pinned and editing/wrapping limits do not split clusters.",
+      "status": "supported",
+      "evidence": [
+        "js/unicode.js",
+        "tests/unicode.test.mjs",
+        "data/unicode/18.0.0/auxiliary/GraphemeBreakTest.txt"
+      ],
+      "remaining": "Pinned grapheme conformance, source-offset and resource-limit checks preserve clusters independently of host Unicode data. Current JavaScript tests pass. The final fresh Python suite remains a global regression gate rather than a missing grapheme implementation."
+    },
+    {
+      "id": "linebreak",
+      "requirement": "Unicode line breaking replaces whitespace-only splitting and preserves controls and native clusters.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/line-breaks.js",
+        "js/dictionary-breaks.js",
+        "tests/linebreak.test.mjs",
+        "tests/layout.test.mjs"
+      ],
+      "remaining": "Pinned default line breaking and dictionary-unit/emergency-fitting/dependent-vowel regressions pass current JavaScript checks. Thai/Lao/Khmer/Myanmar host dictionary quality remains provisional, as documented. No additional all-language or exhaustive-platform gate is introduced."
+    },
+    {
+      "id": "measurement",
+      "requirement": "Measure and paint the same shaped/coloured/native geometry including overhangs and large emoji.",
+      "status": "supported",
+      "evidence": [
+        "js/text-metrics.js",
+        "js/comic.js",
+        "tests/text-metrics.test.mjs",
+        "tools/unicode-checks.html",
+        "docs/optical-browser-review.json"
+      ],
+      "remaining": "Current source/runtime checks share native geometry and optical stroke rules between measurement and painting; 367 JavaScript tests pass. The CFF correction preserves all 1301 drawings and hmtx while fixing decoded Type 2 widths. Actual Music/Funky policy proofs retain frames and metrics. Dated optical browser evidence remains separately scoped; current validation uses the authorized local renderer."
+    },
+    {
+      "id": "balloons",
+      "requirement": "Balloon sizing and panel growth handle extreme Unicode and protect the existing artwork.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/layout.js",
+        "js/balloon.js",
+        "js/checks.js",
+        "tests/layout.test.mjs",
+        "tools/checks.html",
+        "tools/unicode-checks.html",
+        "docs/product-unicode-smoke-review.json"
+      ],
+      "remaining": "Ink-aware layout, cluster fitting and protected-art geometry have current JavaScript regressions plus dated 676 Unicode/33 general browser evidence. The user explicitly requires local source/specimen validation now. Final full-suite/fingerprint results remain pending performance fixes; there is no invented exhaustive browser/OS requirement."
+    },
+    {
+      "id": "export",
+      "requirement": "Exported comics agree with the preview and wait for the current render.",
+      "status": "supported",
+      "evidence": [
+        "js/app.js",
+        "js/comic.js",
+        "tests/comic.test.mjs",
+        "tools/unicode-checks.html",
+        "docs/product-unicode-smoke-review.json",
+        "docs/optical-browser-review.json"
+      ],
+      "remaining": "Dated actual editor/share/download/reset/reload/clipboard smoke and canvasPNG roundtrips establish the existing export path. No final-pressure DownloadPNG/clipboard execution is claimed. The user explicitly prohibited further browser/manual approval work and said the interrupted download check is not a blocker; finish the authorized local/source/runtime validation instead."
+    },
+    {
+      "id": "case",
+      "requirement": "Remove destructive uppercasing while retaining source lettering and mathematical distinctions.",
+      "status": "supported",
+      "evidence": [
+        "js/comic.js",
+        "js/native-shaping.js",
+        "tests/comic.test.mjs",
+        "tests/test_font_alphabets.py",
+        "js/app.js"
+      ],
+      "remaining": "Logical case and source text are preserved; automatic uppercasing was removed from app/comic paths. Mathematical/native alphabet distinctions remain covered by source/runtime checks. Original Latin lowercase drawings may resemble capitals without altering stored text."
+    },
+    {
+      "id": "grid",
+      "requirement": "Box drawing, block elements, Braille and text diagrams retain structure with hand-inked treatment.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/grid.js",
+        "tools/font/build_grid.py",
+        "tests/grid.test.mjs",
+        "tests/test_font_grid.py",
+        "tools/unicode-checks.html",
+        "docs/unicode-outline-coverage.json",
+        "docs/bounded-layout-review.json",
+        "js/grid-manifest.js"
+      ],
+      "remaining": "Structural box/block/Braille/diagram geometry and proportional-prose routing have dedicated source/runtime regressions. Framed/dense/pure diagram selection remains a documented heuristic for ambiguous text. Native structural sources are retained; all possible diagram grammars are not an added beta requirement."
+    },
+    {
+      "id": "math",
+      "requirement": "Keep meaningful bold/italic/script/fraktur/monospace/fullwidth/enclosed distinctions.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/font/alphabet_ink.py",
+        "tests/test_font_alphabets.py",
+        "tests/test_font_math_variants.py",
+        "docs/math-variant-review.json",
+        "tools/unicode-checks.html",
+        "docs/math-variant-style-review.json",
+        "js/math-variant-manifest.js",
+        "tests/test_font_scripts.py"
+      ],
+      "remaining": "All 37 standalone mathematical variant pairs were inspected and retain native calligraphic distinctions. Standardized/fullwidth/enclosed and historical relations have source/metric/attachment proofs. The published Funky policy passes the original six-unit harpoon length bound, all 16 original geomantic predicates and fresh local field checks. A full mathematics/music markup engine remains outside scope; final complete-suite regression is pending performance fixes."
+    },
+    {
+      "id": "egyptian",
+      "requirement": "Egyptian sign identities, formats and approved visual direction work in actual comics.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/egyptian-layout.js",
+        "docs/egyptian-insertion-build.json",
+        "docs/egyptian-insertion-review.json",
+        "tests/egyptian-layout.test.mjs",
+        "tools/unicode-checks.html",
+        "docs/bounded-layout-review.json",
+        "docs/egyptian-unmatched-output-probe.json",
+        "docs/insertion-mirror-helper-review.json",
+        "js/egyptian-insertion-manifest.js",
+        "tests/test_egyptian_insertion_build.py",
+        "docs/optical-browser-review.json"
+      ],
+      "remaining": "All 982 enumerated insertion candidates are recovered with 0 unmatched, alongside 65 mirror helpers,3 native alternates and documented size rules. Egyptian.014 em/Anatolian.010 em ink adjustments and shared measurement/painting rules have focused current source/runtime evidence plus dated optical app checks. The old thin-ink finding is historical and addressed; arbitrary-expression collision-freedom or linguistic approval is not claimed."
+    },
+    {
+      "id": "source-licensing",
+      "requirement": "Retain provenance, licences, required attribution, derivative names and redistribution/source obligations.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "data/font-sources",
+        "assets/fonts/licenses",
+        "index.html",
+        "tests/test_font_scripts.py",
+        "tests/test_font_seal_sans.py"
+      ],
+      "remaining": "Pinned source hashes, licences/notices, derivative naming and SealSans corresponding-source/rebuild evidence remain intact. Published Music GID588 and the 15 Funky constructed-native glyphs have exact raw-constructor and policy provenance with complete live native/cache proofs. The final independent reproduction and complete-suite results remain pending; no new legal or expert approval gate is introduced."
+    },
+    {
+      "id": "pdf-references",
+      "requirement": "Use the supplied PDF and approved generated studies as visual references, not glyph truth.",
+      "status": "supported",
+      "evidence": [
+        "output/imagegen/unicode-prototypes/design-decisions.json",
+        "docs/emoji-pen-translation.md",
+        "output/imagegen/emoji-production/palette-source.json",
+        "docs/unicode-beta-brief.md"
+      ],
+      "remaining": "The approved PDF-grounded specimen/reference history and generation prompts are retained. Native source material, not generated specimen images, remains the glyph identity reference. No further image generation or palette approval is required for these delegated routine source decisions."
+    },
+    {
+      "id": "colour",
+      "requirement": "Match meaning-bearing emoji colour to the PDF while retaining hand-inked outlines and distinctions.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "output/imagegen/emoji-production/palette-source.json",
+        "output/imagegen/emoji-production/skin-palette-source.json",
+        "output/imagegen/emoji-production/heart-palette-source.json",
+        "tools/font/emoji_faces.py",
+        "output/imagegen/emoji-production/glyph-review.json",
+        "docs/unicode-beta-brief.md",
+        "tests/test_font_emoji.py",
+        "js/emoji-manifest.js"
+      ],
+      "remaining": "Meaningful-colour palette provenance and category-specific artwork/compiler checks remain intact; current text-source repairs do not alter emoji colour assets. Retain the recorded PDF/reference scope and obtain the final current full-suite outcome rather than reusing the old 1994-test result."
+    },
+    {
+      "id": "emoji-finish",
+      "requirement": "Use expressive procedural strength1.7, fine-detail guards and approved smooth pressure variation.",
+      "status": "supported",
+      "evidence": [
+        "tools/font/pen_translate.py",
+        "tools/font/emoji_faces.py",
+        "tools/font/emoji_licensed.py",
+        "docs/emoji-pen-translation.md",
+        "output/font-review/pen-translation/review.json",
+        "tests/test_font_emoji.py",
+        "js/emoji-manifest.js"
+      ],
+      "remaining": "The approved expressive procedural finish remains at strength 1.7 with automatic fine-detail reductions, smooth pressure variation and guarded contours. This is a repeatable treatment, not a learned style model. Existing actual-strip/source evidence is retained and unchanged by the published text-source policies."
+    },
+    {
+      "id": "emoji-presence",
+      "requirement": "Keep approved1.4x custom emoji size and stronger ink in actual strips.",
+      "status": "supported",
+      "evidence": [
+        "js/text-metrics.js",
+        "js/comic.js",
+        "assets/fonts/dad-emoji-ink.woff2",
+        "tests/test_font_emoji_ink.py",
+        "tools/emoji-optical-review.html",
+        "docs/unicode-beta-brief.md",
+        "docs/product-unicode-smoke-review.json"
+      ],
+      "remaining": "The approved 1.4× custom-emoji optical scale and stronger ink remain implemented in measurement/painting and recorded actual-strip review. No new approval is needed. Published text-source policies do not change these emoji assets or constants."
+    },
+    {
+      "id": "visual-script-style",
+      "requirement": "Apply the approved accent/math/dense/Egyptian/script style at realistic comic sizes.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/font/alphabet_ink.py",
+        "tools/font/build_scripts.py",
+        "output/imagegen/unicode-prototypes/design-decisions.json",
+        "tools/unicode-checks.html",
+        "docs/source-style-review.json",
+        "docs/product-unicode-smoke-review.json",
+        "docs/unicode-beta-plan.md",
+        "docs/final-source-style-review.json",
+        "docs/unicode-style-dispositions.json",
+        "output/font-review/production-visual-match.json",
+        "docs/dense-production-review.json",
+        "docs/cubic-width-production-review.json",
+        "docs/final-policy-production-review.json"
+      ],
+      "remaining": "All 199 sources/381 shards have explicit decisions and all 17 final 22/44 atlas pages were inspected locally, including refreshed Music/Funky pages. Current continuity covers 145 regular visual decisions and 123 dense font/report proofs. Actual public Music, Chemical and geomantic local specimens and original semantic/field checks are accepted. See docs/final-source-style-review.json and docs/final-policy-production-review.json. Sampled acceptance does not imply all-glyph or native-reader approval. Final complete-suite regression remains pending performance work."
+    },
+    {
+      "id": "zalgo",
+      "requirement": "Allow approved overlapping/obscuring Zalgo marks without reserving an artificial clear corridor.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/font/build_glyphs.py",
+        "js/text-metrics.js",
+        "tools/unicode-checks.html",
+        "output/imagegen/unicode-prototypes/03-zalgo-v2.png",
+        "docs/unicode-beta-brief.md",
+        "tests/combining-annotations.test.mjs",
+        "tests/layout.test.mjs",
+        "docs/product-unicode-smoke-review.json"
+      ],
+      "remaining": "The approved overlapping-mark appearance, cluster retention and full ink reservation remain the intended runtime behaviour; no clear corridor was introduced. Source/catalog and stress regressions support it. Dated actual-strip evidence and local/source validation remain distinct; do not invent a new browser repeat contrary to the current instruction."
+    },
+    {
+      "id": "character-art",
+      "requirement": "Preserve the existing Dad/Calvin artwork and inspect any necessary new art against original references.",
+      "status": "supported",
+      "evidence": [
+        "assets/panels.json",
+        "tools/build_assets.py",
+        "tools/unicode-checks.html",
+        "docs/product-unicode-smoke-review.json",
+        "tests/layout.test.mjs"
+      ],
+      "remaining": "Typography work preserves existing Dad/Calvin character art and protected-art layout. No new character-face regeneration is part of final source policy fixes. Earlier accepted art remains the baseline."
+    },
+    {
+      "id": "static-automatic",
+      "requirement": "Keep the product static, backend-free and automatic with no Unicode configuration.",
+      "status": "supported",
+      "evidence": [
+        "index.html",
+        "js/app.js",
+        "js/fonts.js",
+        "js/dictionary-breaks.js",
+        "README.md",
+        "js/emoji-routing.js",
+        "js/font-variations.js"
+      ],
+      "remaining": "The product remains static/backend-free with automatic font/script/variation/direction routing and no language/font selector, account or external service. Build-time provenance tools are not user configuration flows."
+    },
+    {
+      "id": "private-unassigned",
+      "requirement": "Handle private-use, unassigned and malformed input gracefully without inventing standard drawings.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "js/fonts.js",
+        "js/comic.js",
+        "js/share.js",
+        "tests/fonts.test.mjs",
+        "tools/unicode-checks.html",
+        "tools/unicode/audit.py",
+        "tests/unicode.test.mjs"
+      ],
+      "remaining": "Public coverage excludes private-use/unassigned semantics. Unsupported/malformed/resource-limit paths preserve text and report or fall back gracefully without counting system fallback as custom assigned-public lettering. Internal rendering aliases are not advertised as standardized sequences."
+    },
+    {
+      "id": "reproducibility",
+      "requirement": "Provide a reproducible pipeline and separate versioned coverage, sequence, shaping, visual and browser evidence.",
+      "status": "supported-with-limits",
+      "evidence": [
+        "tools/font",
+        "tools/unicode",
+        "docs/unicode-progress.md",
+        "docs/unicode-coverage.json",
+        "docs/positional-mark-review.json",
+        "tests/font_baseline_checks.py",
+        "tests/test_font_cjk_variants.py",
+        "tests/test_font_marked_cjk.py",
+        "output/font-review/cubic-width-diagnosis/public-corrective-proof.json",
+        "output/font-review/final-checks/before-python.json",
+        "output/font-review/final-checks/before-python-r2.json",
+        "tests/test_marked_catalog_lineage.py"
+      ],
+      "remaining": "The reproducible native-to-frozen-to-cache-to-public pipeline, CJK reproduction and all 92 companion links are implemented. The ordinary final policy build produced 381 fonts, changing only Music and Funky; both fonts and reports exactly match accepted private candidates, with 379 other fonts unchanged. Current dense/CJK/marked dependencies and coverage/outline audits are rebound to the actual final manifest. Fresh final input snapshot, independent emoji rebuild and terminal complete-suite/post-run verification remain pending performance fixes."
+    },
+    {
+      "id": "checks",
+      "requirement": "Run documented project tests, browser checks and asset hash updates.",
+      "status": "pending",
+      "evidence": [
+        "package.json",
+        "pyproject.toml",
+        "tools/checks.html",
+        "tools/version_assets.py",
+        "docs/unicode-beta-plan.md",
+        "/tmp/unicode-final-js.log",
+        "/tmp/unicode-final-cjk-domain-tests.log",
+        "/tmp/unicode-cubic-width-strict-fixtures.log",
+        "/tmp/unicode-cubic-width-public-domain-tests.log"
+      ],
+      "remaining": "Current terminal evidence includes 367 JavaScript tests, fresh coverage and outline audits, actual public policy/native/field validation and 35 focused live tests. The diagnostic finished with 2159 passed and 13 failed in 11628.62 seconds; all 13 failure traces are mapped to reviewed corrections. It is not a complete-suite pass. The user forbids rerunning that slow test/suite until performance is fixed. Optimized proof checks pass 146 focused tests in 16.41 seconds; bounded representative measurements are recorded separately. No fresh whole suite has run; final snapshot and post-run verification remain pending."
+    },
+    {
+      "id": "corpus-handoff",
+      "requirement": "Maintain representative sentence/mixed-script/combining/emoji/layout/export cases and persistent progress for later playtesting.",
+      "status": "supported",
+      "evidence": [
+        "tools/unicode-checks.html",
+        "tools/checks.html",
+        "docs/unicode-progress.md",
+        "docs/positional-mark-review.json",
+        "docs/final-source-style-review.json",
+        "docs/final-policy-production-review.json",
+        "docs/product-unicode-smoke-review.json"
+      ],
+      "remaining": "The retained 676 named Unicode/33 general dated browser cases, final 199-source atlas and hash-bound native/field/policy artifacts form the playtesting handoff. Both affected source examples now reference actual published fonts and accepted local specimens. Provisional dictionary routing, sampled style and native-source validation limits remain explicit; no linguistic translation or new expert approval claim is made."
+    }
+  ],
+  "historicalNextBeforeContinuationClosure": [
+    "Finish and verify test performance fixes with hard-bounded representative measurements. The user prohibits rerunning the old three-hour test/suite before its performance problems are fixed.",
+    "Freeze final code and actual input closure, including the PDF, source art, active reports/cache inputs and any native decoder dependencies; take a fresh input snapshot.",
+    "After the performance gate passes, obtain a fresh complete Python terminal result under a hard limit, including independent private-output emoji reproduction; never count collection or timeout as a pass.",
+    "Verify post-run input/path-set equality, reconcile all 30 requirements and status records against actual final evidence, and report limitations before marking the goal complete."
+  ],
+  "finalClosureEvidence": {
+    "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+    "currentScopeCases": 2336,
+    "retainedPhaseCompleteCases": 2327,
+    "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+    "freshMetadataCases": 9,
+    "historicalAttempts": [
+      {
+        "scope": 2328,
+        "exitCode": 124
+      },
+      {
+        "scope": 384,
+        "exitCode": 124
+      }
+    ],
+    "continuationStatus": "actual terminal0",
+    "postFingerprint": "448437paths/hashes equal",
+    "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+    "tailOuter": {
+      "file": "output/final-checks/final-metadata-validation-run.json",
+      "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+    },
+    "tailMaster": {
+      "file": "output/final-checks/final-metadata-validation/result.json",
+      "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+    },
+    "tailElapsedSeconds": 34.14244941622019,
+    "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+    "retainedEvidence": {
+      "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+      "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+    },
+    "authorizedDelta": {
+      "tests/test_native_variation_packaging.py": {
+        "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+        "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+      }
+    },
+    "postProof": {
+      "file": "output/final-checks/after-final-metadata.json",
+      "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+    }
+  },
+  "historicalLatestValidationBeforeClosure": {
+    "fullPython": "1994 passed, 7 warnings in 7526.40s; terminal0 /tmp/unicode-beta-full-python.log; collection predates latest focused Egyptian tests.",
+    "sourceStyle": "All199source files visually triaged at22/44px; implementation incomplete; docs/source-style-review.json.",
+    "productSmoke": "Actual edit/share/download/reset/reload/copyimage smoke passed; docs/product-unicode-smoke-review.json; typography findings remain.",
+    "offlineRenderer": "tools/font/render_specimen.py:5focusedtests pass35.27s; native WOFF2 decoding/Arabic shaping/COLRv0colour/ZWJ/mark bounds/missing-glyph failures. PNG+SVG+JSON generated with no localhost; does not establish app renderer parity.",
+    "currentJavascript": "367 passed, 0 failed in15.61s; /tmp/unicode-beta-current-js.log; before supplemental production builds.",
+    "opticalSources": "28 passed in8.33s (source_optics + font_scripts), three initial optical recipes; OldUyghur subsequently5source_optics pass, rebuild pending.",
+    "hieroglyphOptics": "35 focused current runtime tests pass; Egyptian .014em and Anatolian .010em, all982 insertion templates both directions.",
+    "opticalBrowser": "Two changed Greek/hieroglyph harness cases pass geometry and canvas PNG blob roundtrip; actual Download PNG declined by browser gate. No retry. docs/optical-browser-review.json. No final pressure browser claim.",
+    "first15": "15 sources /8470glyphs native invariant verification passes;17localfields;6finalpages+31retained cases inspected;37initial source/historicalpass+3verifiedUVSrecheckspass+1CJKposition+5catalog/sourcepass. docs/supplemental-production-first15-review.json",
+    "specialistAdapters": "9focused specialist adapter/retention/weight integrity tests pass26.63s; CFF1301isolated post-save invariants allpass, no production CFF integration claim.",
+    "denseVariantPrototype": "All1002pinnedcompatibility mappings and1905derivedglyph cache/bbox/metrics/layout/contour identities verified. Representative16pairs inspected22/44px. Public variants stillnative; final integration pending. docs/dense-lineage-review.json",
+    "nativeAnchorDiagnostic": {
+      "status": "terminal0; focused read-only diagnosis, not final full-suite result",
+      "passed": 8,
+      "seconds": 3.64,
+      "log": "/tmp/unicode-native-anchor-diagnostic.log",
+      "modules": [
+        "tests/test_font_hebrew_marks.py",
+        "tests/test_font_music_articulations.py",
+        "tests/test_font_odia_marks.py"
+      ],
+      "scope": "Original current tight mark centre/clearance/advance/GDEF/native-shaping assertions unchanged."
+    },
+    "diagnosticFrozenInputs": {
+      "status": "PASS",
+      "proof": "output/font-review/final-checks/diagnostic-frozen-input-proof.json",
+      "files": 13887,
+      "canonicalDecisions": 199,
+      "onlyChangedFiles": "Three contextual modules deliberately excluded from diagnostic; all includedfiles/helpers/assets/rawinputs unchanged."
+    },
+    "diagnosticCompatibilityMilestone": {
+      "status": "Historical scoped checks passed during diagnostic53910; the diagnostic later terminated and was not a full-suite pass.",
+      "sealTests": 3,
+      "markedCjkTests": 3,
+      "log": "/tmp/unicode-remainder-diagnostic.log",
+      "sealSansTests": 3,
+      "scriptFontTests": 24,
+      "positionalNonMathTests": 2
+    }
+  },
+  "historicalStatusBeforeContinuationClosure": {
+    "latestValidation": {
+      "fullPython": "1994 passed, 7 warnings in 7526.40s; terminal0 /tmp/unicode-beta-full-python.log; collection predates latest focused Egyptian tests.",
+      "sourceStyle": "All199source files visually triaged at22/44px; implementation incomplete; docs/source-style-review.json.",
+      "productSmoke": "Actual edit/share/download/reset/reload/copyimage smoke passed; docs/product-unicode-smoke-review.json; typography findings remain.",
+      "offlineRenderer": "tools/font/render_specimen.py:5focusedtests pass35.27s; native WOFF2 decoding/Arabic shaping/COLRv0colour/ZWJ/mark bounds/missing-glyph failures. PNG+SVG+JSON generated with no localhost; does not establish app renderer parity.",
+      "currentJavascript": "367 passed, 0 failed in15.61s; /tmp/unicode-beta-current-js.log; before supplemental production builds.",
+      "opticalSources": "28 passed in8.33s (source_optics + font_scripts), three initial optical recipes; OldUyghur subsequently5source_optics pass, rebuild pending.",
+      "hieroglyphOptics": "35 focused current runtime tests pass; Egyptian .014em and Anatolian .010em, all982 insertion templates both directions.",
+      "opticalBrowser": "Two changed Greek/hieroglyph harness cases pass geometry and canvas PNG blob roundtrip; actual Download PNG declined by browser gate. No retry. docs/optical-browser-review.json. No final pressure browser claim.",
+      "first15": "15 sources /8470glyphs native invariant verification passes;17localfields;6finalpages+31retained cases inspected;37initial source/historicalpass+3verifiedUVSrecheckspass+1CJKposition+5catalog/sourcepass. docs/supplemental-production-first15-review.json",
+      "specialistAdapters": "9focused specialist adapter/retention/weight integrity tests pass26.63s; CFF1301isolated post-save invariants allpass, no production CFF integration claim.",
+      "denseVariantPrototype": "All1002pinnedcompatibility mappings and1905derivedglyph cache/bbox/metrics/layout/contour identities verified. Representative16pairs inspected22/44px. Public variants stillnative; final integration pending. docs/dense-lineage-review.json",
+      "nativeAnchorDiagnostic": {
+        "status": "terminal0; focused read-only diagnosis, not final full-suite result",
+        "passed": 8,
+        "seconds": 3.64,
+        "log": "/tmp/unicode-native-anchor-diagnostic.log",
+        "modules": [
+          "tests/test_font_hebrew_marks.py",
+          "tests/test_font_music_articulations.py",
+          "tests/test_font_odia_marks.py"
+        ],
+        "scope": "Original current tight mark centre/clearance/advance/GDEF/native-shaping assertions unchanged."
+      },
+      "diagnosticFrozenInputs": {
+        "status": "PASS",
+        "proof": "output/font-review/final-checks/diagnostic-frozen-input-proof.json",
+        "files": 13887,
+        "canonicalDecisions": 199,
+        "onlyChangedFiles": "Three contextual modules deliberately excluded from diagnostic; all includedfiles/helpers/assets/rawinputs unchanged."
+      },
+      "diagnosticCompatibilityMilestone": {
+        "status": "Historical scoped checks passed during diagnostic53910; the diagnostic later terminated and was not a full-suite pass.",
+        "sealTests": 3,
+        "markedCjkTests": 3,
+        "log": "/tmp/unicode-remainder-diagnostic.log",
+        "sealSansTests": 3,
+        "scriptFontTests": 24,
+        "positionalNonMathTests": 2
+      }
+    },
+    "independentReviewCurrentState": {
+      "review": "output/final-checks/r3-requirements-review.json",
+      "scope": "All30requirements reconciled to actual complete-current-scope proof; historical R3 performance/emoji pending items superseded by recorded fixes and actual passed evidence, not overwritten.",
+      "referenceIntegrity": "output/final-checks/current-requirement-evidence-links.json",
+      "finalReview": "output/final-checks/final-requirements-continuation-review.json"
+    },
+    "requirementsProseReconciliation": {
+      "status": "All30rows reconciled to actual2336-case evidence union and post-input equality; earlier pending reviews remain historical.",
+      "proposal": "output/final-checks/proposed-unicode-beta-audit-updates.json",
+      "proposalSha256": "c1b1362a722088119c5adf4e03207780d9e55a8f1d92e81ee00843bb61cf71a7",
+      "priorRows": "output/font-review/final-checks/pre-reconciliation-audit-requirements.json",
+      "currentCorrection": "Single-harpoon candidate proven but finalFunky policy nowalso needs genuinegeomanticcentering repair; no tolerance relaxed.",
+      "scope": "Current bounded evidence replaces obsolete unimplemented/old-run wording; final result rebinding remains required."
+    },
+    "diagnosticFailures": {
+      "status": "Actualterminal1:2159passed13failed7SWIGdeprecationwarnings11628.62seconds; all13tracesrootread andcoveredbyreviewedinstalledbatch.",
+      "known": [
+        "tests/test_font_chemical_symbols.py::test_harpoon_lengths_and_directions_remain_semantically_distinct",
+        "tests/test_font_cuneiform.py::test_complete_archaic_inventory_has_real_preserved_outlines",
+        "tests/test_font_devanagari_ddda.py::test_alternate_ddda_is_distinct_from_da_and_old_ddda",
+        "tests/test_font_asteroids.py::test_all_asteroid_drawings_preserve_topology_spacing_and_distinctions",
+        "tests/test_font_geomantic.py::test_all_sixteen_patterns_have_separate_dots_and_centered_rows",
+        "tests/test_font_music_tremolos.py::test_tremolo_counts_survive_stems_flags_and_canonical_note_forms",
+        "tests/test_font_music_tremolos.py::test_strokes_are_separate_and_original_music_is_unchanged",
+        "tests/test_font_sharada_vowels.py::test_right_vowels_preserve_native_aa_forms_and_uvs_identity[delivered]",
+        "tests/test_format_glyphs.py::test_all_format_signs_paint_their_native_nonempty_source_and_keep_number_shaping",
+        "tests/test_fullwidth_zero.py::test_packaged_fullwidth_variant_retains_translation_and_full_cell_metrics",
+        "tests/test_jigmo_variation_marks.py::test_shipped_supplementary_ivs_and_borrowed_marks_keep_native_drawings",
+        "tests/test_positional_marks.py::test_only_the_intended_math_script_font_changes_and_its_drawings_stay_exact"
+      ],
+      "chemical": "Genuine equal-harpoon width defect; preserve existing six-unit semantic bound; isolated candidate staging.",
+      "additionalStrictTests": {
+        "review": "output/font-review/final-checks/staged-native-tests-r2/review.json",
+        "patch": "output/font-review/final-checks/staged-native-tests-r2/proposed.patch",
+        "passed": 6,
+        "seconds": 67.12,
+        "log": "/tmp/unicode-cuneiform-deva-staged-proof.log",
+        "status": "root-reviewed isolated; live files unchanged"
+      },
+      "newlyInvestigating": "Geomantic14/16currentglyphs genuinely fail original strict<4centre bound; raw/frozen all16pass exactoriginaltest. B extends isolatedpolicy to14geomantic+harpoon. Asteroid all21counts/winding/spatialcontainment retained; root-reviewed strictrole-aware stagedreplacement2testsPASS17.81s.",
+      "music": "Both anticipated: firstoriginalexact60context/counttest finds genuine588extra contour; secondoldx50vertexequality. Minimal588policy andstrictstaged3tests alreadyproven; terminaltracesstillpending.",
+      "sharada": "Expected delivered AA-prefix raw/current equality; A7staged8case moduleproves exactraw/frozenconstructor andwholecurrentcachelineage whilekeepingallactualshaping/metrics/clearance assertions.",
+      "formatAndFullwidth": "Expected directraw/current outline equality failures; A7 strictstagedreplacements retain raw/frozen constructors andcompletecurrentcache/metrics/shaping proof.",
+      "jigmo": "Expected raw/current nativeglyph equality after densefinish; A7staged4cases retainall2677raw/frozenIVS/donor paths andcompletecache/currentglyph/position proof. No newgeometrywaiver.",
+      "historicalMath": "Expected preGPOS→currentrecipe ordering mismatch, coveredbyA7 strictstage. Both otherpositional tests PASSED: allCJKcompanionpositions andcompletecatalog/25087variationdrawing geometry."
+    },
+    "performanceConstraint": {
+      "instruction": "Do not run the three-hour suite/test again under any circumstances without first fixing its performance problems.",
+      "fullSuiteStartedSinceDiagnostic": true,
+      "collectionOnly": {
+        "cases": 2293,
+        "seconds": 1.5,
+        "log": "/tmp/unicode-final-collection-performance.log",
+        "record": "output/final-checks/collection-performance-run.json",
+        "scope": "Collection only; no tests executed"
+      },
+      "liveFocusedTests": {
+        "passed": 35,
+        "seconds": 37.96,
+        "log": "/tmp/unicode-public-policy-live-tests.log"
+      },
+      "currentFix": "Scoped catalog evidence batches, dependency-checked whole-font proof reuse and exact GLYF byte fast path preserve original geometry fallback; indexed emoji qualification inputs retain source/race invalidation.",
+      "review": "output/final-checks/native-proof-reuse-performance-review.json",
+      "boundedPublicBenchmark": "output/final-checks/catalog-batch-public-benchmark.json",
+      "remaining": "Second complete-scope attempt timed out; resolve remaining native/marked-CJK coverage. Serial13/emoji1596/unit53 pass and post-run448436-input equality passed121.35s. No full-scope pass or completion.",
+      "latestBoundedEmojiProfile": {
+        "record": "output/final-checks/emoji-build-profile-run.json",
+        "result": "output/final-checks/emoji-build-profile/result.json",
+        "status": "timeout; incomplete, not pass",
+        "hardLimitSeconds": 60,
+        "publicProductsUnchanged": true,
+        "hotspot": "build_emoji.outline contour simplification; optimization under investigation"
+      },
+      "largestFontRepresentative": {
+        "record": "output/final-checks/stratified-native-gate-run.json",
+        "result": "output/final-checks/stratified-native-gate/result.json",
+        "hardLimitSeconds": 120,
+        "elapsedSeconds": 120.4234,
+        "status": "timeout; largest TT proof incomplete; later stages not run",
+        "profile": "output/final-checks/stratified-native-gate/largest-TT.prof",
+        "finding": "117.9/119.9 profiled seconds in two WOFF2 glyph reconstructions; profiling overhead included",
+        "next": "Investigate existing local native decoder with exact fidelity controls; no old long test or full suite rerun"
+      },
+      "finalRepresentative": {
+        "status": "terminal0; all phases pass",
+        "record": "output/final-checks/stratified-native-decoder-gate-run.json",
+        "seconds": 119.004355,
+        "hardLimitSeconds": 120,
+        "fixturesPassed": 159,
+        "fixtureSeconds": 17.87,
+        "review": "output/final-checks/native-proof-reuse-performance-review.json"
+      },
+      "currentUserSteering": "The30-minute limit is a kill ceiling, not a runtime prediction. Both final attempts are now historical timeouts; completion remains unclaimed.",
+      "fullSuite": {
+        "record": "output/final-checks/final-python-complete-run.json",
+        "status": "timeout124 at1800.10s; incomplete, not pass",
+        "hardLimitSeconds": 1800,
+        "runtimeEstimate": null,
+        "purpose": "Final complete regression only after known defects resolved, short gates pass and inputs frozen",
+        "terminalSummary": "output/final-checks/final-attempt-30m/terminal-summary.json"
+      },
+      "currentWholeScope": {
+        "record": "output/final-checks/final-parallel-validation-run.json",
+        "master": "output/final-checks/final-parallel-validation/result.json",
+        "tests": 2328,
+        "globalCeilingSeconds": 1800,
+        "runtimePrediction": null,
+        "groups": {
+          "serial": 13,
+          "native": 666,
+          "emoji": 1596,
+          "unit": 53
+        },
+        "scope": "Fresh complete disjoint union, no reused results; only shared writers precede workers",
+        "status": "TIMEOUT inner1790s, outerterminal124; serial13/emoji1596/unit53 pass, native partial without recorded assertion failure; post-fingerprint448436unchanged121.35s."
+      }
+    },
+    "latestIntegratedProduction": {
+      "normalBuildLog": "/tmp/unicode-final-transactional-build.log",
+      "normalBuildEvidence": "output/font-review/final-builder-integration/public-after.json",
+      "regularVisualContinuity": "output/font-review/production-visual-match.json",
+      "regularVisualResult": "145of145match; final45/50rereviewedactualbytes384and1024pass",
+      "policyReview": "docs/final-policy-production-review.json",
+      "denseContinuity": "output/font-review/dense-production/public-continuity.json",
+      "denseResult": "123publicfontsanddetailedreports exactprivateacceptedSHA match",
+      "cjkVariants": "output/font-review/final-cjk-continuity.json",
+      "cjkVariantResult": "Normalbuildterminal0;1002pairs902bases;exactacceptedprototypeSHA",
+      "nativeInvariants": "146TT/CFFsources97679glyphsPASS;output/font-review/supplemental-production/verification.json",
+      "finalSourceAtlas": "All17pages199samplesinspected;docs/final-source-style-review.json",
+      "markedCompanions": "92builtterminal0; allactualfont/baseSHA/inheriteddensemetadata links pass; output/font-review/final-marked-cjk-continuity.json",
+      "combiningCatalog": "1838markdrawings2contexts300sources9392408bytes;72510terminal0; no CFFsource dependency",
+      "currentCffFailure": {
+        "log": "/tmp/unicode-final-cff-domain-tests.log",
+        "result": "1failed1passed; decodedcharstringwidth2046 vs hmtx1000, native/cache/drawing proof passed before semanticwidthassertion",
+        "diagnosis": "output/font-review/cubic-width-diagnosis/widths.json",
+        "scope": "1263adapted and5retainedcharstrings requirewidthoperandnormalization; drawinggeometry and hmtx must stay exact",
+        "resolution": "Correctivebuild95666terminal0;onlyUFSchanged;all1301drawingsidenticalandwidths=hmtx;original2regressionspass;43fixturespass. docs/cubic-width-production-review.json"
+      },
+      "finalCjkDomain": "6passed835.10s;92exactglyph/UVS/markcopychecks; /tmp/unicode-final-cjk-domain-tests.log"
+    },
+    "finalFingerprintScope": {
+      "status": "Root-reviewed isolatedcollector ready; dryscope445031paths/0missing,7controlsPASS; finalbaseline deferred",
+      "proposal": "output/final-checks/proposed-fingerprint-input-scope.json",
+      "oldScope": "13887corecode/assets/data/pinnedrawfiles+199canonicaldecisions; historical checkpoint, not complete all output/doc testinputclosure.",
+      "additionalScope": [
+        "Actual referenced frozenTT/CFF/dense baselines",
+        "Currentmanifest-bound reports andexactreferencedcachekeys",
+        "Historicaltestmanifests andtheirreferencedfonts/shapingrecords",
+        "Emoji/pen sourceart, palettes anddualrole deterministicproducts reusedbytests",
+        "Actuallyread review/probe/coverage JSON; styleledgercanonical4fields retainexistingjustifiedprojection"
+      ],
+      "remaining": "Rootreviewisolatedcollector/drymanifest; recordnewfinalbaselineonlyafterpublicbuild/dependentrefresh, thenpostrunverify afteractualsuccessfulcompletePython suite.",
+      "notANewGate": "Refines already-required postruninputproof; no browser/expert/platformrequirement added.",
+      "collector": "output/final-checks/collect_final_inputs.py",
+      "review": "output/final-checks/input-collector-review.json",
+      "declaredReferences": "output/final-checks/declared-reference-inputs.json",
+      "dryList": "output/final-checks/proposed-final-input-list.json"
+    },
+    "stagedHistoricalTestUpdates": {
+      "files": 7,
+      "patch": "output/font-review/final-checks/staged-native-tests/proposed.patch",
+      "review": "output/font-review/final-checks/staged-native-tests/review.json",
+      "stagedPassed": 25,
+      "status": "isolatedonly; liveincludedtests unchanged whilediagnostic runs"
+    },
+    "stagedAsteroidTests": {
+      "status": "root-reviewed isolated; notapplied",
+      "patch": "output/font-review/final-checks/staged-native-tests-r3/proposed.patch",
+      "review": "output/font-review/final-checks/staged-native-tests-r3/review.json",
+      "passed": 2,
+      "seconds": 17.81,
+      "log": "/tmp/unicode-staged-asteroids-r2.log",
+      "localImages": [
+        "output/font-review/final-checks/funky-figures/asteroids.png",
+        "output/font-review/final-checks/funky-figures/geomantic.png"
+      ],
+      "rootInspected": true,
+      "nativeGeomanticExactOriginalPredicates": "all16PASS /tmp/unicode-native-geomantic-exact.log"
+    },
+    "preparedFinalBuilder": {
+      "patch": "output/font-review/final-builder-integration.patch",
+      "candidate": "output/font-review/final-builder-integration/build_scripts.py",
+      "validation": "output/font-review/final-builder-integration/validation.json",
+      "state": "offlineonly; live builder remains frozen until all dense gates complete",
+      "status": "Applied; normal transactional build37037terminal0:381shards181304236bytes."
+    },
+    "preparedPublicPolicyReview": {
+      "status": "Root-reviewed prepared driver; not run before actualpublication",
+      "driver": "output/font-review/final-checks/chemical-harpoons/staging/validate_final_public_policies.py",
+      "record": "output/font-review/final-checks/chemical-harpoons/staging/after-publication-driver.json",
+      "actualPublicIdentityRequired": true,
+      "musicContexts": 60,
+      "fieldChecks": 28,
+      "localPngs": 3,
+      "sizes": [
+        22,
+        44
+      ],
+      "explicitHumanInspectionRequiredAfterGeneration": true
+    },
+    "musicNativeRepair": {
+      "status": "isolated minimal derived-nativeGID588 accepted; not public yet",
+      "review": "docs/music-source-preservation-review.json",
+      "candidateStaging": "output/font-review/final-checks/music-policy-staging/342fc9939b91.woff2",
+      "integrationPatch": "output/font-review/final-checks/music-policy-staging/integration.patch",
+      "policyFixtures": 12,
+      "fullGlyphsProven": 612,
+      "unchangedOtherGlyphs": 611,
+      "contexts": 60,
+      "fieldChecks": 14,
+      "rawConstructor": "pinnedMusic +exactmusic_tremolos.py/music_mark_rules.py",
+      "historical369": "Insufficient; fixesfieldguardonlybutleavesextra4barcontour; neverpublished."
+    },
+    "chemicalNativeRepair": {
+      "status": "Isolated15-glyph constructed-native rescue proven and rootlocallyaccepted; notpublic",
+      "sourceNumber": 195,
+      "gid": 312,
+      "codepoint": "U+1F8D1",
+      "staging": "output/font-review/final-checks/chemical-harpoons/staging",
+      "scope": "Replay pinned raw source plus chemical_symbols and alphabet_ink with exact scope; preserve one already hand-inked frozen glyph; other325 exact.",
+      "review": "docs/chemical-source-preservation-review.json",
+      "fullGlyphsProven": 326,
+      "unchangedOtherGlyphs": 311,
+      "fieldChecks": 14,
+      "policyFixtures": 12,
+      "combinedMusicChemicalFixtures": 26,
+      "protectedNativeGids": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        312
+      ],
+      "candidateSha256": "d5784187ed8887c200853bee622eceffb2e5f3f56f14a6cb30ca49da8f2f55fa"
+    }
+  },
+  "remainingStatusOnlyWork": [],
+  "historicalBriefSha256BeforeCompletion": "cf677ce26af38d3e04be1aa8d0e08d3f945194625b5a9cee7fe128af869ed1da",
+  "handoff": {
+    "status": "Beta complete; ready for agreed human review and playtesting",
+    "plan": "docs/unicode-beta-plan.md",
+    "progress": "docs/unicode-progress.md",
+    "generatedStyleStatus": "docs/unicode-style-status.json",
+    "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+    "scope": "2336 Python cases under authenticated staged continuity; 367 JavaScript checks; 448437 unchanged final inputs",
+    "limits": "Preserve the explicit sampled linguistic/style, dictionary, grid, Egyptian-layout and dated browser/export scope limits."
+  },
+  "historicalValidationBeforeTypographyFeedback": {
+    "status": "Complete current regression scope and post-input equality verified across explicitly recorded stages.",
+    "primaryManifestSha256": "7f5df7719a7f1187a49db3a0d721e6632ec4926141c6e41163e3d1141b3f4ac9",
+    "js": {
+      "tests": 367,
+      "passed": 367,
+      "failed": 0,
+      "duration_ms": 13573.818208,
+      "log": "/tmp/unicode-final-js-r3.log"
+    },
+    "python": {
+      "status": "Current2336case scope fully accounted under exact dependency continuity",
+      "coveredPassedCases": 2336,
+      "retained": {
+        "passed": 2327,
+        "scopeStages": "Earlier whole2336 proof minus nine affected module cases",
+        "scope": "Actual prior setup/call/teardownPASS with unchanged code/dependencies; timed-out master is not called pass"
+      },
+      "metadataCorrection": {
+        "passed": 9,
+        "phaseArtifacts": [
+          {
+            "file": "output/final-checks/final-metadata-validation/metadata-cases.json",
+            "sha256": "5568bdc84268d51e1d10f5663dfd22b6c41a0d1938b2d901e8c2f81393700926"
+          },
+          {
+            "file": "output/final-checks/final-metadata-validation/metadata-events.jsonl",
+            "sha256": "18f8af4966b6232daf4c842fc4bcad163dc1b6d2adfec0a83c06444194fa00d7"
+          }
+        ],
+        "evidence": {
+          "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+          "currentScopeCases": 2336,
+          "retainedPhaseCompleteCases": 2327,
+          "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+          "freshMetadataCases": 9,
+          "historicalAttempts": [
+            {
+              "scope": 2328,
+              "exitCode": 124
+            },
+            {
+              "scope": 384,
+              "exitCode": 124
+            }
+          ],
+          "continuationStatus": "actual terminal0",
+          "postFingerprint": "448437paths/hashes equal",
+          "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+          "tailOuter": {
+            "file": "output/final-checks/final-metadata-validation-run.json",
+            "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+          },
+          "tailMaster": {
+            "file": "output/final-checks/final-metadata-validation/result.json",
+            "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+          },
+          "tailElapsedSeconds": 34.14244941622019,
+          "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+          "retainedEvidence": {
+            "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+            "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+          },
+          "authorizedDelta": {
+            "tests/test_native_variation_packaging.py": {
+              "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+              "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+            }
+          },
+          "postProof": {
+            "file": "output/final-checks/after-final-metadata.json",
+            "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+          }
+        }
+      },
+      "historicalTimeouts": [
+        {
+          "scope": 2328,
+          "outerExitCode": 124,
+          "masterStatus": "timeout"
+        },
+        {
+          "scope": 384,
+          "outerExitCode": 124,
+          "masterStatus": "timeout"
+        }
+      ],
+      "priorEvidenceRetainedIn": "historicalValidationBeforeContinuationClosure",
+      "currentScopeCases": 2336
+    },
+    "assetVersions": {
+      "status": "terminal0",
+      "log": "/tmp/unicode-final-version-assets-r3.log"
+    },
+    "inputFingerprint": {
+      "status": "Actual448437-path current baseline/post-fingerprint equality passed",
+      "collector": "output/final-checks/collect_final_inputs.py",
+      "scopeControls": "output/final-checks/collector-omission-controls.json",
+      "baseline": "output/final-checks/metadata-final-baseline.json",
+      "record": "output/final-checks/native-variation-metadata-fix/application-rebase-receipt.json",
+      "postProof": "output/final-checks/after-final-metadata.json",
+      "postRecord": "output/final-checks/final-metadata-inputs-run.json",
+      "files": 448437,
+      "closureEvidence": {
+        "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+        "currentScopeCases": 2336,
+        "retainedPhaseCompleteCases": 2327,
+        "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+        "freshMetadataCases": 9,
+        "historicalAttempts": [
+          {
+            "scope": 2328,
+            "exitCode": 124
+          },
+          {
+            "scope": 384,
+            "exitCode": 124
+          }
+        ],
+        "continuationStatus": "actual terminal0",
+        "postFingerprint": "448437paths/hashes equal",
+        "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+        "tailOuter": {
+          "file": "output/final-checks/final-metadata-validation-run.json",
+          "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+        },
+        "tailMaster": {
+          "file": "output/final-checks/final-metadata-validation/result.json",
+          "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+        },
+        "tailElapsedSeconds": 34.14244941622019,
+        "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+        "retainedEvidence": {
+          "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+          "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+        },
+        "authorizedDelta": {
+          "tests/test_native_variation_packaging.py": {
+            "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+            "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+          }
+        },
+        "postProof": {
+          "file": "output/final-checks/after-final-metadata.json",
+          "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+        }
+      }
+    },
+    "coverageAndOutlines": "output/final-checks/current-font-data-audits/terminal-summary.json",
+    "publicPolicyFieldsAndLocalInspection": "output/font-review/final-checks/final-public-policy-review/review.json",
+    "publicPolicyNativeProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json",
+    "sourceAtlas": "docs/final-source-style-review.json",
+    "denseCjkMarkedContinuity": "output/final-checks/dependency-continuity/current-dependency-proof.json",
+    "combiningCatalog": {
+      "status": "terminal0 rebuild after public font policies",
+      "drawings": 1838,
+      "contextRecords": 2,
+      "sources": 300,
+      "bytes": 9392408,
+      "log": "/tmp/unicode-final-combining-catalog-r3.log"
+    },
+    "contextualNativeLineage": {
+      "tests": 17,
+      "passed": 17,
+      "seconds": 154.04,
+      "log": "/tmp/unicode-final-contextual-native-tests.log",
+      "scope": "128selectors512contexts, raw/frozen/currentnativeandcacheidentity, ordinarycontrols, CGJ/Padaukbehavior and11mutationfixtures"
+    },
+    "currentWholeScope": {
+      "wholeCurrentScopeProof": "output/final-checks/final-current-scope-proof.json",
+      "currentScopeCases": 2336,
+      "retainedPhaseCompleteCases": 2327,
+      "retentionScope": "All previous2336 phase-complete cases except the nine affected module cases",
+      "freshMetadataCases": 9,
+      "historicalAttempts": [
+        {
+          "scope": 2328,
+          "exitCode": 124
+        },
+        {
+          "scope": 384,
+          "exitCode": 124
+        }
+      ],
+      "continuationStatus": "actual terminal0",
+      "postFingerprint": "448437paths/hashes equal",
+      "wholeCurrentScopeProofSha256": "0dd77c4d035e391a38002ed29963f034f5500905ce415281906f6416c7a8d505",
+      "tailOuter": {
+        "file": "output/final-checks/final-metadata-validation-run.json",
+        "sha256": "416cd56c7e076f39b9bb7e504fa9f9c2e435ac93177ceff88bbb4773be550f15"
+      },
+      "tailMaster": {
+        "file": "output/final-checks/final-metadata-validation/result.json",
+        "sha256": "3e0fc561a961f38973c423767007d46077016abb5b222cd750ed42b5cad55c37"
+      },
+      "tailElapsedSeconds": 34.14244941622019,
+      "elapsedScope": "Metadata-stage-only wall time, not a single2336-case runtime",
+      "retainedEvidence": {
+        "file": "output/final-checks/whole-scope-before-metadata-fix.json",
+        "sha256": "312ab8a8fb5b2f497374daf95bbe413fb10dd15e5beb28da528971f0c94892a2"
+      },
+      "authorizedDelta": {
+        "tests/test_native_variation_packaging.py": {
+          "before": "88fe77d3b41e53934a93dd4e0a99380e82093823ba61a478a010fd31f3161b68",
+          "after": "a799fed2c9167fc4b691e871d9b14bbaa7df88a42d2ebbe4c00bedc6dd06fd4b"
+        }
+      },
+      "postProof": {
+        "file": "output/final-checks/after-final-metadata.json",
+        "sha256": "494869a99c42c0063e50bae74bd83cbc63a8b54ba4b470b25bcfc7f1002b1680"
+      }
+    }
+  }
+}

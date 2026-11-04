@@ -1,0 +1,57 @@
+{
+  "repository": "https://github.com/lxgw/LxgwSeal",
+  "commit": "2b1d01195168110b9a8f3a8abaff844ff22fa716",
+  "scope": "Two remaining Seal gaps only. Native handwritten source drawings visually compared with official Unicode reference rows; all other source repertoire excluded. Source names reserved; browser derivatives renamed Dad Script.",
+  "licence": "assets/fonts/licenses/LXGWSeal-OFL.txt",
+  "files": [
+    {
+      "path": "build/unicode-sources/lxgw-seal/LXGWSeal-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/lxgw/LxgwSeal/2b1d01195168110b9a8f3a8abaff844ff22fa716/TTF/LXGWSeal-Regular.ttf",
+      "sha256": "06100c9d0afd79612dc0cf7ef8ddef997cce4ec22bf7d93f7cf238ca08bac29e",
+      "git_blob_sha1": "81ab418404a16f1027a86c05580679f9f15493fd",
+      "size": 227780,
+      "include_ranges": [
+        [
+          254799,
+          254799
+        ],
+        [
+          260674,
+          260674
+        ]
+      ],
+      "preserve_native_bounds": true
+    },
+    {
+      "path": "build/unicode-sources/lxgw-seal/OFL.txt",
+      "url": "https://raw.githubusercontent.com/lxgw/LxgwSeal/2b1d01195168110b9a8f3a8abaff844ff22fa716/OFL.txt",
+      "sha256": "014c5eec8e93d9deb222d0a47b4f44668f2f63b14f27448dcf468f52fd0cf910",
+      "git_blob_sha1": "5a73ac5b241ea8086a8b612b4d9f55ed5ba7ae48",
+      "size": 5334
+    }
+  ],
+  "review": {
+    "reference": {
+      "url": "https://www.unicode.org/charts/PDF/Unicode-18.0/U180-3D000.pdf",
+      "sha256": "721ee3c33edca9a451f3bf9a9fd53371fc93dfc862511424b36a3016d57b65ba",
+      "use": "Identity comparison only; no chart artwork copied"
+    },
+    "image": "output/font-review/seal-source-probes/lxgw-two-reference.png",
+    "characters": [
+      {
+        "codepoint": 254799,
+        "referencePage": 84,
+        "referenceEdition": "CCZ C-04868 / TH-X155",
+        "finding": "roof and paired upper plants with complete lower enclosure retained"
+      },
+      {
+        "codepoint": 260674,
+        "referencePage": 182,
+        "referenceEdition": "DYC D-10227 / TH-Y224",
+        "finding": "metal component and distinct right-hand descending structure retained"
+      }
+    ],
+    "status": "identity compared visually; native outlines retained; specialist review provisional",
+    "bounds": "Retain native bounds: source U+3E34F has a one-unit difference between its stored xMin and recalculated ink bounds. Recalculation shifts metric-aligned drawing by one unit."
+  }
+}

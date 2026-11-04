@@ -1,6 +1,13 @@
+import { egyptianSegmentInteriors } from './egyptian-layout.js';
 // Text layout for comic panels: flows text line by line into whatever space
 // the artwork leaves free. Everything here is pure so it can be tested
 // without a browser; measuring text is delegated to the caller.
+
+import { paragraphDirection } from "./direction.js";
+import { graphemes } from "./unicode.js";
+import { breakUnits, lineContent, textParagraphs, emergencyBoundary } from "./line-breaks.js";
+import { usesDictionaryScript } from './dictionary-breaks.js';
+import { isGridText } from "./grid.js";
 
 // A panel is a cell of a fixed width and height with the art scaled to the
 // cell width and anchored to the bottom. Everything above the art is free.
@@ -12,7 +19,8 @@
 // spec.margin, spec.awayFromArt, spec.awayLimit, spec.block and
 // spec.maxLineWidth, if given, override the layout options of the same
 // names for that panel; spec.aboveSpeaker keeps the text above spec.speakerY
-// less spec.keepGap.
+// less spec.keepGap. spec.keepVisible contains art-coordinate rectangles
+// that reframing must never crop (for example, a character's whole head).
 //
 // padding keeps text away from the panel's edges: a number, or {x, y} to
 // pad the sides and the top and bottom differently.
@@ -26,8 +34,8 @@ export function makePanel(spec, cellWidth, cellHeight, padding, scale = cellWidt
     spec,
     width: cellWidth,
     height: cellHeight,
-    padX: padding?.x ?? padding,
-    padY: padding?.y ?? padding,
+    padX: spec.padding?.x ?? padding?.x ?? padding,
+    padY: spec.padding?.y ?? padding?.y ?? padding,
     scale,
     artTop: cellHeight - artHeight,
   };
@@ -115,23 +123,25 @@ function widest(intervals) {
   return best;
 }
 
-function paragraphs(text) {
-  return text
-    .trim()
-    .split("\n")
-    .map((line) => line.split(/\s+/).filter(Boolean));
-}
-
 // The longest start of a word too long for a line that fits in `width`:
-// preferably ending just after punctuation (as in a web address), otherwise
-// wherever it has to.
+// only at grapheme boundaries that keep punctuation and glue attached. Normal
+// punctuation opportunities have already been handled by Unicode line breaking.
 function firstPiece(word, width, fits) {
+  // Dictionary opportunities already separated these units. Splitting one
+  // again at arbitrary graphemes can strand Myanmar spacing vowels and defeat
+  // word-based Thai/Lao/Khmer/Myanmar wrapping. Grow or fit the complete word.
+  if(usesDictionaryScript(word))return word;
+  const clusters = graphemes(word);
   let n = 1;
-  while (n < word.length && fits(word.slice(0, n + 1), width)) n++;
-  for (let k = n; k > 1; k--) {
-    if ("/.-_?&=,:".includes(word[k - 1])) return word.slice(0, k);
+  while (n < clusters.length && fits(clusters.slice(0, n + 1).join(""), width)) n++;
+  const interiors = egyptianSegmentInteriors(word);
+  let offset=0;const ends=clusters.map(c=>(offset+=c.length));
+  const safe = k => k === clusters.length || (!interiors.has(ends[k-1]) && emergencyBoundary(clusters[k - 1], clusters[k]));
+  for (let k = n; k >= 1; k--) {
+    if (safe(k)) return clusters.slice(0, k).join("");
   }
-  return word.slice(0, n);
+  while (n < clusters.length && !safe(n)) n++;
+  return clusters.slice(0, n).join("");
 }
 
 // Lay `text` out in `panel` from the top down. Returns the positioned lines,
@@ -142,6 +152,8 @@ function firstPiece(word, width, fits) {
 // minLineWidth (narrower gaps are skipped; defaults to 3 em), startY (where
 // the first line goes; defaults to the top padding), awayFromArt and
 // awayLimit (see moveAwayFromArt), drop, dropLimit and keepGap (see drop).
+// fitUnbreakable optionally shrinks only a protected piece that cannot fit
+// at full size. Its actual fontSize and ink metrics travel with the line.
 //
 // Left-aligned text keeps a straight left edge, as Watterson's does, unless
 // the art pushes some lines well aside: neighbouring lines all start where
@@ -154,8 +166,14 @@ function firstPiece(word, width, fits) {
 // options.block set that would squeeze into a narrower space partway down
 // (see squeezed), and text whose last line comes below options.bottomLimit.
 export function layoutText(panel, text, options) {
+  if (options.measure.envelope) {
+    options = { ...options, lineBox: options.measure.envelope(text, options.fontSize, options.lineHeight ?? 1.2) };
+  }
   let result;
-  if (options.align !== "left") {
+  const grid = options.measure.grid && isGridText(text);
+  if (grid) {
+    result = flowGrid(panel, text, options);
+  } else if (options.align !== "left") {
     result = flow(panel, text, options, []);
   } else {
     let minimums = [];
@@ -170,7 +188,10 @@ export function layoutText(panel, text, options) {
     }
   }
   if (!result.fits) return result;
-  balance(result, options);
+  if (!grid) {
+    balance(result, options);
+    compactInkLines(result, panel, options);
+  }
   if (options.awayFromArt && options.align === "left") {
     moveAwayFromArt(result, panel, options.awayLimit ?? Infinity);
   }
@@ -186,6 +207,69 @@ export function layoutText(panel, text, options) {
     centre(result, options.centreOn, options.centreSlack);
   }
   return result;
+}
+
+// Wrapping reserves the tallest possible slot. Once the actual lines are
+// known, remove surplus vertical room without moving ink into the artwork.
+// A paragraph break adds half an ordinary line, independently of tall marks.
+function compactInkLines(result, panel, options) {
+  if (!result.lines.length || !options.measure.ink) return;
+  const nominal = options.fontSize * (options.lineHeight ?? 1.2);
+  const clearance = options.fontSize * Math.max(.08, (options.lineHeight ?? 1.2)-1);
+  let previous;
+  for (let i = 0; i < result.lines.length; i++) {
+    const line = result.lines[i], ink = line.ink;
+    if (!ink || line.grid) { previous = line; continue; }
+    const height = Math.max(nominal, ink.ascent+ink.descent+clearance);
+    const baseline = (height+ink.ascent-ink.descent)/2;
+    let y = line.y;
+    if (previous?.ink) {
+      const blank = Math.max(0, line.paragraph-previous.paragraph-1);
+      const baselineStep = Math.max(nominal, previous.ink.descent+ink.ascent+clearance);
+      y = Math.max(previous.y+previous.height,
+        previous.y+previous.baseline+baselineStep-baseline) + blank*nominal*.5;
+      y = Math.min(y, line.y);
+    }
+    const interval = freeIntervals(panel,y,y+height,options.margin??0)
+      .find(([a,b])=>a<=line.x+1e-6 && b>=line.x+line.width-1e-6);
+    if (interval) {
+      line.y=y;line.height=height;line.baseline=baseline;
+      line.interval=[Math.max(line.interval[0],interval[0]),Math.min(line.interval[1],interval[1])];
+      result.spaces[i]=line.interval;
+    }
+    previous=line;
+  }
+}
+
+// A diagram is one rectangular object: rows share a cell size, origin and
+// baseline spacing. It may move or shrink as a whole, but never reflow around
+// artwork or centre each row independently (both would break connections).
+function flowGrid(panel, text, options) {
+  let size = options.fontSize;
+  let block = options.measure.grid(text,size);
+  const fullWidth = panel.width - 2*panel.padX;
+  if (options.fitUnbreakable) {
+    for (let n = 0; block.width > fullWidth && n < 32; n++) {
+      size *= Math.min(0.9,fullWidth/block.width*0.98);
+      block = options.measure.grid(text,size);
+    }
+  }
+  const result = (lines,spaces,fits) => ({lines,spaces,fits,lineHeight:block.lineHeight,fontSize:size});
+  if (!block.rows.length) return result([],[],true);
+  if (block.width > fullWidth) {
+    // Retain dimensions for Calvin's existing fit loop to scale the whole grid.
+    return result(block.rows.map((line,i) => ({...line,x:panel.padX,y:panel.padY+i*block.lineHeight,
+      interval:[panel.padX,panel.width-panel.padX],paragraph:1})),[],false);
+  }
+  const limit = panel.height - panel.padY;
+  for (let y = options.startY ?? panel.padY; y + block.height <= limit; y += block.lineHeight/4) {
+    const space = widest(freeIntervals(panel,y,y+block.height,options.margin ?? 0));
+    if (!space || space[1]-space[0] < block.width) continue;
+    const x = options.align === 'left' ? space[0] : (space[0]+space[1]-block.width)/2;
+    return result(block.rows.map((line,i) => ({...line,x,y:y+i*block.lineHeight,
+      interval:space,paragraph:1})),block.rows.map(()=>space),true);
+  }
+  return result([],[],false);
 }
 
 // A balloon sits in the middle of the room its lines have, as long as it
@@ -312,7 +396,7 @@ function squeezed({ lines }) {
 // same line positions and spaces: Knuth-style, minimising the squared
 // leftover space of every line but the last, with a penalty for ending on
 // a lone short word. The last paragraph may use fewer lines than before.
-function balance(result, { measure, fontSize, align = "center", maxLineWidth = Infinity }) {
+function balance(result, { measure: baseMeasure, fontSize, align = "center", maxLineWidth = Infinity }) {
   const { lines, spaces } = result;
   const groups = [];
   for (let i = 0; i < lines.length; i++) {
@@ -343,7 +427,12 @@ function balance(result, { measure, fontSize, align = "center", maxLineWidth = I
   const keepSpaces = [];
   for (const { run: group, fixed, endsParagraph, final } of runs) {
     const slots = group.map((i) => lines[i]);
-    const words = slots.flatMap((l) => l.text.split(" "));
+    const measure = baseMeasure.forDirection?.(slots[0].direction) ?? baseMeasure;
+    const words = slots.flatMap((l) => l.units ?? breakUnits(l.text));
+    const paragraphMeasure = baseMeasure.forParagraph?.(slots[0].sourceParagraph);
+    const offsets = [slots[0].sourceOffset ?? 0];
+    for (const word of words) offsets.push(offsets.at(-1) + word.length);
+    const measureAt = i => paragraphMeasure?.at(offsets[i]) ?? measure;
     if (fixed || slots.length < 2) {
       for (const i of group) {
         keep.push(lines[i]);
@@ -354,19 +443,32 @@ function balance(result, { measure, fontSize, align = "center", maxLineWidth = I
     const room = slots.map((l) => Math.min(l.interval[1] - l.interval[0], maxLineWidth));
     const n = words.length;
     const m = slots.length;
+    // Balancing is aesthetic; the already fitted greedy lines preserve all
+    // content and break rules. Bound its quadratic DP allocation/work for
+    // maximum-length prose and CJK paragraphs with thousands of break units.
+    if (n > 512 || (n + 1) * (m + 1) > 65536) {
+      for (const i of group) {
+        keep.push(lines[i]);
+        keepSpaces.push(spaces[i]);
+      }
+      continue;
+    }
     // The width of words i to j as a line: estimated from the words' own
     // widths, which is quick, or measured, which is exact (each once: the
     // search asks for the same ones over and over).
-    const space = measure("a a", fontSize) - 2 * measure("a", fontSize);
-    const before = [0];
-    for (const word of words) before.push(before[before.length - 1] + measure(word, fontSize));
-    const estimate = (i, j) => before[j] - before[i] + (j - i - 1) * space;
+    const before = [0], endAdjustment = [0];
+    for (const [i, word] of words.entries()) {
+      const advance = measureAt(i)(word.replace(/[\u00ad\u200b]/gu, ''), fontSize);
+      before.push(before.at(-1) + advance);
+      endAdjustment.push(advance - measureAt(i)(lineContent([word], endsParagraph && i === words.length - 1), fontSize));
+    }
+    const estimate = (i, j) => before[j] - before[i] - endAdjustment[j];
     const widths = new Map();
     const exact = (i, j) => {
       const key = i * (n + 1) + j;
       let width = widths.get(key);
       if (width === undefined) {
-        width = measure(words.slice(i, j).join(" "), fontSize);
+        width = measureAt(i)(lineContent(words.slice(i, j), endsParagraph && j === n), fontSize);
         widths.set(key, width);
       }
       return width;
@@ -436,11 +538,14 @@ function balance(result, { measure, fontSize, align = "center", maxLineWidth = I
     const breaks = lineBreaks(solved);
     for (let k = 0; k < used; k++) {
       const slot = slots[k];
-      const content = words.slice(breaks[k], breaks[k + 1]).join(" ");
-      const width = measure(content, fontSize);
+      const units = words.slice(breaks[k], breaks[k + 1]);
+      const content = lineContent(units, endsParagraph && breaks[k + 1] === n);
+      const lineMeasure = measureAt(breaks[k]);
+      const width = lineMeasure(content, fontSize);
       const [a, b] = slot.interval;
       const x = align === "center" ? a + (b - a - width) / 2 : a;
-      keep.push({ ...slot, text: content, x, width });
+      const ink = lineMeasure.ink?.(content, fontSize);
+      keep.push({ ...slot, units, text: content, sourceOffset: offsets[breaks[k]], x, width, ink, fontSize: ink?.fontSize ?? fontSize });
       keepSpaces.push(spaces[group[k]]);
     }
   }
@@ -483,15 +588,17 @@ function alignedMinimums(spaces) {
 }
 
 function flow(panel, text, options, minimums) {
-  const { measure, fontSize, align = "center" } = options;
-  const lineHeight = fontSize * (options.lineHeight ?? 1.2);
+  const { measure: baseMeasure, fontSize, align = "center" } = options;
+  let measure = baseMeasure, direction = "ltr";
+  let sourceParagraph = "", sourceOffset = 0;
+  const lineHeight = options.lineBox?.height ?? fontSize * (options.lineHeight ?? 1.2);
   const margin = options.margin ?? 0;
   const minLineWidth = options.minLineWidth ?? fontSize * 3;
   const maxLineWidth = options.maxLineWidth ?? Infinity;
   const step = lineHeight / 4;
   const limit = panel.height - panel.padY;
   const fullWidth = panel.width - 2 * panel.padX;
-  const fits = (s, width) => measure(s, fontSize) <= width;
+  const fits = (s, width, endsParagraph = false) => measure(lineContent([s], endsParagraph), fontSize) <= width;
 
   const lines = [];
   // The space each line had, before any alignment.
@@ -502,34 +609,61 @@ function flow(panel, text, options, minimums) {
   const result = () => ({ lines, spaces, fits: !overflow, lineHeight, fontSize });
 
   let paragraphIndex = 0;
-  const place = (words, interval, piece = false) => {
-    const content = words.join(" ");
-    const width = measure(content, fontSize);
+  const place = (words, interval, piece = false, endsParagraph = false) => {
+    const content = lineContent(words, endsParagraph);
+    let size = fontSize;
+    let width = measure(content, size);
+    const room = interval[1] - interval[0];
+    if (piece && options.fitUnbreakable) {
+      for (let attempt = 0; width > room && attempt < 32; attempt++) {
+        size *= Math.min(0.9, room / width * 0.98);
+        width = measure(content, size);
+      }
+      if (width > room) overflow = true;
+    }
+    const ink = measure.ink?.(content, size);
     const x =
       align === "center"
         ? interval[0] + (interval[1] - interval[0] - width) / 2
         : interval[0];
     lines.push({
       text: content,
+      units: words,
+      direction,
+      sourceParagraph,
+      sourceOffset,
       x,
       y,
       width,
       height: lineHeight,
+      baseline: size !== fontSize && ink
+        ? (lineHeight + ink.ascent - ink.descent) / 2 : options.lineBox?.baseline,
+      fontSize: ink?.fontSize ?? size,
+      ink,
       interval,
       paragraph: paragraphIndex,
       piece,
     });
+    sourceOffset += words.join("").length;
     y += lineHeight;
   };
 
-  for (const paragraph of paragraphs(text)) {
+  for (const paragraph of textParagraphs(text)) {
     paragraphIndex++;
+    sourceParagraph = paragraph.join("");
+    sourceOffset = 0;
+    direction = paragraphDirection(sourceParagraph);
+    const paragraphMeasure = baseMeasure.forParagraph?.(sourceParagraph);
+    const directionMeasure = baseMeasure.forDirection?.(direction) ?? baseMeasure;
     if (paragraph.length === 0) {
-      y += lineHeight;
+      // A blank paragraph is one ordinary blank line, even when accented
+      // letters elsewhere in the speech require an unusually tall line box.
+      y += options.lineBox?.blankHeight ?? lineHeight;
       continue;
     }
     const words = [...paragraph];
     while (words.length) {
+      measure = paragraphMeasure?.at(sourceOffset) ?? directionMeasure;
       if (y + lineHeight > limit) {
         overflow = true;
         return result();
@@ -545,16 +679,16 @@ function flow(panel, text, options, minimums) {
         y += step;
         continue;
       }
-      if (!fits(words[0], width)) {
-        if (fits(words[0], interval[1] - interval[0])) {
+      if (!fits(words[0], width, words.length === 1)) {
+        if (fits(words[0], interval[1] - interval[0], words.length === 1)) {
           // Longer than a line should be, but there's room for it here on a
           // line of its own (which, like a piece of a broken word, stays
           // there when the lines around it are balanced).
           spaces.push(space);
-          place([words.shift()], interval, true);
+          place([words.shift()], interval, true, words.length === 0);
           continue;
         }
-        if (fits(words[0], fullWidth)) {
+        if (fits(words[0], fullWidth, words.length === 1)) {
           // There may be a wider gap further down.
           y += step;
           continue;
@@ -562,16 +696,18 @@ function flow(panel, text, options, minimums) {
         // Too long for any line: the first piece gets a line to itself.
         const piece = firstPiece(words[0], width, fits);
         words[0] = words[0].slice(piece.length);
+        if (!words[0]) words.shift();
+        if (!fits(piece, width, words.length === 0) && !options.fitUnbreakable) overflow = true;
         spaces.push(space);
-        place([piece], interval, true);
+        place([piece], interval, true, words.length === 0);
         continue;
       }
       const line = [words.shift()];
-      while (words.length && fits([...line, words[0]].join(" "), width)) {
+      while (words.length && fits([...line, words[0]].join(""), width, words.length === 1)) {
         line.push(words.shift());
       }
       spaces.push(space);
-      place(line, interval);
+      place(line, interval, false, words.length === 0);
     }
   }
   return result();
@@ -590,8 +726,8 @@ export function layoutColumn(text, { measure, fontSize, lineHeight = 1.2, width 
     minLineWidth: 0,
   });
   const lines = layout.lines;
-  const height = lines.length ? lines[lines.length - 1].y + layout.lineHeight : 0;
-  return { lines, height, lineHeight: layout.lineHeight, fontSize };
+  const height = lines.length ? lines[lines.length - 1].y + lines[lines.length - 1].height : 0;
+  return { lines, height, lineHeight: layout.lineHeight, fontSize, fits: layout.fits };
 }
 
 // Lay out one text per panel spec, sharing a cell size, with the cells as
@@ -657,7 +793,11 @@ function fitHeight(specs, texts, options) {
       layoutText(panel, texts[i] ?? "", panelOptions(panel, options)),
     );
     const inside = panels.every((panel) =>
-      reservedAreas(panel).every(([, y0]) => y0 >= 0),
+      reservedAreas(panel).every(([, y0]) => y0 >= 0) &&
+      (panel.spec.keepVisible ?? []).every(([x0, y0, x1, y1]) =>
+        x0 * panel.scale >= 0 && x1 * panel.scale <= panel.width &&
+        panel.artTop + y0 * panel.scale >= 0 &&
+        panel.artTop + y1 * panel.scale <= panel.height),
     );
     return {
       cellHeight,
@@ -785,6 +925,7 @@ export function shiftedView(meta, start) {
   return {
     ...meta,
     start,
+    keepVisible: meta.keepVisible?.map(([x0, y0, x1, y1]) => [x0 - start, y0, x1 - start, y1]),
     free: rows(meta.free),
     open: rows(meta.open),
     speakers: Object.fromEntries(Object.entries(meta.speakers ?? {}).map(([k, [x, y]]) => [k, [x - start, y]])),

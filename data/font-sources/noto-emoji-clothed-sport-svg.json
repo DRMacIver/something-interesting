@@ -1,0 +1,63 @@
+{
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "🤺",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93a.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93a.svg",
+      "sha256": "2e13e6ea11d5c917afba26b0b258e4349a4a3dc73bd792993a466d7c2ecccdc1",
+      "git_blob_sha1": "1885f1cab8259908c6d30694458ba553ae30210d",
+      "size": 9592,
+      "shapeElementsIncludingDefinitions": 35,
+      "include_sequences": [
+        "🤺"
+      ],
+      "skin_modifiers": false,
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "⛷️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u26f7.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u26f7.svg",
+      "sha256": "59d723f25515e21327e1dbeb6ae42a63e05b6d81054b5d128d4ffc54cf6220b5",
+      "git_blob_sha1": "93331186f2935034736b43f62c56b266ea96a6d0",
+      "size": 117137,
+      "shapeElementsIncludingDefinitions": 68,
+      "include_sequences": [
+        "⛷",
+        "⛷︎",
+        "⛷️"
+      ],
+      "skin_modifiers": false,
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🏂",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3c2.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3c2.svg",
+      "sha256": "6e79a174e1b3e3b4fadc7f2c4e19207936c4d5a590dac71c434b7c06045e6772",
+      "git_blob_sha1": "bbaab502cabf8043da5a87b05c9466d6030cb70a",
+      "size": 10694,
+      "shapeElementsIncludingDefinitions": 46,
+      "include_sequences": [
+        "🏂",
+        "🏂🏻",
+        "🏂🏼",
+        "🏂🏽",
+        "🏂🏾",
+        "🏂🏿"
+      ],
+      "skin_modifiers": true,
+      "build_target": "emoji-artwork",
+      "equivalent_tone_sources": [
+        "build/unicode-sources/noto-emoji-snowboarding-tone-reference-svg/emoji_u1f3c2_1f3fb.svg",
+        "build/unicode-sources/noto-emoji-snowboarding-tone-reference-svg/emoji_u1f3c2_1f3fc.svg",
+        "build/unicode-sources/noto-emoji-snowboarding-tone-reference-svg/emoji_u1f3c2_1f3fd.svg",
+        "build/unicode-sources/noto-emoji-snowboarding-tone-reference-svg/emoji_u1f3c2_1f3fe.svg",
+        "build/unicode-sources/noto-emoji-snowboarding-tone-reference-svg/emoji_u1f3c2_1f3ff.svg"
+      ]
+    }
+  ]
+}

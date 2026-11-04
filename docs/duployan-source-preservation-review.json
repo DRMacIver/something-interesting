@@ -1,0 +1,264 @@
+{
+  "status": "Final normal public build integrated; actual final policy fields inspected locally22/44 and384/1024whole-field guards pass; final full current suite pending.",
+  "sourceNumber": 50,
+  "source": "build/unicode-sources/noto/NotoSansDuployan-Regular.ttf",
+  "nativeFile": "output/font-review/supplemental-production-baselines/b480b4bfab29.woff2",
+  "pressureFile": "output/font-review/supplemental-warm/group-1/fonts/b480b4bfab29.woff2",
+  "candidateFile": "output/font-review/duployan-production-rescue/restore-131-plus-6845.woff2",
+  "candidateSha256": "2c9f401e6dc1c1155d2efd9126a5e18da7cee678c580e27f457f10a9f5391892",
+  "nativeGids": [
+    {
+      "gid": 131,
+      "glyph": "u1BC63.nasal_i"
+    },
+    {
+      "gid": 6845,
+      "glyph": "dupl.Dot.rel1"
+    }
+  ],
+  "originalFailure": "Ink components merged at384: sample6to5, fullfield9to8. KeepingGID131 restores ink; GID6845 additionally avoids new4pixel white counter at1024.",
+  "minimality": "No single shapedGID besides131 repaired384 ink merge;131alone fails1024;pair131+6845 passes all4fields.",
+  "invariants": [
+    "all10240glyphs checked: exact native glyf bytes at131/6845, every other glyph exact current pressure glyf",
+    "exact cmap/hmtx/GSUB/GPOS/GDEF",
+    "native em and glyph order/count unchanged"
+  ],
+  "checks": [
+    {
+      "text": "\u2308\ud82f\udc11\ud82f\udc25\ud82f\udc3a\ud82f\udc4e\ud82f\udc63\ud82f\udc7c\ud82f\udc9f",
+      "size": 384,
+      "source": {
+        "rawTopology": [
+          6,
+          1
+        ],
+        "filteredTopology": [
+          6,
+          1
+        ],
+        "porePixelAreas": [],
+        "counterPixelAreas": [
+          6853
+        ]
+      },
+      "candidate": {
+        "rawTopology": [
+          6,
+          1
+        ],
+        "filteredTopology": [
+          6,
+          1
+        ],
+        "porePixelAreas": [],
+        "counterPixelAreas": [
+          6919
+        ]
+      },
+      "shapingUnchanged": true,
+      "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+      "status": "pass",
+      "checks": {
+        "componentAreaRatios": [
+          0.9956402867065691,
+          0.9750115154306771,
+          1.0,
+          0.9597981204316046,
+          0.9418928322894919,
+          0.9461279461279462
+        ],
+        "counterOverlap": [
+          0.9776740113818766
+        ]
+      }
+    },
+    {
+      "text": "\u2308\ud82f\udc11\ud82f\udc25\ud82f\udc3a\ud82f\udc4e\ud82f\udc63\ud82f\udc7c\ud82f\udc9f",
+      "size": 1024,
+      "source": {
+        "rawTopology": [
+          6,
+          1
+        ],
+        "filteredTopology": [
+          6,
+          1
+        ],
+        "porePixelAreas": [],
+        "counterPixelAreas": [
+          48709
+        ]
+      },
+      "candidate": {
+        "rawTopology": [
+          6,
+          1
+        ],
+        "filteredTopology": [
+          6,
+          1
+        ],
+        "porePixelAreas": [],
+        "counterPixelAreas": [
+          49073
+        ]
+      },
+      "shapingUnchanged": true,
+      "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+      "status": "pass",
+      "checks": {
+        "componentAreaRatios": [
+          0.9996154725530544,
+          0.9764813016027197,
+          1.0,
+          0.96707114199041,
+          0.9441331212529059,
+          0.9473310450940939
+        ],
+        "counterOverlap": [
+          0.977191073518241
+        ]
+      }
+    },
+    {
+      "text": "\ud82f\udc00\ud82f\udc01\ud82f\udc02\ud82f\udc03\ud82f\udc04\ud82f\udc05 \u2308\ud82f\udc11\ud82f\udc25\ud82f\udc3a\ud82f\udc4e\ud82f\udc63\ud82f\udc7c\ud82f\udc9f",
+      "size": 384,
+      "source": {
+        "rawTopology": [
+          9,
+          1
+        ],
+        "filteredTopology": [
+          9,
+          1
+        ],
+        "porePixelAreas": [],
+        "counterPixelAreas": [
+          6850
+        ]
+      },
+      "candidate": {
+        "rawTopology": [
+          9,
+          1
+        ],
+        "filteredTopology": [
+          9,
+          1
+        ],
+        "porePixelAreas": [],
+        "counterPixelAreas": [
+          6916
+        ]
+      },
+      "shapingUnchanged": true,
+      "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+      "status": "pass",
+      "checks": {
+        "componentAreaRatios": [
+          1.0164371052431322,
+          1.0219203457857364,
+          0.9964695498676082,
+          0.9705817492171305,
+          0.9752808988764045,
+          1.0,
+          0.960801393728223,
+          0.943205574912892,
+          0.949452401010952
+        ],
+        "counterOverlap": [
+          0.9778102189781022
+        ]
+      }
+    },
+    {
+      "text": "\ud82f\udc00\ud82f\udc01\ud82f\udc02\ud82f\udc03\ud82f\udc04\ud82f\udc05 \u2308\ud82f\udc11\ud82f\udc25\ud82f\udc3a\ud82f\udc4e\ud82f\udc63\ud82f\udc7c\ud82f\udc9f",
+      "size": 1024,
+      "source": {
+        "rawTopology": [
+          9,
+          1
+        ],
+        "filteredTopology": [
+          9,
+          1
+        ],
+        "porePixelAreas": [],
+        "counterPixelAreas": [
+          48712
+        ]
+      },
+      "candidate": {
+        "rawTopology": [
+          9,
+          1
+        ],
+        "filteredTopology": [
+          9,
+          1
+        ],
+        "porePixelAreas": [],
+        "counterPixelAreas": [
+          49069
+        ]
+      },
+      "shapingUnchanged": true,
+      "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+      "status": "pass",
+      "checks": {
+        "componentAreaRatios": [
+          1.0005507809658412,
+          1.0203039092601411,
+          0.9965135101481758,
+          0.9740433602320479,
+          0.9764903476466065,
+          1.0,
+          0.9671910552198273,
+          0.9442758553178993,
+          0.9475677594981655
+        ],
+        "counterOverlap": [
+          0.9771308917720479
+        ]
+      }
+    }
+  ],
+  "comparison": "output/font-review/duployan-production-rescue/restore-131-plus-6845-comparison.png",
+  "scope": "Only local artifacts; no frozenkernel/sourcepolicy/builder/public edits",
+  "wrapper": {
+    "module": "tools/font/duployan_source_preservation.py",
+    "sha256": "ca7e204cb2a9c87dcf9bcb47bd25d54278a6c6fb33e045cef78b129be4bfaae4",
+    "api": "apply(font,source,adapt)",
+    "scope": "Source-specific wrapper only; old source_preservation and generic pressure kernel unchanged",
+    "recipeToken": ":duployan-source-preservation:ca7e204cb2a9c87dcf9bcb47bd25d54278a6c6fb33e045cef78b129be4bfaae4",
+    "report": "output/font-review/duployan-production-rescue/c32a552fc5a1bf2c161fa02084df318851b49a96e077399e1713f7d95632e220-6300f4b8bb08f20005e4790c53d59bc5efbcc9645322351f91368e4f2ef04814-duployan-preserve-ca7e204cb2a9c87dcf9bcb47bd25d54278a6c6fb33e045cef78b129be4bfaae4.json",
+    "counts": {
+      "native-blank": 2932,
+      "adapted": 7216,
+      "native-retained-guard": 92
+    },
+    "candidate": "output/font-review/duployan-production-rescue/wrapped-rescue.woff2",
+    "candidateSha256": "52ceb09dfb53d520556c182475933a3148fc9d9b81c8d9ef52551675ab560ac9",
+    "proofLog": "/tmp/unicode-duployan-wrapper-full-proof.log",
+    "rawSourceIdentityLog": "/tmp/unicode-duployan-wrapper-raw-native-proof.log",
+    "fixtures": {
+      "tests": 15,
+      "seconds": 15.02,
+      "log": "/tmp/unicode-duployan-policy-fixtures.log",
+      "coverage": [
+        "recursive native component closure",
+        "explicit original contextual name required",
+        "altered policy named glyph/closure rejected",
+        "mutated protected native dot rejected despite updated output hash/size",
+        "existing12TT/CFF/dense/style fixtures"
+      ]
+    },
+    "integration": "B owns wiring after live dense workers finish; no builder/public edits yet"
+  },
+  "preintegrationStatus": "accepted isolated native-preservation proposal; production integration pending",
+  "finalIntegration": {
+    "review": "docs/final-policy-production-review.json",
+    "nativeInvariants": "output/font-review/supplemental-production/verification.json",
+    "build": "output/font-review/final-builder-integration/public-after.json"
+  }
+}

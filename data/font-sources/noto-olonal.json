@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/notofonts/ol-onal",
+  "commit": "bc1ebea4f342b1f17a579c36858e8b229e08514b",
+  "builder": "glyphs",
+  "build_input": "build/unicode-sources/noto-olonal/NotoSerifOlOnal.glyphs",
+  "family": "Dad Ol Onal Source",
+  "files": [
+    {
+      "path": "build/unicode-sources/noto-olonal/NotoSerifOlOnal.glyphs",
+      "url": "https://raw.githubusercontent.com/notofonts/ol-onal/bc1ebea4f342b1f17a579c36858e8b229e08514b/sources/NotoSerifOlOnal.glyphs",
+      "git_blob_sha1": "1d6defe6e65c4d1ffad8e3602b1245b0447cfd8b",
+      "sha256": "800459f84b2a40e0dedb6540159b1021209e9e75925245652d07ae2b419ec6e3",
+      "size": 50785
+    },
+    {
+      "path": "build/unicode-sources/noto-olonal/OFL.txt",
+      "url": "https://raw.githubusercontent.com/notofonts/ol-onal/bc1ebea4f342b1f17a579c36858e8b229e08514b/OFL.txt",
+      "git_blob_sha1": "6d8addab5285f73ced0d3c172837ae270fb673af",
+      "sha256": "e504bdd0c729d52ac94b648abd946371409fc4c59cde56d4bab3b72ed07b452d",
+      "size": 4397
+    }
+  ]
+}

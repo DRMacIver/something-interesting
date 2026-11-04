@@ -1,0 +1,34 @@
+{
+  "samples": [
+    {
+      "label": "ArefRuqaa-Regular.ttf BASELINE",
+      "font": "assets/fonts/scripts/b8ef0ccbaaf6.woff2",
+      "text": "مرحبا بالعالم"
+    },
+    {
+      "label": "ArefRuqaa-Regular.ttf OPTICAL",
+      "font": "output/font-review/source-optics/1.woff2",
+      "text": "مرحبا بالعالم"
+    },
+    {
+      "label": "Gaegu-Regular.ttf BASELINE",
+      "font": "assets/fonts/scripts/0c8e6a663cf0.woff2",
+      "text": "세상은 신기한 일로 가득해요"
+    },
+    {
+      "label": "Gaegu-Regular.ttf OPTICAL",
+      "font": "output/font-review/source-optics/3.woff2",
+      "text": "세상은 신기한 일로 가득해요"
+    },
+    {
+      "label": "DadTolong.ttf BASELINE",
+      "font": "assets/fonts/scripts/4eec163ff41b.woff2",
+      "text": "𑶰𑶸𑶿𑷇𑷎𑷖𑷡𑷩"
+    },
+    {
+      "label": "DadTolong.ttf OPTICAL",
+      "font": "output/font-review/source-optics/15.woff2",
+      "text": "𑶰𑶸𑶿𑷇𑷎𑷖𑷡𑷩"
+    }
+  ]
+}

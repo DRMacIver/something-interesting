@@ -1,0 +1,23 @@
+{
+  "reviewed": "2026-11-01",
+  "points": [
+    "U+16FF4",
+    "U+16FF5",
+    "U+16FF6"
+  ],
+  "reference": {
+    "url": "https://www.unicode.org/L2/L2024/24071r3-ext-sz-num.pdf",
+    "sha256": "1bcf48c015159ecab39e55788b6865148c4db54e6fa0dcc0090ae09e9780a898",
+    "reviewedPages": [
+      1,
+      4
+    ],
+    "localCache": "build/unicode-references/yangqin-proposal.pdf"
+  },
+  "source": "build/unicode-sources/wenkai/fonts/TTF/LXGWWenKai-Regular.ttf",
+  "sourceSha256": "2d73eea94ad808999d90c0000c239a84a33b09d4bc6ab6c5b8bbf1eda8a7fc8b",
+  "license": "SIL Open Font License 1.1; existing WenKai licence retained",
+  "construction": "Baseline from U+3026 with its upright removed at pinned contour junctions; uprights from U+3022/U+3023 and cross from U+3024, fitted to the short raised U+3026 register. No outlines extracted from the reference PDF.",
+  "validation": "Compiled stroke-count and connected-baseline checks; exact preservation of original U+3026; browser dialogue and export review.",
+  "limitations": "Native WenKai style remains provisional; no claim of fluent-reader review. Vietnamese reading marks U+16FF0/U+16FF1 remain unresolved."
+}

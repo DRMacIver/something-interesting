@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/thesaurus-linguae-aegyptiae/unihieroglyphica",
+  "commit": "9375eba4e2b626658e57e3a526118b8225c0581e",
+  "files": [
+    {
+      "path": "build/unicode-sources/unihieroglyphica/UniHieroglyphica.ttf",
+      "url": "https://raw.githubusercontent.com/thesaurus-linguae-aegyptiae/unihieroglyphica/9375eba4e2b626658e57e3a526118b8225c0581e/font_files/UniHieroglyphica.ttf",
+      "git_blob_sha1": "81d5ad45c73bd95c158c483dcb7401ec96731811",
+      "size": 17455560,
+      "sha256": "ad60bb2f469697837b556388d47b500a21d866370a49a8be770b206108aaf664"
+    },
+    {
+      "path": "build/unicode-sources/unihieroglyphica/OFL.txt",
+      "url": "https://raw.githubusercontent.com/thesaurus-linguae-aegyptiae/unihieroglyphica/9375eba4e2b626658e57e3a526118b8225c0581e/OFL.txt",
+      "git_blob_sha1": "6a6023709464dc5bb8d0addeee5bd40b0ed8a9e1",
+      "size": 4411,
+      "sha256": "1817ef535b6a95566b2059cce6c77ae4d451909002b7f80a05cfc7343047655e"
+    }
+  ]
+}

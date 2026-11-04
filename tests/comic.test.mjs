@@ -2,8 +2,21 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
-import { DEFAULTS, drawComic } from "../js/comic.js";
+import { DEFAULTS, drawComic, makeFontString } from "../js/comic.js";
 import { openBeyond } from "../js/layout.js";
+
+test('loaded variation fonts cannot replace ordinary Han or math fallback',()=>{
+  const families=['Dad CJK Variants','Dad Math Variants','Dad Egyptian Variants','Ordinary Script'];
+  const ordinary=makeFontString(24,families);
+  assert.equal(ordinary,'24px "Dad Lettering", "Ordinary Script", cursive');
+  for(const family of ['Dad CJK Variants','Dad Math Variants']){
+    const selected=makeFontString(24,families,'text',family);
+    assert.ok(selected.startsWith(`24px "${family}",`));
+    assert.ok(!selected.includes(family==='Dad CJK Variants'?'Dad Math Variants':'Dad CJK Variants'));
+    assert.ok(!selected.includes('Dad Egyptian Variants'));
+  }
+  assert.ok(makeFontString(24,families,'egyptian-variant').startsWith('24px "Dad Egyptian Variants",'));
+});
 
 // The comic as loadComic gives it, without the images, drawn on a canvas
 // that measures every character as 0.55 of the font size.
@@ -27,6 +40,24 @@ const context = new Proxy(
 const canvas = () => ({ getContext: () => context, width: 0, height: 0 });
 
 const wall = (sentence, n) => Array.from({ length: n }, () => sentence).join("\n");
+
+test("short opening balloons float clear of the top border",()=>{
+  for(const greeting of ['Hello!','Hi.','Καλημέρα!']){
+    const report=drawComic(canvas(),comic,[greeting,'A short explanation.','Another point.','Why?']);
+    assert.ok(report.fits);
+    const first=report.panels[0];
+    const speech=first.speeches.find(s=>s.who==='dad');
+    assert.ok(Math.min(...speech.outline.map(p=>p[1]))>0,greeting);
+    assert.ok(Math.max(...speech.outline.map(p=>p[0]))<first.panel.width,greeting);
+  }
+});
+
+test("the renderer preserves case-sensitive Unicode text", () => {
+  const sample = "α ≠ Α, ß ≠ SS, ı ≠ I, 𝑥² ≥ 0";
+  const report = drawComic(canvas(), comic, [sample, "", "", ""]);
+  const speech = report.panels[0].speeches.find((s) => s.who === "dad");
+  assert.equal(speech.lines.map((line) => line.text).join(" "), sample);
+});
 
 test("a long speech gets a balloon after all when the panels are big enough for one", () => {
   // Panel 2 makes the panels huge; panel 3's few lines would be loose on
@@ -58,6 +89,27 @@ test("a panel with no room to spare shows only the original art", () => {
   texts[2] = wall("Yellow, black. Yellow, black.", 12);
   const report = drawComic(canvas(), comic, texts);
   assert.equal(report.panels[2].meta.height, assets.panels[2].height);
+});
+
+test("reframing keeps Dad's whole head visible even with no speech", () => {
+  const cluster = "👨\u200d".repeat(40) + "👨";
+  const scenarios = [
+    ["HELLO.", "", "", ""],
+    ["HELLO.", "", "", "HELLO."],
+    ["HELLO.", "", "", cluster],
+    [cluster, "", "", "HELLO."],
+  ];
+  for (const texts of scenarios) {
+    const report = drawComic(canvas(), comic, texts);
+    const { panel, meta } = report.panels[2];
+    assert.ok(report.fits);
+    assert.ok(meta.height > assets.panels[2].height, "still reveals available lower artwork");
+    for (const [x0, y0, x1, y1] of meta.keepVisible) {
+      assert.ok(x0 * panel.scale >= 0 && x1 * panel.scale <= panel.width);
+      assert.ok(panel.artTop + y0 * panel.scale >= 0, "hair and headroom stay inside frame");
+      assert.ok(panel.artTop + y1 * panel.scale <= panel.height, "chin stays inside frame");
+    }
+  }
 });
 
 test("a whole film script in one box still makes a comic browsers can draw", () => {
@@ -103,4 +155,30 @@ test("ordinary text is lettered at the original size", () => {
   const texts = [...DEFAULTS];
   texts[1] = "Every point on the record goes round once a minute but the ones near the edge have much further to go.";
   assert.equal(drawComic(canvas(), comic, texts).cap, drawComic(canvas(), comic, DEFAULTS).cap);
+});
+
+test("Calvin's indivisible wide cluster is preserved and fits his opening", () => {
+  const cluster = "W" + "\u0301".repeat(150);
+  const report = drawComic(canvas(), comic, ["HELLO", "", "", cluster]);
+  const reply = report.panels.flatMap(p => p.speeches).find(s => s.who === "calvin");
+  assert.equal(report.fits, true);
+  assert.equal(reply.lines.map(l => l.text).join(""), cluster);
+  assert.ok(reply.fontSize < report.fontSize);
+  for (const line of reply.lines) {
+    assert.ok(line.width <= line.interval[1] - line.interval[0] + 1e-6);
+  }
+});
+
+test("Dad's oversized cluster fits without reducing surrounding lettering", () => {
+  const cluster = "W" + "\u0301".repeat(150);
+  const started = performance.now();
+  const report = drawComic(canvas(), comic, [cluster + "\nHELLO", "", "", ""]);
+  assert.ok(performance.now() - started < 3000);
+  assert.equal(report.fits, true);
+  const lines = report.panels[0].speeches.find(s => s.who === "dad").lines;
+  assert.equal(lines[0].text, cluster);
+  assert.ok(lines[0].fontSize < report.fontSize);
+  assert.equal(lines[1].text, "HELLO");
+  assert.equal(lines[1].fontSize, report.fontSize);
+  for (const line of lines) assert.ok(line.width <= line.interval[1] - line.interval[0] + 1e-6);
 });

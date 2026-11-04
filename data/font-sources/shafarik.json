@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/google/fonts",
+  "commit": "8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5",
+  "scope": "OFL donor for caudate chrivi; derivative retains notices, fitted heights and native mark anchors.",
+  "files": [
+    {
+      "path": "build/unicode-sources/shafarik/Shafarik-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5/ofl/shafarik/Shafarik-Regular.ttf",
+      "sha256": "b25cb985bffa87ece4c4ec9d5c62c28623de9a7016978bda41d7df01cb17f028",
+      "git_blob_sha1": "f080a23acab82b820a3a77bb084b71fe43fb79f6",
+      "size": 1061684,
+      "include_ranges": [],
+      "glagolitic_donor_ranges": [
+        [
+          11311,
+          11311
+        ],
+        [
+          11359,
+          11359
+        ]
+      ]
+    },
+    {
+      "path": "assets/fonts/licenses/Shafarik-OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5/ofl/shafarik/OFL.txt",
+      "sha256": "1f43120e025ded73f14be9cca6e2fa6d67ab38af6c6c1446c094c9da8edafe97",
+      "git_blob_sha1": "711eae8c6951cbd47be828c15ad98d5b469637ae",
+      "size": 4390
+    }
+  ]
+}

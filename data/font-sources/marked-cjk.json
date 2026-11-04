@@ -1,0 +1,18 @@
+{
+  "scope": "Additional fonts for CJK variants with the app's 257 existing hand-treated combining accents; ordinary text and already-complete native clusters keep their original fonts.",
+  "builder_script": "tools/font/build_marked_cjk_variants.py",
+  "inputs": [
+    "js/font-manifest.js",
+    "js/cjk-variant-manifest.js",
+    "assets/fonts/dad-lettering-unicode.woff2"
+  ],
+  "licence": "assets/fonts/licenses/Noto-OFL.txt",
+  "notices": [
+    "assets/fonts/licenses/Jigmo-CC0.txt",
+    "assets/fonts/licenses/Noto-OFL.txt",
+    "assets/fonts/licenses/Unicodia-LICENSE-Funky.txt"
+  ],
+  "native_preservation": "Original CJK quadratic contours, metrics, hint programs and format-14 mappings retained. Native single-mark positions explicitly recorded from original HarfBuzz fallback; native-only clusters still select original fonts. Existing font assets never overwritten.",
+  "accent_adaptation": "Borrow only Mn/Me drawings from the app's licensed hand-treated accent font. Scale to 1024 em, cubic-to-quadratic approximation at 0.05 font units, then normal TrueType integer quantization. Zero advances; ink-based base attachment and same-side stacks. This is an explicit adaptation, not an exact-copy claim for the converted accents. Explicit positional combining classes take priority over the source glyph origin; missing-pair corner classes use left/right bounds and attached classes use zero separation.",
+  "limits": "Does not provide every Unicode mark, repair arbitrary cross-script linguistic attachment or cover math/contextual-script variants. Double/enclosing marks and mixed-script positioning require further visual review. Native CJK source style and reader validation remain provisional."
+}

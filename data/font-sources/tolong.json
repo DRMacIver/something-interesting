@@ -1,0 +1,25 @@
+{
+  "publisher": "GNU Unifont",
+  "version": "18.0.01",
+  "licence": "SIL OFL 1.1 (chosen from dual licensing)",
+  "builder": "tolong",
+  "files": [
+    {
+      "path": "build/unicode-sources/unifont/unifont_upper-18.0.01.otf",
+      "url": "https://unifoundry.com/pub/unifont/unifont-18.0.01/font-builds/unifont_upper-18.0.01.otf",
+      "size": 5954156,
+      "sha256": "472201e45a050bff4c7658208b8c73e34ebce3764b287a5a46c7774038ef9391",
+      "git_blob_sha1": "6a454d0deb474327490a19d98612fb4fae244981",
+      "build_target": "donor"
+    },
+    {
+      "path": "assets/fonts/licenses/Unifont-OFL-upstream.txt",
+      "url": "https://unifoundry.com/OFL-1.1.txt",
+      "size": 4340,
+      "sha256": "869692af094c57fb7258c57fe26820c759319603321d0ffeb278de3651763ded",
+      "git_blob_sha1": "629f23acd1b40f7af708f2f65ad5ddea04b578ac",
+      "build_target": "donor"
+    }
+  ],
+  "notes": "Only the 54 assigned Tolong drawings are derived. Other upper-plane glyphs are not delivered by this source. Marks use the separately pinned Noto Sans donor."
+}

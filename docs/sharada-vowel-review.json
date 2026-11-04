@@ -1,0 +1,468 @@
+{
+  "status": "source-only diagnosis; native attachment implemented in sharada_vowels.py and verified separately",
+  "reference": "https://www.unicode.org/L2/L2023/23122-kashmiri-sharada.pdf",
+  "native_source": "build/unicode-sources/noto/NotoSansSharada-Regular.ttf",
+  "native_version": "Version 2.006",
+  "donor_source": "build/unicode-sources/unicodia/UnicodiaFunky.ttf",
+  "donor_has_sharada_layout": false,
+  "official_source_checked": {
+    "repository": "https://github.com/notofonts/sharada",
+    "commit": "5860efa605f4c81084090479feab9b99f838af37",
+    "file": "sources/NotoSansSharada.glyphs",
+    "supplement_glyphs_found": false
+  },
+  "marks": [
+    {
+      "codepoint": "11B60",
+      "position": "top",
+      "native": null,
+      "donor": {
+        "name": "u11B60",
+        "advance": 0,
+        "bounds": [
+          -131,
+          551,
+          1,
+          805
+        ]
+      },
+      "native_ka_sequence": [
+        {
+          "gid": 21,
+          "cluster": 0,
+          "advance": 707,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 0,
+          "cluster": 0,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "codepoint": "11B61",
+      "position": "right",
+      "native": null,
+      "donor": {
+        "name": "u11B61",
+        "advance": 231,
+        "bounds": [
+          -70,
+          340,
+          207,
+          805
+        ]
+      },
+      "native_ka_sequence": [
+        {
+          "gid": 21,
+          "cluster": 0,
+          "advance": 707,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 0,
+          "cluster": 0,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "codepoint": "11B62",
+      "position": "bottom",
+      "native": null,
+      "donor": {
+        "name": "u11B62",
+        "advance": 0,
+        "bounds": [
+          -472,
+          -182.0,
+          -80,
+          -52
+        ]
+      },
+      "native_ka_sequence": [
+        {
+          "gid": 21,
+          "cluster": 0,
+          "advance": 707,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 0,
+          "cluster": 0,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "codepoint": "11B63",
+      "position": "bottom",
+      "native": null,
+      "donor": {
+        "name": "u11B63",
+        "advance": 0,
+        "bounds": [
+          -471,
+          -268.0,
+          -79,
+          -20
+        ]
+      },
+      "native_ka_sequence": [
+        {
+          "gid": 21,
+          "cluster": 0,
+          "advance": 707,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 0,
+          "cluster": 0,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "codepoint": "11B64",
+      "position": "top",
+      "native": null,
+      "donor": {
+        "name": "u11B64",
+        "advance": 0,
+        "bounds": [
+          -249,
+          551,
+          1,
+          839
+        ]
+      },
+      "native_ka_sequence": [
+        {
+          "gid": 21,
+          "cluster": 0,
+          "advance": 707,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 0,
+          "cluster": 0,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "codepoint": "11B65",
+      "position": "right",
+      "native": null,
+      "donor": {
+        "name": "u11B65",
+        "advance": 231,
+        "bounds": [
+          -86,
+          340,
+          208,
+          842
+        ]
+      },
+      "native_ka_sequence": [
+        {
+          "gid": 21,
+          "cluster": 0,
+          "advance": 707,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 0,
+          "cluster": 0,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "codepoint": "11B66",
+      "position": "top",
+      "native": null,
+      "donor": {
+        "name": "u11B66",
+        "advance": 231,
+        "bounds": [
+          -331,
+          680.0,
+          45,
+          870
+        ]
+      },
+      "native_ka_sequence": [
+        {
+          "gid": 21,
+          "cluster": 0,
+          "advance": 707,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 0,
+          "cluster": 0,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "codepoint": "11B67",
+      "position": "right",
+      "native": null,
+      "donor": {
+        "name": "u11B67",
+        "advance": 231,
+        "bounds": [
+          -89,
+          340,
+          287,
+          870
+        ]
+      },
+      "native_ka_sequence": [
+        {
+          "gid": 21,
+          "cluster": 0,
+          "advance": 707,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 0,
+          "cluster": 0,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "native_mark_anchors": [
+    {
+      "lookup": 11,
+      "glyph": "E",
+      "class": 0,
+      "anchor": [
+        0,
+        710
+      ]
+    },
+    {
+      "lookup": 11,
+      "glyph": "U",
+      "class": 1,
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "lookup": 11,
+      "glyph": "UU",
+      "class": 1,
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "lookup": 11,
+      "glyph": "VowelModifier",
+      "class": 3,
+      "anchor": [
+        240,
+        710
+      ]
+    },
+    {
+      "lookup": 11,
+      "glyph": "ChandrabinduInv",
+      "class": 0,
+      "anchor": [
+        0,
+        710
+      ]
+    },
+    {
+      "lookup": 12,
+      "glyph": "E",
+      "class": 0,
+      "anchor": [
+        0,
+        710
+      ]
+    },
+    {
+      "lookup": 12,
+      "glyph": "U",
+      "class": 1,
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "lookup": 12,
+      "glyph": "UU",
+      "class": 1,
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "lookup": 12,
+      "glyph": "VowelModifier",
+      "class": 3,
+      "anchor": [
+        240,
+        710
+      ]
+    },
+    {
+      "lookup": 18,
+      "glyph": "E",
+      "class": 0,
+      "anchor": [
+        0,
+        710
+      ]
+    },
+    {
+      "lookup": 18,
+      "glyph": "U",
+      "class": 1,
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "lookup": 18,
+      "glyph": "UU",
+      "class": 1,
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "lookup": 18,
+      "glyph": "VowelModifier",
+      "class": 3,
+      "anchor": [
+        240,
+        710
+      ]
+    },
+    {
+      "lookup": 18,
+      "glyph": "ChandrabinduInv",
+      "class": 0,
+      "anchor": [
+        0,
+        710
+      ]
+    },
+    {
+      "lookup": 19,
+      "glyph": "E",
+      "class": 0,
+      "anchor": [
+        0,
+        710
+      ]
+    },
+    {
+      "lookup": 19,
+      "glyph": "U",
+      "class": 1,
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "lookup": 19,
+      "glyph": "UU",
+      "class": 1,
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "lookup": 19,
+      "glyph": "VowelModifier",
+      "class": 3,
+      "anchor": [
+        240,
+        710
+      ]
+    }
+  ],
+  "integration_gates": [
+    "Import the licensed drawings into the native Sharada font, retaining notices.",
+    "Use zero advance for all Mn signs, including donor U+11B66 (currently 231).",
+    "Preserve native syllable shaping and contextual below-vowel variants.",
+    "Verify above/below/right attachment on consonants, conjuncts and independent vowels.",
+    "Check older browser shaping engines; add scoped compatibility only if needed.",
+    "Validate actual composite forms against the proposal, then review at dialogue size."
+  ]
+}

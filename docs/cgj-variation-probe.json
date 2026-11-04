@@ -1,0 +1,36 @@
+{
+  "status": "Historical pre-fix probe. Confirmed nonjoining CGJ/foreign-mark variation loss is repaired; see docs/cgj-variation-review.json for current verification and scope.",
+  "probes": [
+    {
+      "text": "\u3402\udb40\udd01\u034f\u3099",
+      "expectedNativeFamily": "Dad Script 8df1be125651",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script 8df1be125651"
+      ],
+      "nativeFamilyLoaded": true,
+      "withoutCGJBody": null
+    },
+    {
+      "text": "\ud835\udccf\ufe02\u034f\u3099",
+      "expectedNativeFamily": "Dad Math Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script 8c9e0b9b549b",
+        "Dad Script 6b5f778a9ecc"
+      ],
+      "nativeFamilyLoaded": false,
+      "withoutCGJBody": "\ud835\udccf\ufe02"
+    },
+    {
+      "text": "\u8c48\ufe00\u034f\u3099",
+      "expectedNativeFamily": "Dad CJK Variants",
+      "annotation": null,
+      "actualFamilies": [
+        "Dad Script 157d52da3704"
+      ],
+      "nativeFamilyLoaded": false,
+      "withoutCGJBody": "\u8c48\ufe00"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Noto-SVG-Apache-2.0",
+  "notices": [
+    "assets/fonts/licenses/NotoEmoji-SVG-Apache-2.0.txt",
+    "assets/fonts/licenses/NotoEmoji-SVG-NOTICE.txt"
+  ],
+  "status": "Integrated into production; source/candidate comparisons, old shaping, actual strips and exact four-product rebuild verified",
+  "files": [
+    {
+      "sequence": "🌍",
+      "subgroup": "place-map",
+      "path": "build/unicode-sources/noto-emoji-remaining-objects-svg/emoji_u1f30d.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f30d.svg",
+      "upstreamPath": "2D/svg/emoji_u1f30d.svg",
+      "aliases": [],
+      "sha256": "873feb50c7ac2bc1bd22e473de017be0c3c76662def7df423d0cfff0fc3f44b7",
+      "git_blob_sha1": "a91d83972884fe0cfaee85deb0ff63700dd07ff9",
+      "size": 14219,
+      "licenseFamily": "Noto-SVG-Apache-2.0",
+      "build_target": "emoji-artwork",
+      "include_sequences": [
+        "🌍"
+      ]
+    },
+    {
+      "sequence": "🌎",
+      "subgroup": "place-map",
+      "path": "build/unicode-sources/noto-emoji-remaining-objects-svg/emoji_u1f30e.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f30e.svg",
+      "upstreamPath": "2D/svg/emoji_u1f30e.svg",
+      "aliases": [],
+      "sha256": "a98e96c2bb5c9bee4794bbb18ce304ae439e6fd81ab3411ee98e2cf654949a10",
+      "git_blob_sha1": "feb7be4435955b92f9e2539145d963765a408d06",
+      "size": 12032,
+      "licenseFamily": "Noto-SVG-Apache-2.0",
+      "build_target": "emoji-artwork",
+      "include_sequences": [
+        "🌎"
+      ]
+    },
+    {
+      "sequence": "🌏",
+      "subgroup": "place-map",
+      "path": "build/unicode-sources/noto-emoji-remaining-objects-svg/emoji_u1f30f.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f30f.svg",
+      "upstreamPath": "2D/svg/emoji_u1f30f.svg",
+      "aliases": [],
+      "sha256": "bffbfbb3b47a3985a322ece784a0918045bdc37ab0ef1dfaf7cfb5359a4a0fef",
+      "git_blob_sha1": "9dbcd3ffd0d473d4d87f39f47090daa54cf3b03b",
+      "size": 14453,
+      "licenseFamily": "Noto-SVG-Apache-2.0",
+      "build_target": "emoji-artwork",
+      "include_sequences": [
+        "🌏"
+      ]
+    }
+  ]
+}

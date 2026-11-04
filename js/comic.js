@@ -1,3 +1,4 @@
+import { nativeShapingText } from "./native-shaping.js";
 // Laying out and drawing the comic: the four panels, the lettering, and its
 // balloons. drawComic draws onto any canvas and returns a description of
 // what it drew, which the page uses to report problems and the checks page
@@ -5,6 +6,9 @@
 
 import { artWindow, chooseWidth, fitPanels, layoutColumn, openBeyond, shiftedView } from "./layout.js";
 import { balloonOutline, balloonTail, clearOf } from "./balloon.js";
+import { graphemePrefix } from "./unicode.js";
+import { createTextMeasurer } from "./text-metrics.js";
+import { loadTextFonts, egyptianSignFamily, variationFontFamilies } from "./fonts.js";
 
 // The width of a panel's original art, and so of a cell when there isn't
 // much to say. Cells with a lot to say grow, keeping the original panels'
@@ -24,8 +28,8 @@ export const MAX_TEXT = 5000;
 // gets, as a share of the original size.
 const ROOMY_LINES = 12;
 const MIN_LETTERING = 0.6;
-// The biggest canvas every browser will draw (Safari's limits are the
-// strictest); a comic bigger than this is drawn scaled down to fit.
+// Conservative export budgets. A larger logical comic is scaled down;
+// actual browser/device allocation can still fail and is handled by the UI.
 const MAX_CANVAS_SIDE = 16384;
 const MAX_CANVAS_AREA = 16777216;
 const GUTTER = 30;
@@ -123,16 +127,31 @@ export async function loadComic(base = "") {
   const images = await Promise.all(assets.panels.map((p) => loadImage(base + p.image)));
   const signed = assets.panels.find((p) => p.signature);
   const signature = signed && (await loadImage(base + signed.signature.image));
-  try {
-    await document.fonts.load(`20px "${FONT}"`, "AB");
-  } catch {
-    // Render with whatever the browser has rather than nothing.
-  }
+  await document.fonts.load(`20px "${FONT}"`, "AB");
   return { assets, images, signature };
 }
 
-function fontString(size) {
-  return `${size}px "${FONT}", cursive`;
+export function makeFontString(size, families = [], policy = "text", variationFamily) {
+  families = families.filter(f => (f !== 'Dad Emoji' || policy === 'custom')
+    && (f !== 'Dad Egyptian Variants' || policy === 'egyptian-variant')
+    && (!variationFontFamilies.has(f) || f===variationFamily || (f==='Dad Egyptian Variants' && policy==='egyptian-variant')));
+  const overrides = new Set(['Dad Emoji','Dad Grid','Dad Egyptian Variants']);
+  const ordered = [...families.filter(f => overrides.has(f)), FONT, ...families.filter(f => !overrides.has(f))];
+  if (variationFamily && families.includes(variationFamily)) ordered.unshift(variationFamily);
+  if (policy === "egyptian-sign" && egyptianSignFamily) ordered.unshift(egyptianSignFamily);
+  if (policy === "native") ordered.unshift("Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji");
+  return `${size}px ${ordered.map(f => `"${f}"`).concat('cursive').join(', ')}`;
+}
+
+// Wait before measuring or exporting; callers can discard superseded requests.
+export async function renderComic(canvas, comic, texts, isCurrent = () => true) {
+  const loaded = await loadTextFonts(texts.map(text => graphemePrefix(text, MAX_TEXT)));
+  if (!isCurrent()) return null;
+  const report = drawComic(canvas, { ...comic, fontFamilies: loaded.families }, texts);
+  report.unmappedCodepoints = loaded.missing;
+  report.loadedFontFamilies = loaded.families;
+  report.emojiFallbacks = loaded.emojiFallbacks;
+  return report;
 }
 
 // Whether a point in a cell is clear of the panel's artwork (points outside
@@ -170,28 +189,19 @@ function speakerPoint(panel, point) {
 // each
 // speech is {who, lines, speaker, outline, tail, stroke} in cell
 // coordinates.
-export function drawComic(canvas, { assets, images, signature }, given) {
+export function drawComic(canvas, { assets, images, signature, fontFamilies = [] }, given) {
+  const fontString = (size, policy, family) => makeFontString(size, fontFamilies, policy, family);
   const ctx = canvas.getContext("2d");
   // Only so much of any one text is lettered.
   const clipped = [];
   const texts = given.map((text, i) => {
     if (text.length <= MAX_TEXT) return text;
     clipped.push(i);
-    const cut = text.slice(0, MAX_TEXT);
+    const cut = graphemePrefix(text, MAX_TEXT);
     const end = cut.search(/\s\S*$/);
     return (end > 0 ? cut.slice(0, end) : cut).trimEnd() + "…";
   });
-  const widths = new Map();
-  const measure = (text, size) => {
-    const key = `${size}\u0000${text}`;
-    let width = widths.get(key);
-    if (width === undefined) {
-      ctx.font = fontString(size);
-      width = ctx.measureText(text).width;
-      widths.set(key, width);
-    }
-    return width;
-  };
+  const measure = createTextMeasurer(ctx, fontString);
   ctx.font = fontString(100);
   const capRatio = ctx.measureText("H").actualBoundingBoxAscent / 100;
   const panelWidth = assets.panels.reduce((sum, p) => sum + p.width, 0) / assets.panels.length;
@@ -202,7 +212,7 @@ export function drawComic(canvas, { assets, images, signature }, given) {
   const originalCap = (assets.capHeight * CELL_WIDTH) / panelWidth;
   const originalSize = originalCap / capRatio;
   const fullLine = CELL_WIDTH - 2 * SIDE_GAP * originalCap;
-  const longest = Math.max(...texts.map((t) => measure((t ?? "").toUpperCase(), originalSize)));
+  const longest = Math.max(...texts.map((t) => measure(t ?? "", originalSize)));
   const lettering = Math.min(1, Math.max(MIN_LETTERING, Math.sqrt((ROOMY_LINES * fullLine) / Math.max(1, longest))));
   const cap = originalCap * lettering;
   const fontSize = cap / capRatio;
@@ -212,7 +222,7 @@ export function drawComic(canvas, { assets, images, signature }, given) {
   // panel 3 of the original, and otherwise in a balloon. (But see below:
   // loose lettering is only for text that has to fill its panel.)
   const speechFor = (meta, text) => {
-    const lines = measure(text.toUpperCase(), fontSize) / lineWidth;
+    const lines = measure(text, fontSize) / lineWidth;
     return lines >= (meta.speech === "loose" ? LOOSE_LINES : WALL_LINES) ? "loose" : "balloon";
   };
   let speeches = assets.panels.map((meta, i) => (meta.speech ? speechFor(meta, texts[i] ?? "") : null));
@@ -231,10 +241,11 @@ export function drawComic(canvas, { assets, images, signature }, given) {
       const view = shiftedView(meta, artWindow(meta, (cellWidth * meta.width) / CELL_WIDTH)[0]);
       return lower[i] ? { ...view, height: meta.height + lower[i] } : view;
     });
-    const calvin = layoutCalvin(views[calvinIndex], texts[CALVIN].toUpperCase(), measure, fontSize, cap, cellWidth);
+    const calvin = layoutCalvin(views[calvinIndex], texts[CALVIN], measure, fontSize, cap, cellWidth);
     const specs = views.map((p, i) => ({
       width: p.width,
       height: p.height,
+      keepVisible: p.keepVisible,
       free: p.free ?? [],
       reserved: i === calvinIndex ? calvin.reserved : [],
       margin: (styles[i] === "balloon" ? BALLOON_MARGIN : ART_MARGIN) * cap,
@@ -252,8 +263,12 @@ export function drawComic(canvas, { assets, images, signature }, given) {
       speakerX: p.speakers.dad?.[0],
       speakerY: p.speakers.dad?.[1],
       keepGap: KEEP_GAP * cap,
+      // Small opening balloons need room for their complete upper curve.
+      padding: i===0 && measure(texts[0],fontSize)
+        + 2*(BALLOON.padX+BALLOON.reach)*cap < cellWidth
+        ? {x:SIDE_GAP*cap,y:cap} : undefined,
     }));
-    const result = fitPanels(specs, [...texts.slice(0, 3).map((t) => t.toUpperCase()), ""], {
+    const result = fitPanels(specs, [...texts.slice(0, 3), ""], {
       measure,
       fontSize,
       lineHeight: LINE_HEIGHT,
@@ -262,9 +277,10 @@ export function drawComic(canvas, { assets, images, signature }, given) {
       cellWidth,
       cellHeight,
       artWidth: CELL_WIDTH,
+      fitUnbreakable: true,
       padding: { x: SIDE_GAP * cap, y: Math.max(0, TOP_GAP * cap - leading) },
     });
-    return { ...result, calvin, views };
+    return { ...result, fits: result.fits && calvin.column.fits, calvin, views };
   };
   const artHeight = Math.max(...assets.panels.map((p) => (p.height * CELL_WIDTH) / p.width));
   const maxWidth = Math.min(
@@ -348,13 +364,13 @@ export function drawComic(canvas, { assets, images, signature }, given) {
     MAX_CANVAS_SIDE / height,
     Math.sqrt(MAX_CANVAS_AREA / (width * height)),
   );
-  canvas.width = Math.floor(width * scale);
-  canvas.height = Math.floor(height * scale);
+  canvas.width = Math.max(1, Math.floor(width * scale));
+  canvas.height = Math.max(1, Math.floor(height * scale));
   ctx.setTransform(scale, 0, 0, scale, 0, 0);
   ctx.fillStyle = "#fff";
   ctx.fillRect(0, 0, width, height);
 
-  const report = { fits: result.fits, cap, lettering, cellWidth, cellHeight, scale, clipped, panels: [] };
+  const report = { font: fontString(fontSize), fits: result.fits, cap, fontSize, lettering, cellWidth, cellHeight, scale, clipped, panels: [] };
   result.panels.forEach((panel, i) => {
     const meta = assets.panels[i];
     const view = views[i];
@@ -367,7 +383,7 @@ export function drawComic(canvas, { assets, images, signature }, given) {
       });
     }
     if (i === calvinIndex) {
-      said.push({ who: "calvin", lines: calvinLines, speaker: speakerPoint(panel, view.speakers.calvin) });
+      said.push({ who: "calvin", lines: calvinLines, fontSize: calvin.column.fontSize, speaker: speakerPoint(panel, view.speakers.calvin) });
     }
     const x = OUTER + (i % 2) * (cellWidth + GUTTER);
     const y = OUTER + Math.floor(i / 2) * (cellHeight + GUTTER);
@@ -381,7 +397,7 @@ export function drawComic(canvas, { assets, images, signature }, given) {
     ctx.fillRect(0, 0, cellWidth, cellHeight);
     // Calvin always has a balloon; Dad as his panel's style says.
     const ballooned = said.filter((s) => s.who === "calvin" || speeches[i] === "balloon");
-    drawBalloons(ctx, panel, view, ballooned, cap);
+    drawBalloons(ctx, panel, view, ballooned, cap, i===0);
     // Where the art is black ink on white, multiplying it in keeps every
     // line of it visible even where a balloon overlaps it.
     if (meta.background === "#fff") ctx.globalCompositeOperation = "multiply";
@@ -417,7 +433,7 @@ export function drawComic(canvas, { assets, images, signature }, given) {
       );
     }
     for (const speech of said) {
-      drawLines(ctx, speech.lines, fontSize);
+      drawLines(ctx, speech.lines, speech.fontSize ?? fontSize, fontFamilies);
       if (!ballooned.includes(speech) && speech.lines.length) {
         const balloons = ballooned.filter((s) => s.outline).map((s) => s.outline);
         speech.stroke = drawStroke(ctx, speech, panel, view, cap, balloons);
@@ -444,8 +460,9 @@ function layoutCalvin(meta, text, measure, fontSize, cap, cellWidth) {
   const side = ((BALLOON.reach + 0.2) * cap) / scale;
   const padX = (BALLOON.padX * cap) / scale;
   const padY = (BALLOON.padY * cap) / scale;
+  let replySize = fontSize;
   const lay = (width) =>
-    layoutColumn(text, { measure, fontSize, lineHeight: LINE_HEIGHT, width: width * scale });
+    layoutColumn(text, { measure, fontSize: replySize, lineHeight: LINE_HEIGHT, width: width * scale });
   // The open space, beside Dad's head, that a column `height` tall can use.
   const room = (height) => {
     const [a, b] = openSpan(meta, bottom - height / scale, bottom, (x0 + x1) / 2);
@@ -455,13 +472,22 @@ function layoutCalvin(meta, text, measure, fontSize, cap, cellWidth) {
   // as the open space allows.
   let width = x1 - x0;
   let column = lay(width);
-  while (column.lines.length > CALVIN_MAX_LINES) {
+  while (column.lines.length > CALVIN_MAX_LINES || !column.fits) {
     const wider = width * 1.15;
     const candidate = lay(wider);
     const [a, b] = room(candidate.height);
     if (wider > b - a) break;
     width = wider;
     column = candidate;
+  }
+  // An indivisible cluster (or a long glued run) can be wider than the
+  // entire opening. Keep it intact and reduce only this reply's lettering.
+  // Re-measure after each reduction: font hinting and mark placement mean
+  // that scaling old bounds is not sufficient.
+  for (let attempt = 0; !column.fits && attempt < 32; attempt++) {
+    const used = Math.max(...column.lines.map(line => line.width));
+    replySize *= Math.min(0.9, width * scale / used * 0.98);
+    column = lay(width);
   }
   // Centred where his balloon was, but kept within the open space.
   const [a, b] = room(column.height);
@@ -482,14 +508,74 @@ function layoutCalvin(meta, text, measure, fontSize, cap, cellWidth) {
   };
 }
 
-function drawLines(ctx, lines, fontSize) {
-  ctx.font = fontString(fontSize);
+function drawLines(ctx, lines, fontSize, fontFamilies) {
+  ctx.font = makeFontString(fontSize, fontFamilies);
   ctx.fillStyle = INK;
   ctx.textBaseline = "alphabetic";
+  ctx.textAlign = "left";
   // Centre the capital letters vertically in each line box.
   const capHeight = ctx.measureText("H").actualBoundingBoxAscent;
   for (const line of lines) {
-    ctx.fillText(line.text, line.x, line.y + (line.height + capHeight) / 2);
+    ctx.font = makeFontString(line.fontSize ?? fontSize, fontFamilies);
+    for (const run of line.ink?.runs ?? [{drawText: line.text, direction: line.direction ?? "ltr", offset: 0, glyphs:line.ink?.glyphs,
+      font:line.ink?.font,fontSize:line.ink?.fontSize,strokeWidth:line.ink?.strokeWidth}]) {
+      ctx.font = run.font ?? makeFontString(run.fontSize ?? line.fontSize ?? fontSize, fontFamilies, run.emojiPolicy);
+      ctx.direction = run.direction;
+      const x = line.x + (line.ink?.drawOffset ?? 0) + run.offset;
+      const y = line.y + (line.baseline ?? (line.height + capHeight) / 2) + (run.baselineOffset ?? 0);
+      if (run.glyphs) {
+        ctx.save();ctx.translate(x,y);ctx.scale(run.scaleX??1,1);
+        for (const glyph of run.glyphs) {
+          ctx.save();
+          if (glyph.primitive==='outline') {
+            ctx.translate(glyph.x,glyph.y);ctx.scale(glyph.flipX?-glyph.scale:glyph.scale,glyph.scale);
+            ctx.scale(glyph.stretchX??1,1);ctx.translate(...glyph.pathOffset);
+            if(glyph.contours){
+              const path=new Path2D();
+              for(const contour of glyph.contours)path.addPath(new Path2D(contour.path),new DOMMatrix(contour.matrix));
+              ctx.fill(path);
+              if(glyph.strokeWidth){ctx.strokeStyle=INK;ctx.lineWidth=glyph.strokeWidth;ctx.lineJoin='round';ctx.stroke(path);}
+            }else {
+              const path=new Path2D(glyph.path);ctx.fill(path);
+              if(glyph.strokeWidth){ctx.strokeStyle=INK;ctx.lineWidth=glyph.strokeWidth;ctx.lineJoin='round';ctx.stroke(path);}
+            }
+            ctx.restore();continue;
+          }
+          if (glyph.primitive==='lost'||glyph.primitive==='damage') {
+            ctx.translate(glyph.x,glyph.y);ctx.scale(glyph.scale,glyph.scale);
+            ctx.beginPath();ctx.rect(0,0,glyph.width,glyph.height);ctx.clip();
+            ctx.lineWidth=glyph.stroke;ctx.strokeStyle=ctx.fillStyle;ctx.lineCap='butt';ctx.beginPath();
+            for(let d=-glyph.height-(glyph.phase??0);d<=glyph.width;d+=glyph.step) {
+              ctx.moveTo(d,glyph.height);ctx.lineTo(d+glyph.height,0);
+            }
+            ctx.stroke();ctx.restore();continue;
+          }
+          ctx.font=glyph.font;ctx.direction=glyph.direction;
+          ctx.translate(glyph.x,glyph.y);ctx.scale(glyph.flipX?-glyph.scale:glyph.scale,glyph.scale);
+          ctx.fillText(nativeShapingText(glyph.drawText),0,0);
+          if(glyph.strokeWidth){
+            ctx.font=ctx.font.replace('Dad Emoji','Dad Emoji Ink');
+            ctx.strokeStyle=INK;ctx.lineWidth=glyph.strokeWidth;
+            ctx.lineJoin='round';ctx.miterLimit=2;
+            ctx.strokeText(nativeShapingText(glyph.drawText),0,0);
+          }
+          ctx.restore();
+        }
+        ctx.restore();
+      } else if (run.strokeWidth) {
+        // Dad Emoji retains its ink contours in the monochrome glyph. Stroke
+        // those after the colour layers, giving fine lines optical weight.
+        ctx.save(); ctx.translate(x,y); ctx.scale(run.scaleX ?? 1,1);
+        ctx.fillText(nativeShapingText(run.drawText),0,0);
+        ctx.font = ctx.font.replace('Dad Emoji', 'Dad Emoji Ink');
+        ctx.strokeStyle = INK; ctx.lineWidth = run.strokeWidth;
+        ctx.lineJoin = "round"; ctx.miterLimit = 2;
+        ctx.strokeText(nativeShapingText(run.drawText),0,0); ctx.restore();
+      } else if (run.scaleX !== undefined && run.scaleX !== 1) {
+        ctx.save(); ctx.translate(x,y); ctx.scale(run.scaleX,1);
+        ctx.fillText(nativeShapingText(run.drawText),0,0); ctx.restore();
+      } else ctx.fillText(nativeShapingText(run.drawText),x,y);
+    }
   }
 }
 
@@ -555,7 +641,7 @@ function tailPath(ctx, { base: [b1, b2], bend, tip }) {
 // on it. All outlines are stroked at double width and then all are filled
 // white, which leaves just the outer edge of their union: balloons that
 // touch merge, and each tail opens into its balloon.
-function drawBalloons(ctx, panel, meta, speeches, cap) {
+function drawBalloons(ctx, panel, meta, speeches, cap, topRequiresRight=false) {
   const isFree = (p) => openAt(panel, meta, p);
   // Whatever of a balloon lies outside the panel is cut off by its border.
   const inside = ([x, y]) => x >= 0 && x <= panel.width && y >= 0 && y <= panel.height;
@@ -574,14 +660,20 @@ function drawBalloons(ctx, panel, meta, speeches, cap) {
       shown.filter((s) => s !== speech).flatMap(boxes),
       (BALLOON.padX + BALLOON.line + 0.2) * cap,
     );
+    const grid = speech.lines.some(line => line.grid);
+    const extent = Math.max(...speech.lines.map(line => line.width),
+      speech.lines.at(-1).y + speech.lines.at(-1).height - speech.lines[0].y);
     speech.outline = balloonOutline(speech.lines, {
       padX: BALLOON.padX * cap,
       padY: BALLOON.padY * cap,
       radius: BALLOON.radius * cap,
-      roundness: BALLOON.roundness,
-      ovalLines: 1,
+      // Grid ink reaches its rectangle's edges, unlike capitals with
+      // interline leading. Keep corner rounding and inward bow clear of it.
+      roundness: grid ? 0 : BALLOON.roundness,
+      bow: grid ? Math.min(0.03,0.08*cap/Math.max(1,extent)) : undefined,
+      ovalLines: grid ? 0 : 1,
       isFree: (p) => (!inside(p) || isFree(p)) && othersText(p),
-      panel: { x0: 0, y0: 0, x1: panel.width, y1: panel.height, reach: BALLOON.reach * cap },
+      panel: { x0: 0, y0: 0, x1: panel.width, y1: panel.height, reach: BALLOON.reach * cap, topRequiresRight },
     });
   }
   const shapes = [];

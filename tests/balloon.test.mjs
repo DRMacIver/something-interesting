@@ -86,6 +86,15 @@ test("a long remark's oval has blunt ends", () => {
   assert.ok(r > 0.6 * cap, `curves as tightly as ${r}`);
 });
 
+test("a tall combining stack's oval has blunt ends and encloses its ink", () => {
+  const cap=46;
+  const lines=[line(200,333,72,418)];
+  const outline=balloonOutline(lines,{padX:0.36*cap,padY:0.7*cap,radius:cap,isFree:()=>true});
+  enclosesLines(outline,lines);
+  const r=tightest(outline,()=>true);
+  assert.ok(r>0.6*cap,`curves as tightly as ${r}`);
+});
+
 test("an oval that would hit the art becomes a tighter shape", () => {
   const lines = [line(100, 100, 60, 12)];
   const outline = balloonOutline(lines, {
@@ -202,6 +211,17 @@ test("a balloon near the top of the panel runs into the border", () => {
   assert.ok(y0 < -6);
   // But it's nowhere near the sides.
   assert.ok(x0 > 0 && x1 < 300);
+});
+
+test("opening balloons only attach to the top when they also reach the right",()=>{
+  const floating=[line(100,30,80)];
+  const outline=balloonOutline(floating,{...options,panel:{...panel,topRequiresRight:true,reach:40}});
+  enclosesLines(outline,floating);
+  assert.ok(bounds(outline)[1]>0);
+  const wide=[line(20,8,270),line(20,18,270)];
+  const attached=balloonOutline(wide,{...options,panel:{...panel,topRequiresRight:true}});
+  assert.ok(bounds(attached)[1]<0);
+  assert.ok(bounds(attached)[2]>panel.x1);
 });
 
 test("a balloon in a top corner runs into both borders", () => {
@@ -617,4 +637,39 @@ test("a tail kept clear of another balloon leaves from elsewhere", () => {
   const [b1, b2] = tail.base;
   const points = [b1, b2, tail.bend, tail.tip];
   for (const p of points) assert.ok(clear(p), `${p} is too close to the other balloon`);
+});
+
+test("extremely shallow replies and grids retain rounded ends and ink clearance", () => {
+  const cap = 46.289308176100626;
+  const cases = [
+    {lines: [line(435.1271, 582.1093, 341.5163, 72.6668)], ovalLines: 1, bow: 0.03},
+    {lines: [line(406.2773, 642.5047, 290, 12.2715)], ovalLines: 1, bow: 0.03},
+    {lines: [line(402.7925, 663.99, 296.9697, 11.7845), line(402.7925, 675.7745, 296.9697, 11.7845)], ovalLines: 0, bow: 0.08 * cap / 296.9697},
+  ];
+  for (const {lines, ovalLines, bow} of cases) {
+    const outline = balloonOutline(lines, {
+      padX: 0.7 * cap, padY: 0.36 * cap, radius: cap,
+      ovalLines, bow, isFree: () => true,
+    });
+    enclosesLines(outline, lines);
+    for (const [x,y] of outline) for (const l of lines) {
+      const distance = Math.hypot(Math.max(l.x-x, 0, x-l.x-l.width), Math.max(l.y-y, 0, y-l.y-l.height));
+      assert.ok(distance >= 0.25 * cap, `clearance ${distance/cap} caps`);
+    }
+    assert.ok(tightest(outline, () => true) > 0.5 * cap);
+  }
+});
+
+test('moderately wide emoji rows avoid tight ellipse tips at dialogue scale',()=>{
+  const cap=46.289308176100626;
+  for (const width of [310.38526916503906,316.2844543457031]) {
+    const lines=[line(240,228,width,75.83679849368471)];
+    const outline=balloonOutline(lines,{padX:.7*cap,padY:.36*cap,radius:cap,isFree:()=>true});
+    enclosesLines(outline,lines);
+    assert.ok(tightest(outline,()=>true)>=.6*cap);
+    for (const [x,y] of outline) for (const l of lines) {
+      const distance=Math.hypot(Math.max(l.x-x,0,x-l.x-l.width),Math.max(l.y-y,0,y-l.y-l.height));
+      assert.ok(distance>=.25*cap);
+    }
+  }
 });

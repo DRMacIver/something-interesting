@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-03",
+  "status": "First15 full production pressure sources integrated and locally reviewed; remaining130TTsources warming privately",
+  "sources": 15,
+  "glyphs": 8470,
+  "counts": {
+    "adapted": 8148,
+    "native-blank": 141,
+    "native-retained-guard": 181
+  },
+  "invariantVerification": "output/font-review/supplemental-production-first15/verification.json",
+  "wholeFields": 17,
+  "wholeFieldFailures": 0,
+  "fieldEvidence": "output/font-review/supplemental-production-first15/whole-field-checks.json",
+  "rawThresholdPoreAccounting": true,
+  "visualInspection": {
+    "sizes": [
+      22,
+      44
+    ],
+    "reference": "Original Dad lettering beside frozen native and integrated pressure samples",
+    "pages": [
+      {
+        "file": "output/font-review/supplemental-production-first15/page-1.png",
+        "sha256": "57b30c9378b89f92bd8b1438a8ccf7128720d747bbf0d1e70da67f468b729b70"
+      },
+      {
+        "file": "output/font-review/supplemental-production-first15/page-2.png",
+        "sha256": "3c0db6d498edcbb7f83230d0043e2dc699d9ef051a19c9adc97e5da6935405cf"
+      },
+      {
+        "file": "output/font-review/supplemental-production-first15/page-3.png",
+        "sha256": "449cd9e3040196149763958c65ee5d65091a25131ca97f059905034b420a567e"
+      },
+      {
+        "file": "output/font-review/supplemental-production-first15/page-4.png",
+        "sha256": "e206e8146643e2eeb0a64a1ac9e60b349869e8189f306b636d0f5902a267589c"
+      },
+      {
+        "file": "output/font-review/supplemental-production-first15/page-5.png",
+        "sha256": "3ed7dc63f8156060b1a98a2ecd3f03456396382486033206620367da2482069d"
+      },
+      {
+        "file": "output/font-review/supplemental-production-first15/page-6.png",
+        "sha256": "b11b15897ec61457434b9e0aedb4207fd42eef132154ded698abb4847e56e21d"
+      }
+    ],
+    "finding": "Smooth visible weight modulation without scratch edges. Native marks, joins, counters and proportional advances remain coherent in these17sampled fields."
+  },
+  "tests": {
+    "focused": 12,
+    "result": "passed",
+    "seconds": 7.82,
+    "scope": [
+      "native pressure/counter guards",
+      "exactnativebbox/LSB origin",
+      "nativepost3source glyphnames",
+      "source-specificcache keys",
+      "deterministiccache roundtrip",
+      "rollbacktransaction",
+      "privatewarmer isolation",
+      "duplicatecache collision detection"
+    ]
+  },
+  "build": {
+    "result": "terminalexit0",
+    "log": "/tmp/unicode-supplemental-first15-build.log",
+    "shards": 381,
+    "bytes": 72109336
+  },
+  "limitations": [
+    "17fields are representative visual/shaping evidence, not all-language linguistic approval",
+    "Native-retained guard cases are explicitly counted, not described as modified drawings",
+    "Localfont specimens do not execute appbidi/linebreaking/balloons/export; currentbrowserrestriction honored",
+    "145sourceconfig is queued/activeforprivatewarmers, but currentpublicmanifestcontains15pressure sources"
+  ]
+}

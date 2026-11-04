@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-03",
+  "status": "implemented and source/JS/browser verified; not full beta completion",
+  "scope": "All982ordered native insertion candidates derived from the pinned source metadata, including documented mirrors and Unicode-registered rotations.",
+  "recovery": {
+    "previousMatched": 910,
+    "previousUnmatched": 72,
+    "affineMirrorInstructions": 65,
+    "nativeAlternateIdentities": 3,
+    "documentedCellRules": 4,
+    "accepted": 982,
+    "rejected": 0,
+    "unmodifiedSingle": 255,
+    "unmodifiedMultiple": 212,
+    "mirrored": 467,
+    "rotated": 24,
+    "rotatedMirrored": 24,
+    "geometryObservations": 512
+  },
+  "semantics": [
+    "Container-alone native shaping supplies mirror glyph identity, including C2a/C2b and D54/D55 alternates. Logical input is not rewritten.",
+    "Explicit source mr instructions become affine reflections of the sign outline in its native surface. Later children retain orientation; actual mirrored-probe slot positions/sizes are preserved.",
+    "G18/I7 seven-cell bodies do not activate documented six-cell insertion rules. Four recoveries use declared slot dimensions, edge/centre anchors and twentieth-surface offsets, calibrated by the working native G25 offset. No generic cavity is substituted.",
+    "All previous910entries, including the earlier428safe subset, remain exactly unchanged. Font programs, catalog drawings and original Dad/Calvin art remain unchanged."
+  ],
+  "checks": {
+    "focusedJS": {
+      "tests": 24,
+      "log": "/tmp/insertion-mirror-helpers-final-js.log",
+      "scope": "Every982candidate expression reaches one real container and the expected number of child drawings; existing damage/RTL/group cases pass."
+    },
+    "fullJS": {
+      "tests": 357,
+      "passed": 357,
+      "seconds": 13.22,
+      "log": "/tmp/insertion-mirror-helpers-full-js.log"
+    },
+    "source": {
+      "tests": 9,
+      "seconds": 15.51,
+      "log": "/tmp/insertion-mirror-helpers-current-source.log",
+      "scope": "Deterministic rebuild; all910baseline entries unchanged; every control point of65helper mirrors reflects exactly; slots match raw mirrored native probes; documented offsets/slot sizes checked."
+    },
+    "builder": {
+      "accepted": 982,
+      "rejected": 0,
+      "log": "/tmp/insertion-mirror-helpers-final-build.log"
+    },
+    "browser": {
+      "cases": 676,
+      "failures": [],
+      "geometry": []
+    },
+    "focusedVisual": [
+      "egyptian-mirror-helpers",
+      "egyptian-native-mirror-alternates",
+      "egyptian-documented-cells"
+    ]
+  },
+  "references": [
+    "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-11/",
+    "build/unicode-sources/egyptian-text/config.py",
+    "build/unicode-sources/egyptian-text/insertions.py",
+    "docs/egyptian-insertion-review.json"
+  ],
+  "baseline": "output/font-review/pre-insertion-mirror-helpers/",
+  "limits": [
+    "Zero unmatched candidates is an inventory result, not proof of all possible hieroglyph strings or collision freedom.",
+    "Source geometry observations and tiny insertion content remain source-specific; linguistic/native-reader feedback can follow beta.",
+    "Unicode recommends separately encoded meaningful reverse forms rather than mirroring D54 into D55; test strings exercise literal renderer transformations, not Egyptian translations.",
+    "Undocumented cavity requests/malformed strings retain fallback; they are not counted as verified source templates.",
+    "Full source-family/style and actual product audit remain incomplete."
+  ],
+  "sha256": {
+    "tools/font/build_egyptian_insertions.py": "854d319ac5c8c020f2f821277e6f55288dbe316e15941da572ee9f568096f4f3",
+    "js/egyptian-insertion-manifest.js": "f4a3f7ab53656aa0b90d52914a4efe0f7d51b2f2448aaf69a20545407ca2ba65",
+    "docs/egyptian-insertion-build.json": "132f2154fe3d35636cc430de2e0998e7e0a0d85317613cf3d38da05ff4a062f4",
+    "tests/test_egyptian_insertion_build.py": "ffdac2f46eed9cff83a218d73a252c5c5456dd38485de3afd86c09c2a460005d",
+    "tests/egyptian-layout.test.mjs": "5099b7a0df456b747f7c9fb50506e1c90259376c52aa7fa671623654e3d8aca6",
+    "tools/unicode-checks.html": "ffac0cca3d8fca7e3e3a0d3b5f8189ef3c29a3114e582f7e2d82ec63b25ff1d0"
+  }
+}

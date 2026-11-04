@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-03",
+  "status": "Targeted baseline review; required optical/pen changes are not yet implemented.",
+  "specimen": "output/font-review/nonpen-review.png",
+  "evidence": "output/font-review/nonpen-review.json",
+  "limitations": [
+    "Local native font shaping only; no app routing, layout or export execution.",
+    "At 22/44 px, these selected samples establish visual findings only."
+  ],
+  "sources": [
+    {
+      "number": 1,
+      "decision": "optical-adjustment-needed",
+      "observation": "Native ink is expressive; Arabic body is small beside Dad. Preserve contextual native joins and tall calligraphic ascenders."
+    },
+    {
+      "number": 3,
+      "decision": "optical-adjustment-needed",
+      "observation": "Handwritten native forms; Hangul body is small/light beside Dad."
+    },
+    {
+      "number": 15,
+      "decision": "weight-adjustment-needed",
+      "observation": "Native reconstructed stroke forms are legible but narrow/light at 22px."
+    },
+    {
+      "number": 18,
+      "decision": "guarded-pen-adaptation-needed",
+      "observation": "Heavy supplemental pictographs; preserve internal openings and avoid further thickening."
+    },
+    {
+      "number": 25,
+      "decision": "weight-adjustment-needed",
+      "observation": "Thin Anatolian outlines at 22px; detail-preserving optical treatment needed."
+    },
+    {
+      "number": 102,
+      "decision": "retain-structural-geometry",
+      "observation": "Cell-bound lines, bars and mosaics must preserve exact relative alignment. No independent glyph warp."
+    },
+    {
+      "number": 150,
+      "decision": "retain-attached-mark",
+      "observation": "Attached U+1DFA on Syriac Alaph/Beth has visible native placement and open body; isolated dotted-circle atlas was not a defect."
+    },
+    {
+      "number": 177,
+      "decision": "retain-attached-mark",
+      "observation": "Attached U+11241 on two Khojki bases remains visible below the native body with clearance; retain native GPOS."
+    },
+    {
+      "number": 188,
+      "decision": "retain-noncontributing-source",
+      "observation": "This source contributes no novel visible repertoire under production precedence. Its sampled CJK punctuation/radicals are source inventory, not routed Nushu proof."
+    }
+  ],
+  "evidenceSha256": "6b73593eda8e5e166cd6895f0041cc5c344175d2b150807d40af715469731ca8"
+}

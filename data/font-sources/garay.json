@@ -1,0 +1,9 @@
+{
+  "publisher": "GNU Unifont",
+  "version": "18.0.01",
+  "builder": "garay",
+  "files": [],
+  "sourceManifest": "data/font-sources/tolong.json",
+  "licence": "assets/fonts/licenses/Unifont-OFL.txt",
+  "notes": "Builds only 69 Garay characters from the verified donor; guarded stroke reconstruction, native mark and mkmk, case-preserving nonjoining RTL forms."
+}

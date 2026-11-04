@@ -1,0 +1,143 @@
+{
+  "date": "2026-11-03",
+  "status": "Strict dense lineage helper prepared and isolated DadCJKVariants candidate verified; production dense fonts/companions remain unmodified.",
+  "localOnly": true,
+  "browserActions": 0,
+  "metadataContract": {
+    "field": "denseTreatment",
+    "method": "native-normal-finer-pen-v1",
+    "recipeToken": ":dense-native-pen:",
+    "sourceProfiles": [
+      "NotoSerifKhitanSmallScript-Regular.ttf",
+      "NotoSerifTangut-Regular.ttf",
+      "Jigmo.ttf",
+      "Jigmo2.ttf",
+      "Jigmo3.ttf"
+    ],
+    "mixedNativeInput": "DadCJKVariants retains actual frozen native file/hash and unchanged pinned raw-donor list, separately from Jigmo finish profile."
+  },
+  "identityProof": [
+    "Original archive/member hashes and Unicode18standard compatibility targets remain pinned. Every one of1002raw native donor compatibility outlines/metrics equals frozen native variant.",
+    "Historical helper recomputes every dense cacheKey from frozen native geometry, native metrics/em/bbox and pre-post3glyphname restored by GID.",
+    "Actual output glyphs exactly match approved content-addressed cache drawings and records; explicit native fallback exactly matches frozen native source curves.",
+    "All native cmap tables(includingUVS), metrics, em and GSUB/GPOS/GDEF remain exact; derived native contour counts and bounding frames unchanged; all5dense phase guard floors verified.",
+    "Markedcompanions must reference current painted base manifest/hash and copy every source drawing/metric/hint/UVS exactly. Existing exact-copy assertions remain intact."
+  ],
+  "checks": [
+    {
+      "command": ".venv/bin/python -m pytest -q tests/test_dense_baseline_checks.py",
+      "passed": 4,
+      "seconds": 1.12,
+      "scope": "Named and post3alias source/cache/output fixtures; stale kernel and unreviewed source rejection."
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q tests/test_font_cjk_variants.py::test_all_standardized_cjk_pairs_keep_pinned_native_identity_and_reviewed_finish tests/test_font_cjk_variants.py::test_cjk_variant_inventory_is_exact_and_ordinary_bases_are_not_overrides",
+      "passed": 2,
+      "seconds": 1.93,
+      "scope": "Current native public variant; no build command invoked."
+    },
+    {
+      "log": "/tmp/unicode-dense-cjk-prototype-lineage.log",
+      "status": "terminal0",
+      "scope": "Read-only assert_cjk_variant_lineage against build/dense-cjk-prototype;1002pinned compatibility mappings and full frozen/cache/derived proof."
+    },
+    {
+      "status": "92current painted-base source/hash links match",
+      "scope": "Metadata linkage only; full rebuilt dense companion checks still pending."
+    }
+  ],
+  "prototype": {
+    "font": "build/dense-cjk-prototype/assets/fonts/dad-cjk-variants.woff2",
+    "sha256": "fafd55487b64e5f8d287cc2637432ac0765795227bc4f921fc8846f7ad9cd2a9",
+    "nativeMixedInput": {
+      "file": "output/font-review/supplemental-production-baselines/dad-cjk-variants.woff2",
+      "sha256": "d69213f8a04278067a6dd0e25cfdce46f9d59bca497e194914a282b50d7056be",
+      "sources": [
+        {
+          "archive": "build/unicode-sources/jigmo/docs/Jigmo-20250912.zip",
+          "archiveSha256": "5744c7386d129475d87607ca66d043c8793c65448adeaedc921b6931890e5d0b",
+          "member": "Jigmo.ttf",
+          "sha256": "c8f295b9bd8f9f117a76b3a454aaaa1bb5b4babc18e254978c6deb88464e40cf",
+          "licence": "assets/fonts/licenses/Jigmo-CC0.txt"
+        },
+        {
+          "archive": "build/unicode-sources/jigmo/docs/Jigmo-20250912.zip",
+          "archiveSha256": "5744c7386d129475d87607ca66d043c8793c65448adeaedc921b6931890e5d0b",
+          "member": "Jigmo2.ttf",
+          "sha256": "5da3582efe77e22073b86b3b86b556d7111148a76b957cfb53318a91da2efff0",
+          "licence": "assets/fonts/licenses/Jigmo-CC0.txt"
+        },
+        {
+          "archive": "build/unicode-sources/jigmo/docs/Jigmo-20250912.zip",
+          "archiveSha256": "5744c7386d129475d87607ca66d043c8793c65448adeaedc921b6931890e5d0b",
+          "member": "Jigmo3.ttf",
+          "sha256": "815b18c1c670103723fe743090559208fdea47dc587ecb057a5a4721ee8dfeff",
+          "licence": "assets/fonts/licenses/Jigmo-CC0.txt"
+        }
+      ]
+    },
+    "denseTreatment": {
+      "nativeInputSha256": "3240965b3a7a83e9b19d8c3e6b4acb8f940b50c33b8bba2b8a5d662b0c6012d3",
+      "nativeEmUnchanged": 1024,
+      "method": "native-normal-finer-pen-v1",
+      "recipeSha256": "a7213c7e508d964bd3be6fc14f8bb1b5982350ff307126106c517e379515c99c",
+      "settings": {
+        "resolution": 1024,
+        "secondaryResolution": 384,
+        "amounts": [
+          0.01,
+          0.0075,
+          0.005
+        ],
+        "contrastMode": "inward-median",
+        "flex": [
+          0.003,
+          0
+        ],
+        "nativeFallbackFlex": [
+          0.003
+        ],
+        "minimumComponentAreaRatio": 0.75,
+        "minimumCounterOverlap": 0.75,
+        "subpixelPhases": [
+          0,
+          0.5
+        ]
+      },
+      "glyphs": 1905,
+      "counts": {
+        "dense-native-pen": 1573,
+        "guarded-native-flex": 67,
+        "native-blank": 1,
+        "native-retained-guard": 264
+      },
+      "layoutTablesUnchanged": [
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "limitations": [
+        "Per-glyph1024/384 guards do not replace complete-field subpixel guards or visual review",
+        "Native retained glyphs are explicit; no font fallback counts as custom styling",
+        "Small native-flex fallback keeps source stroke-width distinctions for dense detail"
+      ],
+      "source": "Jigmo.ttf",
+      "sourceProfile": "Jigmo.ttf",
+      "report": "output/font-review/dense-production/3240965b3a7a83e9b19d8c3e6b4acb8f940b50c33b8bba2b8a5d662b0c6012d3-a7213c7e508d964bd3be6fc14f8bb1b5982350ff307126106c517e379515c99c.json"
+    }
+  },
+  "remaining": [
+    "Integrate accepted dense primary source fonts and standalone variant with frozen-baseline lineage preserved.",
+    "Rebuild all92markedCJKcompanions and dependent combining/variation catalogs after dense primary output changes.",
+    "Run strict historical/native source, markedcompanion exact-copy, source-specific identity/variation and actual local sentence/mark geometry checks on current integrated assets.",
+    "CJKreproduction test now uses isolated output only; defer until current publicdense output is integrated so expected hashes describe the same recipe."
+  ],
+  "inspectionSha256": {
+    "tests/font_baseline_checks.py": "8f9d91732f666df002e0e7dcf96ee71e003b38b2b256c68347dc47fe843c2f44",
+    "tests/test_dense_baseline_checks.py": "ab46aa5bd31abfb92074d18757aee4d95182a8651b31b75c9187d048ef1bbda4",
+    "tests/test_font_cjk_variants.py": "2df43e032bfbc224a65a919ad653da965483527ff66e74e62cf000f89a6a6d74",
+    "tests/test_font_marked_cjk.py": "167a23835989ee975f7bc6f68dca85f5184c76f7f3e263690292fb304cf3dfb0",
+    "build/dense-cjk-prototype/js/cjk-variant-manifest.js": "905b7d80852d1d544766bd14f4287c3cccb9a8dbc0e022b1642e21c6decf55eb",
+    "build/dense-cjk-prototype/docs/cjk-variant-review.json": "8fe65ee1b1201aed95eecaf94eea17620ada4fdfb56932cfa51a72232c499335",
+    "docs/dense-native-adapter-review.json": "2ffe10db554a6bb664e404935be8c4b4abdaed14590e3c9432606d1bb6134898"
+  }
+}

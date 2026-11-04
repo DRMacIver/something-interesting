@@ -1,5 +1,6 @@
-import { DEFAULTS, MAX_TEXT, drawComic, loadComic } from "./comic.js";
+import { DEFAULTS, renderComic, loadComic } from "./comic.js";
 import { copyCanvas, copyText } from "./clipboard.js";
+import { encodeTexts, decodeTexts } from "./share.js";
 
 const $ = (id) => document.getElementById(id);
 const textareas = [$("text1"), $("text2"), $("text3"), $("text4")];
@@ -10,30 +11,19 @@ let texts = [...DEFAULTS];
 
 // --- Texts <-> URL -------------------------------------------------------
 
-function encodeTexts(t) {
-  const bytes = new TextEncoder().encode(JSON.stringify({ texts: t }));
-  let binary = "";
-  for (const b of bytes) binary += String.fromCharCode(b);
-  return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-}
-
 function textsFromUrl() {
-  const hash = location.hash.slice(1);
-  if (!hash) return null;
-  try {
-    const base64 = hash.replace(/-/g, "+").replace(/_/g, "/");
-    const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
-    const parsed = JSON.parse(new TextDecoder().decode(bytes));
-    if (!Array.isArray(parsed.texts)) return null;
-    // Links made before Calvin's reply was editable have three texts.
-    return DEFAULTS.map((t, i) => String(parsed.texts[i] ?? t));
-  } catch {
-    return null;
-  }
+  return decodeTexts(location.hash.slice(1), DEFAULTS);
 }
 
 function saveToUrl() {
-  history.replaceState(null, "", "#" + encodeTexts(texts));
+  const hash = encodeTexts(texts);
+  try {
+    history.replaceState(null, "", location.pathname + location.search + (hash === null ? "" : "#" + hash));
+    return hash !== null;
+  } catch {
+    // URL limits and history throttling must not prevent preview rendering.
+    return false;
+  }
 }
 
 function setStatus(message, warning = false) {
@@ -41,22 +31,43 @@ function setStatus(message, warning = false) {
   $("status").classList.toggle("warning", warning);
 }
 
-function render() {
+let renderRevision = 0;
+let exportReady = false;
+function setExportReady(ready) {
+  exportReady = ready;
+  $("download").disabled = !ready;
+  $("copy-image").disabled = !ready;
+}
+async function render() {
   if (!comic) return;
-  const { fits, clipped } = drawComic(canvas, comic, texts);
+  setExportReady(false);
+  const revision = ++renderRevision;
+  const report = await renderComic(canvas, comic, [...texts], () => revision === renderRevision).catch(error => {
+    if (revision !== renderRevision) return null;
+    throw error;
+  });
+  if (!report) return false;
+  setExportReady(true);
+  const { fits, clipped } = report;
   if (!fits) setStatus("Some of that text doesn't fit.", true);
   else if (clipped.length) {
-    setStatus(`That's a lot! Only the first ${MAX_TEXT.toLocaleString("en")} characters of a box are lettered.`, true);
+    setStatus("That’s a lot! Long boxes are shortened in the image; your text is kept above.", true);
   } else setStatus("");
+  return true;
 }
 
 let pending = false;
 function scheduleRender() {
+  ++renderRevision;
+  setExportReady(false);
   if (pending) return;
   pending = true;
   requestAnimationFrame(() => {
     pending = false;
-    render();
+    render().catch(error => {
+      console.error(error);
+      setStatus("Couldn’t load the lettering. Please try again.", true);
+    });
   });
 }
 
@@ -85,8 +96,12 @@ function flash(button, text) {
 }
 
 async function download() {
-  render();
+  if (!exportReady) return;
   const blob = await canvasBlob();
+  if (!blob) {
+    setStatus("This browser couldn’t export the image. Try shortening the longest box.", true);
+    return;
+  }
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
@@ -99,7 +114,7 @@ async function download() {
 
 async function copyImage() {
   try {
-    render();
+    if (!exportReady) return;
     await copyCanvas(canvas);
     flash($("copy-image"), "Copied!");
     setStatus("");
@@ -115,7 +130,10 @@ async function copyImage() {
 }
 
 async function copyLink() {
-  saveToUrl();
+  if (!saveToUrl()) {
+    setStatus("This text is too long to share as a link in this browser. You can still download the image.", true);
+    return;
+  }
   try {
     await copyText(location.href);
     flash($("copy-link"), "Copied!");
@@ -128,6 +146,7 @@ async function copyLink() {
 // --- Start up ------------------------------------------------------------
 
 async function main() {
+  setExportReady(false);
   texts = textsFromUrl() ?? texts;
   showTexts();
 
@@ -151,7 +170,7 @@ async function main() {
   });
 
   comic = await loadComic();
-  render();
+  await render();
 }
 
 main().catch((error) => {

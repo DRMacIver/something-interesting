@@ -1,0 +1,684 @@
+{
+  "status": "Pinned acquisition snapshot for the original113remaining drawings; current registration and delivery are tracked in unicode-progress.md and unicode-coverage.json",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "files": [
+    {
+      "sequence": "🐦‍🔥",
+      "subgroup": "animal-bird",
+      "upstreamPath": "2D/svg/emoji_u1f426_200d_1f525.svg",
+      "git_blob_sha1": "d1efa265b1136dd78771c8077e1bc62a5e5794fd"
+    },
+    {
+      "sequence": "🌍",
+      "subgroup": "place-map",
+      "upstreamPath": "2D/svg/emoji_u1f30d.svg",
+      "git_blob_sha1": "a91d83972884fe0cfaee85deb0ff63700dd07ff9"
+    },
+    {
+      "sequence": "🌎",
+      "subgroup": "place-map",
+      "upstreamPath": "2D/svg/emoji_u1f30e.svg",
+      "git_blob_sha1": "feb7be4435955b92f9e2539145d963765a408d06"
+    },
+    {
+      "sequence": "🌏",
+      "subgroup": "place-map",
+      "upstreamPath": "2D/svg/emoji_u1f30f.svg",
+      "git_blob_sha1": "9dbcd3ffd0d473d4d87f39f47090daa54cf3b03b"
+    },
+    {
+      "sequence": "🧱",
+      "subgroup": "place-building",
+      "upstreamPath": "2D/svg/emoji_u1f9f1.svg",
+      "git_blob_sha1": "bc54536c6041f45a3c5bdb205d54b29c76276a3e"
+    },
+    {
+      "sequence": "🪨",
+      "subgroup": "place-building",
+      "upstreamPath": "2D/svg/emoji_u1faa8.svg",
+      "git_blob_sha1": "379a00965ebd531a43ed7f91958d12bbc71fdb4c"
+    },
+    {
+      "sequence": "🪵",
+      "subgroup": "place-building",
+      "upstreamPath": "2D/svg/emoji_u1fab5.svg",
+      "git_blob_sha1": "c592ebc53180fd124ccc98007a4d72553de30b93"
+    },
+    {
+      "sequence": "⛺",
+      "subgroup": "place-other",
+      "upstreamPath": "2D/svg/emoji_u26fa.svg",
+      "git_blob_sha1": "493b971a7bc666279c5be61893a707a8037b0faa"
+    },
+    {
+      "sequence": "💈",
+      "subgroup": "place-other",
+      "upstreamPath": "2D/svg/emoji_u1f488.svg",
+      "git_blob_sha1": "9ce9d4f889f539ecaed6038bd00bcbdc6f1a9fd1"
+    },
+    {
+      "sequence": "🚍",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f68d.svg",
+      "git_blob_sha1": "42fe43622822baa88b914457b9973328cf787e3a"
+    },
+    {
+      "sequence": "🚑",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f691.svg",
+      "git_blob_sha1": "ee31bf8be2fd6725cfd2e01f1584fbd124e46760"
+    },
+    {
+      "sequence": "🚔",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f694.svg",
+      "git_blob_sha1": "e63e882a52d070b72328c08dac47f0d244270931"
+    },
+    {
+      "sequence": "🚘",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f698.svg",
+      "git_blob_sha1": "7847a669535bc8c3da33981109df64f1c01c8c79"
+    },
+    {
+      "sequence": "🛻",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6fb.svg",
+      "git_blob_sha1": "57334113e81afb8325e2ecb6735d05285bd4f276"
+    },
+    {
+      "sequence": "🏎️",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f3ce.svg",
+      "git_blob_sha1": "5895ad621fe024b2d1d404d013c75125c9101e97"
+    },
+    {
+      "sequence": "🏍️",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f3cd.svg",
+      "git_blob_sha1": "9187d655e43b4f0c427108090a45fd4b22d754a3"
+    },
+    {
+      "sequence": "🚲",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6b2.svg",
+      "git_blob_sha1": "fcb6237c357940d89a7adc2e86f90d6a021f28d6"
+    },
+    {
+      "sequence": "🛹",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6f9.svg",
+      "git_blob_sha1": "6c3cd78a53e6db6ae08322ecc059a6307ed41aa7"
+    },
+    {
+      "sequence": "🛼",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6fc.svg",
+      "git_blob_sha1": "42ffdfb3a8d4485e9c73871d095c8c7fe9c1d3ff"
+    },
+    {
+      "sequence": "🛣️",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6e3.svg",
+      "git_blob_sha1": "59da7560b3501d992e25250ea444a79c36d4a719"
+    },
+    {
+      "sequence": "🛤️",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6e4.svg",
+      "git_blob_sha1": "7159f380f3a9af424c76d698c377c4a07df0a105"
+    },
+    {
+      "sequence": "⛽",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u26fd.svg",
+      "git_blob_sha1": "962d90d1c1178df85d6a138f8d05f0bc1c0e0814"
+    },
+    {
+      "sequence": "🚨",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6a8.svg",
+      "git_blob_sha1": "9741d2d5ac44d53b0e333a0b4a102a97f8013642"
+    },
+    {
+      "sequence": "🚥",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6a5.svg",
+      "git_blob_sha1": "31fddd7f9c6b78e52e727c92841d374b39669734"
+    },
+    {
+      "sequence": "🚦",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6a6.svg",
+      "git_blob_sha1": "78602a37442d05d972ee8e227037de0d8d2b48ee"
+    },
+    {
+      "sequence": "🛑",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6d1.svg",
+      "git_blob_sha1": "ec5d89928481e400bfcdd989071a5f0708166bba"
+    },
+    {
+      "sequence": "🚧",
+      "subgroup": "transport-ground",
+      "upstreamPath": "2D/svg/emoji_u1f6a7.svg",
+      "git_blob_sha1": "0b57d2f1c17acbf16c63f828fcc3ce2eceafc173"
+    },
+    {
+      "sequence": "⚓",
+      "subgroup": "transport-water",
+      "upstreamPath": "2D/svg/emoji_u2693.svg",
+      "git_blob_sha1": "e9c44db6e9cd686bb51f97509abda7de55b76a2c"
+    },
+    {
+      "sequence": "🛳️",
+      "subgroup": "transport-water",
+      "upstreamPath": "2D/svg/emoji_u1f6f3.svg",
+      "git_blob_sha1": "f57c074a475cea4eed5bebfb2f0f62e97f5198ec"
+    },
+    {
+      "sequence": "✈️",
+      "subgroup": "transport-air",
+      "upstreamPath": "2D/svg/emoji_u2708.svg",
+      "git_blob_sha1": "e942b8dd18f6b2abcdb335f1487d0366bc32d31c"
+    },
+    {
+      "sequence": "🛩️",
+      "subgroup": "transport-air",
+      "upstreamPath": "2D/svg/emoji_u1f6e9.svg",
+      "git_blob_sha1": "8c4c53f62025ec25c53ac9d38382e36dcbd95708"
+    },
+    {
+      "sequence": "🪂",
+      "subgroup": "transport-air",
+      "upstreamPath": "2D/svg/emoji_u1fa82.svg",
+      "git_blob_sha1": "e2b31b888a9ff091e07a989240d0c6bb3cf7d981"
+    },
+    {
+      "sequence": "💺",
+      "subgroup": "transport-air",
+      "upstreamPath": "2D/svg/emoji_u1f4ba.svg",
+      "git_blob_sha1": "bfbad3124c28f7548ca7019430f74fe03eee3ea3"
+    },
+    {
+      "sequence": "🛰️",
+      "subgroup": "transport-air",
+      "upstreamPath": "2D/svg/emoji_u1f6f0.svg",
+      "git_blob_sha1": "0d0a8d79708cfe2b772cc7a6eadb60ea1a340616"
+    },
+    {
+      "sequence": "🛸",
+      "subgroup": "transport-air",
+      "upstreamPath": "2D/svg/emoji_u1f6f8.svg",
+      "git_blob_sha1": "56a6e433357f3105e4d801efa60d721e6b2e70f4"
+    },
+    {
+      "sequence": "🛎️",
+      "subgroup": "hotel",
+      "upstreamPath": "2D/svg/emoji_u1f6ce.svg",
+      "git_blob_sha1": "529bd38962831850d1755d975b2fcb4525d0da6e"
+    },
+    {
+      "sequence": "🌡️",
+      "subgroup": "sky & weather",
+      "upstreamPath": "2D/svg/emoji_u1f321.svg",
+      "git_blob_sha1": "d220f1938a2886693dca7a10ec17f316f843ef19"
+    },
+    {
+      "sequence": "🪐",
+      "subgroup": "sky & weather",
+      "upstreamPath": "2D/svg/emoji_u1fa90.svg",
+      "git_blob_sha1": "b386ae13fd2241a1f8f0a0d5e5764de73dbfb7e8"
+    },
+    {
+      "sequence": "🌈",
+      "subgroup": "sky & weather",
+      "upstreamPath": "2D/svg/emoji_u1f308.svg",
+      "git_blob_sha1": "b5ee709a233fa65a6df0e2853882ce13acb89e96"
+    },
+    {
+      "sequence": "👓",
+      "subgroup": "clothing",
+      "upstreamPath": "2D/svg/emoji_u1f453.svg",
+      "git_blob_sha1": "cec31269feb784b76d3702c730a6c326d05caf27"
+    },
+    {
+      "sequence": "🕶️",
+      "subgroup": "clothing",
+      "upstreamPath": "2D/svg/emoji_u1f576.svg",
+      "git_blob_sha1": "2d124fcd5ef926b5701d699ddf7c1a4d4a598b05"
+    },
+    {
+      "sequence": "🪭",
+      "subgroup": "clothing",
+      "upstreamPath": "2D/svg/emoji_u1faad.svg",
+      "git_blob_sha1": "e58fce2f6795fc91708a0dbe89232f3567abda40"
+    },
+    {
+      "sequence": "🛍️",
+      "subgroup": "clothing",
+      "upstreamPath": "2D/svg/emoji_u1f6cd.svg",
+      "git_blob_sha1": "c185dc38fa00709469ec154adbd94a25f9c679d6"
+    },
+    {
+      "sequence": "🪮",
+      "subgroup": "clothing",
+      "upstreamPath": "2D/svg/emoji_u1faae.svg",
+      "git_blob_sha1": "82fb50f9aeb64804b39bb1d1bc132182edb9744b"
+    },
+    {
+      "sequence": "📿",
+      "subgroup": "clothing",
+      "upstreamPath": "2D/svg/emoji_u1f4ff.svg",
+      "git_blob_sha1": "1742ad553ef29044e958c566dcc1d47108f568ed"
+    },
+    {
+      "sequence": "💄",
+      "subgroup": "clothing",
+      "upstreamPath": "2D/svg/emoji_u1f484.svg",
+      "git_blob_sha1": "0c255a0b9f5b3c261379db02f24f5f69d7f57a89"
+    },
+    {
+      "sequence": "💍",
+      "subgroup": "clothing",
+      "upstreamPath": "2D/svg/emoji_u1f48d.svg",
+      "git_blob_sha1": "e9ba8a94fa44232bad6586ce2d573897f574099e"
+    },
+    {
+      "sequence": "💎",
+      "subgroup": "clothing",
+      "upstreamPath": "2D/svg/emoji_u1f48e.svg",
+      "git_blob_sha1": "0e254cebc80e8fc6e18118135e14fb448873c867"
+    },
+    {
+      "sequence": "🪗",
+      "subgroup": "musical-instrument",
+      "upstreamPath": "2D/svg/emoji_u1fa97.svg",
+      "git_blob_sha1": "e67dfd9a231989c422eb8818a6b70e4d6b643b5f"
+    },
+    {
+      "sequence": "🪕",
+      "subgroup": "musical-instrument",
+      "upstreamPath": "2D/svg/emoji_u1fa95.svg",
+      "git_blob_sha1": "9e8e92ede71daef28573cdc2e5e99cdc2a0b9588"
+    },
+    {
+      "sequence": "🪘",
+      "subgroup": "musical-instrument",
+      "upstreamPath": "2D/svg/emoji_u1fa98.svg",
+      "git_blob_sha1": "b1125df1280bf9d2ca8680d33779fa9c94b0e789"
+    },
+    {
+      "sequence": "🪇",
+      "subgroup": "musical-instrument",
+      "upstreamPath": "2D/svg/emoji_u1fa87.svg",
+      "git_blob_sha1": "a50293cca8723a41cb25ea942aad66214dcd4ee9"
+    },
+    {
+      "sequence": "🪈",
+      "subgroup": "musical-instrument",
+      "upstreamPath": "2D/svg/emoji_u1fa88.svg",
+      "git_blob_sha1": "76ac379f1c9cb5a3d128fd2d4f2f8b941e9fb620"
+    },
+    {
+      "sequence": "📔",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4d4.svg",
+      "git_blob_sha1": "82c5abbba2830403816279fca41294ef4c4945c1"
+    },
+    {
+      "sequence": "📕",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4d5.svg",
+      "git_blob_sha1": "a2d7d51930854197b177119a26e808d86c40fa21"
+    },
+    {
+      "sequence": "📖",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4d6.svg",
+      "git_blob_sha1": "a5ebdb36fee7244f6d168d87d6f82d341af35aa0"
+    },
+    {
+      "sequence": "📗",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4d7.svg",
+      "git_blob_sha1": "797eadf334165dddf340bd11b29cd918bcf00448"
+    },
+    {
+      "sequence": "📘",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4d8.svg",
+      "git_blob_sha1": "6658a697b0f4e0a216fa550a0d6b63e3201f12be"
+    },
+    {
+      "sequence": "📙",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4d9.svg",
+      "git_blob_sha1": "7da2024f2350b28674f2ed0a572e2d4a719c5022"
+    },
+    {
+      "sequence": "📚",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4da.svg",
+      "git_blob_sha1": "0b5afed9439ce2a302b1fc5f79ce163c42dd7e3f"
+    },
+    {
+      "sequence": "📓",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4d3.svg",
+      "git_blob_sha1": "c8a66c05b6bf4719751939a40ddb52ad02574b06"
+    },
+    {
+      "sequence": "📒",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4d2.svg",
+      "git_blob_sha1": "b53102d314063b527a91b02bd6159354d9cfa43a"
+    },
+    {
+      "sequence": "📃",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4c3.svg",
+      "git_blob_sha1": "4d0780651ab2a25a38a112f6b578c6f17c3ffcac"
+    },
+    {
+      "sequence": "📜",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4dc.svg",
+      "git_blob_sha1": "248b09c867046803eb68698b785d57ab28a2d55b"
+    },
+    {
+      "sequence": "📄",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4c4.svg",
+      "git_blob_sha1": "00e7272a55a5eaae35320ae9e3c0adc1f3f0291f"
+    },
+    {
+      "sequence": "📰",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4f0.svg",
+      "git_blob_sha1": "821643955c397eb63c1e3c463179d31199aa3852"
+    },
+    {
+      "sequence": "🗞️",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f5de.svg",
+      "git_blob_sha1": "7b92630c4fb4304c73e3b458281adf58e6cbbf10"
+    },
+    {
+      "sequence": "📑",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f4d1.svg",
+      "git_blob_sha1": "a6eb41ece2a1fee3b486ffd91c2cf5d04233a399"
+    },
+    {
+      "sequence": "🔖",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f516.svg",
+      "git_blob_sha1": "a4124234649d7e644b0cf87a3ec8f56a2632798f"
+    },
+    {
+      "sequence": "🏷️",
+      "subgroup": "book-paper",
+      "upstreamPath": "2D/svg/emoji_u1f3f7.svg",
+      "git_blob_sha1": "2178d565551856246f51655d2a41ac2d5a61c0be"
+    },
+    {
+      "sequence": "🪙",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1fa99.svg",
+      "git_blob_sha1": "863fe6571105a04b281fb758f3d2980b66ed2378"
+    },
+    {
+      "sequence": "💰",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1f4b0.svg",
+      "git_blob_sha1": "0d281d87d8c5a163a867b1faaf615810a5aafe4c"
+    },
+    {
+      "sequence": "💴",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1f4b4.svg",
+      "git_blob_sha1": "079678f764bce0b17ac2eeddeea4e0e5f039359a"
+    },
+    {
+      "sequence": "💵",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1f4b5.svg",
+      "git_blob_sha1": "9ddaa8b1557ff79f78b7ad2a186efd06af663140"
+    },
+    {
+      "sequence": "💶",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1f4b6.svg",
+      "git_blob_sha1": "14cc11c341fc81edd7ca40d45d82e0ca72ed62b3"
+    },
+    {
+      "sequence": "💷",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1f4b7.svg",
+      "git_blob_sha1": "2edd961141809b7522cef9739a8ad5a12e503129"
+    },
+    {
+      "sequence": "💸",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1f4b8.svg",
+      "git_blob_sha1": "939b9335acbc1ebe4e0771713b180aeed67c6292"
+    },
+    {
+      "sequence": "💳",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1f4b3.svg",
+      "git_blob_sha1": "f0ad725dc9e29538a2bf26085796b3154e2b36f1"
+    },
+    {
+      "sequence": "🧾",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1f9fe.svg",
+      "git_blob_sha1": "753bd150af3442bea5ab548d0fd505d6a2946fb1"
+    },
+    {
+      "sequence": "💹",
+      "subgroup": "money",
+      "upstreamPath": "2D/svg/emoji_u1f4b9.svg",
+      "git_blob_sha1": "ffca949db435f8f0ed9581c7d854ffff1293613a"
+    },
+    {
+      "sequence": "✉️",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u2709.svg",
+      "git_blob_sha1": "2206f1f1b0c43656bc7d2b78fb4b3b4dc4bb95ee"
+    },
+    {
+      "sequence": "📧",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4e7.svg",
+      "git_blob_sha1": "f76a481d537118815c896959f5bc6db9fd4077fd"
+    },
+    {
+      "sequence": "📨",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4e8.svg",
+      "git_blob_sha1": "2df9cbd474a145b682b2a79d2532b7db2cb832f8"
+    },
+    {
+      "sequence": "📩",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4e9.svg",
+      "git_blob_sha1": "3d0e4e499fe3ad89af6360085c57c28315ad98ef"
+    },
+    {
+      "sequence": "📤",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4e4.svg",
+      "git_blob_sha1": "095566f7d45be737ef6ad896f0750e16b76894f9"
+    },
+    {
+      "sequence": "📥",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4e5.svg",
+      "git_blob_sha1": "3e9b1d6d35cf00e7579fe857feef4fd5463aea79"
+    },
+    {
+      "sequence": "📦",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4e6.svg",
+      "git_blob_sha1": "945ba614bb566a151c578073ed9b9887d16a5ace"
+    },
+    {
+      "sequence": "📫",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4eb.svg",
+      "git_blob_sha1": "55b6aeda1f86896b6b325ef642da2e6375bec7d9"
+    },
+    {
+      "sequence": "📪",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4ea.svg",
+      "git_blob_sha1": "9312ca95d05db30e3f612e5a168263eb1b3a9f9d"
+    },
+    {
+      "sequence": "📬",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4ec.svg",
+      "git_blob_sha1": "2652efe61a646561cc14fe993db22fae3907da3c"
+    },
+    {
+      "sequence": "📭",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4ed.svg",
+      "git_blob_sha1": "60def7f96f6982e7bf3e41f82a8db63298956d10"
+    },
+    {
+      "sequence": "📮",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f4ee.svg",
+      "git_blob_sha1": "a48b5ee0f10fc8bd8bc615ec986aa05de64d14a2"
+    },
+    {
+      "sequence": "🗳️",
+      "subgroup": "mail",
+      "upstreamPath": "2D/svg/emoji_u1f5f3.svg",
+      "git_blob_sha1": "11678d701c3b49c23c7092b39dde5acb51447522"
+    },
+    {
+      "sequence": "📈",
+      "subgroup": "office",
+      "upstreamPath": "2D/svg/emoji_u1f4c8.svg",
+      "git_blob_sha1": "80deb0a1b4e88a8f8433c28b093cf1b165fa0377"
+    },
+    {
+      "sequence": "📉",
+      "subgroup": "office",
+      "upstreamPath": "2D/svg/emoji_u1f4c9.svg",
+      "git_blob_sha1": "2f555bcec9d0c5b14b5a3c587b250ab15b3d57ac"
+    },
+    {
+      "sequence": "📊",
+      "subgroup": "office",
+      "upstreamPath": "2D/svg/emoji_u1f4ca.svg",
+      "git_blob_sha1": "e744e6b76ff421e4b27b6dcceb37e98427d29465"
+    },
+    {
+      "sequence": "🔏",
+      "subgroup": "lock",
+      "upstreamPath": "2D/svg/emoji_u1f50f.svg",
+      "git_blob_sha1": "2987320e39531a23d23461ef01f262aa6790c8f8"
+    },
+    {
+      "sequence": "🔐",
+      "subgroup": "lock",
+      "upstreamPath": "2D/svg/emoji_u1f510.svg",
+      "git_blob_sha1": "c56cb19b33f62467e55884f74ae34314222fabc0"
+    },
+    {
+      "sequence": "🗡️",
+      "subgroup": "tool",
+      "upstreamPath": "2D/svg/emoji_u1f5e1.svg",
+      "git_blob_sha1": "fb0090e702bc46deb8a2ca791f4542e65560f5a2"
+    },
+    {
+      "sequence": "⚔️",
+      "subgroup": "tool",
+      "upstreamPath": "2D/svg/emoji_u2694.svg",
+      "git_blob_sha1": "4d8ea7ebec3a44f14f01df5034db779ac8f89999"
+    },
+    {
+      "sequence": "💣",
+      "subgroup": "tool",
+      "upstreamPath": "2D/svg/emoji_u1f4a3.svg",
+      "git_blob_sha1": "93a3a63cc5dedd9639cece11490a5cc703b61e25"
+    },
+    {
+      "sequence": "🪃",
+      "subgroup": "tool",
+      "upstreamPath": "2D/svg/emoji_u1fa83.svg",
+      "git_blob_sha1": "79792fb1ffb51258cb8de741d58f4eca32d0c461"
+    },
+    {
+      "sequence": "🏹",
+      "subgroup": "tool",
+      "upstreamPath": "2D/svg/emoji_u1f3f9.svg",
+      "git_blob_sha1": "3b2b9a222cd5915d5089bcac4c12663a4b88e034"
+    },
+    {
+      "sequence": "🛡️",
+      "subgroup": "tool",
+      "upstreamPath": "2D/svg/emoji_u1f6e1.svg",
+      "git_blob_sha1": "fcf09703ef4289aa3ec80442d42ae2546a208d2c"
+    },
+    {
+      "sequence": "🚬",
+      "subgroup": "other-object",
+      "upstreamPath": "2D/svg/emoji_u1f6ac.svg",
+      "git_blob_sha1": "85ef41e5013878eaa43e8dbe3f61281972322d3b"
+    },
+    {
+      "sequence": "⚰️",
+      "subgroup": "other-object",
+      "upstreamPath": "2D/svg/emoji_u26b0.svg",
+      "git_blob_sha1": "a5be0d0810e0d078c51883835bf4de2ce86778a8"
+    },
+    {
+      "sequence": "🪦",
+      "subgroup": "other-object",
+      "upstreamPath": "2D/svg/emoji_u1faa6.svg",
+      "git_blob_sha1": "5a097b223d5156294b75d372ff9c3645426c50e6"
+    },
+    {
+      "sequence": "⚱️",
+      "subgroup": "other-object",
+      "upstreamPath": "2D/svg/emoji_u26b1.svg",
+      "git_blob_sha1": "b7c015f66ecde4def1716fb34a2477e935060c60"
+    },
+    {
+      "sequence": "🧿",
+      "subgroup": "other-object",
+      "upstreamPath": "2D/svg/emoji_u1f9ff.svg",
+      "git_blob_sha1": "54f3d578dfadebffe716aba385ab76bae8b4fb3f"
+    },
+    {
+      "sequence": "🪬",
+      "subgroup": "other-object",
+      "upstreamPath": "2D/svg/emoji_u1faac.svg",
+      "git_blob_sha1": "1f63cbd60c63fdc1fc6bd198b56e7bfa4a75eac1"
+    },
+    {
+      "sequence": "🗿",
+      "subgroup": "other-object",
+      "upstreamPath": "2D/svg/emoji_u1f5ff.svg",
+      "git_blob_sha1": "c07acef27b296a16136e455528f169db5abc3c6d"
+    },
+    {
+      "sequence": "🪧",
+      "subgroup": "other-object",
+      "upstreamPath": "2D/svg/emoji_u1faa7.svg",
+      "git_blob_sha1": "c48ffad1fda97bfcfa1905049b610938e298110f"
+    },
+    {
+      "sequence": "🪪",
+      "subgroup": "other-object",
+      "upstreamPath": "2D/svg/emoji_u1faaa.svg",
+      "git_blob_sha1": "5f105d691da01f67486b80417e878929e850c2eb"
+    }
+  ]
+}

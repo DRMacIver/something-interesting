@@ -1,0 +1,128 @@
+﻿Copyright (c) 2021-2026 Mikhail Merkuryev
+
+Licensed under SIL Open Font License
+
+EXCEPT MY GLYPHS: You just DO WHAT THE FUNK YOU WANT TO
+
+== Others’ glyphs: ==
+
+=== Latin, Cyrillic, Balinese, Japanese/Korean umlauts ===
+
+© Google Noto, SIL Open Font License
+
+Matrix for modifier chars is: W×65%, H×60% starting from char origin, and Y+407; old chars Y+120.
+Matrix for subscript chars is: W×65%, H×60% starting from char origin, and Y−96.
+
+
+=== Toto • unknown origin ===
+
+Probably someone from SIL International, SIL Open Font License
+Status: probably fully working, I tried to copy all tables
+
+
+=== Gothic • Junicode ===
+
+© Peter Baker, SIL Open Font License
+Status: diaeresis works, numbers do not
+Matrix is ×135%
+
+
+=== Coptic • NewAthena  ===
+
+© Society for Classical Studies, SIL Open Font License
+Status: at least as functional as Noto and NewAthena combined!
+
+
+== Status of MY scripts ==
+
+=== Cypro-Minoan ===
+
+Source of inspiration: Michael Everson’s Unicode tracings
+Status: should work
+
+
+=== Garay ===
+
+Source of glyphs: some poor Latin-mapped font
+Status: barely working, either improve or hand to other font
+
+
+=== Gurung Khema ===
+
+Source of inspiration: existing Gukh fonts
+Status: working somehow, lots of workarounds. Actual pull of U16 by Universal Shaping Engine may probably destroy everything but permit more precise typesetting
+
+Rationale:
+* All anusvaras housing a circle are smiles, and empty ones are ticks, like in handwritten specimen
+
+
+=== Makasar ===
+
+Source of inspiration: Makasar prince’s diaries, Anshuman Pandey’s font
+Status: working, just Arabic-Indic digits are absent
+
+Rationale:
+* Drawn like in Pandey’s font, sometimes more streamlined.
+* As this font is not of print quality, I decided to use rounded ends everywhere
+
+
+=== Nag Mundari ===
+
+Source of inspiration: educational Nag specimen
+Status: working
+
+
+=== Ol Onal ===
+
+Source of inspiration: alphabet written with marker + multilingual writings on idol
+Status: working, minor glyph problems, no danda
+
+Rationale:
+1. Backslash quill is common in all Indic scripts, Brahmic and alphabetical. I played with it in e.g. Q-like letter (DB Aw).
+2. Inverse contrast is also common. As Ol Onal is a really small script, it’s routinely repeated in e.g. Devanagari that’s more compact (IDK whether Devanagari is Bhumij or other local language). They mechanically compress fonts and get… you get point.
+3. I draw Noto’s drop everywhere curved thick line starts rather than ends. Just draw the letter with quill dipped into ink, or a really poor ballpoint — there were in 90s, I did not see such very-very long, and ≈2000 I wrote lectures with a rather good pen. (There were LOTS of bad copybooks, but that’s another thing.)
+4. As Ol Onal is a script w/o printed tradition, I was inspired with handwritten specimen. This approach proved good in Todhri, and I was probably right, SIL did the same with Kirat.
+5. I wanted to make glottal-8 smaller than normal letter, and I checked whether it’s possible.
+6. Position of umlauts in printed text is strange because of poor fontmaker’s skills and ASCII mapping. Handwritten text often draws them in more natural places.
+
+
+=== Todhri ===
+
+Source of inspiration: Michael Everson’s font, Johann von Hahn’s description, handwritten notes from Unicode request
+Status: working, no kerning because of doubtful R
+
+Rationale:
+* B: both closed and diverging letters are attested, and quick writing makes ends diverge. So I drew something in between.
+* R: drawn by printed sources, really doubtful
+* RR: the only handwritten specimen known to me is a mixture of Greek Rho and Latin P
+* T/C: somewhere in between printed and handwritten
+
+
+=== Sidetic ===
+
+Source of inspiration: none, though I looked a bot into actual inscriptions
+Status: working
+
+Rationale:
+* Thickness 90 is Noto’s standard
+
+
+== Stability policy ==
+
+WILL STAY:
+* Working scripts of decent quality made by me: Cypro-Minoan, Gurung Khema, Makasar, Nag, Ol Onal, Todhri, Sidetic
+* ASCII and other auxiliary characters
+* All of them MAY change style/metrics
+
+WILL PROBABLY DISAPPEAR when better font arrives:
+* Scripts made by others
+* Super/subscripts: while Unicodia’s main font is Cambria, won’t
+
+WILL SURELY DISAPPEAR:
+* Lone characters made to gag tofu
+* All non-functional scripts, both mine and others’
+* All craggy scripts, both mine and others’
+
+ALREADY DISAPPEARED and handing to other fonts
+* Ottoman Siyaq numbers → use Noto Ottoman Siyaq
+* Devanagari Jain symbols → use Noto Devanagari

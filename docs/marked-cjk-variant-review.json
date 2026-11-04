@@ -1,0 +1,50 @@
+{
+  "status": "Historical milestone before the native positional-mark repair; see positional-mark-review.json for current hashes and verification.",
+  "unicode": "18.0.0",
+  "manifestSha256": "cfac1d84b7883212a5a77e0669c8f53c9c5f52fa63e5f9ee38c8f91e276b3175",
+  "fonts": 92,
+  "bytes": 26332604,
+  "nativeVariationMappings": 30637,
+  "originalGlyphs": 106792,
+  "addedAccentDrawingsPerFont": 257,
+  "sourceManifest": "data/font-sources/marked-cjk.json",
+  "notices": "assets/fonts/licenses/README-DadMarkedCJK.txt",
+  "preservation": "Original font assets unchanged. Native CJK curves, metrics and hints retained in companion fonts. Original single-native-mark fallback offsets encoded in GPOS. Accent curves explicitly adapted to TrueType.",
+  "checks": {
+    "javascript": "333 passed, /tmp/marked-cjk-final-js-tests.log",
+    "coverage": "172352/172352 visible cmap entries, /tmp/marked-cjk-audit.log",
+    "freshRebuild": "1 test passed, 5.88s; standardized and native-IVS companion kinds freshly rebuilt byte-identically in isolated workspace; /tmp/marked-cjk-fresh-rebuild.log",
+    "cachedRebuild": "Complete generated manifest byte-identical on repeat cached build",
+    "nativeTests": {
+      "status": "passed",
+      "tests": 9,
+      "seconds": 176.45,
+      "log": "/tmp/marked-cjk-final-native-checks.log"
+    },
+    "browser": {
+      "status": "passed",
+      "scenarios": 644,
+      "failures": [],
+      "geometry": []
+    },
+    "visualReview": {
+      "status": "five actual strips individually inspected and passed pixel/geometry checks",
+      "cases": [
+        "marked-cjk-ivd-bmp",
+        "marked-cjk-ivd-b",
+        "marked-cjk-ivd-g",
+        "marked-cjk-standard",
+        "cjk-native-with-foreign-accents"
+      ]
+    }
+  },
+  "remaining": [
+    "Enclosing/double marks outside the 257-mark donor",
+    "Standardized CJK variants with original native marks not in their source subset",
+    "Math and contextual-script variants with foreign marks",
+    "Arbitrary cross-script attachment and native multiple-mark typography",
+    "Broader comic style and script reader review",
+    "Remaining Egyptian/dictionary/grid and cross-engine brief requirements"
+  ],
+  "supersededBy": "docs/positional-mark-review.json"
+}

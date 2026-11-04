@@ -1,0 +1,40 @@
+{
+  "samples": [
+    {
+      "label": "ORIGINAL DAD",
+      "font": "assets/fonts/dad-lettering-unicode.woff2",
+      "text": "THERE ARE TWO TYPES OF THINGS."
+    },
+    {
+      "label": "KLEE ONE GREEK BASELINE",
+      "font": "assets/fonts/scripts/727a08f0dff2.woff2",
+      "text": "κοσμε"
+    },
+    {
+      "label": "WENKAI GREEK CANDIDATE",
+      "font": "assets/fonts/scripts/ee2777fce4d7.woff2",
+      "text": "κόσμε"
+    },
+    {
+      "label": "NATIVE ARABIC JOINING",
+      "font": "assets/fonts/scripts/b8ef0ccbaaf6.woff2",
+      "text": "مَرْحَبًا",
+      "direction": "rtl"
+    },
+    {
+      "label": "EGYPTIAN SOURCE INK",
+      "font": "assets/fonts/scripts/90fcad2ecf0c.woff2",
+      "text": "𓀀𓁐"
+    },
+    {
+      "label": "COLOUR EMOJI SOURCE",
+      "font": "assets/fonts/dad-emoji.woff2",
+      "text": "💙"
+    },
+    {
+      "label": "TONE AND ZWJ SOURCE",
+      "font": "assets/fonts/dad-emoji.woff2",
+      "text": "👩🏽‍🚀"
+    }
+  ]
+}

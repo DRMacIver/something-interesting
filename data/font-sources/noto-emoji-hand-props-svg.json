@@ -1,0 +1,212 @@
+{
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "✍",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u270d.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u270d.svg",
+      "sha256": "e7ffaaac174465b265466766e78e5019937120d5a3cfce5f17fffbfb4d071922",
+      "git_blob_sha1": "1e43c866763a48d51878157dd1fcf139592b458a",
+      "size": 5939,
+      "shapeElementsIncludingDefinitions": 11,
+      "include_sequences": [
+        "✍️",
+        "✍",
+        "✍🏻",
+        "✍🏼",
+        "✍🏽",
+        "✍🏾",
+        "✍🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "✍🏻",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u270d_1f3fb.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u270d_1f3fb.svg",
+      "sha256": "d778ae228a729f66a78c690d450e55c9e8c613be17b1c3a277498842a5bbbe0d",
+      "git_blob_sha1": "49acc0de55c4dcd358f0c5432888b36097b1fdd6",
+      "size": 5984,
+      "shapeElementsIncludingDefinitions": 11,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "✍🏼",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u270d_1f3fc.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u270d_1f3fc.svg",
+      "sha256": "7ed7ec8137b6b7ca0900b1e07a4ddac2764894297cbedade0b6ba81d3e1cdcd3",
+      "git_blob_sha1": "1cbfc741b2083b67c5f47bee660ae854ecaf65f2",
+      "size": 5984,
+      "shapeElementsIncludingDefinitions": 11,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "✍🏽",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u270d_1f3fd.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u270d_1f3fd.svg",
+      "sha256": "f8272ef1d011e47b771bc986a5df353a33217226b7c1ba72df68b4e9d5f1e8c3",
+      "git_blob_sha1": "e1618c51697874023c9cf51ca91aa717e9b9eaf5",
+      "size": 5984,
+      "shapeElementsIncludingDefinitions": 11,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "✍🏾",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u270d_1f3fe.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u270d_1f3fe.svg",
+      "sha256": "683043bf21e7ddcdc521f6d2c2bf1bb1552fd56e25324b7e1cc73fe2a0c42c7c",
+      "git_blob_sha1": "c589152d5a700bfbe271ed67022efb64345652f2",
+      "size": 5984,
+      "shapeElementsIncludingDefinitions": 11,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "✍🏿",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u270d_1f3ff.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u270d_1f3ff.svg",
+      "sha256": "22001905a3ccb3b96dc52bc53f7e2c54f97dc2f24ad8736fbe1930d0b49646b5",
+      "git_blob_sha1": "78170a5ac88a41cbd14ef142a03d0fc2c84a8b16",
+      "size": 5934,
+      "shapeElementsIncludingDefinitions": 11,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "💅",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f485.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f485.svg",
+      "sha256": "4a11df7f1b976bacce6f1f8f12d7a8b3f7470d547608faff1eee2a1a8c194b70",
+      "git_blob_sha1": "5c71ac9552202f95fdc8fdf4ae4c8192b0bedb8a",
+      "size": 6587,
+      "shapeElementsIncludingDefinitions": 30,
+      "include_sequences": [
+        "💅",
+        "💅🏻",
+        "💅🏼",
+        "💅🏽",
+        "💅🏾",
+        "💅🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "💅🏻",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f485_1f3fb.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f485_1f3fb.svg",
+      "sha256": "c331704fca41b4a01985f7af4c8522fd14c220a19ba5e32dab7d7aa87129aade",
+      "git_blob_sha1": "8688d9b68041a5bcad5a834394cad7e2699b7b29",
+      "size": 6576,
+      "shapeElementsIncludingDefinitions": 30,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "💅🏼",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f485_1f3fc.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f485_1f3fc.svg",
+      "sha256": "7997862c5dc81694a604e0b15ee9fad160d7a83ab9a362d643c8164109bc49fb",
+      "git_blob_sha1": "ac62972a23896acedef5c957c4c828b20b10ad7f",
+      "size": 6576,
+      "shapeElementsIncludingDefinitions": 30,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "💅🏽",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f485_1f3fd.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f485_1f3fd.svg",
+      "sha256": "50f828dbfa20a1e08d535a26e4f4fa7ed8e46d12251518a9db6c445eaa7127b3",
+      "git_blob_sha1": "e60d4923cb3e52a050470b7903712d3c4a5a6cb2",
+      "size": 6576,
+      "shapeElementsIncludingDefinitions": 30,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "💅🏾",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f485_1f3fe.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f485_1f3fe.svg",
+      "sha256": "aa3d6ee3ff06e0fe8f787c185253ea08d9c136f5807ad9940f452c6f27e77311",
+      "git_blob_sha1": "2aeab0a826b1164dbd0978afae213f6ad935c0f5",
+      "size": 6576,
+      "shapeElementsIncludingDefinitions": 30,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "💅🏿",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f485_1f3ff.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f485_1f3ff.svg",
+      "sha256": "93280520cef4bc1c8a60ab89364acb6c9a45fa61b38af61f3a997db894b03f7d",
+      "git_blob_sha1": "fddf93653a2551be34041ddb811e920f5e2759a3",
+      "size": 6521,
+      "shapeElementsIncludingDefinitions": 30,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "🤳",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f933.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f933.svg",
+      "sha256": "ce37a8166d5667afee81b495d7456af6d07f4dd9517722a7f4ac01a47dee51c4",
+      "git_blob_sha1": "1cfb1743f09d70a3b6a3114c3f85db772173effe",
+      "size": 4972,
+      "shapeElementsIncludingDefinitions": 13,
+      "include_sequences": [
+        "🤳",
+        "🤳🏻",
+        "🤳🏼",
+        "🤳🏽",
+        "🤳🏾",
+        "🤳🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🤳🏻",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f933_1f3fb.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f933_1f3fb.svg",
+      "sha256": "024ddfbabd1f2dc3c1f9afcf0ac9f5af11478ada1f298400c9e5715f9d909276",
+      "git_blob_sha1": "a2cdba256adc7dfd645be1a10195f0fe4cdf2a9d",
+      "size": 4972,
+      "shapeElementsIncludingDefinitions": 13,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "🤳🏼",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f933_1f3fc.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f933_1f3fc.svg",
+      "sha256": "7ba9bb56c44d14eab656c1c1ae4aba219ee50fe0380b4ea98b7112326eb1b0bb",
+      "git_blob_sha1": "72a198dbb3353d7dada026c357a801d8e655fe06",
+      "size": 4972,
+      "shapeElementsIncludingDefinitions": 13,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "🤳🏽",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f933_1f3fd.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f933_1f3fd.svg",
+      "sha256": "ccf11648b1be2fb35be35677fcf7c9f018b7fc5fd966b41add406ee2dcc668bb",
+      "git_blob_sha1": "91916d688b512a44e8820585d3a9eac4aaf9363a",
+      "size": 4972,
+      "shapeElementsIncludingDefinitions": 13,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "🤳🏾",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f933_1f3fe.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f933_1f3fe.svg",
+      "sha256": "670799cf04e79b6f7c810ad5afceaa764da49d7d684d7e8138035e128b009860",
+      "git_blob_sha1": "d7a20a492b9484b2fe8f261575a3adfba043dd93",
+      "size": 4972,
+      "shapeElementsIncludingDefinitions": 13,
+      "build_target": "reference-only"
+    },
+    {
+      "sequence": "🤳🏿",
+      "path": "build/unicode-sources/noto-emoji-hand-props-svg/emoji_u1f933_1f3ff.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f933_1f3ff.svg",
+      "sha256": "e123a52aa3654185bfdb6e2fae1c85a6fe56f30a8408779b2aba6562333094ea",
+      "git_blob_sha1": "ba0a7640d9f04950eba3ba30e88a9d28ab737e95",
+      "size": 4972,
+      "shapeElementsIncludingDefinitions": 13,
+      "build_target": "reference-only"
+    }
+  ]
+}

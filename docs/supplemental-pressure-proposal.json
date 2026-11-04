@@ -1,0 +1,1426 @@
+{
+  "status": "Coordinator accepted centred .7 first six sources for production; builder prepared, production build pending",
+  "method": "tools/font/supplemental_adapter.py",
+  "reviewedSamples": [
+    26,
+    32,
+    54,
+    76,
+    105,
+    163
+  ],
+  "visualFinding": "Centred .7 visibly modulates native stroke width without scratch texture. Six samples reviewed at22/44px; complete source production outputs still require review.",
+  "limitations": [
+    "Native shaping, advances and anchors unchanged for tested strings",
+    "Component and counter guards apply to raster and reconstructed vectors",
+    "Only sample-shaped glyphs are modified in experimental fonts",
+    "No mass build or production provenance change"
+  ],
+  "sources": [
+    {
+      "sourceNumber": 1,
+      "source": "build/unicode-sources/google/ofl/arefruqaa/ArefRuqaa-Regular.ttf",
+      "originalDecision": "optical-review",
+      "recipe": "optical-em",
+      "status": "coordinator recipe implemented, production rebuild required"
+    },
+    {
+      "sourceNumber": 2,
+      "source": "build/unicode-sources/google/ofl/kalam/Kalam-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 3,
+      "source": "build/unicode-sources/google/ofl/gaegu/Gaegu-Regular.ttf",
+      "originalDecision": "optical-review",
+      "recipe": "optical-em",
+      "status": "coordinator recipe implemented, production rebuild required"
+    },
+    {
+      "sourceNumber": 4,
+      "source": "build/unicode-sources/google/ofl/kleeone/KleeOne-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 5,
+      "source": "build/unicode-sources/wenkai/fonts/TTF/LXGWWenKai-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 6,
+      "source": "build/unicode-sources/egyptian-text/eot.ttf",
+      "originalDecision": "weight-review",
+      "recipe": "optical-stroke",
+      "status": "coordinator Egyptian/Anatolian track"
+    },
+    {
+      "sourceNumber": 7,
+      "source": "build/unicode-sources/unihieroglyphica/UniHieroglyphica.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 8,
+      "source": "build/unicode-sources/unicodia/NotoSerifDivesAkuru-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 9,
+      "source": "build/unicode-sources/unicodia/ArchaicCuneiformNumerals.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "wedge-pressure",
+      "status": "preserve wedge direction/count/gaps; representative wedge prototype required"
+    },
+    {
+      "sourceNumber": 10,
+      "source": "build/unicode-sources/garay/DadGaray.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 11,
+      "source": "build/unicode-sources/seal-recovery/DadSealRecovery-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 12,
+      "source": "build/unicode-sources/seal-sans/DadSealSans-Regular.otf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "dense-fine-pressure",
+      "status": "retain short strokes and open counters; dense detail prototype required"
+    },
+    {
+      "sourceNumber": 13,
+      "source": "build/unicode-sources/kaiyuan/DadSealSource-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 14,
+      "source": "build/unicode-sources/tai-yo/DadTaiYo.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 15,
+      "source": "build/unicode-sources/tolong/DadTolong.ttf",
+      "originalDecision": "optical-review",
+      "recipe": "optical-em",
+      "status": "coordinator recipe implemented, production rebuild required"
+    },
+    {
+      "sourceNumber": 16,
+      "source": "build/unicode-sources/google/ofl/kanchenjunga/Kanchenjunga-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 17,
+      "source": "build/unicode-sources/google/ofl/kedebideri/Kedebideri-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 18,
+      "source": "build/unicode-sources/kreative-square/KreativeSquare.ttf",
+      "originalDecision": "weight-review",
+      "recipe": "optical-stroke",
+      "status": "coordinator Egyptian/Anatolian track"
+    },
+    {
+      "sourceNumber": 19,
+      "source": "build/unicode-sources/lxgw-seal/LXGWSeal-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 20,
+      "source": "build/unicode-sources/noto/NotoKufiArabic-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 21,
+      "source": "build/unicode-sources/noto/NotoMusic-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "semantic-detail-pressure",
+      "status": "symbol-family proof required; no blanket pressure acceptance"
+    },
+    {
+      "sourceNumber": 22,
+      "source": "build/unicode-sources/noto/NotoRashiHebrew-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 23,
+      "source": "build/unicode-sources/noto/NotoSans-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 24,
+      "source": "build/unicode-sources/noto/NotoSansAdlam-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 25,
+      "source": "build/unicode-sources/noto/NotoSansAnatolianHieroglyphs-Regular.ttf",
+      "originalDecision": "weight-review",
+      "recipe": "optical-stroke",
+      "status": "coordinator Egyptian/Anatolian track"
+    },
+    {
+      "sourceNumber": 26,
+      "source": "build/unicode-sources/noto/NotoSansArmenian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "first bounded group accepted; production build pending"
+    },
+    {
+      "sourceNumber": 27,
+      "source": "build/unicode-sources/noto/NotoSansAvestan-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 28,
+      "source": "build/unicode-sources/noto/NotoSansBalinese-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 29,
+      "source": "build/unicode-sources/noto/NotoSansBamum-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 30,
+      "source": "build/unicode-sources/noto/NotoSansBassaVah-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 31,
+      "source": "build/unicode-sources/noto/NotoSansBatak-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 32,
+      "source": "build/unicode-sources/noto/NotoSansBengali-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "first bounded group accepted; production build pending"
+    },
+    {
+      "sourceNumber": 33,
+      "source": "build/unicode-sources/noto/NotoSansBhaiksuki-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 34,
+      "source": "build/unicode-sources/noto/NotoSansBrahmi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 35,
+      "source": "build/unicode-sources/noto/NotoSansBuginese-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 36,
+      "source": "build/unicode-sources/noto/NotoSansBuhid-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 37,
+      "source": "build/unicode-sources/noto/NotoSansCanadianAboriginal-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 38,
+      "source": "build/unicode-sources/noto/NotoSansCarian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 39,
+      "source": "build/unicode-sources/noto/NotoSansCaucasianAlbanian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 40,
+      "source": "build/unicode-sources/noto/NotoSansChakma-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 41,
+      "source": "build/unicode-sources/noto/NotoSansCham-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 42,
+      "source": "build/unicode-sources/noto/NotoSansCherokee-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 43,
+      "source": "build/unicode-sources/noto/NotoSansChorasmian-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 44,
+      "source": "build/unicode-sources/noto/NotoSansCoptic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 45,
+      "source": "build/unicode-sources/noto/NotoSansCuneiform-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "wedge-pressure",
+      "status": "preserve wedge direction/count/gaps; representative wedge prototype required"
+    },
+    {
+      "sourceNumber": 46,
+      "source": "build/unicode-sources/noto/NotoSansCypriot-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 47,
+      "source": "build/unicode-sources/noto/NotoSansCyproMinoan-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 48,
+      "source": "build/unicode-sources/noto/NotoSansDeseret-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 49,
+      "source": "build/unicode-sources/noto/NotoSansDevanagari-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 50,
+      "source": "build/unicode-sources/noto/NotoSansDuployan-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 51,
+      "source": "build/unicode-sources/noto/NotoSansElbasan-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 52,
+      "source": "build/unicode-sources/noto/NotoSansElymaic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 53,
+      "source": "build/unicode-sources/noto/NotoSansEthiopic-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 54,
+      "source": "build/unicode-sources/noto/NotoSansGeorgian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "first bounded group accepted; production build pending"
+    },
+    {
+      "sourceNumber": 55,
+      "source": "build/unicode-sources/noto/NotoSansGlagolitic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 56,
+      "source": "build/unicode-sources/noto/NotoSansGothic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 57,
+      "source": "build/unicode-sources/noto/NotoSansGrantha-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 58,
+      "source": "build/unicode-sources/noto/NotoSansGujarati-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 59,
+      "source": "build/unicode-sources/noto/NotoSansGunjalaGondi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 60,
+      "source": "build/unicode-sources/noto/NotoSansGurmukhi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 61,
+      "source": "build/unicode-sources/noto-gurung/NotoSansGurungKhema.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 62,
+      "source": "build/unicode-sources/noto/NotoSansHanifiRohingya-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 63,
+      "source": "build/unicode-sources/noto/NotoSansHanunoo-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 64,
+      "source": "build/unicode-sources/noto/NotoSansHatran-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 65,
+      "source": "build/unicode-sources/noto/NotoSansHebrew-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 66,
+      "source": "build/unicode-sources/noto/NotoSansImperialAramaic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 67,
+      "source": "build/unicode-sources/noto/NotoSansIndicSiyaqNumbers-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 68,
+      "source": "build/unicode-sources/noto/NotoSansInscriptionalPahlavi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 69,
+      "source": "build/unicode-sources/noto/NotoSansInscriptionalParthian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 70,
+      "source": "build/unicode-sources/noto/NotoSansJavanese-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 71,
+      "source": "build/unicode-sources/noto/NotoSansKaithi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 72,
+      "source": "build/unicode-sources/noto/NotoSansKannada-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 73,
+      "source": "build/unicode-sources/noto/NotoSansKawi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 74,
+      "source": "build/unicode-sources/noto/NotoSansKayahLi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 75,
+      "source": "build/unicode-sources/noto/NotoSansKharoshthi-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 76,
+      "source": "build/unicode-sources/noto/NotoSansKhmer-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "first bounded group accepted; production build pending"
+    },
+    {
+      "sourceNumber": 77,
+      "source": "build/unicode-sources/noto/NotoSansKhojki-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 78,
+      "source": "build/unicode-sources/noto/NotoSansKhudawadi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 79,
+      "source": "build/unicode-sources/noto/NotoSansLao-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 80,
+      "source": "build/unicode-sources/noto/NotoSansLaoLooped-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 81,
+      "source": "build/unicode-sources/noto/NotoSansLepcha-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 82,
+      "source": "build/unicode-sources/noto/NotoSansLimbu-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 83,
+      "source": "build/unicode-sources/noto/NotoSansLinearA-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 84,
+      "source": "build/unicode-sources/noto/NotoSansLinearB-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 85,
+      "source": "build/unicode-sources/noto/NotoSansLycian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 86,
+      "source": "build/unicode-sources/noto/NotoSansLydian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 87,
+      "source": "build/unicode-sources/noto/NotoSansMahajani-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 88,
+      "source": "build/unicode-sources/noto/NotoSansMalayalam-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 89,
+      "source": "build/unicode-sources/noto/NotoSansMandaic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 90,
+      "source": "build/unicode-sources/noto/NotoSansManichaean-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 91,
+      "source": "build/unicode-sources/noto/NotoSansMarchen-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 92,
+      "source": "build/unicode-sources/noto/NotoSansMasaramGondi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 93,
+      "source": "build/unicode-sources/noto/NotoSansMath-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "semantic-detail-pressure",
+      "status": "symbol-family proof required; no blanket pressure acceptance"
+    },
+    {
+      "sourceNumber": 94,
+      "source": "build/unicode-sources/noto/NotoSansMayanNumerals-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 95,
+      "source": "build/unicode-sources/noto/NotoSansMedefaidrin-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 96,
+      "source": "build/unicode-sources/noto/NotoSansMeeteiMayek-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 97,
+      "source": "build/unicode-sources/noto/NotoSansMendeKikakui-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 98,
+      "source": "build/unicode-sources/noto/NotoSansMeroitic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 99,
+      "source": "build/unicode-sources/noto/NotoSansMiao-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 100,
+      "source": "build/unicode-sources/noto/NotoSansModi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 101,
+      "source": "build/unicode-sources/noto/NotoSansMongolian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 102,
+      "source": "build/unicode-sources/noto/NotoSansMono-Regular.ttf",
+      "originalDecision": "structural-review",
+      "recipe": "retain-exact-geometry",
+      "status": "preserve diagram geometry; no pressure deformation"
+    },
+    {
+      "sourceNumber": 103,
+      "source": "build/unicode-sources/noto/NotoSansMro-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 104,
+      "source": "build/unicode-sources/noto/NotoSansMultani-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 105,
+      "source": "build/unicode-sources/noto/NotoSansMyanmar-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "first bounded group accepted; production build pending"
+    },
+    {
+      "sourceNumber": 106,
+      "source": "build/unicode-sources/noto/NotoSansNKo-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 107,
+      "source": "build/unicode-sources/noto/NotoSansNabataean-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 108,
+      "source": "build/unicode-sources/noto/NotoSansNagMundari-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 109,
+      "source": "build/unicode-sources/noto/NotoSansNandinagari-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 110,
+      "source": "build/unicode-sources/noto/NotoSansNewTaiLue-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 111,
+      "source": "build/unicode-sources/noto/NotoSansNewa-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 112,
+      "source": "build/unicode-sources/noto/NotoSansNushu-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 113,
+      "source": "build/unicode-sources/noto/NotoSansOgham-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 114,
+      "source": "build/unicode-sources/noto/NotoSansOlChiki-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 115,
+      "source": "build/unicode-sources/noto/NotoSansOldHungarian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 116,
+      "source": "build/unicode-sources/noto/NotoSansOldItalic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 117,
+      "source": "build/unicode-sources/noto/NotoSansOldNorthArabian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 118,
+      "source": "build/unicode-sources/noto/NotoSansOldPermic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 119,
+      "source": "build/unicode-sources/noto/NotoSansOldPersian-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "wedge-pressure",
+      "status": "preserve wedge direction/count/gaps; representative wedge prototype required"
+    },
+    {
+      "sourceNumber": 120,
+      "source": "build/unicode-sources/noto/NotoSansOldSogdian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 121,
+      "source": "build/unicode-sources/noto/NotoSansOldSouthArabian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 122,
+      "source": "build/unicode-sources/noto/NotoSansOldTurkic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 123,
+      "source": "build/unicode-sources/noto/NotoSansOriya-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 124,
+      "source": "build/unicode-sources/noto/NotoSansOsage-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 125,
+      "source": "build/unicode-sources/noto/NotoSansOsmanya-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 126,
+      "source": "build/unicode-sources/noto/NotoSansPahawhHmong-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 127,
+      "source": "build/unicode-sources/noto/NotoSansPalmyrene-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 128,
+      "source": "build/unicode-sources/noto/NotoSansPauCinHau-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 129,
+      "source": "build/unicode-sources/noto/NotoSansPhagsPa-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 130,
+      "source": "build/unicode-sources/noto/NotoSansPhoenician-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 131,
+      "source": "build/unicode-sources/noto/NotoSansPsalterPahlavi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 132,
+      "source": "build/unicode-sources/noto/NotoSansRejang-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 133,
+      "source": "build/unicode-sources/noto/NotoSansRunic-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 134,
+      "source": "build/unicode-sources/noto/NotoSansSamaritan-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 135,
+      "source": "build/unicode-sources/noto/NotoSansSaurashtra-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 136,
+      "source": "build/unicode-sources/noto/NotoSansSharada-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 137,
+      "source": "build/unicode-sources/noto/NotoSansShavian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 138,
+      "source": "build/unicode-sources/noto/NotoSansSiddham-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 139,
+      "source": "build/unicode-sources/noto/NotoSansSignWriting-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "semantic-detail-pressure",
+      "status": "symbol-family proof required; no blanket pressure acceptance"
+    },
+    {
+      "sourceNumber": 140,
+      "source": "build/unicode-sources/noto/NotoSansSinhala-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 141,
+      "source": "build/unicode-sources/noto/NotoSansSogdian-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 142,
+      "source": "build/unicode-sources/noto/NotoSansSoraSompeng-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 143,
+      "source": "build/unicode-sources/noto/NotoSansSoyombo-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 144,
+      "source": "build/unicode-sources/noto/NotoSansSundanese-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 145,
+      "source": "build/unicode-sources/noto/NotoSansSunuwar-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 146,
+      "source": "build/unicode-sources/noto/NotoSansSylotiNagri-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 147,
+      "source": "build/unicode-sources/noto/NotoSansSymbols-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 148,
+      "source": "build/unicode-sources/noto/NotoSansSymbols2-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 149,
+      "source": "build/unicode-sources/noto/NotoSansSyriac-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 150,
+      "source": "build/unicode-sources/noto/NotoSansSyriacWestern-Regular.ttf",
+      "originalDecision": "mark-context-review",
+      "recipe": "native-mark-context",
+      "status": "preserve anchors and reviewed mark context; coordinator nonpen record"
+    },
+    {
+      "sourceNumber": 151,
+      "source": "build/unicode-sources/noto/NotoSansTagalog-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 152,
+      "source": "build/unicode-sources/noto/NotoSansTagbanwa-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 153,
+      "source": "build/unicode-sources/noto/NotoSansTaiLe-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 154,
+      "source": "build/unicode-sources/noto/NotoSansTaiTham-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 155,
+      "source": "build/unicode-sources/noto/NotoSansTaiViet-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 156,
+      "source": "build/unicode-sources/noto/NotoSansTakri-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 157,
+      "source": "build/unicode-sources/noto/NotoSansTamil-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 158,
+      "source": "build/unicode-sources/noto/NotoSansTamilSupplement-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 159,
+      "source": "build/unicode-sources/noto/NotoSansTangsa-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 160,
+      "source": "build/unicode-sources/noto/NotoSansTelugu-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 161,
+      "source": "build/unicode-sources/noto/NotoSansTest-Regular.ttf",
+      "originalDecision": "not-visible",
+      "recipe": "retain-behaviour",
+      "status": "no visible drawing treatment"
+    },
+    {
+      "sourceNumber": 162,
+      "source": "build/unicode-sources/noto/NotoSansThaana-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 163,
+      "source": "build/unicode-sources/noto/NotoSansThai-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "first bounded group accepted; production build pending"
+    },
+    {
+      "sourceNumber": 164,
+      "source": "build/unicode-sources/noto/NotoSansTifinagh-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 165,
+      "source": "build/unicode-sources/noto/NotoSansTirhuta-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 166,
+      "source": "build/unicode-sources/noto/NotoSansUgaritic-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "wedge-pressure",
+      "status": "preserve wedge direction/count/gaps; representative wedge prototype required"
+    },
+    {
+      "sourceNumber": 167,
+      "source": "build/unicode-sources/noto/NotoSansVai-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 168,
+      "source": "build/unicode-sources/noto/NotoSansVithkuqi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 169,
+      "source": "build/unicode-sources/noto/NotoSansWancho-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 170,
+      "source": "build/unicode-sources/noto/NotoSansWarangCiti-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 171,
+      "source": "build/unicode-sources/noto/NotoSansYi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 172,
+      "source": "build/unicode-sources/noto/NotoSansZanabazarSquare-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 173,
+      "source": "build/unicode-sources/noto/NotoSerifAhom-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 174,
+      "source": "build/unicode-sources/noto/NotoSerifDogra-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 175,
+      "source": "build/unicode-sources/noto/NotoSerifHentaigana-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 176,
+      "source": "build/unicode-sources/noto/NotoSerifKhitanSmallScript-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "dense-fine-pressure",
+      "status": "retain short strokes and open counters; dense detail prototype required"
+    },
+    {
+      "sourceNumber": 177,
+      "source": "build/unicode-sources/noto/NotoSerifKhojki-Regular.ttf",
+      "originalDecision": "mark-context-review",
+      "recipe": "native-mark-context",
+      "status": "preserve anchors and reviewed mark context; coordinator nonpen record"
+    },
+    {
+      "sourceNumber": 178,
+      "source": "build/unicode-sources/noto/NotoSerifMakasar-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 179,
+      "source": "build/unicode-sources/noto/NotoSerifNPHmong-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 180,
+      "source": "build/unicode-sources/noto-olonal/NotoSerifOlOnal.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 181,
+      "source": "build/unicode-sources/noto/NotoSerifOldUyghur-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 182,
+      "source": "build/unicode-sources/noto/NotoSerifOttomanSiyaq-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 183,
+      "source": "build/unicode-sources/noto/NotoSerifTangut-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "dense-fine-pressure",
+      "status": "retain short strokes and open counters; dense detail prototype required"
+    },
+    {
+      "sourceNumber": 184,
+      "source": "build/unicode-sources/noto/NotoSerifTibetan-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 185,
+      "source": "build/unicode-sources/noto/NotoSerifTodhri-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 186,
+      "source": "build/unicode-sources/noto/NotoSerifToto-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 187,
+      "source": "build/unicode-sources/noto/NotoSerifYezidi-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 188,
+      "source": "build/unicode-sources/noto/NotoTraditionalNushu-Regular.ttf",
+      "originalDecision": "mark-context-review",
+      "recipe": "native-mark-context",
+      "status": "preserve anchors and reviewed mark context; coordinator nonpen record"
+    },
+    {
+      "sourceNumber": 189,
+      "source": "build/unicode-sources/noto/NotoZnamennyMusicalNotation-Regular.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 190,
+      "source": "build/unicode-sources/unicodia/PadaukBook-Regular.ttf",
+      "originalDecision": "pen-adaptation-needed",
+      "recipe": "native-distance-pressure",
+      "status": "prototype; six scripts reviewed, full source build/review remains"
+    },
+    {
+      "sourceNumber": 191,
+      "source": "build/unicode-sources/unicodia/ScheherazadeNew-Regular.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 192,
+      "source": "build/unicode-sources/ufs/UFSZeroExt.otf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 193,
+      "source": "build/unicode-sources/unicodia/UnicodiaCunei.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "wedge-pressure",
+      "status": "preserve wedge direction/count/gaps; representative wedge prototype required"
+    },
+    {
+      "sourceNumber": 194,
+      "source": "build/unicode-sources/unicodia/UnicodiaDaarage.otf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 195,
+      "source": "build/unicode-sources/unicodia/UnicodiaFunky.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "guarded-native-distance-pressure",
+      "status": "requires category-specific topology and sentence/detail specimen before production"
+    },
+    {
+      "sourceNumber": 196,
+      "source": "build/unicode-sources/malankara/EastSyriacMalankara.ttf",
+      "originalDecision": "retain-current",
+      "recipe": "retain-native-hand",
+      "status": "provisional existing sample accepted"
+    },
+    {
+      "sourceNumber": 197,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "dense-fine-pressure",
+      "status": "retain short strokes and open counters; dense detail prototype required"
+    },
+    {
+      "sourceNumber": 198,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo2.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "dense-fine-pressure",
+      "status": "retain short strokes and open counters; dense detail prototype required"
+    },
+    {
+      "sourceNumber": 199,
+      "source": "build/unicode-sources/jigmo/extracted/Jigmo3.ttf",
+      "originalDecision": "guarded-treatment",
+      "recipe": "dense-fine-pressure",
+      "status": "retain short strokes and open counters; dense detail prototype required"
+    }
+  ],
+  "recipes": "tools/font/supplemental_recipes.json",
+  "acceptedSources": [
+    26,
+    32,
+    54,
+    76,
+    105,
+    163
+  ],
+  "baselineDirectory": "output/font-review/supplemental-production-baselines",
+  "checks": "5 focused tests passed in3.98s: deterministic pressure, preserved join boundary, native layout tables, per-glyph cache repeatability, original TrueType bbox/LSB phantom origin",
+  "experimentalDrift": "output/font-review/supplemental-pressure-drift; optional18-pixel long-wave drift is unaccepted; production bend is zero"
+}

@@ -1,0 +1,1178 @@
+{
+  "date": "2026-11-03",
+  "status": "All128 pen-adaptation findings have explicit sampled pressure acceptance; production integration/full-inventory validation pending.",
+  "expectedSourceCount": 128,
+  "reviewedSourceCount": 128,
+  "unreviewedSources": [],
+  "styleReference": "Smooth native component-centred pressure; original Dad lettering comparisons at22/44px.",
+  "localOnly": true,
+  "browserActions": 0,
+  "sources": [
+    {
+      "number": 17,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/google/ofl/kedebideri/Kedebideri-Regular.ttf",
+      "sourceSha256": "f95907a8c39c68d557c2264fcf593a858eb4751cd5e0c3c7c53e1ef354444064",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 23,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSans-Regular.ttf",
+      "sourceSha256": "f3961a9cde016d41a4879aecda1474d3a36d6bf54fa0e4643de029cc2248b0e8",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 24,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansAdlam-Regular.ttf",
+      "sourceSha256": "e723b210127ffd4aa2f467c3d417d0764168296c9457ca42e498c7258956f2ce",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 26,
+      "review": "docs/supplemental-pressure-proposal.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansArmenian-Regular.ttf",
+      "sourceSha256": "73bde9f3c63aa5ed39236e8a2837224605210a98b54d65724676c0119fcaa24c",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 28,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansBalinese-Regular.ttf",
+      "sourceSha256": "cee58a184e7e00c4332087ac01870a69ac52fd5fa17ea3783ac728c945af1827",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 29,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansBamum-Regular.ttf",
+      "sourceSha256": "cdcda48acdf2bf3d39accd6b3ba8d4a61a34df5e80c58e10366a346c97388ec6",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 30,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansBassaVah-Regular.ttf",
+      "sourceSha256": "7d8e76424575d11c8bd1e749e3c88bed1849a7d7678afe9f4792534f6672e110",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 31,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansBatak-Regular.ttf",
+      "sourceSha256": "e92e4bffffc64f7265ca9da1097e8b8be31fb963b8148edd06d1a22e1a449160",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 32,
+      "review": "docs/supplemental-pressure-proposal.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansBengali-Regular.ttf",
+      "sourceSha256": "5dceda02816fece18ea6796f474f5d3170f1d862f21b1e809cdc94b1caa4b6ec",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 34,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansBrahmi-Regular.ttf",
+      "sourceSha256": "5607e874c4793381e22ba7800b748de43f801829e6b9b49f7b7b2cc3973027f6",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 35,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansBuginese-Regular.ttf",
+      "sourceSha256": "bc005e5bec25e6f80514023397c620850f766783f194316c341a14db610ad36f",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 37,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansCanadianAboriginal-Regular.ttf",
+      "sourceSha256": "dc212a1c1cd2d9c30d954b3fbda0abfbd2e30273032a3d4352e1a8644f50e39a",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 38,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansCarian-Regular.ttf",
+      "sourceSha256": "51684a2abf9bdb8a2709e4792d7577aa80ac7d31d505735b5d6750406f11b43d",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 39,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansCaucasianAlbanian-Regular.ttf",
+      "sourceSha256": "8bd42b9e9a852e38dfc7d6821d8c939697886e691e15cf644d1eccc40f7ac2b4",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 40,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansChakma-Regular.ttf",
+      "sourceSha256": "dc9af5661f93742f3c8ae5ae524268c77d915c8e1c70d02e37a5b57dca97d34e",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 42,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansCherokee-Regular.ttf",
+      "sourceSha256": "4460410f1a089f79af329d5d26e09381ba553a05baa7c1f3c352fc43bb96878d",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 44,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansCoptic-Regular.ttf",
+      "sourceSha256": "37712bf2c7e2d0b9597769663a7b7db97a7845a34ae1bff85d8285a45a4771c0",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 46,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansCypriot-Regular.ttf",
+      "sourceSha256": "23f97e6a1d6f64d464e6a209e607da9e2b1fc3b2aab39ffe285371df72d70723",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 47,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansCyproMinoan-Regular.ttf",
+      "sourceSha256": "cdf993c13853889cad11d6f840d6cf8926ce28b0e6dd1fbfd6305f538fef43e3",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 48,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansDeseret-Regular.ttf",
+      "sourceSha256": "0813aa095d67ca91a8741cc30e08ad0bda57e3444ce5240c9fc1821a7a978d70",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 49,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansDevanagari-Regular.ttf",
+      "sourceSha256": "9c7d935139ea6a1e6ad9dbac4f6d27ece1e04bca8123c8888d00a0f9df4724cd",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 51,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansElbasan-Regular.ttf",
+      "sourceSha256": "4c0703284483476a1077ae50b93976573197a9e673193bb2eb7202bf6e2f3446",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 52,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansElymaic-Regular.ttf",
+      "sourceSha256": "29571749fede39715b09cbadbfedcac089acf33475137a0aac7addd91d333181",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 54,
+      "review": "docs/supplemental-pressure-proposal.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansGeorgian-Regular.ttf",
+      "sourceSha256": "f4b229b126859725b75031dd8c051335d20c85e4eb6d525af28f3e83e471baa4",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 55,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansGlagolitic-Regular.ttf",
+      "sourceSha256": "bff02d40f6854f3e1c8bc2825277876f29b79a95c1ab26acf973237d8b17883e",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 56,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansGothic-Regular.ttf",
+      "sourceSha256": "244b01edb423d34cd4e4ee3b10ff442adafb6debc1e69bd268efae0ec917c0f1",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 57,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansGrantha-Regular.ttf",
+      "sourceSha256": "8b1ee1ea887d181bd68fe41792c75feabe387f8e663da51348233a2193ab277f",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 58,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansGujarati-Regular.ttf",
+      "sourceSha256": "18727143b8eadade0a59dca80959ef784bf8d55e07285d1b4096594dbf829f0a",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 59,
+      "review": "docs/supplemental-systematic-01-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansGunjalaGondi-Regular.ttf",
+      "sourceSha256": "a95ad487aa1249e0fb2a52c0f760c5e539d345c55afb72f714f616b046a3a762",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 60,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansGurmukhi-Regular.ttf",
+      "sourceSha256": "2454c944fda799d2861f11c03e492c453e33083dd1e8d99bd6baac8de71ad0f0",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 61,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto-gurung/NotoSansGurungKhema.ttf",
+      "sourceSha256": "1dba6381ee69584161face7690a4ae8492ba1e4aaf079237bf7282895f7a22f7",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 62,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansHanifiRohingya-Regular.ttf",
+      "sourceSha256": "d0ac376c8eefb67d3df502b81248c9f2c340385016398c6ccd7b14dcf82a4b44",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 63,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansHanunoo-Regular.ttf",
+      "sourceSha256": "00c44c4375203825b1a2e2ad489291f6695724c7340418c725be919581a55d5d",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 64,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansHatran-Regular.ttf",
+      "sourceSha256": "fe2ef794621b1f9a491c027a5537b6c6f96db5a30ff561cfb2a7cb037e843403",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 65,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansHebrew-Regular.ttf",
+      "sourceSha256": "04272f5600d0ec816d31d0df73b23aa8d3501ea359ebe820da31c11ffcf00853",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 66,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansImperialAramaic-Regular.ttf",
+      "sourceSha256": "5b3bd3e7b17591a957bdb22fd411202e37badecabe6386a1b419e60116e3199f",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 68,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansInscriptionalPahlavi-Regular.ttf",
+      "sourceSha256": "1776a4a688e99a5c9720058e798fb82775b5763d57553f8912ef0fed3433ccbc",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 69,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansInscriptionalParthian-Regular.ttf",
+      "sourceSha256": "70c2c24e5442cf4ae70af6b8274fccedc4807317fa7c3cf78272349c35bfb506",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 70,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansJavanese-Regular.ttf",
+      "sourceSha256": "016f43b042c0b01e29688f71607e5d6fdb0effef6fc7aa3aa8eae6b4427fdca8",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 71,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansKaithi-Regular.ttf",
+      "sourceSha256": "ba33fd78d18df942260c53df4080254901aa7c3b69678c7571d680bf063a5e2d",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 72,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansKannada-Regular.ttf",
+      "sourceSha256": "2870274619c2a4abe5d6b11fcb7c4a372eba765b6b7881d459b0eb0a609a68eb",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 73,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansKawi-Regular.ttf",
+      "sourceSha256": "a39966194d54a22e284f381ff3d39b5b6739bb8dc1132cce3fe1dafc985d9981",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 74,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansKayahLi-Regular.ttf",
+      "sourceSha256": "b4ed32acfe50f0019f55b5440a6ea67cc3806b9f9522d542391ecc9beb5d4772",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 76,
+      "review": "docs/supplemental-pressure-proposal.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansKhmer-Regular.ttf",
+      "sourceSha256": "60c10dbfae33a44f1897cd939789bd173aedb7c7dc0a9af389a737e33cb7e548",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 77,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansKhojki-Regular.ttf",
+      "sourceSha256": "763f5d2042c2816ccf43b48372b25d31275788bfe7edd6f24643b83497980a26",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 78,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansKhudawadi-Regular.ttf",
+      "sourceSha256": "9efe023882dd36fbf7d838a7c5ec30e1b22a44f9733af8209dc7b8b30fdd0711",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 79,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansLao-Regular.ttf",
+      "sourceSha256": "d3976b0ac08702c54999ff42eae295d1597fd73b44e0c57d7f4917524e18afbe",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 81,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansLepcha-Regular.ttf",
+      "sourceSha256": "e3f52772d537a0156efa2dbfb7057f154485990df555ef15bd37e5046907dee6",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 83,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansLinearA-Regular.ttf",
+      "sourceSha256": "d02555d4ac3b990d8078c7aa83cb38e95ea25860383b2071dba7c39279569dce",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 84,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansLinearB-Regular.ttf",
+      "sourceSha256": "122f80a3b0a582b175fbd7cc3c30d8fba36b9bb965316f85ee9e9afe9415de4e",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 85,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansLycian-Regular.ttf",
+      "sourceSha256": "917624bc78331f84dd338eab83f21e0cdddd91ef94a2bb6f1dfff631fb3e634d",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 86,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansLydian-Regular.ttf",
+      "sourceSha256": "6dbc48fbf04ae04021c78273492dbab284eb8ffc2cd12fd3d0b61813b123162b",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 87,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMahajani-Regular.ttf",
+      "sourceSha256": "b1d815db4fccdf7053d798d0c98a5a40574529ac9b1bcf08050c47edabaac079",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 88,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMalayalam-Regular.ttf",
+      "sourceSha256": "cc39bb1f7d63b582a2aec1abf2469a43b805a3523a27e0a0eee8cd32702541d5",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 89,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMandaic-Regular.ttf",
+      "sourceSha256": "a4b3656eda324e5d895abdef3796b56e96bff04818b07c0298b85c1e5f061c85",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 90,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansManichaean-Regular.ttf",
+      "sourceSha256": "8d4b476b91110463e44d6eb91885b4457167598a6566f39bdbe13208e3460256",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 91,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMarchen-Regular.ttf",
+      "sourceSha256": "fb40b1294e8f7f4e93f9276b2c3d2972a2643511394eb3db806e0e257b62b893",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 92,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMasaramGondi-Regular.ttf",
+      "sourceSha256": "da26087eb956e722a316a531a42f9f1ee8f8b60bf1a313c5763d71361c729c80",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 95,
+      "review": "docs/supplemental-systematic-02-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMedefaidrin-Regular.ttf",
+      "sourceSha256": "4c0c75d21179cf4064275febe19948c4142ce9922e5c7b6d14ca949af917c383",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 96,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMeeteiMayek-Regular.ttf",
+      "sourceSha256": "2b66fa8f6a094d50a55b5db6385567f2252b1a89e765a9c30c8b66c5bdf466fa",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 97,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMendeKikakui-Regular.ttf",
+      "sourceSha256": "b102ac61dfe23f1f8344559ff38f4a5e99837edc66a65b6431c630d74d5d2dc1",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 98,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMeroitic-Regular.ttf",
+      "sourceSha256": "2baf503fa5c041fd025493de311e45b8680c9f0bb471a8a2418aa4e47a4b7edb",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 99,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMiao-Regular.ttf",
+      "sourceSha256": "d8cb66dfa18893b9eb525f204d7225d8d7ee675eb2140164aa0e583f51c52936",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 100,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansModi-Regular.ttf",
+      "sourceSha256": "d4515137b7da6ede55d1b0fb2bb34ac83822f847b8243a4960709c67739bce48",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 101,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMongolian-Regular.ttf",
+      "sourceSha256": "2986e50b7c66b7cbc42a0d82cc8143697a25ef56e134fe19adfd685c5f4ea57f",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 103,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMro-Regular.ttf",
+      "sourceSha256": "7751f55ca7a4648cb08def4be602de973a5783bcd7a67e302c5b186eaccf3821",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 105,
+      "review": "docs/supplemental-pressure-proposal.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansMyanmar-Regular.ttf",
+      "sourceSha256": "f4be6ef43871516d8347c5217a2033991b8ecda2dd1200007c2fb431a66d64db",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 106,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansNKo-Regular.ttf",
+      "sourceSha256": "72107ca6885331147fb0ca4d7a71f96e6b3e989a75d66ef979a96966b28f8526",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 107,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansNabataean-Regular.ttf",
+      "sourceSha256": "7ce0e1a9d18e15b1a7925a6e10ec8681e6fee131eb5536e80b0e7d7f3d2e2e33",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 108,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansNagMundari-Regular.ttf",
+      "sourceSha256": "9a5453c6749680e2fa4b21335aca32077dea6476f71e4c406a8650bf72eaac40",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 109,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansNandinagari-Regular.ttf",
+      "sourceSha256": "8a8aec2e37aec3e34c0601fc61c4b54ec9e3facb1b62bc3e18b7910df1ffd442",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 110,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansNewTaiLue-Regular.ttf",
+      "sourceSha256": "8fbdf8c1ad04aad87ba087069db7b7ec6194e251522da01489fe28a73153aec9",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 111,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansNewa-Regular.ttf",
+      "sourceSha256": "b772e089e2298380589f8cdea1f53da9e8ad0aa3e2edbaaaeb8704cd5072309c",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 114,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOlChiki-Regular.ttf",
+      "sourceSha256": "47cff9f151ef1eeffb79f1bf2fb303896e1f817a2b14dcdb23b9acb649cc55ce",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 115,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOldHungarian-Regular.ttf",
+      "sourceSha256": "eb429f5e054e264205f20264aac9e1df1afaf2f9fb51f404e28d850e563dd87c",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 116,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOldItalic-Regular.ttf",
+      "sourceSha256": "71ceb944bcbb377b2684110fb700cf8274e9064c7043354baca00c8e9bb939da",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 117,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOldNorthArabian-Regular.ttf",
+      "sourceSha256": "807b2d62cd2a99986bd9f17a56f0a5e93c720eb223bee3dda47a126a9b7365b3",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 118,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOldPermic-Regular.ttf",
+      "sourceSha256": "e3a949984a83c0d8b37ba44f82857f2ca1e2c23ae91e7d11cfd414039d356abf",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 120,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOldSogdian-Regular.ttf",
+      "sourceSha256": "a3b8c9799aab7b9b9170b6eb4955e8d8c58e52c37266faaca168d9fbaea65fec",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 121,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOldSouthArabian-Regular.ttf",
+      "sourceSha256": "a4b93a852a42903fe8537f2d365e6121f0099506907ae9bdb4c6426d8bfccd8a",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 122,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOldTurkic-Regular.ttf",
+      "sourceSha256": "48618c6966523002d336fbad247b01d26ccfa084d93cf7d029784980ea1162c8",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 123,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOriya-Regular.ttf",
+      "sourceSha256": "a16645d056017927406546aa78e4ce15e782fd8783467267b75450453d007415",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 124,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOsage-Regular.ttf",
+      "sourceSha256": "c40ee76873264230f5052e3609dc2069ba77b13782652e156bc1af1fa9005f19",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 125,
+      "review": "docs/supplemental-systematic-03-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansOsmanya-Regular.ttf",
+      "sourceSha256": "70f7728a382ef1aa6974e7cd66e6eb7b1ca433742d27747e143c139bca64d097",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 126,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansPahawhHmong-Regular.ttf",
+      "sourceSha256": "5282a795a69ccf857dee740255293c6eaadc14d0d2744d69a54ea604bfc82814",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 127,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansPalmyrene-Regular.ttf",
+      "sourceSha256": "22796645aff3c6eca0fc0d329aa5f2a9cd760402af19260e5bcdf325989a19e4",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 128,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansPauCinHau-Regular.ttf",
+      "sourceSha256": "e86c01e4f3a893853ab01aaebf03fb44bf1f7e1dbd9d4d2f799b8ef4a4211e06",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 129,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansPhagsPa-Regular.ttf",
+      "sourceSha256": "ad1d57202a3d71241822d984d53b4f458a89fa403c73e56010ea65fb367a9299",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 130,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansPhoenician-Regular.ttf",
+      "sourceSha256": "2634eebf43388ca27d9079c8b2fcae53eb026af46ba166ef4c977392f862219f",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 131,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansPsalterPahlavi-Regular.ttf",
+      "sourceSha256": "24e4b484f2d59453af1f01b90c422d0d21ed9fd137acb8f4b576c3be99f266e8",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 133,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansRunic-Regular.ttf",
+      "sourceSha256": "3510a352a373b87ebc4564109903a833d9f8239251601189f5f0719b9b389acf",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 135,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSaurashtra-Regular.ttf",
+      "sourceSha256": "3fe489f7eb2e7b235f24e05a4403777d3b2c9ad735deecafe05303bb4716d2d2",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 136,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSharada-Regular.ttf",
+      "sourceSha256": "18642acfd4e849da32c5205ba7f55b9d946abc47292c24d88bfeecefb9430e8f",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 137,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansShavian-Regular.ttf",
+      "sourceSha256": "d438d0b0df1fc1a70738418da70815336fa3b417b96323af7b9e3a678b9a5d56",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 140,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSinhala-Regular.ttf",
+      "sourceSha256": "46d5b54952a624e6e3981e0968aecc5464f3b1081131dd7a1fcd42fbf7966471",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 141,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.25,
+      "source": "build/unicode-sources/noto/NotoSansSogdian-Regular.ttf",
+      "sourceSha256": "d549e30091f1039520f8e4aa372576a6174c7d7d6182d48e145deae10b287e15",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 142,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSoraSompeng-Regular.ttf",
+      "sourceSha256": "387b007c076d16255f8e336ea2a6c3e1daa131528c1c05ef6bf0477ace32b132",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 143,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSoyombo-Regular.ttf",
+      "sourceSha256": "e8bea2a22cc0502ce995b1615bb1c7d63598646458142e23b2386578bf7c3e50",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 144,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSundanese-Regular.ttf",
+      "sourceSha256": "509e8c42367fab9d06dfcbd0327fd9512149812609c7f500c7b159ed17c5fe05",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 145,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSunuwar-Regular.ttf",
+      "sourceSha256": "0d66add3f652f618c9ed996efb1b425a515231b313881b4c06b2e1c6d0700525",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 146,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSylotiNagri-Regular.ttf",
+      "sourceSha256": "4b594b82bb7481e9154cbc8eb7fcdbd02748c73cbc7c40790961044033ceb946",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 147,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSymbols-Regular.ttf",
+      "sourceSha256": "6eea9cb4cd39269ea9f95ba5c2735f80ae74049dfc9e1a7c932a5cfc8f0c3030",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 148,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.45,
+      "source": "build/unicode-sources/noto/NotoSansSymbols2-Regular.ttf",
+      "sourceSha256": "c4a0a80f0041ce4be81e2478faad22776d23edb98ae3f0d19bd37044820ecf9d",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 149,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansSyriac-Regular.ttf",
+      "sourceSha256": "1ec0391c549b5e63e4f8d810b4485a64c5551445bfb2bdbf309ce8368bef9d4c",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 153,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.45,
+      "source": "build/unicode-sources/noto/NotoSansTaiLe-Regular.ttf",
+      "sourceSha256": "34263113e4d53e377faeaafc53d2c7b142a0e344e190b9de7b185a66756c4631",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 154,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansTaiTham-Regular.ttf",
+      "sourceSha256": "f07591d877c315027d1e8945143c6aed351f43561af1b102364ad9ea70d47d2f",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 156,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansTakri-Regular.ttf",
+      "sourceSha256": "c14fb3d442ee9330d54d22aed37a9ee78ec4038055faa195d62661e4bb9988f9",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 157,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansTamil-Regular.ttf",
+      "sourceSha256": "6634d9cc97a726e670df41281dd32b167a6b9b71f2036e19671ff08fdde0c292",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 158,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansTamilSupplement-Regular.ttf",
+      "sourceSha256": "1350e640b73f1cd62bb3d94e5d7e4f0ac9ff32ac64ff11fcf829099151ff86c8",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 159,
+      "review": "docs/supplemental-systematic-04-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansTangsa-Regular.ttf",
+      "sourceSha256": "38d92ec4dbba7a23966c2de72736224f94d02e5fb2b4d839344e732cdf3a4cad",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 160,
+      "review": "docs/supplemental-next-group-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansTelugu-Regular.ttf",
+      "sourceSha256": "dcb86a5da09365a2d73d725e429403dca988e6d50c1b1d564579a25dbc18bd29",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 163,
+      "review": "docs/supplemental-pressure-proposal.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansThai-Regular.ttf",
+      "sourceSha256": "d4303fe9c63ebb72759ca8b6d2040c8ae81689f7d08d7b91c656154382b49313",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 164,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansTifinagh-Regular.ttf",
+      "sourceSha256": "bfc82bcdf511b49a1579023610a7aeb98256b7d8dab5cb0c75d7a09eac2d5431",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 165,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansTirhuta-Regular.ttf",
+      "sourceSha256": "3e3afdd9e75a3170565686f97d9b2024b77ef471000527275949a051c124011b",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 167,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansVai-Regular.ttf",
+      "sourceSha256": "ea03a953e2c578c56e17c5baa2e717e9ef0218ccb4ab221c11ec0604814377b3",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 168,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansVithkuqi-Regular.ttf",
+      "sourceSha256": "599b581fdd5456aec9330bbb39a6f4ef72296c8e321dd87894868188b14bf894",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 169,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansWancho-Regular.ttf",
+      "sourceSha256": "01668a00c1c7a3a65f6269c27c3295c09aa714a7677914bba137ebf18e7918a7",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 170,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansWarangCiti-Regular.ttf",
+      "sourceSha256": "faac53f5072d5b682f347c620d30068530a707a032c127359b6c55647700f3aa",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 171,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansYi-Regular.ttf",
+      "sourceSha256": "ab2c82578a368ad99e08ec4b299303c7f16830768df7278605d382fa1d0ee14b",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 172,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSansZanabazarSquare-Regular.ttf",
+      "sourceSha256": "52f57958db04b118f4e8a61ab19d0a8da4cd3a29421fbce9e04f8a463ee1fc0b",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 174,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSerifDogra-Regular.ttf",
+      "sourceSha256": "f2a5287a3b9d0a9a833c80b6c037fc998bc70544ee5f91f0245869013e171ae3",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 178,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSerifMakasar-Regular.ttf",
+      "sourceSha256": "59f80cf2f403ada5b38d0d03fa59bf68acdc48165dc35b39817bcaf951f1015a",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 179,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSerifNPHmong-Regular.ttf",
+      "sourceSha256": "e9b64378074f005e35de1a563a05aba00c2de83116d5e923532a77b2d9a37b2f",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 180,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto-olonal/NotoSerifOlOnal.ttf",
+      "sourceSha256": "17b994f53b4abe1140cfcf005a82c66f5830bb516dd371e4fda60c46e52abdb4",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 185,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSerifTodhri-Regular.ttf",
+      "sourceSha256": "4ded6e98752b13363cf01dad267efdd9481d556b9f2d5291ddcbda7fc7342727",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 186,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSerifToto-Regular.ttf",
+      "sourceSha256": "d0e8fa7de36fec052bb7074b8d705acf5bf2d451148610f4c2f97214b7e759b2",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 187,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/noto/NotoSerifYezidi-Regular.ttf",
+      "sourceSha256": "b222255b6e83acf0569734741b143eb0bfc3b0f7b18e06f31cf7cc9e52d251e7",
+      "originalDecision": "pen-adaptation-needed"
+    },
+    {
+      "number": 190,
+      "review": "docs/supplemental-systematic-05-review.json",
+      "decision": "sampled-pressure-accepted",
+      "amount": 0.7,
+      "source": "build/unicode-sources/unicodia/PadaukBook-Regular.ttf",
+      "sourceSha256": "06013b8f057d6b067f7628c0872260e7c64d149030ba9cdaa9639f99c7be569b",
+      "originalDecision": "pen-adaptation-needed"
+    }
+  ],
+  "limitations": [
+    "Acceptance index tracks sampled visual directions, not production coverage.",
+    "Each review retains native shaping/geometry and technical limitations.",
+    "Unsafe per-glyph candidates must retain exact source and be reported; source acceptance does not waive full inventory guards."
+  ],
+  "reviewSha256": {
+    "docs/supplemental-pressure-proposal.json": "e9cb88baf050af6d75b591046d6282da89bba19f909ef63b105eca9e58f30fc1",
+    "docs/supplemental-next-group-review.json": "34e61017d680f36955cff8bd8a3eff3b6381ff680744dedf07cf7049e5a6cfaf",
+    "docs/supplemental-systematic-01-review.json": "786e5a8e76df179f84adc642d5dd5dd4cf47c8fac18b3e633da814af68f39b57",
+    "docs/supplemental-systematic-02-review.json": "35e5901c54cdfe55773a13dcb9db0bb0becb529a54d29b34587d53bbcc196027",
+    "docs/supplemental-systematic-03-review.json": "ad630daf400b4ab6eb742e92b98666a831e615931a337632dacb3d88d4886134",
+    "docs/supplemental-systematic-04-review.json": "fc9951b150dca8bae0a5643dfa2a25ed0ef1a90867c66e4f1909a989019dc034",
+    "docs/supplemental-systematic-05-review.json": "407c1559e8577106f25e378519507c255b0abbad7749ce5e388ed3b0dac3e187"
+  }
+}

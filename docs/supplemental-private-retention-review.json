@@ -1,0 +1,398 @@
+{
+  "status": "All132 generated native-retention specimens from regular groups0/1/2 inspected; Brahmi number joiner is accepted only through documented numeric contexts, not its isolated BNJ diagnostic.",
+  "localOnly": true,
+  "selection": "Three largest encoded positive guard-retained drawings per source, only when HarfBuzz paints the requested GID; GSUB-only cases counted separately in source reports",
+  "reports": [
+    "output/font-review/private-retention-review-0/review.json",
+    "output/font-review/private-retention-review-1/review.json",
+    "output/font-review/private-retention-review-2/review.json"
+  ],
+  "pages": [
+    {
+      "group": 0,
+      "page": 1,
+      "image": "output/font-review/private-retention-review-0/page-1.png",
+      "imageSha256": "aa6003aa038e1bef735b9d2654856a5e94a5aaa3389b2b7ffb7d291eac354d9f",
+      "cases": [
+        "NotoSansSignWriting-Regular retained U+1D9AF gid32762",
+        "NotoSansSignWriting-Regular retained U+1D8D4 gid20467",
+        "NotoSansSignWriting-Regular retained U+1D8D2 gid20275"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, sampled loops, dots, fine calligraphic/notation and pictographic details remain readable native forms. Isolated mark dotted-circle carriers are explicit native shaping, not a standalone language claim."
+    },
+    {
+      "group": 1,
+      "page": 1,
+      "image": "output/font-review/private-retention-review-1/page-1.png",
+      "imageSha256": "d7f4d5785cbfaada46a827ca0c27e58a8eeeed6a8de3777984c1a7eda3c2a651",
+      "cases": [
+        "NotoKufiArabic-Regular retained U+FD4C gid233",
+        "NotoKufiArabic-Regular retained U+FDFA gid231",
+        "NotoKufiArabic-Regular retained U+FD46 gid232",
+        "NotoMusic-Regular retained U+1D03D gid73",
+        "NotoMusic-Regular retained U+1D251 gid585",
+        "NotoMusic-Regular retained U+1D138 gid312"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, sampled loops, dots, fine calligraphic/notation and pictographic details remain readable native forms. Isolated mark dotted-circle carriers are explicit native shaping, not a standalone language claim."
+    },
+    {
+      "group": 1,
+      "page": 2,
+      "image": "output/font-review/private-retention-review-1/page-2.png",
+      "imageSha256": "8b830a09e30588eb2d2c4d3c650b5edb3eda01702f258ae2f8a5629e91a205a8",
+      "cases": [
+        "NotoSansBalinese-Regular retained U+1B67 gid104",
+        "NotoSansBalinese-Regular retained U+1B66 gid103",
+        "NotoSansBamum-Regular retained U+16898 gid233",
+        "NotoSansBamum-Regular retained U+168D8 gid297",
+        "NotoSansBamum-Regular retained U+16978 gid457",
+        "NotoSansCanadianAboriginal-Regular retained U+15D6 gid491"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, sampled loops, dots, fine calligraphic/notation and pictographic details remain readable native forms. Isolated mark dotted-circle carriers are explicit native shaping, not a standalone language claim."
+    },
+    {
+      "group": 1,
+      "page": 3,
+      "image": "output/font-review/private-retention-review-1/page-3.png",
+      "imageSha256": "d06fe7096a87d074482f39e26b67aff69666806f153498cfe55d4221bd52ae73",
+      "cases": [
+        "NotoSansCarian-Regular retained U+102CA gid46",
+        "NotoSansCaucasianAlbanian-Regular retained U+10555 gid41",
+        "NotoSansCaucasianAlbanian-Regular retained U+10530 gid4",
+        "NotoSansDuployan-Regular retained U+1BC5E gid127",
+        "NotoSansDuployan-Regular retained U+1BC5B gid124",
+        "NotoSansGlagolitic-Regular retained U+2C19 gid34"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, sampled loops, dots, fine calligraphic/notation and pictographic details remain readable native forms. Isolated mark dotted-circle carriers are explicit native shaping, not a standalone language claim."
+    },
+    {
+      "group": 1,
+      "page": 4,
+      "image": "output/font-review/private-retention-review-1/page-4.png",
+      "imageSha256": "688f7a48636520fc57178b18d2ae5be88997c9fc8bded181c764edb05ff8bc6f",
+      "cases": [
+        "NotoSansGlagolitic-Regular retained U+1E00A gid113",
+        "NotoSansGrantha-Regular retained U+11348 gid121",
+        "NotoSansGrantha-Regular retained U+11344 gid85",
+        "NotoSansGrantha-Regular retained U+11316 gid19",
+        "NotoSansGujarati-Regular retained U+0A90 gid17",
+        "NotoSansGunjalaGondi-Regular retained U+11D85 gid39"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, sampled loops, dots, fine calligraphic/notation and pictographic details remain readable native forms. Isolated mark dotted-circle carriers are explicit native shaping, not a standalone language claim."
+    },
+    {
+      "group": 1,
+      "page": 5,
+      "image": "output/font-review/private-retention-review-1/page-5.png",
+      "imageSha256": "231bdcd9e3918950fc460b6c7e2f5e400a3b95d1bf0a54725e45252e9e3c0ed9",
+      "cases": [
+        "NotoSansGunjalaGondi-Regular retained U+11D6C gid14",
+        "NotoSansGunjalaGondi-Regular retained U+11DA9 gid66",
+        "NotoSansHanunoo-Regular retained U+1730 gid21",
+        "NotoSansHanunoo-Regular retained U+1726 gid11",
+        "NotoSansHanunoo-Regular retained U+1729 gid14",
+        "NotoSansIndicSiyaqNumbers-Regular retained U+06F0 gid84"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, sampled loops, dots, fine calligraphic/notation and pictographic details remain readable native forms. Isolated mark dotted-circle carriers are explicit native shaping, not a standalone language claim."
+    },
+    {
+      "group": 1,
+      "page": 6,
+      "image": "output/font-review/private-retention-review-1/page-6.png",
+      "imageSha256": "d1a35a1ce3cb5b8fe424be46cb616d8a835330f09f95d79b8287c3c84a5c16e4",
+      "cases": [
+        "NotoSansInscriptionalParthian-Regular retained U+10B42 gid6",
+        "NotoSansKhojki-Regular retained U+11220 gid134",
+        "NotoSansLinearB-Regular retained U+100E2 gid191",
+        "NotoSansLinearB-Regular retained U+100A1 gid126",
+        "NotoSansMasaramGondi-Regular retained U+11D1D gid31",
+        "NotoSansMendeKikakui-Regular retained U+1E806 gid11"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, native fine loops, closely packed historical wedges, symbol enclosures and letter details remain legible. Their original geometry is deliberately retained after reconstruction guards fail; unencoded contextual cases are counted, not silently called visually approved."
+    },
+    {
+      "group": 1,
+      "page": 7,
+      "image": "output/font-review/private-retention-review-1/page-7.png",
+      "imageSha256": "1cd8d27ed8406925038dc599d1911ca0a18783382a058856bcad6c884540edb7",
+      "cases": [
+        "NotoSansMendeKikakui-Regular retained U+1E87D gid130",
+        "NotoSansMeroitic-Regular retained U+109D7 gid89",
+        "NotoSansMeroitic-Regular retained U+1099F gid39",
+        "NotoSansMiao-Regular retained U+16F14 gid26",
+        "NotoSansOldPermic-Regular retained U+10350 gid13",
+        "NotoSansOldPermic-Regular retained U+10376 gid51"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, native fine loops, closely packed historical wedges, symbol enclosures and letter details remain legible. Their original geometry is deliberately retained after reconstruction guards fail; unencoded contextual cases are counted, not silently called visually approved."
+    },
+    {
+      "group": 1,
+      "page": 8,
+      "image": "output/font-review/private-retention-review-1/page-8.png",
+      "imageSha256": "a741ed3b640df72eb6a8879247944446d20f83c0931b20dd4cad278035af10ba",
+      "cases": [
+        "NotoSansSogdian-Regular retained U+10F45 gid29",
+        "NotoSansSymbols-Regular retained U+1F549 gid499",
+        "NotoSansSymbols-Regular retained U+1F738 gid449",
+        "NotoSansSymbols-Regular retained U+1F11C gid87",
+        "NotoSansSyriac-Regular retained U+0714 gid23",
+        "NotoSansTaiLe-Regular retained U+1044 gid50"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, native fine loops, closely packed historical wedges, symbol enclosures and letter details remain legible. Their original geometry is deliberately retained after reconstruction guards fail; unencoded contextual cases are counted, not silently called visually approved."
+    },
+    {
+      "group": 1,
+      "page": 9,
+      "image": "output/font-review/private-retention-review-1/page-9.png",
+      "imageSha256": "291db6683c29c16bfc5360ab84aa0f68c5811640405fca3b840bd23e718cbc84",
+      "cases": [
+        "NotoSansTakri-Regular retained U+1169F gid41",
+        "NotoSansTakri-Regular retained U+116C9 gid78",
+        "NotoSansTamilSupplement-Regular retained U+11FED gid46",
+        "NotoSansTamilSupplement-Regular retained U+11FE7 gid38",
+        "NotoSansTangsa-Regular retained U+16AAB gid60",
+        "NotoSansTangsa-Regular retained U+16A7C gid13"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, native fine loops, closely packed historical wedges, symbol enclosures and letter details remain legible. Their original geometry is deliberately retained after reconstruction guards fail; unencoded contextual cases are counted, not silently called visually approved."
+    },
+    {
+      "group": 1,
+      "page": 10,
+      "image": "output/font-review/private-retention-review-1/page-10.png",
+      "imageSha256": "8c1b1036c056e8a0703d1938d538ed5d91917e411f23c2772328efbc040d2eda",
+      "cases": [
+        "NotoSansTirhuta-Regular retained U+11482 gid12",
+        "NotoSansTirhuta-Regular retained U+114A3 gid45",
+        "NotoSansTirhuta-Regular retained U+11491 gid27",
+        "NotoSerifOlOnal retained U+1E5E0 gid22",
+        "NotoSerifOlOnal retained U+1E5F9 gid45",
+        "UnicodiaCunei retained U+12031 gid54"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, native fine loops, closely packed historical wedges, symbol enclosures and letter details remain legible. Their original geometry is deliberately retained after reconstruction guards fail; unencoded contextual cases are counted, not silently called visually approved."
+    },
+    {
+      "group": 1,
+      "page": 11,
+      "image": "output/font-review/private-retention-review-1/page-11.png",
+      "imageSha256": "0637f81d014d964c29f06646601dd0e3d6f17bac9e871a62d85808994677822a",
+      "cases": [
+        "UnicodiaCunei retained U+12030 gid53",
+        "UnicodiaCunei retained U+124E2 gid1141",
+        "UnicodiaFunky retained U+1CEC3 gid59",
+        "UnicodiaFunky retained U+1DF1F gid90",
+        "UnicodiaFunky retained U+1DF49 gid132"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, native fine loops, closely packed historical wedges, symbol enclosures and letter details remain legible. Their original geometry is deliberately retained after reconstruction guards fail; unencoded contextual cases are counted, not silently called visually approved."
+    },
+    {
+      "group": 2,
+      "page": 1,
+      "image": "output/font-review/private-retention-review-2/page-1.png",
+      "imageSha256": "aff43de444fa504c426f1004a6d8db78a0543cc9cabae0efaee1186134ea0a98",
+      "cases": [
+        "ArchaicCuneiformNumerals retained U+125E8 gid153",
+        "ArchaicCuneiformNumerals retained U+125A2 gid83",
+        "ArchaicCuneiformNumerals retained U+1261E gid207",
+        "Kedebideri-Regular retained U+00F0 gid176",
+        "NotoSansBrahmi-Regular retained U+1107F gid192",
+        "NotoSansBrahmi-Regular retained U+1104D gid85"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples-except-context-required-carrier",
+      "contextRequired": [
+        "NotoSansBrahmi-Regular retained U+1107F gid192"
+      ],
+      "observation": "Native repeated numeric geometry, fine cuneiform and curved letter details remain legible at22/44px. Brahmi number joiner U+1107F paints native dotted-circle/BNJ diagnostic in isolation: this is explicitly NOT accepted as a standalone drawing; actual native numeric joining contexts are being checked separately."
+    },
+    {
+      "group": 2,
+      "page": 2,
+      "image": "output/font-review/private-retention-review-2/page-2.png",
+      "imageSha256": "03380f3786c237433582b3b2c5fd33d0bf015dd72f7a16c3a55a130fe3687a37",
+      "cases": [
+        "NotoSansChakma-Regular retained U+1045 gid211",
+        "NotoSansChakma-Regular retained U+1043 gid209",
+        "NotoSansChakma-Regular retained U+11106 gid36",
+        "NotoSansCuneiform-Regular retained U+12031 gid53",
+        "NotoSansCuneiform-Regular retained U+12030 gid52",
+        "NotoSansCuneiform-Regular retained U+124E2 gid1140"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples-except-context-required-carrier",
+      "contextRequired": [],
+      "observation": "Native repeated numeric geometry, fine cuneiform and curved letter details remain legible at22/44px. Brahmi number joiner U+1107F paints native dotted-circle/BNJ diagnostic in isolation: this is explicitly NOT accepted as a standalone drawing; actual native numeric joining contexts are being checked separately."
+    },
+    {
+      "group": 2,
+      "page": 3,
+      "image": "output/font-review/private-retention-review-2/page-3.png",
+      "imageSha256": "b0e93989e2258d616dc1381d37866217800f8353f071c45389779fcef9508bff",
+      "cases": [
+        "NotoSansElymaic-Regular retained U+10FEE gid26",
+        "NotoSansGurungKhema retained U+16100 gid1",
+        "NotoSansHanifiRohingya-Regular retained U+10D39 gid178",
+        "NotoSansImperialAramaic-Regular retained U+1084E gid18",
+        "NotoSansKhudawadi-Regular retained U+112B7 gid29",
+        "NotoSansKhudawadi-Regular retained U+112CB gid49"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples-except-context-required-carrier",
+      "contextRequired": [],
+      "observation": "Native repeated numeric geometry, fine cuneiform and curved letter details remain legible at22/44px. Brahmi number joiner U+1107F paints native dotted-circle/BNJ diagnostic in isolation: this is explicitly NOT accepted as a standalone drawing; actual native numeric joining contexts are being checked separately."
+    },
+    {
+      "group": 2,
+      "page": 4,
+      "image": "output/font-review/private-retention-review-2/page-4.png",
+      "imageSha256": "75f03c856fd21b2ebed7d0df4f0a275529114513bd47c64b3ed17b577d1e9347",
+      "cases": [
+        "NotoSansKhudawadi-Regular retained U+112E6 gid76",
+        "NotoSansLaoLooped-Regular retained U+0E8C gid15",
+        "NotoSansLaoLooped-Regular retained U+0E98 gid27",
+        "NotoSansLinearA-Regular retained U+106E5 gid233",
+        "NotoSansLinearA-Regular retained U+10674 gid120",
+        "NotoSansLinearA-Regular retained U+10645 gid73"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, original letter/mark loops and fine structural, mathematical and pictographic details remain coherent. Native preservation avoids damaged counters/connectivity; isolated mark dotted-circle carriers are native context behaviour, not linguistic samples."
+    },
+    {
+      "group": 2,
+      "page": 5,
+      "image": "output/font-review/private-retention-review-2/page-5.png",
+      "imageSha256": "0fcc36aa1c1a042a95d5c785a9befd2e6571b09fb9f2eebcaf89f56ae1edfde4",
+      "cases": [
+        "NotoSansManichaean-Regular retained U+10AEF gid47",
+        "NotoSansMarchen-Regular retained U+11C77 gid59",
+        "NotoSansMath-Regular retained U+2593 gid4553",
+        "NotoSansMath-Regular retained U+2A0B gid2877",
+        "NotoSansMath-Regular retained U+2A0F gid2859",
+        "NotoSansMedefaidrin-Regular retained U+16E47 gid38"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, original letter/mark loops and fine structural, mathematical and pictographic details remain coherent. Native preservation avoids damaged counters/connectivity; isolated mark dotted-circle carriers are native context behaviour, not linguistic samples."
+    },
+    {
+      "group": 2,
+      "page": 6,
+      "image": "output/font-review/private-retention-review-2/page-6.png",
+      "imageSha256": "dd99e2e67e43122e264462ceec8551e135a587572fc234db8dd5d46061f9b1a4",
+      "cases": [
+        "NotoSansMedefaidrin-Regular retained U+16E6C gid75",
+        "NotoSansMedefaidrin-Regular retained U+16E4E gid45",
+        "NotoSansMeeteiMayek-Regular retained U+ABCF gid47",
+        "NotoSansNagMundari-Regular retained U+1E4E6 gid23",
+        "NotoSansNandinagari-Regular retained U+1CFA gid67",
+        "NotoSansOriya-Regular retained U+0B2A gid40"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, original letter/mark loops and fine structural, mathematical and pictographic details remain coherent. Native preservation avoids damaged counters/connectivity; isolated mark dotted-circle carriers are native context behaviour, not linguistic samples."
+    },
+    {
+      "group": 2,
+      "page": 7,
+      "image": "output/font-review/private-retention-review-2/page-7.png",
+      "imageSha256": "633fa50a14edaa33beba9392b66baa03c39cd81e3975116ec9b5aa959d475285",
+      "cases": [
+        "NotoSansOriya-Regular retained U+0B1F gid30",
+        "NotoSansOriya-Regular retained U+0B6B gid90",
+        "NotoSansOsage-Regular retained U+104BD gid23",
+        "NotoSansOsage-Regular retained U+104BE gid24",
+        "NotoSansOsage-Regular retained U+104BC gid22",
+        "NotoSansSaurashtra-Regular retained U+A887 gid12"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, original letter/mark loops and fine structural, mathematical and pictographic details remain coherent. Native preservation avoids damaged counters/connectivity; isolated mark dotted-circle carriers are native context behaviour, not linguistic samples."
+    },
+    {
+      "group": 2,
+      "page": 8,
+      "image": "output/font-review/private-retention-review-2/page-8.png",
+      "imageSha256": "621bff90ca3e4196e9477d7f224751e65cd1df040e2d61c1876a206a7c0ced5d",
+      "cases": [
+        "NotoSansSoraSompeng-Regular retained U+110E1 gid23",
+        "NotoSansSoraSompeng-Regular retained U+110D8 gid14",
+        "NotoSansSoraSompeng-Regular retained U+110D0 gid6",
+        "NotoSansSoyombo-Regular retained U+11A82 gid96",
+        "NotoSansSoyombo-Regular retained U+11A97 gid303",
+        "NotoSansSymbols2-Regular retained U+1F5F3 gid442"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, original letter/mark loops and fine structural, mathematical and pictographic details remain coherent. Native preservation avoids damaged counters/connectivity; isolated mark dotted-circle carriers are native context behaviour, not linguistic samples."
+    },
+    {
+      "group": 2,
+      "page": 9,
+      "image": "output/font-review/private-retention-review-2/page-9.png",
+      "imageSha256": "9f03449e5e99ff2dad5674b67e99a5d264beceb657b44bd167dfa91faf0c61c8",
+      "cases": [
+        "NotoSansSymbols2-Regular retained U+1F3DF gid1297",
+        "NotoSansSymbols2-Regular retained U+1F398 gid1109",
+        "NotoSansTaiTham-Regular retained U+1AAD gid637",
+        "NotoSansVai-Regular retained U+A543 gid71",
+        "NotoSansVithkuqi-Regular retained U+10579 gid10",
+        "NotoSansVithkuqi-Regular retained U+10573 gid4"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, original letter/mark loops and fine structural, mathematical and pictographic details remain coherent. Native preservation avoids damaged counters/connectivity; isolated mark dotted-circle carriers are native context behaviour, not linguistic samples."
+    },
+    {
+      "group": 2,
+      "page": 10,
+      "image": "output/font-review/private-retention-review-2/page-10.png",
+      "imageSha256": "b827b635c61241c833dffa70867fa72482481396839aaabc5814e43137ac36b6",
+      "cases": [
+        "NotoSansVithkuqi-Regular retained U+1059A gid39",
+        "NotoSansWancho-Regular retained U+1E2E6 gid48",
+        "NotoSansYi-Regular retained U+A45E gid1144",
+        "NotoSansYi-Regular retained U+A1B4 gid462",
+        "NotoSansYi-Regular retained U+A45F gid1145",
+        "NotoSerifDogra-Regular retained U+11817 gid27"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, preserved loop/mark distinctions, thin connecting strokes and native metrics remain coherent. This triages sampled guard exceptions; it is not all-repertoire or native-reader approval."
+    },
+    {
+      "group": 2,
+      "page": 11,
+      "image": "output/font-review/private-retention-review-2/page-11.png",
+      "imageSha256": "532af0971a980ac16890c02d79f9d88b7573c962354efe1981047ef080340144",
+      "cases": [
+        "NotoSerifToto-Regular retained U+1E2A7 gid27",
+        "NotoSerifToto-Regular retained U+1E2A6 gid26",
+        "NotoSerifToto-Regular retained U+1E2AA gid30",
+        "PadaukBook-Regular retained U+1093 gid609"
+      ],
+      "decision": "accepted-bounded-native-fallback-samples",
+      "observation": "At22/44px, preserved loop/mark distinctions, thin connecting strokes and native metrics remain coherent. This triages sampled guard exceptions; it is not all-repertoire or native-reader approval."
+    }
+  ],
+  "inspectedSamples": 132,
+  "remainingGroup1Pages": [],
+  "reuseGate": "Reviewed font SHA in each source report must match final public font SHA; Duployan adds two separately audited native-preservation glyphs after this private cache stage.",
+  "remainingGroup2Pages": [],
+  "contextReviews": [
+    {
+      "codepoint": "U+1107F",
+      "category": "Mn (pinned UnicodeData)",
+      "decision": "accepted-native-numeric-context; isolated BNJ diagnostic is not a standalone drawing",
+      "checks": "output/font-review/brahmi-number-joiner-review/checks.json",
+      "image": "output/font-review/brahmi-number-joiner-review/comparison.png",
+      "imageSha256": "fa22a218fe51eaeedda24d7014fcfc71f455cec19538a4f5bef2ea11acdbdf65",
+      "result": "Both numeric contexts shape one identical native ligature with field guards passing; native/pressure22/44px comparison inspected.",
+      "regression": "tests/test_brahmi_number_joiner.py",
+      "regressionLog": "/tmp/unicode-brahmi-number-joiner-tests.log",
+      "limitations": "Native source contextual shaping evidence, not an arithmetic parser or exhaustive Brahmi linguistic validation."
+    }
+  ],
+  "remaining": "Final public font hash matching, source45/50policy incorporation and integrated regression/audit checks remain."
+}

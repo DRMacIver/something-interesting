@@ -1,0 +1,155 @@
+{
+  "status": "Corrected normal public UFS build integrated and byte-identical to accepted local candidate; all 1301 semantic widths and strict cache/native proofs pass; final full current suite pending.",
+  "font": "output/font-review/cubic-width-diagnosis/candidate/1a10ab6b39c1.woff2",
+  "fontSha256": "a18a8966ff55e18e548f0319ad6f5646ff498afc47f4ebbe9ff054ba32fa17cd",
+  "image": "output/font-review/cubic-width-diagnosis/production-fields/page-1.png",
+  "imageSha256": "86bf702948a69969e4836b1376d24446f85d80d0c0b76317d9bf2bcbeb929ec5",
+  "checks384": "output/font-review/cubic-width-diagnosis/production-fields/whole-field-checks.json",
+  "checks1024": "output/font-review/cubic-width-diagnosis/whole-field-check-1024.json",
+  "observation": "Accepted local 22/44 smooth-pressure appearance and 384/1024 whole-field results bind to the exact current public SHA. Width correction changes semantic advances only; every drawable command remains unchanged.",
+  "historicalIsolatedStatus": "Isolated corrected CFF candidate accepted in local22/44native/Dad field;384and1024whole-field guards pass; strictall1301proof/correctivepublicbuildpending",
+  "date": "2026-11-03",
+  "public": {
+    "file": "assets/fonts/scripts/1a10ab6b39c1.woff2",
+    "sha256": "a18a8966ff55e18e548f0319ad6f5646ff498afc47f4ebbe9ff054ba32fa17cd",
+    "bytes": 2175880,
+    "manifest": "js/font-manifest.js",
+    "manifestSha256": "6847bb807966fbeaa32a5b3130d5cd8d91ee4739095936e25daf3746b29d6147",
+    "recipeSha256": "596425edf7ff6ee352cf574fb2c872f1ff4e0a54fe7090578846d5ef5dce422a",
+    "nativeInputSha256": "57506979a184c69119b61f1c42c22f48acbd221ef535bbbf0cdef673821cd9d3",
+    "counts": {
+      "native-blank": 1,
+      "adapted": 1263,
+      "native-retained-guard": 37
+    },
+    "glyphs": 1301,
+    "report": "output/font-review/supplemental-cubic-production/57506979a184c69119b61f1c42c22f48acbd221ef535bbbf0cdef673821cd9d3-596425edf7ff6ee352cf574fb2c872f1ff4e0a54fe7090578846d5ef5dce422a-cubic-preserve-ae6c68e6e6a2b187afa77c3b99d99f0e37bc25cc124eeec2b029f2548a677d1f.json",
+    "charstringAdvancesMatchHmtx": true,
+    "widthOnlyRepairGids": [
+      1210,
+      1211,
+      1212,
+      1245,
+      1248
+    ],
+    "matchesAcceptedCandidateBytesAndMetadata": true,
+    "otherFontShasUnchanged": 380
+  },
+  "semanticWidthCorrection": {
+    "diagnosis": "T2CharStringPen inserts its width operand verbatim. UFS private nominalWidthX=1046/defaultWidthX=200 requires advance-nominalWidthX, or omitted width when advance equals defaultWidthX. Absolute operands incorrectly added 1046 to decoded advances.",
+    "historicalInventories": {
+      "evidence": "output/font-review/cubic-width-diagnosis/widths.json",
+      "initialPublicMismatches": 1268,
+      "frozenPrepressureMismatches": 133,
+      "note": "The frozen baseline remains unchanged and authentic. Five retained drawings inherited bad operands from the earlier alphabet-ink stage; 128 other legacy mismatches were adapted."
+    },
+    "currentMismatches": 0,
+    "geometryChangedByWidthCorrection": false,
+    "fiveNativeOperandRepairs": [
+      {
+        "gid": 1210,
+        "glyph": "u1D253",
+        "method": "explicit-type2-width-operand-only",
+        "nativeDecodedAdvance": 1688,
+        "hmtxAdvance": 642,
+        "encodedOperandBefore": 642,
+        "encodedOperandAfter": -404,
+        "nominalWidthX": 1046,
+        "defaultWidthX": 200
+      },
+      {
+        "gid": 1211,
+        "glyph": "u1D254",
+        "method": "explicit-type2-width-operand-only",
+        "nativeDecodedAdvance": 1766,
+        "hmtxAdvance": 720,
+        "encodedOperandBefore": 720,
+        "encodedOperandAfter": -326,
+        "nominalWidthX": 1046,
+        "defaultWidthX": 200
+      },
+      {
+        "gid": 1212,
+        "glyph": "u1D255",
+        "method": "explicit-type2-width-operand-only",
+        "nativeDecodedAdvance": 1841,
+        "hmtxAdvance": 795,
+        "encodedOperandBefore": 795,
+        "encodedOperandAfter": -251,
+        "nominalWidthX": 1046,
+        "defaultWidthX": 200
+      },
+      {
+        "gid": 1245,
+        "glyph": "u1D279",
+        "method": "explicit-type2-width-operand-only",
+        "nativeDecodedAdvance": 1374,
+        "hmtxAdvance": 328,
+        "encodedOperandBefore": 328,
+        "encodedOperandAfter": -718,
+        "nominalWidthX": 1046,
+        "defaultWidthX": 200
+      },
+      {
+        "gid": 1248,
+        "glyph": "u1D27C",
+        "method": "explicit-type2-width-operand-only",
+        "nativeDecodedAdvance": 1382,
+        "hmtxAdvance": 336,
+        "encodedOperandBefore": 336,
+        "encodedOperandAfter": -710,
+        "nominalWidthX": 1046,
+        "defaultWidthX": 200
+      }
+    ],
+    "nativeRetainedMeaning": "Exact native drawable commands; five declared leading width operands normalized only. All other retained charstrings remain byte-exact; protected U+18F6C/GID562 remains byte-exact.",
+    "oldCachesPreserved": true
+  },
+  "validation": {
+    "strict1301": {
+      "log": "/tmp/unicode-cubic-width-candidate-strict-proof.log",
+      "status": "terminal0",
+      "scope": "Every final Type2 advance equals native hmtx; exact source/native SFNT, cmap/layout/em/frame/cache program and native preservation policy; five permitted width operand repairs authenticated against original guard cache records."
+    },
+    "all1301DrawableEquality": {
+      "log": "/tmp/unicode-cubic-width-candidate-semantic-proof.log",
+      "status": "terminal0",
+      "detail": "output/font-review/cubic-width-diagnosis/candidate-semantic-width-proof.json",
+      "scope": "All 1301 previously accepted and corrected candidate drawable command streams are exactly equal; cmap/layout/metrics unchanged."
+    },
+    "focusedFixtures": {
+      "passed": 43,
+      "seconds": 11.92,
+      "log": "/tmp/unicode-cubic-width-strict-fixtures.log",
+      "files": [
+        "tests/test_cubic_charstring_widths.py",
+        "tests/test_font_baseline_checks.py",
+        "tests/test_dense_baseline_checks.py",
+        "tests/test_duployan_source_preservation.py",
+        "tests/test_cuneiform_source_preservation.py",
+        "tests/test_archaic_native_flattening.py"
+      ],
+      "coverage": "Nominal/default widths; zero advances; same-geometry absolute-width defect rejected; native width operand metadata, curve, source scope and protected-policy mutations rejected. Standalone test_supplemental_cubic_adapter.py is not part of this 43-test command."
+    },
+    "publicDomainRegression": {
+      "passed": 2,
+      "seconds": 13.08,
+      "log": "/tmp/unicode-cubic-width-public-domain-tests.log",
+      "scope": "Original Jurchen/Tangut width assertions pass without weakening tests."
+    },
+    "publicNativeInvariants": "output/font-review/cubic-width-diagnosis/public-native-invariants.json",
+    "cacheMigration": "output/font-review/cubic-width-diagnosis/cache-migration.json",
+    "correctiveBuild": {
+      "session": 95666,
+      "status": "terminal0",
+      "log": "/tmp/unicode-cubic-width-corrective-build.log",
+      "evidence": "output/font-review/cubic-width-diagnosis/corrective-execution.json"
+    }
+  },
+  "remaining": [
+    "Parent-owned dependent catalog/atlas/asset-version refresh after the corrected UFS SHA.",
+    "Final terminal full current suites and beta audit reconciliation; no CFF font build or source-policy integration is missing."
+  ],
+  "reconciledAgainstPublicBuildSession": 95666,
+  "finalFullSuiteStatus": "pending; parent owns final current full-suite outcome"
+}

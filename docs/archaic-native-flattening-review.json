@@ -1,0 +1,81 @@
+{
+  "source": "build/unicode-sources/unicodia/ArchaicCuneiformNumerals.ttf",
+  "reason": "Existing immutable-native compound flattening via DecomposingRecordingPen\u2192TTGlyphPen drops closed one-point zero-ink contours; visible drawing commands remain exact. This is independent of source9 protected connector policy.",
+  "approvedScope": [
+    {
+      "gid": 131,
+      "glyph": "u125D2",
+      "nativeZeroInkContours": 2,
+      "actualZeroInkContours": 0,
+      "sourcePolicy": false
+    },
+    {
+      "gid": 132,
+      "glyph": "u125D3",
+      "nativeZeroInkContours": 3,
+      "actualZeroInkContours": 0,
+      "sourcePolicy": false
+    },
+    {
+      "gid": 133,
+      "glyph": "u125D4",
+      "nativeZeroInkContours": 4,
+      "actualZeroInkContours": 0,
+      "sourcePolicy": false
+    },
+    {
+      "gid": 134,
+      "glyph": "u125D5",
+      "nativeZeroInkContours": 5,
+      "actualZeroInkContours": 0,
+      "sourcePolicy": false
+    },
+    {
+      "gid": 135,
+      "glyph": "u125D6",
+      "nativeZeroInkContours": 6,
+      "actualZeroInkContours": 0,
+      "sourcePolicy": false
+    },
+    {
+      "gid": 136,
+      "glyph": "u125D7",
+      "nativeZeroInkContours": 7,
+      "actualZeroInkContours": 0,
+      "sourcePolicy": false
+    },
+    {
+      "gid": 137,
+      "glyph": "u125D8",
+      "nativeZeroInkContours": 8,
+      "actualZeroInkContours": 0,
+      "sourcePolicy": false
+    },
+    {
+      "gid": 138,
+      "glyph": "u125D9",
+      "nativeZeroInkContours": 9,
+      "actualZeroInkContours": 0,
+      "sourcePolicy": false
+    }
+  ],
+  "proofFunction": "tests/font_baseline_checks.py assert_retained_native_drawing(source,row,before_commands,after_commands)",
+  "requirements": [
+    "Source basename exactlyArchaicCuneiformNumerals.ttf",
+    "NativeGIDs131..138 and originalnamesu125D2..u125D9",
+    "native-retained-guard and not sourcePolicy",
+    "Exactly2..9 adjacent singlepoint moveTo+closePath native contours; zero in current",
+    "All remaining commands/coordinates/order exactlyequal; no lines/curves stripped",
+    "Existing native bounds/metrics/layout and every source-derived cache glyph proof unchanged",
+    "Protected source9 closure rawsourceSHA/nativecurves/metrics authenticated exactly"
+  ],
+  "diagnosticLog": "/tmp/unicode-archaic-zero-ink-diagnosis.log",
+  "actual410GlyphStrictRegression": "/tmp/unicode-archaic-strict-policy-regression.log",
+  "fixtures": {
+    "tests": 30,
+    "seconds": 12.6,
+    "log": "/tmp/unicode-archaic-flattening-fixtures.log",
+    "newCoverage": "all8 expectedemptycounts, wrongcurrentemptycounts, line/curve/connectivity/wrongsource/protectedpolicy mutations rejected"
+  },
+  "changes": "Helper/tests only; no kernel/policydata/build/public edits"
+}

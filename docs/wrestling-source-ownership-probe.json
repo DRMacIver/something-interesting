@@ -1,0 +1,797 @@
+{
+  "status": "Geometric correspondence candidates; requires anatomical review before production",
+  "referenceProbe": "docs/wrestling-tone-reference-emoji-svg-source-probe.json",
+  "rasterPixels": 256,
+  "minimumIoU": 0.8,
+  "drawings": [
+    {
+      "key": "1f93c",
+      "source": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93c.svg",
+      "sourceSha256": "f4a445d687bf1dbc11d10927aeca0015dd97a5b1783867ae95f68910178aa835",
+      "matches": [
+        {
+          "pathIndex": 0,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 1,
+              "owner": "left",
+              "iou": 0.9952690715552928
+            },
+            {
+              "referencePathIndex": 1,
+              "owner": "left",
+              "iou": 0.9952690715552928
+            }
+          ]
+        },
+        {
+          "pathIndex": 2,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 3,
+              "owner": "left",
+              "iou": 0.9795471146822499
+            },
+            {
+              "referencePathIndex": 3,
+              "owner": "left",
+              "iou": 0.9795471146822499
+            }
+          ]
+        },
+        {
+          "pathIndex": 3,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 4,
+              "owner": "left",
+              "iou": 0.982680412371134
+            },
+            {
+              "referencePathIndex": 4,
+              "owner": "left",
+              "iou": 0.982680412371134
+            }
+          ]
+        },
+        {
+          "pathIndex": 7,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 27,
+              "owner": "right",
+              "iou": 0.9645447219983884
+            },
+            {
+              "referencePathIndex": 27,
+              "owner": "right",
+              "iou": 0.9645447219983884
+            }
+          ]
+        },
+        {
+          "pathIndex": 11,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 8,
+              "owner": "left",
+              "iou": 0.9836065573770492
+            },
+            {
+              "referencePathIndex": 8,
+              "owner": "left",
+              "iou": 0.9836065573770492
+            }
+          ]
+        },
+        {
+          "pathIndex": 12,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 0,
+              "owner": "right",
+              "iou": 0.9512195121951219
+            },
+            {
+              "referencePathIndex": 0,
+              "owner": "right",
+              "iou": 0.9512195121951219
+            }
+          ]
+        },
+        {
+          "pathIndex": 13,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 9,
+              "owner": "left",
+              "iou": 0.9737118822292324
+            },
+            {
+              "referencePathIndex": 9,
+              "owner": "left",
+              "iou": 0.9737118822292324
+            }
+          ]
+        },
+        {
+          "pathIndex": 14,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 22,
+              "owner": "left",
+              "iou": 0.9607843137254902
+            },
+            {
+              "referencePathIndex": 10,
+              "owner": "left",
+              "iou": 0.9607843137254902
+            }
+          ]
+        },
+        {
+          "pathIndex": 15,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 10,
+              "owner": "left",
+              "iou": 0.9873949579831933
+            },
+            {
+              "referencePathIndex": 11,
+              "owner": "left",
+              "iou": 0.9873949579831933
+            }
+          ]
+        },
+        {
+          "pathIndex": 16,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 23,
+              "owner": "right",
+              "iou": 0.9636711281070746
+            },
+            {
+              "referencePathIndex": 23,
+              "owner": "right",
+              "iou": 0.9636711281070746
+            }
+          ]
+        },
+        {
+          "pathIndex": 17,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 45,
+              "owner": "left",
+              "iou": 0.9746835443037974
+            },
+            {
+              "referencePathIndex": 45,
+              "owner": "left",
+              "iou": 0.9746835443037974
+            }
+          ]
+        },
+        {
+          "pathIndex": 18,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 24,
+              "owner": "right",
+              "iou": 0.9829712272460364
+            },
+            {
+              "referencePathIndex": 24,
+              "owner": "right",
+              "iou": 0.9829712272460364
+            }
+          ]
+        },
+        {
+          "pathIndex": 20,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 26,
+              "owner": "right",
+              "iou": 0.992588369441277
+            },
+            {
+              "referencePathIndex": 26,
+              "owner": "right",
+              "iou": 0.992588369441277
+            }
+          ]
+        },
+        {
+          "pathIndex": 23,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 12,
+              "owner": "left",
+              "iou": 0.9353448275862069
+            },
+            {
+              "referencePathIndex": 13,
+              "owner": "left",
+              "iou": 0.9353448275862069
+            }
+          ]
+        },
+        {
+          "pathIndex": 24,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 37,
+              "owner": "right",
+              "iou": 0.9844458846403111
+            },
+            {
+              "referencePathIndex": 37,
+              "owner": "right",
+              "iou": 0.9844458846403111
+            }
+          ]
+        },
+        {
+          "pathIndex": 26,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 39,
+              "owner": "right",
+              "iou": 1.0
+            },
+            {
+              "referencePathIndex": 39,
+              "owner": "right",
+              "iou": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "1f93c_200d_2642",
+      "source": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93c_200d_2642.svg",
+      "sourceSha256": "1acbd5420941d97345f87c6b9fe212f585bfb12f908902a8a981b5183c72e4b2",
+      "matches": [
+        {
+          "pathIndex": 0,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 1,
+              "owner": "left",
+              "iou": 0.9952690715552928
+            },
+            {
+              "referencePathIndex": 1,
+              "owner": "left",
+              "iou": 0.9952690715552928
+            }
+          ]
+        },
+        {
+          "pathIndex": 2,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 3,
+              "owner": "left",
+              "iou": 0.9795471146822499
+            },
+            {
+              "referencePathIndex": 3,
+              "owner": "left",
+              "iou": 0.9795471146822499
+            }
+          ]
+        },
+        {
+          "pathIndex": 3,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 8,
+              "owner": "left",
+              "iou": 0.9836065573770492
+            },
+            {
+              "referencePathIndex": 8,
+              "owner": "left",
+              "iou": 0.9836065573770492
+            }
+          ]
+        },
+        {
+          "pathIndex": 4,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 27,
+              "owner": "right",
+              "iou": 0.9665457476823861
+            },
+            {
+              "referencePathIndex": 27,
+              "owner": "right",
+              "iou": 0.9665457476823861
+            }
+          ]
+        },
+        {
+          "pathIndex": 10,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 4,
+              "owner": "left",
+              "iou": 0.9719398129320862
+            },
+            {
+              "referencePathIndex": 4,
+              "owner": "left",
+              "iou": 0.9719398129320862
+            }
+          ]
+        },
+        {
+          "pathIndex": 16,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 0,
+              "owner": "right",
+              "iou": 0.9512195121951219
+            },
+            {
+              "referencePathIndex": 0,
+              "owner": "right",
+              "iou": 0.9512195121951219
+            }
+          ]
+        },
+        {
+          "pathIndex": 17,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 9,
+              "owner": "left",
+              "iou": 0.9737118822292324
+            },
+            {
+              "referencePathIndex": 9,
+              "owner": "left",
+              "iou": 0.9737118822292324
+            }
+          ]
+        },
+        {
+          "pathIndex": 18,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 22,
+              "owner": "left",
+              "iou": 0.9607843137254902
+            },
+            {
+              "referencePathIndex": 10,
+              "owner": "left",
+              "iou": 0.9607843137254902
+            }
+          ]
+        },
+        {
+          "pathIndex": 19,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 10,
+              "owner": "left",
+              "iou": 0.9873949579831933
+            },
+            {
+              "referencePathIndex": 11,
+              "owner": "left",
+              "iou": 0.9873949579831933
+            }
+          ]
+        },
+        {
+          "pathIndex": 20,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 23,
+              "owner": "right",
+              "iou": 0.9636711281070746
+            },
+            {
+              "referencePathIndex": 23,
+              "owner": "right",
+              "iou": 0.9636711281070746
+            }
+          ]
+        },
+        {
+          "pathIndex": 21,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 45,
+              "owner": "left",
+              "iou": 0.9746835443037974
+            },
+            {
+              "referencePathIndex": 45,
+              "owner": "left",
+              "iou": 0.9746835443037974
+            }
+          ]
+        },
+        {
+          "pathIndex": 22,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 24,
+              "owner": "right",
+              "iou": 0.9829712272460364
+            },
+            {
+              "referencePathIndex": 24,
+              "owner": "right",
+              "iou": 0.9829712272460364
+            }
+          ]
+        },
+        {
+          "pathIndex": 24,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 26,
+              "owner": "right",
+              "iou": 0.992588369441277
+            },
+            {
+              "referencePathIndex": 26,
+              "owner": "right",
+              "iou": 0.992588369441277
+            }
+          ]
+        },
+        {
+          "pathIndex": 27,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 12,
+              "owner": "left",
+              "iou": 0.9353448275862069
+            },
+            {
+              "referencePathIndex": 13,
+              "owner": "left",
+              "iou": 0.9353448275862069
+            }
+          ]
+        },
+        {
+          "pathIndex": 28,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 37,
+              "owner": "right",
+              "iou": 0.9844458846403111
+            },
+            {
+              "referencePathIndex": 37,
+              "owner": "right",
+              "iou": 0.9844458846403111
+            }
+          ]
+        },
+        {
+          "pathIndex": 30,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 39,
+              "owner": "right",
+              "iou": 1.0
+            },
+            {
+              "referencePathIndex": 39,
+              "owner": "right",
+              "iou": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "1f93c_200d_2640",
+      "source": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93c_200d_2640.svg",
+      "sourceSha256": "f8b3e1898d93e894f929de6e07a0766b14fa75244372d8d8e38565b1dae9ef9f",
+      "matches": [
+        {
+          "pathIndex": 0,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 1,
+              "owner": "left",
+              "iou": 0.9864066193853428
+            },
+            {
+              "referencePathIndex": 1,
+              "owner": "left",
+              "iou": 0.9864066193853428
+            }
+          ]
+        },
+        {
+          "pathIndex": 2,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 3,
+              "owner": "left",
+              "iou": 0.9802487198244331
+            },
+            {
+              "referencePathIndex": 3,
+              "owner": "left",
+              "iou": 0.9802487198244331
+            }
+          ]
+        },
+        {
+          "pathIndex": 3,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 8,
+              "owner": "left",
+              "iou": 0.959349593495935
+            },
+            {
+              "referencePathIndex": 8,
+              "owner": "left",
+              "iou": 0.959349593495935
+            }
+          ]
+        },
+        {
+          "pathIndex": 4,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 4,
+              "owner": "left",
+              "iou": 0.9567523459812322
+            },
+            {
+              "referencePathIndex": 4,
+              "owner": "left",
+              "iou": 0.9567523459812322
+            }
+          ]
+        },
+        {
+          "pathIndex": 14,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 27,
+              "owner": "right",
+              "iou": 0.9203013481363996
+            },
+            {
+              "referencePathIndex": 27,
+              "owner": "right",
+              "iou": 0.9203013481363996
+            }
+          ]
+        },
+        {
+          "pathIndex": 24,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 0,
+              "owner": "right",
+              "iou": 0.9274193548387096
+            },
+            {
+              "referencePathIndex": 0,
+              "owner": "right",
+              "iou": 0.9274193548387096
+            }
+          ]
+        },
+        {
+          "pathIndex": 25,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 9,
+              "owner": "left",
+              "iou": 0.967436974789916
+            },
+            {
+              "referencePathIndex": 9,
+              "owner": "left",
+              "iou": 0.967436974789916
+            }
+          ]
+        },
+        {
+          "pathIndex": 26,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 22,
+              "owner": "left",
+              "iou": 0.9705882352941176
+            },
+            {
+              "referencePathIndex": 10,
+              "owner": "left",
+              "iou": 0.9705882352941176
+            }
+          ]
+        },
+        {
+          "pathIndex": 27,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 10,
+              "owner": "left",
+              "iou": 0.9789029535864979
+            },
+            {
+              "referencePathIndex": 11,
+              "owner": "left",
+              "iou": 0.9789029535864979
+            }
+          ]
+        },
+        {
+          "pathIndex": 28,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 23,
+              "owner": "right",
+              "iou": 0.9701923076923077
+            },
+            {
+              "referencePathIndex": 23,
+              "owner": "right",
+              "iou": 0.9701923076923077
+            }
+          ]
+        },
+        {
+          "pathIndex": 29,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 45,
+              "owner": "left",
+              "iou": 0.9873417721518988
+            },
+            {
+              "referencePathIndex": 45,
+              "owner": "left",
+              "iou": 0.9873417721518988
+            }
+          ]
+        },
+        {
+          "pathIndex": 30,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 24,
+              "owner": "right",
+              "iou": 0.9800820152314001
+            },
+            {
+              "referencePathIndex": 24,
+              "owner": "right",
+              "iou": 0.9800820152314001
+            }
+          ]
+        },
+        {
+          "pathIndex": 32,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 26,
+              "owner": "right",
+              "iou": 0.9914627205463858
+            },
+            {
+              "referencePathIndex": 26,
+              "owner": "right",
+              "iou": 0.9914627205463858
+            }
+          ]
+        },
+        {
+          "pathIndex": 35,
+          "owner": "left",
+          "matches": [
+            {
+              "referencePathIndex": 12,
+              "owner": "left",
+              "iou": 0.931161647203442
+            },
+            {
+              "referencePathIndex": 13,
+              "owner": "left",
+              "iou": 0.931161647203442
+            }
+          ]
+        },
+        {
+          "pathIndex": 36,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 37,
+              "owner": "right",
+              "iou": 0.9863813229571985
+            },
+            {
+              "referencePathIndex": 37,
+              "owner": "right",
+              "iou": 0.9863813229571985
+            }
+          ]
+        },
+        {
+          "pathIndex": 38,
+          "owner": "right",
+          "matches": [
+            {
+              "referencePathIndex": 39,
+              "owner": "right",
+              "iou": 0.8333333333333334
+            },
+            {
+              "referencePathIndex": 39,
+              "owner": "right",
+              "iou": 0.8333333333333334
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

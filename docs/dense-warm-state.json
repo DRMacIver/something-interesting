@@ -1,0 +1,151 @@
+{
+  "status": "All6privateworkers terminal0; all authentication/repeat/review gates passed; final normal public build terminal0 and public123font/report byte-continuity passed.",
+  "date": "2026-11-03",
+  "cli": "tools/font/warm_dense.py",
+  "plan": "output/font-review/dense-warm/plan.json",
+  "denseRecipeSha256": "a7213c7e508d964bd3be6fc14f8bb1b5982350ff307126106c517e379515c99c",
+  "publicManifestSha256": "93c4236d678eccc29ade31e0d61f50f542ab8b6645e4f54cd57953aa2dbed28f",
+  "publicAssetCount": 381,
+  "shards": 123,
+  "nativeGlyphs": 146617,
+  "workers": [
+    {
+      "index": 0,
+      "sessionId": 78814,
+      "log": "/tmp/dense-warm-group-0.log",
+      "directory": "output/font-review/dense-warm/group-0",
+      "shards": 37,
+      "glyphs": 48916
+    },
+    {
+      "index": 1,
+      "sessionId": 89188,
+      "log": "/tmp/dense-warm-group-1.log",
+      "directory": "output/font-review/dense-warm/group-1",
+      "shards": 43,
+      "glyphs": 48877
+    },
+    {
+      "index": 2,
+      "sessionId": 30117,
+      "log": "/tmp/dense-warm-group-2.log",
+      "directory": "output/font-review/dense-warm/group-2",
+      "shards": 43,
+      "glyphs": 48824
+    }
+  ],
+  "sharedAtomicGlyphCache": "build/font-cache/dense-native",
+  "isolation": [
+    "All381public font files and font-manifest were hash-checked before launch and copied to each private OUT; cached file paths point only to private copies.",
+    "Only already-integrated15regularTT recipes plus5dense profiles enabled; unintegrated CFF disabled process-locally. No shared builder/kernel/live145 warmer inputs edited.",
+    "Only assigned family entries removed from private cache manifest. Synthetic private supplemental-pressure recipe tags keep all unassigned dense shards as original hits; those entries explicitly say not claimed dense treated.",
+    "Callback matches actual pre-name native subset cmap/source to assigned public family. Full source precedence/novelty/UVS/repair/subset flow remains the actual builder.",
+    "Every dense report records actual decoded native input from the full builder; no post3baseline fonts used for glyph-cache warming.",
+    "Completed workers assert every unassigned font hash unchanged, all assigned callbacks accounted for, and public manifest/all381assets still identical.",
+    "Private manifests are warm artifacts only, not integration candidates; final ordinary public builder remains sole writer."
+  ],
+  "verificationCommand": ".venv/bin/python tools/font/warm_dense.py verify",
+  "finishRequirements": [
+    "Wait for all three group complete.json markers.",
+    "Run verify action; it rechecks current public manifest/font hashes.",
+    "Integrate normal public dense hook with agreed denseTreatment metadata and exact dense-native-pen recipe tokens, then perform intentional cache-warm normal build.",
+    "Do not modify public381manifest/assets while either regular145 or dense private warmers still require frozen snapshots."
+  ],
+  "ahead": {
+    "status": "Two approved ahead-of-order private workers active after both Math/Symbols2 terminal0 gates",
+    "plan": "output/font-review/dense-warm-ahead/plan.json",
+    "shards": 36,
+    "nativeGlyphs": 37708,
+    "sessions": [
+      21626,
+      32028
+    ],
+    "logs": [
+      "/tmp/dense-warm-ahead-group-0.log",
+      "/tmp/dense-warm-ahead-group-1.log"
+    ],
+    "originalQueuesUntouched": true,
+    "verification": {
+      "weak": "terminal0",
+      "standaloneStrong": "terminal0",
+      "proof": "output/font-review/dense-warm-ahead/verified.json",
+      "log": "/tmp/dense-ahead-strong.log"
+    }
+  },
+  "strongVerification": {
+    "command": ".venv/bin/python tools/font/verify_dense_warm.py --output output/font-review/dense-warm --ahead output/font-review/dense-warm-ahead",
+    "scope": "Authenticatecompleteworkerindex/recipe/exactfamilysets/privateManifestSHA, everyprivatefontSHA/nativecmap/layout/maxp, detailedreport/count/GIDcoverage, actualcachemetadata/drawingpayloadpresence andall123uniquefamilies; aheadexactfont/reportSHA repeatexceptprivatepath.",
+    "tests": "8focusedfixtures passed in1.62s; /tmp/dense-warm-verifier-tests.log",
+    "requiredAfterWeakVerify": true
+  },
+  "retentionTriage": {
+    "command": ".venv/bin/python tools/font/review_dense_retention.py --top 24",
+    "requires": "Authenticatedprimaryverified.json andrealcompletedreports",
+    "outputs": "output/font-review/dense-retention-review/retained-summary.json andencoded-review-corpus.json pluslocal22/44PNGs",
+    "rules": "Fullactualstatus/reasoninventory; publicdirectCP/UVSvsunencodedclosure distinguished. SpecimensonlyifactualnativeHBselectstheretainedGIDandderivedshapingIDsagree; nominal-onlycasesdeferredforcontext. Noautomaticblanketstyleapproval."
+  },
+  "tail": {
+    "status": "Approved private original0tail helper active; original/aheadqueues unchanged",
+    "plan": "output/font-review/dense-warm-tail/plan.json",
+    "shards": 8,
+    "nativeGlyphs": 7439,
+    "session": 55933,
+    "log": "/tmp/dense-warm-tail-group-0.log",
+    "gate": ".venv/bin/python tools/font/verify_dense_warm.py --output output/font-review/dense-warm --ahead output/font-review/dense-warm-tail",
+    "separateVerificationRequired": true,
+    "verification": {
+      "weak": "terminal0",
+      "standaloneStrong": "terminal0",
+      "proof": "output/font-review/dense-warm-tail/verified.json",
+      "log": "/tmp/dense-tail-strong.log"
+    }
+  },
+  "progressMetric": "output/font-review/dense-warm/progress-union.json: maxprocessedGIDprefix pernativefamily acrossallplans; no duplicate original/ahead/tail counting; not Unicode/artworkcoverage.",
+  "terminalOutcomes": [
+    {
+      "plan": "original",
+      "group": 2,
+      "sessionId": 30117,
+      "exitCode": 0,
+      "observedAtUTC": "2026-11-03T11:16:00Z"
+    },
+    {
+      "plan": "ahead",
+      "group": 1,
+      "sessionId": 32028,
+      "exitCode": 0,
+      "observedAtUTC": "2026-11-03T11:16:00Z"
+    },
+    {
+      "plan": "original",
+      "group": 1,
+      "sessionId": 89188,
+      "exitCode": 0,
+      "observedAtUTC": "2026-11-03T11:22:38Z"
+    },
+    {
+      "plan": "ahead",
+      "group": 0,
+      "sessionId": 21626,
+      "exitCode": 0,
+      "observedAtUTC": "2026-11-03T11:22:38Z"
+    },
+    {
+      "plan": "tail",
+      "group": 0,
+      "sessionId": 55933,
+      "exitCode": 0,
+      "observedAtUTC": "2026-11-03T11:36:42Z"
+    },
+    {
+      "plan": "original",
+      "group": 0,
+      "sessionId": 78814,
+      "exitCode": 0,
+      "observedAtUTC": "2026-11-03T11:50:00Z"
+    }
+  ],
+  "productionFieldReviewCommand": ".venv/bin/python tools/font/review_dense_production_fields.py",
+  "productionReview": "docs/dense-production-review.json",
+  "publicContinuity": "output/font-review/dense-production/public-continuity.json"
+}

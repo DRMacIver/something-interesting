@@ -1,0 +1,90 @@
+{
+  "status": "Native positional-mark repair verified; full Unicode beta remains incomplete. Next perform the whole-brief requirement/evidence audit.",
+  "date": "2026-11-03",
+  "unicode": "18.0.0",
+  "baseline": "output/font-review/pre-positional-mark-repair",
+  "change": "Explicit positional CCC classes take priority over source drawing origin for missing Unicode mark attachments. Corner anchors use left/right glyph bounds; attached classes have zero artificial gap. Existing native anchors, glyph curves and metrics remain intact.",
+  "artifacts": {
+    "ordinaryScriptFonts": 381,
+    "ordinaryScriptBytes": 68229580,
+    "changedOrdinaryFont": "Dad Script 6b5f778a9ecc",
+    "unrelatedOrdinaryFontsUnchanged": 380,
+    "cjkCompanions": 92,
+    "cjkCompanionBytes": 26776560,
+    "explicitMathBytes": 67908,
+    "markCatalogBytes": 2688273
+  },
+  "checks": {
+    "javascript": {
+      "passed": 342,
+      "seconds": 9.92,
+      "log": "/tmp/positional-js-tests.log"
+    },
+    "mathAndFrozenSource": {
+      "passed": 6,
+      "seconds": 2.09,
+      "log": "/tmp/positional-math-tests.log"
+    },
+    "scriptRegressions": {
+      "passed": 21,
+      "seconds": 17.77,
+      "log": "/tmp/positional-script-regressions.log"
+    },
+    "cjkNativeAndFreshRebuild": {
+      "passed": 5,
+      "seconds": 244.62,
+      "log": "/tmp/positional-cjk-native-tests.log",
+      "scope": "Every original native CJK glyph/metric/hint and UVS, native single CJK mark positioning, positional marks in all92companions, and isolated exact rebuild of standardized and native-IVS source kinds."
+    },
+    "catalogSourceAndUnchangedDrawings": {
+      "passed": 4,
+      "seconds": 78.18,
+      "log": "/tmp/positional-catalog-tests.log",
+      "scope": "Source glyph geometry and licensing, contextual viramas, and all25087native mark identities/paths plus all generic mark paths identical to frozen-before artifacts."
+    },
+    "strengthenedMathPreservation": {
+      "passed": 1,
+      "seconds": 1.33,
+      "log": "/tmp/positional-final-math-preservation.log",
+      "scope": "Repeated stronger frozen/source comparison: all tables except GPOS/GDEF/head are byte-identical; glyphs/metrics/hints retained and all380other script entries/files exact. This repeats the earlier preservation test and is not an extra distinct test."
+    },
+    "catalogReproduction": {
+      "status": "byte-identical",
+      "sha256": "8ab1531eb7b4ded33cbb8f0181ded308406e41a9e44a1437134698ca63b1e13b"
+    },
+    "coverage": {
+      "visibleCmapPresent": 172352,
+      "visibleCmapRequirements": 172352,
+      "log": "/tmp/positional-coverage-audit.log",
+      "scope": "Cmap only, not a complete shaping/style claim."
+    },
+    "browser": {
+      "status": "passed",
+      "scenarios": 657,
+      "failures": [],
+      "geometry": [],
+      "tab": 43,
+      "nativeSemanticChecks": "Repaired above-left and horn increase native ascent; above-left also has the expected left overhang."
+    },
+    "visualReview": [
+      "combining-positional-classes"
+    ]
+  },
+  "limits": [
+    "Same-side stacks retain their native or geometric conventions; this is not exhaustive linguistic validation for arbitrary cross-script combinations.",
+    "Five numeric Cyrillic Me forms, foreign spacing marks and some CGJ/contextual combinations still need review or implementation.",
+    "Remaining script/style, Egyptian/dictionary/grid and cross-engine requirements must be assessed against the actual beta brief. Specialist reader review and human playtesting are permitted afterward; publication-quality universal validation is not an added beta requirement."
+  ],
+  "sha256": {
+    "tools/font/math_unicode_marks.py": "54f1adc1117ecf0a8e428f0568f412eaaa345683f12ce762f0d4d266b738f62b",
+    "tools/font/build_marked_cjk_variants.py": "4deed5204a46f9b6f398496ee05075b6c4aade176e3602d52e8a471fbf9bca22",
+    "tools/font/build_scripts.py": "f439fdd0d0f4fa389276c046c5ad25894c6386e52a8683a4d77bd07afb6b145d",
+    "tools/font/build_math_variants.py": "7fdb15b338c28048a9d5959cf25c0298cb9b50585b280c638d91aafc1159e096",
+    "js/font-manifest.js": "f56d8e273f11af2909af49795c26252512611f374fa8f5fec52ee8983320caa1",
+    "js/math-variant-manifest.js": "88a3e7131f6d1430ecd1e54b4044c23f4e9e88b12a93ea3f26dac9378ed94de9",
+    "js/marked-cjk-variant-manifest.js": "13377b4cb3a7307a7844ebabee917a573e6ded9dc84ea80529a4dc8e4b60259d",
+    "js/combining-outline-manifest.js": "8ab1531eb7b4ded33cbb8f0181ded308406e41a9e44a1437134698ca63b1e13b",
+    "tests/test_positional_marks.py": "56fdf129864bca87eb2383326138c67a1b2bc8d6bf6a6e26a56cb84fa6795215",
+    "tools/unicode-checks.html": "8fd600dd18ba6dd7be335d7e92eab00ae9837c8bdddd2f803f8ab85c15de0db6"
+  }
+}

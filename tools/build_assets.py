@@ -98,6 +98,8 @@ PANELS = [
         "erase": [[(1755, 1877), (2550, 1877), (2550, 2620), (2220, 2620),
                    (2220, 2460), (1755, 2460)]],
         "speakers": {"dad": (2010, 2770)},
+        # Whole head plus breathing room, retained when revealing lower art.
+        "keep_visible": [(1883, 2437, 2213, 2837)],
         "text_bottom": 2600,
         "speech": "loose",
     },
@@ -336,6 +338,8 @@ def main():
         }
         if "speech" in panel:
             entry["speech"] = panel["speech"]
+        if "keep_visible" in panel:
+            entry["keepVisible"] = [grid(r[:2]) + grid(r[2:]) for r in panel["keep_visible"]]
         if signature:
             entry["signature"] = signature
         if "calvin_column" in panel:

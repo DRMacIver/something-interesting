@@ -1,0 +1,883 @@
+{
+  "repository": "https://github.com/Mercury13/unicodia",
+  "commit": "dcbe251036833331f0a8f66c186a315751db24f9",
+  "scope": "Daarage supplies Tulu-Tigalari. Funky is restricted to 26 assigned Sidetic letters and 239 supplemental Latin/Cyrillic letters for script packaging and 39 general combining marks for the base lettering; uncertain-origin and weak scripts remain excluded. Archaic Cuneiform Numerals and Noto-derived Cunei supply numeric signs. BabelStone Pseudographica supplies structural and standalone non-emoji legacy symbols through the custom grid font; structural_ranges alone trigger spatial layout. Emoji and nonstandard mappings remain excluded. Historical accuracy and custom visual treatment are reviewed separately from source coverage. Noto Serif Dives Akuru and Padauk Book supply complete native script repertoires, including missing Dives letters/marks/digits and Myanmar Pao/Eastern Pwo Karen digits. Scheherazade New 4.400 supplies native Arabic Extended-C joining letters, combining marks and honorific symbols. Additional assigned Balinese, Khitan_Small_Script characters retain native shapes and spacing; custom visual and linguistic review remains provisional. Telugu and Kannada archaic SHRII signs use the standalone source drawings with light pen adaptation; they do not combine with letters (L2/22-006).",
+  "files": [
+    {
+      "path": "build/unicode-sources/unicodia/UnicodiaFunky.ttf",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/UnicodiaFunky.ttf",
+      "git_blob_sha1": "8b63b24c77cd4a0a1531b5c71d00ba2289da69bc",
+      "sha256": "6ae19735dee1a7e64616de44a35e27e8329f80dff14171296173057e77bea18c",
+      "size": 423884,
+      "include_ranges": [
+        [
+          3164,
+          3164
+        ],
+        [
+          3292,
+          3292
+        ],
+        [
+          6849,
+          6849
+        ],
+        [
+          6850,
+          6850
+        ],
+        [
+          6851,
+          6851
+        ],
+        [
+          6852,
+          6852
+        ],
+        [
+          6854,
+          6854
+        ],
+        [
+          6863,
+          6863
+        ],
+        [
+          6864,
+          6864
+        ],
+        [
+          6865,
+          6865
+        ],
+        [
+          6866,
+          6866
+        ],
+        [
+          6867,
+          6867
+        ],
+        [
+          6868,
+          6868
+        ],
+        [
+          6869,
+          6869
+        ],
+        [
+          6870,
+          6870
+        ],
+        [
+          6871,
+          6871
+        ],
+        [
+          6872,
+          6872
+        ],
+        [
+          6873,
+          6873
+        ],
+        [
+          6874,
+          6874
+        ],
+        [
+          6875,
+          6875
+        ],
+        [
+          6876,
+          6876
+        ],
+        [
+          6877,
+          6877
+        ],
+        [
+          6878,
+          6878
+        ],
+        [
+          6879,
+          6879
+        ],
+        [
+          6880,
+          6880
+        ],
+        [
+          6881,
+          6881
+        ],
+        [
+          6882,
+          6882
+        ],
+        [
+          6883,
+          6883
+        ],
+        [
+          6884,
+          6884
+        ],
+        [
+          6885,
+          6885
+        ],
+        [
+          6886,
+          6886
+        ],
+        [
+          6887,
+          6887
+        ],
+        [
+          6888,
+          6888
+        ],
+        [
+          6889,
+          6889
+        ],
+        [
+          6890,
+          6890
+        ],
+        [
+          6891,
+          6891
+        ],
+        [
+          6892,
+          6892
+        ],
+        [
+          6893,
+          6893
+        ],
+        [
+          6894,
+          6894
+        ],
+        [
+          6895,
+          6895
+        ],
+        [
+          6896,
+          6896
+        ],
+        [
+          6990,
+          6990
+        ],
+        [
+          6991,
+          6991
+        ],
+        [
+          7039,
+          7039
+        ],
+        [
+          7305,
+          7306
+        ],
+        [
+          11158,
+          11158
+        ],
+        [
+          42955,
+          42959
+        ],
+        [
+          42962,
+          42962
+        ],
+        [
+          42964,
+          42964
+        ],
+        [
+          42970,
+          42973
+        ],
+        [
+          42978,
+          42978
+        ],
+        [
+          43884,
+          43885
+        ],
+        [
+          67515,
+          67519
+        ],
+        [
+          67904,
+          67929
+        ],
+        [
+          101631,
+          101631
+        ],
+        [
+          118464,
+          118480
+        ],
+        [
+          118496,
+          118511
+        ],
+        [
+          118512,
+          118512
+        ],
+        [
+          122655,
+          122753
+        ],
+        [
+          122768,
+          122774
+        ],
+        [
+          122829,
+          122866
+        ],
+        [
+          122869,
+          122879
+        ],
+        [
+          122928,
+          122989
+        ],
+        [
+          123023,
+          123023
+        ],
+        [
+          128887,
+          128890
+        ],
+        [
+          129232,
+          129240
+        ],
+        [
+          129620,
+          129623
+        ]
+      ],
+      "script_exclude_ranges": [
+        [
+          6849,
+          6849
+        ],
+        [
+          6850,
+          6850
+        ],
+        [
+          6851,
+          6851
+        ],
+        [
+          6852,
+          6852
+        ],
+        [
+          6854,
+          6854
+        ],
+        [
+          6863,
+          6863
+        ],
+        [
+          6864,
+          6864
+        ],
+        [
+          6865,
+          6865
+        ],
+        [
+          6866,
+          6866
+        ],
+        [
+          6867,
+          6867
+        ],
+        [
+          6868,
+          6868
+        ],
+        [
+          6869,
+          6869
+        ],
+        [
+          6870,
+          6870
+        ],
+        [
+          6871,
+          6871
+        ],
+        [
+          6872,
+          6872
+        ],
+        [
+          6873,
+          6873
+        ],
+        [
+          6874,
+          6874
+        ],
+        [
+          6875,
+          6875
+        ],
+        [
+          6876,
+          6876
+        ],
+        [
+          6877,
+          6877
+        ],
+        [
+          6878,
+          6878
+        ],
+        [
+          6879,
+          6879
+        ],
+        [
+          6880,
+          6880
+        ],
+        [
+          6881,
+          6881
+        ],
+        [
+          6882,
+          6882
+        ],
+        [
+          6883,
+          6883
+        ],
+        [
+          6884,
+          6884
+        ],
+        [
+          6885,
+          6885
+        ],
+        [
+          6886,
+          6886
+        ],
+        [
+          6887,
+          6887
+        ],
+        [
+          6888,
+          6888
+        ],
+        [
+          6889,
+          6889
+        ],
+        [
+          6890,
+          6890
+        ],
+        [
+          6891,
+          6891
+        ],
+        [
+          6892,
+          6892
+        ],
+        [
+          6893,
+          6893
+        ],
+        [
+          6894,
+          6894
+        ],
+        [
+          6895,
+          6895
+        ],
+        [
+          6896,
+          6896
+        ],
+        [
+          123023,
+          123023
+        ]
+      ],
+      "ink_ranges": [
+        [
+          3164,
+          3164
+        ],
+        [
+          3292,
+          3292
+        ],
+        [
+          7305,
+          7306
+        ],
+        [
+          11158,
+          11158
+        ],
+        [
+          42955,
+          42959
+        ],
+        [
+          42962,
+          42962
+        ],
+        [
+          42964,
+          42964
+        ],
+        [
+          42970,
+          42973
+        ],
+        [
+          42978,
+          42978
+        ],
+        [
+          43884,
+          43885
+        ],
+        [
+          67515,
+          67519
+        ],
+        [
+          118464,
+          118480
+        ],
+        [
+          118496,
+          118511
+        ],
+        [
+          118512,
+          118512
+        ],
+        [
+          122655,
+          122753
+        ],
+        [
+          122768,
+          122774
+        ],
+        [
+          122829,
+          122866
+        ],
+        [
+          122869,
+          122879
+        ],
+        [
+          122928,
+          122989
+        ],
+        [
+          128887,
+          128890
+        ],
+        [
+          129232,
+          129240
+        ],
+        [
+          129620,
+          129623
+        ]
+      ],
+      "supplemental_script_ranges": [
+        [
+          6990,
+          6990
+        ],
+        [
+          6991,
+          6991
+        ],
+        [
+          7039,
+          7039
+        ],
+        [
+          101631,
+          101631
+        ]
+      ],
+      "archaic_shrii_ranges": [
+        [
+          3164,
+          3164
+        ],
+        [
+          3292,
+          3292
+        ]
+      ],
+      "chemical_symbol_ranges": [
+        [
+          118512,
+          118512
+        ],
+        [
+          129232,
+          129240
+        ]
+      ],
+      "chemical_symbol_reference": "https://www.unicode.org/L2/L2023/23193r2-ten-chemical-symbols.pdf",
+      "chemical_symbol_adaptation": "Light smooth pen variation; preserve advances, contour topology, harpoon directions and long/short ratios. Unicode 18 assigns the standard-state symbol to 1CEF0. Repair the missing left arrowhead in source 1F8D8 by mirroring its right head into the shaft contour, retaining the dependent lobe and counter.",
+      "geomantic_ranges": [
+        [
+          118496,
+          118511
+        ]
+      ],
+      "geomantic_reference": "https://www.unicode.org/L2/L2023/23218-geomancy.pdf",
+      "geomantic_adaptation": "Light pen variation preserves four vertical rows, one/two dot distinction, fixed advance and centered row grid. Binary order uses double=0, single=1, top row most significant.",
+      "asteroid_ranges": [
+        [
+          118464,
+          118480
+        ],
+        [
+          128887,
+          128890
+        ]
+      ],
+      "asteroid_reference": "https://www.unicode.org/L2/L2023/23207-historical-asteroids.pdf",
+      "asteroid_adaptation": "Light pen variation preserves advances, contour topology and the conventional object/star forms. All 21 source drawings visually compared with the Unicode proposal. Astronomical symbols remain monochrome text, not emoji.",
+      "chess_annotation_ranges": [
+        [
+          11158,
+          11158
+        ]
+      ],
+      "chess_annotation_reference": "https://www.unicode.org/L2/L2024/24018-one-chess-symbol.pdf",
+      "chess_annotation_adaptation": "Light pen variation preserves two infinity counters above two separated equals bars. Same 766-unit advance as existing Noto infinity-below counterpart; Unicode final allocation 2B96 supersedes proposal 2B74.",
+      "shatranj_ranges": [
+        [
+          129620,
+          129623
+        ]
+      ],
+      "shatranj_reference": "https://www.unicode.org/L2/L2024/24020-shatranj-symbols.pdf"
+    },
+    {
+      "path": "build/unicode-sources/unicodia/LICENSE-Funky",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/LICENSE-Funky",
+      "git_blob_sha1": "e52c2a1c5122fcfc682a391426cc4bd9b2c36e8a",
+      "sha256": "835d6a573c7a39c3db431248fdd8a33b90ecd3d951786560e422c967a9fb08a7",
+      "size": 4542
+    },
+    {
+      "path": "build/unicode-sources/unicodia/UnicodiaDaarage.otf",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/UnicodiaDaarage.otf",
+      "git_blob_sha1": "35cc47dc923f4eafff7470215da7d63f5e884f51",
+      "sha256": "31d2042498ec8909d13b09dc6152a3ea139894e812a937aab6e8d85456a71c47",
+      "size": 149008
+    },
+    {
+      "path": "build/unicode-sources/unicodia/LICENSE-Daarage",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/LICENSE-Daarage",
+      "git_blob_sha1": "a178deeb375aeb064eb3b49d5eee1eb67b5c4c76",
+      "sha256": "a2463b26091b9d9e2a697eed7c9f254d4390fa9013fdbd0c409f1bfd16f5a61d",
+      "size": 4366
+    },
+    {
+      "path": "build/unicode-sources/unicodia/ArchaicCuneiformNumerals.ttf",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/ArchaicCuneiformNumerals.ttf",
+      "git_blob_sha1": "1e62e390b05cc6d6306f5bb3a6e01018f1875e57",
+      "sha256": "40697239340e87fce1fa397331850d9e16d4634c070b1979f9c81cd38d620f1b",
+      "size": 188776
+    },
+    {
+      "path": "build/unicode-sources/unicodia/LICENSE-ArchaicCuneiform",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/LICENSE-ArchaicCuneiform",
+      "git_blob_sha1": "404315d2be0f06a0e7012df93686cbf00f5edf93",
+      "sha256": "f535b104409e7c3a5863b95a0f6a9ad74f7297b9d73e7fcf3dbba144d855b27f",
+      "size": 4383
+    },
+    {
+      "path": "build/unicode-sources/unicodia/UnicodiaCunei.ttf",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/UnicodiaCunei.ttf",
+      "git_blob_sha1": "3dae84578f7c8c4aaff1a06c0973f954976070a6",
+      "sha256": "75c4ddc9fb17958ac1015633750275348390a4619dd3752dc6c2b30551097615",
+      "size": 924704
+    },
+    {
+      "path": "build/unicode-sources/unicodia/LICENSE-Cunei",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/LICENSE-Cunei",
+      "git_blob_sha1": "01f1ab88ae1c8ddc02ad81d312c6447fa8f12b11",
+      "sha256": "a0e07bfc298ac0390f4cfde4b20f2e40181efda4139d3f73464efe84ac41da2c",
+      "size": 4525
+    },
+    {
+      "path": "build/unicode-sources/unicodia/BabelStonePseudographica.ttf",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/BabelStonePseudographica.ttf",
+      "git_blob_sha1": "f307f774c2793cb19df7a848ee1ce991861fd1bb",
+      "sha256": "f6b42f857a6ced8bf41fde53a63f28b39bf84edaf1bb40b8c60fc6ec5914308e",
+      "size": 499180,
+      "include_ranges": [
+        [
+          9255,
+          9257
+        ],
+        [
+          117760,
+          118009
+        ],
+        [
+          118016,
+          118451
+        ],
+        [
+          129202,
+          129211
+        ],
+        [
+          129792,
+          129931
+        ],
+        [
+          129937,
+          129938
+        ],
+        [
+          129940,
+          129940
+        ],
+        [
+          129946,
+          129947
+        ],
+        [
+          129952,
+          129967
+        ],
+        [
+          129973,
+          129976
+        ],
+        [
+          129995,
+          130031
+        ]
+      ],
+      "build_target": "grid",
+      "structural_ranges": [
+        [
+          117765,
+          117831
+        ],
+        [
+          117850,
+          117855
+        ],
+        [
+          117902,
+          117902
+        ],
+        [
+          117924,
+          117973
+        ],
+        [
+          118016,
+          118260
+        ],
+        [
+          118262,
+          118263
+        ],
+        [
+          118272,
+          118273
+        ],
+        [
+          118275,
+          118276
+        ],
+        [
+          118281,
+          118447
+        ],
+        [
+          129792,
+          129931
+        ],
+        [
+          129937,
+          129938
+        ],
+        [
+          129940,
+          129940
+        ],
+        [
+          129946,
+          129947
+        ],
+        [
+          129952,
+          129967
+        ],
+        [
+          129973,
+          129976
+        ],
+        [
+          129998,
+          130031
+        ]
+      ],
+      "standalone_ink_ranges": [
+        [
+          9255,
+          9257
+        ],
+        [
+          117760,
+          117764
+        ],
+        [
+          117832,
+          117849
+        ],
+        [
+          117856,
+          117901
+        ],
+        [
+          117903,
+          117923
+        ],
+        [
+          117974,
+          118009
+        ],
+        [
+          118261,
+          118261
+        ],
+        [
+          118264,
+          118271
+        ],
+        [
+          118274,
+          118274
+        ],
+        [
+          118277,
+          118280
+        ],
+        [
+          118448,
+          118451
+        ],
+        [
+          129202,
+          129211
+        ],
+        [
+          129995,
+          129997
+        ]
+      ]
+    },
+    {
+      "path": "build/unicode-sources/unicodia/LICENSE-BabelStone",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/LICENSE-BabelStone",
+      "git_blob_sha1": "ef758932abad8049dc61bb89fc4b95322b694e08",
+      "sha256": "ba2859acac71c1f52e1d34d714fcc20285819e1b0d7c9f3292df007e569be08c",
+      "size": 4395
+    },
+    {
+      "path": "build/unicode-sources/unicodia/NotoSerifDivesAkuru-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/NotoSerifDivesAkuru-Regular.ttf",
+      "git_blob_sha1": "8767ce012b9d988e77ea003535b4e3e3e7ef5cf2",
+      "sha256": "f86f6c4b29eeadf305e35adddf2dde2f72a1c2491c7ec6cb2d39a3a12aeab98a",
+      "size": 74380
+    },
+    {
+      "path": "build/unicode-sources/unicodia/PadaukBook-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/PadaukBook-Regular.ttf",
+      "git_blob_sha1": "b6649152a77a12604def6b77bbcfc4c42e5ab7b8",
+      "sha256": "06013b8f057d6b067f7628c0872260e7c64d149030ba9cdaa9639f99c7be569b",
+      "size": 166460
+    },
+    {
+      "path": "build/unicode-sources/unicodia/LICENSE-Noto",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/LICENSE-Noto",
+      "git_blob_sha1": "27e1cfc0f83fe1c7967096e9f3c473866feb1504",
+      "sha256": "90e05e87616004f1c0fe680ed06a64f305e92ac0d00d6af5b50e79295aa52007",
+      "size": 5598
+    },
+    {
+      "path": "build/unicode-sources/unicodia/LICENSE-Padauk",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/LICENSE-Padauk",
+      "git_blob_sha1": "101c9e7455eaf109333015469a4816101727e22c",
+      "sha256": "2df15608a66b4b89ce67b34f5da23a50db9711bd9503392a35dea561a9592d0e",
+      "size": 4415
+    },
+    {
+      "path": "build/unicode-sources/unicodia/ScheherazadeNew-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/ScheherazadeNew-Regular.ttf",
+      "git_blob_sha1": "c096711b9af59f2ad9898b12529ad12086938ab2",
+      "sha256": "9e07862eac6dfe532d3db97616642017c018eacb8084122100dbcf746b231b89",
+      "size": 331304
+    },
+    {
+      "path": "build/unicode-sources/unicodia/LICENSE-Scheherazade",
+      "url": "https://raw.githubusercontent.com/Mercury13/unicodia/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/LICENSE-Scheherazade",
+      "git_blob_sha1": "cf8b09e96132092bf9e5f8eabe86e206f7bfbab7",
+      "sha256": "3261772a5195d6b9db0ac470082cf2bea0516d0fb34a81512c1ebc47cd749569",
+      "size": 4405
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Copyright (c) 2025 by Losketch. All rights reserved.
+
+UFSZero Ext is licensed under SIL Open Font License 1.1.
+The derivative is restricted to assigned Jurchen and Tangut codepoints,
+subsetted for browser use and renamed to a Dad Script family.
+Source: https://github.com/Losketch/UnicodeFontSet-magisk-module
+Commit: 4210c346066dd51940bdd28ff0845e6549ac76af
+See data/font-sources/ufs.json for pinned licence and provenance records.

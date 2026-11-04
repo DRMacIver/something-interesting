@@ -16,6 +16,7 @@ dev = [
     "numpy>=2.5.4",
     "scipy>=1.18.1",
     "pymupdf>=2.0",
+    "fontmake>=3.12.2",
 ]
 
 [tool.uv]

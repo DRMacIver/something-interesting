@@ -1,0 +1,14 @@
+{
+  "samples": [
+    {
+      "label": "OLD UYGHUR SOURCE",
+      "font": "assets/fonts/scripts/7d309b636746.woff2",
+      "text": "𐽰𐽱𐽲𐽳 𐽴𐽵𐽶 𐽰𐽳𐽶𐽹𐽼𐽿𐾆𐾉"
+    },
+    {
+      "label": "OLD UYGHUR 1.35 OPTICAL EM",
+      "font": "output/font-review/joining-pressure/181-optical.ttf",
+      "text": "𐽰𐽱𐽲𐽳 𐽴𐽵𐽶 𐽰𐽳𐽶𐽹𐽼𐽿𐾆𐾉"
+    }
+  ]
+}

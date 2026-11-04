@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-03",
+  "status": "Production optical implementation and focused source/runtime regressions ready; browser integration pending.",
+  "evidence": "output/font-review/hieroglyph-optics/native-comparison.json",
+  "evidenceSha256": "f5e1f729c244382d36d6861d912a6dc8facf292108e5bf5472402f075787e403",
+  "specimen": "output/font-review/hieroglyph-optics/native-comparison.png",
+  "implementation": {
+    "egyptianStrokeEm": 0.014,
+    "anatolianStrokeEm": 0.01,
+    "sourceOutlineFineDetailLimit": ".025 of smallest source dimension; transformed enclosure stretch accounted for in reserved bounds",
+    "preserved": "Native font files/shaping tables, insertion source paths, coordinates, mirroring, damage and advance unchanged. Runtime stroke is measured and painted using same transforms."
+  },
+  "visualFindings": [
+    "At 22/44px core and extended signs have visibly stronger ink beside Dad while retaining sampled counters and identities.",
+    "Anatolian .010-em preserves narrow internal channels and improves presence.",
+    "Native core grouped source comparison improves presence; fine stacked detail remains dense at 22px and needs actual-strip review."
+  ],
+  "tests": [
+    {
+      "command": "node --test tests/hieroglyph-optics.test.mjs tests/egyptian-layout.test.mjs tests/text-metrics.test.mjs",
+      "passed": 35,
+      "includes": "All 982 insertion templates in LTR and RTL; geometry unchanged and stroke extents reserved; separate adjacent Egyptian/Anatolian ink; mixed dialogue preserves size and no stroke leakage."
+    },
+    {
+      "command": "node --test tests/egyptian-layout.test.mjs tests/text-metrics.test.mjs tests/comic.test.mjs",
+      "passed": 41,
+      "scope": "Before final dedicated Anatolian/separate-field regressions; current small modules subsequently passed 35."
+    }
+  ],
+  "browserScenariosAdded": [
+    "greek-proportional",
+    "hieroglyph-optical-ink"
+  ],
+  "limitations": [
+    "Local native SVG preview does not execute app composition/bidi/canvas/export.",
+    "Browser corpus and actual changed strips/export remain coordinator integration.",
+    "No native-reader or arbitrary-expression collision-free claim."
+  ],
+  "licensing": "No font files modified; existing source licences/provenance remain applicable. Runtime stroke produces document artwork."
+}

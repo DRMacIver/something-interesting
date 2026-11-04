@@ -1,0 +1,255 @@
+{
+  "source": "build/unicode-sources/newcm/NewCMMath-Regular.otf",
+  "sourceSha256": "d66ac1cc91c55c24d3636ae2df1238076debdff51841f9893fc5419cc2df3df7",
+  "dataSha256": "c7ae634a7e2bb0932258548a1e81df984fbb38e30cecf4269391d6a4f94581ac",
+  "variants": [
+    {
+      "base": 8459,
+      "selector": 65025,
+      "sourceGlyph": "uni210B.alt"
+    },
+    {
+      "base": 8464,
+      "selector": 65025,
+      "sourceGlyph": "uni2110.alt"
+    },
+    {
+      "base": 8466,
+      "selector": 65025,
+      "sourceGlyph": "uni2112.alt"
+    },
+    {
+      "base": 8475,
+      "selector": 65025,
+      "sourceGlyph": "uni211B.alt"
+    },
+    {
+      "base": 8492,
+      "selector": 65025,
+      "sourceGlyph": "uni212C.alt"
+    },
+    {
+      "base": 8496,
+      "selector": 65025,
+      "sourceGlyph": "uni2130.alt"
+    },
+    {
+      "base": 8497,
+      "selector": 65025,
+      "sourceGlyph": "uni2131.alt"
+    },
+    {
+      "base": 8499,
+      "selector": 65025,
+      "sourceGlyph": "uni2133.alt"
+    },
+    {
+      "base": 10679,
+      "selector": 65024,
+      "sourceGlyph": "uni29B7.alt"
+    },
+    {
+      "base": 119964,
+      "selector": 65025,
+      "sourceGlyph": "u1D49C.alt"
+    },
+    {
+      "base": 119966,
+      "selector": 65025,
+      "sourceGlyph": "u1D49E.alt"
+    },
+    {
+      "base": 119967,
+      "selector": 65025,
+      "sourceGlyph": "u1D49F.alt"
+    },
+    {
+      "base": 119970,
+      "selector": 65025,
+      "sourceGlyph": "u1D4A2.alt"
+    },
+    {
+      "base": 119973,
+      "selector": 65025,
+      "sourceGlyph": "u1D4A5.alt"
+    },
+    {
+      "base": 119974,
+      "selector": 65025,
+      "sourceGlyph": "u1D4A6.alt"
+    },
+    {
+      "base": 119977,
+      "selector": 65025,
+      "sourceGlyph": "u1D4A9.alt"
+    },
+    {
+      "base": 119978,
+      "selector": 65025,
+      "sourceGlyph": "u1D4AA.alt"
+    },
+    {
+      "base": 119979,
+      "selector": 65025,
+      "sourceGlyph": "u1D4AB.alt"
+    },
+    {
+      "base": 119980,
+      "selector": 65025,
+      "sourceGlyph": "u1D4AC.alt"
+    },
+    {
+      "base": 119982,
+      "selector": 65025,
+      "sourceGlyph": "u1D4AE.alt"
+    },
+    {
+      "base": 119983,
+      "selector": 65025,
+      "sourceGlyph": "u1D4AF.alt"
+    },
+    {
+      "base": 119984,
+      "selector": 65025,
+      "sourceGlyph": "u1D4B0.alt"
+    },
+    {
+      "base": 119985,
+      "selector": 65025,
+      "sourceGlyph": "u1D4B1.alt"
+    },
+    {
+      "base": 119986,
+      "selector": 65025,
+      "sourceGlyph": "u1D4B2.alt"
+    },
+    {
+      "base": 119987,
+      "selector": 65025,
+      "sourceGlyph": "u1D4B3.alt"
+    },
+    {
+      "base": 119988,
+      "selector": 65025,
+      "sourceGlyph": "u1D4B4.alt"
+    },
+    {
+      "base": 119989,
+      "selector": 65025,
+      "sourceGlyph": "u1D4B5.alt"
+    }
+  ],
+  "derivedVariants": [
+    {
+      "base": 8765,
+      "selector": 65024,
+      "glyph": "historical.u223D.vs1",
+      "defaultGlyph": "uni223D",
+      "construction": "licensed inverted-lazy-S curves transformed and composed with original horizontal strokes"
+    },
+    {
+      "base": 8771,
+      "selector": 65024,
+      "glyph": "historical.u2243.vs1",
+      "defaultGlyph": "similar_equal",
+      "construction": "licensed inverted-lazy-S curves transformed and composed with original horizontal strokes"
+    },
+    {
+      "base": 8909,
+      "selector": 65024,
+      "glyph": "historical.u22CD.vs1",
+      "defaultGlyph": "uni22CD",
+      "construction": "licensed inverted-lazy-S curves transformed and composed with original horizontal strokes"
+    },
+    {
+      "base": 8770,
+      "selector": 65024,
+      "glyph": "historical.u2242.vs1",
+      "defaultGlyph": "uni2242",
+      "construction": "licensed inverted-lazy-S curves transformed and composed with original horizontal strokes"
+    },
+    {
+      "base": 8776,
+      "selector": 65024,
+      "glyph": "historical.u2248.vs1",
+      "defaultGlyph": "approxequal",
+      "construction": "licensed inverted-lazy-S curves transformed and composed with original horizontal strokes"
+    },
+    {
+      "base": 10860,
+      "selector": 65024,
+      "glyph": "historical.u2A6C.vs1",
+      "defaultGlyph": "uni2A6C",
+      "construction": "licensed inverted-lazy-S curves transformed and composed with original horizontal strokes"
+    },
+    {
+      "base": 8924,
+      "selector": 65024,
+      "glyph": "historical.u22DC.vs1",
+      "defaultGlyph": "uni22DC",
+      "construction": "two horizontal bars and one diagonal arm"
+    },
+    {
+      "base": 8925,
+      "selector": 65024,
+      "glyph": "historical.u22DD.vs1",
+      "defaultGlyph": "uni22DD",
+      "construction": "two horizontal bars and one diagonal arm"
+    },
+    {
+      "base": 121616,
+      "selector": 65024,
+      "glyph": "historical.u1DB10.vs1",
+      "defaultGlyph": "cartesianEqual.original",
+      "construction": "original Cartesian default and descender centrelines"
+    },
+    {
+      "base": 120015,
+      "selector": 65026,
+      "glyph": "historical.u1D4CF.vs3",
+      "defaultGlyph": "u1D4CF",
+      "construction": "original looped kurrent-z centreline"
+    }
+  ],
+  "variationReferences": [
+    {
+      "url": "https://www.unicode.org/wg2/docs/n5334R2-L-2603.Proposal.to.encode.historical.mathematical.relations.pdf",
+      "sha256": "5911fbe09d86f80f1c37d2f6e438d3f61d926cd1c71f7704a66e4a96d874d46e",
+      "pages": [
+        3,
+        8,
+        37,
+        38
+      ],
+      "purpose": "relation topology, math axis and Cartesian descender"
+    },
+    {
+      "url": "https://www.unicode.org/wg2/docs/n5333R2-L-2533%20Proposal%20to%20encode%2012%20cossic%20characters.pdf",
+      "sha256": "a14ca03cefa39340a8cc647d609432aa03b4dd43c310e24bb72a12910b252f61",
+      "pages": [
+        4,
+        9,
+        10,
+        12,
+        19
+      ],
+      "purpose": "looped descending kurrent z"
+    }
+  ],
+  "markAttachmentRepair": {
+    "markGlyphs": 83,
+    "normalizedMarkAdvances": [
+      "circumflexcmb",
+      "tildecomb",
+      "uni0310",
+      "uni0312",
+      "uni0315",
+      "uni031A",
+      "uni20E7"
+    ],
+    "missingBaseMarkPairsRepaired": 6142,
+    "method": "source MATH optical accent points and glyph ink bounds; native same-side anchors preserved; opposite-side stack marks skipped"
+  },
+  "styleReview": "docs/math-variant-style-review.json",
+  "status": "27 native source variants, nine historical relation adaptations and original kurrent z; Unicode mark attachment repaired; all 37 pairs visually retained at 22/44 px; specialist review provisional"
+}

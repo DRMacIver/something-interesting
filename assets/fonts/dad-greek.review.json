@@ -1,0 +1,1547 @@
+{
+  "records": [
+    {
+      "codepoint": 922,
+      "method": "reference-lettering K fitted to native kappa capital height",
+      "scale": 1.0526846932418275,
+      "offset": [
+        76.6544237802155,
+        -16.146458500293377
+      ]
+    },
+    {
+      "codepoint": 787,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 788,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 834,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 837,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8125,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8127,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8128,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8190,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 782,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 784,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 786,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 789,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 801,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 802,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 811,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 819,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 823,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 830,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 831,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 835,
+      "canonical": 787,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 836,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 838,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 839,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 840,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 841,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 842,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 843,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 844,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 845,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 846,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 847,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 848,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 849,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 850,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 851,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 852,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 853,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 854,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 855,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 857,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 858,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 859,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 860,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 861,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 862,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 863,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 864,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 866,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 867,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 868,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 869,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 870,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 871,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 872,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 873,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 874,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 875,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 876,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 877,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 878,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 879,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7936,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7937,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7938,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7939,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7940,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7941,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7942,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7943,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7944,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7945,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7946,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7947,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7948,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7949,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7950,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7951,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7952,
+      "base": 949,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7953,
+      "base": 949,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7954,
+      "base": 949,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7955,
+      "base": 949,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7956,
+      "base": 949,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7957,
+      "base": 949,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7960,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7961,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7962,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7963,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7964,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7965,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7968,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7969,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7970,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7971,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7972,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7973,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7974,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7975,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7976,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7977,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7978,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7979,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7980,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7981,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7982,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7983,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7984,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7985,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7986,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7987,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7988,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7989,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7990,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7991,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 7992,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7993,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7994,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7995,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7996,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7997,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7998,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 7999,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8000,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8001,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8002,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8003,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8004,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8005,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8008,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8009,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8010,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8011,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8012,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8013,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8016,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8017,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8018,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8019,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8020,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8021,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8022,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8023,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8025,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8027,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8029,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8031,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8032,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8033,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8034,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8035,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8036,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8037,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8038,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8039,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8040,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8041,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8042,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8043,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8044,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8045,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8046,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8047,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8048,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8049,
+      "canonical": 940,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8050,
+      "base": 949,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8051,
+      "canonical": 941,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8052,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8053,
+      "canonical": 942,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8054,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8055,
+      "canonical": 943,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8056,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8057,
+      "canonical": 972,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8058,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8059,
+      "canonical": 973,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8060,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8061,
+      "canonical": 974,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8064,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8065,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8066,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8067,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8068,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8069,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8070,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8071,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8072,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8073,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8074,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8075,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8076,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8077,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8078,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8079,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8080,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8081,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8082,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8083,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8084,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8085,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8086,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8087,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8088,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8089,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8090,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8091,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8092,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8093,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8094,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8095,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8096,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8097,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8098,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8099,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8100,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8101,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8102,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8103,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8104,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8105,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8106,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8107,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8108,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8109,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8110,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8111,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8112,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8113,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8114,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8115,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8116,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8118,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8119,
+      "base": 945,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8120,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8121,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8122,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8123,
+      "canonical": 902,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8124,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8126,
+      "canonical": 953,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8129,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8130,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8131,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8132,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8134,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8135,
+      "base": 951,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8136,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8137,
+      "canonical": 904,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8138,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8139,
+      "canonical": 905,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8140,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8141,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8142,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8143,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8144,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8145,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8146,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8147,
+      "canonical": 912,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8150,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8151,
+      "base": 953,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8152,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8153,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8154,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8155,
+      "canonical": 906,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8157,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8158,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8159,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8160,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8161,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8162,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8163,
+      "canonical": 944,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8164,
+      "base": 961,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8165,
+      "base": 961,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8166,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8167,
+      "base": 965,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8168,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8169,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8170,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8171,
+      "canonical": 910,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8172,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8173,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8174,
+      "canonical": 901,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8175,
+      "canonical": 96,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8178,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8179,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8180,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8182,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8183,
+      "base": 969,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8184,
+      "method": "native supplementary mark or symbol"
+    },
+    {
+      "codepoint": 8185,
+      "canonical": 908,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8186,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8187,
+      "canonical": 911,
+      "method": "existing native canonical alias"
+    },
+    {
+      "codepoint": 8188,
+      "base": 937,
+      "method": "native handwritten base and native accent arrangement"
+    },
+    {
+      "codepoint": 8189,
+      "canonical": 180,
+      "method": "existing native canonical alias"
+    }
+  ],
+  "source": {
+    "family": "Dad Script ee2777fce4d7",
+    "file": "assets/fonts/scripts/ee2777fce4d7.woff2",
+    "sha256": "c7c52b0c193bff73d639312d7c619fab7cf8a43d8aaf1d2f447cea9df4105ebd",
+    "bytes": 65560,
+    "sourceSha256": "2d73eea94ad808999d90c0000c239a84a33b09d4bc6ab6c5b8bbf1eda8a7fc8b",
+    "recipe": "1:yangqin-signs:5bca6904e46b469313061a726f330a91b1a2979263cf7814f0cd2be6a24350e1:vietnamese-marks:4a3b794cf6674dda7e39b7c1a9fe177f1845ffc1bab98a4338fa813d4f2f7054:horizontal-sibe:46db6732167abb42726ac8da0a194a17d9c7f4dcebf80dd3f5539e658304fb91:native-variations:d8a2483c3cb849ff206c0e7484ba4f44e7e15613decc25255849ecd493f76357",
+    "ranges": [
+      [
+        32,
+        126
+      ],
+      [
+        160,
+        172
+      ],
+      [
+        174,
+        688
+      ],
+      [
+        690,
+        691
+      ],
+      [
+        695,
+        702
+      ],
+      [
+        704,
+        705
+      ],
+      [
+        710,
+        721
+      ],
+      [
+        728,
+        734
+      ],
+      [
+        736,
+        748
+      ],
+      [
+        751,
+        752
+      ],
+      [
+        755,
+        755
+      ],
+      [
+        759,
+        759
+      ],
+      [
+        768,
+        781
+      ],
+      [
+        783,
+        783
+      ],
+      [
+        785,
+        785
+      ],
+      [
+        790,
+        800
+      ],
+      [
+        803,
+        810
+      ],
+      [
+        812,
+        818
+      ],
+      [
+        820,
+        822
+      ],
+      [
+        824,
+        829
+      ],
+      [
+        832,
+        833
+      ],
+      [
+        856,
+        856
+      ],
+      [
+        865,
+        865
+      ],
+      [
+        880,
+        887
+      ],
+      [
+        890,
+        895
+      ],
+      [
+        900,
+        906
+      ],
+      [
+        908,
+        908
+      ],
+      [
+        910,
+        929
+      ],
+      [
+        931,
+        993
+      ],
+      [
+        1008,
+        1119
+      ],
+      [
+        1122,
+        1123
+      ],
+      [
+        1130,
+        1131
+      ],
+      [
+        1138,
+        1141
+      ],
+      [
+        1144,
+        1145
+      ],
+      [
+        1168,
+        1171
+      ],
+      [
+        1174,
+        1175
+      ],
+      [
+        1178,
+        1181
+      ],
+      [
+        1186,
+        1187
+      ],
+      [
+        1198,
+        1203
+      ],
+      [
+        1208,
+        1211
+      ],
+      [
+        1225,
+        1226
+      ],
+      [
+        1240,
+        1241
+      ],
+      [
+        1246,
+        1259
+      ],
+      [
+        1262,
+        1269
+      ],
+      [
+        1278,
+        1279
+      ],
+      [
+        3647,
+        3647
+      ],
+      [
+        4053,
+        4054
+      ],
+      [
+        7424,
+        7424
+      ],
+      [
+        7428,
+        7432
+      ],
+      [
+        7434,
+        7440
+      ],
+      [
+        7444,
+        7445
+      ],
+      [
+        7448,
+        7450
+      ]
+    ],
+    "source": "build/unicode-sources/wenkai/fonts/TTF/LXGWWenKai-Regular.ttf",
+    "nativeVariations": {},
+    "variationDerivations": [],
+    "style": "sampled source style disposition: retain-native-style-provisionally; native identities and guarded exceptions retained",
+    "styleReview": {
+      "record": "docs/unicode-style-dispositions.json",
+      "number": 5,
+      "disposition": "retain-native-style-provisionally",
+      "decisionSha256": "5ad2f20cdae8685af59348ce413b37195782df326187e4ab842cb4a02dfd327b",
+      "scope": "sampled source style; not all-glyph or linguistic approval"
+    }
+  },
+  "nativeSha256": "f3961a9cde016d41a4879aecda1474d3a36d6bf54fa0e4643de029cc2248b0e8"
+}

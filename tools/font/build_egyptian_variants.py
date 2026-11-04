@@ -1,0 +1,78 @@
+"""Compile registered Egyptian rotations from pinned data and licensed outlines.
+
+This font supplies standalone rotated signs, not quadrat composition. The
+original source remains unchanged. All rotation angles are clockwise in LTR.
+"""
+import hashlib
+import json
+import math
+import re
+from pathlib import Path
+from fontTools.ttLib import TTFont
+from fontTools.ttLib.tables._c_m_a_p import CmapSubtable
+from fontTools.fontBuilder import FontBuilder
+from fontTools.pens.boundsPen import BoundsPen
+from fontTools.pens.recordingPen import DecomposingRecordingPen
+from fontTools.pens.transformPen import TransformPen
+from fontTools.pens.ttGlyphPen import TTGlyphPen
+
+ROOT=Path(__file__).resolve().parents[2]
+SOURCE=ROOT/'build/unicode-sources/unihieroglyphica/UniHieroglyphica.ttf'
+DATA=ROOT/'data/unicode/18.0.0/StandardizedVariants.txt'
+
+
+def variants():
+    for line in DATA.read_text().splitlines():
+        if line.lstrip().startswith('#'):continue
+        fields=line.split(';')
+        if len(fields)<2 or 'EGYPTIAN HIEROGLYPH' not in line or 'rotated' not in fields[1]:continue
+        cp,vs=[int(x,16) for x in fields[0].split()]
+        match=re.search(r'rotated (?:approximately )?(\d+) degrees',fields[1])
+        if not match:raise ValueError(line)
+        yield cp,vs,int(match[1]),fields[1].strip()
+
+
+def build():
+    manifest=json.loads((ROOT/'data/font-sources/unihieroglyphica.json').read_text())
+    expected=next(e['sha256'] for e in manifest['files'] if e['path']==str(SOURCE.relative_to(ROOT)))
+    if hashlib.sha256(SOURCE.read_bytes()).hexdigest()!=expected:raise ValueError('Unverified Egyptian source')
+    source=TTFont(SOURCE);gs=source.getGlyphSet();cmap=source.getBestCmap()
+    glyphs={'.notdef':TTGlyphPen(None).glyph()};metrics={'.notdef':(1000,0)};mapping={};uvs={};review=[]
+    for cp,vs,angle,description in variants():
+        original=gs[cmap[cp]];recording=DecomposingRecordingPen(gs);original.draw(recording)
+        bounds=BoundsPen(gs);original.draw(bounds);x0,y0,x1,y1=bounds.bounds
+        base=f'u{cp:X}'
+        if cp not in mapping:
+            pen=TTGlyphPen(None);recording.replay(pen);glyphs[base]=pen.glyph()
+            metrics[base]=source['hmtx'][cmap[cp]];mapping[cp]=base
+        cx,cy=(x0+x1)/2,(y0+y1)/2
+        c,s=math.cos(math.radians(angle)),math.sin(math.radians(angle))
+        matrix=(c,-s,s,c,cx-c*cx-s*cy,cy+s*cx-c*cy)
+        rotated=BoundsPen(None);recording.replay(TransformPen(rotated,matrix))
+        rx0,ry0,rx1,ry1=rotated.bounds
+        # Retain each sign's own side margins and centre height, not an
+        # em-square stretch. Canvas measures any resulting tall ink bounds.
+        shift=x0-rx0;matrix=(*matrix[:4],matrix[4]+shift,matrix[5])
+        name=base+f'.vs{vs-0xFE00+1}'
+        pen=TTGlyphPen(None);recording.replay(TransformPen(pen,matrix));glyphs[name]=pen.glyph()
+        advance=round(source['hmtx'][cmap[cp]][0]+(rx1-rx0)-(x1-x0))
+        metrics[name]=(advance,round(x0));uvs.setdefault(vs,[]).append((cp,name))
+        review.append(dict(codepoint=cp,selector=vs,angle=angle,description=description,glyph=name,transform=matrix,advance=advance))
+    fb=FontBuilder(source['head'].unitsPerEm,isTTF=True)
+    fb.setupGlyphOrder(list(glyphs));fb.setupCharacterMap(mapping);fb.setupGlyf(glyphs)
+    for name,glyph in glyphs.items():
+        glyph.recalcBounds(fb.font['glyf']);metrics[name]=(metrics[name][0],getattr(glyph,'xMin',0))
+    fb.setupHorizontalMetrics(metrics);fb.setupHorizontalHeader(ascent=source['hhea'].ascent,descent=source['hhea'].descent)
+    fb.setupOS2(sTypoAscender=750,sTypoDescender=-250,usWinAscent=max(750,max(getattr(g,'yMax',0) for g in glyphs.values())),usWinDescent=max(250,-min(getattr(g,'yMin',0) for g in glyphs.values())))
+    fb.setupNameTable(dict(familyName='Dad Egyptian Variants',styleName='Regular',uniqueFontIdentifier='DadEgyptianVariants-001',fullName='Dad Egyptian Variants',psName='DadEgyptianVariants',version='Version 0.001'))
+    fb.setupPost();fb.setupMaxp()
+    table=CmapSubtable.newSubtable(14);table.platformID=0;table.platEncID=5;table.language=0;table.cmap={};table.uvsDict=uvs;fb.font['cmap'].tables.append(table)
+    fb.font['head'].created=fb.font['head'].modified=2082844800;fb.font.recalcTimestamp=False;fb.font.flavor='woff2'
+    path=ROOT/'assets/fonts/dad-egyptian-variants.woff2';fb.save(path)
+    entry=dict(family='Dad Egyptian Variants',variationOnly=True,file=str(path.relative_to(ROOT)),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),bytes=path.stat().st_size,ranges=[[cp,cp] for cp in sorted(mapping)],variationSequences=[chr(r['codepoint'])+chr(r['selector']) for r in review],source=str(SOURCE.relative_to(ROOT)),sourceSha256=expected,licence='assets/fonts/licenses/UniHieroglyphica-OFL.txt',style='provisional native drawings; registered clockwise rotations; standalone signs only')
+    (ROOT/'js/egyptian-variant-manifest.js').write_text('// Generated by tools/font/build_egyptian_variants.py\nexport default '+json.dumps(entry,separators=(',',':'))+';\n')
+    (ROOT/'docs/egyptian-variant-review.json').write_text(json.dumps(dict(source=entry['source'],sourceSha256=expected,dataSha256=hashlib.sha256(DATA.read_bytes()).hexdigest(),status='standalone native geometry; quadrat composition and native-reader review pending',variants=review),indent=2)+'\n')
+    print(f'{len(review)} registered rotations on {len(mapping)} bases; {entry["bytes"]} bytes')
+
+
+if __name__=='__main__':build()

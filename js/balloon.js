@@ -26,8 +26,8 @@ export function balloonOutline(
   }));
   const attached = panel ? attachToEdges(boxes, panel, radius) : false;
   if (!attached && lines.length <= ovalLines) {
-    const oval = ovalAround(lines, padX, padY);
-    if (oval.every(isFree) && ovalAround(lines, padX * 0.6, padY * 0.6).every(isFree)) {
+    const oval = ovalAround(lines, padX, padY, radius * 0.6);
+    if (oval.every(isFree) && ovalAround(lines, padX * 0.6, padY * 0.6, radius * 0.6).every(isFree)) {
       return oval;
     }
   }
@@ -52,9 +52,10 @@ export function balloonOutline(
 // them. Returns whether any did.
 function attachToEdges(boxes, panel, radius) {
   const beyond = 4 * radius;
+  const right = boxes.some(b => panel.x1-b.right < panel.reach);
   let attached = false;
   for (const b of boxes) {
-    if (b.top - panel.y0 < panel.reach) {
+    if (b.top - panel.y0 < panel.reach && (!panel.topRequiresRight || right)) {
       b.top = panel.y0 - beyond;
       attached = true;
     }
@@ -298,6 +299,9 @@ function smooth(polygon, radius, isFree, bow, sweeps = new Map()) {
     }
     const rp = slanted(p, v) ? lp / 2 : Math.min(radius, lp / 2);
     const rq = slanted(v, q) ? lq / 2 : Math.min(radius, lq / 2);
+    // A short edge limits both sides of a right-angle rounding. Unequal
+    // reaches make an elliptical tip when a scaled reply is very shallow.
+    if (!slanted(p, v) && !slanted(v, q)) return at(Math.min(rp, rq), Math.min(rp, rq));
     return at(rp, rq);
   });
   // Each edge between roundings, bowed out a little.
@@ -457,11 +461,17 @@ function outwardSign(polygon) {
   return area > 0 ? 1 : -1;
 }
 
-function ovalAround(lines, padX, padY) {
+function ovalAround(lines, padX, padY, minRadius) {
   const x0 = Math.min(...lines.map((l) => l.x));
   const y0 = Math.min(...lines.map((l) => l.y));
   const x1 = Math.max(...lines.map((l) => l.x + l.width));
   const y1 = Math.max(...lines.map((l) => l.y + l.height));
+  // Apply the blunt-end rule along either long axis. Combining stacks can
+  // be much taller than a single base glyph is wide.
+  if (y1-y0 > x1-x0) {
+    return ovalAround(lines.map(l=>({x:l.y,y:l.x,width:l.height,height:l.width})),padY,padX,minRadius)
+      .map(([y,x])=>[x,y]).reverse();
+  }
   const cx = (x0 + x1) / 2;
   const cy = (y0 + y1) / 2;
   const hx = (x1 - x0) / 2;
@@ -471,8 +481,24 @@ function ovalAround(lines, padX, padY) {
   // is an ellipse; a long one's would come to a point at each end, so it is
   // squared off a little (a superellipse, |x/a|^p + |y/b|^p = 1), to keep
   // its ends round.
-  const b = hy * 1.45 + padY;
+  const b = Math.max(hy * 1.45 + padY, minRadius);
   const ellipse = hx / Math.sqrt(1 - (hy / b) ** 2) + padX * 0.5;
+  // Wide ellipses can pinch against rectangular clusters before they look
+  // extreme: at a half-width/radius ratio above 2.25, use blunt ends.
+  // Use circular caps and straight middle spans, preserving the padding
+  // around the ink rectangle when a whole cluster has been scaled down.
+  // Aspect ratio alone misses moderately wide emoji rows. An ellipse's end
+  // radius is b²/a; keep that curvature proportional to the lettering size.
+  if (hx / b > 2.25 || b * b / ellipse < minRadius) {
+    const reach = hx + padX;
+    const halfSpan = Math.max(0, reach - b);
+    const points = [];
+    for (let side of [1, -1]) for (let k = 0; k <= 64; k++) {
+      const t = -Math.PI / 2 + k * Math.PI / 64 + (side < 0 ? Math.PI : 0);
+      points.push([cx + side * halfSpan + b * Math.cos(t), cy + b * Math.sin(t)]);
+    }
+    return points;
+  }
   const p = Math.min(3, Math.max(2, 2 + 0.5 * (ellipse / b - 3)));
   const a = hx / (1 - (hy / b) ** p) ** (1 / p) + padX * 0.5;
   const power = (v) => Math.sign(v) * Math.abs(v) ** (2 / p);

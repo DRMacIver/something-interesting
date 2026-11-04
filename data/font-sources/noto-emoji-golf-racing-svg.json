@@ -1,0 +1,97 @@
+{
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "🏇",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3c7.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3c7.svg",
+      "sha256": "0f32e56d5a89849d9ce2764b4d24e746e460702f3852a0c2bf2a3b5ff5366c04",
+      "git_blob_sha1": "2bc7a47e5214dd6b1a0d1b3538966678a48b62f3",
+      "size": 12320,
+      "shapeElementsIncludingDefinitions": 32,
+      "include_sequences": [
+        "🏇",
+        "🏇🏻",
+        "🏇🏼",
+        "🏇🏽",
+        "🏇🏾",
+        "🏇🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🏌️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3cc.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3cc.svg",
+      "sha256": "f1e2b49b36fb1dd0ee4e70f837fc010b24fc4f75bb407d25a86c537c94b2a08b",
+      "git_blob_sha1": "b09aab3e95ca9d2058769a43ff41dd507c6ea9f9",
+      "size": 11177,
+      "shapeElementsIncludingDefinitions": 31,
+      "include_sequences": [
+        "🏌️",
+        "🏌",
+        "🏌🏻",
+        "🏌🏼",
+        "🏌🏽",
+        "🏌🏾",
+        "🏌🏿",
+        "🏌︎"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🏌️‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3cc_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3cc_200d_2642.svg",
+      "sha256": "de9f41f962ffc0c7e66b498dfdf38a2f39cefab85dcfebb0dc6b8498a7176d72",
+      "git_blob_sha1": "7716a4fb4e4df82ffeac378cff8191cd793032d3",
+      "size": 8562,
+      "shapeElementsIncludingDefinitions": 24,
+      "include_sequences": [
+        "🏌️‍♂️",
+        "🏌‍♂️",
+        "🏌️‍♂",
+        "🏌‍♂",
+        "🏌🏻‍♂️",
+        "🏌🏻‍♂",
+        "🏌🏼‍♂️",
+        "🏌🏼‍♂",
+        "🏌🏽‍♂️",
+        "🏌🏽‍♂",
+        "🏌🏾‍♂️",
+        "🏌🏾‍♂",
+        "🏌🏿‍♂️",
+        "🏌🏿‍♂"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🏌️‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3cc_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3cc_200d_2640.svg",
+      "sha256": "156bb03107342ea5eaace36dc18fbc8c551299e5723bf25aedef241197375e9e",
+      "git_blob_sha1": "531b430a7b98b9ec84d5a0fe28a91917eb8a76c8",
+      "size": 9466,
+      "shapeElementsIncludingDefinitions": 26,
+      "include_sequences": [
+        "🏌️‍♀️",
+        "🏌‍♀️",
+        "🏌️‍♀",
+        "🏌‍♀",
+        "🏌🏻‍♀️",
+        "🏌🏻‍♀",
+        "🏌🏼‍♀️",
+        "🏌🏼‍♀",
+        "🏌🏽‍♀️",
+        "🏌🏽‍♀",
+        "🏌🏾‍♀️",
+        "🏌🏾‍♀",
+        "🏌🏿‍♀️",
+        "🏌🏿‍♀"
+      ],
+      "build_target": "emoji-artwork"
+    }
+  ]
+}

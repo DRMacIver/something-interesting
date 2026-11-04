@@ -1,0 +1,104 @@
+{
+  "repository": "https://github.com/google/fonts",
+  "commit": "6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec",
+  "files": [
+    {
+      "path": "build/unicode-sources/google/ofl/arefruqaa/ArefRuqaa-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/arefruqaa/ArefRuqaa-Regular.ttf",
+      "git_blob_sha1": "49e2c4e29ee2e24c4e36a8857f45a24d13d103f3",
+      "size": 110696,
+      "sha256": "ceb786d83ba92f35e96efcd8623c2858d288e0c543c8761ba35b1020989464f9"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/arefruqaa/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/arefruqaa/OFL.txt",
+      "git_blob_sha1": "f89db8233df5ee80af5f86b74ade558305ee13aa",
+      "size": 4464,
+      "sha256": "41ac14451a624c69490e24b9aaaaa1f65dc9dc17c3f6f38172fc43d5ba654a1b"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/gaegu/Gaegu-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/gaegu/Gaegu-Regular.ttf",
+      "git_blob_sha1": "1e28823982ecd330be1efa62c1ee56495ddae419",
+      "size": 3165816,
+      "sha256": "aa52c98336f7c62e2896fc8b12b56a75d5b476d88a2f104b0980f4f7ce0adfc3"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/gaegu/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/gaegu/OFL.txt",
+      "git_blob_sha1": "3e3dfe707de45f6bbf5f729cb135399c6bc6b66f",
+      "size": 4344,
+      "sha256": "53a9ce47085d9fef613c7ecb3730dc80d25962510bbea231b89564f58240f251"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/kalam/Kalam-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/kalam/Kalam-Regular.ttf",
+      "git_blob_sha1": "0c956a29348e69bff24a1ae8952fd0b42569311c",
+      "size": 427360,
+      "sha256": "57cecb63d4608019371954274ae1d8c397764debd5b19d4a33c1efa4dc923c0b"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/kalam/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/kalam/OFL.txt",
+      "git_blob_sha1": "6dd809659a8ccace7ccee108d024d33cd4f936da",
+      "size": 4373,
+      "sha256": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/kleeone/KleeOne-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/kleeone/KleeOne-Regular.ttf",
+      "git_blob_sha1": "106bd3dbcfb24f7c971b761d63223b37104d4b6f",
+      "size": 8724204,
+      "sha256": "bf4063f030cc2ae6adf0a11424a1888e5c0eb4438f1f6d02f52294af868e9b3a"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/kleeone/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/kleeone/OFL.txt",
+      "git_blob_sha1": "cb9ced3f0aad10958824080d84c391100bc53986",
+      "size": 4479,
+      "sha256": "e376b0df8e8a2345a9533db6f0a5333a1107975569ad9d1973a7ee557161ca38"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/notosansegyptianhieroglyphs/NotoSansEgyptianHieroglyphs-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/notosansegyptianhieroglyphs/NotoSansEgyptianHieroglyphs-Regular.ttf",
+      "git_blob_sha1": "1a9b2535f87764db260f0bfbf1653f7a8c293449",
+      "size": 1004836,
+      "sha256": "b792accc6207ca9caa59fc67f53926b6985a99d255dd432d7c68b68a6dfd62f8"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/notosansegyptianhieroglyphs/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/notosansegyptianhieroglyphs/OFL.txt",
+      "git_blob_sha1": "791fd9e83e6bf4e121040d954cb25b2084f9940c",
+      "size": 4396,
+      "sha256": "dc8114a49f5bb53bad3d99ee52cbb245e98076438d59428a258720258494de68"
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/kedebideri/Kedebideri-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/kedebideri/Kedebideri-Regular.ttf",
+      "git_blob_sha1": "5f943f776882532eb63f4649093dec907d0048e0",
+      "sha256": "f95907a8c39c68d557c2264fcf593a858eb4751cd5e0c3c7c53e1ef354444064",
+      "size": 52524
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/kedebideri/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/kedebideri/OFL.txt",
+      "git_blob_sha1": "33b3e3645a3a7c70e9928f0fcc899380542794f5",
+      "sha256": "8c3c60646d27f24c13f1575262e422bc752d00419e4a7f1062784e6887cd8f1a",
+      "size": 4613
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/kanchenjunga/Kanchenjunga-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/kanchenjunga/Kanchenjunga-Regular.ttf",
+      "git_blob_sha1": "a11eae3df2a42fe01bfdc0b6bfabbedf5e3a1a42",
+      "sha256": "45609f8cc90d4733d3d1665346d359afc1a659def340d0f369121af034322ef9",
+      "size": 50976
+    },
+    {
+      "path": "build/unicode-sources/google/ofl/kanchenjunga/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/kanchenjunga/OFL.txt",
+      "git_blob_sha1": "0b2f25d0ed805e4e34370f799f5933c0979a0f39",
+      "sha256": "b6d9eb7d23db4cb33585dc14ae4cd4c4d4f90f0d20e1673197d92cb9af76283f",
+      "size": 4526
+    }
+  ]
+}

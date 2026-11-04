@@ -154,12 +154,12 @@ test("explicit newlines start new lines and blank lines leave a gap", () => {
   );
 });
 
-test("leading and trailing whitespace is ignored", () => {
+test("empty outer lines are ignored but indentation and internal spacing survive", () => {
   const panel = panelWithHeadroom(100);
   const result = layoutText(panel, "\n  aa   bb  \n\n", opts());
   assert.deepEqual(
     result.lines.map((l) => l.text),
-    ["aa bb"],
+    ["  aa   bb"],
   );
 });
 
@@ -798,4 +798,17 @@ test("text that must end above its speaker's mouth doesn't fit if it runs below 
   assert.equal(layoutText(panel, text, opts({ align: "left" })).fits, true);
   assert.equal(layoutText(panel, text, opts({ align: "left", bottomLimit: 15 })).fits, false);
   assert.equal(layoutText(panel, "aaaa", opts({ align: "left", bottomLimit: 15 })).fits, true);
+});
+
+test('maximum-length CJK keeps all break units without quadratic balancing work', () => {
+  const text = '天地玄黄宇宙洪荒'.repeat(625);
+  let calls = 0;
+  const measure = text => { calls++; return text.length; };
+  const started = performance.now();
+  const {lines, fits} = layoutColumn(text, {measure, fontSize:1, lineHeight:1, width:23});
+  assert.equal(fits, true);
+  assert.equal(lines.flatMap(l => l.units).join(''), text);
+  assert.ok(lines.every(l => l.width <= 23));
+  assert.ok(calls < 50000, `bounded measurement work: ${calls}`);
+  assert.ok(performance.now() - started < 3000);
 });

@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/cto-af/linebreak",
+  "commit": "80e89f9777990209088008db375ca851596bf8f5",
+  "tree": "80e89f9777990209088008db375ca851596bf8f5",
+  "files": [
+    {
+      "path": "lib/index.js",
+      "git_blob_sha1": "c110fc16226726e1b69b9056300798d13d59664c",
+      "sha256": "071e51d187e0b0b47a62cd4119ed7f8e191bf7ddc5937a592982021dd7e3f9ac"
+    },
+    {
+      "path": "lib/state.js",
+      "git_blob_sha1": "a960736874beebd0c6f875f080e238ba67d9e035",
+      "sha256": "c277e32e5c344d8822b21b30d1e43d749692cf6dd9c9ae1a877c0496094f2451"
+    },
+    {
+      "path": "lib/break.js",
+      "git_blob_sha1": "31278e391a5e6a38c799cc1fc4a583bb4d5e5442",
+      "sha256": "6c2035a8661a5267a1c24fb655a7aa230015e10df6fdf709d5c73fb5a006f7b5"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha1": "74bf620b42afea3d278724c8c6ae9fa20a168e15",
+      "sha256": "62112025b949ce7ffb95c409f9ebccfe4010703872ce22ef3ec1a4268ad7ae47"
+    }
+  ],
+  "modifications": [
+    "Replace trie data with pinned Unicode 18 range tables.",
+    "Replace host Unicode property regular expressions with pinned category and pictographic lookups.",
+    "Use string line-break class identifiers instead of numeric enum."
+  ]
+}

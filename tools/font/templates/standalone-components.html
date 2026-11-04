@@ -1,0 +1,26 @@
+<!doctype html><meta charset="utf-8"><title>Standalone component candidate review</title>
+<style>
+body{background:#f5f2eb;font:16px system-ui}main{display:grid;grid-template-columns:repeat(5,200px);gap:8px}canvas{background:white}
+@font-face{font-family:Candidate;src:url(standalone-components-candidate.woff2?v=__FONT_HASH__)}
+@font-face{font-family:CandidateInk;src:url(standalone-components-candidate-ink.woff2?v=__INK_HASH__)}
+@font-face{font-family:Dialogue;src:url(../../../assets/fonts/dad-lettering-unicode.woff2)}
+</style>
+<h1>Standalone components: enlarged and dialogue size</h1><pre id="status">Loading fonts…</pre><main></main>
+<script>
+const forms=__FORMS__;
+async function draw(){
+ await Promise.all([document.fonts.load('120px Candidate'),document.fonts.load('34px CandidateInk'),document.fonts.load('24px Dialogue')]);
+ const checks=[];
+ for(const {key,text} of forms){
+  const canvas=document.createElement('canvas');canvas.width=200;canvas.height=210;canvas.setAttribute('aria-label',key+' enlarged and dialogue size');document.querySelector('main').append(canvas);
+  const c=canvas.getContext('2d');c.fillStyle='#111';c.font='13px system-ui';c.fillText('U+'+key.toUpperCase(),8,18);
+  c.font='120px Candidate';c.fillText(text,12,135);const advance=c.measureText(text).width;
+  c.font='24px Dialogue';c.fillText('A',8,187);c.fillText('B',97,187);
+  c.font='33.6px CandidateInk';c.strokeStyle='#111';c.lineWidth=33.6*.018;c.lineJoin='round';c.strokeText(text,45,187);
+  c.font='33.6px Candidate';c.fillText(text,45,187);
+  checks.push({key,positiveAdvance:advance>0,loaded:document.fonts.check('120px Candidate',text)});
+ }
+ document.querySelector('#status').textContent=JSON.stringify({forms:checks.length,failures:checks.filter(r=>!r.positiveAdvance||!r.loaded)},null,2);
+}
+draw().catch(e=>document.querySelector('#status').textContent='ERROR: '+e);
+</script>

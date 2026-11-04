@@ -1,0 +1,44 @@
+{
+  "status": "provisional generic right-side forms; not base-specific composition",
+  "characters": [
+    "U+16FF0",
+    "U+16FF1"
+  ],
+  "reference": {
+    "url": "https://www.unicode.org/wg2/docs/n4915-17373r-viet-alt-reading-marks.pdf",
+    "local": "build/unicode-references/vietnamese-reading-marks.pdf",
+    "sha256": "6bb49e1a36184e231d566a2ddf53f871ba8357e0d8084dac4d69754926880e39",
+    "reviewed_pages": [
+      4,
+      5
+    ],
+    "finding": "Usually right-side attachment; forms correspond to cursive U+4E87 and U+21FE8. Historical positions and merged shapes vary by base."
+  },
+  "outline_source": {
+    "path": "build/unicode-sources/wenkai/fonts/TTF/LXGWWenKai-Regular.ttf",
+    "sha256": "2d73eea94ad808999d90c0000c239a84a33b09d4bc6ab6c5b8bbf1eda8a7fc8b",
+    "licence": "OFL-1.1; retained WenKai licence",
+    "source_characters": [
+      "U+4E87",
+      "U+21FE8"
+    ],
+    "adaptation": "Uniformly scaled native outlines; positive advance for right-side spacing combining marks."
+  },
+  "comparison": {
+    "font": "BabelStone Han 16.0.3",
+    "url": "https://www.babelstone.co.uk/Fonts/Vietnamese_Test.html",
+    "archive": "https://www.babelstone.co.uk/Fonts/Download/BabelStoneHan-16.0.3.zip",
+    "archive_sha256": "6a928e436ee52d1857c32b5e4d5e71f4f0a9d13ccf660fc4f1ff08df930e12dc",
+    "font_sha256": "d8bb747b3fdccd84a60bd0aa56bb90937270d0bd15f1101cd8f2a5a3709dd0a3",
+    "licence": "Original Arphic Public License, embedded name table; not OFL. Reference only, no outlines copied or shipped.",
+    "observed_shaping": "HarfBuzz: 假+CA and 外+NHAY become one glyph; 日+either mark and 量+CA remain base plus a 512-unit spacing mark at 1024 units/em. Standalone marks also advance 512.",
+    "documented_combinations": 14
+  },
+  "limitations": [
+    "No base-specific ligatures or historical top/bottom placements.",
+    "Spacing side form must remain explicitly provisional; cmap coverage does not complete linguistic validation.",
+    "No historical variation selectors invented.",
+    "Cross-browser and fluent-reader review remain open."
+  ],
+  "browser_strategy": "Drawing-only span split in js/vietnamese-marks.js: browser fallback across font shards otherwise emits tofu for a combined base/mark cluster. Logical Unicode graphemes, wrapping and input remain unchanged. Both measurement and paint use the same isolated spacing-mark runs."
+}

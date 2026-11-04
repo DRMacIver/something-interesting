@@ -1,0 +1,621 @@
+{
+  "date": "2026-11-03",
+  "status": "Bounded category-specific prototype review; no production pressure adaptation adopted by this task. Old Uyghur optical recipe implemented; production rebuild belongs to coordinator.",
+  "commands": [
+    ".venv/bin/python tools/font/preview_joining_pressure.py",
+    ".venv/bin/python tools/font/check_joining_pressure.py",
+    ".venv/bin/python -m pytest -q tests/test_source_optics.py"
+  ],
+  "artifacts": {
+    "comparison.png": "71d8190fda610ca2ee2bc2cb5ace8d5fc7b902e0b4352f50926f737a5212986f",
+    "comparison.json": "9915226773aac260019352a1be83659624fd6567ab04102288ca0fc7343125b4",
+    "review.json": "1718c325eb6881de6eddc32e39567826e0a1fa5b401fd7c237c11cc68b02413b",
+    "whole-field-checks.json": "c75d0b997caf011466c223dcb3355189766dd6e3fc51af13a1bdb4b299483c82",
+    "mild-comparison.png": "5c465ad232ea85b20345fd2262e0359a82c98adec7b091920823dcc7590a0c58",
+    "mild-whole-field-checks.json": "a4fd6d21d1feeeb4918e0e29ce32d491446fd89cb1706516652c603bf5d3ad2e",
+    "old-uyghur-optical.png": "591ffc313bfc8ad3638728463e6ab99ddfc1793e0a993e499f92d1f8ec52a783"
+  },
+  "pressure": {
+    "amount": 0.45,
+    "bend": 0,
+    "secondaryAmount": 0.2,
+    "sampleGlyphs": 104,
+    "acceptedPerGlyph": 102,
+    "rejectedPerGlyph": 2,
+    "moduleSha256": "e19692303d882adbf71798c7ce9b7064a606304ef87c7bd51fa3be402f41f5eb"
+  },
+  "oldUyghurOptics": {
+    "recipe": "NotoSerifOldUyghur-Regular.ttf: 1.35 optical-em",
+    "fixture": "tools/font/specimens/old-uyghur-optical.json",
+    "result": "Visually inspected at22/44px beside Dad; coherent native calligraphic forms gain dialogue presence.",
+    "test": "5 source optics tests pass in3.14s; native geometry/tables/shaping in design units remain unchanged."
+  },
+  "sources": [
+    {
+      "number": 20,
+      "source": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "text": "سَلَامٌ عَلَيْكُمْ ؆ݹﮋﰩﲷ﵇﷽ﻼ",
+      "sampleRole": "native Arabic marked phrase plus contributed study",
+      "disposition": "provisional-pressure-candidate",
+      "observation": "Visible, smooth pressure variation in angular long strokes; joined Arabic sentence and fine marks retain arrangement. Full glyph/source coverage has not been adapted.",
+      "shapingUnchanged": true,
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GPOS": true,
+        "GDEF": true,
+        "hmtx": true
+      },
+      "sampleGlyphs": 23,
+      "candidateGlyphs": 23,
+      "wholeField": {
+        "sourceNumber": 20,
+        "size": 384,
+        "sourceTopology": [
+          51,
+          16
+        ],
+        "candidateTopology": [
+          51,
+          16
+        ],
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            0.9803785780240074,
+            0.9808510638297873,
+            0.9913978494623656,
+            1.0176470588235293,
+            1.0072833211944647,
+            0.9911934020408941,
+            0.9864969135802469,
+            0.9921317924760266,
+            0.9872549019607844,
+            0.985638606075656,
+            0.9857595277592262,
+            0.967995935991872,
+            1.0064308681672025,
+            0.9788893988067922,
+            0.9938118811881188,
+            0.9926227423047571,
+            1.0055589870290302,
+            1.0118232731798382,
+            0.9946207638515331,
+            0.942713567839196,
+            0.990364277320799,
+            1.0019096985404448,
+            0.9896830748482806,
+            1.0030072807850585,
+            0.9906747120131651,
+            0.9705407586763519,
+            0.9946207638515331,
+            0.9810126582278481,
+            0.9681309216192937,
+            0.9896623018607856,
+            1.0098765432098766,
+            0.9848974926433036,
+            0.9827493771484437,
+            0.9838355941840631,
+            0.9720239083513199,
+            0.9850986524398657,
+            0.9895705219658583,
+            1.0009505703422052,
+            0.9811794228356336,
+            0.9872731638708793,
+            0.9782769686497161,
+            0.9873945521282761,
+            0.9751694612914734,
+            0.9765013054830287,
+            0.9783783783783784,
+            1.0,
+            0.99712368168744,
+            0.9922555663117134,
+            0.9882860665844636,
+            0.9858374384236454,
+            0.9876160990712074
+          ],
+          "counterOverlap": [
+            0.9926017262638718,
+            0.9004796163069544,
+            0.9965800273597811,
+            0.9959016393442623,
+            0.9159891598915989,
+            1.0,
+            0.9843148520540075,
+            0.9872253449156873,
+            0.989433042064621,
+            0.9972624961979114,
+            0.9967535761387846,
+            0.9918032786885246,
+            0.9817431338307668,
+            0.9893532496424599,
+            0.9817315329626688,
+            0.9379232505643341
+          ]
+        }
+      }
+    },
+    {
+      "number": 50,
+      "source": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "text": "𛰀𛰁𛰂𛰃𛰄𛰅 ⌈𛰑𛰥𛰺𛱎𛱣𛱼𛲟",
+      "sampleRole": "native joining/glyph study; no translation claimed",
+      "disposition": "provisional-pressure-candidate",
+      "observation": "Loop and line weight now breathes beside Dad. Source shorthand geometry remains legible in sampled connected sequence; this is a glyph study, not a linguistic sentence.",
+      "shapingUnchanged": true,
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GPOS": true,
+        "GDEF": true,
+        "hmtx": true
+      },
+      "sampleGlyphs": 15,
+      "candidateGlyphs": 15,
+      "wholeField": {
+        "sourceNumber": 50,
+        "size": 384,
+        "sourceTopology": [
+          9,
+          1
+        ],
+        "candidateTopology": [
+          9,
+          1
+        ],
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            1.0264145164995024,
+            0.9975346687211094,
+            1.0008873114463177,
+            0.9933847850055126,
+            0.9894770224297987,
+            0.9991023339317774,
+            0.9846823324630113,
+            0.9646772228989038,
+            1.0092475830180747
+          ],
+          "counterOverlap": [
+            0.9839720238962553
+          ]
+        }
+      }
+    },
+    {
+      "number": 176,
+      "source": "assets/fonts/scripts/042e43ff081e.woff2",
+      "text": "𘬀𘭃𘮆𘯉𘰌𘱏𘲒𘳕",
+      "sampleRole": "native joining/glyph study; no translation claimed",
+      "disposition": "retain-native-pending-stronger-treatment",
+      "observation": "Fine stacked strokes remain open with complete vertical bounds. The difference is too subtle to claim comic styling complete.",
+      "shapingUnchanged": true,
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GDEF": true,
+        "hmtx": true
+      },
+      "sampleGlyphs": 8,
+      "candidateGlyphs": 8,
+      "wholeField": {
+        "sourceNumber": 176,
+        "size": 384,
+        "sourceTopology": [
+          11,
+          5
+        ],
+        "candidateTopology": [
+          11,
+          5
+        ],
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            0.9832411653628271,
+            0.9853719265483971,
+            0.9913945836497089,
+            0.9787217054573036,
+            0.9771173532641423,
+            0.9792494310949975,
+            0.9656855602506192,
+            0.9837426982898163,
+            0.9826511644859132,
+            0.9763842124953236,
+            0.9909385113268608
+          ],
+          "counterOverlap": [
+            0.9918611609814483,
+            0.9751243781094527,
+            0.9874851656057827,
+            0.9954464682363394,
+            0.9968723343758885
+          ]
+        }
+      }
+    },
+    {
+      "number": 181,
+      "source": "assets/fonts/scripts/7d309b636746.woff2",
+      "text": "𐽰𐽱𐽲𐽳 𐽴𐽵𐽶 𐽰𐽳𐽶𐽹𐽼𐽿𐾆𐾉",
+      "sampleRole": "native joining/glyph study; no translation claimed",
+      "disposition": "adopt-optical-size-retain-native-ink",
+      "observation": "Source already has fluent calligraphic thick/thin strokes. 1.35 optical-em is visibly more legible at 22px. .45 pressure fails whole-field counter retention; .2 passes but does not address undersized body.",
+      "shapingUnchanged": true,
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GPOS": true,
+        "GDEF": true,
+        "hmtx": true
+      },
+      "sampleGlyphs": 14,
+      "candidateGlyphs": 14,
+      "wholeField": {
+        "sourceNumber": 181,
+        "size": 384,
+        "sourceTopology": [
+          11,
+          4
+        ],
+        "candidateTopology": [
+          11,
+          4
+        ],
+        "status": "reject-whole-field",
+        "reason": "Reconstruction reduced a counter too far"
+      },
+      "mildWholeField": {
+        "sourceNumber": 181,
+        "size": 384,
+        "sourceTopology": [
+          11,
+          3
+        ],
+        "candidateTopology": [
+          11,
+          3
+        ],
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            1.0010932944606414,
+            0.9977985241958498,
+            0.9982935153583617,
+            0.9972163758571525,
+            1.0061305445366029,
+            1.000728597449909,
+            1.0010764262648009,
+            0.9983600231526143,
+            0.9991731594848148,
+            0.9989356984478935,
+            1.0039941902687002
+          ],
+          "counterOverlap": [
+            0.9737704918032787,
+            0.9969635627530364,
+            1.0
+          ]
+        }
+      }
+    },
+    {
+      "number": 183,
+      "source": "assets/fonts/scripts/b18cf2344e84.woff2",
+      "text": "𗏻𗒍𗔟𗖱𗙄𗛖𗝨𗟺",
+      "sampleRole": "native joining/glyph study; no translation claimed",
+      "disposition": "guarded-style-gap",
+      "observation": "Counts and sampled counters survive .45, but the resulting serif forms remain visibly typeset. No general comic-style acceptance.",
+      "shapingUnchanged": true,
+      "nativeTableChecks": {
+        "hmtx": true
+      },
+      "sampleGlyphs": 8,
+      "candidateGlyphs": 8,
+      "wholeField": {
+        "sourceNumber": 183,
+        "size": 384,
+        "sourceTopology": [
+          46,
+          6
+        ],
+        "candidateTopology": [
+          46,
+          6
+        ],
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            0.9517367108040683,
+            0.9815445769449177,
+            0.9703121277102692,
+            0.9767239331802707,
+            0.9287658802177858,
+            0.9183925811437403,
+            0.9530042580034694,
+            0.9808017201658732,
+            0.9891095451633568,
+            0.9903147699757869,
+            0.9893846409023055,
+            0.9949832775919732,
+            0.9844644317252658,
+            1.0032733224222585,
+            0.9900990099009901,
+            0.9692789968652038,
+            0.9933709796219004,
+            0.9663948603904127,
+            0.9910964947461298,
+            0.9915254237288136,
+            0.9835302924977274,
+            0.9640820980615735,
+            0.9679756318432535,
+            0.9557786797692801,
+            0.9878257155061939,
+            0.9901712111604312,
+            0.9917898193760263,
+            0.9973776223776224,
+            0.968173365755972,
+            0.9704469005285921,
+            0.9415313225058005,
+            0.9729384733214195,
+            0.9840561224489796,
+            0.9845631067961165,
+            0.9729830214400793,
+            0.9828494938509161,
+            0.9988176873965476,
+            0.9619623946401556,
+            0.9774400379957254,
+            0.9818226279752201,
+            1.0138820029747149,
+            0.9790885327878168,
+            0.9700488997555012,
+            0.9848231224193729,
+            0.9930434782608696,
+            0.9840764331210191
+          ],
+          "counterOverlap": [
+            0.9448,
+            0.9547826086956521,
+            0.9994711792702274,
+            0.9720588235294118,
+            0.9830601092896175,
+            0.9666842940243258
+          ]
+        }
+      }
+    },
+    {
+      "number": 191,
+      "source": "assets/fonts/scripts/da3a0b551617.woff2",
+      "text": "سَلَامٌ عَلَيْكُمْ ࢏𐻂𐻆𐻛𐻠𐻥𐻩𐻮",
+      "sampleRole": "native Arabic marked phrase plus contributed study",
+      "disposition": "retain-native-pending-guarded-treatment",
+      "observation": "Source already calligraphic with attached dots/crowns. .45 fails whole-field topology. .2 passes but the minor change is insufficient to establish style completion; retain source instead of risking joins.",
+      "shapingUnchanged": true,
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GPOS": true,
+        "GDEF": true,
+        "hmtx": true
+      },
+      "sampleGlyphs": 20,
+      "candidateGlyphs": 20,
+      "wholeField": {
+        "sourceNumber": 191,
+        "size": 384,
+        "sourceTopology": [
+          28,
+          12
+        ],
+        "candidateTopology": [
+          28,
+          13
+        ],
+        "status": "reject-whole-field",
+        "reason": "Reconstruction changed topology"
+      },
+      "mildWholeField": {
+        "sourceNumber": 191,
+        "size": 384,
+        "sourceTopology": [
+          28,
+          12
+        ],
+        "candidateTopology": [
+          28,
+          12
+        ],
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            0.9969418960244648,
+            0.99874818629264,
+            0.9938787202605314,
+            0.994548356437064,
+            0.991753921681433,
+            1.0013708019191228,
+            1.0027416038382453,
+            0.9955840141311548,
+            0.9978867286559594,
+            1.0055058499655884,
+            0.9965635738831615,
+            0.9969670211540677,
+            1.000344234079174,
+            0.9932519280205655,
+            0.9993145990404386,
+            1.0017889087656529,
+            0.9939024390243902,
+            0.9839034205231388,
+            0.9987105093488072,
+            1.0018001800180019,
+            0.9794776119402985,
+            0.9907235621521335,
+            0.9931397892225095,
+            1.000104580631667,
+            1.00945179584121,
+            1.0094876660341556,
+            0.9954792043399638,
+            0.9914568345323741
+          ],
+          "counterOverlap": [
+            0.9956178790534619,
+            0.9733275032794053,
+            0.8981481481481481,
+            0.9696302816901409,
+            0.9745502413339184,
+            0.9978012313104662,
+            0.9864253393665159,
+            0.9912434325744308,
+            0.9877515310586177,
+            0.9698275862068966,
+            0.9935222672064777,
+            0.9903147699757869
+          ]
+        }
+      }
+    },
+    {
+      "number": 198,
+      "source": "assets/fonts/scripts/9f38c185324b.woff2",
+      "text": "𭟃𭡕𭣨𭥺𭨌𭪟𭬱𭯂",
+      "sampleRole": "native joining/glyph study; no translation claimed",
+      "disposition": "reject-pressure-retain-native-gap",
+      "observation": "Two glyph vector guards reject .45; both .45 and .2 complete fields change topology. Native shape/count preservation takes precedence; serif comic-style gap remains.",
+      "shapingUnchanged": true,
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GDEF": true,
+        "hmtx": true
+      },
+      "sampleGlyphs": 8,
+      "candidateGlyphs": 6,
+      "wholeField": {
+        "sourceNumber": 198,
+        "size": 384,
+        "sourceTopology": [
+          37,
+          20
+        ],
+        "candidateTopology": [
+          36,
+          20
+        ],
+        "status": "reject-whole-field",
+        "reason": "Reconstruction changed topology"
+      },
+      "mildWholeField": {
+        "sourceNumber": 198,
+        "size": 384,
+        "sourceTopology": [
+          34,
+          19
+        ],
+        "candidateTopology": [
+          37,
+          20
+        ],
+        "status": "reject-whole-field",
+        "reason": "Reconstruction changed topology"
+      }
+    },
+    {
+      "number": 199,
+      "source": "assets/fonts/scripts/6170ad79af61.woff2",
+      "text": "𲞤𲠸𲣊𲥛𲧮𲪀𲬒𲮣",
+      "sampleRole": "native joining/glyph study; no translation claimed",
+      "disposition": "guarded-style-gap",
+      "observation": "Component/counter/whole-field guards pass .45 and strokes show variation, but the dominant serif styling remains. Sample proof cannot establish all-glyph style completion.",
+      "shapingUnchanged": true,
+      "nativeTableChecks": {
+        "GSUB": true,
+        "GDEF": true,
+        "hmtx": true
+      },
+      "sampleGlyphs": 8,
+      "candidateGlyphs": 8,
+      "wholeField": {
+        "sourceNumber": 199,
+        "size": 384,
+        "sourceTopology": [
+          47,
+          14
+        ],
+        "candidateTopology": [
+          47,
+          14
+        ],
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            0.9933665861058261,
+            0.9582785190753618,
+            0.9856547122602168,
+            0.9538038811609136,
+            0.997564935064935,
+            0.9776119402985075,
+            0.9707990907501312,
+            0.9782990266475188,
+            0.9793899422918384,
+            0.9747679614987969,
+            0.9755742646294564,
+            0.9788992438895727,
+            0.9915759460860549,
+            0.9850746268656716,
+            0.983761976802824,
+            0.9794037159729224,
+            1.0058774139378674,
+            0.9895615866388309,
+            0.9806405353728489,
+            0.9779021380398909,
+            0.9858597285067874,
+            0.9664694280078896,
+            0.9703566838046273,
+            0.9613848202396804,
+            0.9695261581821385,
+            1.0010252204223908,
+            0.9801553062985332,
+            0.9991850040749797,
+            0.985200845665962,
+            0.9625797010557123,
+            0.9667671547516509,
+            0.9791352637842126,
+            0.9941046425939573,
+            1.0053207212533255,
+            1.0034692107545533,
+            0.9858481164042256,
+            0.9936507936507937,
+            0.9719681321923871,
+            0.990728476821192,
+            0.9442013129102844,
+            0.9833212472806382,
+            0.9870967741935484,
+            0.98828125,
+            0.9828693790149893,
+            0.9953917050691244,
+            0.9957961114030478,
+            1.0006553079947575
+          ],
+          "counterOverlap": [
+            0.9976923076923077,
+            0.9935064935064936,
+            0.9730120481927711,
+            0.9788758042976812,
+            0.9521492295214923,
+            0.9697420634920635,
+            1.0,
+            0.9817477876106194,
+            0.9493243243243243,
+            1.0,
+            0.9773166023166023,
+            0.9816989476894922,
+            0.9701596113809854,
+            0.9838076545632973
+          ]
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Per-glyph topology checks do not guarantee preserved joined-field topology; whole-field guard rejected3/8 candidates at .45.",
+    "Whole-field raster guards at384px are conservative geometry checks, not linguistic proof or exhaustive size-independent verification.",
+    "The sampled font candidates modify only the glyphs shaped by these strings. Full fonts, production routing and exports have not been validated by these prototypes.",
+    "Pressure-only adjustment does not automatically remove typeset serif styling. Dense source styling remains incomplete where stated.",
+    "Production fonts and licence/provenance manifests untouched; prototype outputs remain isolated."
+  ]
+}

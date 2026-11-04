@@ -1,0 +1,2477 @@
+{
+  "status": "candidate probes only; no production integration or coverage credit",
+  "date": "2026-11-03",
+  "missingCount": 141,
+  "fonts": [
+    {
+      "family": "LXGW Seal",
+      "repository": "https://github.com/lxgw/LxgwSeal",
+      "commit": "2b1d01195168110b9a8f3a8abaff844ff22fa716",
+      "path": "build/unicode-sources/seal-font-probes/LXGWSeal-Regular.ttf",
+      "sha256": "06100c9d0afd79612dc0cf7ef8ddef997cce4ec22bf7d93f7cf238ca08bac29e",
+      "licencePath": "build/unicode-sources/seal-font-probes/LXGWSeal-Regular.ttf.LICENSE.txt",
+      "licenceSha256": "014c5eec8e93d9deb222d0a47b4f44668f2f63b14f27448dcf468f52fd0cf910",
+      "nativeLicence": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org",
+      "copyright": "Copyright 2026 LXGW (https://github.com/lxgw/LxgwSeal), with Reserved Font Name '霞鹜', '霞鶩', '落霞孤鹜', '落霞孤鶩' and 'LXGW'.\nCopyright 2020 The Klee Project Authors (https://github.com/fontworks-fonts/Klee)\nCopyright 2024 The Batang and Gungsuh Project Authors (https://github.com/googlefonts/batang)",
+      "sealCmapCount": 165,
+      "gapMappings": 2,
+      "uniqueGapDrawings": 2,
+      "candidates": [
+        {
+          "codepoint": 254799,
+          "glyph": "uni66C6",
+          "metrics": [
+            1000,
+            56
+          ],
+          "bounds": [
+            57,
+            -109,
+            944.1428571428571,
+            788
+          ],
+          "drawingSha256": "69b005f4b1f3e5df843688fc86a684cbbb32f99b652eddbe3450ef527b746865"
+        },
+        {
+          "codepoint": 260674,
+          "glyph": "uni5218",
+          "metrics": [
+            1000,
+            41
+          ],
+          "bounds": [
+            41.0,
+            -116,
+            950,
+            800.0
+          ],
+          "drawingSha256": "e71ec00ce5cd644181a026034ffb97d58faac3ec2a53a0338541ab7308f7f368"
+        }
+      ]
+    },
+    {
+      "family": "Seal Sans",
+      "repository": "https://github.com/Ghimist/seal-sans",
+      "commit": "9372f0813770a605ec5ee068fc48660b231b3427",
+      "path": "build/unicode-sources/seal-font-probes/SealSans-Regular_v1.otf",
+      "sha256": "f4bd309fd421b158da4a18295354a21efc12090b54c30601da705dd4db4c6d63",
+      "licencePath": "build/unicode-sources/seal-font-probes/SealSans-Regular_v1.otf.LICENSE.txt",
+      "licenceSha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "nativeLicence": "GNU Affero General Public License v3.0",
+      "copyright": "Copyright (c) 2026 Ghimist",
+      "sealCmapCount": 11328,
+      "gapMappings": 141,
+      "uniqueGapDrawings": 141,
+      "candidates": [
+        {
+          "codepoint": 249964,
+          "glyph": "u3D06C",
+          "metrics": [
+            1024,
+            152
+          ],
+          "bounds": [
+            152,
+            -397,
+            872,
+            396
+          ],
+          "drawingSha256": "9ce1183f4bc841d2f4dc5cc0311bf9e8abc18daeb4f892f7e7393932cb871475"
+        },
+        {
+          "codepoint": 250217,
+          "glyph": "u3D169",
+          "metrics": [
+            1024,
+            235
+          ],
+          "bounds": [
+            235,
+            -485,
+            789,
+            486
+          ],
+          "drawingSha256": "aaed2e8235cc0429c11a51f62e4e8c345086572b6be388d0be2521075276bccb"
+        },
+        {
+          "codepoint": 250331,
+          "glyph": "u3D1DB",
+          "metrics": [
+            1024,
+            206
+          ],
+          "bounds": [
+            206,
+            -400,
+            819,
+            401
+          ],
+          "drawingSha256": "f3dff9b889bf0e438ca881fae37ab7b7936337e643cd95cd7532fbe8a83507b5"
+        },
+        {
+          "codepoint": 250777,
+          "glyph": "u3D399",
+          "metrics": [
+            1024,
+            247
+          ],
+          "bounds": [
+            247,
+            -468,
+            777,
+            468
+          ],
+          "drawingSha256": "8c76a24c4b01aec6d86405576426e96e0ae4d669cf90facb3ffbad99cccda5d8"
+        },
+        {
+          "codepoint": 251145,
+          "glyph": "u3D509",
+          "metrics": [
+            1024,
+            214
+          ],
+          "bounds": [
+            214,
+            -442,
+            810,
+            443
+          ],
+          "drawingSha256": "b10e73bec7c3beebcee7e54317f4b08687e283df612e9bbf3548528b8aaf7ece"
+        },
+        {
+          "codepoint": 251383,
+          "glyph": "u3D5F7",
+          "metrics": [
+            1024,
+            109
+          ],
+          "bounds": [
+            109,
+            -461,
+            915,
+            460
+          ],
+          "drawingSha256": "60a8749ea4da1fdb92c22fb797505b4052f699f149de6ab5aa4155c3216d8964"
+        },
+        {
+          "codepoint": 251442,
+          "glyph": "u3D632",
+          "metrics": [
+            1024,
+            218
+          ],
+          "bounds": [
+            218,
+            -357,
+            806,
+            356
+          ],
+          "drawingSha256": "356057f7bb6491ee04c07a71e3e91cb33a0e5079c170250061000fe5c68cd12b"
+        },
+        {
+          "codepoint": 251565,
+          "glyph": "u3D6AD",
+          "metrics": [
+            1024,
+            187
+          ],
+          "bounds": [
+            187,
+            -443,
+            836,
+            443
+          ],
+          "drawingSha256": "fcd75439da25c03d0c18086951043321cc0a71bed03a01f94cfdb7c7fddbb3b7"
+        },
+        {
+          "codepoint": 251780,
+          "glyph": "u3D784",
+          "metrics": [
+            1024,
+            207
+          ],
+          "bounds": [
+            207,
+            -373,
+            816,
+            373
+          ],
+          "drawingSha256": "cfec7c5b4e78f703260021d807a672b3a7bffc5db9a8d51d1b149ee0f3fe95f0"
+        },
+        {
+          "codepoint": 252161,
+          "glyph": "u3D901",
+          "metrics": [
+            1024,
+            257
+          ],
+          "bounds": [
+            257,
+            -445,
+            766,
+            445
+          ],
+          "drawingSha256": "31d020578791dc8d55abbd77073fa9c0c10533b2917cfcf7566f3d5622f1c1f4"
+        },
+        {
+          "codepoint": 252249,
+          "glyph": "u3D959",
+          "metrics": [
+            1024,
+            156
+          ],
+          "bounds": [
+            156,
+            -446,
+            868,
+            445
+          ],
+          "drawingSha256": "0f3986a380e7d6750d7b2dccbb0e8147860d4c0da1bf30187c3d08f98f3403de"
+        },
+        {
+          "codepoint": 252289,
+          "glyph": "u3D981",
+          "metrics": [
+            1024,
+            214
+          ],
+          "bounds": [
+            214,
+            -378,
+            810,
+            378
+          ],
+          "drawingSha256": "e8e0d78f3756494fa6a581a7e49125064a24d76d9ab1870724cc727ce88f199e"
+        },
+        {
+          "codepoint": 252345,
+          "glyph": "u3D9B9",
+          "metrics": [
+            1024,
+            185
+          ],
+          "bounds": [
+            185,
+            -451,
+            838,
+            451
+          ],
+          "drawingSha256": "42c7ddaa539707af167c18915a352aeffd743bbd0b97d9d62533bcae56bba6ce"
+        },
+        {
+          "codepoint": 252800,
+          "glyph": "u3DB80",
+          "metrics": [
+            1024,
+            216
+          ],
+          "bounds": [
+            216,
+            -432,
+            808,
+            433
+          ],
+          "drawingSha256": "bdd019aa09d61db38cdbd39526d68eadbe97dddecf02dcaf45e12f0118533e64"
+        },
+        {
+          "codepoint": 252810,
+          "glyph": "u3DB8A",
+          "metrics": [
+            1024,
+            190
+          ],
+          "bounds": [
+            190,
+            -444,
+            834,
+            444
+          ],
+          "drawingSha256": "0ad8b494ea7b4fb2578756d048970b08ea35c82787962fa9b33f16cd5300e54d"
+        },
+        {
+          "codepoint": 252830,
+          "glyph": "u3DB9E",
+          "metrics": [
+            1024,
+            220
+          ],
+          "bounds": [
+            220,
+            -466,
+            805,
+            466
+          ],
+          "drawingSha256": "9858bbca3297a8a3d14b68dbbae0c58781c392bf9184bd68cff1641506015c89"
+        },
+        {
+          "codepoint": 252991,
+          "glyph": "u3DC3F",
+          "metrics": [
+            1024,
+            175
+          ],
+          "bounds": [
+            175,
+            -402,
+            850,
+            402
+          ],
+          "drawingSha256": "833f33747c106d513a3abbdee5d75e034bfa742eafe644b75d3137cd4554a1f2"
+        },
+        {
+          "codepoint": 253001,
+          "glyph": "u3DC49",
+          "metrics": [
+            1024,
+            202
+          ],
+          "bounds": [
+            202,
+            -467,
+            822,
+            467
+          ],
+          "drawingSha256": "fc547e6826f1328f2fae2817738d16894d2c81721bc07d6e65359e9918f42af9"
+        },
+        {
+          "codepoint": 253072,
+          "glyph": "u3DC90",
+          "metrics": [
+            1024,
+            94
+          ],
+          "bounds": [
+            94,
+            -413,
+            930,
+            414
+          ],
+          "drawingSha256": "38d08e3fe7c56bd737afcb3d9217088bbc3580e4c268526fc7ee803599e83b42"
+        },
+        {
+          "codepoint": 253472,
+          "glyph": "u3DE20",
+          "metrics": [
+            1024,
+            227
+          ],
+          "bounds": [
+            227,
+            -406,
+            798,
+            406
+          ],
+          "drawingSha256": "6cb753004f84471c1698635f7feeb0e6037b584b1386b05a1be18317a6a35271"
+        },
+        {
+          "codepoint": 253606,
+          "glyph": "u3DEA6",
+          "metrics": [
+            1024,
+            177
+          ],
+          "bounds": [
+            177,
+            -434,
+            847,
+            435
+          ],
+          "drawingSha256": "c2b9ae756781660979da991713254932d4a2ceaa2bf1379b808cf5e943dd09a6"
+        },
+        {
+          "codepoint": 253617,
+          "glyph": "u3DEB1",
+          "metrics": [
+            1024,
+            195
+          ],
+          "bounds": [
+            195,
+            -429,
+            829,
+            429
+          ],
+          "drawingSha256": "184133312d7748f91cde523bfdb85436573627e73530503bfdb92b381b8b9b6a"
+        },
+        {
+          "codepoint": 253732,
+          "glyph": "u3DF24",
+          "metrics": [
+            1024,
+            202
+          ],
+          "bounds": [
+            202,
+            -419,
+            822,
+            420
+          ],
+          "drawingSha256": "b1581a2ec4de39dcb4c27082fe3f459d3513e2522d0f9378b3a694dda4ee54d9"
+        },
+        {
+          "codepoint": 253764,
+          "glyph": "u3DF44",
+          "metrics": [
+            1024,
+            234
+          ],
+          "bounds": [
+            234,
+            -428,
+            791,
+            429
+          ],
+          "drawingSha256": "8301db804fcfab59d72ad3380a4646ab6a0057606f7c7bdb177336e3cafa787f"
+        },
+        {
+          "codepoint": 254321,
+          "glyph": "u3E171",
+          "metrics": [
+            1024,
+            209
+          ],
+          "bounds": [
+            209,
+            -415,
+            815,
+            416
+          ],
+          "drawingSha256": "144bb27c5c25aad80944724940e1d8e736f296b39af44e8a23b65da32bd91ae0"
+        },
+        {
+          "codepoint": 254561,
+          "glyph": "u3E261",
+          "metrics": [
+            1024,
+            203
+          ],
+          "bounds": [
+            203,
+            -420,
+            821,
+            419
+          ],
+          "drawingSha256": "2abdac2fb25241090f4a31fc21560d30c6e6226596151f4cc1d04956da87bf78"
+        },
+        {
+          "codepoint": 254799,
+          "glyph": "u3E34F",
+          "metrics": [
+            1024,
+            247
+          ],
+          "bounds": [
+            247,
+            -451,
+            777,
+            450
+          ],
+          "drawingSha256": "0c83ae52946957309b8bac2944120a2199861946e37bb381004eac7b33e66517"
+        },
+        {
+          "codepoint": 254923,
+          "glyph": "u3E3CB",
+          "metrics": [
+            1024,
+            155
+          ],
+          "bounds": [
+            155,
+            -404,
+            869,
+            404
+          ],
+          "drawingSha256": "3ae5d1a85012b1f3114fc99fc01beefe837120aff123eb932c2115d8f5ecbd06"
+        },
+        {
+          "codepoint": 254925,
+          "glyph": "u3E3CD",
+          "metrics": [
+            1024,
+            230
+          ],
+          "bounds": [
+            230,
+            -441,
+            795,
+            441
+          ],
+          "drawingSha256": "cb9d46e8330352c5f4ce6244673e2de400d6051ac28443fec6ed3620c606b121"
+        },
+        {
+          "codepoint": 255045,
+          "glyph": "u3E445",
+          "metrics": [
+            1024,
+            145
+          ],
+          "bounds": [
+            145,
+            -449,
+            880,
+            449
+          ],
+          "drawingSha256": "a63362f0ff8d1b3cd490ecdc849ef497c51546e3ef6245b6d7704c11f72d69c5"
+        },
+        {
+          "codepoint": 255407,
+          "glyph": "u3E5AF",
+          "metrics": [
+            1024,
+            223
+          ],
+          "bounds": [
+            223,
+            -454,
+            801,
+            453
+          ],
+          "drawingSha256": "1418e56aee32d6a5986dd911dfaf3aa225cbda9a0f2b6efefe06e033ac84b146"
+        },
+        {
+          "codepoint": 255431,
+          "glyph": "u3E5C7",
+          "metrics": [
+            1024,
+            161
+          ],
+          "bounds": [
+            161,
+            -442,
+            863,
+            441
+          ],
+          "drawingSha256": "e057bf453d87721a03fb284b33149e119e9fc476133ff9bdd8d1b42403045495"
+        },
+        {
+          "codepoint": 255552,
+          "glyph": "u3E640",
+          "metrics": [
+            1024,
+            191
+          ],
+          "bounds": [
+            191,
+            -434,
+            833,
+            434
+          ],
+          "drawingSha256": "9f0bc2733b359f12fbd0ac658c68d40c993c96970ff3447a9c590093c9525b4d"
+        },
+        {
+          "codepoint": 255724,
+          "glyph": "u3E6EC",
+          "metrics": [
+            1024,
+            210
+          ],
+          "bounds": [
+            210,
+            -451,
+            815,
+            450
+          ],
+          "drawingSha256": "d6ea70d5a1a98d7157d343873db6057988223b760aa8146eeb3e38039fcef97e"
+        },
+        {
+          "codepoint": 255931,
+          "glyph": "u3E7BB",
+          "metrics": [
+            1024,
+            154
+          ],
+          "bounds": [
+            154,
+            -448,
+            871,
+            447
+          ],
+          "drawingSha256": "a022a2256beb605f814fb4205f9814cdf5b12124ac6a227cb70fedb4ee220324"
+        },
+        {
+          "codepoint": 255952,
+          "glyph": "u3E7D0",
+          "metrics": [
+            1024,
+            193
+          ],
+          "bounds": [
+            193,
+            -433,
+            831,
+            434
+          ],
+          "drawingSha256": "fe5d2e80ca54407c79647010113fa3dc7e91c8e09ca246570a6030885f000cd0"
+        },
+        {
+          "codepoint": 256113,
+          "glyph": "u3E871",
+          "metrics": [
+            1024,
+            169
+          ],
+          "bounds": [
+            169,
+            -458,
+            856,
+            459
+          ],
+          "drawingSha256": "60ffc7bdef5f9ca1eb3e3f52b1084d5eb0162d844745bfe4a95b0b0b67276beb"
+        },
+        {
+          "codepoint": 256144,
+          "glyph": "u3E890",
+          "metrics": [
+            1024,
+            124
+          ],
+          "bounds": [
+            124,
+            -431,
+            900,
+            431
+          ],
+          "drawingSha256": "64686eabb61a9ab5bc1a1bc9d4374ad8cf9e6391172fa0296bcfbdb97ea51246"
+        },
+        {
+          "codepoint": 256158,
+          "glyph": "u3E89E",
+          "metrics": [
+            1024,
+            276
+          ],
+          "bounds": [
+            276,
+            -425,
+            747,
+            424
+          ],
+          "drawingSha256": "de7fd49eb11f2129b3be3562bab190a7ce040327f7ffb322d93c3dd81970d971"
+        },
+        {
+          "codepoint": 256187,
+          "glyph": "u3E8BB",
+          "metrics": [
+            1024,
+            185
+          ],
+          "bounds": [
+            185,
+            -432,
+            838,
+            431
+          ],
+          "drawingSha256": "78302c43a692e7f20f5f432dde4e1300c0ed0cf669c9bf36703bc40dfe33abae"
+        },
+        {
+          "codepoint": 256328,
+          "glyph": "u3E948",
+          "metrics": [
+            1024,
+            203
+          ],
+          "bounds": [
+            203,
+            -417,
+            820,
+            417
+          ],
+          "drawingSha256": "ec117b95f934d289c50dfb25ea0f98a51161c0937549abffaa6e0a50471c957c"
+        },
+        {
+          "codepoint": 256338,
+          "glyph": "u3E952",
+          "metrics": [
+            1024,
+            162
+          ],
+          "bounds": [
+            162,
+            -433,
+            861,
+            433
+          ],
+          "drawingSha256": "1d57531fe94977edd786f2bbbb44119f332b07a667958c6440010fd4e0a3a890"
+        },
+        {
+          "codepoint": 256397,
+          "glyph": "u3E98D",
+          "metrics": [
+            1024,
+            186
+          ],
+          "bounds": [
+            186,
+            -414,
+            837,
+            414
+          ],
+          "drawingSha256": "6bc07595d384ad73fcc9a6adb3ff5935250dcbdd28159d0b51283ad6bb129787"
+        },
+        {
+          "codepoint": 256475,
+          "glyph": "u3E9DB",
+          "metrics": [
+            1024,
+            207
+          ],
+          "bounds": [
+            207,
+            -476,
+            818,
+            477
+          ],
+          "drawingSha256": "1bc718df19508244d17b081e7bb6e649201e45f4d8c531beadf62b406d3c18f0"
+        },
+        {
+          "codepoint": 256566,
+          "glyph": "u3EA36",
+          "metrics": [
+            1024,
+            194
+          ],
+          "bounds": [
+            194,
+            -472,
+            830,
+            471
+          ],
+          "drawingSha256": "7e77662edda02547351d8cde7390f18b35476ec41401028d81be5f486eed4883"
+        },
+        {
+          "codepoint": 256612,
+          "glyph": "u3EA64",
+          "metrics": [
+            1024,
+            224
+          ],
+          "bounds": [
+            224,
+            -405,
+            799,
+            405
+          ],
+          "drawingSha256": "786e7e36f09676d2ff439e664ba74055af8e05e295d04f14a8a2a0b91d5c1780"
+        },
+        {
+          "codepoint": 256752,
+          "glyph": "u3EAF0",
+          "metrics": [
+            1024,
+            262
+          ],
+          "bounds": [
+            262,
+            -420,
+            761,
+            421
+          ],
+          "drawingSha256": "1b741754c93b96974a3c75c9b501da07788e363b6008f69715e3756d6df19495"
+        },
+        {
+          "codepoint": 256816,
+          "glyph": "u3EB30",
+          "metrics": [
+            1024,
+            188
+          ],
+          "bounds": [
+            188,
+            -373,
+            836,
+            372
+          ],
+          "drawingSha256": "081b72844f56bb965619f673d0618c7c9fd55c616a9fc9dea680094da84309da"
+        },
+        {
+          "codepoint": 256819,
+          "glyph": "u3EB33",
+          "metrics": [
+            1024,
+            235
+          ],
+          "bounds": [
+            235,
+            -476,
+            789,
+            475
+          ],
+          "drawingSha256": "15ec7b9922a48f900118423545b3e0ef7d0550e0ad068e15d90e9b3ff540009e"
+        },
+        {
+          "codepoint": 256887,
+          "glyph": "u3EB77",
+          "metrics": [
+            1024,
+            213
+          ],
+          "bounds": [
+            213,
+            -448,
+            811,
+            447
+          ],
+          "drawingSha256": "0ac3f040c706b149ad9c61a67dd982e701af018191629cb4e2e677a488fe4e3b"
+        },
+        {
+          "codepoint": 257031,
+          "glyph": "u3EC07",
+          "metrics": [
+            1024,
+            215
+          ],
+          "bounds": [
+            215,
+            -431,
+            809,
+            431
+          ],
+          "drawingSha256": "beff9eb791a468171071920394d6ae2bd7ea5aa78c022722a1798a096c5e8f83"
+        },
+        {
+          "codepoint": 257274,
+          "glyph": "u3ECFA",
+          "metrics": [
+            1024,
+            208
+          ],
+          "bounds": [
+            208,
+            -412,
+            815,
+            411
+          ],
+          "drawingSha256": "6e1a945ebd0f5256a8c04f2c1d7ff9f8bd21d95775cf7f147a1de53b56d30860"
+        },
+        {
+          "codepoint": 257335,
+          "glyph": "u3ED37",
+          "metrics": [
+            1024,
+            195
+          ],
+          "bounds": [
+            195,
+            -444,
+            829,
+            443
+          ],
+          "drawingSha256": "d95ceeff3afb88fc28621abf99ae48f9b98416fcf211308a1d8a92124d6690f0"
+        },
+        {
+          "codepoint": 257359,
+          "glyph": "u3ED4F",
+          "metrics": [
+            1024,
+            218
+          ],
+          "bounds": [
+            218,
+            -426,
+            806,
+            426
+          ],
+          "drawingSha256": "9a00da56564669e5d30752bd1009777d84aef6223d1300c5626a50d937f33348"
+        },
+        {
+          "codepoint": 257437,
+          "glyph": "u3ED9D",
+          "metrics": [
+            1024,
+            192
+          ],
+          "bounds": [
+            192,
+            -445,
+            831,
+            446
+          ],
+          "drawingSha256": "d4f67943caaac15633aec4aea4982fd73bccab435c3f2456b5b3416dd2af6d10"
+        },
+        {
+          "codepoint": 257483,
+          "glyph": "u3EDCB",
+          "metrics": [
+            1024,
+            186
+          ],
+          "bounds": [
+            186,
+            -434,
+            838,
+            434
+          ],
+          "drawingSha256": "5ca5dc851bb19dcbcf53d9c13b41d5c0f90d9687d6c8525ad0d42c1b637141fb"
+        },
+        {
+          "codepoint": 257748,
+          "glyph": "u3EED4",
+          "metrics": [
+            1024,
+            238
+          ],
+          "bounds": [
+            238,
+            -451,
+            786,
+            451
+          ],
+          "drawingSha256": "5b17b8a979edcb12dacf190eb2e6e9384698ba527336e12d5efd65ca1c11730a"
+        },
+        {
+          "codepoint": 257755,
+          "glyph": "u3EEDB",
+          "metrics": [
+            1024,
+            244
+          ],
+          "bounds": [
+            244,
+            -405,
+            779,
+            406
+          ],
+          "drawingSha256": "4194e3ec74c67e361c93797b67798dd18db17d710e154c8452a40e102d81a265"
+        },
+        {
+          "codepoint": 257781,
+          "glyph": "u3EEF5",
+          "metrics": [
+            1024,
+            207
+          ],
+          "bounds": [
+            207,
+            -446,
+            818,
+            447
+          ],
+          "drawingSha256": "95b7d73026c55c972f7a10359e4c206542fb29b8b7dfa715a6e31857d5781cfb"
+        },
+        {
+          "codepoint": 257896,
+          "glyph": "u3EF68",
+          "metrics": [
+            1024,
+            169
+          ],
+          "bounds": [
+            169,
+            -444,
+            856,
+            444
+          ],
+          "drawingSha256": "f2cef22fef1924e013323cf966f05632c09557c39799168f16db193cb2df2dfd"
+        },
+        {
+          "codepoint": 257898,
+          "glyph": "u3EF6A",
+          "metrics": [
+            1024,
+            171
+          ],
+          "bounds": [
+            171,
+            -430,
+            852,
+            431
+          ],
+          "drawingSha256": "803da0e9fbb88a060d42ccba331240cb3d53cf2e04aa2bc7f36f961d3c92e5f4"
+        },
+        {
+          "codepoint": 257966,
+          "glyph": "u3EFAE",
+          "metrics": [
+            1024,
+            194
+          ],
+          "bounds": [
+            194,
+            -424,
+            829,
+            424
+          ],
+          "drawingSha256": "4b793caf2be2feb79e89f801b923ea92349fb11057932bcd2cfeff38d6af6549"
+        },
+        {
+          "codepoint": 258030,
+          "glyph": "u3EFEE",
+          "metrics": [
+            1024,
+            200
+          ],
+          "bounds": [
+            200,
+            -431,
+            824,
+            430
+          ],
+          "drawingSha256": "dea99c77c953320f01794b27fba0d002b8b5c88f12fb23e99d1b94dffedda5bd"
+        },
+        {
+          "codepoint": 258045,
+          "glyph": "u3EFFD",
+          "metrics": [
+            1024,
+            145
+          ],
+          "bounds": [
+            145,
+            -437,
+            880,
+            437
+          ],
+          "drawingSha256": "3b3dfc662626d368a0471049f042eed340d436418ac630e8939afb6048b51c46"
+        },
+        {
+          "codepoint": 258128,
+          "glyph": "u3F050",
+          "metrics": [
+            1024,
+            181
+          ],
+          "bounds": [
+            181,
+            -433,
+            842,
+            433
+          ],
+          "drawingSha256": "6d9a3397ad2ac59359c33b3ba8736d807c5fa512c1ac19a1174d569d8ffab113"
+        },
+        {
+          "codepoint": 258150,
+          "glyph": "u3F066",
+          "metrics": [
+            1024,
+            165
+          ],
+          "bounds": [
+            165,
+            -411,
+            860,
+            411
+          ],
+          "drawingSha256": "463365892600b76e2656012b6c479ad29361bd481b530354fa98413975a0ac05"
+        },
+        {
+          "codepoint": 258152,
+          "glyph": "u3F068",
+          "metrics": [
+            1024,
+            181
+          ],
+          "bounds": [
+            181,
+            -426,
+            843,
+            425
+          ],
+          "drawingSha256": "3e8a77a9e13a6e48cfc33ab76fe8c40ef12d7e221c60dbb60f7b245627c0c4e0"
+        },
+        {
+          "codepoint": 258175,
+          "glyph": "u3F07F",
+          "metrics": [
+            1024,
+            126
+          ],
+          "bounds": [
+            126,
+            -465,
+            899,
+            464
+          ],
+          "drawingSha256": "aa420172adb69f6cb09f56f346ce05de7efc8d1c691f6171d7986b0b83868acf"
+        },
+        {
+          "codepoint": 258261,
+          "glyph": "u3F0D5",
+          "metrics": [
+            1024,
+            124
+          ],
+          "bounds": [
+            124,
+            -468,
+            900,
+            468
+          ],
+          "drawingSha256": "78f535d7d443d4bef01f8671f74ad6bd90ea7380a83d0a2e7f6b5bb78d1743f7"
+        },
+        {
+          "codepoint": 258317,
+          "glyph": "u3F10D",
+          "metrics": [
+            1024,
+            194
+          ],
+          "bounds": [
+            194,
+            -409,
+            830,
+            410
+          ],
+          "drawingSha256": "b673a4610097cbf565c5b62cc4be3ea7b0fb7760688050339d92c5e861d5b988"
+        },
+        {
+          "codepoint": 258338,
+          "glyph": "u3F122",
+          "metrics": [
+            1024,
+            192
+          ],
+          "bounds": [
+            192,
+            -434,
+            832,
+            434
+          ],
+          "drawingSha256": "5cbd3ff988753baa3ac86b52d6d4fdedd271a76ac22e7ace2833c0e37fc4f6f3"
+        },
+        {
+          "codepoint": 258347,
+          "glyph": "u3F12B",
+          "metrics": [
+            1024,
+            209
+          ],
+          "bounds": [
+            209,
+            -419,
+            815,
+            420
+          ],
+          "drawingSha256": "6f1891f7d6f2ef27c542890858d2da5e79bd4c24e124ab94f5b43224b19a1d64"
+        },
+        {
+          "codepoint": 258478,
+          "glyph": "u3F1AE",
+          "metrics": [
+            1024,
+            186
+          ],
+          "bounds": [
+            186,
+            -422,
+            838,
+            421
+          ],
+          "drawingSha256": "1ffc9ea84903e6339c4887b0114ff313a76276855724b177955bc4f16a31b391"
+        },
+        {
+          "codepoint": 258667,
+          "glyph": "u3F26B",
+          "metrics": [
+            1024,
+            215
+          ],
+          "bounds": [
+            215,
+            -467,
+            808,
+            468
+          ],
+          "drawingSha256": "ddc84761e7f89206fc96c8c109059bf7f6cbba79008b3d3e69014c5f88bddb5f"
+        },
+        {
+          "codepoint": 258750,
+          "glyph": "u3F2BE",
+          "metrics": [
+            1024,
+            210
+          ],
+          "bounds": [
+            210,
+            -410,
+            813,
+            410
+          ],
+          "drawingSha256": "610a2ef8dd1b710ace790427faa930cff38d2e5152ec91642805224a3fa8eb4f"
+        },
+        {
+          "codepoint": 258754,
+          "glyph": "u3F2C2",
+          "metrics": [
+            1024,
+            189
+          ],
+          "bounds": [
+            189,
+            -423,
+            835,
+            424
+          ],
+          "drawingSha256": "b85ea5df1dbc1945879c75989d020673d31cbccc6f49293acc20929e915c4032"
+        },
+        {
+          "codepoint": 258794,
+          "glyph": "u3F2EA",
+          "metrics": [
+            1024,
+            226
+          ],
+          "bounds": [
+            226,
+            -412,
+            798,
+            411
+          ],
+          "drawingSha256": "8e30ceafa14edab32793a5884db42a26be4a2dfd6d5c542ce0131648a407944c"
+        },
+        {
+          "codepoint": 258811,
+          "glyph": "u3F2FB",
+          "metrics": [
+            1024,
+            153
+          ],
+          "bounds": [
+            153,
+            -429,
+            872,
+            429
+          ],
+          "drawingSha256": "69000333974877c3bb4ee23c471d752c88769479e080d9f3fd3d3e384d1b9c74"
+        },
+        {
+          "codepoint": 258846,
+          "glyph": "u3F31E",
+          "metrics": [
+            1024,
+            195
+          ],
+          "bounds": [
+            195,
+            -406,
+            829,
+            406
+          ],
+          "drawingSha256": "ad814f186b7588a2a5615decf8d56bbdb1ed6bead863cd42bba6333e21a66985"
+        },
+        {
+          "codepoint": 258877,
+          "glyph": "u3F33D",
+          "metrics": [
+            1024,
+            189
+          ],
+          "bounds": [
+            189,
+            -447,
+            835,
+            447
+          ],
+          "drawingSha256": "ad7ab11d1d96e03b82420bcbcc31aaa3ee1968ba6e8830e1eb3f93d97d3a7ef9"
+        },
+        {
+          "codepoint": 258918,
+          "glyph": "u3F366",
+          "metrics": [
+            1024,
+            180
+          ],
+          "bounds": [
+            180,
+            -447,
+            844,
+            446
+          ],
+          "drawingSha256": "7e06459fcba81be6816ba9d240a0db088ebdd5e4be37592e26c8c9ced61572d5"
+        },
+        {
+          "codepoint": 258935,
+          "glyph": "u3F377",
+          "metrics": [
+            1024,
+            170
+          ],
+          "bounds": [
+            170,
+            -441,
+            854,
+            441
+          ],
+          "drawingSha256": "9c629b1ca07bb45d39e2927cc2d7ddd73c2954b2311a8bdc0d9357734c6dc705"
+        },
+        {
+          "codepoint": 258957,
+          "glyph": "u3F38D",
+          "metrics": [
+            1024,
+            259
+          ],
+          "bounds": [
+            259,
+            -453,
+            765,
+            454
+          ],
+          "drawingSha256": "c7c614a73c2e52f8ac215619c091529825e4815597529b974f210080919178d6"
+        },
+        {
+          "codepoint": 258958,
+          "glyph": "u3F38E",
+          "metrics": [
+            1024,
+            246
+          ],
+          "bounds": [
+            246,
+            -464,
+            777,
+            465
+          ],
+          "drawingSha256": "181c6c61ad8c078b3c11e5189b1c838a720fc550099a09b03e654b70bb14c80b"
+        },
+        {
+          "codepoint": 258959,
+          "glyph": "u3F38F",
+          "metrics": [
+            1024,
+            249
+          ],
+          "bounds": [
+            249,
+            -473,
+            775,
+            474
+          ],
+          "drawingSha256": "404f1718e26eca271677d38c1d8bbd98723268b2266a9a29e171ecd0a1bcc023"
+        },
+        {
+          "codepoint": 258961,
+          "glyph": "u3F391",
+          "metrics": [
+            1024,
+            240
+          ],
+          "bounds": [
+            240,
+            -465,
+            784,
+            465
+          ],
+          "drawingSha256": "30ecf70e0cb127c22d9d985124e9a4a9a284c11a7aae105b28a500bbd3ee6d25"
+        },
+        {
+          "codepoint": 258971,
+          "glyph": "u3F39B",
+          "metrics": [
+            1024,
+            213
+          ],
+          "bounds": [
+            213,
+            -428,
+            811,
+            429
+          ],
+          "drawingSha256": "3996e06aecd2be0442353359d81676e8748a988b1eebbb8d4f310aa8cf9f319d"
+        },
+        {
+          "codepoint": 258978,
+          "glyph": "u3F3A2",
+          "metrics": [
+            1024,
+            151
+          ],
+          "bounds": [
+            151,
+            -446,
+            873,
+            445
+          ],
+          "drawingSha256": "ea16c7d4eabf3af5ec1847d33b7df3f184c579f2699d8fc40b584a36177e8ac8"
+        },
+        {
+          "codepoint": 258987,
+          "glyph": "u3F3AB",
+          "metrics": [
+            1024,
+            175
+          ],
+          "bounds": [
+            175,
+            -430,
+            849,
+            429
+          ],
+          "drawingSha256": "8bbc1b8ef7d808c9608c523c88b4fccebefaedeb410b6b8ac7484143e67f6ebd"
+        },
+        {
+          "codepoint": 259021,
+          "glyph": "u3F3CD",
+          "metrics": [
+            1024,
+            203
+          ],
+          "bounds": [
+            203,
+            -448,
+            822,
+            447
+          ],
+          "drawingSha256": "49763353ae84da8997b9ec89b18e4f11aaeb6fa272048873736862da2f6cd133"
+        },
+        {
+          "codepoint": 259028,
+          "glyph": "u3F3D4",
+          "metrics": [
+            1024,
+            184
+          ],
+          "bounds": [
+            184,
+            -431,
+            839,
+            430
+          ],
+          "drawingSha256": "8baaa57222509c841ee96c315bd9c31abb9f41dacde8f553c936234839200263"
+        },
+        {
+          "codepoint": 259035,
+          "glyph": "u3F3DB",
+          "metrics": [
+            1024,
+            122
+          ],
+          "bounds": [
+            122,
+            -452,
+            901,
+            452
+          ],
+          "drawingSha256": "2763db86ff95153949d76a3adf44e376fb04de3231be2058ec7250d50be45b52"
+        },
+        {
+          "codepoint": 259122,
+          "glyph": "u3F432",
+          "metrics": [
+            1024,
+            147
+          ],
+          "bounds": [
+            147,
+            -488,
+            876,
+            488
+          ],
+          "drawingSha256": "528db4612ce38fb981fa6e1cbafce40e7503d3a9d032779f81535e33a65653a7"
+        },
+        {
+          "codepoint": 259170,
+          "glyph": "u3F462",
+          "metrics": [
+            1024,
+            151
+          ],
+          "bounds": [
+            151,
+            -460,
+            873,
+            461
+          ],
+          "drawingSha256": "8d1618caef1389d3a881afa4ce974b997bc8d218a9678a355b1be867691f8145"
+        },
+        {
+          "codepoint": 259288,
+          "glyph": "u3F4D8",
+          "metrics": [
+            1024,
+            233
+          ],
+          "bounds": [
+            233,
+            -430,
+            790,
+            430
+          ],
+          "drawingSha256": "54a3f4e283a102d0b14c7730c78696c710d98e8659d5ad3e554083cf5a81d427"
+        },
+        {
+          "codepoint": 259309,
+          "glyph": "u3F4ED",
+          "metrics": [
+            1024,
+            249
+          ],
+          "bounds": [
+            249,
+            -469,
+            775,
+            470
+          ],
+          "drawingSha256": "f1d8fe2bf2a058b2baddce7bd2b8fa8a601abd83e95af5d3014a61a4ae9d2341"
+        },
+        {
+          "codepoint": 259315,
+          "glyph": "u3F4F3",
+          "metrics": [
+            1024,
+            223
+          ],
+          "bounds": [
+            223,
+            -459,
+            800,
+            460
+          ],
+          "drawingSha256": "4f6155b300a61aff437dbce5638178468de918fff96ffdf5d9d3e7135c68f9da"
+        },
+        {
+          "codepoint": 259344,
+          "glyph": "u3F510",
+          "metrics": [
+            1024,
+            232
+          ],
+          "bounds": [
+            232,
+            -476,
+            791,
+            477
+          ],
+          "drawingSha256": "7e8cc896cc0a8ad0701a7d3f44aa67cc15fe636730f7d13d751e67a035227a12"
+        },
+        {
+          "codepoint": 259365,
+          "glyph": "u3F525",
+          "metrics": [
+            1024,
+            245
+          ],
+          "bounds": [
+            245,
+            -474,
+            778,
+            475
+          ],
+          "drawingSha256": "38c6bd50b47b0dc8f751c5d8e6bc50d88c1f78db883ce953a7c05f754cd0a6b5"
+        },
+        {
+          "codepoint": 259369,
+          "glyph": "u3F529",
+          "metrics": [
+            1024,
+            184
+          ],
+          "bounds": [
+            184,
+            -427,
+            839,
+            427
+          ],
+          "drawingSha256": "e419031fe7d4b26617efa73aa6e13bbff3d776a452ba4da5ffe9b16d46fb6896"
+        },
+        {
+          "codepoint": 259395,
+          "glyph": "u3F543",
+          "metrics": [
+            1024,
+            259
+          ],
+          "bounds": [
+            259,
+            -449,
+            765,
+            449
+          ],
+          "drawingSha256": "527f7b4470e183ed1fda205c42d6e40aa6963e966ce1236727edb237a58ae93c"
+        },
+        {
+          "codepoint": 259407,
+          "glyph": "u3F54F",
+          "metrics": [
+            1024,
+            218
+          ],
+          "bounds": [
+            218,
+            -427,
+            805,
+            427
+          ],
+          "drawingSha256": "4a0b019d0265026104a026082fcab3957e1071ebced383a65b4977b96a0dbe21"
+        },
+        {
+          "codepoint": 259503,
+          "glyph": "u3F5AF",
+          "metrics": [
+            1024,
+            177
+          ],
+          "bounds": [
+            177,
+            -417,
+            847,
+            417
+          ],
+          "drawingSha256": "b5f2adc8ce8e5f014c28e192c6469979a2c6f8d29a62f778ae284997f8018250"
+        },
+        {
+          "codepoint": 259511,
+          "glyph": "u3F5B7",
+          "metrics": [
+            1024,
+            190
+          ],
+          "bounds": [
+            190,
+            -399,
+            834,
+            399
+          ],
+          "drawingSha256": "cea0b89ca207eef011da0fcb341817cc7b390c83e3175a9f5feca932cfd2a58d"
+        },
+        {
+          "codepoint": 259577,
+          "glyph": "u3F5F9",
+          "metrics": [
+            1024,
+            318
+          ],
+          "bounds": [
+            318,
+            -431,
+            706,
+            432
+          ],
+          "drawingSha256": "6f81ca9061439430613fa8ef7fb6d80700943e6c22836ff3050985677f351c95"
+        },
+        {
+          "codepoint": 259580,
+          "glyph": "u3F5FC",
+          "metrics": [
+            1024,
+            217
+          ],
+          "bounds": [
+            217,
+            -466,
+            807,
+            467
+          ],
+          "drawingSha256": "06140c7f5466cd252b85fe88e3cbcf3f31c93c06ec6422f343553da165c3a774"
+        },
+        {
+          "codepoint": 259596,
+          "glyph": "u3F60C",
+          "metrics": [
+            1024,
+            199
+          ],
+          "bounds": [
+            199,
+            -414,
+            826,
+            414
+          ],
+          "drawingSha256": "7c6d538acb7d526a9fe8ebe88ae5b8ab7827a26e3d9354d7b86dbfcd2252327d"
+        },
+        {
+          "codepoint": 259634,
+          "glyph": "u3F632",
+          "metrics": [
+            1024,
+            255
+          ],
+          "bounds": [
+            255,
+            -467,
+            769,
+            466
+          ],
+          "drawingSha256": "e94caa55afdc97f965bc30a1c6ecce681e890ff5f61e69fc7ad90025c75802eb"
+        },
+        {
+          "codepoint": 259640,
+          "glyph": "u3F638",
+          "metrics": [
+            1024,
+            222
+          ],
+          "bounds": [
+            222,
+            -431,
+            802,
+            430
+          ],
+          "drawingSha256": "f19fc50c6290b45f4581f5c3bf12ce5fedfcdcab982c5b9d9bdba55a04124d75"
+        },
+        {
+          "codepoint": 259722,
+          "glyph": "u3F68A",
+          "metrics": [
+            1024,
+            222
+          ],
+          "bounds": [
+            222,
+            -431,
+            801,
+            431
+          ],
+          "drawingSha256": "b97c065a7b2107fdc2abe3e3c8daacc83aca4f42f38ca2b754eda696e009790d"
+        },
+        {
+          "codepoint": 259771,
+          "glyph": "u3F6BB",
+          "metrics": [
+            1024,
+            228
+          ],
+          "bounds": [
+            228,
+            -461,
+            795,
+            461
+          ],
+          "drawingSha256": "cf4a424204a9870ca93d96ed4ae2d59e3e38b601e7c006159c1cba70ac91e382"
+        },
+        {
+          "codepoint": 259899,
+          "glyph": "u3F73B",
+          "metrics": [
+            1024,
+            185
+          ],
+          "bounds": [
+            185,
+            -450,
+            839,
+            450
+          ],
+          "drawingSha256": "3f62c6cb309c1dd1e699d18c65e8b4116c365c1ff1dfc0ca70ce6b59b24b2651"
+        },
+        {
+          "codepoint": 259929,
+          "glyph": "u3F759",
+          "metrics": [
+            1024,
+            234
+          ],
+          "bounds": [
+            234,
+            -411,
+            790,
+            411
+          ],
+          "drawingSha256": "abfbf50f32715202fbcc37da8eefa64300b3b6c3173ea452823fb4a7820ede55"
+        },
+        {
+          "codepoint": 260068,
+          "glyph": "u3F7E4",
+          "metrics": [
+            1024,
+            230
+          ],
+          "bounds": [
+            230,
+            -413,
+            794,
+            413
+          ],
+          "drawingSha256": "f24eb5352b32a37bd287aa740671df2b1df9f02c12af2a158a2205807e9fce96"
+        },
+        {
+          "codepoint": 260103,
+          "glyph": "u3F807",
+          "metrics": [
+            1024,
+            220
+          ],
+          "bounds": [
+            220,
+            -469,
+            804,
+            470
+          ],
+          "drawingSha256": "2eea31c9286873980aa4a2da29c3187d4837928596d7e870f53cb700798d5617"
+        },
+        {
+          "codepoint": 260110,
+          "glyph": "u3F80E",
+          "metrics": [
+            1024,
+            195
+          ],
+          "bounds": [
+            195,
+            -439,
+            829,
+            440
+          ],
+          "drawingSha256": "7d12ece7b0dd2f07d3dedf9ac37416bf624b8adab1e4556a94dcd15a8bda263d"
+        },
+        {
+          "codepoint": 260119,
+          "glyph": "u3F817",
+          "metrics": [
+            1024,
+            196
+          ],
+          "bounds": [
+            196,
+            -461,
+            828,
+            461
+          ],
+          "drawingSha256": "2b5412c74d654aa9c9a21eb84bdc685ca03d12e374177fc09cd37127755149e3"
+        },
+        {
+          "codepoint": 260141,
+          "glyph": "u3F82D",
+          "metrics": [
+            1024,
+            206
+          ],
+          "bounds": [
+            206,
+            -411,
+            819,
+            411
+          ],
+          "drawingSha256": "7242b7ad1c3d5c993fa043cb39cdc05368355904444b977c694ca0770bb17ffe"
+        },
+        {
+          "codepoint": 260172,
+          "glyph": "u3F84C",
+          "metrics": [
+            1024,
+            270
+          ],
+          "bounds": [
+            270,
+            -439,
+            755,
+            438
+          ],
+          "drawingSha256": "f8b9ffb0f3459cbe43d82502f2a07088175e76d88b7e9ecd8563800c5a2507d3"
+        },
+        {
+          "codepoint": 260181,
+          "glyph": "u3F855",
+          "metrics": [
+            1024,
+            156
+          ],
+          "bounds": [
+            156,
+            -349,
+            869,
+            348
+          ],
+          "drawingSha256": "41ffd625df146d81841f1614235f927719e5c2388b95e32af6124677db1856c4"
+        },
+        {
+          "codepoint": 260298,
+          "glyph": "u3F8CA",
+          "metrics": [
+            1024,
+            212
+          ],
+          "bounds": [
+            212,
+            -425,
+            811,
+            426
+          ],
+          "drawingSha256": "cef7400dbebbac63ed3dd4bf8d3c2f5818a789bbf4251907c29dc08f4249a69c"
+        },
+        {
+          "codepoint": 260299,
+          "glyph": "u3F8CB",
+          "metrics": [
+            1024,
+            165
+          ],
+          "bounds": [
+            165,
+            -487,
+            859,
+            486
+          ],
+          "drawingSha256": "5a7ae09d97e1da9596c241eb2a2cd819f38312f3df2fb60203e46684d09f684f"
+        },
+        {
+          "codepoint": 260363,
+          "glyph": "u3F90B",
+          "metrics": [
+            1024,
+            174
+          ],
+          "bounds": [
+            174,
+            -415,
+            851,
+            415
+          ],
+          "drawingSha256": "920a9bfb24040062b52fe1eb32a756509f5e7206f2e5816f2eed0d4c2f2d70fe"
+        },
+        {
+          "codepoint": 260400,
+          "glyph": "u3F930",
+          "metrics": [
+            1024,
+            271
+          ],
+          "bounds": [
+            271,
+            -408,
+            754,
+            408
+          ],
+          "drawingSha256": "133a530b38381eff166a78175e0f32be8ad809630c9ca21e6a1d2798db678822"
+        },
+        {
+          "codepoint": 260445,
+          "glyph": "u3F95D",
+          "metrics": [
+            1024,
+            227
+          ],
+          "bounds": [
+            227,
+            -425,
+            798,
+            425
+          ],
+          "drawingSha256": "1badc256502ca87f1e1c26007dbbe9a2ae0caab8abbefa0e3a64b29498ec59df"
+        },
+        {
+          "codepoint": 260633,
+          "glyph": "u3FA19",
+          "metrics": [
+            1024,
+            145
+          ],
+          "bounds": [
+            145,
+            -445,
+            880,
+            445
+          ],
+          "drawingSha256": "7cc501e2cf5a93a05ead2fdf3bcf65913d284e31a983978d6912e5e5feb4518a"
+        },
+        {
+          "codepoint": 260656,
+          "glyph": "u3FA30",
+          "metrics": [
+            1024,
+            209
+          ],
+          "bounds": [
+            209,
+            -434,
+            815,
+            434
+          ],
+          "drawingSha256": "a78176d48f7fc68a9a7d7c0ca7fb8996c96b61b70ec807206103674a2f828d7c"
+        },
+        {
+          "codepoint": 260674,
+          "glyph": "u3FA42",
+          "metrics": [
+            1024,
+            223
+          ],
+          "bounds": [
+            223,
+            -401,
+            802,
+            402
+          ],
+          "drawingSha256": "d74f8feb69ff460757c95e75760d7a706fa6322db0cdc5caba75a3ff87dfc652"
+        },
+        {
+          "codepoint": 260702,
+          "glyph": "u3FA5E",
+          "metrics": [
+            1024,
+            88
+          ],
+          "bounds": [
+            88,
+            -390,
+            936,
+            390
+          ],
+          "drawingSha256": "e79e3c73340ed5dff634bdf8ce43f840f87479e1d151796a0fdde12eeeae5a3a"
+        },
+        {
+          "codepoint": 260746,
+          "glyph": "u3FA8A",
+          "metrics": [
+            1024,
+            219
+          ],
+          "bounds": [
+            219,
+            -445,
+            806,
+            445
+          ],
+          "drawingSha256": "0a88e1860f1b90695144e8398d7dd604ab5dd768e1e30538728ee4442becb5c9"
+        },
+        {
+          "codepoint": 260771,
+          "glyph": "u3FAA3",
+          "metrics": [
+            1024,
+            194
+          ],
+          "bounds": [
+            194,
+            -436,
+            830,
+            436
+          ],
+          "drawingSha256": "628e70688635b181e0df9400efd82d84851256247efa6513b2bb653c4651292a"
+        },
+        {
+          "codepoint": 260829,
+          "glyph": "u3FADD",
+          "metrics": [
+            1024,
+            216
+          ],
+          "bounds": [
+            216,
+            -467,
+            808,
+            468
+          ],
+          "drawingSha256": "b035b9f65745669c459656ee72114b6732c5b1a7337d27ee502c23f5007d74e2"
+        },
+        {
+          "codepoint": 260855,
+          "glyph": "u3FAF7",
+          "metrics": [
+            1024,
+            194
+          ],
+          "bounds": [
+            194,
+            -414,
+            831,
+            413
+          ],
+          "drawingSha256": "873645eac8c6d4b5d7bbaef515c8646d1ac2bf0ee19ec4c587b00c708df92bc0"
+        },
+        {
+          "codepoint": 261000,
+          "glyph": "u3FB88",
+          "metrics": [
+            1024,
+            221
+          ],
+          "bounds": [
+            221,
+            -448,
+            804,
+            448
+          ],
+          "drawingSha256": "6f7e0ae1f1f83d4f2e1506f27b9e187763180e9122c2518ba58b0c26154e8133"
+        },
+        {
+          "codepoint": 261006,
+          "glyph": "u3FB8E",
+          "metrics": [
+            1024,
+            209
+          ],
+          "bounds": [
+            209,
+            -399,
+            815,
+            398
+          ],
+          "drawingSha256": "b972f1b8283b69d2695520ff613c83342acf5c6893e2a3c727cd429cb83ed45a"
+        },
+        {
+          "codepoint": 261011,
+          "glyph": "u3FB93",
+          "metrics": [
+            1024,
+            138
+          ],
+          "bounds": [
+            138,
+            -448,
+            886,
+            448
+          ],
+          "drawingSha256": "0ae023f7c0f93d1cc1b69287df02b1a6fe3f3e72ab82dc75875f4c6e8b0297ad"
+        },
+        {
+          "codepoint": 261054,
+          "glyph": "u3FBBE",
+          "metrics": [
+            1024,
+            268
+          ],
+          "bounds": [
+            268,
+            -422,
+            756,
+            423
+          ],
+          "drawingSha256": "c98e753fdcf73ff5f4044dfe259ad16214a6d981c640205fd24ead96e43f7d79"
+        },
+        {
+          "codepoint": 261089,
+          "glyph": "u3FBE1",
+          "metrics": [
+            1024,
+            259
+          ],
+          "bounds": [
+            259,
+            -444,
+            765,
+            444
+          ],
+          "drawingSha256": "54288f1a7e17017aefb5b0008f5b97dd02791393323da55d245a90c338ad7511"
+        },
+        {
+          "codepoint": 261114,
+          "glyph": "u3FBFA",
+          "metrics": [
+            1024,
+            224
+          ],
+          "bounds": [
+            224,
+            -427,
+            801,
+            427
+          ],
+          "drawingSha256": "4cddf0b3b30bd65ac9ae5ea4139a08f9cb74a1cfa8f762d9fee52255ca4e0411"
+        },
+        {
+          "codepoint": 261119,
+          "glyph": "u3FBFF",
+          "metrics": [
+            1024,
+            158
+          ],
+          "bounds": [
+            158,
+            -439,
+            866,
+            439
+          ],
+          "drawingSha256": "62bf7d710d2eddb7ee813a93f3820c2d095cc3e2aac91dfd8c1efdf1812071ff"
+        },
+        {
+          "codepoint": 261170,
+          "glyph": "u3FC32",
+          "metrics": [
+            1024,
+            156
+          ],
+          "bounds": [
+            156,
+            -415,
+            869,
+            414
+          ],
+          "drawingSha256": "676a1dd757e2a61d03a015eaa783b0b037318cd6bccf09ce423d9612ff5f31bf"
+        }
+      ]
+    }
+  ],
+  "sealSansSourceNotes": {
+    "path": "build/unicode-sources/seal-font-probes/SealSans-Uniseal.txt",
+    "sha256": "c1afde4e94fc3bef79a55e682daac6e66c9670fafedd8b1e920473ef7370e8c1",
+    "changesFromCurrentUnicode": [
+      {
+        "codepoint": 250058,
+        "property": "kSEAL_MCJK",
+        "old": "24A15",
+        "current": "24A19"
+      },
+      {
+        "codepoint": 250667,
+        "property": "kSEAL_MCJK",
+        "old": "5146",
+        "current": "20501"
+      },
+      {
+        "codepoint": 251070,
+        "property": "kSEAL_MCJK",
+        "old": "23957",
+        "current": "6B65"
+      },
+      {
+        "codepoint": 252622,
+        "property": "kSEAL_MCJK",
+        "old": "9D03",
+        "current": "9D02"
+      },
+      {
+        "codepoint": 252638,
+        "property": "kSEAL_MCJK",
+        "old": "2A140",
+        "current": "2A1E0"
+      },
+      {
+        "codepoint": 253431,
+        "property": "kSEAL_Rad",
+        "old": "157.3DDF1",
+        "current": "158.3DDF7"
+      },
+      {
+        "codepoint": 253432,
+        "property": "kSEAL_Rad",
+        "old": "158.3DDF8",
+        "current": "158.3DDF7"
+      },
+      {
+        "codepoint": 253433,
+        "property": "kSEAL_Rad",
+        "old": "158.3DDF8",
+        "current": "158.3DDF7"
+      },
+      {
+        "codepoint": 253508,
+        "property": "kSEAL_Rad",
+        "old": "168.3DE31",
+        "current": "169.3DE44"
+      },
+      {
+        "codepoint": 253509,
+        "property": "kSEAL_Rad",
+        "old": "169.3DE45",
+        "current": "169.3DE44"
+      },
+      {
+        "codepoint": 253510,
+        "property": "kSEAL_Rad",
+        "old": "169.3DE45",
+        "current": "169.3DE44"
+      },
+      {
+        "codepoint": 253779,
+        "property": "kSEAL_Rad",
+        "old": "194.3DF4D",
+        "current": "195.3DF53"
+      },
+      {
+        "codepoint": 253780,
+        "property": "kSEAL_Rad",
+        "old": "195.3DF54",
+        "current": "195.3DF53"
+      },
+      {
+        "codepoint": 253781,
+        "property": "kSEAL_Rad",
+        "old": "195.3DF54",
+        "current": "195.3DF53"
+      },
+      {
+        "codepoint": 253782,
+        "property": "kSEAL_Rad",
+        "old": "195.3DF54",
+        "current": "195.3DF53"
+      },
+      {
+        "codepoint": 253783,
+        "property": "kSEAL_Rad",
+        "old": "195.3DF54",
+        "current": "195.3DF53"
+      },
+      {
+        "codepoint": 255135,
+        "property": "kSEAL_Rad",
+        "old": "264.3E492",
+        "current": "267.3E49D"
+      },
+      {
+        "codepoint": 255136,
+        "property": "kSEAL_Rad",
+        "old": "264.3E492",
+        "current": "267.3E49D"
+      },
+      {
+        "codepoint": 255856,
+        "property": "kSEAL_MCJK",
+        "old": "4F34",
+        "current": "4EF6"
+      },
+      {
+        "codepoint": 255912,
+        "property": "kSEAL_Rad",
+        "old": "523.3FBAD",
+        "current": "295.3E7A3"
+      },
+      {
+        "codepoint": 256148,
+        "property": "kSEAL_MCJK",
+        "old": "824E",
+        "current": "26A84"
+      },
+      {
+        "codepoint": 256306,
+        "property": "kSEAL_Rad",
+        "old": "321.3E92C",
+        "current": "322.3E931"
+      },
+      {
+        "codepoint": 256307,
+        "property": "kSEAL_Rad",
+        "old": "321.3E92C",
+        "current": "322.3E931"
+      },
+      {
+        "codepoint": 256507,
+        "property": "kSEAL_MCJK",
+        "old": "9B1F",
+        "current": "29BF4"
+      },
+      {
+        "codepoint": 256508,
+        "property": "kSEAL_MCJK",
+        "old": "25416",
+        "current": "540E"
+      },
+      {
+        "codepoint": 256661,
+        "property": "kSEAL_MCJK",
+        "old": "5D99",
+        "current": "21F64"
+      },
+      {
+        "codepoint": 256845,
+        "property": "kSEAL_MCJK",
+        "old": "787E",
+        "current": "2558C"
+      },
+      {
+        "codepoint": 257060,
+        "property": "kSEAL_MCJK",
+        "old": "298B2",
+        "current": "298EC"
+      },
+      {
+        "codepoint": 257061,
+        "property": "kSEAL_MCJK",
+        "old": "298CA",
+        "current": "2992D"
+      },
+      {
+        "codepoint": 257064,
+        "property": "kSEAL_MCJK",
+        "old": "9A02",
+        "current": "2994D"
+      },
+      {
+        "codepoint": 257256,
+        "property": "kSEAL_MCJK",
+        "old": "70C8",
+        "current": "31ADD"
+      },
+      {
+        "codepoint": 257605,
+        "property": "kSEAL_MCJK",
+        "old": "FA3E",
+        "current": "6168"
+      },
+      {
+        "codepoint": 257876,
+        "property": "kSEAL_MCJK",
+        "old": "61C7",
+        "current": "22846"
+      },
+      {
+        "codepoint": 258387,
+        "property": "kSEAL_MCJK",
+        "old": "703C",
+        "current": "2416D"
+      },
+      {
+        "codepoint": 258400,
+        "property": "kSEAL_MCJK",
+        "old": "6F35",
+        "current": "6F4A"
+      },
+      {
+        "codepoint": 258401,
+        "property": "kSEAL_MCJK",
+        "old": "6E2F",
+        "current": "23FD1"
+      },
+      {
+        "codepoint": 258403,
+        "property": "kSEAL_MCJK",
+        "old": "6FD4",
+        "current": "24164"
+      },
+      {
+        "codepoint": 258407,
+        "property": "kSEAL_MCJK",
+        "old": "6E98",
+        "current": "23E46"
+      },
+      {
+        "codepoint": 258779,
+        "property": "kSEAL_MCJK",
+        "old": "95E4",
+        "current": "28DE4"
+      },
+      {
+        "codepoint": 259772,
+        "property": "kSEAL_MCJK",
+        "old": "3B43",
+        "current": "2DA61"
+      },
+      {
+        "codepoint": 260106,
+        "property": "kSEAL_MCJK",
+        "old": "867B",
+        "current": "8771"
+      },
+      {
+        "codepoint": 260349,
+        "property": "kSEAL_MCJK",
+        "old": "587E",
+        "current": "2150A"
+      },
+      {
+        "codepoint": 260686,
+        "property": "kSEAL_MCJK",
+        "old": "6235",
+        "current": "947A"
+      },
+      {
+        "codepoint": 260859,
+        "property": "kSEAL_MCJK",
+        "old": "8F54",
+        "current": "283CF"
+      },
+      {
+        "codepoint": 260996,
+        "property": "kSEAL_MCJK",
+        "old": "25747",
+        "current": "25745"
+      },
+      {
+        "codepoint": 261015,
+        "property": "kSEAL_MCJK",
+        "old": "4E2A",
+        "current": "4E01"
+      }
+    ],
+    "changedProperties": {
+      "kSEAL_MCJK": 30,
+      "kSEAL_Rad": 16
+    }
+  },
+  "limitations": [
+    "Nonempty unique outlines are not evidence of correct source identities.",
+    "Compare candidates with normative edition references and existing accepted glyphs before crediting coverage.",
+    "Review Seal Sans AGPL/source and export/redistribution requirements before shipping.",
+    "Seal Sans contains nonstandard tone variation semantics; do not import unrelated mappings.",
+    "LXGW font names are reserved; rename any derivative and retain notices."
+  ]
+}

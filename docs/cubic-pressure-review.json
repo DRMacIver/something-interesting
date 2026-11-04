@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-03",
+  "status": "Historical isolated math/Seal CFF pressure experiments; both retain their native production drawings. Separate source192 UFS CFF production treatment is now integrated and verified.",
+  "tool": "tools/font/supplemental_cubic.py",
+  "comparison": "output/font-review/cubic-pressure/comparison.png",
+  "sources": [
+    {
+      "name": "math",
+      "evidence": "output/font-review/cubic-pressure/math.json",
+      "sha256": "a9977c9c886c896ee4526b0bef989190d3bbd858a06160bd7da7bee8902e6c12",
+      "adapted": 7,
+      "retained": 1,
+      "decision": "Retain native after complete37pair review; docs/math-variant-style-review.json. Experimental pressure adds little demonstrated value."
+    },
+    {
+      "name": "seal",
+      "evidence": "output/font-review/cubic-pressure/seal.json",
+      "sha256": "d326f8c8fcddf55b2cdc246b56f98837996237521a09b233409af5ecc690c213",
+      "adapted": 8,
+      "retained": 0,
+      "decision": "Provisional retain-native: source already has tapered entries and varied calligraphic curves; pressure sample nearly invisible, so alteration adds no demonstrated benefit."
+    }
+  ],
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_supplemental_cubic.py",
+    "passed": 2,
+    "seconds": 4.5
+  },
+  "limitations": [
+    "Math/Seal experiments use native sample shaping and local outlines only; no application routing/layout proof.",
+    "The sampled experimental math/Seal pressure candidates were not adopted. Their production native forms remain the accepted decisions.",
+    "Seal production source offer remains exact; no corresponding-source package was changed by these experiments.",
+    "Later UFS CFF integration and semantic-width correction are recorded separately; final full current suite remains pending."
+  ],
+  "experimentScope": "The math and Seal records below describe the original isolated experiment only; they do not describe the later UFS source192 production adapter.",
+  "laterUfsProduction": {
+    "sourceNumber": 192,
+    "review": "docs/cubic-width-production-review.json",
+    "preservationReview": "docs/cubic-source-preservation-review.json",
+    "public": {
+      "file": "assets/fonts/scripts/1a10ab6b39c1.woff2",
+      "sha256": "a18a8966ff55e18e548f0319ad6f5646ff498afc47f4ebbe9ff054ba32fa17cd",
+      "bytes": 2175880,
+      "manifest": "js/font-manifest.js",
+      "manifestSha256": "6847bb807966fbeaa32a5b3130d5cd8d91ee4739095936e25daf3746b29d6147",
+      "recipeSha256": "596425edf7ff6ee352cf574fb2c872f1ff4e0a54fe7090578846d5ef5dce422a",
+      "nativeInputSha256": "57506979a184c69119b61f1c42c22f48acbd221ef535bbbf0cdef673821cd9d3",
+      "counts": {
+        "native-blank": 1,
+        "adapted": 1263,
+        "native-retained-guard": 37
+      },
+      "glyphs": 1301,
+      "report": "output/font-review/supplemental-cubic-production/57506979a184c69119b61f1c42c22f48acbd221ef535bbbf0cdef673821cd9d3-596425edf7ff6ee352cf574fb2c872f1ff4e0a54fe7090578846d5ef5dce422a-cubic-preserve-ae6c68e6e6a2b187afa77c3b99d99f0e37bc25cc124eeec2b029f2548a677d1f.json",
+      "charstringAdvancesMatchHmtx": true,
+      "widthOnlyRepairGids": [
+        1210,
+        1211,
+        1212,
+        1245,
+        1248
+      ],
+      "matchesAcceptedCandidateBytesAndMetadata": true,
+      "otherFontShasUnchanged": 380
+    },
+    "nativeRetainedMeaning": "Exact rejected native drawings, with only five explicitly audited width operand normalizations; protected U+18F6C charstring byte-exact.",
+    "validation": {
+      "strict1301": {
+        "log": "/tmp/unicode-cubic-width-candidate-strict-proof.log",
+        "status": "terminal0",
+        "scope": "Every final Type2 advance equals native hmtx; exact source/native SFNT, cmap/layout/em/frame/cache program and native preservation policy; five permitted width operand repairs authenticated against original guard cache records."
+      },
+      "all1301DrawableEquality": {
+        "log": "/tmp/unicode-cubic-width-candidate-semantic-proof.log",
+        "status": "terminal0",
+        "detail": "output/font-review/cubic-width-diagnosis/candidate-semantic-width-proof.json",
+        "scope": "All 1301 previously accepted and corrected candidate drawable command streams are exactly equal; cmap/layout/metrics unchanged."
+      },
+      "focusedFixtures": {
+        "passed": 43,
+        "seconds": 11.92,
+        "log": "/tmp/unicode-cubic-width-strict-fixtures.log",
+        "files": [
+          "tests/test_cubic_charstring_widths.py",
+          "tests/test_font_baseline_checks.py",
+          "tests/test_dense_baseline_checks.py",
+          "tests/test_duployan_source_preservation.py",
+          "tests/test_cuneiform_source_preservation.py",
+          "tests/test_archaic_native_flattening.py"
+        ],
+        "coverage": "Nominal/default widths; zero advances; same-geometry absolute-width defect rejected; native width operand metadata, curve, source scope and protected-policy mutations rejected. Standalone test_supplemental_cubic_adapter.py is not part of this 43-test command."
+      },
+      "publicDomainRegression": {
+        "passed": 2,
+        "seconds": 13.08,
+        "log": "/tmp/unicode-cubic-width-public-domain-tests.log",
+        "scope": "Original Jurchen/Tangut width assertions pass without weakening tests."
+      },
+      "publicNativeInvariants": "output/font-review/cubic-width-diagnosis/public-native-invariants.json",
+      "cacheMigration": "output/font-review/cubic-width-diagnosis/cache-migration.json",
+      "correctiveBuild": {
+        "session": 95666,
+        "status": "terminal0",
+        "log": "/tmp/unicode-cubic-width-corrective-build.log",
+        "evidence": "output/font-review/cubic-width-diagnosis/corrective-execution.json"
+      }
+    }
+  },
+  "reconciledAgainstPublicBuildSession": 95666,
+  "finalFullSuiteStatus": "pending; parent owns final current full-suite outcome"
+}

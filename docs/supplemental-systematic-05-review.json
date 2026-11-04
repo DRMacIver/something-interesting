@@ -1,0 +1,6876 @@
+{
+  "date": "2026-11-03",
+  "status": "All bounded source/candidate samples dispositioned; production integration pending.",
+  "localOnly": true,
+  "browserActions": 0,
+  "method": "Native-bbox-normalized smooth pressure; unchanged native shaped identities/positions and layout tables;1024/384 per-glyph vector guards. Whole-field raw topology guards or explicit sub4px-white-pore filtering at384, area-scaled at1024. Robust retries also pass independent native shaped-field renderer at384. Ink components and larger counters never filtered.",
+  "visualInspection": {
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "sizes": [
+      22,
+      44
+    ],
+    "reference": "Original Dad lettering beside each source/candidate row.",
+    "acceptedSourceCount": 16,
+    "unresolvedSourceCount": 0
+  },
+  "sources": [
+    {
+      "number": 164,
+      "source": "build/unicode-sources/noto/NotoSansTifinagh-Regular.ttf",
+      "sourceSha256": "bfc82bcdf511b49a1579023610a7aeb98256b7d8dab5cb0c75d7a09eac2d5431",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "ⴰⴸⵀⵈⵑⵙⵡ⵰",
+      "nativeField": "ⴰⴸⵀⵈⵑⵙⵡ⵰",
+      "output": "output/font-review/supplemental-systematic-05/164.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "uni2D48",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 3712,
+            "componentAreaRatios": [
+              0.9824657534246576,
+              0.9860509141633039,
+              0.9871481942714819
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.963785803237858,
+              0.9589996512728541,
+              0.9663760896637609
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9638938053097346,
+              0.9590395480225988,
+              0.9673643135863782
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uni2D59",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 16750,
+            "componentAreaRatios": [
+              0.9635792987573265,
+              0.9868883165535004
+            ],
+            "counterOverlap": [
+              0.9886872551959146
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9714645358412306,
+              0.987497073284945
+            ],
+            "counterOverlap": [
+              0.9910668817849103
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9705105460279914,
+              0.9919893190921228
+            ],
+            "counterOverlap": [
+              0.9914697718502471
+            ]
+          }
+        },
+        {
+          "glyph": "uni2D70",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 9959,
+            "componentAreaRatios": [
+              0.9649928180441787
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9519488334174463
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9525519718212584
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uni2D40",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19798,
+            "componentAreaRatios": [
+              0.9614145706257282
+            ],
+            "counterOverlap": [
+              0.9770935794650677,
+              0.9901226272467664
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.955344904393119
+            ],
+            "counterOverlap": [
+              0.9734667295470367,
+              0.9922616047931015
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.950658791458428
+            ],
+            "counterOverlap": [
+              0.9782940750864217,
+              0.9920475540204032
+            ]
+          }
+        },
+        {
+          "glyph": "uni2D30",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 7951,
+            "componentAreaRatios": [
+              0.9599066885021855
+            ],
+            "counterOverlap": [
+              0.974619920873871
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9646429539215571
+            ],
+            "counterOverlap": [
+              0.9710617333101097
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9651416122004357
+            ],
+            "counterOverlap": [
+              0.9709631728045326
+            ]
+          }
+        },
+        {
+          "glyph": "uni2D51",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 3896,
+            "componentAreaRatios": [
+              0.9823535687613357,
+              0.97960024726973
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              1.0048010242185,
+              0.9956727797238821
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              1.0079244132886316,
+              0.9995100440960314
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uni2D38",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 12033,
+            "componentAreaRatios": [
+              0.9621658221877329
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.958194488823968
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9578531623654168
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uni2D61",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 14169,
+            "componentAreaRatios": [
+              0.9551470314881594
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9459087698427451
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9528767854759044
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.9573981458892413,
+            0.9714094171464627,
+            0.956532341644821,
+            0.970773842391733,
+            0.9577944916400628,
+            1.0128009753124048,
+            0.952563189747241,
+            0.9512110965426817,
+            0.9574882362485803,
+            1.0123437976226761,
+            0.9524318070573577,
+            0.9513323208615214,
+            0.9589961117002475,
+            0.9631205673758865,
+            0.9646142958244869,
+            0.9860372340425532,
+            0.9631467044649185,
+            0.96,
+            0.9636299435028248,
+            0.9880239520958084,
+            0.9651416122004357,
+            0.9639715123586091,
+            0.991236611489776,
+            0.99317738791423
+          ],
+          "counterOverlap": [
+            0.9913002268034258,
+            0.9911321712641733,
+            0.9709269997616967,
+            0.9924962081903089,
+            0.9711431742508324,
+            0.9926364655034416,
+            0.9709631728045326,
+            0.9709837225760792
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9560209379229991,
+            0.9711367870132174,
+            0.9558283680226856,
+            0.9708410510087511,
+            0.9583266756450349,
+            1.0048010242185,
+            0.9451522752593939,
+            0.9521355076684139,
+            0.9577119913614138,
+            1.0046516590205912,
+            0.9470257619987178,
+            0.9517998602050326,
+            0.9881978269014612,
+            0.9855663339425466,
+            0.9634371108343711,
+            0.9588583951785625,
+            0.9669240348692404,
+            0.9606934688387386,
+            0.9606730386300278,
+            0.9638320131519952,
+            0.9646429539215571,
+            0.9650333997007575,
+            0.9956715905187221,
+            0.9970428443710887
+          ],
+          "counterOverlap": [
+            0.9912233523557493,
+            0.9913101413410745,
+            0.9707762455018887,
+            0.9924938949595435,
+            0.9731485637342908,
+            0.9922230439947107,
+            0.9710617333101097,
+            0.9709849201214353
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "9d9cf57ca1efeace9eb3002492a3accf0aaf4926a0e3a21bded06ddfe5fd7f63",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native angular strokes, corners, bars and counter openings keep their identities; smooth pressure gives visible pen character.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 165,
+      "source": "build/unicode-sources/noto/NotoSansTirhuta-Regular.ttf",
+      "sourceSha256": "3e3afdd9e75a3170565686f97d9b2024b77ef471000527275949a051c124011b",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𑒀𑒉𑒑𑒚𑒣𑒬𑓐𑓙",
+      "nativeField": "𑒀𑒉𑒑𑒚𑒣𑒬𑓐𑓙",
+      "output": "output/font-review/supplemental-systematic-05/165-robust.ttf",
+      "attemptErrors": [
+        "Reconstruction changed topology",
+        "Reconstruction changed topology",
+        "Reconstruction changed topology"
+      ],
+      "status": "retained-native-field-guard",
+      "robustRetry": {
+        "number": 165,
+        "nativeInput": "build/unicode-sources/noto/NotoSansTirhuta-Regular.ttf",
+        "nativeInputSha256": "3e3afdd9e75a3170565686f97d9b2024b77ef471000527275949a051c124011b",
+        "sample": "𑒀𑒉𑒑𑒚𑒣𑒬𑓐𑓙",
+        "nativeFieldText": "𑒀𑒉𑒑𑒚𑒣𑒬𑓐𑓙 𑒀𑒉𑒑𑒚𑒣𑒬𑓐𑓙",
+        "separator": " ",
+        "output": "output/font-review/supplemental-systematic-05/165-robust.ttf",
+        "attemptErrors": [],
+        "amount": 0.7,
+        "glyphs": [
+          {
+            "glyph": "ttha_tirh",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.5249999999999999,
+              "bend": 0.0,
+              "changedPixels": 14816,
+              "componentAreaRatios": [
+                0.9708398879637801
+              ],
+              "counterOverlap": [
+                0.9718207985829213
+              ]
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9796701399356504
+              ],
+              "counterOverlap": [
+                0.9666543656358403
+              ]
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9817087469709997
+              ],
+              "counterOverlap": [
+                0.9671218487394958
+              ]
+            }
+          },
+          {
+            "glyph": "anji_tirh",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 18101,
+              "componentAreaRatios": [
+                0.9389846801654516
+              ],
+              "counterOverlap": []
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9419498094329021
+              ],
+              "counterOverlap": []
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9423215920589795
+              ],
+              "counterOverlap": []
+            }
+          },
+          {
+            "glyph": "pa_tirh",
+            "status": "native-retained-guard",
+            "reason": "Reconstruction reduced a counter too far"
+          },
+          {
+            "glyph": "ga_tirh",
+            "status": "native-retained-guard",
+            "reason": "Reconstruction changed topology"
+          },
+          {
+            "glyph": "nine_tirh",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 9581,
+              "componentAreaRatios": [
+                0.9640090426689115
+              ],
+              "counterOverlap": []
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9621456475061719
+              ],
+              "counterOverlap": []
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9617247410197767
+              ],
+              "counterOverlap": []
+            }
+          },
+          {
+            "glyph": "zero_tirh",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 8161,
+              "componentAreaRatios": [
+                0.9704827102707384
+              ],
+              "counterOverlap": [
+                0.9863187330127535
+              ]
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9634513475060313
+              ],
+              "counterOverlap": [
+                0.9806214718795735
+              ]
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9630390143737166
+              ],
+              "counterOverlap": [
+                0.9810567369300771
+              ]
+            }
+          },
+          {
+            "glyph": "lVocalic_tirh",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 19320,
+              "componentAreaRatios": [
+                0.9350846239299484
+              ],
+              "counterOverlap": []
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9344638306214468
+              ],
+              "counterOverlap": []
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.938265831072865
+              ],
+              "counterOverlap": []
+            }
+          },
+          {
+            "glyph": "sha_tirh",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 19198,
+              "componentAreaRatios": [
+                0.9513249620162659
+              ],
+              "counterOverlap": []
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9565868263473054
+              ],
+              "counterOverlap": []
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9609948898115618
+              ],
+              "counterOverlap": []
+            }
+          }
+        ],
+        "wholeFieldChecks": {
+          "384": {
+            "checks": {
+              "componentAreaRatios": [
+                0.9895243302351011,
+                0.9894995826193929,
+                0.9746933173200651,
+                0.9747191011235955,
+                0.9423215920589795,
+                0.9437183506149024,
+                0.9640282923543281,
+                0.962100302928307,
+                0.9353217625982969,
+                0.9345285215366705,
+                0.9629195368606185,
+                0.9634217856619264
+              ],
+              "counterOverlap": [
+                1.0,
+                1.0,
+                0.9673353639323601,
+                0.9674403949165004,
+                0.9807567165566607,
+                0.9803939788143468
+              ]
+            },
+            "source": {
+              "rawTopology": [
+                12,
+                6
+              ],
+              "filteredTopology": [
+                12,
+                6
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                4286,
+                4278,
+                9521,
+                9521,
+                10757,
+                10762
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                12,
+                8
+              ],
+              "filteredTopology": [
+                12,
+                6
+              ],
+              "porePixelAreas": [
+                1,
+                1
+              ],
+              "counterPixelAreas": [
+                4286,
+                4278,
+                9629,
+                9628,
+                11024,
+                11022
+              ]
+            },
+            "poreCriterion": "Only white pores below4pixels at384px/em, area-scaled at1024; no ink components or larger counters removed"
+          },
+          "1024": {
+            "checks": {
+              "componentAreaRatios": [
+                0.9886005708942369,
+                0.9886866623808455,
+                0.9769775465597283,
+                0.9762514790138102,
+                0.9419498094329021,
+                0.9426262243371488,
+                0.9632219362652336,
+                0.9619270133752057,
+                0.9352074003857092,
+                0.9332309803024859,
+                0.9635493979877948,
+                0.9625627648496221
+              ],
+              "counterOverlap": [
+                1.0,
+                1.0,
+                0.9672000472366556,
+                0.9664467177420545,
+                0.980698613488755,
+                0.9804195804195804
+              ]
+            },
+            "source": {
+              "rawTopology": [
+                12,
+                8
+              ],
+              "filteredTopology": [
+                12,
+                6
+              ],
+              "porePixelAreas": [
+                1,
+                1
+              ],
+              "counterPixelAreas": [
+                30439,
+                30432,
+                67744,
+                67743,
+                76523,
+                76505
+              ],
+              "thresholdPixelArea": 28.444444444444443
+            },
+            "candidate": {
+              "rawTopology": [
+                12,
+                7
+              ],
+              "filteredTopology": [
+                12,
+                6
+              ],
+              "porePixelAreas": [
+                1
+              ],
+              "counterPixelAreas": [
+                30439,
+                30432,
+                68421,
+                68379,
+                78382,
+                78410
+              ],
+              "thresholdPixelArea": 28.444444444444443
+            },
+            "poreCriterion": "Only white pores below4pixels at384px/em, area-scaled at1024; no ink components or larger counters removed"
+          }
+        },
+        "shapingUnchanged": true,
+        "layoutTablesUnchanged": [
+          "GDEF",
+          "GPOS",
+          "GSUB",
+          "hmtx"
+        ],
+        "nativeBoundsPreserved": true,
+        "independent384FieldCheck": {
+          "size": 384,
+          "source": {
+            "rawTopology": [
+              12,
+              8
+            ],
+            "filteredTopology": [
+              12,
+              6
+            ],
+            "porePixelAreas": [
+              1,
+              1
+            ],
+            "counterPixelAreas": [
+              4291,
+              4290,
+              9533,
+              9538,
+              10774,
+              10767
+            ]
+          },
+          "candidate": {
+            "rawTopology": [
+              12,
+              8
+            ],
+            "filteredTopology": [
+              12,
+              6
+            ],
+            "porePixelAreas": [
+              1,
+              1
+            ],
+            "counterPixelAreas": [
+              4291,
+              4290,
+              9640,
+              9641,
+              11033,
+              11032
+            ]
+          },
+          "shapingUnchanged": true,
+          "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+          "status": "pass",
+          "checks": {
+            "componentAreaRatios": [
+              0.986379064929377,
+              0.9865063196863157,
+              0.9730433483448232,
+              0.9774510224203713,
+              0.9437979817488291,
+              0.9433342986774785,
+              0.9627505229772589,
+              0.962730826256908,
+              0.9263415535235984,
+              0.9243248225642916,
+              0.9623237367802585,
+              0.9618264572015857
+            ],
+            "counterOverlap": [
+              1.0,
+              1.0,
+              0.9676911780132172,
+              0.9676032711260222,
+              0.9810655281232596,
+              0.9813318473112288
+            ]
+          }
+        },
+        "outputSha256": "2c8e2113ac5133443a6c4303d943709d22e7efafa9c727bd751144a4cb616bdf"
+      },
+      "nativeInput": "build/unicode-sources/noto/NotoSansTirhuta-Regular.ttf",
+      "nativeInputSha256": "3e3afdd9e75a3170565686f97d9b2024b77ef471000527275949a051c124011b",
+      "outputSha256": "2c8e2113ac5133443a6c4303d943709d22e7efafa9c727bd751144a4cb616bdf",
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "ttha_tirh",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.5249999999999999,
+            "bend": 0.0,
+            "changedPixels": 14816,
+            "componentAreaRatios": [
+              0.9708398879637801
+            ],
+            "counterOverlap": [
+              0.9718207985829213
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9796701399356504
+            ],
+            "counterOverlap": [
+              0.9666543656358403
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9817087469709997
+            ],
+            "counterOverlap": [
+              0.9671218487394958
+            ]
+          }
+        },
+        {
+          "glyph": "anji_tirh",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 18101,
+            "componentAreaRatios": [
+              0.9389846801654516
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9419498094329021
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9423215920589795
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "pa_tirh",
+          "status": "native-retained-guard",
+          "reason": "Reconstruction reduced a counter too far"
+        },
+        {
+          "glyph": "ga_tirh",
+          "status": "native-retained-guard",
+          "reason": "Reconstruction changed topology"
+        },
+        {
+          "glyph": "nine_tirh",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 9581,
+            "componentAreaRatios": [
+              0.9640090426689115
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9621456475061719
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9617247410197767
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "zero_tirh",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 8161,
+            "componentAreaRatios": [
+              0.9704827102707384
+            ],
+            "counterOverlap": [
+              0.9863187330127535
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9634513475060313
+            ],
+            "counterOverlap": [
+              0.9806214718795735
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9630390143737166
+            ],
+            "counterOverlap": [
+              0.9810567369300771
+            ]
+          }
+        },
+        {
+          "glyph": "lVocalic_tirh",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19320,
+            "componentAreaRatios": [
+              0.9350846239299484
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9344638306214468
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.938265831072865
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "sha_tirh",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19198,
+            "componentAreaRatios": [
+              0.9513249620162659
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9565868263473054
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9609948898115618
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "checks": {
+            "componentAreaRatios": [
+              0.9895243302351011,
+              0.9894995826193929,
+              0.9746933173200651,
+              0.9747191011235955,
+              0.9423215920589795,
+              0.9437183506149024,
+              0.9640282923543281,
+              0.962100302928307,
+              0.9353217625982969,
+              0.9345285215366705,
+              0.9629195368606185,
+              0.9634217856619264
+            ],
+            "counterOverlap": [
+              1.0,
+              1.0,
+              0.9673353639323601,
+              0.9674403949165004,
+              0.9807567165566607,
+              0.9803939788143468
+            ]
+          },
+          "source": {
+            "rawTopology": [
+              12,
+              6
+            ],
+            "filteredTopology": [
+              12,
+              6
+            ],
+            "porePixelAreas": [],
+            "counterPixelAreas": [
+              4286,
+              4278,
+              9521,
+              9521,
+              10757,
+              10762
+            ]
+          },
+          "candidate": {
+            "rawTopology": [
+              12,
+              8
+            ],
+            "filteredTopology": [
+              12,
+              6
+            ],
+            "porePixelAreas": [
+              1,
+              1
+            ],
+            "counterPixelAreas": [
+              4286,
+              4278,
+              9629,
+              9628,
+              11024,
+              11022
+            ]
+          },
+          "poreCriterion": "Only white pores below4pixels at384px/em, area-scaled at1024; no ink components or larger counters removed"
+        },
+        "1024": {
+          "checks": {
+            "componentAreaRatios": [
+              0.9886005708942369,
+              0.9886866623808455,
+              0.9769775465597283,
+              0.9762514790138102,
+              0.9419498094329021,
+              0.9426262243371488,
+              0.9632219362652336,
+              0.9619270133752057,
+              0.9352074003857092,
+              0.9332309803024859,
+              0.9635493979877948,
+              0.9625627648496221
+            ],
+            "counterOverlap": [
+              1.0,
+              1.0,
+              0.9672000472366556,
+              0.9664467177420545,
+              0.980698613488755,
+              0.9804195804195804
+            ]
+          },
+          "source": {
+            "rawTopology": [
+              12,
+              8
+            ],
+            "filteredTopology": [
+              12,
+              6
+            ],
+            "porePixelAreas": [
+              1,
+              1
+            ],
+            "counterPixelAreas": [
+              30439,
+              30432,
+              67744,
+              67743,
+              76523,
+              76505
+            ],
+            "thresholdPixelArea": 28.444444444444443
+          },
+          "candidate": {
+            "rawTopology": [
+              12,
+              7
+            ],
+            "filteredTopology": [
+              12,
+              6
+            ],
+            "porePixelAreas": [
+              1
+            ],
+            "counterPixelAreas": [
+              30439,
+              30432,
+              68421,
+              68379,
+              78382,
+              78410
+            ],
+            "thresholdPixelArea": 28.444444444444443
+          },
+          "poreCriterion": "Only white pores below4pixels at384px/em, area-scaled at1024; no ink components or larger counters removed"
+        }
+      },
+      "independent384FieldCheck": {
+        "size": 384,
+        "source": {
+          "rawTopology": [
+            12,
+            8
+          ],
+          "filteredTopology": [
+            12,
+            6
+          ],
+          "porePixelAreas": [
+            1,
+            1
+          ],
+          "counterPixelAreas": [
+            4291,
+            4290,
+            9533,
+            9538,
+            10774,
+            10767
+          ]
+        },
+        "candidate": {
+          "rawTopology": [
+            12,
+            8
+          ],
+          "filteredTopology": [
+            12,
+            6
+          ],
+          "porePixelAreas": [
+            1,
+            1
+          ],
+          "counterPixelAreas": [
+            4291,
+            4290,
+            9640,
+            9641,
+            11033,
+            11032
+          ]
+        },
+        "shapingUnchanged": true,
+        "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            0.986379064929377,
+            0.9865063196863157,
+            0.9730433483448232,
+            0.9774510224203713,
+            0.9437979817488291,
+            0.9433342986774785,
+            0.9627505229772589,
+            0.962730826256908,
+            0.9263415535235984,
+            0.9243248225642916,
+            0.9623237367802585,
+            0.9618264572015857
+          ],
+          "counterOverlap": [
+            1.0,
+            1.0,
+            0.9676911780132172,
+            0.9676032711260222,
+            0.9810655281232596,
+            0.9813318473112288
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "separator": " ",
+      "nativeFieldText": "𑒀𑒉𑒑𑒚𑒣𑒬𑓐𑓙 𑒀𑒉𑒑𑒚𑒣𑒬𑓐𑓙",
+      "rawSourceAttemptErrors": [
+        "Reconstruction changed topology",
+        "Reconstruction changed topology",
+        "Reconstruction changed topology"
+      ],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Tirhuta curves and marks retain open counters; initial raw scan-pore rejection reconciled with recorded filtering.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 167,
+      "source": "build/unicode-sources/noto/NotoSansVai-Regular.ttf",
+      "sourceSha256": "ea03a953e2c578c56e17c5baa2e717e9ef0218ccb4ab221c11ec0604814377b3",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "ꔀꔫꕕꖀꖫꗖꘀꘫ",
+      "nativeField": "ꔀꔫꕕꖀꖫꗖꘀꘫ",
+      "output": "output/font-review/supplemental-systematic-05/167.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "uA5D6",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 20809,
+            "componentAreaRatios": [
+              0.9485800734327546,
+              0.9864533457900269,
+              0.9918329249795823
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.940998821449617,
+              0.9914749503678617,
+              1.0014000700035002
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9375626578979027,
+              0.9991652754590985,
+              1.002495840266223
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uA62B",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 13408,
+            "componentAreaRatios": [
+              0.9536599856164598
+            ],
+            "counterOverlap": [
+              0.973004542504867
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9664566461336418
+            ],
+            "counterOverlap": [
+              0.9794505732208523
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9651285468376922
+            ],
+            "counterOverlap": [
+              0.978171756507481
+            ]
+          }
+        },
+        {
+          "glyph": "uA600",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 16636,
+            "componentAreaRatios": [
+              0.9480625297434492,
+              0.9984807759728876,
+              0.9954433929197336,
+              0.9910004675081814
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9559364319397776,
+              0.9991819562930934,
+              0.9941581960509406,
+              0.9870266479663394
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9561426006668376,
+              0.99833748960931,
+              0.9991721854304636,
+              0.9908409658617818
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uA555",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19266,
+            "componentAreaRatios": [
+              0.9557571202736673
+            ],
+            "counterOverlap": [
+              0.9690821927325783,
+              0.9283995440537003,
+              0.9847709184770919,
+              0.9989702435906541
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9473086790888123
+            ],
+            "counterOverlap": [
+              0.9510525950114639,
+              0.9183096213112678,
+              0.9854592385459239,
+              0.9985086286485335
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9471180440314194
+            ],
+            "counterOverlap": [
+              0.9484841015528716,
+              0.9277912621359223,
+              0.9839733897792561,
+              0.9992431886982845
+            ]
+          }
+        },
+        {
+          "glyph": "uA580",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 9149,
+            "componentAreaRatios": [
+              0.9770816851265823,
+              0.9927553166627717,
+              0.9926470588235294,
+              0.9808567760009338,
+              0.9815398995209721
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9648313884493671,
+              0.9739425099322272,
+              0.9878618113912232,
+              0.9803898680985176,
+              0.9622619464890758
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9665698953109879,
+              0.9807852965747702,
+              0.9899749373433584,
+              0.9734439834024896,
+              0.9674728940783986
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uA5AB",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 9186,
+            "componentAreaRatios": [
+              0.9665755033865017
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9764137956351756
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9869418980412847
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uA500",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19494,
+            "componentAreaRatios": [
+              0.9360312869050268,
+              0.9821035598705502,
+              0.972629331262739
+            ],
+            "counterOverlap": [
+              1.0,
+              0.972196261682243
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.933883307375015,
+              0.9854045307443365,
+              0.9699116762108124
+            ],
+            "counterOverlap": [
+              1.0,
+              0.9642523364485981
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9304490690032858,
+              0.9870997466021654,
+              0.9718439879990769
+            ],
+            "counterOverlap": [
+              1.0,
+              0.9644334160463193
+            ]
+          }
+        },
+        {
+          "glyph": "uA52B",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.5249999999999999,
+            "bend": 0.0,
+            "changedPixels": 14024,
+            "componentAreaRatios": [
+              0.977777214291148
+            ],
+            "counterOverlap": [
+              0.9438018220902856,
+              0.9302936029554735
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9819103887212516
+            ],
+            "counterOverlap": [
+              0.920360323472208,
+              0.9129885280964418
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9816156591326917
+            ],
+            "counterOverlap": [
+              0.9234135667396062,
+              0.9164926931106472
+            ]
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.9834042860235226,
+            0.9836574190988131,
+            0.9656535488404778,
+            0.9663059734318642,
+            0.9371056544628863,
+            0.9618482188951988,
+            0.9660941581902062,
+            0.9384621568391013,
+            0.9607964510471474,
+            0.9655536418689927,
+            0.9304490690032858,
+            0.9775374376039934,
+            0.9279542412072532,
+            0.9807852965747702,
+            0.9483012749649937,
+            0.9478610118279966,
+            0.9785536811821629,
+            0.982607558519681,
+            0.9958402662229617,
+            0.9958402662229617,
+            0.9870997466021654,
+            0.9718439879990769,
+            0.9868481772035071,
+            0.968454985033387,
+            1.0,
+            1.0,
+            0.9975,
+            1.0008326394671108,
+            0.9975062344139651,
+            1.0016652789342215,
+            0.9900332225913622,
+            0.971900826446281,
+            0.9891485809682805,
+            0.9742524916943521,
+            0.9867219917012449,
+            0.989202657807309,
+            0.9675540765391015,
+            0.9666666666666667
+          ],
+          "counterOverlap": [
+            0.9184268026219956,
+            0.9082758620689655,
+            0.9184861717612809,
+            0.9087767795438839,
+            0.9783745003587169,
+            0.977673084801311,
+            0.9450332758195711,
+            0.9444581584793879,
+            0.9133811230585425,
+            0.9855295566502463,
+            0.9169166166766647,
+            0.9864906355541909,
+            1.0,
+            0.9644334160463193,
+            1.0,
+            0.9667221297836939,
+            0.997726698661278,
+            0.9987370548118212
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9822142205091794,
+            0.9822288041466124,
+            0.9650968707112919,
+            0.9653399258343635,
+            0.9411827999614908,
+            0.956529261646265,
+            0.9665022396985592,
+            0.9419291841473315,
+            0.9564318491251071,
+            0.9651611492133919,
+            0.933883307375015,
+            0.9741731915390908,
+            0.9340886918719086,
+            0.9740502630040911,
+            0.9477020191550231,
+            0.946908664862567,
+            0.9762913640032284,
+            0.9757623143080532,
+            1.0002337267734018,
+            1.005019845902405,
+            0.9854045307443365,
+            0.9699116762108124,
+            0.9826593335490132,
+            0.9702714068514864,
+            0.9956755493221131,
+            1.0001167269756042,
+            0.9942763695829926,
+            0.9998832457676591,
+            0.9907807212043412,
+            1.0008167075020418,
+            0.9885580852305896,
+            0.9802570093457944,
+            0.989140588510042,
+            0.9789793296741796,
+            0.988078541374474,
+            0.9924145174466099,
+            0.9620371451933185,
+            0.9640396964389959
+          ],
+          "counterOverlap": [
+            0.920425488391122,
+            0.9140579428349213,
+            0.9182190378710338,
+            0.9137746670555069,
+            0.9794505732208523,
+            0.9790768432133123,
+            0.9498419535239154,
+            0.9518753686548003,
+            0.9197939972138968,
+            0.9154561913182603,
+            0.9843380233208554,
+            0.9851641005735973,
+            1.0,
+            0.9642523364485981,
+            1.0,
+            0.9645025688930406,
+            0.9983310844400256,
+            0.9984732824427481
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "ebdff669ff8a28662a8dd135a54a8f535b8d4da0fa716b8d1835ba862ed7c907",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native angular strokes, corners, bars and counter openings keep their identities; smooth pressure gives visible pen character.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 168,
+      "source": "build/unicode-sources/noto/NotoSansVithkuqi-Regular.ttf",
+      "sourceSha256": "599b581fdd5456aec9330bbb39a6f4ef72296c8e321dd87894868188b14bf894",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𐕰𐕺𐖅𐖐𐖛𐖦𐖰𐖼",
+      "nativeField": "𐕰𐕺𐖅𐖐𐖛𐖦𐖰𐖼",
+      "output": "output/font-review/supplemental-systematic-05/168.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "Uvit",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 12265,
+            "componentAreaRatios": [
+              0.96150235430449
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9684919249556276
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9675906627761567
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "Nevit",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19382,
+            "componentAreaRatios": [
+              0.936618364453416
+            ],
+            "counterOverlap": [
+              0.9812792511700468
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9461886910340519
+            ],
+            "counterOverlap": [
+              0.9379284262279582
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9465952890792291
+            ],
+            "counterOverlap": [
+              0.9390530557421088
+            ]
+          }
+        },
+        {
+          "glyph": "Gavit",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19089,
+            "componentAreaRatios": [
+              0.9476238267395048
+            ],
+            "counterOverlap": [
+              0.985858332287352
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.948022991914054
+            ],
+            "counterOverlap": [
+              0.9879502949667378
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9480214077197535
+            ],
+            "counterOverlap": [
+              0.9898869720404521
+            ]
+          }
+        },
+        {
+          "glyph": "ijevit",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 6539,
+            "componentAreaRatios": [
+              0.9668627823116341,
+              0.9996949979666531,
+              0.9811173872112391
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9743025241981401,
+              1.0087433916226107,
+              0.9873090013759143
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9848114998643884,
+              1.010814708002884,
+              1.0
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "zevit",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 21762,
+            "componentAreaRatios": [
+              0.9405189245396771
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.93314601459095
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9323840616764347
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "qavit",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 21136,
+            "componentAreaRatios": [
+              0.9886712968234088,
+              0.9393952261077917
+            ],
+            "counterOverlap": [
+              1.0
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.983547762723443,
+              0.9362288071335416
+            ],
+            "counterOverlap": [
+              1.0
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9830097087378641,
+              0.9362491373360938
+            ],
+            "counterOverlap": [
+              0.9994413407821229
+            ]
+          }
+        },
+        {
+          "glyph": "Avit",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 21676,
+            "componentAreaRatios": [
+              0.9588706185960831
+            ],
+            "counterOverlap": [
+              0.9257888683302495
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9626355062436863
+            ],
+            "counterOverlap": [
+              0.9181877281592239
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9621941284735842
+            ],
+            "counterOverlap": [
+              0.922748309006764
+            ]
+          }
+        },
+        {
+          "glyph": "checit",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 25765,
+            "componentAreaRatios": [
+              0.9480556245127629
+            ],
+            "counterOverlap": [
+              0.9846316905140434
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9417710823958783
+            ],
+            "counterOverlap": [
+              0.9938334055981115
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.942151063763897
+            ],
+            "counterOverlap": [
+              0.9938186813186813
+            ]
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.9850908105177555,
+            0.985357917570499,
+            0.9416173692198099,
+            0.9416173692198099,
+            1.0115440115440115,
+            1.0122743682310469,
+            0.9621941284735842,
+            0.9465930018416207,
+            0.9692652890836986,
+            0.9621047550084479,
+            0.9468454191116632,
+            0.9693712496738847,
+            0.9489083678272867,
+            0.9485899776831,
+            0.9838318512530315,
+            0.9842296805499393,
+            0.9370632387196963,
+            0.9370173849273111,
+            0.9316098060048007,
+            0.9315650702451694,
+            1.0001304801670146,
+            1.0001304801670146
+          ],
+          "counterOverlap": [
+            0.922748309006764,
+            0.9230769230769231,
+            0.9393684917702385,
+            0.9392005374538126,
+            0.9866071428571429,
+            0.9868969624776652,
+            0.9941660947151681,
+            0.9941640920013731,
+            1.0,
+            1.0
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9747114216281896,
+            0.9759878419452888,
+            0.9420311942105217,
+            0.9422510799888517,
+            1.0087460591884472,
+            1.010570179896331,
+            0.9626355062436863,
+            0.9461112379396109,
+            0.9684550221863655,
+            0.9623821656050956,
+            0.9433801566642276,
+            0.9682691038185632,
+            0.9478591101151274,
+            0.9484822390894004,
+            0.9847406479530831,
+            0.98382964186073,
+            0.9357286712607978,
+            0.9358915246011041,
+            0.9331463843626588,
+            0.931450854582665,
+            0.9873802755698793,
+            0.9875586301816404
+          ],
+          "counterOverlap": [
+            0.9181877281592239,
+            0.9179746076177147,
+            0.9384004912844254,
+            0.9377863857527516,
+            0.98706842435656,
+            0.9866622067985115,
+            0.9933449074074074,
+            0.9938328113707541,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "24612bb9e88cf8b3d8262ddba0918f1663cd8180c15d9081ceacda70c97aa924",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native rounded bodies and detached details retain their shapes and counts; smooth variable weight is visible beside Dad.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 169,
+      "source": "build/unicode-sources/noto/NotoSansWancho-Regular.ttf",
+      "sourceSha256": "01668a00c1c7a3a65f6269c27c3295c09aa714a7677914bba137ebf18e7918a7",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𞋀𞋈𞋏𞋗𞋟𞋧𞋲𞋿",
+      "nativeField": "𞋀𞋈𞋏𞋗𞋟𞋧𞋲𞋿",
+      "output": "output/font-review/supplemental-systematic-05/169-robust.ttf",
+      "attemptErrors": [
+        "Reconstruction changed topology",
+        "Reconstruction changed topology",
+        "Reconstruction changed topology"
+      ],
+      "status": "retained-native-field-guard",
+      "robustRetry": {
+        "number": 169,
+        "nativeInput": "build/unicode-sources/noto/NotoSansWancho-Regular.ttf",
+        "nativeInputSha256": "01668a00c1c7a3a65f6269c27c3295c09aa714a7677914bba137ebf18e7918a7",
+        "sample": "𞋀𞋈𞋏𞋗𞋟𞋧𞋲𞋿",
+        "nativeFieldText": "𞋀𞋈𞋏𞋗𞋟𞋧𞋲𞋿 𞋀𞋈𞋏𞋗𞋟𞋧𞋲𞋿",
+        "separator": " ",
+        "output": "output/font-review/supplemental-systematic-05/169-robust.ttf",
+        "attemptErrors": [],
+        "amount": 0.7,
+        "glyphs": [
+          {
+            "glyph": "u1E2FF",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 17320,
+              "componentAreaRatios": [
+                0.952194135998142
+              ],
+              "counterOverlap": [
+                1.0
+              ]
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9659847719240982
+              ],
+              "counterOverlap": [
+                0.9780709791704844
+              ]
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9718588446841987
+              ],
+              "counterOverlap": [
+                0.9782514136581122
+              ]
+            }
+          },
+          {
+            "glyph": "u1E2D7",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 11377,
+              "componentAreaRatios": [
+                0.9635278401013925
+              ],
+              "counterOverlap": []
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.946888862246733
+              ],
+              "counterOverlap": []
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9449519085354788
+              ],
+              "counterOverlap": []
+            }
+          },
+          {
+            "glyph": "u1E2DF",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 17777,
+              "componentAreaRatios": [
+                0.9576366214834603
+              ],
+              "counterOverlap": []
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9505073491419588
+              ],
+              "counterOverlap": []
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9591965589361114
+              ],
+              "counterOverlap": []
+            }
+          },
+          {
+            "glyph": "u1E2E7",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 15388,
+              "componentAreaRatios": [
+                0.9380866627356611
+              ],
+              "counterOverlap": [
+                0.9964101763695957
+              ]
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9337439640472358
+              ],
+              "counterOverlap": [
+                0.9854325997606784
+              ]
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9391363869716502
+              ],
+              "counterOverlap": [
+                0.9816041206769683
+              ]
+            }
+          },
+          {
+            "glyph": "u1E2CF",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 22302,
+              "componentAreaRatios": [
+                0.9355189323087811,
+                0.9881537998192953
+              ],
+              "counterOverlap": [
+                0.9845212967473075,
+                0.9254905140262688
+              ]
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9291681411455437,
+                0.9792189539202891
+              ],
+              "counterOverlap": [
+                0.9755912756399848,
+                0.9156802335008919
+              ]
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9281673700278351,
+                0.9772403982930299
+              ],
+              "counterOverlap": [
+                0.9745566692367,
+                0.9136442141623489
+              ]
+            }
+          },
+          {
+            "glyph": "u1E2C0",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 16120,
+              "componentAreaRatios": [
+                0.9533744226206354
+              ],
+              "counterOverlap": [
+                1.0
+              ]
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9528830359273871
+              ],
+              "counterOverlap": [
+                0.9988703117939449
+              ]
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9533223503569467
+              ],
+              "counterOverlap": [
+                0.9989293361884368
+              ]
+            }
+          },
+          {
+            "glyph": "u1E2C8",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 12347,
+              "componentAreaRatios": [
+                0.9516846012875335
+              ],
+              "counterOverlap": [
+                0.9555004040170841
+              ]
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9552464639819558
+              ],
+              "counterOverlap": [
+                0.9239293547269999
+              ]
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9548761764902209
+              ],
+              "counterOverlap": [
+                0.9236766516208453
+              ]
+            }
+          },
+          {
+            "glyph": "u1E2F2",
+            "status": "adapted",
+            "amount": 0.7,
+            "checks": {
+              "amount": 0.7,
+              "bend": 0,
+              "changedPixels": 15002,
+              "componentAreaRatios": [
+                0.9645092845187733
+              ],
+              "counterOverlap": [
+                0.9909713438304183
+              ]
+            },
+            "vectorChecks": {
+              "componentAreaRatios": [
+                0.9563054336509442
+              ],
+              "counterOverlap": [
+                0.9938791235951789
+              ]
+            },
+            "scale384Checks": {
+              "componentAreaRatios": [
+                0.9578395090645055
+              ],
+              "counterOverlap": [
+                0.9942064969997931
+              ]
+            }
+          }
+        ],
+        "wholeFieldChecks": {
+          "384": {
+            "checks": {
+              "componentAreaRatios": [
+                0.972604588394062,
+                0.9719487525286581,
+                0.9533223503569467,
+                0.9558195408435665,
+                0.9288216274474582,
+                0.955233021005573,
+                0.9422400803616273,
+                0.9293020627295846,
+                0.9576342675039835,
+                0.9526946107784431,
+                0.9561327368631902,
+                0.9291009570022914,
+                0.9435649546827795,
+                0.9595863919804246,
+                0.9391224967193473,
+                0.9572445443476632,
+                0.9778729478943612,
+                0.9793152639087018
+              ],
+              "counterOverlap": [
+                0.9989293361884368,
+                0.9211498973305955,
+                0.9742307692307692,
+                0.9941018211920529,
+                0.9983922829581994,
+                0.9204265791632485,
+                0.9761538461538461,
+                0.9941060903732809,
+                0.9791485664639444,
+                0.9791304347826087,
+                0.9848204368752314,
+                0.9830007390983001,
+                0.913972286374134,
+                0.9165227403569373
+              ]
+            },
+            "source": {
+              "rawTopology": [
+                18,
+                14
+              ],
+              "filteredTopology": [
+                18,
+                14
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                1868,
+                2435,
+                2600,
+                9664,
+                1866,
+                2438,
+                2600,
+                9671,
+                2302,
+                2300,
+                2701,
+                2706,
+                1732,
+                1737
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                18,
+                14
+              ],
+              "filteredTopology": [
+                18,
+                14
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                2381,
+                2377,
+                2074,
+                10148,
+                2073,
+                10147,
+                2757,
+                2766,
+                2575,
+                2571,
+                3001,
+                3001,
+                1586,
+                1595
+              ]
+            },
+            "poreCriterion": "Only white pores below4pixels at384px/em, area-scaled at1024; no ink components or larger counters removed"
+          },
+          "1024": {
+            "checks": {
+              "componentAreaRatios": [
+                0.9658499532320132,
+                0.9660588179906469,
+                0.9528830359273871,
+                0.9548887719825643,
+                0.9291712211488036,
+                0.9444581753100098,
+                0.9485939693934974,
+                0.9318518754682693,
+                0.9573003208570242,
+                0.9528204552313707,
+                0.9555403171263245,
+                0.9293860452773443,
+                0.9462848666712133,
+                0.9503463001998412,
+                0.9339065061782701,
+                0.9577424881391671,
+                0.9785549654273975,
+                0.9799438427597272
+              ],
+              "counterOverlap": [
+                0.9988703117939449,
+                0.9262101194253736,
+                0.9755859903643155,
+                0.993761724032631,
+                0.9987206502107164,
+                0.9251586843623774,
+                0.9759068760151597,
+                0.9935880659513217,
+                0.9778931297709924,
+                0.978254230040926,
+                0.9855541069100391,
+                0.9854500103928497,
+                0.9159636599610642,
+                0.9142184710274306
+              ]
+            },
+            "source": {
+              "rawTopology": [
+                18,
+                15
+              ],
+              "filteredTopology": [
+                18,
+                14
+              ],
+              "porePixelAreas": [
+                1
+              ],
+              "counterPixelAreas": [
+                13278,
+                17333,
+                18473,
+                68769,
+                13288,
+                17330,
+                18470,
+                68778,
+                16375,
+                16371,
+                19175,
+                19244,
+                12328,
+                12322
+              ],
+              "thresholdPixelArea": 28.444444444444443
+            },
+            "candidate": {
+              "rawTopology": [
+                18,
+                14
+              ],
+              "filteredTopology": [
+                18,
+                14
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                17013,
+                16995,
+                14704,
+                14695,
+                72167,
+                72157,
+                19627,
+                19649,
+                18302,
+                18302,
+                21403,
+                21388,
+                11323,
+                11295
+              ],
+              "thresholdPixelArea": 28.444444444444443
+            },
+            "poreCriterion": "Only white pores below4pixels at384px/em, area-scaled at1024; no ink components or larger counters removed"
+          }
+        },
+        "shapingUnchanged": true,
+        "layoutTablesUnchanged": [
+          "GDEF",
+          "GPOS",
+          "GSUB",
+          "hmtx"
+        ],
+        "nativeBoundsPreserved": true,
+        "independent384FieldCheck": {
+          "size": 384,
+          "source": {
+            "rawTopology": [
+              18,
+              14
+            ],
+            "filteredTopology": [
+              18,
+              14
+            ],
+            "porePixelAreas": [],
+            "counterPixelAreas": [
+              1876,
+              2439,
+              2606,
+              9672,
+              1869,
+              2448,
+              2601,
+              9679,
+              2309,
+              2305,
+              2720,
+              2706,
+              1742,
+              1743
+            ]
+          },
+          "candidate": {
+            "rawTopology": [
+              18,
+              14
+            ],
+            "filteredTopology": [
+              18,
+              14
+            ],
+            "porePixelAreas": [],
+            "counterPixelAreas": [
+              2382,
+              2389,
+              2084,
+              10158,
+              2082,
+              10156,
+              2757,
+              2764,
+              2575,
+              2577,
+              3008,
+              3006,
+              1593,
+              1597
+            ]
+          },
+          "shapingUnchanged": true,
+          "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+          "status": "pass",
+          "checks": {
+            "componentAreaRatios": [
+              0.9728268216844667,
+              0.9717580289176163,
+              0.953821496544125,
+              0.9560740790265427,
+              0.9300441163230395,
+              0.9408735687889986,
+              0.9587266479718788,
+              0.9378211716341213,
+              0.9575197146075854,
+              0.9534010711246809,
+              0.9557593199919684,
+              0.9282210521578687,
+              0.9513586456480403,
+              0.9406055450291946,
+              0.9272912308475151,
+              0.9572569281352747,
+              0.9735714285714285,
+              0.9764117226590422
+            ],
+            "counterOverlap": [
+              0.9984008528784648,
+              0.9204592045920459,
+              0.9742900997697621,
+              0.9935897435897436,
+              1.0,
+              0.9195261437908496,
+              0.9750096116878124,
+              0.9938010125012915,
+              0.9779125162407969,
+              0.9787418655097614,
+              0.9827205882352941,
+              0.9848484848484849,
+              0.9121699196326062,
+              0.9145152036718301
+            ]
+          }
+        },
+        "outputSha256": "9c25165c356c77e010cbd8b85bb81536f3c0a3c28e1fe234edcb9b2708c88877"
+      },
+      "nativeInput": "build/unicode-sources/noto/NotoSansWancho-Regular.ttf",
+      "nativeInputSha256": "01668a00c1c7a3a65f6269c27c3295c09aa714a7677914bba137ebf18e7918a7",
+      "outputSha256": "9c25165c356c77e010cbd8b85bb81536f3c0a3c28e1fe234edcb9b2708c88877",
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "u1E2FF",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 17320,
+            "componentAreaRatios": [
+              0.952194135998142
+            ],
+            "counterOverlap": [
+              1.0
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9659847719240982
+            ],
+            "counterOverlap": [
+              0.9780709791704844
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9718588446841987
+            ],
+            "counterOverlap": [
+              0.9782514136581122
+            ]
+          }
+        },
+        {
+          "glyph": "u1E2D7",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 11377,
+            "componentAreaRatios": [
+              0.9635278401013925
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.946888862246733
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9449519085354788
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E2DF",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 17777,
+            "componentAreaRatios": [
+              0.9576366214834603
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9505073491419588
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9591965589361114
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E2E7",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 15388,
+            "componentAreaRatios": [
+              0.9380866627356611
+            ],
+            "counterOverlap": [
+              0.9964101763695957
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9337439640472358
+            ],
+            "counterOverlap": [
+              0.9854325997606784
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9391363869716502
+            ],
+            "counterOverlap": [
+              0.9816041206769683
+            ]
+          }
+        },
+        {
+          "glyph": "u1E2CF",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 22302,
+            "componentAreaRatios": [
+              0.9355189323087811,
+              0.9881537998192953
+            ],
+            "counterOverlap": [
+              0.9845212967473075,
+              0.9254905140262688
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9291681411455437,
+              0.9792189539202891
+            ],
+            "counterOverlap": [
+              0.9755912756399848,
+              0.9156802335008919
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9281673700278351,
+              0.9772403982930299
+            ],
+            "counterOverlap": [
+              0.9745566692367,
+              0.9136442141623489
+            ]
+          }
+        },
+        {
+          "glyph": "u1E2C0",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 16120,
+            "componentAreaRatios": [
+              0.9533744226206354
+            ],
+            "counterOverlap": [
+              1.0
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9528830359273871
+            ],
+            "counterOverlap": [
+              0.9988703117939449
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9533223503569467
+            ],
+            "counterOverlap": [
+              0.9989293361884368
+            ]
+          }
+        },
+        {
+          "glyph": "u1E2C8",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 12347,
+            "componentAreaRatios": [
+              0.9516846012875335
+            ],
+            "counterOverlap": [
+              0.9555004040170841
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9552464639819558
+            ],
+            "counterOverlap": [
+              0.9239293547269999
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9548761764902209
+            ],
+            "counterOverlap": [
+              0.9236766516208453
+            ]
+          }
+        },
+        {
+          "glyph": "u1E2F2",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 15002,
+            "componentAreaRatios": [
+              0.9645092845187733
+            ],
+            "counterOverlap": [
+              0.9909713438304183
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9563054336509442
+            ],
+            "counterOverlap": [
+              0.9938791235951789
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9578395090645055
+            ],
+            "counterOverlap": [
+              0.9942064969997931
+            ]
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "checks": {
+            "componentAreaRatios": [
+              0.972604588394062,
+              0.9719487525286581,
+              0.9533223503569467,
+              0.9558195408435665,
+              0.9288216274474582,
+              0.955233021005573,
+              0.9422400803616273,
+              0.9293020627295846,
+              0.9576342675039835,
+              0.9526946107784431,
+              0.9561327368631902,
+              0.9291009570022914,
+              0.9435649546827795,
+              0.9595863919804246,
+              0.9391224967193473,
+              0.9572445443476632,
+              0.9778729478943612,
+              0.9793152639087018
+            ],
+            "counterOverlap": [
+              0.9989293361884368,
+              0.9211498973305955,
+              0.9742307692307692,
+              0.9941018211920529,
+              0.9983922829581994,
+              0.9204265791632485,
+              0.9761538461538461,
+              0.9941060903732809,
+              0.9791485664639444,
+              0.9791304347826087,
+              0.9848204368752314,
+              0.9830007390983001,
+              0.913972286374134,
+              0.9165227403569373
+            ]
+          },
+          "source": {
+            "rawTopology": [
+              18,
+              14
+            ],
+            "filteredTopology": [
+              18,
+              14
+            ],
+            "porePixelAreas": [],
+            "counterPixelAreas": [
+              1868,
+              2435,
+              2600,
+              9664,
+              1866,
+              2438,
+              2600,
+              9671,
+              2302,
+              2300,
+              2701,
+              2706,
+              1732,
+              1737
+            ]
+          },
+          "candidate": {
+            "rawTopology": [
+              18,
+              14
+            ],
+            "filteredTopology": [
+              18,
+              14
+            ],
+            "porePixelAreas": [],
+            "counterPixelAreas": [
+              2381,
+              2377,
+              2074,
+              10148,
+              2073,
+              10147,
+              2757,
+              2766,
+              2575,
+              2571,
+              3001,
+              3001,
+              1586,
+              1595
+            ]
+          },
+          "poreCriterion": "Only white pores below4pixels at384px/em, area-scaled at1024; no ink components or larger counters removed"
+        },
+        "1024": {
+          "checks": {
+            "componentAreaRatios": [
+              0.9658499532320132,
+              0.9660588179906469,
+              0.9528830359273871,
+              0.9548887719825643,
+              0.9291712211488036,
+              0.9444581753100098,
+              0.9485939693934974,
+              0.9318518754682693,
+              0.9573003208570242,
+              0.9528204552313707,
+              0.9555403171263245,
+              0.9293860452773443,
+              0.9462848666712133,
+              0.9503463001998412,
+              0.9339065061782701,
+              0.9577424881391671,
+              0.9785549654273975,
+              0.9799438427597272
+            ],
+            "counterOverlap": [
+              0.9988703117939449,
+              0.9262101194253736,
+              0.9755859903643155,
+              0.993761724032631,
+              0.9987206502107164,
+              0.9251586843623774,
+              0.9759068760151597,
+              0.9935880659513217,
+              0.9778931297709924,
+              0.978254230040926,
+              0.9855541069100391,
+              0.9854500103928497,
+              0.9159636599610642,
+              0.9142184710274306
+            ]
+          },
+          "source": {
+            "rawTopology": [
+              18,
+              15
+            ],
+            "filteredTopology": [
+              18,
+              14
+            ],
+            "porePixelAreas": [
+              1
+            ],
+            "counterPixelAreas": [
+              13278,
+              17333,
+              18473,
+              68769,
+              13288,
+              17330,
+              18470,
+              68778,
+              16375,
+              16371,
+              19175,
+              19244,
+              12328,
+              12322
+            ],
+            "thresholdPixelArea": 28.444444444444443
+          },
+          "candidate": {
+            "rawTopology": [
+              18,
+              14
+            ],
+            "filteredTopology": [
+              18,
+              14
+            ],
+            "porePixelAreas": [],
+            "counterPixelAreas": [
+              17013,
+              16995,
+              14704,
+              14695,
+              72167,
+              72157,
+              19627,
+              19649,
+              18302,
+              18302,
+              21403,
+              21388,
+              11323,
+              11295
+            ],
+            "thresholdPixelArea": 28.444444444444443
+          },
+          "poreCriterion": "Only white pores below4pixels at384px/em, area-scaled at1024; no ink components or larger counters removed"
+        }
+      },
+      "independent384FieldCheck": {
+        "size": 384,
+        "source": {
+          "rawTopology": [
+            18,
+            14
+          ],
+          "filteredTopology": [
+            18,
+            14
+          ],
+          "porePixelAreas": [],
+          "counterPixelAreas": [
+            1876,
+            2439,
+            2606,
+            9672,
+            1869,
+            2448,
+            2601,
+            9679,
+            2309,
+            2305,
+            2720,
+            2706,
+            1742,
+            1743
+          ]
+        },
+        "candidate": {
+          "rawTopology": [
+            18,
+            14
+          ],
+          "filteredTopology": [
+            18,
+            14
+          ],
+          "porePixelAreas": [],
+          "counterPixelAreas": [
+            2382,
+            2389,
+            2084,
+            10158,
+            2082,
+            10156,
+            2757,
+            2764,
+            2575,
+            2577,
+            3008,
+            3006,
+            1593,
+            1597
+          ]
+        },
+        "shapingUnchanged": true,
+        "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            0.9728268216844667,
+            0.9717580289176163,
+            0.953821496544125,
+            0.9560740790265427,
+            0.9300441163230395,
+            0.9408735687889986,
+            0.9587266479718788,
+            0.9378211716341213,
+            0.9575197146075854,
+            0.9534010711246809,
+            0.9557593199919684,
+            0.9282210521578687,
+            0.9513586456480403,
+            0.9406055450291946,
+            0.9272912308475151,
+            0.9572569281352747,
+            0.9735714285714285,
+            0.9764117226590422
+          ],
+          "counterOverlap": [
+            0.9984008528784648,
+            0.9204592045920459,
+            0.9742900997697621,
+            0.9935897435897436,
+            1.0,
+            0.9195261437908496,
+            0.9750096116878124,
+            0.9938010125012915,
+            0.9779125162407969,
+            0.9787418655097614,
+            0.9827205882352941,
+            0.9848484848484849,
+            0.9121699196326062,
+            0.9145152036718301
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "separator": " ",
+      "nativeFieldText": "𞋀𞋈𞋏𞋗𞋟𞋧𞋲𞋿 𞋀𞋈𞋏𞋗𞋟𞋧𞋲𞋿",
+      "rawSourceAttemptErrors": [
+        "Reconstruction changed topology",
+        "Reconstruction changed topology",
+        "Reconstruction changed topology"
+      ],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native rounded bodies and detached details retain their shapes and counts; smooth variable weight is visible beside Dad.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 170,
+      "source": "build/unicode-sources/noto/NotoSansWarangCiti-Regular.ttf",
+      "sourceSha256": "faac53f5072d5b682f347c620d30068530a707a032c127359b6c55647700f3aa",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𑢠𑢬𑢸𑣄𑣏𑣛𑣧𑣿",
+      "nativeField": "𑢠𑢬𑢸𑣄𑣏𑣛𑣧𑣿",
+      "output": "output/font-review/supplemental-systematic-05/170.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "uc_wara",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10779,
+            "componentAreaRatios": [
+              0.9713429676611539
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9847361242574885
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.987044706382075
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "NGAA_wara",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10617,
+            "componentAreaRatios": [
+              0.9679422587459041
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.964389410122633
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9622271667726213
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "om_wara",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 28371,
+            "componentAreaRatios": [
+              0.9315384503073396
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9590311135769664
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9592232337567932
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "PU_wara",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 14960,
+            "componentAreaRatios": [
+              0.9525233205202008
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9669458320179756
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9629629629629629
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "horr_wara",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 11897,
+            "componentAreaRatios": [
+              0.9516008801472899
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.960905294355382
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9627993341016775
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "seven_wara",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 18791,
+            "componentAreaRatios": [
+              0.9390843687814877
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9221600324776882
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9206033952806545
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "ya_wara",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 12754,
+            "componentAreaRatios": [
+              0.9564960874425538
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9817879766488635
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9830022075055188
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "KO_wara",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 14543,
+            "componentAreaRatios": [
+              0.9677626294762536
+            ],
+            "counterOverlap": [
+              0.9880877828300705
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9661823150823536
+            ],
+            "counterOverlap": [
+              0.9913415198627713
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9643506324887784
+            ],
+            "counterOverlap": [
+              0.99225031483096
+            ]
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.959334117809926,
+            0.9584413788334544,
+            0.9622271667726213,
+            0.9621195371803375,
+            0.9677760634780692,
+            0.9623271340009537,
+            0.9623774780750239,
+            0.9691458839108364,
+            0.9228183152611392,
+            0.9218801721284343,
+            0.982791903369919,
+            0.9822657490735839,
+            0.9820808292440867,
+            0.9847554520431929,
+            0.962430515622005,
+            0.9617203476482618
+          ],
+          "counterOverlap": [
+            0.99227761485826,
+            0.99227761485826
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9586849251073024,
+            0.959072949511464,
+            0.964389410122633,
+            0.9656452916786189,
+            0.9631574734794146,
+            0.9643419530579499,
+            0.9655201189141263,
+            0.9689779891741914,
+            0.9222171927629039,
+            0.9217826526809009,
+            0.9847363517793926,
+            0.984661707931492,
+            0.9820105080983756,
+            0.9818218510354249,
+            0.9607397764510481,
+            0.9603414691070996
+          ],
+          "counterOverlap": [
+            0.9913279059002913,
+            0.9913551338252512
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "a991f11c3b9d5cf2bcd0849c680a560eb36aee5956aa76cfb32c01eb45aacfa5",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native angular strokes, corners, bars and counter openings keep their identities; smooth pressure gives visible pen character.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 171,
+      "source": "build/unicode-sources/noto/NotoSansYi-Regular.ttf",
+      "sourceSha256": "ab2c82578a368ad99e08ec4b299303c7f16830768df7278605d382fa1d0ee14b",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "ꀀꂮꅜꈊꊹꍧꐕ꓆",
+      "nativeField": "ꀀꂮꅜꈊꊹꍧꐕ꓆",
+      "output": "output/font-review/supplemental-systematic-05/171.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "uniA000",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 15202,
+            "componentAreaRatios": [
+              0.9512680614626742
+            ],
+            "counterOverlap": [
+              0.986093226886428
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9449241740774155
+            ],
+            "counterOverlap": [
+              0.9737316507854752
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9419400638912834
+            ],
+            "counterOverlap": [
+              0.9777732324265358
+            ]
+          }
+        },
+        {
+          "glyph": "uniA20A",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 15302,
+            "componentAreaRatios": [
+              0.9534914322474999
+            ],
+            "counterOverlap": [
+              0.9879848952969448
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9774255804433007
+            ],
+            "counterOverlap": [
+              0.9658346002321285
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9822990420658059
+            ],
+            "counterOverlap": [
+              0.9637967045718264
+            ]
+          }
+        },
+        {
+          "glyph": "uniA2B9",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 15528,
+            "componentAreaRatios": [
+              0.9646579104779396,
+              0.9712072739518437
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9708838471064981,
+              0.9821182017174609
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9725221982241421,
+              0.9782919847328244
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uniA4C6",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 2323,
+            "componentAreaRatios": [
+              0.9832167832167832,
+              0.9738261738261739
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9471195471195472,
+              0.9381951381951382
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.937442502299908,
+              0.9645593869731801
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uniA415",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 18624,
+            "componentAreaRatios": [
+              0.9655679811653914,
+              0.9173018647415941
+            ],
+            "counterOverlap": [
+              0.9665997993981946
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9714170100058858,
+              0.9234245881124016
+            ],
+            "counterOverlap": [
+              0.91283851554664
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9681378950117524,
+              0.9227363294221829
+            ],
+            "counterOverlap": [
+              0.9087018544935807
+            ]
+          }
+        },
+        {
+          "glyph": "uniA15C",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 17203,
+            "componentAreaRatios": [
+              0.8927174975562072,
+              0.9818743735382559,
+              0.9740138840864963,
+              0.9424544577326822
+            ],
+            "counterOverlap": [
+              0.9769754455748489
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.886119257086999,
+              0.989558970932175,
+              0.9664068941670878,
+              0.9403491330155852
+            ],
+            "counterOverlap": [
+              0.9647364797674597
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.8876560332871013,
+              0.9904733551652277,
+              0.9684280177710559,
+              0.9383433672410214
+            ],
+            "counterOverlap": [
+              0.9678474114441417
+            ]
+          }
+        },
+        {
+          "glyph": "uniA0AE",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19358,
+            "componentAreaRatios": [
+              0.9563780456959784,
+              0.9615552542684468,
+              0.9269806858494285
+            ],
+            "counterOverlap": [
+              0.9601006805257761
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9613523311693787,
+              0.9669094836500678,
+              0.9442254631454474
+            ],
+            "counterOverlap": [
+              0.961397323660771
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.964422616195496,
+              0.9674320143299137,
+              0.9398601398601398
+            ],
+            "counterOverlap": [
+              0.9614107132073193
+            ]
+          }
+        },
+        {
+          "glyph": "uniA367",
+          "status": "adapted",
+          "amount": 0.5249999999999999,
+          "checks": {
+            "amount": 0.5249999999999999,
+            "bend": 0,
+            "changedPixels": 12383,
+            "componentAreaRatios": [
+              0.9683341172564536,
+              0.9710231160562878
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9744487175940016,
+              0.9710231160562878
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9850478468899522,
+              0.973404255319149
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.8878472222222222,
+            0.8873092926490985,
+            0.9642023346303502,
+            0.9665593705293276,
+            0.9848499950164458,
+            0.9746727679046504,
+            0.970472955317481,
+            0.9652590595986822,
+            0.962369420702754,
+            0.9852486793581182,
+            0.972310969116081,
+            0.9735740450026165,
+            0.9904818560380726,
+            0.985455624814485,
+            0.9419400638912834,
+            0.9602214091378178,
+            0.9773424102270956,
+            0.9397424103035878,
+            0.953544061302682,
+            0.9392018660311343,
+            0.945387792565397,
+            0.9793975339472452,
+            0.9254486884491486,
+            0.9545019157088123,
+            0.9214002642007926,
+            0.9293273144379487,
+            0.9386183936745734,
+            0.9406620861961275,
+            0.9670801526717557,
+            0.9639704127893104,
+            0.9677471900961069,
+            0.9716811262072352,
+            0.9398601398601398,
+            0.9398601398601398
+          ],
+          "counterOverlap": [
+            0.9184549356223176,
+            0.9138176638176638,
+            0.9612131464475592,
+            0.960882406123802,
+            0.9668478260869565,
+            0.9663409337676439,
+            0.9777732324265358,
+            0.9776399209216715,
+            0.9637840975043529,
+            0.9640329504582899
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.8862114472848135,
+            0.8859126014273145,
+            0.9618374022120313,
+            0.9708672542555339,
+            0.9735935866155455,
+            0.9726769450562534,
+            0.9732980249365553,
+            0.9624050643581465,
+            0.9708138478619251,
+            0.9748602183521801,
+            0.973038121596286,
+            0.9723978241693619,
+            0.9893110647181629,
+            0.9893896988178287,
+            0.9449241740774155,
+            0.9664450059848384,
+            0.9763818103378936,
+            0.946986346986347,
+            0.9381285381285381,
+            0.9441181105746501,
+            0.9655505814415513,
+            0.9756072608225425,
+            0.946986346986347,
+            0.938061938061938,
+            0.9230091705093,
+            0.9233280139271725,
+            0.9402649045349551,
+            0.9395339317563814,
+            0.9840579217512492,
+            0.9797802790321494,
+            0.9672749000321735,
+            0.9698155780167154,
+            0.943732755222704,
+            0.943437130469058
+          ],
+          "counterOverlap": [
+            0.9135319490420303,
+            0.9104147835693482,
+            0.9610804580165612,
+            0.9598804119520292,
+            0.9651162790697675,
+            0.9645699418426691,
+            0.9737316507854752,
+            0.9737582094958488,
+            0.9661136085002043,
+            0.9661127615814045
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "d158b425f6a11bdb8e5d81d36ff1dbc8f99a4c8faebae8d4c3eca7789e2b326c",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native angular strokes, corners, bars and counter openings keep their identities; smooth pressure gives visible pen character.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 172,
+      "source": "build/unicode-sources/noto/NotoSansZanabazarSquare-Regular.ttf",
+      "sourceSha256": "52f57958db04b118f4e8a61ab19d0a8da4cd3a29421fbce9e04f8a463ee1fc0b",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𑨀𑨑𑨘𑨟𑨦𑨭𑨿𑩆",
+      "nativeField": "𑨀𑨑𑨘𑨟𑨦𑨭𑨿𑩆",
+      "output": "output/font-review/supplemental-systematic-05/172.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "finalDoubleHeadMark_zanb",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 18133,
+            "componentAreaRatios": [
+              0.9662828699886246,
+              0.9643906739811913
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9528550018959114,
+              0.9435899947753396
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9530795551753636,
+              0.9435736677115988
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "initialHeadMark_zanb",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 17046,
+            "componentAreaRatios": [
+              0.968870207616864
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9496964293295971
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9500391731453023
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "nna_zanb",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 21316,
+            "componentAreaRatios": [
+              0.9538260437873757
+            ],
+            "counterOverlap": [
+              0.9734941025034807
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9533295986081317
+            ],
+            "counterOverlap": [
+              0.9569443349883101
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9520049192530503
+            ],
+            "counterOverlap": [
+              0.9574785527788139
+            ]
+          }
+        },
+        {
+          "glyph": "va_zanb",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 20354,
+            "componentAreaRatios": [
+              0.9616880334838348
+            ],
+            "counterOverlap": [
+              0.971968991216396
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9491521932570939
+            ],
+            "counterOverlap": [
+              0.9670448496140538
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9470404072914533
+            ],
+            "counterOverlap": [
+              0.9662841594700107
+            ]
+          }
+        },
+        {
+          "glyph": "dzha_zanb",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 21714,
+            "componentAreaRatios": [
+              0.9661676496513569
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9731655929081775
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9756992205410362
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "pha_zanb",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 18123,
+            "componentAreaRatios": [
+              0.9680396732788799
+            ],
+            "counterOverlap": [
+              0.9891181159837876
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.945169194865811
+            ],
+            "counterOverlap": [
+              0.9825774601894005
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.943502824858757
+            ],
+            "counterOverlap": [
+              0.9802061855670103
+            ]
+          }
+        },
+        {
+          "glyph": "a_zanb",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 24817,
+            "componentAreaRatios": [
+              0.9645644372342256
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9470294717695352
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9551270776536804
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "cha_zanb",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 18660,
+            "componentAreaRatios": [
+              0.9685575789335779
+            ],
+            "counterOverlap": [
+              0.9857853589196873,
+              0.9903474903474904
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9526726057906458
+            ],
+            "counterOverlap": [
+              0.9819819819819819,
+              0.9834994909621775
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9515221878224974
+            ],
+            "counterOverlap": [
+              0.985979381443299,
+              0.982680412371134
+            ]
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.9795620811377705,
+            0.9795380719748318,
+            0.9551270776536804,
+            0.9519607843137254,
+            0.9509895715623284,
+            0.9422075237701529,
+            0.9466292134831461,
+            0.9504007714096305,
+            0.9565984930032293,
+            0.9549511916278252,
+            0.9518833849329206,
+            0.95102185774707,
+            0.9420421661843738,
+            0.9468063317435702,
+            0.9500994395226903,
+            0.9565554359526373,
+            0.9448508069197724,
+            0.9448508069197724
+          ],
+          "counterOverlap": [
+            0.9846048109965636,
+            0.9857731958762886,
+            0.9881786941580756,
+            0.9846048109965636,
+            0.9857731958762886,
+            0.9881786941580756,
+            0.956128912071535,
+            0.9562220566318927,
+            0.9662921348314607,
+            0.966757364249379
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9731576815977809,
+            0.9722890661594076,
+            0.9470325443059755,
+            0.9534662833436442,
+            0.9521893168604652,
+            0.9421863292625464,
+            0.9492722876080858,
+            0.9509618819207022,
+            0.953003981179877,
+            0.9467345082712681,
+            0.9527126366507999,
+            0.953396218680683,
+            0.9451808634772462,
+            0.9471354048910028,
+            0.9505253940455342,
+            0.9529633396931633,
+            0.9435899947753396,
+            0.943541013584117
+          ],
+          "counterOverlap": [
+            0.9789563663954973,
+            0.9835185416406542,
+            0.9825675675675676,
+            0.9819723774947655,
+            0.9834802819877446,
+            0.9825966691638334,
+            0.9567283641820911,
+            0.9569313239873343,
+            0.9665086099326179,
+            0.9667487684729064
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "81f60c52e2920fcdf038b0d4825634ee930111c9775651b2db6013304f50cd01",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Zanabazar square counters remain open and counts distinct; variable stroke pressure gives visible pen character.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 174,
+      "source": "build/unicode-sources/noto/NotoSerifDogra-Regular.ttf",
+      "sourceSha256": "f2a5287a3b9d0a9a833c80b6c037fc998bc70544ee5f91f0245869013e171ae3",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𑠀𑠆𑠍𑠓𑠙𑠟𑠦𑠻",
+      "nativeField": "𑠀𑠆𑠍𑠓𑠙𑠟𑠦𑠻",
+      "output": "output/font-review/supplemental-systematic-05/174.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "vowelE.dogra",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 9374,
+            "componentAreaRatios": [
+              0.9696998603800092
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9789616088385524
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9816315171006247
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "AbbreviationSign.dogra",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 5110,
+            "componentAreaRatios": [
+              0.9581760940725143
+            ],
+            "counterOverlap": [
+              0.9751279426816786
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9707691345412088
+            ],
+            "counterOverlap": [
+              0.9276867963152508
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9716911219801393
+            ],
+            "counterOverlap": [
+              0.9278688524590164
+            ]
+          }
+        },
+        {
+          "glyph": "vowelA.dogra",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 14789,
+            "componentAreaRatios": [
+              0.9666268460934847
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9643137392689412
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9628011484209212
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "Nya.dogra",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 17732,
+            "componentAreaRatios": [
+              0.9553096551285093
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9565134354617482
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9637924598730869
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "Pha.dogra",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 14752,
+            "componentAreaRatios": [
+              0.956167805764331
+            ],
+            "counterOverlap": [
+              0.9911387485425573
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9648902420848681
+            ],
+            "counterOverlap": [
+              0.9697629226583755
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9635180139267333
+            ],
+            "counterOverlap": [
+              0.9669239250275634
+            ]
+          }
+        },
+        {
+          "glyph": "Gha.dogra",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 12798,
+            "componentAreaRatios": [
+              0.966125432185216
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9579704436372124
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9546964193046186
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "Ta.dogra",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 13310,
+            "componentAreaRatios": [
+              0.9508628720997294
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9534537065791225
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9524288950415303
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "Va.dogra",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 18377,
+            "componentAreaRatios": [
+              0.917882074793527
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9249349031134683
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9218900675024108
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.9791242048051386,
+            0.9741416374915546,
+            0.9628011484209212,
+            0.9577048670502255,
+            0.9549582870998233,
+            0.9516534641015969,
+            0.9629144411972186,
+            0.9237143830173686,
+            0.9623512771445212,
+            0.9537847779907777,
+            0.9563001027749229,
+            0.9528064434935817,
+            0.9628789025066828,
+            0.9219681062368764,
+            0.9718601895734598,
+            0.9716995110386724
+          ],
+          "counterOverlap": [
+            0.9264652348016017,
+            0.928,
+            0.9728682170542635,
+            0.9701822197680839
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9796567732512649,
+            0.9793592701160391,
+            0.9643195952355855,
+            0.9579933912331491,
+            0.9578207991483157,
+            0.9535686399772856,
+            0.9646433463206229,
+            0.9250547133340788,
+            0.9653521902407303,
+            0.9576621879036907,
+            0.9579258624879928,
+            0.9533362910381544,
+            0.9647199097238487,
+            0.9253135234443646,
+            0.9712713171830046,
+            0.9712665248759331
+          ],
+          "counterOverlap": [
+            0.9267444239819931,
+            0.926609727407559,
+            0.9707025178737955,
+            0.9704946036182933
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "c1d5539d1930de65ba1284ea82dea64291c9e8c95d67c301daef57ed035f7ad7",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native joining and contextual marks retain their placement; complex curves and open details gain smooth pressure.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 178,
+      "source": "build/unicode-sources/noto/NotoSerifMakasar-Regular.ttf",
+      "sourceSha256": "59f80cf2f403ada5b38d0d03fa59bf68acdc48165dc35b39817bcaf951f1015a",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𑻠𑻣𑻦𑻩𑻫𑻮𑻱𑻸",
+      "nativeField": "𑻠𑻣𑻦𑻩𑻫𑻮𑻱𑻸",
+      "output": "output/font-review/supplemental-systematic-05/178.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "uni11EE9",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 12279,
+            "componentAreaRatios": [
+              0.9522716618485819
+            ],
+            "counterOverlap": [
+              0.9815163859670457,
+              0.9884852536958622
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9623115087116181
+            ],
+            "counterOverlap": [
+              0.9581686629780507,
+              0.9971770299383403
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9607571240379948
+            ],
+            "counterOverlap": [
+              0.9587494572297004,
+              0.9978802331743508
+            ]
+          }
+        },
+        {
+          "glyph": "uni11EE3",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10528,
+            "componentAreaRatios": [
+              0.9529660203493953
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9571534843540027
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9538055058382341
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uni11EF1",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 8552,
+            "componentAreaRatios": [
+              0.9558466251188339
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9598737720502799
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9606888805690752
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uni11EEE",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 11539,
+            "componentAreaRatios": [
+              0.936561291483047
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9798318194082202
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9778291729803015
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "uni11EE6",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10974,
+            "componentAreaRatios": [
+              0.9591768793824514
+            ],
+            "counterOverlap": [
+              0.9270589953271028
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9664280809804208
+            ],
+            "counterOverlap": [
+              0.9112149532710281
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9654585798816568
+            ],
+            "counterOverlap": [
+              0.9136765470618825
+            ]
+          }
+        },
+        {
+          "glyph": "uni11EEB",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 26777,
+            "componentAreaRatios": [
+              0.9246196895860752
+            ],
+            "counterOverlap": [
+              0.9345301655098772,
+              0.9754679144385027
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.916367279668955
+            ],
+            "counterOverlap": [
+              0.9273892151628403,
+              0.9487299465240642
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9172605743684898
+            ],
+            "counterOverlap": [
+              0.924573055028463,
+              0.9457917261055635
+            ]
+          }
+        },
+        {
+          "glyph": "uni11EE0",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 12611,
+            "componentAreaRatios": [
+              0.9511207129354577,
+              0.9609918200408998
+            ],
+            "counterOverlap": [
+              0.97030009281221
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.959256008641642,
+              0.9593558282208589
+            ],
+            "counterOverlap": [
+              0.9735657076071638
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9591804065951657,
+              0.9600870827285921
+            ],
+            "counterOverlap": [
+              0.9746031746031746
+            ]
+          }
+        },
+        {
+          "glyph": "uni11EF8",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 3749,
+            "componentAreaRatios": [
+              0.990971515768057,
+              0.9916094584286804,
+              0.9935147507629705,
+              0.9941505595116988,
+              0.9727908455181182,
+              0.9914834117198423
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              1.0031790437436419,
+              0.9955504703788457,
+              1.0092828077314344,
+              1.0109359104781281,
+              0.9660521296884933,
+              1.004448964026948
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              1.0054347826086956,
+              0.9981884057971014,
+              1.0144927536231885,
+              1.0045330915684496,
+              0.9710144927536232,
+              1.0036264732547597
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.9802841634738186,
+            0.9802075019952114,
+            0.9541620516315924,
+            0.9545687009887487,
+            0.9617188966034903,
+            0.962076410400826,
+            0.9591804065951657,
+            0.9588668373879642,
+            0.916684234936965,
+            0.9168002024120773,
+            0.9963963963963964,
+            0.9963963963963964,
+            0.9670663114268798,
+            0.9637842346725983,
+            0.9669231907651324,
+            0.9637842346725983,
+            0.9882459312839059,
+            0.9882459312839059,
+            1.0072137060414788,
+            1.0071942446043165,
+            1.006311992786294,
+            1.0090171325518484,
+            0.9600870827285921,
+            0.9597096188747731,
+            0.9682971014492754,
+            0.9682971014492754,
+            1.0054151624548737,
+            1.0054151624548737
+          ],
+          "counterOverlap": [
+            0.9746031746031746,
+            0.974365234375,
+            0.924573055028463,
+            0.9452901998097051,
+            0.9246088193456614,
+            0.9448144624167459,
+            0.9133367929423976,
+            0.9564467442863304,
+            0.9973572938689218,
+            0.9123443983402489,
+            0.9560534252477381,
+            0.997355896351137
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9791149129413351,
+            0.9798857682534685,
+            0.9544767344196203,
+            0.9575657934212579,
+            0.9602464640067553,
+            0.9603317135009508,
+            0.959256008641642,
+            0.9586005896518354,
+            0.9162408867287061,
+            0.9162112176789292,
+            1.0038148524923702,
+            1.002034587995931,
+            0.9668626124954481,
+            0.9625368673945739,
+            0.9662194487779511,
+            0.962969834868119,
+            0.9951678535096643,
+            0.9927536231884058,
+            1.0100457782299084,
+            1.0110644792064098,
+            1.0086437015380705,
+            1.011440193212152,
+            0.9593558282208589,
+            0.9596444626072742,
+            0.967483805410898,
+            0.9694928181009279,
+            1.0054520096361101,
+            1.0055936943808796
+          ],
+          "counterOverlap": [
+            0.9735657076071638,
+            0.9738678953340439,
+            0.927555585230687,
+            0.9483819202995454,
+            0.9282232756893904,
+            0.9480788506515202,
+            0.9588832796058634,
+            0.9590099130329015,
+            0.9099013518450859,
+            0.9974006683995544,
+            0.9124716884635056,
+            0.9976956812606853
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "daac2a5f6137da494cfbcb07f3254714c136fa67f302c805f13214f3707b370d",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native rounded bodies and detached details retain their shapes and counts; smooth variable weight is visible beside Dad.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 179,
+      "source": "build/unicode-sources/noto/NotoSerifNPHmong-Regular.ttf",
+      "sourceSha256": "e9b64378074f005e35de1a563a05aba00c2de83116d5e923532a77b2d9a37b2f",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𞄀𞄉𞄒𞄛𞄤𞄷𞅂𞅏",
+      "nativeField": "𞄀𞄉𞄒𞄛𞄤𞄷𞅂𞅏",
+      "output": "output/font-review/supplemental-systematic-05/179.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "u1E142",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 7160,
+            "componentAreaRatios": [
+              0.9548388939670932
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9296589351005484
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.934829168791433
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E11B",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19407,
+            "componentAreaRatios": [
+              0.9400025446911381
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9383675806349004
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9407434336090157
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E109",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 14586,
+            "componentAreaRatios": [
+              0.9567637639164251
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.964420975039398
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9675154041319318
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E100",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 14054,
+            "componentAreaRatios": [
+              0.968180861311168
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9536491857030767
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9569184674051208
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E14F",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 29055,
+            "componentAreaRatios": [
+              0.925740612690446,
+              0.9515520105435126
+            ],
+            "counterOverlap": [
+              0.9765471702531201
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.918546200402452,
+              0.945181971691767
+            ],
+            "counterOverlap": [
+              0.9672793687217552
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.918947310222812,
+              0.9407939435115986
+            ],
+            "counterOverlap": [
+              0.9690824800720408
+            ]
+          }
+        },
+        {
+          "glyph": "u1E124",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 13425,
+            "componentAreaRatios": [
+              0.9107194767441861
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.8951913759689922
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.8927865187860029
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E137",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 6816,
+            "componentAreaRatios": [
+              0.951069850252758
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9997297555082186
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9998869673335594
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E112",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19880,
+            "componentAreaRatios": [
+              0.9476568938787037
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9416917854405247
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9318532348404903
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.918407960199005,
+            0.9172969690277701,
+            0.9405330394677768,
+            0.8953608247422681,
+            0.9998868906232327,
+            0.9410053668728747,
+            0.891926747485169,
+            0.9986437613019892,
+            0.9569184674051208,
+            0.9692447266953957,
+            0.9413475080641498,
+            0.9298316362536546,
+            0.9548425161114641,
+            0.9697175755927286,
+            0.9400327094312193,
+            0.9376344086021505,
+            0.9407881964667055,
+            0.949558390578999
+          ],
+          "counterOverlap": [
+            0.9692825934696327,
+            0.9662622569386737
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9183489517770836,
+            0.9192305301758966,
+            0.9411216673184422,
+            0.8910180793952671,
+            0.9993635437881874,
+            0.9433456657791915,
+            0.8936520923069519,
+            0.9987464893768941,
+            0.9536491857030767,
+            0.9646581397416519,
+            0.9393227737431237,
+            0.9289795225704265,
+            0.9534269923745683,
+            0.9642153685842451,
+            0.9385846607969871,
+            0.9321051659730409,
+            0.9441850885624056,
+            0.9429544487015752
+          ],
+          "counterOverlap": [
+            0.9672362204355704,
+            0.9673241177792763
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "d7ab71f0a5a2f3cdbee7028e39fbf85a0f36fb3f9da1ec5b9b444f5ada3b4f6f",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native rounded bodies and detached details retain their shapes and counts; smooth variable weight is visible beside Dad.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 180,
+      "source": "build/unicode-sources/noto-olonal/NotoSerifOlOnal.ttf",
+      "sourceSha256": "17b994f53b4abe1140cfcf005a82c66f5830bb516dd371e4fda60c46e52abdb4",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𞗐𞗖𞗜𞗢𞗧𞗭𞗵𞗿",
+      "nativeField": "𞗐𞗖𞗜𞗢𞗧𞗭𞗵𞗿",
+      "output": "output/font-review/supplemental-systematic-05/180.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "fouronao",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 18678,
+            "componentAreaRatios": [
+              0.9300533069526785
+            ],
+            "counterOverlap": [
+              0.9748756772804869
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9493619534969788
+            ],
+            "counterOverlap": [
+              0.9787723595338825
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9492537313432836
+            ],
+            "counterOverlap": [
+              0.9788695192815636
+            ]
+          }
+        },
+        {
+          "glyph": "Aonao",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 29189,
+            "componentAreaRatios": [
+              0.9520601895863324,
+              0.9481898229321207
+            ],
+            "counterOverlap": [
+              0.981062736715791,
+              0.9869203329369798
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9436628006989525,
+              0.9328529315427448
+            ],
+            "counterOverlap": [
+              0.9733753328083399,
+              0.982348440855755
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9415605300398816,
+              0.9279535009462017
+            ],
+            "counterOverlap": [
+              0.9725333333333334,
+              0.983077528532074
+            ]
+          }
+        },
+        {
+          "glyph": "Uonao",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 19770,
+            "componentAreaRatios": [
+              0.9481265756273163
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9583447458593493
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9578595849566669
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "Oonao",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 21811,
+            "componentAreaRatios": [
+              0.9574251467201209
+            ],
+            "counterOverlap": [
+              0.9582598912432027,
+              0.9823115707583258
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.964153683953321
+            ],
+            "counterOverlap": [
+              0.9483592724545284,
+              0.984173510678502
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.963957301781236
+            ],
+            "counterOverlap": [
+              0.9493333333333334,
+              0.9832087104814378
+            ]
+          }
+        },
+        {
+          "glyph": "u1E5FF",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 4750,
+            "componentAreaRatios": [
+              0.9546593485264289
+            ],
+            "counterOverlap": [
+              0.9457719273143511
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9884500656246271
+            ],
+            "counterOverlap": [
+              0.8961224781799971
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9870967741935484
+            ],
+            "counterOverlap": [
+              0.8964992389649924
+            ]
+          }
+        },
+        {
+          "glyph": "Uronao",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.5249999999999999,
+            "bend": 0.0,
+            "changedPixels": 8715,
+            "componentAreaRatios": [
+              0.9816408027836095
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9900532937911999
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.989929559092095
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "Egonao",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 24810,
+            "componentAreaRatios": [
+              0.9354942062263043
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9250333742724408
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9249553757927917
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "Ionao",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 21832,
+            "componentAreaRatios": [
+              0.9455368332339147
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.940365240328574
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9401749271137027
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.9895626761298403,
+            0.9897160158697014,
+            0.963957301781236,
+            0.9408074634067879,
+            0.9412268077327006,
+            0.957203541228314,
+            0.924791192103265,
+            0.9498759556478154,
+            0.9638461042727331,
+            0.9428295509415742,
+            0.9427245789145352,
+            0.957816475826972,
+            0.9229455304611881,
+            0.9484546512216095,
+            0.9244390375777237,
+            0.9321438226547716,
+            0.990334068170256,
+            0.9896487357882233
+          ],
+          "counterOverlap": [
+            0.9493333333333334,
+            0.973592958122166,
+            0.9483493077742279,
+            0.9730522945570971,
+            0.9832087104814378,
+            0.9822974036191975,
+            0.9838751966439434,
+            0.9819683955150482,
+            0.8930208863983699,
+            0.8963414634146342,
+            0.977350539899921,
+            0.9796565389696169
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9892175572519084,
+            0.9893563920371131,
+            0.964153683953321,
+            0.9428699506898441,
+            0.9398865825888947,
+            0.9570234356664692,
+            0.9235629666819779,
+            0.9491052687751254,
+            0.9640315114548029,
+            0.942804620184101,
+            0.9397211837920975,
+            0.956926704437516,
+            0.923568307820495,
+            0.9491557984161881,
+            0.933234534123727,
+            0.9332535339717283,
+            0.9897842276112278,
+            0.9898329355608592
+          ],
+          "counterOverlap": [
+            0.9483592724545284,
+            0.9741935483870968,
+            0.9483256459294259,
+            0.9742666366569135,
+            0.984173510678502,
+            0.9824771631624065,
+            0.9842193073824513,
+            0.9825229294372494,
+            0.895203374079634,
+            0.8951958821847298,
+            0.9781534460338102,
+            0.977968494575717
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "b0a10c7ba75a76afa674adfa2ba3b928bd4e14a5db667b239e0e1582235ce4f0",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native rounded bodies and detached details retain their shapes and counts; smooth variable weight is visible beside Dad.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 185,
+      "source": "build/unicode-sources/noto/NotoSerifTodhri-Regular.ttf",
+      "sourceSha256": "4ded6e98752b13363cf01dad267efdd9481d556b9f2d5291ddcbda7fc7342727",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𐗀𐗇𐗏𐗖𐗝𐗤𐗬𐗳",
+      "nativeField": "𐗀𐗇𐗏𐗖𐗝𐗤𐗬𐗳",
+      "output": "output/font-review/supplemental-systematic-05/185.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "otodhri",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 13818,
+            "componentAreaRatios": [
+              0.9429354410179716
+            ],
+            "counterOverlap": [
+              0.9836877317083564
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9682928255729432
+            ],
+            "counterOverlap": [
+              0.9814121958494908
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.970430747263208
+            ],
+            "counterOverlap": [
+              0.9811035067530737
+            ]
+          }
+        },
+        {
+          "glyph": "dotabovecomb",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 834,
+            "componentAreaRatios": [
+              0.9882192248591429
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9871094416936999
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9818840579710145
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "lltodhri",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 13809,
+            "componentAreaRatios": [
+              0.9611897852582705
+            ],
+            "counterOverlap": [
+              0.972234935163997
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9475507835171213
+            ],
+            "counterOverlap": [
+              0.9605898804983474
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9453765923238653
+            ],
+            "counterOverlap": [
+              0.9578488372093024
+            ]
+          }
+        },
+        {
+          "glyph": "atodhri",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10794,
+            "componentAreaRatios": [
+              0.9496691638869142
+            ],
+            "counterOverlap": [
+              0.9816583495819425
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9321266473451085
+            ],
+            "counterOverlap": [
+              0.979543276380581
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9323325814731275
+            ],
+            "counterOverlap": [
+              0.9776890558947863
+            ]
+          }
+        },
+        {
+          "glyph": "ngjtodhri",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 21385,
+            "componentAreaRatios": [
+              0.9456172156957393
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9414749414861672
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9413124950163464
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "ndtodhri",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 17640,
+            "componentAreaRatios": [
+              0.958031379722789
+            ],
+            "counterOverlap": [
+              0.9642635658914729
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.944956495227374
+            ],
+            "counterOverlap": [
+              0.959437984496124
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9454196722678564
+            ],
+            "counterOverlap": [
+              0.9590570719602978
+            ]
+          }
+        },
+        {
+          "glyph": "rtodhri",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 6444,
+            "componentAreaRatios": [
+              0.9470703326125013
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.940342566848591
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9347429821363471
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "ztodhri",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 15698,
+            "componentAreaRatios": [
+              0.937384462245817
+            ],
+            "counterOverlap": [
+              1.0
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.929342244552938
+            ],
+            "counterOverlap": [
+              1.0
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9337396997403771
+            ],
+            "counterOverlap": [
+              1.0
+            ]
+          }
+        },
+        {
+          "glyph": "ootodhri",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 17791,
+            "componentAreaRatios": [
+              0.9415789133664966
+            ],
+            "counterOverlap": [
+              0.9881569207994079
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9634149492861296
+            ],
+            "counterOverlap": [
+              0.9805082654823587
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9631194598815046
+            ],
+            "counterOverlap": [
+              0.980431510286001
+            ]
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.9830611010284331,
+            0.9908925318761385,
+            0.9332806502596523,
+            0.9262992831541219,
+            0.9432204406413691,
+            0.9437076805961777,
+            0.970430747263208,
+            0.9665954669514655,
+            0.9323325814731275,
+            0.9449101296968181,
+            0.9585485752374604,
+            0.9441107978918986,
+            0.9631109886071297,
+            0.931964854987948,
+            0.9445231743914638,
+            0.9465308982973987,
+            0.9434633308805495,
+            0.963141688496714
+          ],
+          "counterOverlap": [
+            1.0,
+            1.0,
+            0.9811035067530737,
+            0.9816296835212804,
+            0.9602977667493796,
+            0.9591949269368624,
+            0.9776890558947863,
+            0.9793233082706767,
+            0.9584973166368516,
+            0.9585755813953488,
+            0.9809332664325138,
+            0.9809428284854563
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9871094416936999,
+            0.9871094416936999,
+            0.929342244552938,
+            0.929342244552938,
+            0.9414749414861672,
+            0.9414749414861672,
+            0.9682847355668811,
+            0.9682766456960006,
+            0.9321266473451085,
+            0.944956495227374,
+            0.9475507835171213,
+            0.940342566848591,
+            0.9634087253134872,
+            0.9321266473451085,
+            0.944956495227374,
+            0.9475507835171213,
+            0.940342566848591,
+            0.9634149492861296
+          ],
+          "counterOverlap": [
+            1.0,
+            1.0,
+            0.9814120374316055,
+            0.981420401762505,
+            0.959437984496124,
+            0.959437984496124,
+            0.979543276380581,
+            0.979543276380581,
+            0.9605898804983474,
+            0.9605898804983474,
+            0.9805082654823587,
+            0.9805082654823587
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "bc069381d80f04bcca56236d033a21c47b2b687db532f1f479bdf13fb056b55a",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native rounded bodies and detached details retain their shapes and counts; smooth variable weight is visible beside Dad.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 186,
+      "source": "build/unicode-sources/noto/NotoSerifToto-Regular.ttf",
+      "sourceSha256": "d0e8fa7de36fec052bb7074b8d705acf5bf2d451148610f4c2f97214b7e759b2",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𞊐𞊔𞊘𞊜𞊡𞊥𞊩𞊭",
+      "nativeField": "𞊐𞊔𞊘𞊜𞊡𞊥𞊩𞊭",
+      "output": "output/font-review/supplemental-systematic-05/186.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "u1E2AD",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10118,
+            "componentAreaRatios": [
+              0.9622350830605192
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9700596981644588
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9703826475462997
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E29C",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 17331,
+            "componentAreaRatios": [
+              0.9427768872156125,
+              0.9920424403183024
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9525567304439901,
+              1.01364153088291
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9535017521836916,
+              1.019438444924406
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E2A1",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 15670,
+            "componentAreaRatios": [
+              0.9382141986260479
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.953105686681746
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9538415545590434
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E294",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 11633,
+            "componentAreaRatios": [
+              0.9653562916335635
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9633701032817943
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9631941805548015
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E2A5",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 11936,
+            "componentAreaRatios": [
+              0.9604174353027987,
+              0.9804575064384184
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9559373847045802,
+              0.9742463263141948
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9557096451774113,
+              0.9698924731182795
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E290",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 17417,
+            "componentAreaRatios": [
+              0.9488456024478792,
+              0.9873446498939072
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9548155174996256,
+              0.9797665959381631
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9553965595981123,
+              0.984332793084819
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u1E298",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 9954,
+            "componentAreaRatios": [
+              0.9749182550442619,
+              0.9705460913867219
+            ],
+            "counterOverlap": [
+              0.9885744461246729
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9712098253449238,
+              0.9715756514355464
+            ],
+            "counterOverlap": [
+              0.9866301817047118
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9724588302101079,
+              0.9728199320498301
+            ],
+            "counterOverlap": [
+              0.9866939611054247
+            ]
+          }
+        },
+        {
+          "glyph": "u1E2A9",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 14125,
+            "componentAreaRatios": [
+              0.9663165138930043,
+              0.9139247822317632
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9608013687500597,
+              0.9009618957189448
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9598941368078175,
+              0.9022600528324038
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.9685195689166194,
+            0.9721749006246451,
+            0.9553965595981123,
+            0.963559229848798,
+            0.9531756827456315,
+            0.9545726240286909,
+            0.9568814239157684,
+            0.9703741079795286,
+            0.9549352956102513,
+            0.9632041680234451,
+            0.9521496108237998,
+            0.9540862079273031,
+            0.9562851782363978,
+            0.9703063063063063,
+            0.9628118838806173,
+            0.960019006244909,
+            0.9687123039806996,
+            0.9721509433962264,
+            0.9735421166306696,
+            0.9714593430263866,
+            0.984332793084819,
+            0.9800753904146473,
+            0.9016730261226886,
+            0.9028185554903112,
+            1.0128962923159592,
+            1.0096774193548388
+          ],
+          "counterOverlap": [
+            0.9872834343261927,
+            0.9867747440273038
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9710104474040993,
+            0.9702962401818109,
+            0.9548155174996256,
+            0.9636502540203981,
+            0.9514443128572164,
+            0.9542183059511998,
+            0.9552374160261321,
+            0.9695286928852994,
+            0.9534600077031712,
+            0.9647886247228805,
+            0.9521022367976,
+            0.9531364289857996,
+            0.9559198158787048,
+            0.9697648489762822,
+            0.9612205307569546,
+            0.9614803914073847,
+            0.9709178908041097,
+            0.9713482251817266,
+            0.9731940027260336,
+            0.974168623589122,
+            0.9797665959381631,
+            0.9827364276520028,
+            0.9012468004293618,
+            0.9023856694733366,
+            1.013320214939832,
+            1.0112793338380015
+          ],
+          "counterOverlap": [
+            0.9867974122928094,
+            0.9865080603536233
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "eb0044e0be3c0c9d4ffbd64710ba6d22e9317671c01a28b2faa9397752f4ec43",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native rounded bodies and detached details retain their shapes and counts; smooth variable weight is visible beside Dad.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 187,
+      "source": "build/unicode-sources/noto/NotoSerifYezidi-Regular.ttf",
+      "sourceSha256": "b222255b6e83acf0569734741b143eb0bfc3b0f7b18e06f31cf7cc9e52d251e7",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𐺀𐺆𐺍𐺓𐺙𐺟𐺦𐺱",
+      "nativeField": "𐺀𐺆𐺍𐺓𐺙𐺟𐺦𐺱",
+      "output": "output/font-review/supplemental-systematic-05/187.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "fayezi",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 4879,
+            "componentAreaRatios": [
+              0.967544116570257
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9688255107270997
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.970392591626451
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "sadyezi",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 4333,
+            "componentAreaRatios": [
+              0.9787337900063456
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              1.0174425226573813
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              1.0230463266261114
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "cimyezi",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 8433,
+            "componentAreaRatios": [
+              0.9686912743892536
+            ],
+            "counterOverlap": [
+              0.9614915022465326
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.974131730970002
+            ],
+            "counterOverlap": [
+              0.9671078335612424
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9726388659963738
+            ],
+            "counterOverlap": [
+              0.9691798711474839
+            ]
+          }
+        },
+        {
+          "glyph": "rayezi",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10942,
+            "componentAreaRatios": [
+              0.9447026767110114
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.930597852219907
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.920264175257732
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "ewyezi",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10005,
+            "componentAreaRatios": [
+              0.9451758546116781
+            ],
+            "counterOverlap": [
+              0.978686794198875
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9495010813066738
+            ],
+            "counterOverlap": [
+              0.9772408507931
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9484184040258806
+            ],
+            "counterOverlap": [
+              0.976447598477836
+            ]
+          }
+        },
+        {
+          "glyph": "yotCircumyezi",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 15537,
+            "componentAreaRatios": [
+              0.9630734330364644,
+              0.9542846179338252
+            ],
+            "counterOverlap": [
+              0.9889283812401699
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9597966728280961,
+              0.9477874871365531
+            ],
+            "counterOverlap": [
+              0.9895971367357301
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.958519844822441,
+              0.947446519104736
+            ],
+            "counterOverlap": [
+              0.9927804190878676
+            ]
+          }
+        },
+        {
+          "glyph": "elifyezi",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 8753,
+            "componentAreaRatios": [
+              0.8915787159190853
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.893315743183817
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.8969896519285042
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "gafyezi",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 13186,
+            "componentAreaRatios": [
+              0.9368338688069805
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9449667453081838
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9450252951096122
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.8932601880877743,
+            0.8925117004680188,
+            0.958519844822441,
+            0.9614234449760766,
+            0.9487271745974634,
+            0.9484044943820225,
+            0.947446519104736,
+            0.9453763803422406,
+            0.9790383859557186,
+            1.0226344650565862,
+            0.924876946663439,
+            0.9728972732515034,
+            0.9476549931939117,
+            0.9703848662752772,
+            1.0246899134097824,
+            0.9239822652156389,
+            0.972155861273581,
+            0.944552119322491
+          ],
+          "counterOverlap": [
+            0.9774853500565437,
+            0.9771651923472536,
+            0.9927804190878676,
+            0.992141974218612,
+            0.9688370473537604,
+            0.9691691342971608
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.8972977726962907,
+            0.8931650246305419,
+            0.9597966728280961,
+            0.9606854838709677,
+            0.9491536137343396,
+            0.9494384864427358,
+            0.9477874871365531,
+            0.9457293580700611,
+            0.9686865174502662,
+            1.018857486861587,
+            0.9303313411646172,
+            0.9741647331786543,
+            0.9492276040032082,
+            0.9436449417956804,
+            0.9679926840420667,
+            1.0190174068651374,
+            0.9317757758216096,
+            0.9739565207303775
+          ],
+          "counterOverlap": [
+            0.9767926083373096,
+            0.9771945046999277,
+            0.9895971367357301,
+            0.9892758402658104,
+            0.9671290417114389,
+            0.9671362648631492
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "de4e63ed8eb60ff420890e9c44ccd0f6fe7097b7f5cd6f141447bbffb50af76c",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Native angular strokes, corners, bars and counter openings keep their identities; smooth pressure gives visible pen character.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    },
+    {
+      "number": 190,
+      "source": "build/unicode-sources/unicodia/PadaukBook-Regular.ttf",
+      "sourceSha256": "06013b8f057d6b067f7628c0872260e7c64d149030ba9cdaa9639f99c7be569b",
+      "baselineDecision": "pen-adaptation-needed",
+      "sample": "𑛐𑛓𑛕𑛘𑛛𑛞𑛠𑛣",
+      "nativeField": "𑛐𑛓𑛕𑛘𑛛𑛞𑛠𑛣",
+      "output": "output/font-review/supplemental-systematic-05/190.ttf",
+      "attemptErrors": [],
+      "amount": 0.7,
+      "glyphs": [
+        {
+          "glyph": "u116E0",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 6942,
+            "componentAreaRatios": [
+              0.9686154852067782
+            ],
+            "counterOverlap": [
+              0.983073727933541
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9570778619299297
+            ],
+            "counterOverlap": [
+              0.9543094496365524
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9593243374429667
+            ],
+            "counterOverlap": [
+              0.9578402366863905
+            ]
+          }
+        },
+        {
+          "glyph": "u116DB",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 8640,
+            "componentAreaRatios": [
+              0.9476013262061033
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9431490628594628
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9420946141246749
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u116D0",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 11658,
+            "componentAreaRatios": [
+              0.9644777420761145
+            ],
+            "counterOverlap": [
+              0.9920321434737344
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9530863998191594
+            ],
+            "counterOverlap": [
+              0.9871614445729113
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9607399675249362
+            ],
+            "counterOverlap": [
+              0.9862678147268409
+            ]
+          }
+        },
+        {
+          "glyph": "u116E3",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 9214,
+            "componentAreaRatios": [
+              0.9513891552555201
+            ],
+            "counterOverlap": [
+              1.0
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9247311827956989
+            ],
+            "counterOverlap": [
+              0.9997692130163859
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9250203748981255
+            ],
+            "counterOverlap": [
+              1.0
+            ]
+          }
+        },
+        {
+          "glyph": "u116D3",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10996,
+            "componentAreaRatios": [
+              0.9559436357645417
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9552361754501579
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.960016602102933
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u116DE",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 9723,
+            "componentAreaRatios": [
+              0.9019579521746108
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.8973840475044134
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.8912352406902816
+            ],
+            "counterOverlap": []
+          }
+        },
+        {
+          "glyph": "u116D5",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 10016,
+            "componentAreaRatios": [
+              0.9695070095301555
+            ],
+            "counterOverlap": [
+              0.9873170192785726
+            ]
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9627561174479874
+            ],
+            "counterOverlap": [
+              0.9818041208639452
+            ]
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.968227003900843
+            ],
+            "counterOverlap": [
+              0.9827111984282908
+            ]
+          }
+        },
+        {
+          "glyph": "u116D8",
+          "status": "adapted",
+          "amount": 0.7,
+          "checks": {
+            "amount": 0.7,
+            "bend": 0,
+            "changedPixels": 6552,
+            "componentAreaRatios": [
+              0.9605588963565618
+            ],
+            "counterOverlap": []
+          },
+          "vectorChecks": {
+            "componentAreaRatios": [
+              0.9811195613724797
+            ],
+            "counterOverlap": []
+          },
+          "scale384Checks": {
+            "componentAreaRatios": [
+              0.9717039800995025
+            ],
+            "counterOverlap": []
+          }
+        }
+      ],
+      "wholeFieldChecks": {
+        "384": {
+          "componentAreaRatios": [
+            0.968227003900843,
+            0.9729152265443348,
+            0.9573790908461911,
+            1.0054452274183217,
+            0.960016602102933,
+            1.0022421524663676,
+            0.9607399675249362,
+            0.9567748256584635,
+            0.9604124112440424,
+            0.9499277804525759,
+            0.8931167651067696,
+            0.9232231779085559,
+            0.895617529880478,
+            0.9212791013678775,
+            0.9420946141246749,
+            0.9475915221579961
+          ],
+          "counterOverlap": [
+            0.9862678147268409,
+            0.9847888996067374,
+            0.9587020648967551,
+            0.955456570155902,
+            0.9827111984282908,
+            0.9830202028142442,
+            1.0,
+            1.0
+          ]
+        },
+        "1024": {
+          "componentAreaRatios": [
+            0.9627561174479874,
+            0.9627476766614063,
+            0.9552361754501579,
+            0.9552361754501579,
+            0.9811195613724797,
+            0.9811195613724797,
+            0.9530863998191594,
+            0.9530863998191594,
+            0.9570778619299297,
+            0.9570778619299297,
+            0.9247311827956989,
+            0.9247311827956989,
+            0.8973840475044134,
+            0.8973840475044134,
+            0.9431490628594628,
+            0.9431490628594628
+          ],
+          "counterOverlap": [
+            0.9871614445729113,
+            0.9871614445729113,
+            0.9543094496365524,
+            0.9543094496365524,
+            0.9818041208639452,
+            0.9818149678502773,
+            0.9997692130163859,
+            0.9997692130163859
+          ]
+        }
+      },
+      "shapingUnchanged": true,
+      "layoutTablesUnchanged": [
+        "GDEF",
+        "GPOS",
+        "GSUB",
+        "hmtx"
+      ],
+      "nativeBoundsPreserved": true,
+      "outputSha256": "c804e3a0d3aecd0705d69419c3d3a4ff43b976c8fb6dbea3b535ef59c6a61f5d",
+      "rawSourceAttemptErrors": [],
+      "decision": "accept-sampled-pressure-for-production-group",
+      "visualObservation": "Supplemental Padauk bodies retain thin open native shapes; pressure stays modest.",
+      "recipeProposal": {
+        "amount": 0.7,
+        "category": "guarded-native-source-body"
+      },
+      "evidenceScope": "Native-owned inventory sample at22/44px beside Dad, with a repeated sample field to check inter-glyph geometry. This is not claimed as a linguistic sentence."
+    }
+  ],
+  "limitations": [
+    "Sample-level style acceptance does not establish full font inventory adaptation or linguistic correctness.",
+    "Most fields are native-owned inventory samples rather than full natural-language sentences; source shaping and positions are checked directly.",
+    "App routing, balloons, browser and export are not executed by these local specimens.",
+    "All recipes require coordinator integration and full-source geometry/native-layout guards; unsafe individual glyphs may retain exact native source."
+  ],
+  "inspectionSha256": {
+    "output/font-review/supplemental-systematic-05/review.json": "212d7a0566fb6d8f926a21b65dd5da00dffcca9934dca0279d4e354f0d15596e",
+    "output/font-review/supplemental-systematic-05/page-1.png": "c5bf4db91efe596ed794e0de47ff0b4d0627c13c762dc0d6212ca7c824e67a11",
+    "output/font-review/supplemental-systematic-05/page-2.png": "64a2f80adc939c22fe29a407b79c308c0702ec8c6beff34b6e4a957e5b12fbb0",
+    "output/font-review/supplemental-systematic-05/page-3.png": "4dc094a6e71f7b0e555013906400dd7e0938c8d403b1dae60618d98c26a1f228"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "🗣️",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1f5e3.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f5e3.svg",
+      "sha256": "e099f4e3cfc77542d09fc1da536500a340751b4995a3a93bca0ccc1250a51c41",
+      "git_blob_sha1": "f6fc10955233273b59ab4d7fe6c923488da02dc8",
+      "size": 1870,
+      "shapeElementsIncludingDefinitions": 4,
+      "include_sequences": [
+        "🗣️",
+        "🗣"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "👤",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1f464.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f464.svg",
+      "sha256": "da981380e98a792dc7c11cd88e6193ae219a0c450adf2aaf16b80294846c402a",
+      "git_blob_sha1": "a9af841f97dfc024379d6759014a341cf61fade0",
+      "size": 660,
+      "shapeElementsIncludingDefinitions": 1,
+      "include_sequences": [
+        "👤"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "👥",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1f465.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f465.svg",
+      "sha256": "07de7af8ebd92ff8dbb559631a7e4139ff29b9d94f9f3ebbafb5346388ad5293",
+      "git_blob_sha1": "fe6abb14e60ae5aa285401a8ff333544643017db",
+      "size": 2285,
+      "shapeElementsIncludingDefinitions": 4,
+      "include_sequences": [
+        "👥"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🫂",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1fac2.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1fac2.svg",
+      "sha256": "c07542b4dd2eca69f93d9352e4afcd9776e096b8afd8c8e571ee2f22e4745bce",
+      "git_blob_sha1": "a28bb86279212682546cd9813a2a01e54228c296",
+      "size": 2618,
+      "shapeElementsIncludingDefinitions": 5,
+      "include_sequences": [
+        "🫂"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "👪",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1f46a.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f46a.svg",
+      "sha256": "2b7141423053e005ae535fd4f29d664960ef701c7787f86d9d05119d79009a2a",
+      "git_blob_sha1": "6e50b4b1548daac520a3e20e698e18b7f2b5a3b4",
+      "size": 1840,
+      "shapeElementsIncludingDefinitions": 9,
+      "include_sequences": [
+        "👪"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧑‍🧑‍🧒",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1f9d1_200d_1f9d1_200d_1f9d2.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9d1_200d_1f9d1_200d_1f9d2.svg",
+      "sha256": "4e9cb1d6368dc6c4e55d861e5b6636f9ba144b4d78a01a00983bbbb887d927e2",
+      "git_blob_sha1": "e5599c9776423c9775345fbb4d4c157392324f32",
+      "size": 1840,
+      "shapeElementsIncludingDefinitions": 9,
+      "include_sequences": [
+        "🧑‍🧑‍🧒"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧑‍🧑‍🧒‍🧒",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1f9d1_200d_1f9d1_200d_1f9d2_200d_1f9d2.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9d1_200d_1f9d1_200d_1f9d2_200d_1f9d2.svg",
+      "sha256": "d988aba813a53608b1506c61bf0c729327024fb338264129303f441d4f5895be",
+      "git_blob_sha1": "a703b3b23eb11c832ac84ab3d42ec3d7a55e845b",
+      "size": 2631,
+      "shapeElementsIncludingDefinitions": 12,
+      "include_sequences": [
+        "🧑‍🧑‍🧒‍🧒"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧑‍🧒",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1f9d1_200d_1f9d2.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9d1_200d_1f9d2.svg",
+      "sha256": "3230941a55218d53d2a52d934e9e09f7c2bbc0b525cb9aac598b4b2675224b34",
+      "git_blob_sha1": "38f05c3e3f79136e3738703f814dec17168f150b",
+      "size": 1492,
+      "shapeElementsIncludingDefinitions": 7,
+      "include_sequences": [
+        "🧑‍🧒"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧑‍🧒‍🧒",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1f9d1_200d_1f9d2_200d_1f9d2.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9d1_200d_1f9d2_200d_1f9d2.svg",
+      "sha256": "65727be977f81619907be347210e0905f351025f099b046c1d5bc8c8ae2d23dc",
+      "git_blob_sha1": "564163f3fb0381fd95547c73837f6e1e0e557546",
+      "size": 2056,
+      "shapeElementsIncludingDefinitions": 10,
+      "include_sequences": [
+        "🧑‍🧒‍🧒"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "👣",
+      "path": "build/unicode-sources/noto-emoji-person-symbols-svg/emoji_u1f463.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f463.svg",
+      "sha256": "f509512f3d16871ed799adf42aba9847b59b71917efb4e50198f0d4774a37261",
+      "git_blob_sha1": "d43961ea61ab1607ca87d4c8b86ef6d7532d62e3",
+      "size": 1344,
+      "shapeElementsIncludingDefinitions": 12,
+      "include_sequences": [
+        "👣"
+      ],
+      "build_target": "emoji-artwork"
+    }
+  ]
+}

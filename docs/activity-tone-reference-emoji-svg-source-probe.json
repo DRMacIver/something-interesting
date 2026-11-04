@@ -1,0 +1,26 @@
+{
+  "status": "Source candidates only; no production coverage",
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "💆🏿",
+      "path": "build/unicode-sources/noto-emoji-activity-tone-reference-svg/emoji_u1f486_1f3ff.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f486_1f3ff.svg",
+      "sha256": "e18ee94389766559d74df515a34b896b393a0b396a48c42315053f060fe40da9",
+      "git_blob_sha1": "fe8a3dfb9fec30a8a8089804a083568b57178482",
+      "size": 4155,
+      "shapeElementsIncludingDefinitions": 14
+    },
+    {
+      "sequence": "🧑🏻‍🐰‍🧑🏿",
+      "path": "build/unicode-sources/noto-emoji-activity-tone-reference-svg/emoji_u1f9d1_1f3fb_200d_1f430_200d_1f9d1_1f3ff.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9d1_1f3fb_200d_1f430_200d_1f9d1_1f3ff.svg",
+      "sha256": "6e69b9522f1a156b6b415913bf53fc29ed43e9854e417261d4df7ed0bfd01efa",
+      "git_blob_sha1": "a856e37285bc57f29c34e65c1b98d1c87bfc2528",
+      "size": 35318,
+      "shapeElementsIncludingDefinitions": 76
+    }
+  ]
+}

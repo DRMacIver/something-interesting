@@ -1,0 +1,9 @@
+{
+  "publisher": "GNU Unifont",
+  "version": "18.0.01",
+  "builder": "tai-yo",
+  "files": [],
+  "sourceManifest": "data/font-sources/tolong.json",
+  "licence": "assets/fonts/licenses/Unifont-OFL.txt",
+  "notes": "55 guarded horizontal forms, body-specific mark anchors and adjacent medial/rhyme marks; uses only the verified donor."
+}

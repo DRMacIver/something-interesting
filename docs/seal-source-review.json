@@ -1,0 +1,54 @@
+{
+  "status": "provisional native outlines, not final comic styling",
+  "unicode": "18.0.0",
+  "mapped": 10970,
+  "source_review_status": {
+    "approved": 1197,
+    "manual": 22,
+    "aligned": 9751
+  },
+  "rejected": [
+    {
+      "codepoint": "3E25D",
+      "reason": "C-04631 crop depicts adjacent C-04632 instead"
+    },
+    {
+      "codepoint": "3E4E9",
+      "reason": "C-05270 crop contains a damaged C-05271 instead"
+    },
+    {
+      "codepoint": "3E69A",
+      "reason": "C-05696 crop depicts adjacent C-05697 instead"
+    },
+    {
+      "codepoint": "3EEB1",
+      "reason": "C-07716 crop depicts C-07714 instead"
+    },
+    {
+      "codepoint": "3EEB3",
+      "reason": "C-07718 crop contains only the right component of C-07719"
+    },
+    {
+      "codepoint": "3EEB6",
+      "reason": "C-07721 crop depicts C-07720 instead"
+    },
+    {
+      "codepoint": "3EFC6",
+      "reason": "C-07987 crop depicts adjacent C-07986 instead"
+    },
+    {
+      "codepoint": "3F218",
+      "reason": "C-08570 crop contains only part of C-08566 and a page rule"
+    },
+    {
+      "codepoint": "3F2B9",
+      "reason": "C-08731 crop depicts C-08730 instead"
+    },
+    {
+      "codepoint": "3F2BA",
+      "reason": "C-08732 crop contains a truncated C-08733 and a page rule"
+    }
+  ],
+  "validation": "Each included SVG data-source and provenance sequence match the Unicode 18 CCZ reference. This does not prove each automatic crop is correct.",
+  "provenance": "build/unicode-sources/kaiyuan/data/provenance/glyphs.csv"
+}

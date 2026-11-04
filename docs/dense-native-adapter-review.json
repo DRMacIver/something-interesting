@@ -1,0 +1,375 @@
+{
+  "date": "2026-11-03",
+  "status": "Frozen scalable adapter ready for intentional production integration; no primary/variant production build performed by this task.",
+  "method": "native-normal-finer-pen-v1",
+  "recipeSha256": "a7213c7e508d964bd3be6fc14f8bb1b5982350ff307126106c517e379515c99c",
+  "kernelFiles": [
+    "tools/font/dense_native_adapter.py",
+    "tools/font/dense_geometry_guards.py",
+    "tools/font/native_contrast_pen.py",
+    "tools/font/native_contour_pressure.py",
+    "tools/font/dense_display_raster.py"
+  ],
+  "settings": {
+    "resolution": 1024,
+    "secondaryResolution": 384,
+    "amounts": [
+      0.01,
+      0.0075,
+      0.005
+    ],
+    "contrastMode": "inward-median",
+    "flex": [
+      0.003,
+      0
+    ],
+    "nativeFallbackFlex": [
+      0.003
+    ],
+    "minimumComponentAreaRatio": 0.75,
+    "minimumCounterOverlap": 0.75,
+    "subpixelPhases": [
+      0,
+      0.5
+    ]
+  },
+  "visualDecision": "Inward native-normal thinning toward median pen width plus small smooth contour flex is accepted as the conservative finer-ink dense direction. Extreme fine details keep guarded native stroke widths or unchanged native drawings rather than forced monoline.",
+  "corpusFixture": "tools/font/specimens/dense-native-fields.json",
+  "reviewedArtifacts": {
+    "output/font-review/dense-native-adapter/expanded-comparison.png": "86b6bb54af7f3dba4cbb4526d61193e2869dab257195ce7667fcd8ea9230f98d",
+    "output/font-review/dense-native-adapter/expanded-comparison.json": "a91382ffa3066da0668b3c18a01bf76877762b36c92229d6044ac8a2307e069f",
+    "output/font-review/dense-native-adapter/197-han-comparison.png": "20d23b4ba3a119bf80a04d09cc91cae24e66d9d4894b6ef72f0329815848b32a",
+    "output/font-review/dense-native-adapter/review-expanded.json": "764686b37d6c45a56115d9f244c1169089fe808deefd1f05634df4c25b139ed3",
+    "output/font-review/dense-native-adapter/strict-whole-field-checks.json": "879a3c31a8a18bb20600e374e3baf5048e8c761eb9869545c8d465ee84b1b873"
+  },
+  "scope": {
+    "fields": 7,
+    "sampleGlyphs": 49,
+    "counts": {
+      "dense-native-pen": 40,
+      "guarded-native-flex": 1,
+      "native-retained-guard": 8,
+      "native-blank": 0
+    },
+    "source197Han": "PinnedUnicode18ScriptHan intersect source197manifest ranges subtractallpriorfont/basecoverage:105assignedpoints (104FA70..FAD9 plus20000). requiredFonts independently selectedJigmo. Eight compatibility forms chosen by sparse/dense native point count; separate20000field.",
+    "khitan": "All original eight characters shaped together as a complete native stacked field; arrangement and positions preserved.",
+    "tangut": "All original eight native signs shaped together; glyph study, no translation claimed."
+  },
+  "cases": [
+    {
+      "sourceNumber": 176,
+      "caseId": "176",
+      "text": "𘬀𘭃𘮆𘯉𘰌𘱏𘲒𘳕",
+      "source": "output/font-review/dense-native-baselines/042e43ff081e.woff2",
+      "originalFile": "assets/fonts/scripts/042e43ff081e.woff2",
+      "inputFontSha256": "97534534b8eafe6f330887b634b84f2da41359978fb013816c72df51e21cf4b3",
+      "nativeInputSha256": "415c66d6bd9f2626870cd9b83461f5c9b95880d59be602331a2716e7410a2871",
+      "output": "output/font-review/dense-native-adapter/176.ttf",
+      "outputSha256": "e4e90b236186185936968f81a35c0db7f753807bb867c6a43596d93f389c772f",
+      "glyphs": 8,
+      "counts": {
+        "dense-native-pen": 8
+      },
+      "retentions": []
+    },
+    {
+      "sourceNumber": 183,
+      "caseId": "183",
+      "text": "𗏻𗒍𗔟𗖱𗙄𗛖𗝨𗟺",
+      "source": "output/font-review/dense-native-baselines/b18cf2344e84.woff2",
+      "originalFile": "assets/fonts/scripts/b18cf2344e84.woff2",
+      "inputFontSha256": "0a8893958a8f73e0c4707388120750151c2315db91f65ad069f727dd4c4bcc4e",
+      "nativeInputSha256": "388d0b2fdb252d7b94f825fabdecdc8075e0b8f94e1a021b0c59128901a540c8",
+      "output": "output/font-review/dense-native-adapter/183.ttf",
+      "outputSha256": "f268f6b716cc92e2afab9010f5d8ac9180b61987b25843f710f7c11efa5a90cc",
+      "glyphs": 8,
+      "counts": {
+        "dense-native-pen": 8
+      },
+      "retentions": []
+    },
+    {
+      "sourceNumber": 197,
+      "caseId": "197",
+      "text": "ᄀᄤᅉᅯᆔᆸᇝ〲",
+      "source": "output/font-review/dense-native-baselines/b3e108cd8e7e.woff2",
+      "originalFile": "assets/fonts/scripts/b3e108cd8e7e.woff2",
+      "inputFontSha256": "1c9b6634700f3a98518e4eea931b179cac50510891f16e960d334669fd2fe22f",
+      "nativeInputSha256": "75ed7b49b1cf50c0f531b2363ff3e9e93a12e2b5a9e3fb76bd4495af039a4802",
+      "output": "output/font-review/dense-native-adapter/197.ttf",
+      "outputSha256": "908f7173f07ab8d71c1669d30740684a52739e99e3cc7f41f1ec025ea315a1bc",
+      "glyphs": 8,
+      "counts": {
+        "dense-native-pen": 8
+      },
+      "retentions": []
+    },
+    {
+      "sourceNumber": 198,
+      "caseId": "198",
+      "text": "𭟃𭡕𭣨𭥺𭨌𭪟𭬱𭯂",
+      "source": "output/font-review/dense-native-baselines/9f38c185324b.woff2",
+      "originalFile": "assets/fonts/scripts/9f38c185324b.woff2",
+      "inputFontSha256": "92ed0765abbcc1e216a463714c7f48dcc930479519373774f6447312e02ad8b1",
+      "nativeInputSha256": "9597d19a5b740a90f493776e09e4bee999473ffd391be274c939fd7f1eb44c79",
+      "output": "output/font-review/dense-native-adapter/198.ttf",
+      "outputSha256": "bab70f61c3492b8e28fd70e825ac2c4c46af3c58cd8771ebf1dd3c272888f610",
+      "glyphs": 8,
+      "counts": {
+        "dense-native-pen": 3,
+        "guarded-native-flex": 1,
+        "native-retained-guard": 4
+      },
+      "retentions": [
+        {
+          "glyph": "u2D7C3",
+          "gid": 1,
+          "cacheKey": "9c9f2389f2f00d30a85b6b4adcf1bd7a13fe9cb6316ec69c9628d4040b03dfe0",
+          "status": "native-retained-guard",
+          "reason": "Counter retention below75percent",
+          "nativeBoundsPreserved": true
+        },
+        {
+          "glyph": "u2D855",
+          "gid": 147,
+          "cacheKey": "f0cb05a3800dd2f3c17829857566390662c696cd3c9cfb65d79269bbf200708f",
+          "status": "native-retained-guard",
+          "reason": "Merged or lost native component",
+          "nativeBoundsPreserved": true
+        },
+        {
+          "glyph": "u2D97A",
+          "gid": 440,
+          "cacheKey": "0df7b4abb685848ae183f73cb66543f7b0468cb26933bf436022ef3d4d387763",
+          "status": "guarded-native-flex",
+          "flex": {
+            "method": "injective-native-contour-field-experiment",
+            "amplitude": 0.003,
+            "lipschitzBound": 0.02827433388230814,
+            "segments": 145,
+            "tolerance": 0.2,
+            "limitations": [
+              "Nonjoining isolated experiment only",
+              "Adaptive quadratic approximation is not exact continuous field",
+              "Requires native-counter and visual checks before production"
+            ]
+          },
+          "vectorGuards": {
+            "1024": {
+              "components": 5,
+              "minComponentAreaRatio": 0.992277515213295,
+              "maxComponentAreaRatio": 1.0097582945503678,
+              "counters": 2,
+              "minCounterOverlap": 0.9931818181818182
+            },
+            "384": {
+              "components": 5,
+              "minComponentAreaRatio": 0.991277578245254,
+              "maxComponentAreaRatio": 1.015005359056806,
+              "counters": 2,
+              "minCounterOverlap": 0.9998056365403304
+            },
+            "384@0,0.5": {
+              "components": 5,
+              "minComponentAreaRatio": 0.9912126537785588,
+              "maxComponentAreaRatio": 1.0105820105820107,
+              "counters": 2,
+              "minCounterOverlap": 0.996307094266278
+            },
+            "384@0.5,0": {
+              "components": 5,
+              "minComponentAreaRatio": 0.9845524296675192,
+              "maxComponentAreaRatio": 1.0225321888412018,
+              "counters": 2,
+              "minCounterOverlap": 0.9853305391503143
+            },
+            "384@0.5,0.5": {
+              "components": 5,
+              "minComponentAreaRatio": 0.9910087719298246,
+              "maxComponentAreaRatio": 1.013481534600215,
+              "counters": 2,
+              "minCounterOverlap": 0.981904761904762
+            }
+          },
+          "nativeBoundsPreserved": true,
+          "penRejection": "Changed topology"
+        },
+        {
+          "glyph": "u2DA0C",
+          "gid": 586,
+          "cacheKey": "33670f660d0756c4d7623b4cdceb9946621e41419ebd1e9fbce957f2600561ab",
+          "status": "native-retained-guard",
+          "reason": "Changed topology",
+          "nativeBoundsPreserved": true
+        },
+        {
+          "glyph": "u2DBC2",
+          "gid": 1024,
+          "cacheKey": "4f9496301ae42b89f31b7769b0ac55aa41d11b13e29a748ac81496985a086213",
+          "status": "native-retained-guard",
+          "reason": "Merged or lost native component",
+          "nativeBoundsPreserved": true
+        }
+      ]
+    },
+    {
+      "sourceNumber": 199,
+      "caseId": "199",
+      "text": "𲞤𲠸𲣊𲥛𲧮𲪀𲬒𲮣",
+      "source": "output/font-review/dense-native-baselines/6170ad79af61.woff2",
+      "originalFile": "assets/fonts/scripts/6170ad79af61.woff2",
+      "inputFontSha256": "87942dd78b102a9a3c5b24cf618023670028374d841bca885ab4004b767ffe3e",
+      "nativeInputSha256": "86b3b1b7d7b8b0dcdfe79ebc9f2775ee41f21c2ec7e6206fe7c24e0485bcbb8b",
+      "output": "output/font-review/dense-native-adapter/199.ttf",
+      "outputSha256": "fc14b8a520ce89ee6230aa0dc358b9b5e35d1c740beb9a6b4bd626a5b1a3ab54",
+      "glyphs": 8,
+      "counts": {
+        "dense-native-pen": 8
+      },
+      "retentions": []
+    },
+    {
+      "sourceNumber": 197,
+      "caseId": "197-han",
+      "text": "直画嗢全滋響嬨變",
+      "source": "output/font-review/dense-native-baselines/0b0874ffdbd6.woff2",
+      "originalFile": "assets/fonts/scripts/0b0874ffdbd6.woff2",
+      "inputFontSha256": "4b5fab9276d26bba90d162aa00ba05c155dc9117de72a8122fc651d224448f0c",
+      "nativeInputSha256": "2080a522feb2037b401ec233615e12674ab5a3579b3283c700e121d0310d6b6e",
+      "output": "output/font-review/dense-native-adapter/197-han.ttf",
+      "outputSha256": "1965f93c49f75697a58590cacef3ee8f2a1d7aac133e4cdf3b5d220b7fcf5468",
+      "glyphs": 8,
+      "counts": {
+        "dense-native-pen": 4,
+        "native-retained-guard": 4
+      },
+      "retentions": [
+        {
+          "glyph": "uniFA81",
+          "gid": 827,
+          "cacheKey": "3205879a33e42de39219af2643d955cb6add7ea764c1a5881aee71da1371fcec",
+          "status": "native-retained-guard",
+          "reason": "Changed topology",
+          "nativeBoundsPreserved": true
+        },
+        {
+          "glyph": "uniFA99",
+          "gid": 851,
+          "cacheKey": "d934d03c1bab1a8f1884e1c313e7c28c51f10078fd381b4e82ae13a3c4f6d1ec",
+          "status": "native-retained-guard",
+          "reason": "Counter retention below75percent",
+          "nativeBoundsPreserved": true
+        },
+        {
+          "glyph": "uniFAC0",
+          "gid": 890,
+          "cacheKey": "9543cea92804105c035aeb6cb8ad271183b721f578c42cf2d1cf308a5101604c",
+          "status": "native-retained-guard",
+          "reason": "Changed topology",
+          "nativeBoundsPreserved": true
+        },
+        {
+          "glyph": "uniFACA",
+          "gid": 900,
+          "cacheKey": "ef5128c9cdc55f1f766919b91c6c9d4ba41f04b04b43bfcb077c18385d5b7d2e",
+          "status": "native-retained-guard",
+          "reason": "Changed topology",
+          "nativeBoundsPreserved": true
+        }
+      ]
+    },
+    {
+      "sourceNumber": 197,
+      "caseId": "197-extb",
+      "text": "𠀀",
+      "source": "output/font-review/dense-native-baselines/4ab0e1dd91b7.woff2",
+      "originalFile": "assets/fonts/scripts/4ab0e1dd91b7.woff2",
+      "inputFontSha256": "5678ed8db110fdaa663f7e4fee1eb5720baf2ad1d56179ee001ad2302ce83a61",
+      "nativeInputSha256": "3ccf4bb7bfe56a23fede5541e3c2717691cf07c26d60fae12e3e95db4a59ecd3",
+      "output": "output/font-review/dense-native-adapter/197-extb.ttf",
+      "outputSha256": "c6c753191aeffb4ec34936f30d99063c679f1b1ef0750afc6872c28cfe674928",
+      "glyphs": 1,
+      "counts": {
+        "dense-native-pen": 1
+      },
+      "retentions": []
+    }
+  ],
+  "guards": [
+    "Native contour count retained. Directional normal displacement is capped to20percent estimated opposing stroke width; inward-only mode does not deliberately widen narrow channels.",
+    "Small contour flex amplitude.003 has injective continuous-field bound3πa<1; native curves are adaptively approximated and sample geometry guards remain necessary.",
+    "Every proposed drawing fits exact original glyf bbox; native LSB/advance/headem and compiledGSUB/GPOS/GDEF/hmtx are unchanged. Original compounds are flattened from immutable native input before components are adapted.",
+    "1024px source/candidate guard plus four bounded384px phase guards preserve native component/count mapping, component ink area75..120percent and counter overlap≥75percent. Original drawings are restored after all proposed pen/native-flex candidates fail.",
+    "All seven complete384px raw fields pass the same dense geometry criteria, including explicit unchanged originals. Pore-filtered review also passed earlier; raw pass is the recorded gate here.",
+    "Cmap14 bytes and variation shaping are independently covered by focused tests; the adapter never edits cmap."
+  ],
+  "reportSchema": {
+    "manifestKey": "denseTreatment",
+    "recipeToken": ":dense-native-pen:a7213c7e508d964bd3be6fc14f8bb1b5982350ff307126106c517e379515c99c",
+    "call": "apply(font,source,cache_dir=...,report_dir=ROOT/'output/font-review/dense-production')",
+    "reportPath": "output/font-review/dense-production/<nativeInputSha256>-<recipeSha256>.json",
+    "conciseFields": [
+      "method",
+      "recipeSha256",
+      "settings",
+      "glyphs",
+      "counts",
+      "nativeInputSha256",
+      "nativeEmUnchanged",
+      "layoutTablesUnchanged",
+      "nativeBoundsPreserved",
+      "source",
+      "sourceProfile",
+      "report"
+    ],
+    "detailedFields": "Full per-glyph original name,gid,cacheKey,status,proposed pen/flex parameters,1024/384 minima/maxima,guard rejection reasons.",
+    "profileOnlyCaveat": "The source/profile parameter selects a treatment family. Mixed DadCJKVariants input needs its actual native input/donor list recorded by the variant builder; profileJigmo.ttf must not imply one raw donor.",
+    "stability": "Production reports omit timing/cache-hit fields and machineabsolute source paths; actual input identifier is decodedSFNTsha, not encodedWOFF2sha."
+  },
+  "cache": {
+    "path": "build/font-cache/dense-native/<keyprefix>/<key>.json and.glyf",
+    "keyInputs": [
+      "complete recipe/kernelhash",
+      "nativeem",
+      "originalglyphname usedforflexphase",
+      "nativehmtx",
+      "nativeglyfbbox",
+      "nativeSVGgeometry"
+    ],
+    "deduplication": "Repeated native closure drawings across shards with identical key share work. No unmeasured full200k dedup ratio is claimed.",
+    "atomicWrites": true,
+    "privateWarmerCaveat": "Pass cache_dir explicitly; changing module CACHE does not override the function default bound at definition."
+  },
+  "performance": {
+    "sampleGlyphs": 49,
+    "coldSeconds": 17.193928874097764,
+    "warmSeconds": 4.853180167265236,
+    "warmCacheHits": 49,
+    "netColdMinusWarmSecondsPerGlyph": 0.25185201442515365,
+    "serial200kNetHours": 13.991778579175202,
+    "idealThreeWorkerNetHours": 4.6639261930584,
+    "limits": "Small rare-dense corpus and font serialization overhead; extrapolation only, excludes I/O/concurrency/sourceclosure distribution. No mass build started. Native transform alone measured roughly.025s/glyph by trackB; validation/cache/report costs dominate this end-to-end benchmark."
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest -q tests/test_dense_skeleton.py",
+    "terminal": "7passed in1.61s,7knownPyMuPDF/SWIG deprecation warnings",
+    "scope": "Source centerline oracle, native bbox/HB/cache for oracle+fast adapters, zero-area retention, cmap14/UVS mapping, stable relative production report, cached DisplayList pixel identity at1024/384fractional phases."
+  },
+  "rejectedOptimizations": [
+    "Nearest-skeleton EDT loses weighted radius-envelope semantics and reduced accepted corpus from38/40 to21/40; not adopted.",
+    "24radius-band EDT union measured.581s alone vs.550s complete reviewed disk kernel on975×976mask; not adopted.",
+    "512px skeleton reconstruction cut cold49-scale cost but stayed~.56s/glyph on first40 and needs independent1024checks; retained as diagnostic oracle, not chosen bulk method.",
+    "16phase all-glyph stress was an extra validation experiment; production uses four bounded384phases and complete-field/native contour checks."
+  ],
+  "remainingProductionWork": [
+    "Coordinator/trackB explicitly integrate separate denseTreatment hook after frozen regularTTwarmers; do not silently enable dense stage in those workers.",
+    "Run selected primary dense source builds with resumable caches; record real adapted/native-retained/nativeblank glyph totals and native-reader limits.",
+    "Coordinator adapts DadCJKVariants using same profile while preserving its mixed native input/donor provenance; rebuild92markedCJKcompanions and combining catalog as required.",
+    "Run source-to-derived identity/variation tests, native-shaping regressions, provenance/output hash audits, and affected offline22/44 source fields on final assets."
+  ],
+  "limitations": [
+    "Sample native glyph identity/shaping checks do not establish linguistic fluency or every rare glyph.",
+    "Eight explicit unchanged native samples remain by design under detail-preservation guards; this is not hidden system fallback.",
+    "No browser calls, remote service, production font overwrite or mass builder invocation occurred in this task."
+  ]
+}

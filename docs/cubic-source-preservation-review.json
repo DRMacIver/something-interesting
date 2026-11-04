@@ -1,0 +1,773 @@
+{
+  "date": "2026-11-03",
+  "status": "Corrected normal public CFF build integrated and exact accepted candidate SHA; native U+18F6C charstring remains byte-exact; all 1301 widths equal hmtx; final full current suite pending.",
+  "source": "UFSZeroExt.otf",
+  "sourceNumber": 192,
+  "policy": {
+    "module": "tools/font/cubic_source_preservation.py",
+    "sha256": "ae6c68e6e6a2b187afa77c3b99d99f0e37bc25cc124eeec2b029f2548a677d1f",
+    "codepoints": [
+      102252
+    ],
+    "glyphs": [
+      {
+        "gid": 562,
+        "glyph": "u18F6C",
+        "charstringSha256": "15e6dade0029cfffa61c9c0b94076c18a1e2e6812ec3090834b23a9006fb9280"
+      }
+    ],
+    "reason": "Retain exact native U+18F6C charstring after whole-field384px component merge"
+  },
+  "recipeToken": ":cubic-source-preservation:ae6c68e6e6a2b187afa77c3b99d99f0e37bc25cc124eeec2b029f2548a677d1f",
+  "reason": "Original adapted fullfield has18→17inkcomponents at384 while1024passes. All8one-at-a-time nativecharstring restorations tested; U+18F6C alone is the unique single-glyph fix. No inkcomponent removal/filter waiver.",
+  "nativeIdentity": "U+18F6C lies inside pinnedUnicode18Jurchen character range. Exact Type2 nativecharstring retained, including original subroutine/private references; source frame, cmap, metrics and kind retained.",
+  "probes": {
+    "text": "՘𘷮𘺳𘽬𙀤𙃝𙆣🟿",
+    "source": "output/font-review/supplemental-production-baselines/1a10ab6b39c1.woff2",
+    "originalCandidate": "output/font-review/supplemental-cubic-production/UFS-candidate.woff2",
+    "probes": [
+      {
+        "codepoint": 1368,
+        "glyph": "uni0558",
+        "gid": 1,
+        "candidate": "output/font-review/supplemental-cubic-production/field-retention-probes/558.woff2",
+        "checks": [
+          {
+            "size": 384,
+            "source": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8650,
+                19369
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                17,
+                2
+              ],
+              "filteredTopology": [
+                17,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8584,
+                19336
+              ]
+            },
+            "shapingUnchanged": true,
+            "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+            "status": "reject-whole-field",
+            "reason": "Reconstruction changed topology"
+          }
+        ]
+      },
+      {
+        "codepoint": 101870,
+        "glyph": "u18DEE",
+        "gid": 193,
+        "candidate": "output/font-review/supplemental-cubic-production/field-retention-probes/18DEE.woff2",
+        "checks": [
+          {
+            "size": 384,
+            "source": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8650,
+                19369
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                17,
+                2
+              ],
+              "filteredTopology": [
+                17,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8584,
+                19336
+              ]
+            },
+            "shapingUnchanged": true,
+            "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+            "status": "reject-whole-field",
+            "reason": "Reconstruction changed topology"
+          }
+        ]
+      },
+      {
+        "codepoint": 102067,
+        "glyph": "u18EB3",
+        "gid": 377,
+        "candidate": "output/font-review/supplemental-cubic-production/field-retention-probes/18EB3.woff2",
+        "checks": [
+          {
+            "size": 384,
+            "source": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8650,
+                19369
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                17,
+                2
+              ],
+              "filteredTopology": [
+                17,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8584,
+                19336
+              ]
+            },
+            "shapingUnchanged": true,
+            "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+            "status": "reject-whole-field",
+            "reason": "Reconstruction changed topology"
+          }
+        ]
+      },
+      {
+        "codepoint": 102252,
+        "glyph": "u18F6C",
+        "gid": 562,
+        "candidate": "output/font-review/supplemental-cubic-production/field-retention-probes/18F6C.woff2",
+        "checks": [
+          {
+            "size": 384,
+            "source": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8650,
+                19369
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8650,
+                19336
+              ]
+            },
+            "shapingUnchanged": true,
+            "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+            "status": "pass",
+            "checks": {
+              "componentAreaRatios": [
+                0.9651192096375826,
+                0.9246162813289295,
+                0.9618832129492646,
+                0.9486001887385971,
+                1.0,
+                0.9516771438168818,
+                0.9437874615260003,
+                0.9631300560049783,
+                1.0,
+                0.947768974145121,
+                1.0013802622498276,
+                0.9581854743316773,
+                0.9672222222222222,
+                0.9233997155049787,
+                0.9771057094403618,
+                0.9886003799873337,
+                0.9739431002392981,
+                1.0
+              ],
+              "counterOverlap": [
+                1.0,
+                0.9835303836026641
+              ]
+            }
+          },
+          {
+            "size": 1024,
+            "source": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                61313,
+                137792
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                61313,
+                137416
+              ]
+            },
+            "shapingUnchanged": true,
+            "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+            "status": "pass",
+            "checks": {
+              "componentAreaRatios": [
+                0.9682097600239336,
+                0.93286800276434,
+                0.9624134520276953,
+                0.9488035958225003,
+                1.0,
+                0.9566614462385916,
+                0.9455159112825458,
+                0.9606845614187982,
+                1.0,
+                0.9594734506729774,
+                0.9959400676655389,
+                0.9566885737728015,
+                0.9655467857513761,
+                0.9248119549690837,
+                0.9915650609634219,
+                0.989340913128442,
+                0.9678548282566429,
+                1.0
+              ],
+              "counterOverlap": [
+                1.0,
+                0.9841064793311658
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "codepoint": 102436,
+        "glyph": "u19024",
+        "gid": 746,
+        "candidate": "output/font-review/supplemental-cubic-production/field-retention-probes/19024.woff2",
+        "checks": [
+          {
+            "size": 384,
+            "source": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8650,
+                19369
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                17,
+                2
+              ],
+              "filteredTopology": [
+                17,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8584,
+                19336
+              ]
+            },
+            "shapingUnchanged": true,
+            "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+            "status": "reject-whole-field",
+            "reason": "Reconstruction changed topology"
+          }
+        ]
+      },
+      {
+        "codepoint": 102621,
+        "glyph": "u190DD",
+        "gid": 931,
+        "candidate": "output/font-review/supplemental-cubic-production/field-retention-probes/190DD.woff2",
+        "checks": [
+          {
+            "size": 384,
+            "source": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8650,
+                19369
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                17,
+                2
+              ],
+              "filteredTopology": [
+                17,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8584,
+                19336
+              ]
+            },
+            "shapingUnchanged": true,
+            "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+            "status": "reject-whole-field",
+            "reason": "Reconstruction changed topology"
+          }
+        ]
+      },
+      {
+        "codepoint": 102819,
+        "glyph": "u191A3",
+        "gid": 1115,
+        "candidate": "output/font-review/supplemental-cubic-production/field-retention-probes/191A3.woff2",
+        "checks": [
+          {
+            "size": 384,
+            "source": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8650,
+                19369
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                17,
+                2
+              ],
+              "filteredTopology": [
+                17,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8584,
+                19336
+              ]
+            },
+            "shapingUnchanged": true,
+            "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+            "status": "reject-whole-field",
+            "reason": "Reconstruction changed topology"
+          }
+        ]
+      },
+      {
+        "codepoint": 129023,
+        "glyph": "u1F7FF",
+        "gid": 1300,
+        "candidate": "output/font-review/supplemental-cubic-production/field-retention-probes/1F7FF.woff2",
+        "checks": [
+          {
+            "size": 384,
+            "source": {
+              "rawTopology": [
+                18,
+                2
+              ],
+              "filteredTopology": [
+                18,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8650,
+                19369
+              ]
+            },
+            "candidate": {
+              "rawTopology": [
+                17,
+                2
+              ],
+              "filteredTopology": [
+                17,
+                2
+              ],
+              "porePixelAreas": [],
+              "counterPixelAreas": [
+                8584,
+                19369
+              ]
+            },
+            "shapingUnchanged": true,
+            "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+            "status": "reject-whole-field",
+            "reason": "Reconstruction changed topology"
+          }
+        ]
+      }
+    ],
+    "scope": "Historical pre-width-correction isolated probes; their exact recorded fonts/checks remain unchanged."
+  },
+  "fixedCandidate": {
+    "file": "output/font-review/supplemental-cubic-production/UFS-preserved-candidate.woff2",
+    "sha256": "6c2d2044f19e0a3e1497b1d6f1eb1f322371b36371ac49db96e22b985e18378b",
+    "counts": {
+      "native-blank": 1,
+      "adapted": 1263,
+      "native-retained-guard": 37
+    },
+    "fields": [
+      {
+        "size": 384,
+        "source": {
+          "rawTopology": [
+            18,
+            2
+          ],
+          "filteredTopology": [
+            18,
+            2
+          ],
+          "porePixelAreas": [],
+          "counterPixelAreas": [
+            8650,
+            19369
+          ]
+        },
+        "candidate": {
+          "rawTopology": [
+            18,
+            2
+          ],
+          "filteredTopology": [
+            18,
+            2
+          ],
+          "porePixelAreas": [],
+          "counterPixelAreas": [
+            8650,
+            19336
+          ]
+        },
+        "shapingUnchanged": true,
+        "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            0.9651192096375826,
+            0.9246162813289295,
+            0.9618832129492646,
+            0.9486001887385971,
+            1.0,
+            0.9516771438168818,
+            0.9437874615260003,
+            0.9631300560049783,
+            1.0,
+            0.947768974145121,
+            1.0013802622498276,
+            0.9581854743316773,
+            0.9672222222222222,
+            0.9233997155049787,
+            0.9771057094403618,
+            0.9886003799873337,
+            0.9739431002392981,
+            1.0
+          ],
+          "counterOverlap": [
+            1.0,
+            0.9835303836026641
+          ]
+        }
+      },
+      {
+        "size": 1024,
+        "source": {
+          "rawTopology": [
+            18,
+            2
+          ],
+          "filteredTopology": [
+            18,
+            2
+          ],
+          "porePixelAreas": [],
+          "counterPixelAreas": [
+            61313,
+            137792
+          ]
+        },
+        "candidate": {
+          "rawTopology": [
+            18,
+            2
+          ],
+          "filteredTopology": [
+            18,
+            2
+          ],
+          "porePixelAreas": [],
+          "counterPixelAreas": [
+            61313,
+            137416
+          ]
+        },
+        "shapingUnchanged": true,
+        "poreCriterion": "only white pores below4pixels at384px/em filtered; all ink components and other counters retained",
+        "status": "pass",
+        "checks": {
+          "componentAreaRatios": [
+            0.9682097600239336,
+            0.93286800276434,
+            0.9624134520276953,
+            0.9488035958225003,
+            1.0,
+            0.9566614462385916,
+            0.9455159112825458,
+            0.9606845614187982,
+            1.0,
+            0.9594734506729774,
+            0.9959400676655389,
+            0.9566885737728015,
+            0.9655467857513761,
+            0.9248119549690837,
+            0.9915650609634219,
+            0.989340913128442,
+            0.9678548282566429,
+            1.0
+          ],
+          "counterOverlap": [
+            1.0,
+            0.9841064793311658
+          ]
+        }
+      }
+    ],
+    "stage": "Historical topology-preservation candidate before semantic width correction; not the current public font."
+  },
+  "checks": [
+    {
+      "command": ".venv/bin/python -m pytest -q tests/test_cubic_source_preservation.py tests/test_font_baseline_checks.py",
+      "passed": 6,
+      "seconds": 14.07,
+      "scope": "Historical pre-width-correction evidence: initial wrapper fixtures"
+    },
+    {
+      "log": "/tmp/unicode-cubic-preserved-lineage.log",
+      "status": "terminal0",
+      "scope": "Historical pre-width-correction evidence: All1301nativeCFFframes/metrics/layout/cmap and every retainedcharstring exact; protectedcharstring bytehash+nativeSVGgeometry and sourcePolicy verified."
+    },
+    {
+      "log": "/tmp/unicode-cubic-preserved-candidate.log",
+      "status": "terminal0",
+      "scope": "Historical pre-width-correction evidence: Independent actual8glyph fields at384and1024 pass; rawinkcomponentcounts18atboth, no missing/merged component waiver."
+    }
+  ],
+  "visualInspection": {
+    "specimen": "output/font-review/supplemental-cubic-production/preserved-comparison.png",
+    "sizes": [
+      22,
+      44
+    ],
+    "observation": "Fullfield retains accepted smooth ink treatment; U+18F6C is visibly identical to native source. Native surrounding details remain open beside Dad.",
+    "scope": "Historical initial preserved-field inspection. Current corrected public font is separately bound to the accepted width-corrected candidate review."
+  },
+  "remaining": [
+    "Parent-owned dependent catalog/atlas/version refresh after current UFS SHA and final full current suite/audit."
+  ],
+  "strictCacheLineage": {
+    "nativeInput": "Exact decoded native SFNT SHA, either frozen WOFF2 bit11 state2699/e057130d... or only that bit cleared651/57506979...; all other table/head bytes remain authenticated.",
+    "key": "SHA256 JSON [recipe,nativeInputSha256,nativeGlyphName,nativeHmtx]",
+    "adapted": "Exact cached guard record and compiled approved quantized Type2 program bytes equal actual current charstring; correct nominal/default width encoding independently decoded against native hmtx.",
+    "retained": "Exact native drawable commands. Five explicitly named legacy leading width operands are normalized with exact remaining program bytes and original guard cache record; all other native retained charstrings are byte-exact. Protected GID562 remains byte-exact.",
+    "widthOnlyRepairGids": [
+      1210,
+      1211,
+      1212,
+      1245,
+      1248
+    ],
+    "currentValidation": {
+      "strict1301": {
+        "log": "/tmp/unicode-cubic-width-candidate-strict-proof.log",
+        "status": "terminal0",
+        "scope": "Every final Type2 advance equals native hmtx; exact source/native SFNT, cmap/layout/em/frame/cache program and native preservation policy; five permitted width operand repairs authenticated against original guard cache records."
+      },
+      "all1301DrawableEquality": {
+        "log": "/tmp/unicode-cubic-width-candidate-semantic-proof.log",
+        "status": "terminal0",
+        "detail": "output/font-review/cubic-width-diagnosis/candidate-semantic-width-proof.json",
+        "scope": "All 1301 previously accepted and corrected candidate drawable command streams are exactly equal; cmap/layout/metrics unchanged."
+      },
+      "focusedFixtures": {
+        "passed": 43,
+        "seconds": 11.92,
+        "log": "/tmp/unicode-cubic-width-strict-fixtures.log",
+        "files": [
+          "tests/test_cubic_charstring_widths.py",
+          "tests/test_font_baseline_checks.py",
+          "tests/test_dense_baseline_checks.py",
+          "tests/test_duployan_source_preservation.py",
+          "tests/test_cuneiform_source_preservation.py",
+          "tests/test_archaic_native_flattening.py"
+        ],
+        "coverage": "Nominal/default widths; zero advances; same-geometry absolute-width defect rejected; native width operand metadata, curve, source scope and protected-policy mutations rejected. Standalone test_supplemental_cubic_adapter.py is not part of this 43-test command."
+      },
+      "publicDomainRegression": {
+        "passed": 2,
+        "seconds": 13.08,
+        "log": "/tmp/unicode-cubic-width-public-domain-tests.log",
+        "scope": "Original Jurchen/Tangut width assertions pass without weakening tests."
+      },
+      "publicNativeInvariants": "output/font-review/cubic-width-diagnosis/public-native-invariants.json",
+      "cacheMigration": "output/font-review/cubic-width-diagnosis/cache-migration.json",
+      "correctiveBuild": {
+        "session": 95666,
+        "status": "terminal0",
+        "log": "/tmp/unicode-cubic-width-corrective-build.log",
+        "evidence": "output/font-review/cubic-width-diagnosis/corrective-execution.json"
+      }
+    },
+    "nativeInputStates": [
+      {
+        "stage": "frozen WOFF2 decoded SFNT",
+        "headFlags": 2699,
+        "sha256": "e057130d62b76d8b7922b6ead2b1599a1daa5c387222048bef7dc3586b1369c2"
+      },
+      {
+        "stage": "current pre-WOFF2 adapter input",
+        "headFlags": 651,
+        "sha256": "57506979a184c69119b61f1c42c22f48acbd221ef535bbbf0cdef673821cd9d3"
+      }
+    ],
+    "nativeInputDiagnosis": "output/font-review/final-builder-integration/cubic-native-stage-diagnosis.json"
+  },
+  "finalIntegration": {
+    "public": {
+      "file": "assets/fonts/scripts/1a10ab6b39c1.woff2",
+      "sha256": "a18a8966ff55e18e548f0319ad6f5646ff498afc47f4ebbe9ff054ba32fa17cd",
+      "bytes": 2175880,
+      "manifest": "js/font-manifest.js",
+      "manifestSha256": "6847bb807966fbeaa32a5b3130d5cd8d91ee4739095936e25daf3746b29d6147",
+      "recipeSha256": "596425edf7ff6ee352cf574fb2c872f1ff4e0a54fe7090578846d5ef5dce422a",
+      "nativeInputSha256": "57506979a184c69119b61f1c42c22f48acbd221ef535bbbf0cdef673821cd9d3",
+      "counts": {
+        "native-blank": 1,
+        "adapted": 1263,
+        "native-retained-guard": 37
+      },
+      "glyphs": 1301,
+      "report": "output/font-review/supplemental-cubic-production/57506979a184c69119b61f1c42c22f48acbd221ef535bbbf0cdef673821cd9d3-596425edf7ff6ee352cf574fb2c872f1ff4e0a54fe7090578846d5ef5dce422a-cubic-preserve-ae6c68e6e6a2b187afa77c3b99d99f0e37bc25cc124eeec2b029f2548a677d1f.json",
+      "charstringAdvancesMatchHmtx": true,
+      "widthOnlyRepairGids": [
+        1210,
+        1211,
+        1212,
+        1245,
+        1248
+      ],
+      "matchesAcceptedCandidateBytesAndMetadata": true,
+      "otherFontShasUnchanged": 380
+    },
+    "review": "docs/cubic-width-production-review.json",
+    "policyReview": "docs/final-policy-production-review.json",
+    "nativeInvariants": "output/font-review/cubic-width-diagnosis/public-native-invariants.json",
+    "build": "output/font-review/cubic-width-diagnosis/corrective-execution.json"
+  },
+  "historicalPreintegrationStatus": "Single exactnative charstring retention repairs genuine384px blackcomponentmerge. Isolatedfullcandidate verified; publicCFFsource remains unchanged.",
+  "historicalInspectionSha256": {
+    "tools/font/cubic_source_preservation.py": "ae6c68e6e6a2b187afa77c3b99d99f0e37bc25cc124eeec2b029f2548a677d1f",
+    "tests/test_cubic_source_preservation.py": "93a86038ddda47678a384f2cd5aa30e1c2a41cc3e8530168dd23844bb903cc96",
+    "tests/font_baseline_checks.py": "f225f35c9a50ceadaddcd59020dc81f7d41afb9764b684f9c41a19dac314fcbc",
+    "output/font-review/supplemental-cubic-production/UFS-preserved-candidate.json": "2bf41d0f3893ec5ea136a814cd66361875d4c89a546e33497fd8321af729e118",
+    "output/font-review/supplemental-cubic-production/UFS-preserved-candidate.woff2": "6c2d2044f19e0a3e1497b1d6f1eb1f322371b36371ac49db96e22b985e18378b",
+    "output/font-review/supplemental-cubic-production/field-retention-probes/review.json": "6f7f2f70a1ec864824092e59be1d6e1496607e27ad7b572fc2820da18c3875d5",
+    "output/font-review/supplemental-cubic-production/preserved-comparison.png": "1aba4836f38f1f6278355047e2c98aeae77463c8d94d759f36755b63e861c316"
+  },
+  "inspectionSha256": {
+    "tools/font/cubic_source_preservation.py": "ae6c68e6e6a2b187afa77c3b99d99f0e37bc25cc124eeec2b029f2548a677d1f",
+    "tools/font/supplemental_cubic_adapter.py": "b5b0b03c643ef182a1efed4a875d768c216ab5a3cec5cdfcc31f9ba413386728",
+    "tests/font_baseline_checks.py": "eebe298433cb709ac630c48cca4d84506719eaf07d04bef9d183cc8a1dc7ab8f",
+    "tests/test_cubic_source_preservation.py": "93a86038ddda47678a384f2cd5aa30e1c2a41cc3e8530168dd23844bb903cc96",
+    "tests/test_cubic_charstring_widths.py": "983a7c362af67accc1d77c408ca388724c150a65a910e1e7af3e53484c1459d4",
+    "assets/fonts/scripts/1a10ab6b39c1.woff2": "a18a8966ff55e18e548f0319ad6f5646ff498afc47f4ebbe9ff054ba32fa17cd",
+    "output/font-review/supplemental-cubic-production/57506979a184c69119b61f1c42c22f48acbd221ef535bbbf0cdef673821cd9d3-596425edf7ff6ee352cf574fb2c872f1ff4e0a54fe7090578846d5ef5dce422a-cubic-preserve-ae6c68e6e6a2b187afa77c3b99d99f0e37bc25cc124eeec2b029f2548a677d1f.json": "e86cbc1c4c848d96e06d42037212b2077add94dfa08b581d2865a3b967cf52bc"
+  },
+  "historicalInitialImplementation": {
+    "module": "tools/font/cubic_source_preservation.py",
+    "genericCffKernelChanged": false,
+    "liveTtfPolicyChanged": false,
+    "publicFontWrites": false,
+    "reportPolicy": "New content-addressed -cubic-preserve-<policyhash>.json retains kernelrecords with explicit finalnative-retention status/count override.",
+    "scope": "Historical initial wrapper implementation facts; later width correction changed the CFF kernel separately, as recorded in docs/cubic-width-production-review.json."
+  },
+  "reconciledAgainstPublicBuildSession": 95666,
+  "finalFullSuiteStatus": "pending; parent owns final current full-suite outcome"
+}

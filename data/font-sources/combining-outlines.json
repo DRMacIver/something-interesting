@@ -1,0 +1,29 @@
+{
+  "builder_script": "tools/font/build_combining_outlines.py",
+  "scope": "Normalized native Mn/Me paths for dynamic enclosures, double marks and missing marks in nonjoining native variation clusters. Presence is not independent coverage or linguistic validation.",
+  "inputs": [
+    "assets/fonts/dad-lettering-unicode.woff2",
+    "js/font-manifest.js",
+    "data/unicode/18.0.0/UnicodeData.txt",
+    "data/unicode/18.0.0/DerivedCoreProperties.txt",
+    "js/cjk-variant-manifest.js",
+    "js/math-variant-manifest.js",
+    "js/marked-cjk-variant-manifest.js"
+  ],
+  "output": "js/combining-outline-manifest.js",
+  "notice": "assets/fonts/licenses/README-DadCombiningOutlines.txt",
+  "reference": "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-3/",
+  "guidelines": [
+    "P6: enclosing marks surround preceding base and intervening nonspacing/enclosing marks",
+    "P7-P8: double diacritics span the following base at the outside of both ordinary mark stacks"
+  ],
+  "limits": [
+    "Native joining/contextual bases and emoji retain original shaping; foreign nonspacing marks on nonjoining bases may use dynamic layout",
+    "Connected Egyptian formatting retains the native composition path",
+    "CGJ-sensitive ordering and enclosure/double interaction retain native handling",
+    "Maximum dynamic cluster length 512 UTF-16 units and 16 enclosing layers; larger inputs retain native handling",
+    "Native mark/catalog presence does not verify script-specific linguistic attachment",
+    "Native prefix shaping is retained; marks following a missing mark are canonically ordered and placed geometrically, retaining their own native source outline when covered by the selected font. This does not preserve all script-specific attachment semantics.",
+    "Five Cyrillic numeric enclosing forms U+0488, U+0489, U+A670..U+A672 are not yet supported by dynamic enclosure layout."
+  ]
+}

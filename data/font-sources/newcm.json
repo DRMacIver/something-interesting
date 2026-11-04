@@ -1,0 +1,70 @@
+{
+  "repository": "https://git.gnu.org.ua/newcm.git",
+  "sourceCommit": "29149c0a75b5386c7e8ccc818a1ea6d2ca1e0128",
+  "sourcePath": "sfd/NewCMMath-Regular.sfd",
+  "sourceSha256": "3c5408983c4bbb576718a97336b225709e2f24f5ef9c27bc2ee8a0a71bdb93e9",
+  "release": "8.1.1 (2026-06-22)",
+  "binaryProvenance": "Official CTAN release binary; content hash pinned independently of the source repository revision. Mutable mirror URL must match this hash.",
+  "license": "GUST Font License 1.0 / LPPL 1.3c",
+  "scope": "Donor only: 26 explicitly mapped roundhand capitals and one circled-parallel variation. Native ordinary relation defaults, the inverted-lazy-S component and the script-z default also support original historical variation adaptations. All other native UVS, including nonstandard bold-script mappings, remain excluded.",
+  "files": [
+    {
+      "path": "build/unicode-sources/newcm/NewCMMath-Regular.otf",
+      "url": "https://mirrors.ctan.org/fonts/newcomputermodern/otf/NewCMMath-Regular.otf",
+      "sha256": "d66ac1cc91c55c24d3636ae2df1238076debdff51841f9893fc5419cc2df3df7",
+      "git_blob_sha1": "51b68699c049cb2887c995f35d770528682adc11",
+      "size": 1306268,
+      "build_target": "donor",
+      "include_sequences": [
+        "⦷︀",
+        "𝒜︁",
+        "ℬ︁",
+        "𝒞︁",
+        "𝒟︁",
+        "ℰ︁",
+        "ℱ︁",
+        "𝒢︁",
+        "ℋ︁",
+        "ℐ︁",
+        "𝒥︁",
+        "𝒦︁",
+        "ℒ︁",
+        "ℳ︁",
+        "𝒩︁",
+        "𝒪︁",
+        "𝒫︁",
+        "𝒬︁",
+        "ℛ︁",
+        "𝒮︁",
+        "𝒯︁",
+        "𝒰︁",
+        "𝒱︁",
+        "𝒲︁",
+        "𝒳︁",
+        "𝒴︁",
+        "𝒵︁"
+      ]
+    },
+    {
+      "path": "build/unicode-sources/newcm/License.txt",
+      "url": "https://mirrors.ctan.org/fonts/newcomputermodern/License.txt",
+      "sha256": "8641346ee391ff97eb66c70f3d5d695792cf9c5b3c5d748c6158d49cf79646e3",
+      "git_blob_sha1": "8ab0387f570f39928374af51edaeb4b34a63e276",
+      "size": 33266
+    },
+    {
+      "path": "build/unicode-sources/newcm/GUST-FONT-LICENSE.txt",
+      "url": "https://tug.org/fonts/licenses/GUST-FONT-LICENSE.txt",
+      "sha256": "49ea6cb9257bbee0a3979c48a774cd221550ac1c20c95549efe45fc99cc18050",
+      "git_blob_sha1": "604bf7597db741c93073e937ceb2afd18458201d",
+      "size": 1377
+    },
+    {
+      "path": "build/unicode-sources/newcm/LPPL.txt",
+      "url": "https://www.latex-project.org/lppl.txt",
+      "sha256": "3d262cdf34dafa6955f703c634a8c238ec44109bc8dd6ef34fb7aa54809f7e66",
+      "git_blob_sha1": "1b57559a8320cc9ff85481e2bc1a0eb5e9620377",
+      "size": 19102
+    }
+  ]
+}

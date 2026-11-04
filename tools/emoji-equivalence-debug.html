@@ -1,0 +1,24 @@
+<!doctype html><meta charset="utf-8"><title>Emoji equivalence diagnosis</title><style>canvas{border:1px solid #ccc}body{font:16px system-ui}</style><h1>Emoji equivalence diagnosis</h1><pre id="result">Running…</pre><main></main><script type="module">
+import {loadTextFonts} from '../js/fonts.js';
+const cases=['💆‍♂️','👁️','🏌️','🏂','👨‍❤️‍👨'];
+await loadTextFonts(cases);
+const results=[];
+for(const family of ['Dad Emoji','Dad Emoji Ink','Apple Color Emoji'])for(const text of cases){
+ const bare=text.replace(/[\ufe0e\ufe0f]/gu,'');
+ const row=document.createElement('section');row.append(document.createTextNode(family+' '+text+' / '+bare));document.querySelector('main').append(row);
+ const canvas=document.createElement('canvas');canvas.width=768;canvas.height=128;row.append(canvas);
+ const c=canvas.getContext('2d',{willReadFrequently:true});c.font='72px '+JSON.stringify(family);c.fillText(text,24,96);c.fillText(bare,280,96);c.fillText(text,536,96);
+ const a=c.getImageData(0,0,256,128).data,b=c.getImageData(256,0,256,128).data,d=c.getImageData(512,0,256,128).data;
+ const differing=(a,b)=>a.reduce((n,v,i)=>n+(v!==b[i]),0);
+ const transitions=[];
+ for(const readFrequently of [false,true]) {
+  const probe=document.createElement('canvas');probe.width=256;probe.height=128;
+  const pc=probe.getContext('2d',{willReadFrequently:readFrequently});pc.font='72px '+JSON.stringify(family);
+  const samples=[];
+  for(const t of [text,text,bare,text]) {pc.clearRect(0,0,256,128);pc.fillText(t,24,96);samples.push(pc.getImageData(0,0,256,128).data);}
+  transitions.push({readFrequently,identicalTextDifference:differing(samples[0],samples[1]),equivalentFormDifference:differing(samples[1],samples[2]),repeatAfterBareDifference:differing(samples[1],samples[3])});
+ }
+ results.push({family,text,bare,transitions,qualifiedWidth:c.measureText(text).width,bareWidth:c.measureText(bare).width,differentChannels:differing(a,b),repeatDifferentChannels:differing(a,d)});
+}
+document.querySelector('#result').textContent=JSON.stringify(results,null,2);
+</script>

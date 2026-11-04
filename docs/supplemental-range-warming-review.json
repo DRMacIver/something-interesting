@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-03",
+  "status": "Both17886assigned auxiliary glyphs cache-warmed successfully; no public integration. Originalworker0fullsource report and all regular completion gates remain authoritative.",
+  "method": "Original supplemental_adapter.apply.__code__ is reused through FunctionType with copied IO globals. AST asserts exactly one enumerate(native.getGlyphOrder()) call and filters only its yielded GIDs. Every native snapshot/compound-freeze loop and full source-priority/subset/repair/GSUB closure build remains intact.",
+  "kernelRecipeSha256": "a17f6691badb3948552d5e2f3f5579532035e4ab8085b2eec78fc402934d3c2c",
+  "source": "NotoSansSignWriting-Regular.ttf",
+  "completeNativeGlyphs": 37886,
+  "selectionCoverage": "Assigned17886glyphs only. Full37886source coverage belongs to original worker0/full builder, not these auxiliary reports.",
+  "publicManifestSha256": "93c4236d678eccc29ade31e0d61f50f542ab8b6645e4f54cd57953aa2dbed28f",
+  "sharedGlyphCache": "output/font-review/supplemental-warm/group-0/glyph-cache",
+  "workers": [
+    {
+      "start": 20000,
+      "stopExclusive": 29000,
+      "session": 30006,
+      "log": "/tmp/unicode-signwriting-range-20000-29000.log",
+      "completion": "output/font-review/supplemental-warm/aux-NotoSansSignWriting-Regular-20000-29000/complete.json",
+      "status": "terminal0",
+      "counts": {
+        "adapted": 8607,
+        "native-retained-guard": 393
+      },
+      "selectedGlyphs": 9000,
+      "publicStateUnchanged": true
+    },
+    {
+      "start": 29000,
+      "stopExclusive": 37886,
+      "session": 88645,
+      "log": "/tmp/unicode-signwriting-range-29000-37886.log",
+      "completion": "output/font-review/supplemental-warm/aux-NotoSansSignWriting-Regular-29000-37886/complete.json",
+      "status": "terminal0",
+      "counts": {
+        "adapted": 8379,
+        "native-retained-guard": 507
+      },
+      "selectedGlyphs": 8886,
+      "publicStateUnchanged": true
+    }
+  ],
+  "safetyAndIdentity": [
+    "No kernel source edits or __code__ mutation; original source-specific recipe_hash function remains bound to original globals/settings.",
+    "Cloned ROOT/report directories are unique per range. Baseline IO is cloned into that private root; publicfonts/manifest stay untouched.",
+    "Auxiliary cache writes use temporary file+atomic replace. Valid-JSON bounded retry handles original worker0 non-atomic JSON publication; glyph payload closes before JSON publication.",
+    "Partial metadata explicitly declares scope, original complete glyph count, selected GIDs/count and completeSourceCoverage=false. Partial fonts and reports must never become final source assets.",
+    "Regular-warmer owner explicitly blocks generic merge and public normal writer until both auxiliary completion records exist."
+  ],
+  "validation": {
+    "command": ".venv/bin/python -m pytest -q tests/test_supplemental_range_warming.py",
+    "passed": 2,
+    "seconds": 1.74,
+    "scope": [
+      "Complete native fixture versus two disjoint ranges gives identical ordered per-GID records and all cached JSON/glyf bytes.",
+      "Unselected composite glyph still traverses complete native freeze; native source closure is not subset before adapter.",
+      "Original function code object and recipe hash unchanged; all381public font fingerprints and manifest unchanged.",
+      "Concurrent legacy JSON publication retry and atomic auxiliary cache publication tested."
+    ]
+  },
+  "limitations": [
+    "Running jobs do not establish terminal cache completion or final production source coverage.",
+    "The public ordinary builder and its complete source report remain authoritative after all private warming succeeds."
+  ],
+  "inspectionSha256": {
+    "tools/font/warm_supplemental_range.py": "6afa71dbe00b40a46b96aa5e3cf1ea6b27467fbebbfa85d89ef27595975e460d",
+    "tests/test_supplemental_range_warming.py": "4bcacd6fae2bd1dcc64398b95bfbdcbe650ae05d5fbc6c7e4a5287a9aee60a0a",
+    "tools/font/supplemental_adapter.py": "b8a029d7dc6da8cc7007c56e5ffe0a0f55e5e7f3c39ea19ee9f1edae8deb7b5f",
+    "output/font-review/supplemental-warm/plan.json": "dd057f4ca2cf29991df5e37b508db9f297622c3deb78c130c1cefc0b5717cc58"
+  },
+  "additionalGroup2Ranges": {
+    "cache": "output/font-review/supplemental-warm/group-2/glyph-cache",
+    "validation": "process-local byte-equivalent fast predicate installed before apply globals capture; kernel and source recipe unchanged",
+    "jobs": [
+      {
+        "source": "NotoSansMath-Regular.ttf",
+        "start": 3500,
+        "stopExclusive": 4903,
+        "nativeGlyphs": 4903,
+        "status": "terminal0; selected1403 complete; public unchanged",
+        "session": 76825,
+        "log": "/tmp/unicode-math-range-3500-4903.log",
+        "completion": "aux-NotoSansMath-Regular-3500-4903/complete.json"
+      },
+      {
+        "source": "NotoSansSymbols2-Regular.ttf",
+        "start": 0,
+        "stopExclusive": 2660,
+        "nativeGlyphs": 2660,
+        "status": "terminal0; selected2660 complete; public unchanged",
+        "session": 42432,
+        "log": "/tmp/unicode-symbols2-range-0-2660.log",
+        "completion": "aux-NotoSansSymbols2-Regular-0-2660/complete.json",
+        "counts": {
+          "adapted": 2448,
+          "native-blank": 7,
+          "native-retained-guard": 205
+        },
+        "kernelSeconds": 922.7,
+        "recipeSha256": "af599e00dd1812c7d85761dd36ff52dcde66f14835cc171e984f88899c0af122"
+      }
+    ],
+    "authority": "B main group2 complete-source reports after all auxiliary completion gates; these partial private fonts never authoritative",
+    "bothTerminalVerified": true
+  }
+}

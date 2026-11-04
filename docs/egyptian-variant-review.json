@@ -1,0 +1,2280 @@
+{
+  "source": "build/unicode-sources/unihieroglyphica/UniHieroglyphica.ttf",
+  "sourceSha256": "ad60bb2f469697837b556388d47b500a21d866370a49a8be770b206108aaf664",
+  "dataSha256": "c7ae634a7e2bb0932258548a1e81df984fbb38e30cecf4269391d6a4f94581ac",
+  "status": "standalone native geometry; quadrat composition and native-reader review pending",
+  "variants": [
+    {
+      "codepoint": 77842,
+      "selector": 65027,
+      "angle": 30,
+      "description": "rotated approximately 30 degrees",
+      "glyph": "u13012.vs4",
+      "transform": [
+        0.8660254037844387,
+        -0.49999999999999994,
+        0.49999999999999994,
+        0.8660254037844387,
+        1.2001342991273063,
+        332.17773566747894
+      ],
+      "advance": 1265
+    },
+    {
+      "codepoint": 77969,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13091.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        98.66666666666664,
+        607.3333333333333
+      ],
+      "advance": 647
+    },
+    {
+      "codepoint": 77971,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13093.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        762.0,
+        555.0
+      ],
+      "advance": 762
+    },
+    {
+      "codepoint": 78008,
+      "selector": 65027,
+      "angle": 25,
+      "description": "rotated approximately 25 degrees",
+      "glyph": "u130B8.vs4",
+      "transform": [
+        0.9063077870366499,
+        -0.42261826174069944,
+        0.42261826174069944,
+        0.9063077870366499,
+        -95.28232990911566,
+        268.8397778472288
+      ],
+      "advance": 1072
+    },
+    {
+      "codepoint": 78010,
+      "selector": 65027,
+      "angle": 25,
+      "description": "rotated approximately 25 degrees",
+      "glyph": "u130BA.vs4",
+      "transform": [
+        0.9063077870366499,
+        -0.42261826174069944,
+        0.42261826174069944,
+        0.9063077870366499,
+        8.946603034594318,
+        269.77669997686235
+      ],
+      "advance": 1193
+    },
+    {
+      "codepoint": 78095,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u1310F.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        103.61538461538456,
+        909.8076923076923
+      ],
+      "advance": 760
+    },
+    {
+      "codepoint": 78095,
+      "selector": 65027,
+      "angle": 30,
+      "description": "rotated approximately 30 degrees",
+      "glyph": "u1310F.vs4",
+      "transform": [
+        0.8660254037844387,
+        -0.49999999999999994,
+        0.49999999999999994,
+        0.8660254037844387,
+        -255.79997085478698,
+        353.880834709341
+      ],
+      "advance": 925
+    },
+    {
+      "codepoint": 78103,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13117.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        407.4285714285716,
+        -443.6587301587301
+      ],
+      "advance": 507
+    },
+    {
+      "codepoint": 78108,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u1311C.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        109.07272727272726,
+        781.6
+      ],
+      "advance": 1118
+    },
+    {
+      "codepoint": 78113,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13121.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        -86.33333333333337,
+        849.8809523809525
+      ],
+      "advance": 430
+    },
+    {
+      "codepoint": 78119,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13127.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        106.0,
+        776.0
+      ],
+      "advance": 585
+    },
+    {
+      "codepoint": 78127,
+      "selector": 65027,
+      "angle": 40,
+      "description": "rotated approximately 40 degrees [but not yet vertical]",
+      "glyph": "u1312F.vs4",
+      "transform": [
+        0.766044443118978,
+        -0.6427876096865393,
+        0.6427876096865393,
+        0.766044443118978,
+        -287.2129271360469,
+        441.2492804830493
+      ],
+      "advance": 704
+    },
+    {
+      "codepoint": 78127,
+      "selector": 65030,
+      "angle": 325,
+      "description": "rotated approximately 325 degrees [horizontal]",
+      "glyph": "u1312F.vs7",
+      "transform": [
+        0.8191520442889916,
+        0.5735764363510465,
+        -0.5735764363510465,
+        0.8191520442889916,
+        362.22612584579645,
+        -254.41088455907754
+      ],
+      "advance": 1221
+    },
+    {
+      "codepoint": 78130,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13132.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1194.0,
+        303.0000000000001
+      ],
+      "advance": 1194
+    },
+    {
+      "codepoint": 78137,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13139.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        102.99999999999997,
+        440.0
+      ],
+      "advance": 580
+    },
+    {
+      "codepoint": 78137,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13139.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        506.0,
+        374.0
+      ],
+      "advance": 506
+    },
+    {
+      "codepoint": 78137,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13139.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        477.00000000000006,
+        -65.99999999999997
+      ],
+      "advance": 580
+    },
+    {
+      "codepoint": 78137,
+      "selector": 65027,
+      "angle": 45,
+      "description": "rotated approximately 45 degrees [vertical]",
+      "glyph": "u13139.vs4",
+      "transform": [
+        0.7071067811865476,
+        -0.7071067811865475,
+        0.7071067811865475,
+        0.7071067811865476,
+        -130.08342263963567,
+        233.6690475583121
+      ],
+      "advance": 424
+    },
+    {
+      "codepoint": 78137,
+      "selector": 65028,
+      "angle": 135,
+      "description": "rotated approximately 135 degrees [horizontal]",
+      "glyph": "u13139.vs5",
+      "transform": [
+        -0.7071067811865475,
+        -0.7071067811865476,
+        0.7071067811865476,
+        -0.7071067811865475,
+        367.33055746233913,
+        498.1269837220809
+      ],
+      "advance": 624
+    },
+    {
+      "codepoint": 78137,
+      "selector": 65029,
+      "angle": 225,
+      "description": "rotated approximately 225 degrees [vertical]",
+      "glyph": "u13139.vs6",
+      "transform": [
+        -0.7071067811865477,
+        0.7071067811865475,
+        -0.7071067811865475,
+        -0.7071067811865477,
+        554.3225351558222,
+        140.33095244168788
+      ],
+      "advance": 424
+    },
+    {
+      "codepoint": 78137,
+      "selector": 65030,
+      "angle": 315,
+      "description": "rotated approximately 315 degrees [horizontal]",
+      "glyph": "u13139.vs7",
+      "transform": [
+        0.7071067811865474,
+        0.7071067811865477,
+        -0.7071067811865477,
+        0.7071067811865474,
+        256.27059864222707,
+        -124.12698372208092
+      ],
+      "advance": 624
+    },
+    {
+      "codepoint": 78211,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13183.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        378.75000000000006,
+        -453.375
+      ],
+      "advance": 472
+    },
+    {
+      "codepoint": 78212,
+      "selector": 65027,
+      "angle": 25,
+      "description": "rotated approximately 25 degrees",
+      "glyph": "u13184.vs4",
+      "transform": [
+        0.9063077870366499,
+        -0.42261826174069944,
+        0.42261826174069944,
+        0.9063077870366499,
+        10.71321026638384,
+        136.87921291939278
+      ],
+      "advance": 747
+    },
+    {
+      "codepoint": 78212,
+      "selector": 65030,
+      "angle": 335,
+      "description": "rotated approximately 335 degrees",
+      "glyph": "u13184.vs7",
+      "transform": [
+        0.90630778703665,
+        0.4226182617406992,
+        -0.4226182617406992,
+        0.90630778703665,
+        355.5864757662192,
+        -52.55622125237767
+      ],
+      "advance": 652
+    },
+    {
+      "codepoint": 78215,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13187.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        612.0,
+        426.0
+      ],
+      "advance": 619
+    },
+    {
+      "codepoint": 78236,
+      "selector": 65027,
+      "angle": 45,
+      "description": "rotated approximately 45 degrees",
+      "glyph": "u1319C.vs4",
+      "transform": [
+        0.7071067811865476,
+        -0.7071067811865475,
+        0.7071067811865475,
+        0.7071067811865476,
+        -87.3832970144351,
+        489.4518048587662
+      ],
+      "advance": 987
+    },
+    {
+      "codepoint": 78237,
+      "selector": 65027,
+      "angle": 30,
+      "description": "rotated approximately 30 degrees",
+      "glyph": "u1319D.vs4",
+      "transform": [
+        0.8660254037844387,
+        -0.49999999999999994,
+        0.49999999999999994,
+        0.8660254037844387,
+        -140.24027774164148,
+        323.740813958796
+      ],
+      "advance": 1028
+    },
+    {
+      "codepoint": 78239,
+      "selector": 65027,
+      "angle": 30,
+      "description": "rotated approximately 30 degrees",
+      "glyph": "u1319F.vs4",
+      "transform": [
+        0.8660254037844387,
+        -0.49999999999999994,
+        0.49999999999999994,
+        0.8660254037844387,
+        -71.85893790886718,
+        323.9474613110037
+      ],
+      "advance": 1119
+    },
+    {
+      "codepoint": 78240,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u131A0.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        89.99999999999999,
+        628.5
+      ],
+      "advance": 848
+    },
+    {
+      "codepoint": 78240,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u131A0.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        756.0,
+        37.500000000000064
+      ],
+      "advance": 848
+    },
+    {
+      "codepoint": 78257,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u131B1.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        96.0,
+        743.4895104895104
+      ],
+      "advance": 484
+    },
+    {
+      "codepoint": 78257,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u131B1.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1194.6153846153845,
+        292.3636363636365
+      ],
+      "advance": 1194
+    },
+    {
+      "codepoint": 78257,
+      "selector": 65027,
+      "angle": 45,
+      "description": "rotated approximately 45 degrees",
+      "glyph": "u131B1.vs4",
+      "transform": [
+        0.7071067811865476,
+        -0.7071067811865475,
+        0.7071067811865475,
+        0.7071067811865476,
+        3.2835058177066543,
+        465.17598294493257
+      ],
+      "advance": 997
+    },
+    {
+      "codepoint": 78264,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u131B8.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        53.99999999999994,
+        774.5
+      ],
+      "advance": 655
+    },
+    {
+      "codepoint": 78265,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u131B9.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        94.29696969696965,
+        858.8151515151515
+      ],
+      "advance": 849
+    },
+    {
+      "codepoint": 78266,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u131BA.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        474.00000000000006,
+        -334.6666666666666
+      ],
+      "advance": 543
+    },
+    {
+      "codepoint": 78283,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u131CB.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        109.91999999999999,
+        656.0433333333333
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78299,
+      "selector": 65027,
+      "angle": 20,
+      "description": "rotated approximately 20 degrees",
+      "glyph": "u131DB.vs4",
+      "transform": [
+        0.9396926207859084,
+        -0.3420201433256687,
+        0.3420201433256687,
+        0.9396926207859084,
+        -85.70708181949956,
+        97.93649031475456
+      ],
+      "advance": 533
+    },
+    {
+      "codepoint": 78299,
+      "selector": 65030,
+      "angle": 340,
+      "description": "rotated approximately 340 degrees",
+      "glyph": "u131DB.vs7",
+      "transform": [
+        0.9396926207859084,
+        0.3420201433256686,
+        -0.3420201433256686,
+        0.9396926207859084,
+        257.93730513737296,
+        -43.659849022072194
+      ],
+      "advance": 648
+    },
+    {
+      "codepoint": 78304,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees [= 270 degrees]",
+      "glyph": "u131E0.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        99.0,
+        722.5714285714286
+      ],
+      "advance": 450
+    },
+    {
+      "codepoint": 78318,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u131EE.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        538.25,
+        900.0
+      ],
+      "advance": 538
+    },
+    {
+      "codepoint": 78318,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u131EE.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0,
+        180.87500000000009
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78318,
+      "selector": 65030,
+      "angle": 330,
+      "description": "rotated approximately 330 degrees",
+      "glyph": "u131EE.vs7",
+      "transform": [
+        0.8660254037844384,
+        0.5000000000000004,
+        -0.5000000000000004,
+        0.8660254037844384,
+        336.7555000806695,
+        -74.2739317029974
+      ],
+      "advance": 818
+    },
+    {
+      "codepoint": 78328,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u131F8.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        674.0,
+        464.0
+      ],
+      "advance": 674
+    },
+    {
+      "codepoint": 78329,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u131F9.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        94.625,
+        793.2589285714286
+      ],
+      "advance": 581
+    },
+    {
+      "codepoint": 78329,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u131F9.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1194.142857142857,
+        392.3750000000001
+      ],
+      "advance": 1194
+    },
+    {
+      "codepoint": 78330,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u131FA.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        96.85714285714278,
+        789.9285714285714
+      ],
+      "advance": 580
+    },
+    {
+      "codepoint": 78330,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u131FA.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1193.857142857143,
+        386.0000000000001
+      ],
+      "advance": 1194
+    },
+    {
+      "codepoint": 78341,
+      "selector": 65027,
+      "angle": 30,
+      "description": "rotated approximately 30 degrees [but not yet vertical]",
+      "glyph": "u13205.vs4",
+      "transform": [
+        0.8660254037844387,
+        -0.49999999999999994,
+        0.49999999999999994,
+        0.8660254037844387,
+        -106.46222278524407,
+        172.94426564368752
+      ],
+      "advance": 493
+    },
+    {
+      "codepoint": 78341,
+      "selector": 65030,
+      "angle": 330,
+      "description": "rotated approximately 330 degrees [horizontal]",
+      "glyph": "u13205.vs7",
+      "transform": [
+        0.8660254037844384,
+        0.5000000000000004,
+        -0.5000000000000004,
+        0.8660254037844384,
+        144.47292542670237,
+        -133.5557343563126
+      ],
+      "advance": 644
+    },
+    {
+      "codepoint": 78358,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13216.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        268.2666666666668,
+        -507.7
+      ],
+      "advance": 362
+    },
+    {
+      "codepoint": 78423,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13257.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        754.0,
+        900.0
+      ],
+      "advance": 754
+    },
+    {
+      "codepoint": 78459,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u1327B.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        94.29411764705884,
+        686.078431372549
+      ],
+      "advance": 407
+    },
+    {
+      "codepoint": 78459,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u1327B.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        312.39215686274514,
+        -467.9803921568627
+      ],
+      "advance": 407
+    },
+    {
+      "codepoint": 78463,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u1327F.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        96.0,
+        723.5
+      ],
+      "advance": 445
+    },
+    {
+      "codepoint": 78463,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u1327F.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1194.0,
+        253.00000000000006
+      ],
+      "advance": 1194
+    },
+    {
+      "codepoint": 78469,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13285.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        110.0,
+        759.0
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78475,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u1328B.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        850.0,
+        636.0
+      ],
+      "advance": 850
+    },
+    {
+      "codepoint": 78476,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u1328C.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        99.0,
+        538.0
+      ],
+      "advance": 470
+    },
+    {
+      "codepoint": 78486,
+      "selector": 65027,
+      "angle": 45,
+      "description": "rotated 45 degrees [= 135, 225, 315 degrees]",
+      "glyph": "u13296.vs4",
+      "transform": [
+        0.7071067811865476,
+        -0.7071067811865475,
+        0.7071067811865475,
+        0.7071067811865476,
+        -69.3432352594133,
+        305.64114239478965
+      ],
+      "advance": 670
+    },
+    {
+      "codepoint": 78500,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u132A4.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        386.0,
+        899.7142857142857
+      ],
+      "advance": 386
+    },
+    {
+      "codepoint": 78500,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u132A4.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0,
+        256.8571428571429
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78500,
+      "selector": 65030,
+      "angle": 315,
+      "description": "rotated approximately 315 degrees",
+      "glyph": "u132A4.vs7",
+      "transform": [
+        0.7071067811865474,
+        0.7071067811865477,
+        -0.7071067811865477,
+        0.7071067811865474,
+        642.3509011700821,
+        -4.71150219135194
+      ],
+      "advance": 893
+    },
+    {
+      "codepoint": 78506,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u132AA.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        95.0,
+        398.5
+      ],
+      "advance": 535
+    },
+    {
+      "codepoint": 78539,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u132CB.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        95.5,
+        834.5
+      ],
+      "advance": 666
+    },
+    {
+      "codepoint": 78556,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u132DC.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        104.49999999999994,
+        929.25
+      ],
+      "advance": 940
+    },
+    {
+      "codepoint": 78567,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u132E7.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        109.99999999999999,
+        888.1428571428571
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78567,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u132E7.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0000000000001,
+        11.857142857142916
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78569,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u132E9.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        820.0,
+        30.25000000000006
+      ],
+      "advance": 970
+    },
+    {
+      "codepoint": 78569,
+      "selector": 65030,
+      "angle": 300,
+      "description": "rotated approximately 300 degrees",
+      "glyph": "u132E9.vs7",
+      "transform": [
+        0.5000000000000001,
+        0.8660254037844386,
+        -0.8660254037844386,
+        0.5000000000000001,
+        603.8646951899967,
+        -94.40810208249329
+      ],
+      "advance": 922
+    },
+    {
+      "codepoint": 78584,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u132F8.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0,
+        148.00000000000009
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78589,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u132FD.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1009.875,
+        218.31250000000009
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78594,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13302.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1007.3333333333333,
+        203.37333333333342
+      ],
+      "advance": 1116
+    },
+    {
+      "codepoint": 78595,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13303.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0,
+        256.00000000000006
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78599,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13307.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        91.79487179487177,
+        713.1196581196582
+      ],
+      "advance": 431
+    },
+    {
+      "codepoint": 78600,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13308.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1144.2307692307693,
+        740.0
+      ],
+      "advance": 1145
+    },
+    {
+      "codepoint": 78608,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13310.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0,
+        239.4285714285715
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78609,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13311.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1009.939393939394,
+        192.83030303030316
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78610,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13312.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1193.5526315789473,
+        196.00000000000006
+      ],
+      "advance": 1193
+    },
+    {
+      "codepoint": 78610,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13312.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        299.0526315789475,
+        -498.77631578947364
+      ],
+      "advance": 402
+    },
+    {
+      "codepoint": 78611,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13313.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1193.9512195121952,
+        195.00000000000006
+      ],
+      "advance": 1194
+    },
+    {
+      "codepoint": 78611,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13313.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        288.9512195121952,
+        -499.4756097560976
+      ],
+      "advance": 383
+    },
+    {
+      "codepoint": 78612,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13314.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1192.3205741626793,
+        168.00000000000006
+      ],
+      "advance": 1192
+    },
+    {
+      "codepoint": 78612,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13314.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        265.684210526316,
+        -512.1602870813398
+      ],
+      "advance": 363
+    },
+    {
+      "codepoint": 78619,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u1331B.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        96.99999999999994,
+        786.5384615384615
+      ],
+      "advance": 574
+    },
+    {
+      "codepoint": 78619,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u1331B.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1193.0,
+        380.0769230769232
+      ],
+      "advance": 1193
+    },
+    {
+      "codepoint": 78620,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u1331C.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0,
+        227.9000000000001
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78625,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13321.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1191.4,
+        415.86956521739137
+      ],
+      "advance": 1193
+    },
+    {
+      "codepoint": 78625,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13321.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        507.4000000000001,
+        -387.76521739130436
+      ],
+      "advance": 601
+    },
+    {
+      "codepoint": 78626,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13322.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        109.92307692307693,
+        686.9615384615385
+      ],
+      "advance": 1119
+    },
+    {
+      "codepoint": 78626,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13322.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        473.92307692307685,
+        900.0
+      ],
+      "advance": 473
+    },
+    {
+      "codepoint": 78635,
+      "selector": 65030,
+      "angle": 340,
+      "description": "rotated approximately 340 degrees [horizontal]",
+      "glyph": "u1332B.vs7",
+      "transform": [
+        0.9396926207859084,
+        0.3420201433256686,
+        -0.3420201433256686,
+        0.9396926207859084,
+        191.46459863849975,
+        -188.308848777347
+      ],
+      "advance": 1309
+    },
+    {
+      "codepoint": 78641,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13331.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        416.0,
+        901.3333333333334
+      ],
+      "advance": 416
+    },
+    {
+      "codepoint": 78641,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13331.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1011.3333333333334,
+        242.66666666666677
+      ],
+      "advance": 1121
+    },
+    {
+      "codepoint": 78648,
+      "selector": 65027,
+      "angle": 30,
+      "description": "rotated approximately 30 degrees",
+      "glyph": "u13338.vs4",
+      "transform": [
+        0.8660254037844387,
+        -0.49999999999999994,
+        0.49999999999999994,
+        0.8660254037844387,
+        -360.1749427937875,
+        286.7142811010241
+      ],
+      "advance": 618
+    },
+    {
+      "codepoint": 78648,
+      "selector": 65030,
+      "angle": 320,
+      "description": "rotated approximately 320 degrees [horizontal]",
+      "glyph": "u13338.vs7",
+      "transform": [
+        0.7660444431189778,
+        0.6427876096865396,
+        -0.6427876096865396,
+        0.7660444431189778,
+        593.0205504936977,
+        -186.0325119484027
+      ],
+      "advance": 1255
+    },
+    {
+      "codepoint": 78652,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u1333C.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        93.99999999999994,
+        805.0
+      ],
+      "advance": 603
+    },
+    {
+      "codepoint": 78666,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u1334A.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        656.5384615384615,
+        32.230769230769276
+      ],
+      "advance": 758
+    },
+    {
+      "codepoint": 78689,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13361.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1007.5384615384615,
+        207.50000000000009
+      ],
+      "advance": 1115
+    },
+    {
+      "codepoint": 78704,
+      "selector": 65030,
+      "angle": 320,
+      "description": "rotated approximately 320 degrees",
+      "glyph": "u13370.vs7",
+      "transform": [
+        0.7660444431189778,
+        0.6427876096865396,
+        -0.6427876096865396,
+        0.7660444431189778,
+        503.0053501550218,
+        -81.42144083047401
+      ],
+      "advance": 873
+    },
+    {
+      "codepoint": 78705,
+      "selector": 65030,
+      "angle": 315,
+      "description": "rotated approximately 315 degrees",
+      "glyph": "u13371.vs7",
+      "transform": [
+        0.7071067811865474,
+        0.7071067811865477,
+        -0.7071067811865477,
+        0.7071067811865474,
+        474.76659402887026,
+        -79.28309832336569
+      ],
+      "advance": 788
+    },
+    {
+      "codepoint": 78707,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13373.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        802.6666666666667,
+        51.500000000000064
+      ],
+      "advance": 919
+    },
+    {
+      "codepoint": 78711,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13377.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        101.0,
+        918.0
+      ],
+      "advance": 760
+    },
+    {
+      "codepoint": 78712,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13378.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        98.0,
+        662.0
+      ],
+      "advance": 760
+    },
+    {
+      "codepoint": 78717,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u1337D.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        650.0,
+        -332.3823529411764
+      ],
+      "advance": 755
+    },
+    {
+      "codepoint": 78725,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13385.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0000000000001,
+        -69.99999999999991
+      ],
+      "advance": 1110
+    },
+    {
+      "codepoint": 78745,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13399.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        108.99999999999994,
+        713.0
+      ],
+      "advance": 470
+    },
+    {
+      "codepoint": 78746,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u1339A.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        95.0,
+        690.5
+      ],
+      "advance": 381
+    },
+    {
+      "codepoint": 78767,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u133AF.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1008.88,
+        40.56000000000009
+      ],
+      "advance": 1119
+    },
+    {
+      "codepoint": 78768,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u133B0.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1009.2592592592594,
+        27.370370370370463
+      ],
+      "advance": 1119
+    },
+    {
+      "codepoint": 78783,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u133BF.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0000000000001,
+        214.00000000000009
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78803,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u133D3.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        33.99999999999994,
+        667.0
+      ],
+      "advance": 427
+    },
+    {
+      "codepoint": 78811,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u133DB.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        350.0000000000001,
+        -433.0
+      ],
+      "advance": 450
+    },
+    {
+      "codepoint": 78813,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u133DD.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        354.0000000000001,
+        -467.5
+      ],
+      "advance": 449
+    },
+    {
+      "codepoint": 78820,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees [= 270 degrees]",
+      "glyph": "u133E4.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        107.0,
+        336.0
+      ],
+      "advance": 598
+    },
+    {
+      "codepoint": 78821,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees [= 270 degrees]",
+      "glyph": "u133E5.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        97.0,
+        656.5
+      ],
+      "advance": 580
+    },
+    {
+      "codepoint": 78823,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees [= 270 degrees]",
+      "glyph": "u133E7.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        51.0,
+        473.5
+      ],
+      "advance": 247
+    },
+    {
+      "codepoint": 78824,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u133E8.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        658.0,
+        841.0
+      ],
+      "advance": 681
+    },
+    {
+      "codepoint": 78830,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees [= 270 degrees]",
+      "glyph": "u133EE.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        110.0,
+        450.0
+      ],
+      "advance": 580
+    },
+    {
+      "codepoint": 78834,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u133F2.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        103.99999999999997,
+        554.0
+      ],
+      "advance": 759
+    },
+    {
+      "codepoint": 78837,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u133F5.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        107.99999999999994,
+        878.0
+      ],
+      "advance": 847
+    },
+    {
+      "codepoint": 78838,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u133F6.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        110.0,
+        810.0
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 78861,
+      "selector": 65028,
+      "angle": 135,
+      "description": "rotated approximately 135 degrees [= 315 degrees]",
+      "glyph": "u1340D.vs5",
+      "transform": [
+        -0.7071067811865475,
+        -0.7071067811865476,
+        0.7071067811865476,
+        -0.7071067811865475,
+        352.1801223302798,
+        789.7040943016275
+      ],
+      "advance": 672
+    },
+    {
+      "codepoint": 78870,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13416.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        97.0,
+        746.0
+      ],
+      "advance": 492
+    },
+    {
+      "codepoint": 78873,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13419.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        96.66666666666669,
+        695.3333333333334
+      ],
+      "advance": 399
+    },
+    {
+      "codepoint": 78873,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13419.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1188.6666666666667,
+        202.00000000000006
+      ],
+      "advance": 1192
+    },
+    {
+      "codepoint": 78873,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u13419.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        298.6666666666669,
+        -493.33333333333337
+      ],
+      "advance": 399
+    },
+    {
+      "codepoint": 78873,
+      "selector": 65027,
+      "angle": 15,
+      "description": "rotated approximately 15 degrees",
+      "glyph": "u13419.vs4",
+      "transform": [
+        0.9659258262890683,
+        -0.25881904510252074,
+        0.25881904510252074,
+        0.9659258262890683,
+        1.3621988008230836,
+        157.2662773507356
+      ],
+      "advance": 1206
+    },
+    {
+      "codepoint": 78873,
+      "selector": 65030,
+      "angle": 345,
+      "description": "rotated approximately 345 degrees",
+      "glyph": "u13419.vs7",
+      "transform": [
+        0.9659258262890683,
+        0.2588190451025207,
+        -0.2588190451025207,
+        0.9659258262890683,
+        5.75218234464969,
+        -150.3832942611274
+      ],
+      "advance": 1159
+    },
+    {
+      "codepoint": 78874,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u1341A.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        108.0,
+        571.0
+      ],
+      "advance": 359
+    },
+    {
+      "codepoint": 78883,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees",
+      "glyph": "u13423.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        111.33333333333331,
+        723.3333333333333
+      ],
+      "advance": 1111
+    },
+    {
+      "codepoint": 78892,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u1342C.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1012.0,
+        214.00000000000009
+      ],
+      "advance": 1122
+    },
+    {
+      "codepoint": 78894,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u1342E.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        1010.0,
+        231.00000000000009
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 80872,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees [= 270 degrees]",
+      "glyph": "u13BE8.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        106.0,
+        647.0
+      ],
+      "advance": 510
+    },
+    {
+      "codepoint": 80873,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees [= 270 degrees]",
+      "glyph": "u13BE9.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        106.0,
+        774.0
+      ],
+      "advance": 580
+    },
+    {
+      "codepoint": 80874,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees [= 270 degrees]",
+      "glyph": "u13BEA.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        102.0,
+        819.0
+      ],
+      "advance": 660
+    },
+    {
+      "codepoint": 81695,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u13F1F.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        817.0,
+        920.0
+      ],
+      "advance": 756
+    },
+    {
+      "codepoint": 81778,
+      "selector": 65024,
+      "angle": 90,
+      "description": "rotated 90 degrees [= 270 degrees]",
+      "glyph": "u13F72.vs1",
+      "transform": [
+        6.123233995736766e-17,
+        -1.0,
+        1.0,
+        6.123233995736766e-17,
+        110.0,
+        795.0
+      ],
+      "advance": 1120
+    },
+    {
+      "codepoint": 82548,
+      "selector": 65025,
+      "angle": 180,
+      "description": "rotated 180 degrees",
+      "glyph": "u14274.vs2",
+      "transform": [
+        -1.0,
+        -1.2246467991473532e-16,
+        1.2246467991473532e-16,
+        -1.0,
+        1194.3333333333333,
+        409.3913043478261
+      ],
+      "advance": 1192
+    },
+    {
+      "codepoint": 82548,
+      "selector": 65026,
+      "angle": 270,
+      "description": "rotated 270 degrees",
+      "glyph": "u14274.vs3",
+      "transform": [
+        -1.8369701987210297e-16,
+        1.0,
+        -1.0,
+        -1.8369701987210297e-16,
+        519.0579710144928,
+        -392.4710144927537
+      ],
+      "advance": 626
+    },
+    {
+      "codepoint": 82548,
+      "selector": 65029,
+      "angle": 250,
+      "description": "rotated approximately 250 degrees [vertical]",
+      "glyph": "u14274.vs6",
+      "transform": [
+        -0.34202014332566855,
+        0.9396926207859084,
+        -0.9396926207859084,
+        -0.34202014332566855,
+        531.8035925939416,
+        -286.4474215774091
+      ],
+      "advance": 410
+    },
+    {
+      "codepoint": 82548,
+      "selector": 65030,
+      "angle": 340,
+      "description": "rotated approximately 340 degrees [horizontal]",
+      "glyph": "u14274.vs7",
+      "transform": [
+        0.9396926207859084,
+        0.3420201433256686,
+        -0.3420201433256686,
+        0.9396926207859084,
+        146.65743060971496,
+        -191.89837060351715
+      ],
+      "advance": 1263
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "Semantic and historical reference only. No embedded font program, chart outline or page artwork is copied into generated fonts.",
+  "files": [
+    {
+      "path": "build/unicode-sources/math-variant-references/historical-math.pdf",
+      "url": "https://www.unicode.org/wg2/docs/n5334R2-L-2603.Proposal.to.encode.historical.mathematical.relations.pdf",
+      "sha256": "5911fbe09d86f80f1c37d2f6e438d3f61d926cd1c71f7704a66e4a96d874d46e",
+      "git_blob_sha1": "2928343ebb16f2e82b1880b50b4b6c247afa8c9d",
+      "size": 20012164,
+      "build_target": "reference",
+      "review_pages": [
+        3,
+        8,
+        37,
+        38
+      ]
+    },
+    {
+      "path": "build/unicode-sources/math-variant-references/cossic.pdf",
+      "url": "https://www.unicode.org/wg2/docs/n5333R2-L-2533%20Proposal%20to%20encode%2012%20cossic%20characters.pdf",
+      "sha256": "a14ca03cefa39340a8cc647d609432aa03b4dd43c310e24bb72a12910b252f61",
+      "git_blob_sha1": "c26802cb74e2dc78a21d3fc47966c9eda3c9d87f",
+      "size": 7087848,
+      "build_target": "reference",
+      "review_pages": [
+        4,
+        9,
+        10,
+        12,
+        19
+      ]
+    }
+  ]
+}

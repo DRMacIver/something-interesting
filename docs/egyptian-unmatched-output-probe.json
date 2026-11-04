@@ -1,0 +1,2528 @@
+{
+  "status": "Historical72output probe, now resolved to982accepted/0rejected. Four missing regions were native seven-cell/six-cell-rule mismatches, not merely a digit regex restriction. See docs/insertion-mirror-helper-review.json.",
+  "points": 72,
+  "likelyMarkerOutputs": 65,
+  "singleInkOutputs": [
+    {
+      "key": "1305C-13440-13432",
+      "glyphs": [
+        "C2b"
+      ],
+      "regions": [
+        [
+          105,
+          0,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        77916,
+        78912
+      ],
+      "expectedGlyphPrefix": "C2a",
+      "containerAloneGlyphs": [
+        "QB3",
+        "r0v6",
+        "c0h3",
+        "o36",
+        "m0",
+        "C2b",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "130BB-13440-13432",
+      "glyphs": [
+        "D55"
+      ],
+      "regions": [
+        [
+          105,
+          0,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78011,
+        78912
+      ],
+      "expectedGlyphPrefix": "D54",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D55",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "130BD-13440-13434",
+      "glyphs": [
+        "D54"
+      ],
+      "regions": [
+        [
+          1365,
+          0,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78013,
+        78912
+      ],
+      "expectedGlyphPrefix": "D55",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D54",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13154-13433",
+      "glyphs": [
+        "G18"
+      ],
+      "regions": [],
+      "container": [
+        78164
+      ],
+      "expectedGlyphPrefix": "G18",
+      "containerAloneGlyphs": [
+        "QB7",
+        "r0v6",
+        "c0h7",
+        "o76",
+        "m0",
+        "G18",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13154-13440-13433",
+      "glyphs": [
+        "G18R"
+      ],
+      "regions": [],
+      "container": [
+        78164,
+        78912
+      ],
+      "expectedGlyphPrefix": "G18",
+      "containerAloneGlyphs": [
+        "QB7",
+        "r0v6",
+        "c0h7",
+        "o76",
+        "m0",
+        "G18R",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "1318F-13434",
+      "glyphs": [
+        "I7"
+      ],
+      "regions": [],
+      "container": [
+        78223
+      ],
+      "expectedGlyphPrefix": "I7",
+      "containerAloneGlyphs": [
+        "QB7",
+        "r0v6",
+        "c0h7",
+        "o76",
+        "m0",
+        "I7",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "1318F-13440-13434",
+      "glyphs": [
+        "I7R"
+      ],
+      "regions": [],
+      "container": [
+        78223,
+        78912
+      ],
+      "expectedGlyphPrefix": "I7",
+      "containerAloneGlyphs": [
+        "QB7",
+        "r0v6",
+        "c0h7",
+        "o76",
+        "m0",
+        "I7R",
+        "c0eA",
+        "r0eB"
+      ]
+    }
+  ],
+  "all": [
+    {
+      "key": "1305C-13440-13432",
+      "glyphs": [
+        "C2b"
+      ],
+      "regions": [
+        [
+          105,
+          0,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        77916,
+        78912
+      ],
+      "expectedGlyphPrefix": "C2a",
+      "containerAloneGlyphs": [
+        "QB3",
+        "r0v6",
+        "c0h3",
+        "o36",
+        "m0",
+        "C2b",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13093-13440-13439",
+      "glyphs": [
+        "D28",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          465,
+          630,
+          930
+        ]
+      ],
+      "container": [
+        77971,
+        78912
+      ],
+      "expectedGlyphPrefix": "D28",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D28",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13093-13440-1343A",
+      "glyphs": [
+        "D28",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          0,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        77971,
+        78912
+      ],
+      "expectedGlyphPrefix": "D28",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D28",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13093-13440-13439-1343A",
+      "glyphs": [
+        "D28",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          465,
+          630,
+          930
+        ],
+        [
+          577,
+          1085,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        77971,
+        78912
+      ],
+      "expectedGlyphPrefix": "D28",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D28",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13093-13440-1343A-13439",
+      "glyphs": [
+        "D28",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          0,
+          630,
+          620
+        ],
+        [
+          577,
+          310,
+          630,
+          930
+        ]
+      ],
+      "container": [
+        77971,
+        78912
+      ],
+      "expectedGlyphPrefix": "D28",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D28",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13098-13440-13439",
+      "glyphs": [
+        "D32",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          620,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        77976,
+        78912
+      ],
+      "expectedGlyphPrefix": "D32",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D32",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13098-13440-1343B",
+      "glyphs": [
+        "D32",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          620,
+          630,
+          1240
+        ]
+      ],
+      "container": [
+        77976,
+        78912
+      ],
+      "expectedGlyphPrefix": "D32",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D32",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13098-13440-13439-1343B",
+      "glyphs": [
+        "D32",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          620,
+          630,
+          620
+        ],
+        [
+          577,
+          930,
+          630,
+          1240
+        ]
+      ],
+      "container": [
+        77976,
+        78912
+      ],
+      "expectedGlyphPrefix": "D32",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D32",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13098-13440-1343B-13439",
+      "glyphs": [
+        "D32",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          620,
+          630,
+          1240
+        ],
+        [
+          577,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        77976,
+        78912
+      ],
+      "expectedGlyphPrefix": "D32",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D32",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "130BB-13440-13432",
+      "glyphs": [
+        "D55"
+      ],
+      "regions": [
+        [
+          105,
+          0,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78011,
+        78912
+      ],
+      "expectedGlyphPrefix": "D54",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D55",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "130BD-13440-13434",
+      "glyphs": [
+        "D54"
+      ],
+      "regions": [
+        [
+          1365,
+          0,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78013,
+        78912
+      ],
+      "expectedGlyphPrefix": "D55",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D54",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "130DC-13440-13434",
+      "glyphs": [
+        "E100",
+        "mr"
+      ],
+      "regions": [
+        [
+          735,
+          0,
+          1260,
+          310
+        ]
+      ],
+      "container": [
+        78044,
+        78912
+      ],
+      "expectedGlyphPrefix": "E100",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "E100",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "1310B-13440-1343A",
+      "glyphs": [
+        "F13",
+        "mr"
+      ],
+      "regions": [
+        [
+          735,
+          0,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78091,
+        78912
+      ],
+      "expectedGlyphPrefix": "F13",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "F13",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "1310C-13440-1343A",
+      "glyphs": [
+        "F13a",
+        "mr"
+      ],
+      "regions": [
+        [
+          735,
+          0,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78092,
+        78912
+      ],
+      "expectedGlyphPrefix": "F13a",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "F13a",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13130-13440-13433",
+      "glyphs": [
+        "F45",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          620,
+          315,
+          1240
+        ]
+      ],
+      "container": [
+        78128,
+        78912
+      ],
+      "expectedGlyphPrefix": "F45",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "F45",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13130-13440-13435",
+      "glyphs": [
+        "F45",
+        "mr"
+      ],
+      "regions": [
+        [
+          1050,
+          620,
+          315,
+          1240
+        ]
+      ],
+      "container": [
+        78128,
+        78912
+      ],
+      "expectedGlyphPrefix": "F45",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "F45",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13130-13440-13433-13435",
+      "glyphs": [
+        "F45",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          620,
+          315,
+          1240
+        ],
+        [
+          1050,
+          620,
+          315,
+          1240
+        ]
+      ],
+      "container": [
+        78128,
+        78912
+      ],
+      "expectedGlyphPrefix": "F45",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "F45",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13130-13440-13435-13433",
+      "glyphs": [
+        "F45",
+        "mr"
+      ],
+      "regions": [
+        [
+          1050,
+          620,
+          315,
+          1240
+        ],
+        [
+          105,
+          620,
+          315,
+          1240
+        ]
+      ],
+      "container": [
+        78128,
+        78912
+      ],
+      "expectedGlyphPrefix": "F45",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "F45",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13131-13440-13433",
+      "glyphs": [
+        "F45a",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          620,
+          315,
+          1240
+        ]
+      ],
+      "container": [
+        78129,
+        78912
+      ],
+      "expectedGlyphPrefix": "F45a",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "F45a",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13131-13440-13435",
+      "glyphs": [
+        "F45a",
+        "mr"
+      ],
+      "regions": [
+        [
+          1050,
+          620,
+          315,
+          1240
+        ]
+      ],
+      "container": [
+        78129,
+        78912
+      ],
+      "expectedGlyphPrefix": "F45a",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "F45a",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13131-13440-13433-13435",
+      "glyphs": [
+        "F45a",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          620,
+          315,
+          1240
+        ],
+        [
+          1050,
+          620,
+          315,
+          1240
+        ]
+      ],
+      "container": [
+        78129,
+        78912
+      ],
+      "expectedGlyphPrefix": "F45a",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "F45a",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13131-13440-13435-13433",
+      "glyphs": [
+        "F45a",
+        "mr"
+      ],
+      "regions": [
+        [
+          1050,
+          620,
+          315,
+          1240
+        ],
+        [
+          105,
+          620,
+          315,
+          1240
+        ]
+      ],
+      "container": [
+        78129,
+        78912
+      ],
+      "expectedGlyphPrefix": "F45a",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "F45a",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13154-13433",
+      "glyphs": [
+        "G18"
+      ],
+      "regions": [],
+      "container": [
+        78164
+      ],
+      "expectedGlyphPrefix": "G18",
+      "containerAloneGlyphs": [
+        "QB7",
+        "r0v6",
+        "c0h7",
+        "o76",
+        "m0",
+        "G18",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13154-13440-13433",
+      "glyphs": [
+        "G18R"
+      ],
+      "regions": [],
+      "container": [
+        78164,
+        78912
+      ],
+      "expectedGlyphPrefix": "G18",
+      "containerAloneGlyphs": [
+        "QB7",
+        "r0v6",
+        "c0h7",
+        "o76",
+        "m0",
+        "G18R",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "1318F-13434",
+      "glyphs": [
+        "I7"
+      ],
+      "regions": [],
+      "container": [
+        78223
+      ],
+      "expectedGlyphPrefix": "I7",
+      "containerAloneGlyphs": [
+        "QB7",
+        "r0v6",
+        "c0h7",
+        "o76",
+        "m0",
+        "I7",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "1318F-13440-13434",
+      "glyphs": [
+        "I7R"
+      ],
+      "regions": [],
+      "container": [
+        78223,
+        78912
+      ],
+      "expectedGlyphPrefix": "I7",
+      "containerAloneGlyphs": [
+        "QB7",
+        "r0v6",
+        "c0h7",
+        "o76",
+        "m0",
+        "I7R",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "131F9-13440-1343B",
+      "glyphs": [
+        "N11",
+        "mr"
+      ],
+      "regions": [
+        [
+          735,
+          1550,
+          630,
+          310
+        ]
+      ],
+      "container": [
+        78329,
+        78912
+      ],
+      "expectedGlyphPrefix": "N11",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "N11",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13218-13440-13439",
+      "glyphs": [
+        "N36",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          775,
+          945,
+          310
+        ]
+      ],
+      "container": [
+        78360,
+        78912
+      ],
+      "expectedGlyphPrefix": "N36",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "N36",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13219-13440-13439",
+      "glyphs": [
+        "N37",
+        "mr"
+      ],
+      "regions": [
+        [
+          263,
+          775,
+          1575,
+          310
+        ]
+      ],
+      "container": [
+        78361,
+        78912
+      ],
+      "expectedGlyphPrefix": "N37",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "N37",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13250-13440-13439",
+      "glyphs": [
+        "O1",
+        "mr"
+      ],
+      "regions": [
+        [
+          262,
+          620,
+          1260,
+          620
+        ]
+      ],
+      "container": [
+        78416,
+        78912
+      ],
+      "expectedGlyphPrefix": "O1",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "O1",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13250-13440-1343B",
+      "glyphs": [
+        "O1",
+        "mr"
+      ],
+      "regions": [
+        [
+          735,
+          930,
+          315,
+          930
+        ]
+      ],
+      "container": [
+        78416,
+        78912
+      ],
+      "expectedGlyphPrefix": "O1",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "O1",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13250-13440-13439-1343B",
+      "glyphs": [
+        "O1",
+        "mr"
+      ],
+      "regions": [
+        [
+          262,
+          620,
+          1260,
+          620
+        ],
+        [
+          262,
+          930,
+          315,
+          930
+        ]
+      ],
+      "container": [
+        78416,
+        78912
+      ],
+      "expectedGlyphPrefix": "O1",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "O1",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13250-13440-1343B-13439",
+      "glyphs": [
+        "O1",
+        "mr"
+      ],
+      "regions": [
+        [
+          735,
+          930,
+          315,
+          930
+        ],
+        [
+          735,
+          1550,
+          1260,
+          620
+        ]
+      ],
+      "container": [
+        78416,
+        78912
+      ],
+      "expectedGlyphPrefix": "O1",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "O1",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13278-13440-13439",
+      "glyphs": [
+        "O26",
+        "mr"
+      ],
+      "regions": [
+        [
+          420,
+          310,
+          630,
+          1240
+        ]
+      ],
+      "container": [
+        78456,
+        78912
+      ],
+      "expectedGlyphPrefix": "O26",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "O26",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13280-13440-13439",
+      "glyphs": [
+        "O32",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          465,
+          315,
+          930
+        ]
+      ],
+      "container": [
+        78464,
+        78912
+      ],
+      "expectedGlyphPrefix": "O32",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "O32",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13280-13440-1343B",
+      "glyphs": [
+        "O32",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          930,
+          315,
+          930
+        ]
+      ],
+      "container": [
+        78464,
+        78912
+      ],
+      "expectedGlyphPrefix": "O32",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "O32",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13280-13440-13439-1343B",
+      "glyphs": [
+        "O32",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          465,
+          315,
+          930
+        ],
+        [
+          578,
+          1085,
+          315,
+          930
+        ]
+      ],
+      "container": [
+        78464,
+        78912
+      ],
+      "expectedGlyphPrefix": "O32",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "O32",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13280-13440-1343B-13439",
+      "glyphs": [
+        "O32",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          930,
+          315,
+          930
+        ],
+        [
+          578,
+          1550,
+          315,
+          930
+        ]
+      ],
+      "container": [
+        78464,
+        78912
+      ],
+      "expectedGlyphPrefix": "O32",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "O32",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13285-13440-13439",
+      "glyphs": [
+        "O36",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          310,
+          315,
+          1240
+        ]
+      ],
+      "container": [
+        78469,
+        78912
+      ],
+      "expectedGlyphPrefix": "O36",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "O36",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "132E0-13440-13433",
+      "glyphs": [
+        "S14",
+        "mr"
+      ],
+      "regions": [
+        [
+          294,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78560,
+        78912
+      ],
+      "expectedGlyphPrefix": "S14",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "S14",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "132E0-13440-13435",
+      "glyphs": [
+        "S14",
+        "mr"
+      ],
+      "regions": [
+        [
+          1176,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78560,
+        78912
+      ],
+      "expectedGlyphPrefix": "S14",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "S14",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "132E0-13440-13433-13435",
+      "glyphs": [
+        "S14",
+        "mr"
+      ],
+      "regions": [
+        [
+          294,
+          1240,
+          630,
+          620
+        ],
+        [
+          1365,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78560,
+        78912
+      ],
+      "expectedGlyphPrefix": "S14",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "S14",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "132E0-13440-13435-13433",
+      "glyphs": [
+        "S14",
+        "mr"
+      ],
+      "regions": [
+        [
+          1176,
+          1240,
+          630,
+          620
+        ],
+        [
+          105,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78560,
+        78912
+      ],
+      "expectedGlyphPrefix": "S14",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "S14",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "132EB-13440-1343A",
+      "glyphs": [
+        "S22",
+        "mr"
+      ],
+      "regions": [
+        [
+          735,
+          0,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78571,
+        78912
+      ],
+      "expectedGlyphPrefix": "S22",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "S22",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "132EB-13440-1343B",
+      "glyphs": [
+        "S22",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          1550,
+          945,
+          310
+        ]
+      ],
+      "container": [
+        78571,
+        78912
+      ],
+      "expectedGlyphPrefix": "S22",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "S22",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "132EB-13440-1343A-1343B",
+      "glyphs": [
+        "S22",
+        "mr"
+      ],
+      "regions": [
+        [
+          735,
+          0,
+          630,
+          620
+        ],
+        [
+          735,
+          310,
+          945,
+          310
+        ]
+      ],
+      "container": [
+        78571,
+        78912
+      ],
+      "expectedGlyphPrefix": "S22",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "S22",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "132EB-13440-1343B-1343A",
+      "glyphs": [
+        "S22",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          1550,
+          945,
+          310
+        ],
+        [
+          578,
+          3410,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78571,
+        78912
+      ],
+      "expectedGlyphPrefix": "S22",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "S22",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13371-13440-13439",
+      "glyphs": [
+        "V6",
+        "mr"
+      ],
+      "regions": [
+        [
+          420,
+          775,
+          315,
+          310
+        ]
+      ],
+      "container": [
+        78705,
+        78912
+      ],
+      "expectedGlyphPrefix": "V6",
+      "containerAloneGlyphs": [
+        "QB3",
+        "r0v6",
+        "c0h3",
+        "o36",
+        "m0",
+        "V6",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13372-13440-13439",
+      "glyphs": [
+        "V7",
+        "mr"
+      ],
+      "regions": [
+        [
+          420,
+          775,
+          315,
+          310
+        ]
+      ],
+      "container": [
+        78706,
+        78912
+      ],
+      "expectedGlyphPrefix": "V7",
+      "containerAloneGlyphs": [
+        "QB3",
+        "r0v6",
+        "c0h3",
+        "o36",
+        "m0",
+        "V7",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "133B3-13440-13439",
+      "glyphs": [
+        "W4",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          620,
+          945,
+          620
+        ]
+      ],
+      "container": [
+        78771,
+        78912
+      ],
+      "expectedGlyphPrefix": "W4",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "W4",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "133F6-13440-13433",
+      "glyphs": [
+        "Z11",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          1240,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78838,
+        78912
+      ],
+      "expectedGlyphPrefix": "Z11",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "Z11",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "133F6-13440-13435",
+      "glyphs": [
+        "Z11",
+        "mr"
+      ],
+      "regions": [
+        [
+          1050,
+          1240,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78838,
+        78912
+      ],
+      "expectedGlyphPrefix": "Z11",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "Z11",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "133F6-13440-13433-13435",
+      "glyphs": [
+        "Z11",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          1240,
+          315,
+          620
+        ],
+        [
+          1050,
+          1240,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78838,
+        78912
+      ],
+      "expectedGlyphPrefix": "Z11",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "Z11",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "133F6-13440-13435-13433",
+      "glyphs": [
+        "Z11",
+        "mr"
+      ],
+      "regions": [
+        [
+          1050,
+          1240,
+          315,
+          620
+        ],
+        [
+          105,
+          1240,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78838,
+        78912
+      ],
+      "expectedGlyphPrefix": "Z11",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "Z11",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13421-13440-13439",
+      "glyphs": [
+        "J19",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          620,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78881,
+        78912
+      ],
+      "expectedGlyphPrefix": "J19",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "J19",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13421-13440-1343B",
+      "glyphs": [
+        "J19",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          1240,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78881,
+        78912
+      ],
+      "expectedGlyphPrefix": "J19",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "J19",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13421-13440-13439-1343B",
+      "glyphs": [
+        "J19",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          620,
+          315,
+          620
+        ],
+        [
+          578,
+          930,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78881,
+        78912
+      ],
+      "expectedGlyphPrefix": "J19",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "J19",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13421-13440-1343B-13439",
+      "glyphs": [
+        "J19",
+        "mr"
+      ],
+      "regions": [
+        [
+          578,
+          1240,
+          315,
+          620
+        ],
+        [
+          578,
+          1550,
+          315,
+          620
+        ]
+      ],
+      "container": [
+        78881,
+        78912
+      ],
+      "expectedGlyphPrefix": "J19",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "J19",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13285-FE00-13440-13439",
+      "glyphs": [
+        "O36n",
+        "mr"
+      ],
+      "regions": [
+        [
+          735,
+          620,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78469,
+        65024,
+        78912
+      ],
+      "expectedGlyphPrefix": "O36n",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "O36n",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13377-FE00-13440-13439",
+      "glyphs": [
+        "V10n",
+        "mr"
+      ],
+      "regions": [
+        [
+          263,
+          310,
+          945,
+          1240
+        ]
+      ],
+      "container": [
+        78711,
+        65024,
+        78912
+      ],
+      "expectedGlyphPrefix": "V10n",
+      "containerAloneGlyphs": [
+        "QB4",
+        "r0v6",
+        "c0h4",
+        "o46",
+        "m0",
+        "V10n",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "133F6-FE00-13440-13433",
+      "glyphs": [
+        "Z11n",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78838,
+        65024,
+        78912
+      ],
+      "expectedGlyphPrefix": "Z11n",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "Z11n",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "133F6-FE00-13440-13435",
+      "glyphs": [
+        "Z11n",
+        "mr"
+      ],
+      "regions": [
+        [
+          1365,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78838,
+        65024,
+        78912
+      ],
+      "expectedGlyphPrefix": "Z11n",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "Z11n",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "133F6-FE00-13440-13433-13435",
+      "glyphs": [
+        "Z11n",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          1240,
+          630,
+          620
+        ],
+        [
+          1365,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78838,
+        65024,
+        78912
+      ],
+      "expectedGlyphPrefix": "Z11n",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "Z11n",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "133F6-FE00-13440-13435-13433",
+      "glyphs": [
+        "Z11n",
+        "mr"
+      ],
+      "regions": [
+        [
+          1365,
+          1240,
+          630,
+          620
+        ],
+        [
+          105,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78838,
+        65024,
+        78912
+      ],
+      "expectedGlyphPrefix": "Z11n",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "Z11n",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13093-FE01-13440-13439",
+      "glyphs": [
+        "D28o",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          465,
+          630,
+          930
+        ]
+      ],
+      "container": [
+        77971,
+        65025,
+        78912
+      ],
+      "expectedGlyphPrefix": "D28o",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D28o",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13093-FE01-13440-1343B",
+      "glyphs": [
+        "D28o",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          620,
+          630,
+          1240
+        ]
+      ],
+      "container": [
+        77971,
+        65025,
+        78912
+      ],
+      "expectedGlyphPrefix": "D28o",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D28o",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13093-FE01-13440-13439-1343B",
+      "glyphs": [
+        "D28o",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          465,
+          630,
+          930
+        ],
+        [
+          577,
+          1085,
+          630,
+          1240
+        ]
+      ],
+      "container": [
+        77971,
+        65025,
+        78912
+      ],
+      "expectedGlyphPrefix": "D28o",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D28o",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13093-FE01-13440-1343B-13439",
+      "glyphs": [
+        "D28o",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          620,
+          630,
+          1240
+        ],
+        [
+          577,
+          1240,
+          630,
+          930
+        ]
+      ],
+      "container": [
+        77971,
+        65025,
+        78912
+      ],
+      "expectedGlyphPrefix": "D28o",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D28o",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "130B8-FE03-13440-13433",
+      "glyphs": [
+        "D52l",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78008,
+        65027,
+        78912
+      ],
+      "expectedGlyphPrefix": "D52l",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "D52l",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "130BA-FE03-13440-13433",
+      "glyphs": [
+        "D53l",
+        "mr"
+      ],
+      "regions": [
+        [
+          105,
+          1240,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78010,
+        65027,
+        78912
+      ],
+      "expectedGlyphPrefix": "D53l",
+      "containerAloneGlyphs": [
+        "QB6",
+        "r0v6",
+        "c0h6",
+        "o66",
+        "m0",
+        "D53l",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "1310F-FE03-13440-13434",
+      "glyphs": [
+        "F16l",
+        "mr"
+      ],
+      "regions": [
+        [
+          1050,
+          0,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78095,
+        65027,
+        78912
+      ],
+      "expectedGlyphPrefix": "F16l",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "F16l",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    },
+    {
+      "key": "13371-FE06-13440-13439",
+      "glyphs": [
+        "V6u",
+        "mr"
+      ],
+      "regions": [
+        [
+          577,
+          620,
+          630,
+          620
+        ]
+      ],
+      "container": [
+        78705,
+        65030,
+        78912
+      ],
+      "expectedGlyphPrefix": "V6u",
+      "containerAloneGlyphs": [
+        "QB5",
+        "r0v6",
+        "c0h5",
+        "o56",
+        "m0",
+        "V6u",
+        "mr",
+        "c0eA",
+        "r0eB"
+      ]
+    }
+  ]
+}

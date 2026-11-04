@@ -1,0 +1,50 @@
+{
+  "repository": "https://github.com/kreativekorp/open-relay",
+  "commit": "e4b81241e8c7269a91c0bd865cf5c9e7208fbada",
+  "scope": "Ten assigned legacy text pictographs only; no emoji, private-use or structural glyphs. Light pen variation preserves recognizable monochrome source shapes and counters. Full style review remains provisional.",
+  "reference": "https://www.unicode.org/L2/L2023/23252-legacy-disunification.pdf",
+  "files": [
+    {
+      "path": "build/unicode-sources/kreative-square/KreativeSquare.ttf",
+      "url": "https://raw.githubusercontent.com/kreativekorp/open-relay/e4b81241e8c7269a91c0bd865cf5c9e7208fbada/KreativeSquare/KreativeSquare.ttf",
+      "sha256": "7eebf2b2d739baaa68dfcaa9d482fdb89fa570bf0d553300572e90fe48ff89d6",
+      "git_blob_sha1": "41b52867bda4832bf5a84bb07280f29dc4a6b411",
+      "size": 720240,
+      "include_ranges": [
+        [
+          118010,
+          118012
+        ],
+        [
+          118458,
+          118463
+        ],
+        [
+          130042,
+          130042
+        ]
+      ],
+      "ink_ranges": [
+        [
+          118010,
+          118012
+        ],
+        [
+          118458,
+          118463
+        ],
+        [
+          130042,
+          130042
+        ]
+      ]
+    },
+    {
+      "path": "assets/fonts/licenses/KreativeSquare-OFL.txt",
+      "url": "https://raw.githubusercontent.com/kreativekorp/open-relay/e4b81241e8c7269a91c0bd865cf5c9e7208fbada/KreativeSquare/OFL.txt",
+      "sha256": "f41c62b00b213a055f606b635451ee8aeb3f793a5d3846cc22ceee19a7dbb6db",
+      "git_blob_sha1": "a6942970baf470a062f4719f31adb6905df170f4",
+      "size": 4439
+    }
+  ]
+}

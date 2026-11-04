@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Dad Lettering";
-  src: url("assets/fonts/dad-lettering.woff2?v=02a7f4c3c8") format("woff2");
+  src: url("assets/fonts/dad-lettering-unicode.woff2?v=db5c711ce6") format("woff2");
   font-display: block;
 }
 
@@ -99,6 +99,7 @@ button {
 
 textarea {
   width: 100%;
+  line-height: 1.45;
   resize: vertical;
   padding: 8px 10px;
   border: 1px solid var(--line);

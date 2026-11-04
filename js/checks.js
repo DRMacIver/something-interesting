@@ -26,6 +26,10 @@ function inside(polygon, [px, py]) {
 // The box the capital letters of a line occupy (a line's box also includes
 // the space between lines).
 function capBox(line, cap) {
+  if (line.ink && line.baseline !== undefined) {
+    const baseline = line.y + line.baseline;
+    return [line.x, baseline - line.ink.ascent, line.x + line.width, baseline + line.ink.descent];
+  }
   const top = line.y + (line.height - cap) / 2;
   return [line.x, top, line.x + line.width, top + cap];
 }

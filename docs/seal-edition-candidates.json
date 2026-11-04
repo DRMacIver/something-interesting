@@ -1,0 +1,27 @@
+{
+  "unicode": "18.0.0",
+  "status": "Source-location review queue; identities and scan crops still require visual verification",
+  "sourceDefinition": "https://www.unicode.org/reports/tr60/tr60-3.html",
+  "sourceHashes": {
+    "data/unicode/18.0.0/SealSources.txt": "05ba2c220c4f34a0f1ef54676e7d2033963a9baed1acafd079f00f13da11aa90",
+    "assets/fonts/scripts/9095b0a86464.woff2": "00caa39608b97165cd935513f1ae3b720be63020440e3962d9c2d97fb03ed101",
+    "assets/fonts/scripts/799ec7409810.woff2": "fa0e7eba6a8f97ef1c05bba19a0cba2ca624929195bd967dea0d1ab50553d830",
+    "assets/fonts/scripts/96926b398fc1.woff2": "19baff43ce439436331a194c8b05d2eb742f1344ff9499db3967181d8cc7bf6c",
+    "assets/fonts/scripts/11862dfc6c1d.woff2": "8f5bdbac92ee9235243743ec559e6d627e8ff4f6f46da7697f43a01293a1a387",
+    "assets/fonts/scripts/c5b1dc08d0d9.woff2": "621e18b1f8c9f7423c7ed9760dbb7fdf94b20ece8d07c6a30b139b2a168346c0",
+    "assets/fonts/scripts/456f8e6095c2.woff2": "49f2ade15f6f5d68508a4d76a4ffd0a191a3ca6389778d1aa05b46d01dbf1939",
+    "assets/fonts/scripts/2ba35609ece1.woff2": "94517c6348d83a06f14e03d0bc7af2c77d81e7c9791dc73ae6a09fc7fe553522",
+    "assets/fonts/scripts/ac9f8d77bbf1.woff2": "e5012a17191ce7c00319536aba7384f5783078560e1e83fa0cad5d54a15e5d85",
+    "assets/fonts/scripts/ac824ec2c036.woff2": "4fe68d4311416d70fef4279f65476e14996774fce16b12bbe3a7387bb83dcb0c",
+    "assets/fonts/scripts/a990429f0e01.woff2": "e239088f923b3c7a826760d37443a51dcacd67db824b45a88738846a28bbbd5a",
+    "assets/fonts/scripts/4ddf86a37484.woff2": "59013dbccf40ce132e61e32bee226b1db8166a5ef647505ce5691cab9f94bd33",
+    "assets/fonts/scripts/a5999aa25643.woff2": "2a62491f72b2ba3bf7233a4d73e0de47f4326ce5c0cd1680dd2e01af9582d4d1",
+    "assets/fonts/scripts/4f969c1e3793.woff2": "867183010be85eefa8b6ccd2f9eee116a3cb87c3ed335ca831bec7fedbe4be0d",
+    "assets/fonts/scripts/3f931c1d7d45.woff2": "d7fa82f5f9f61d414b37cac2a265d41bbf4226053ccdc99ce2263d065f9eee23",
+    "assets/fonts/scripts/e8744d705707.woff2": "fe928f4adce495717ea7d77453b7607b65b3a350bdfdbab2ed85611658f7ee8d"
+  },
+  "missing": 0,
+  "withoutCCZ": 0,
+  "preferredReviewCounts": {},
+  "candidates": []
+}

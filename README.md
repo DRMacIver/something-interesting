@@ -18,6 +18,11 @@ uv run tools/serve.py
 Then open <http://localhost:8765>. (It's an ordinary static file server,
 except that it tells browsers not to use cached files without checking.)
 
+The [Unicode sampler](sampler.html), at <http://localhost:8765/sampler.html>,
+shows 24 complete comics with different scripts, emoji, mathematical letters,
+combining marks and diagrams. Filter or search the examples, open one in the
+editor, or download its full-size PNG. Previews render as you scroll.
+
 ## Updating assets
 
 Every asset URL the pages use carries a hash of the file's contents
@@ -117,6 +122,98 @@ uv run pytest
 ```
 
 ## The font
+
+The Unicode typography beta is ready for human playtesting. The
+[agreed brief](docs/unicode-beta-brief.md), [completed plan](docs/unicode-beta-plan.md)
+and [implementation audit](docs/unicode-beta-audit.json) record the scope and
+limits. The original beta checkpoint accounts for 2,336 Python cases across
+verified batches. Later [sampler typography refinements](docs/typography-alignment-feedback.md)
+passed 373 JavaScript checks and focused font/reproduction checks.
+Character inventory, native shaping, sampled
+visual review and dated browser evidence are tracked separately.
+
+`tools/unicode/outline_audit.py` separately replays actual font-stack selection
+and checks positive outlines, COLR layers and isolated GSUB output. Its inventory
+includes visible prepended format signs as drawing requirements as well as
+behaviour requirements. A clean result is not a glyph-identity, complete
+format-behaviour, contextual-shaping or style claim.
+
+Licensed script sources and Unicode data are pinned in `data/`; custom source
+and sequence builders live in `tools/font/` and `tools/unicode/`.
+
+For local visual iteration, use `tools/font/render_specimen.py --spec <fixture>
+--output <prefix>` (or `--atlas-page 1`). It writes outlined PNG/SVG specimens
+and JSON with source hashes, shaping positions and ink bounds, without a server
+or browser. Compare native and candidate fonts at dialogue and detail sizes;
+these specimens do not execute application routing or balloon layout.
+
+`tools/font/supplemental_recipes.json` lists the accepted source-specific pen
+recipes. `supplemental_adapter.py` applies them during the script build, retaining
+native shaping tables, advances and attachment frames, and records per-glyph
+guard rejections. Dense CJK, Tangut and Khitan use a separate guarded finer-ink
+adapter, retaining native glyphs where thinning fails component/counter checks.
+The CFF adapter also verifies that decoded Type2 advances agree with hmtx,
+including five documented legacy width-only repairs. All methods preserve
+source provenance and explicit per-glyph decisions. Content-addressed caches
+are disposable; production reports and untouched baseline fonts are retained
+under `output/font-review/`.
+
+`tools/font/build_greek.py` builds the handwritten Greek companion, including
+polytonic vowels, from the retained OFL WenKai letters and Noto accent
+arrangements. It preserves native letter outlines and canonical equivalents.
+Rebuild it after script fonts and run `tools/version_assets.py` afterward.
+`tools/font/optical_anchors.py` supplies the upper/lower letter-profile centres
+used when rebuilding the extended Latin lettering.
+
+`tools/font/build_cjk_variants.py` maps standardized CJK variation sequences to
+their specified compatibility ideograph drawings, using the pinned CC0 Jigmo
+archive. Rebuild it before `tools/version_assets.py`. This font is loaded only
+for matching variation sequences. Its guarded finer-ink finish retains the
+pinned compatibility identities; specialist reader review remains provisional.
+
+`tools/font/build_marked_cjk_variants.py` adds separate CJK variant companions
+for the app's 257 existing hand-treated accents. Build these after the script,
+CJK variant and extended lettering fonts. They copy the current CJK base
+drawings and their existing finish exactly, along with metrics, hints and
+selectors; only added accent drawings are converted to the TrueType grid.
+Native single-mark positions are recorded from the selected base font. The
+companions load only when a requested accent is missing from the variant font.
+Context-sensitive native variants retain their complete source shaping.
+
+`js/standalone-fonts.js` selects a complete existing native font for joining
+fields containing Tatweel: Aref Ruqaa has no extender ink or advance, so those
+fields use a visible source such as Kufi rather than splitting a word across
+faces. Fields without Tatweel retain their ordinary routing.
+
+`js/combining-annotations.js` supplies dynamic layout for eight enclosing forms
+and the ten double-diacritic classes. Enclosures grow around preceding accents
+and enclosures; double marks span the following base outside its ordinary marks.
+For a nonjoining variation cluster with a foreign nonspacing mark, the longest
+supported prefix keeps its native font. Remaining marks follow canonical order,
+using the selected font's own outlines for native marks displaced by the foreign
+mark. Complete native clusters keep their existing shaping. Native base drawings
+retain their fonts and size. The source-path catalog is
+reproducible with `tools/font/build_combining_outlines.py`; source hashes,
+copyrights and licences accompany its records. Joining scripts, connected
+Egyptian groups, CGJ-sensitive combinations and unsupported interactions keep
+their native path. These conservative fallbacks and source-specific limits are
+recorded in the implementation audit; sampled style reviews do not replace
+specialist reader feedback.
+
+`tools/font/build_math_variants.py` supplies 27 explicit math alternatives from
+the pinned NewComputerModern release. Its renamed derivative retains native
+curves and mark layout; GUST/LPPL terms, upstream availability and change notices
+are bundled in `assets/fonts/licenses/`. Ordinary math fonts retain priority
+unless a run explicitly requests a variation.
+
+`tools/font/build_seal_sans.py` supplies only the 139 Seal characters absent
+from the other fonts. It retains native cubic drawings and advances, translating
+the baseline by 340 units. This separate AGPL-3.0 font has its original licence,
+modification notices, and [complete corresponding source](assets/fonts/sources/DadSealSans-source.zip)
+bundled beside it and linked from the app footer. That download includes the
+full pinned upstream project and a standalone builder tested to reproduce the
+production WOFF2 byte for byte. Native Seal style and specialist reader review
+remain provisional. Exports currently contain PNG pixels, not font programs.
 
 Dad Lettering is made from a scan of *The Indispensable Calvin and Hobbes*
 (not included in the repository) in three steps:

@@ -1,0 +1,62 @@
+{
+  "status": "Tatweel font fallback verified for isolated and complete joining fields. Non-format drawing audit clean; full beta still incomplete.",
+  "date": "2026-11-03",
+  "unicode": "18.0.0",
+  "problem": "Aref Ruqaa maps U0640 to zero ink and zero advance both alone and inside connected words. Cmap presence concealed the missing extender.",
+  "implementation": "Fields containing Tatweel select one existing non-Aref native font covering every required field character, preferring the existing manifest order. Arabic normally selects Noto Kufi Arabic; Syriac selects its own complete native source. Spaces and explicit nonjoining boundaries end fields; ZWJ/transparent marks remain inside. Fields without Tatweel retain original routing. Loading, measurement and painting share the same span plan. No font program or character artwork changed.",
+  "checks": {
+    "javascript": {
+      "passed": 346,
+      "seconds": 10.05,
+      "log": "/tmp/tatweel-field-full-js.log"
+    },
+    "focusedRouting": {
+      "passed": 98,
+      "log": "/tmp/tatweel-field-routing-tests.log"
+    },
+    "nativeSourceAndAudit": {
+      "passed": 6,
+      "seconds": 1.69,
+      "log": "/tmp/tatweel-field-source-tests.log",
+      "scope": "Kufi Tatweel native curves/metrics/ink/advance, connected extender source shaping and increased word width; original Aref font programs unchanged; ordered first-painted-family audit behavior."
+    },
+    "outlineAudit": {
+      "status": "passed for its explicit non-format inventory",
+      "visibleRequirements": 172352,
+      "drawings": 172347,
+      "explicitBlankContextExceptions": 5,
+      "unexplainedDrawingGaps": [],
+      "routingGaps": [],
+      "log": "/tmp/tatweel-first-font-outline-audit.log",
+      "scope": "Replays actual painted font stack, not any loaded candidate. Word-level expansion of the field rule leaves all single-codepoint choices unchanged and is covered by separate contextual tests."
+    },
+    "browser": {
+      "status": "passed",
+      "cases": 660,
+      "failures": [],
+      "geometry": [],
+      "tab": 45,
+      "visualCases": [
+        "tatweel-isolated",
+        "tatweel-boundaries"
+      ],
+      "checks": "Real extender ink/advance, greater connected-word width, complete source-family field and ordinary routing of extender-free Arabic."
+    }
+  },
+  "limits": [
+    "If no single visible native font covers the full field, existing native fallback remains; arbitrary cross-script attachment is still a separate open requirement.",
+    "Non-format drawing coverage does not prove glyph identity, all contextual shaping or final visual style.",
+    "Thirteen Prepended_Concatenation_Mark format characters have visible source glyphs but are currently skipped or misrouted as Cf behaviour; see font-dependent-format-probe.json.",
+    "Full Python15005 is still running; do not describe it as passed."
+  ],
+  "sha256": {
+    "js/standalone-fonts.js": "ad830e7d86ae6ea3423a299b2d8bcfc2e399a9ec65ed3a603132cc3b2510714b",
+    "js/fonts.js": "1d5f4eff14cbcc93e8dcd6abdc8c3de30ddebdcefae66840c3e7c1879f0dc200",
+    "js/emoji-routing.js": "864a327f1ba86f1db1396b38a70d13deb06a0c7d15c68a39c6723316eb100263",
+    "tools/unicode/outline_audit.py": "5a3ea550d1a89dfa7f48669f52c54eefe97947e0fc309ca11af9dcdaa3c31a42",
+    "tests/standalone-fonts.test.mjs": "7a94f42d77023db8e6295b4264180302ad8d0cc5f4655f22683a20544b707ee5",
+    "tests/test_standalone_tatweel.py": "69b3faff4ef30c82ca6241ac234869ac0e2158df06ad29db1884a3c4714e2268",
+    "tests/test_outline_audit.py": "81c87b402df05b07919b0ee6b9a5e4802a49ed38d222d886a0c83c17d47a7951",
+    "tools/unicode-checks.html": "4f5a3bc63b75f3512b4798daa6a7e88ba8eec36a426e8ef039eb6d524c497450"
+  }
+}

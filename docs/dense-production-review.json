@@ -1,0 +1,109 @@
+{
+  "status": "Accepted bounded dense production finer-ink treatment with explicit native preservation; all123publicfontandreportSHAs match authenticated accepted candidates; final current full suite pending",
+  "recipeSha256": "a7213c7e508d964bd3be6fc14f8bb1b5982350ff307126106c517e379515c99c",
+  "authenticatedFonts": 123,
+  "authenticatedGlyphs": 146617,
+  "counts": {
+    "native-blank": 136,
+    "dense-native-pen": 115724,
+    "guarded-native-flex": 5320,
+    "native-retained-guard": 25437
+  },
+  "bySource": {
+    "NotoSerifKhitanSmallScript-Regular.ttf": {
+      "dense-native-pen": 10978,
+      "guarded-native-flex": 91,
+      "native-blank": 4,
+      "native-retained-guard": 292
+    },
+    "NotoSerifTangut-Regular.ttf": {
+      "dense-native-pen": 6285,
+      "guarded-native-flex": 233,
+      "native-blank": 11,
+      "native-retained-guard": 398
+    },
+    "Jigmo.ttf": {
+      "dense-native-pen": 39879,
+      "guarded-native-flex": 1974,
+      "native-blank": 42,
+      "native-retained-guard": 8426
+    },
+    "Jigmo2.ttf": {
+      "dense-native-pen": 48329,
+      "guarded-native-flex": 2465,
+      "native-blank": 63,
+      "native-retained-guard": 13585
+    },
+    "Jigmo3.ttf": {
+      "dense-native-pen": 10253,
+      "guarded-native-flex": 557,
+      "native-blank": 16,
+      "native-retained-guard": 2736
+    }
+  },
+  "fallbackReasons": {
+    "Native contour count changed": 849,
+    "Counter retention below75percent": 5017,
+    "Changed topology": 22594,
+    "Merged or lost native component": 2289,
+    "Component mass outside finer-ink bounds": 7,
+    "Pressure would move native attachment frame too far": 1
+  },
+  "actualFieldReview": "output/font-review/dense-production-fields/review.json",
+  "globalLargestReview": "output/font-review/dense-retention-review/encoded-review-corpus.json",
+  "globalLargestReviewed": 24,
+  "sourceLargestReview": "output/font-review/dense-retention-review/source-largest/encoded-review-corpus.json",
+  "sourceLargestReviewed": 12,
+  "sourceLargestNeedsContext": 3,
+  "observations": [
+    "All seven actual production complete fields pass384px component/counter/mass guards with equal native shaping GIDs/positions.",
+    "Global24largest fallback cases are Hangul; preserve all distinct final components/counters, with only very subtle native-flex change.",
+    "Additional largest-three per-source review rendered12 actual-selected cases acrossJigmo1/2/3 andTangut; threeKhitan nominal targets are not selected by native standalone shaping and explicitly deferred rather than shown misleadingly.",
+    "Inspected unchanged dense Han/Tangut examples retain fine counters/ticks; guarded flex remains subtle. Native serif contrast is intentionally retained where thinning failed structural guards.",
+    "This bounded review does not claim exhaustive native-reader evaluation or full stylistic normalization for all25437unchanged glyph slots."
+  ],
+  "coordinatorVisualInspection": {
+    "renderer": "local HarfBuzz/fontTools/PyMuPDF",
+    "files": [
+      {
+        "file": "output/font-review/dense-production-fields/comparison.png",
+        "sha256": "2e791f3431cabc17f055e7dceb11009f6e3bf7e2a40d33e2a9f364aa224dd1b2"
+      },
+      {
+        "file": "output/font-review/dense-retention-review/encoded-retentions-01.png",
+        "sha256": "60afc597be1ead64096b60b6c1dbd67b86ed1a5ae3a1296734275b3f849c2877"
+      },
+      {
+        "file": "output/font-review/dense-retention-review/encoded-retentions-02.png",
+        "sha256": "80a309588901440fa4c23755937bc171b45d9d9d4aab46ba03e604c84edae39d"
+      },
+      {
+        "file": "output/font-review/dense-retention-review/encoded-retentions-03.png",
+        "sha256": "63c39da7baffe7f698629cc8bcbf7ad20adf6380892c54dcb44546312e06ad3c"
+      },
+      {
+        "file": "output/font-review/dense-retention-review/encoded-retentions-04.png",
+        "sha256": "49be5b0e4f3730e4015bcd4eb73382eb9792d2e8f518e57980fe5aca52c15b97"
+      },
+      {
+        "file": "output/font-review/dense-retention-review/source-largest/encoded-retentions-01.png",
+        "sha256": "c73840efd11f0655c2c038779ea0ec010cf1364f1805926d4d74a3a6bf41119b"
+      },
+      {
+        "file": "output/font-review/dense-retention-review/source-largest/encoded-retentions-02.png",
+        "sha256": "9875736299f5a0a28e642dae8ebd75cfa0982c89ac0d7db2f68c05c050c68392"
+      }
+    ],
+    "decision": "Accepted bounded finer-ink production fields and native-retained cases beside Dad at22/44px. Native components, tiny marks and counters remain distinct in these samples; native serif contrast and three context-required Khitan nominal targets remain explicitly recorded. Final public byte continuity pending."
+  },
+  "publicContinuity": {
+    "status": "PASS: all123publicfontSHA and stable detailed reportSHA exactly equal accepted authenticated private candidates",
+    "evidence": "output/font-review/dense-production/public-continuity.json",
+    "log": "/tmp/dense-public-continuity-final.log",
+    "actualExitCode": 0,
+    "fonts": 123,
+    "glyphs": 146617,
+    "publicManifestSha256": "6847bb807966fbeaa32a5b3130d5cd8d91ee4739095936e25daf3746b29d6147"
+  },
+  "finalPublicContinuity": "output/font-review/dense-production/public-continuity.json"
+}

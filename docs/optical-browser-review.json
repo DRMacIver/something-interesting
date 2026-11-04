@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-03",
+  "url": "http://localhost:8766/tools/unicode-checks.html?case=greek-proportional&case=hieroglyph-optical-ink",
+  "status": "Two current optical regressions passed; final pressure assets not included.",
+  "fontLoaded": true,
+  "results": [
+    {
+      "name": "greek-proportional",
+      "renderMs": 94,
+      "pngBytes": 622975,
+      "bundledScriptFonts": 1,
+      "lines": 6,
+      "canvas": [
+        1690,
+        2246
+      ],
+      "failures": [],
+      "geometry": []
+    },
+    {
+      "name": "hieroglyph-optical-ink",
+      "renderMs": 206,
+      "pngBytes": 630236,
+      "bundledScriptFonts": 4,
+      "lines": 5,
+      "canvas": [
+        1690,
+        2181
+      ],
+      "failures": [],
+      "geometry": []
+    }
+  ],
+  "actualProduct": "Edited mixed Greek/polytonic/Arabic/Egyptian/CJK/emoji dialogue; inspected preview and font-wait enabled export. Greek proportional spacing visibly improved.",
+  "download": "Not verified on current output: browser download authority declined for localhost:8766. No retry or workaround.",
+  "limitations": [
+    "Canvas harness PNG blob roundtrip succeeds, but this does not establish actual Download PNG UI completion.",
+    "No final full browser corpus, current clipboard or final pressure export claim."
+  ]
+}

@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><title>Regional flag font candidate</title>
+<style>body{background:#f5f2eb;font:16px system-ui}canvas{display:block;background:white;margin-bottom:10px}@font-face{font-family:Flag;src:url(region-flags-candidate.woff2?v=__FONT_HASH__)}@font-face{font-family:FlagInk;src:url(region-flags-candidate-ink.woff2?v=__INK_HASH__)}@font-face{font-family:Dialogue;src:url(../../../assets/fonts/dad-lettering-unicode.woff2)}</style>
+<h1>Regional flag candidate: enlarged and dialogue size</h1><p>33.6px flags with 18-unit ink stroke; isolated candidate, pending production integration.</p><div id="status">Loading fonts…</div><main></main><script>
+const flags=__FLAGS__;
+async function draw(){await Promise.all([document.fonts.load('160px Flag'),document.fonts.load('160px FlagInk'),document.fonts.load('24px Dialogue')]);
+for(const e of flags){const canvas=document.createElement('canvas');canvas.width=900;canvas.height=190;canvas.setAttribute('aria-label',e.region+' enlarged and dialogue size');document.querySelector('main').append(canvas);const c=canvas.getContext('2d');c.font='16px system-ui';c.fillText(e.region,12,22);c.font='160px Flag';c.fillText(e.sequence,10,175);c.font='24px Dialogue';c.fillText('A FLAG: ',260,100);c.font='33.6px FlagInk';c.strokeStyle='#111';c.lineWidth=33.6*.018;c.lineJoin='round';c.miterLimit=2;c.strokeText(e.sequence,380,100);c.font='33.6px Flag';c.fillText(e.sequence,380,100);c.font='24px Dialogue';c.fillText('WHAT DO YOU THINK?',440,100);}
+document.querySelector('#status').textContent='Rendered '+flags.length+' candidate sequences with loaded custom fonts.';}
+draw().catch(e=>document.querySelector('#status').textContent='ERROR: '+e);
+</script>

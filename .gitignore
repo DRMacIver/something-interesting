@@ -3,5 +3,7 @@ node_modules/
 __pycache__/
 calvin-and-hobbes.pdf
 build/
+output/
+tmp/
 .venv/
 *.swp

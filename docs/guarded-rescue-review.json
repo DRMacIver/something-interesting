@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-03",
+  "status": "All four remaining guarded sample findings dispositioned locally; full production integration pending.",
+  "sources": [
+    {
+      "number": 9,
+      "decision": "accepted-pressure-with-native-connector-closure",
+      "amount": 0.7,
+      "source": "build/unicode-sources/unicodia/ArchaicCuneiformNumerals.ttf",
+      "evidence": "output/font-review/guarded-rescue/9-retention.json",
+      "comparison": "output/font-review/guarded-rescue/9-comparison.png",
+      "productionPolicy": "tools/font/source_preservation.py",
+      "reason": "Isolated and1024field checks missed384field component fracture. RestoringU+1262D native component closure makes both independent field checks pass; circle counts and linear numeral details preserved."
+    },
+    {
+      "number": 67,
+      "source": "build/unicode-sources/noto/NotoSansIndicSiyaqNumbers-Regular.ttf",
+      "decision": "accepted-native-pressure",
+      "amount": 0.1,
+      "evidence": "output/font-review/guarded-rescue/review.json",
+      "comparison": "output/font-review/guarded-rescue/comparison.png",
+      "reason": "Retain native cursive proportions/overhang; reduce pressure to.1 because larger values fail field topology. Native source is already expressive calligraphy."
+    },
+    {
+      "number": 192,
+      "source": "build/unicode-sources/ufs/UFSZeroExt.otf",
+      "decision": "accepted-native-cubic-pressure",
+      "amount": 0.7,
+      "evidence": "output/font-review/guarded-rescue/review.json",
+      "comparison": "output/font-review/guarded-rescue/comparison.png",
+      "reason": "CFF sample keeps historical Armenian, Tangut and Jurchen forms and the filled/open geometric distinction; seven of eight sampled glyphs accept pressure, with one retained by the counter guard. Full-source review subsequently adds the explicit native U+18F6C policy recorded in cubic-source-preservation-review.json."
+    },
+    {
+      "number": 195,
+      "source": "build/unicode-sources/unicodia/UnicodiaFunky.ttf",
+      "decision": "accepted-native-pressure",
+      "amount": 0.7,
+      "evidence": "output/font-review/guarded-rescue/review.json",
+      "comparison": "output/font-review/guarded-rescue/comparison.png",
+      "reason": "Mixed symbols and alternate alphabets retain semantic forms with smooth variable pressure; sampled source and candidate fields pass."
+    }
+  ],
+  "comparisons": {
+    "output/font-review/guarded-rescue/9-comparison.png": "6cbedbdf4f818917f414d08e6715654bdd5972e200d37b4e05bc5da335d010ba",
+    "output/font-review/guarded-rescue/comparison.png": "129348ceb4bd73a6d8cee01335205ea81092950a674a8d0ef5bc92060914500d"
+  },
+  "limitations": [
+    "These are native source-owned eight-glyph inventory fields, not linguistic sentences.",
+    "Unsupported separator spaces were removed from native-only tests; product automatic space/routing is separately covered by runtime tests.",
+    "No application renderer or browser calls used for this review.",
+    "Full retained glyph production assets, source-specific regression tests and retained-glyph exceptions remain required."
+  ]
+}

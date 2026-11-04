@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-03",
+  "status": "implemented; focused source/browser and refreshed full drawing audit verified",
+  "unicode": "18.0.0",
+  "property": "Prepended_Concatenation_Mark",
+  "points": 13,
+  "inventory": {
+    "assignedPublic": 172873,
+    "drawing": 172365,
+    "behaviour": 521,
+    "overlap": 13
+  },
+  "changes": [
+    "Visible Cf signs require real glyphs rather than blanket behavioural exclusion.",
+    "Empty preferred-script repertoires no longer select Dad Grid.",
+    "Complete sign/number and Syriac abbreviation fields select one native bundled font, ahead of ordinary dialogue lettering.",
+    "Application paragraph ordering isolates Arabic prefixed numeric fields; adjacent logical fragments with the same direction shape together after reordering. User text stays unchanged; core bidi engine and pinned conformance rules are unchanged."
+  ],
+  "evidence": {
+    "javascript": {
+      "passed": 350,
+      "log": "/tmp/format-final-full-js.log"
+    },
+    "source": {
+      "passed": 13,
+      "seconds": 22.11,
+      "log": "/tmp/format-final-source.log"
+    },
+    "browserFocused": {
+      "case": "format-signs-numbers",
+      "failures": [],
+      "geometry": [],
+      "visuallyReviewed": true
+    },
+    "outlinePrior": {
+      "drawings": 172360,
+      "explicitExceptions": 5,
+      "unexplained": 0,
+      "routingGaps": 0,
+      "log": "/tmp/format-glyph-outline-audit.log"
+    },
+    "browserUnicode": {
+      "cases": 662,
+      "failures": [],
+      "geometry": []
+    },
+    "browserGeneral": {
+      "cases": 33,
+      "failed": []
+    },
+    "outlineFinal": {
+      "drawings": 172360,
+      "explicitExceptions": 5,
+      "unexplained": 0,
+      "routingGaps": 0,
+      "log": "/tmp/format-final-outline.log"
+    }
+  },
+  "references": [
+    "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-9/",
+    "data/unicode/18.0.0/PropList.txt"
+  ],
+  "limits": [
+    "Positive standalone ink does not prove contextual behaviour; actual complete-field checks are separate.",
+    "Numeric-field ordering is an application-level graphical grouping, not a change to the core Unicode bidi algorithm.",
+    "Native source shaping is preserved; source-family style review and broader beta gaps remain.",
+    "No complete bundled font for a deliberately unsupported mixed-script field retains existing fallback; that is not counted as proved contextual coverage."
+  ],
+  "sha256": {
+    "js/format-fonts.js": "4dff76861d4f88d8e4f79f853012c593cfe6e0c0182cef07195735d2c84faf4e",
+    "js/direction.js": "9860593d14f67d1cbeb9f7d2e555ab8ee1769eedc8be263c306787c2cbf9ce06",
+    "js/fonts.js": "3e46b1fdee27c43b30601b3e895442ccb00b12ccb141309f9ee37f4137e5a547",
+    "js/emoji-routing.js": "099111d7ebd8a14ca8ee298e1956e3e49c530b8c326e970c9c019f65b4d25261",
+    "js/font-variations.js": "51d289d58f5f2bf1c2cad1fe56811bbd6e6db712237f9469131ebfac3aae4d52",
+    "tests/format-glyphs.test.mjs": "8a70298a464c63939be21a5f41e7fbc1df056abfc419896d02c7d64b767d5f3a",
+    "tests/test_format_glyphs.py": "9ced70dd3eb6cee2fdd0bfef73e0dc93a898fcc52f09deb153b22166753b7a1d",
+    "tools/unicode-checks.html": "2dc4e7ccd2eb576afef804a657d622199d09ea53786c41b19dd6f51fa6790599"
+  }
+}

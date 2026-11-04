@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-03",
+  "status": "implemented and source/JS/browser verified",
+  "reference": "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-23/",
+  "scope": "Nonjoining native variation prefixes followed by foreign Mn/Me drawings, with CGJ canonical-order boundaries.",
+  "behaviour": [
+    "Keep CGJ inside the shaped native prefix when it precedes the first missing drawing.",
+    "Retain later CGJ in operation ordering as an invisible ccc0 boundary; draw no glyph and add no advance.",
+    "Canonical ordering never crosses CGJ. Native marks moved after foreign marks retain exact selected-font catalog drawings.",
+    "Complete native clusters, joining scripts and guarded CGJ/double cases keep their native paths."
+  ],
+  "evidence": {
+    "focusedJS": {
+      "passed": 11,
+      "log": "/tmp/cgj-variation-final-js.log"
+    },
+    "fullJS": {
+      "passed": 352,
+      "log": "/tmp/cgj-variation-full-js.log"
+    },
+    "nativeInk": {
+      "passed": 1,
+      "log": "/tmp/cgj-variation-source.log",
+      "scope": "Actual packaged prefix glyph identities, positions and total advance match the equivalent prefix without the invisible CGJ; four actual plan-selected native prefixes."
+    },
+    "focusedBrowser": [
+      "combining-cgj-variants",
+      "combining-cgj-enclosures"
+    ],
+    "focusedVisual": "Both actual strips visually inspected: mathematical/CJK variants retained, accent ordering and subsequent circles/squares/numeric enclosures visible, no clipping/geometry failures.",
+    "fullBrowser": {
+      "cases": 666,
+      "failures": [],
+      "geometry": []
+    }
+  },
+  "limits": [
+    "Does not enable arbitrary CGJ/double or joining-script geometric composition.",
+    "Foreign spacing Mc marks remain a separate investigation; do not use Mn placement as a substitute.",
+    "Source-family/style and final product review are still incomplete."
+  ],
+  "sha256": {
+    "js/combining-annotations.js": "26a7e9a8f97b810f4447b6dcaac8c4166c99941b08b74d2a9d7a62aeedcbd5be",
+    "tests/combining-annotations.test.mjs": "d08b22b90eb7d6141bbf6528409c5df882008b1ce20708017b3c56b7feb548b2",
+    "tests/test_cgj_variations.py": "cfeab9afd34c2c1ef2850b68e5a866a9ccbfa50c9cfa770a605ccf2dff3eb454",
+    "tools/unicode-checks.html": "e7487d268be842a8d52f73636054995b38571df587436e4a27d930e6015a8ef2"
+  }
+}

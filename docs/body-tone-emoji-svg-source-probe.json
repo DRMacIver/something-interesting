@@ -1,0 +1,62 @@
+{
+  "status": "Registered production sources; six anatomical drawings and all 36 tone forms built, tested and reviewed in actual comic strips",
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "💪",
+      "path": "build/unicode-sources/noto-emoji-body-tone-svg/emoji_u1f4aa.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f4aa.svg",
+      "sha256": "7dc3422399832437476f9ba9e0badbf63a8bf955694b5a568770ce95c97b7a25",
+      "git_blob_sha1": "3fb7d8c457673d097285c5e941415890a2e459e9",
+      "size": 5071,
+      "shapeElementsIncludingDefinitions": 10
+    },
+    {
+      "sequence": "👂",
+      "path": "build/unicode-sources/noto-emoji-body-tone-svg/emoji_u1f442.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f442.svg",
+      "sha256": "f919508af80eeeadf12dfdeca4c236f24d2e6133e4ff6a124c07a4cc6cb58acb",
+      "git_blob_sha1": "dc30e1d852f120367dbe2122f952abd2d1b8ee26",
+      "size": 3521,
+      "shapeElementsIncludingDefinitions": 9
+    },
+    {
+      "sequence": "🦻",
+      "path": "build/unicode-sources/noto-emoji-body-tone-svg/emoji_u1f9bb.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9bb.svg",
+      "sha256": "6de07a2ea6dce39b39b864127b25e58fe965f4e1156de64c51036dfdf73e26e0",
+      "git_blob_sha1": "3c32a48a4eadabaee9a4c8c897beb5204c94d3c1",
+      "size": 6834,
+      "shapeElementsIncludingDefinitions": 25
+    },
+    {
+      "sequence": "👃",
+      "path": "build/unicode-sources/noto-emoji-body-tone-svg/emoji_u1f443.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f443.svg",
+      "sha256": "169b66af649e36e1a77ed422226b5fd2afdbc5c253c8f1cb0be6c9cd745c43d2",
+      "git_blob_sha1": "96097f5c275c4d0f875fb9e3247af334f78cbcb1",
+      "size": 3338,
+      "shapeElementsIncludingDefinitions": 7
+    },
+    {
+      "sequence": "🦵",
+      "path": "build/unicode-sources/noto-emoji-body-tone-svg/emoji_u1f9b5.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9b5.svg",
+      "sha256": "686e15b0069808abca52644cc1afef4ed39b417442031afa60393c9ddbc2dd0a",
+      "git_blob_sha1": "fb71e6f54dbd0c2dd624fe68f5a9656513568fdc",
+      "size": 4903,
+      "shapeElementsIncludingDefinitions": 11
+    },
+    {
+      "sequence": "🦶",
+      "path": "build/unicode-sources/noto-emoji-body-tone-svg/emoji_u1f9b6.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9b6.svg",
+      "sha256": "0392f27b08832ec1d7774b343518029be5fad55ea96c82ec453550ad43384049",
+      "git_blob_sha1": "97e35eaba01e346bb924f4fe8f979cbf9e25dea8",
+      "size": 5551,
+      "shapeElementsIncludingDefinitions": 9
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "publisher": "Hendo Academy / Binu George",
+  "version": "1.0",
+  "reviewed": "2026-11-01",
+  "reference": "https://www.hendoacademy.org/articles/hendo-academy-launches-kerala's-first-indigenous-east-syriac-and-karshon-unicode-font-east-syriac-malankara",
+  "archive": {
+    "path": "build/unicode-sources/malankara/EastSyriacMalankara.zip",
+    "url": "https://www.hendoacademy.org/assets/zip/EastSyriacMalankara.zip",
+    "sha256": "7e92401cd2c5670c651a39670f4f182cb3977dbcb5c4fe3619d58f47518a9880"
+  },
+  "files": [
+    {
+      "path": "build/unicode-sources/malankara/EastSyriacMalankara.ttf",
+      "archive_member": "EastSyriacMalankara/EastSyriacMalankara.ttf",
+      "url": "https://www.hendoacademy.org/assets/zip/EastSyriacMalankara.zip",
+      "size": 65176,
+      "sha256": "9ab6ff683ff8ff83a20ab93f7e5c6cabb7f2d7ad5c54be1f87abdc3b050f0b04",
+      "git_blob_sha1": "2a30b491fdcd722403a02404df4c7cbb70714bfd",
+      "include_ranges": [
+        [
+          768,
+          879
+        ],
+        [
+          1548,
+          1548
+        ],
+        [
+          1563,
+          1563
+        ],
+        [
+          1567,
+          1567
+        ],
+        [
+          1600,
+          1600
+        ],
+        [
+          1792,
+          1871
+        ],
+        [
+          2144,
+          2154
+        ],
+        [
+          8204,
+          8207
+        ],
+        [
+          9676,
+          9676
+        ]
+      ]
+    },
+    {
+      "path": "build/unicode-sources/malankara/license.txt",
+      "archive_member": "EastSyriacMalankara/license.txt",
+      "url": "https://www.hendoacademy.org/assets/zip/EastSyriacMalankara.zip",
+      "size": 4462,
+      "sha256": "5e52597f591ab7efbc3da293ba425ec3ec3bc592661a4a5550b0b1c3c958721e",
+      "git_blob_sha1": "75beda202ceaa81fe8d6fa7c6e824665977e7bab"
+    },
+    {
+      "path": "assets/fonts/licenses/EastSyriacMalankara-OFL.txt",
+      "archive_member": "EastSyriacMalankara/license.txt",
+      "url": "https://www.hendoacademy.org/assets/zip/EastSyriacMalankara.zip",
+      "size": 4462,
+      "sha256": "5e52597f591ab7efbc3da293ba425ec3ec3bc592661a4a5550b0b1c3c958721e",
+      "git_blob_sha1": "75beda202ceaa81fe8d6fa7c6e824665977e7bab"
+    },
+    {
+      "path": "build/unicode-sources/malankara/README.txt",
+      "archive_member": "EastSyriacMalankara/README.txt",
+      "url": "https://www.hendoacademy.org/assets/zip/EastSyriacMalankara.zip",
+      "size": 357,
+      "sha256": "8b4fc867d36cc4e2879a07f255cfe8ee19e0c5d3202434c716c1e49aa7911914",
+      "git_blob_sha1": "c45b45fbc0c1cfbf77bfad50d8fba6449112d928"
+    }
+  ]
+}

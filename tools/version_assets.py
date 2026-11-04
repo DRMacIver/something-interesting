@@ -19,12 +19,12 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FONT = "assets/fonts/dad-lettering.woff2"
+FONT = "assets/fonts/dad-lettering-unicode.woff2"
 # Link previews need the preview image's full URL.
 SITE = "https://drmaciver.github.io/something-interesting/"
 PREVIEW = "assets/preview.png"
 # Each page, and the path from it to the root.
-PAGES = {"index.html": "", "tools/checks.html": "../", "tools/preview.html": "../"}
+PAGES = {"index.html": "", "sampler.html": "", "tools/checks.html": "../", "tools/preview.html": "../", "tools/unicode-checks.html": "../", "tools/emoji-optical-review.html": "../", "tools/source-style-review.html": "../"}
 
 
 def digest(path):
@@ -42,8 +42,8 @@ def import_map(prefix):
     # Keys must be paths ("./js/..."), not bare names, to match the modules'
     # imports of each other once those are resolved to URLs.
     prefix = prefix or "./"
-    modules = sorted((ROOT / "js").glob("*.js"))
-    imports = {f"{prefix}js/{m.name}": f"{prefix}js/{m.name}?v={digest(m)}" for m in modules}
+    modules = sorted((ROOT / "js").rglob("*.js"))
+    imports = {f"{prefix}{m.relative_to(ROOT).as_posix()}": f"{prefix}{m.relative_to(ROOT).as_posix()}?v={digest(m)}" for m in modules}
     body = json.dumps({"imports": imports}, indent=2).replace("\n", "\n      ")
     return f'<script type="importmap">\n      {body}\n    </script>'
 
@@ -61,6 +61,7 @@ def updated():
         html = (ROOT / page).read_text()
         html = versioned(html, f"{prefix}style.css", css_version)
         html = versioned(html, f"{prefix}js/app.js", digest(ROOT / "js/app.js"))
+        html = versioned(html, f"{prefix}js/sampler.js", digest(ROOT / "js/sampler.js"))
         html = versioned(html, SITE + PREVIEW, digest(ROOT / PREVIEW))
         block = re.compile(r'<script type="importmap">.*?</script>', re.S)
         if block.search(html):

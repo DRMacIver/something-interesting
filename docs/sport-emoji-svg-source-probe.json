@@ -1,0 +1,395 @@
+{
+  "status": "Source candidates only; no production coverage",
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "🤺",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93a.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93a.svg",
+      "sha256": "2e13e6ea11d5c917afba26b0b258e4349a4a3dc73bd792993a466d7c2ecccdc1",
+      "git_blob_sha1": "1885f1cab8259908c6d30694458ba553ae30210d",
+      "size": 9592,
+      "shapeElementsIncludingDefinitions": 35
+    },
+    {
+      "sequence": "🏇",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3c7.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3c7.svg",
+      "sha256": "0f32e56d5a89849d9ce2764b4d24e746e460702f3852a0c2bf2a3b5ff5366c04",
+      "git_blob_sha1": "2bc7a47e5214dd6b1a0d1b3538966678a48b62f3",
+      "size": 12320,
+      "shapeElementsIncludingDefinitions": 32
+    },
+    {
+      "sequence": "⛷️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u26f7.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u26f7.svg",
+      "sha256": "59d723f25515e21327e1dbeb6ae42a63e05b6d81054b5d128d4ffc54cf6220b5",
+      "git_blob_sha1": "93331186f2935034736b43f62c56b266ea96a6d0",
+      "size": 117137,
+      "shapeElementsIncludingDefinitions": 68
+    },
+    {
+      "sequence": "🏂",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3c2.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3c2.svg",
+      "sha256": "6e79a174e1b3e3b4fadc7f2c4e19207936c4d5a590dac71c434b7c06045e6772",
+      "git_blob_sha1": "bbaab502cabf8043da5a87b05c9466d6030cb70a",
+      "size": 10694,
+      "shapeElementsIncludingDefinitions": 46
+    },
+    {
+      "sequence": "🏌️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3cc.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3cc.svg",
+      "sha256": "f1e2b49b36fb1dd0ee4e70f837fc010b24fc4f75bb407d25a86c537c94b2a08b",
+      "git_blob_sha1": "b09aab3e95ca9d2058769a43ff41dd507c6ea9f9",
+      "size": 11177,
+      "shapeElementsIncludingDefinitions": 31
+    },
+    {
+      "sequence": "🏌️‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3cc_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3cc_200d_2642.svg",
+      "sha256": "de9f41f962ffc0c7e66b498dfdf38a2f39cefab85dcfebb0dc6b8498a7176d72",
+      "git_blob_sha1": "7716a4fb4e4df82ffeac378cff8191cd793032d3",
+      "size": 8562,
+      "shapeElementsIncludingDefinitions": 24
+    },
+    {
+      "sequence": "🏌️‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3cc_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3cc_200d_2640.svg",
+      "sha256": "156bb03107342ea5eaace36dc18fbc8c551299e5723bf25aedef241197375e9e",
+      "git_blob_sha1": "531b430a7b98b9ec84d5a0fe28a91917eb8a76c8",
+      "size": 9466,
+      "shapeElementsIncludingDefinitions": 26
+    },
+    {
+      "sequence": "🏄",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3c4.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3c4.svg",
+      "sha256": "191274aa31ac8252599dd556c950cb3b552c232624abfef30448ec0be2c35274",
+      "git_blob_sha1": "de929905e49d3526e7b16f6b8db2d2387cd3ec9d",
+      "size": 13658,
+      "shapeElementsIncludingDefinitions": 44
+    },
+    {
+      "sequence": "🏄‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3c4_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3c4_200d_2642.svg",
+      "sha256": "c97ee9966c2571125e1cddc71c3caa453bc13573351f46b68bd12c0caa7d2b64",
+      "git_blob_sha1": "aa1cc4ad2563e58251ae05f7635465971dc70155",
+      "size": 13492,
+      "shapeElementsIncludingDefinitions": 44
+    },
+    {
+      "sequence": "🏄‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3c4_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3c4_200d_2640.svg",
+      "sha256": "f8ecb52396e9b52ec9410530ec9ae01b477bca67620cedf38c712277b760920c",
+      "git_blob_sha1": "160a72d7145332cf4e83a6e48c43ac167700ff77",
+      "size": 13894,
+      "shapeElementsIncludingDefinitions": 45
+    },
+    {
+      "sequence": "🚣",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f6a3.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f6a3.svg",
+      "sha256": "4d6ec50371c4f66a948f132fa0700ec48ebb8c0150cc7e4569674e2d7d8e5d1d",
+      "git_blob_sha1": "567bb978e5e1f6eeeeb2e2f0f6f7421ac8ec5996",
+      "size": 76021,
+      "shapeElementsIncludingDefinitions": 34
+    },
+    {
+      "sequence": "🚣‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f6a3_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f6a3_200d_2642.svg",
+      "sha256": "a602046d7e217fd09f50e13152ea613c0cc1d2598c0ddf4ad9a9a8436572a3a4",
+      "git_blob_sha1": "e62096315cc23a5572052046139e28ce8cfc9baf",
+      "size": 71342,
+      "shapeElementsIncludingDefinitions": 30
+    },
+    {
+      "sequence": "🚣‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f6a3_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f6a3_200d_2640.svg",
+      "sha256": "c06f1b35afe572cc138ed4add057c988b3fb5bd189ecbe25ac37f86e0b84f83d",
+      "git_blob_sha1": "95ff8fe6ac4b67471e0db2366af37ea6fe82f1f5",
+      "size": 69784,
+      "shapeElementsIncludingDefinitions": 35
+    },
+    {
+      "sequence": "🏊",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3ca.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3ca.svg",
+      "sha256": "ab50dbb0bddadba92e51c4f79716eef15947fc73ec85630095dcc2d1412d73b5",
+      "git_blob_sha1": "63076a3d10791e7db64a3da8e2413e3e60c8d07c",
+      "size": 7088,
+      "shapeElementsIncludingDefinitions": 29
+    },
+    {
+      "sequence": "🏊‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3ca_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3ca_200d_2642.svg",
+      "sha256": "a5f23cf522808417f6a2eca47d2666dbfeba8be100ef00a3446d5c7a2a97bbb6",
+      "git_blob_sha1": "ed98116522ce761d915156a8d86a6ddec007ce6a",
+      "size": 7555,
+      "shapeElementsIncludingDefinitions": 31
+    },
+    {
+      "sequence": "🏊‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3ca_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3ca_200d_2640.svg",
+      "sha256": "7df27960e18b5774ab098bf5c7efe7c7493d2a8b3d29d42bed14417d345c9c60",
+      "git_blob_sha1": "1e44570571c11780f3e269748006797d31ecd013",
+      "size": 6222,
+      "shapeElementsIncludingDefinitions": 30
+    },
+    {
+      "sequence": "⛹️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u26f9.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u26f9.svg",
+      "sha256": "f5a700f070e4897eb967342fc0e99a3bfede2d7102aa0afa39e6eb7cac76801e",
+      "git_blob_sha1": "c4b24be945de746492c4e44c423c2558774de322",
+      "size": 14262,
+      "shapeElementsIncludingDefinitions": 29
+    },
+    {
+      "sequence": "⛹️‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u26f9_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u26f9_200d_2642.svg",
+      "sha256": "63f89d445f4e8952d8197291c7a433fc8964596b7b014eaf01483b158b3dc829",
+      "git_blob_sha1": "6c643422ae1e8b54feff5db469eac82aa09b587b",
+      "size": 12434,
+      "shapeElementsIncludingDefinitions": 26
+    },
+    {
+      "sequence": "⛹️‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u26f9_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u26f9_200d_2640.svg",
+      "sha256": "b557f707b802f783becaab22fd028596ee2e22612995d0de0adeb64e2d7f3a6d",
+      "git_blob_sha1": "ed55011ac7c287cf4e4d0312db98e07481d9d706",
+      "size": 15108,
+      "shapeElementsIncludingDefinitions": 30
+    },
+    {
+      "sequence": "🏋️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3cb.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3cb.svg",
+      "sha256": "3e7dadb5dbd5b5e5492eb43edf21f2d95e7b20f6e3ead07b48ece9ed8fb09b50",
+      "git_blob_sha1": "053f037b8c8217f436b443b0375579f7ec2d18be",
+      "size": 12949,
+      "shapeElementsIncludingDefinitions": 59
+    },
+    {
+      "sequence": "🏋️‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3cb_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3cb_200d_2642.svg",
+      "sha256": "8161f81b629765d064838ac2d7a3f7c2c1f9b0bfb4d8c5624f59c611e3599432",
+      "git_blob_sha1": "347e0a7117e33352b7f0244cdf0a92277045ebde",
+      "size": 12219,
+      "shapeElementsIncludingDefinitions": 55
+    },
+    {
+      "sequence": "🏋️‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f3cb_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3cb_200d_2640.svg",
+      "sha256": "3c1f1f6818742122d3c94fea191b6c9766f8449fc0af4a0dad24b8064a8242f5",
+      "git_blob_sha1": "2e3a511d45c01bf434ec0d2154945ecf51e661e7",
+      "size": 12386,
+      "shapeElementsIncludingDefinitions": 56
+    },
+    {
+      "sequence": "🚴",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f6b4.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f6b4.svg",
+      "sha256": "4845df92f8ca7186013e89e222350a9ca3b48a7601288d296901bf505db955e6",
+      "git_blob_sha1": "5b59a1f2d44b6932769ad8a21bdef502e1c2d71b",
+      "size": 12383,
+      "shapeElementsIncludingDefinitions": 51
+    },
+    {
+      "sequence": "🚴‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f6b4_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f6b4_200d_2642.svg",
+      "sha256": "66e6fb03c704d78044120f760bdb6a1a5e93e1ba05f52474092ac5b4c22ccae9",
+      "git_blob_sha1": "3caacfbb229ff25fe5822418688e98727aee8db8",
+      "size": 12408,
+      "shapeElementsIncludingDefinitions": 51
+    },
+    {
+      "sequence": "🚴‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f6b4_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f6b4_200d_2640.svg",
+      "sha256": "e3e3c55b1fc71ea5a8f641429ea7c371f64079ebca1bca7f04a49ed42c803c61",
+      "git_blob_sha1": "42f9e688a0ec1478eb60de3f20a78f2fb8c767bc",
+      "size": 12635,
+      "shapeElementsIncludingDefinitions": 52
+    },
+    {
+      "sequence": "🚵",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f6b5.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f6b5.svg",
+      "sha256": "2faab8e832c6362edc3988b330b0cd4a7c2c5d2b87879267579fe6b61dda176f",
+      "git_blob_sha1": "f628feaef856133037d01f7149157262f3a0259b",
+      "size": 13721,
+      "shapeElementsIncludingDefinitions": 58
+    },
+    {
+      "sequence": "🚵‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f6b5_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f6b5_200d_2642.svg",
+      "sha256": "23f1e950ff2aa034a44f473f70504e88e64fe12ba0d3350c3e8a372847aaf660",
+      "git_blob_sha1": "062984b5ee56595dc14fe044f2d1cbe5cfb0e88d",
+      "size": 13763,
+      "shapeElementsIncludingDefinitions": 58
+    },
+    {
+      "sequence": "🚵‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f6b5_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f6b5_200d_2640.svg",
+      "sha256": "074d1e970dd392a526f443b5d576e205b7808ba2fd39176bc2ab4a2d798cf49f",
+      "git_blob_sha1": "542b1c1b5a6dfae94605562e3f0dafb725316782",
+      "size": 13933,
+      "shapeElementsIncludingDefinitions": 59
+    },
+    {
+      "sequence": "🤸",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f938.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f938.svg",
+      "sha256": "e115a7b2a6146f72b510c29c73c4afb4146a4d147fb07d6f37d86ca5cb0a20a9",
+      "git_blob_sha1": "f7c33ef48db8831daadee92b9ebe8788e6950ac3",
+      "size": 6453,
+      "shapeElementsIncludingDefinitions": 26
+    },
+    {
+      "sequence": "🤸‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f938_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f938_200d_2642.svg",
+      "sha256": "b66f4c032af2b441ce5fe526952d0cf51680e06b99c7b39ae97eadc68888f2d9",
+      "git_blob_sha1": "d82e59e8f2c2798abdbca4c900d208f921c86c4b",
+      "size": 11636,
+      "shapeElementsIncludingDefinitions": 48
+    },
+    {
+      "sequence": "🤸‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f938_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f938_200d_2640.svg",
+      "sha256": "722480cb5ef1b0b782e8f800d07a8c3029798f5851d1ed32d62f471d099a62ec",
+      "git_blob_sha1": "b15b6318095f33bd055a10ccdd5048300cdd1ee8",
+      "size": 6220,
+      "shapeElementsIncludingDefinitions": 25
+    },
+    {
+      "sequence": "🤼",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93c.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93c.svg",
+      "sha256": "f4a445d687bf1dbc11d10927aeca0015dd97a5b1783867ae95f68910178aa835",
+      "git_blob_sha1": "6c1569b1a2fbf185a715090f808ed2337461ab44",
+      "size": 23892,
+      "shapeElementsIncludingDefinitions": 46
+    },
+    {
+      "sequence": "🤼‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93c_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93c_200d_2642.svg",
+      "sha256": "1acbd5420941d97345f87c6b9fe212f585bfb12f908902a8a981b5183c72e4b2",
+      "git_blob_sha1": "db7fbbb8381840130a3906ea31ce9c048bda7637",
+      "size": 18182,
+      "shapeElementsIncludingDefinitions": 40
+    },
+    {
+      "sequence": "🤼‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93c_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93c_200d_2640.svg",
+      "sha256": "f8b3e1898d93e894f929de6e07a0766b14fa75244372d8d8e38565b1dae9ef9f",
+      "git_blob_sha1": "cbeab67ab85bbf9f3cec6b79fad334c9560e4931",
+      "size": 22772,
+      "shapeElementsIncludingDefinitions": 48
+    },
+    {
+      "sequence": "🤽",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93d.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93d.svg",
+      "sha256": "75ad964142b5e63f3be8403d6f4696888c374aa0a14e21cb44fab8b28ddf8941",
+      "git_blob_sha1": "d1adc717857111804541e4059292f8943f0cf49e",
+      "size": 12052,
+      "shapeElementsIncludingDefinitions": 45
+    },
+    {
+      "sequence": "🤽‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93d_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93d_200d_2642.svg",
+      "sha256": "f05d319b6bc0cdb619b1d2197fc706f4a6a46448e3faf888b6010427a93f7777",
+      "git_blob_sha1": "e71d2aab60468b9b29c5f14dca0c1d793eceef5c",
+      "size": 11605,
+      "shapeElementsIncludingDefinitions": 42
+    },
+    {
+      "sequence": "🤽‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93d_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93d_200d_2640.svg",
+      "sha256": "011b561ee90998241bceb43207958f78179ef4ccc2e7172975b1bc2b492e3541",
+      "git_blob_sha1": "7f9bfd22192422af42a4e0a3fc47e5163372d5f4",
+      "size": 12404,
+      "shapeElementsIncludingDefinitions": 45
+    },
+    {
+      "sequence": "🤾",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93e.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93e.svg",
+      "sha256": "dd6e83632fe4f730f0378e5b49a117dadf4686c3fccf30e6bf9231a498afaff1",
+      "git_blob_sha1": "d37d7006b523a9d141c116b48106b2f558b92df7",
+      "size": 9182,
+      "shapeElementsIncludingDefinitions": 36
+    },
+    {
+      "sequence": "🤾‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93e_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93e_200d_2642.svg",
+      "sha256": "df53a528b197e12200be4cd72ca9f6d4577d04c4284caf7e2cb41a651f211355",
+      "git_blob_sha1": "ba8b21aca7f91284547701bd41d18c9a197fac67",
+      "size": 8979,
+      "shapeElementsIncludingDefinitions": 36
+    },
+    {
+      "sequence": "🤾‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f93e_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f93e_200d_2640.svg",
+      "sha256": "617becc0a09908e7f7b17092c6c1ad23ee0c447f0dd09185e98139775dbe3b8d",
+      "git_blob_sha1": "2c70d38658fc8b4a1a561afba4b75c2e09761d80",
+      "size": 9264,
+      "shapeElementsIncludingDefinitions": 37
+    },
+    {
+      "sequence": "🤹",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f939.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f939.svg",
+      "sha256": "408dd49796917c182b5a0c7b04eacfefdbb35373c23f52da62b1d7354406cd8f",
+      "git_blob_sha1": "bacdd99e0356e9babe726484dd9202a96c163531",
+      "size": 17147,
+      "shapeElementsIncludingDefinitions": 43
+    },
+    {
+      "sequence": "🤹‍♂️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f939_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f939_200d_2642.svg",
+      "sha256": "cfd83faccdea163e41e97e65fad59359044a075ddea41081a8c8906dbbd86303",
+      "git_blob_sha1": "6ef82aa390f2a0b8b9a665e7b9043dc6c604f97d",
+      "size": 13182,
+      "shapeElementsIncludingDefinitions": 37
+    },
+    {
+      "sequence": "🤹‍♀️",
+      "path": "build/unicode-sources/noto-emoji-sport-svg/emoji_u1f939_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f939_200d_2640.svg",
+      "sha256": "582b22333b60ee59568efc87cce3463929e8b8f5c0597422bd877ef8fb2b45bc",
+      "git_blob_sha1": "7c41253fee3835765ac7b4556889f5b2672a8717",
+      "size": 13126,
+      "shapeElementsIncludingDefinitions": 38
+    }
+  ]
+}

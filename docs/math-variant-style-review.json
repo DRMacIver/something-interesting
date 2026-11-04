@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-03",
+  "decision": "provisional-retain-native-calligraphic-and-reviewed-historical-forms",
+  "scope": "All 37 standardized sequence pairs inspected at 22/44 px beside Dad, including 27 native chancery/roundhand variants, nine historical relation adaptations and the original kurrent z.",
+  "font": "assets/fonts/dad-math-variants.woff2",
+  "sha256": "c52c4e6351b3458f955f366bc33dd805a88a8d444fd26fbe890e9f2b90ec84f2",
+  "sequences": [
+    "\u29b7\ufe00",
+    "\ud835\udc9c\ufe01",
+    "\u212c\ufe01",
+    "\ud835\udc9e\ufe01",
+    "\ud835\udc9f\ufe01",
+    "\u2130\ufe01",
+    "\u2131\ufe01",
+    "\ud835\udca2\ufe01",
+    "\u210b\ufe01",
+    "\u2110\ufe01",
+    "\ud835\udca5\ufe01",
+    "\ud835\udca6\ufe01",
+    "\u2112\ufe01",
+    "\u2133\ufe01",
+    "\ud835\udca9\ufe01",
+    "\ud835\udcaa\ufe01",
+    "\ud835\udcab\ufe01",
+    "\ud835\udcac\ufe01",
+    "\u211b\ufe01",
+    "\ud835\udcae\ufe01",
+    "\ud835\udcaf\ufe01",
+    "\ud835\udcb0\ufe01",
+    "\ud835\udcb1\ufe01",
+    "\ud835\udcb2\ufe01",
+    "\ud835\udcb3\ufe01",
+    "\ud835\udcb4\ufe01",
+    "\ud835\udcb5\ufe01",
+    "\u223d\ufe00",
+    "\u2243\ufe00",
+    "\u22cd\ufe00",
+    "\u2242\ufe00",
+    "\u2248\ufe00",
+    "\u2a6c\ufe00",
+    "\u22dc\ufe00",
+    "\u22dd\ufe00",
+    "\ud836\udf10\ufe00",
+    "\ud835\udccf\ufe02"
+  ],
+  "comparisons": {
+    "output/font-review/math-variant-style/page-1.png": "1ed6627b94d8d66257c032a36b11be3bffb973a1060aa5f80c6376e2b687b651",
+    "output/font-review/math-variant-style/page-2.png": "720e145d08d1a351827062b175ffdc17e369f14dfcc558aead181d1b7805ebee"
+  },
+  "findings": [
+    "Native script alphabets have flowing curves, tapered entries and deliberate pressure contrast. Preserve distinct chancery and roundhand letterforms.",
+    "Historical relation variants keep clear bars, waves, diagonal arms and quantity distinctions; kurrent z remains distinct from ordinary script z.",
+    "The isolated 0.45-pressure comparison gave little useful improvement relative to semantic precision; no additional transformation adopted."
+  ],
+  "limits": [
+    "Native glyph identity and mark attachment have separate automated tests; this is visual acceptance only.",
+    "The 561-glyph retained font includes mark and layout closure beyond these 37 pairs; this is not all-glyph linguistic validation.",
+    "Local outlined specimens do not execute application routing, bidi, balloons or exports."
+  ]
+}

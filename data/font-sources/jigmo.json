@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/kamichikoichi/jigmo",
+  "commit": "a6893b2278e39747fc3476465f7fcacf0126bca8",
+  "files": [
+    {
+      "path": "build/unicode-sources/jigmo/docs/Jigmo-20250912.zip",
+      "url": "https://raw.githubusercontent.com/kamichikoichi/jigmo/a6893b2278e39747fc3476465f7fcacf0126bca8/docs/Jigmo-20250912.zip",
+      "git_blob_sha1": "8b94e28799705be6770652aa9fc02027d0656f64",
+      "size": 35559738,
+      "sha256": "5744c7386d129475d87607ca66d043c8793c65448adeaedc921b6931890e5d0b"
+    },
+    {
+      "path": "build/unicode-sources/jigmo/documents/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/kamichikoichi/jigmo/a6893b2278e39747fc3476465f7fcacf0126bca8/documents/LICENSE.txt",
+      "git_blob_sha1": "1ac74f09e86be79cc8cbbee9c11f9cc92368edf7",
+      "size": 7171,
+      "sha256": "437ca31a127c9f1b191ff9a42bb563e5f7e414ae819006dca4635d9fb34aeb94"
+    },
+    {
+      "path": "build/unicode-sources/jigmo/documents/README.txt",
+      "url": "https://raw.githubusercontent.com/kamichikoichi/jigmo/a6893b2278e39747fc3476465f7fcacf0126bca8/documents/README.txt",
+      "git_blob_sha1": "4e48e541aaf4deea9fb5661880e5d5fc32dd252a",
+      "size": 6885,
+      "sha256": "1bb1d7a609c831ec6a1c1502ac966d30369b6ec0900f2613cd45f06d05e6562b"
+    }
+  ]
+}

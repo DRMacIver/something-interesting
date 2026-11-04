@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-03",
+  "status": "implemented/verified to the stated scope; final669browser corpus passed",
+  "scope": "All128 standardized contextual script pairs, four joining contexts per pair; only standardized sequence beginning with a mark from the pinned release.",
+  "counts": {
+    "Mongolian": 117,
+    "PhagsPa": 6,
+    "Manichaean": 5,
+    "contextsPerPair": 4,
+    "markInitialPairs": 1
+  },
+  "checks": {
+    "source": {
+      "tests": 2,
+      "log": "/tmp/contextual-variation-final-source.log",
+      "scope": "Actual requiredFonts/fontRuns keep one complete native font/run for each of512 contextual examples. Packaged shaping equals original source. Every registered pair changes actual visible glyph/position data in at least one tested joining context."
+    },
+    "markSelector": {
+      "sequence": "1031 FE00",
+      "source": "PadaukBook-Regular.ttf",
+      "contexts": [
+        "\u1031\ufe00",
+        "\u1000\u1031\ufe00",
+        "\u1000\u1031\ufe00\u1001",
+        "\u1000\u1031\ufe00\u1000\u1031"
+      ],
+      "inventory": "Derived from all mark categories in pinned UnicodeData and all StandardizedVariants rows; exactly one mark-initial standardized pair.",
+      "browser": "native-mark-selector-myanmar: complete native font/run, actual contextual raster differs with dotted E selector; visually inspected at comic size, failures[],geometry[]"
+    },
+    "fullBrowser": {
+      "cases": 669,
+      "failures": [],
+      "geometry": []
+    }
+  },
+  "limits": [
+    "This proves native source preservation and contextual selection, not native-reader validation of arbitrary language text.",
+    "Cross-script invalid syllables retain native fallback; spacing-vowel treatment documented separately.",
+    "Source-family/style and final product review remain open."
+  ],
+  "sha256": {
+    "tests/test_contextual_variations.py": "fdc8a19774c9ece8951586990980d3198a61451aecb8ca779127057a37a546d9",
+    "data/unicode/18.0.0/StandardizedVariants.txt": "c7ae634a7e2bb0932258548a1e81df984fbb38e30cecf4269391d6a4f94581ac",
+    "tools/unicode-checks.html": "6bb4486d7ce91c77834c65ef76a517cbdedfdfa9c2bfb0cb184f1d724abcdc88"
+  }
+}

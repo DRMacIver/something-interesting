@@ -1,0 +1,153 @@
+{
+  "status": "Actualcurrent21/45/50/192/195native-policyfontfields acceptedlocally22/44;alloriginalsemanticand384/1024fieldguards retained;oldunchangedfontproofs carriedbyexactbytes andnewMusic/Funkyactualpublicproofs passed",
+  "sources": [
+    21,
+    45,
+    50,
+    192,
+    195
+  ],
+  "fieldReviewBySource": {
+    "45/50": {
+      "checks384": "output/font-review/final-policy-fields/whole-field-checks.json",
+      "checks1024": "output/font-review/final-policy-fields/whole-field-checks-1024.json",
+      "image": {
+        "file": "output/font-review/final-policy-fields/page-1.png",
+        "sha256": "768942c6b0ee10e03b4d9a255afd61f83292507fdb6da6e0c62d87bdfc85ad7b"
+      }
+    },
+    "192": {
+      "checks384": "output/font-review/cubic-width-diagnosis/production-fields/whole-field-checks.json",
+      "checks1024": "output/font-review/cubic-width-diagnosis/whole-field-check-1024.json",
+      "image": {
+        "file": "output/font-review/cubic-width-diagnosis/production-fields/page-1.png",
+        "sha256": "86bf702948a69969e4836b1376d24446f85d80d0c0b76317d9bf2bcbeb929ec5"
+      }
+    },
+    "21": {
+      "checks": "output/font-review/final-checks/final-public-policy-review/actual-field-checks.json",
+      "review": "output/font-review/final-checks/final-public-policy-review/review.json",
+      "nativeCacheProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json",
+      "images": [
+        {
+          "file": "output/font-review/final-checks/final-public-policy-review/music-public.png",
+          "sha256": "621c5713c22837b0292fa341afb713328eedf74f33900292f5a9dc6949fa11bb"
+        }
+      ],
+      "rootInspected": true,
+      "acceptedSizes": [
+        22,
+        44
+      ],
+      "guardSizes": [
+        384,
+        1024
+      ],
+      "boundsRelaxed": false
+    },
+    "195": {
+      "checks": "output/font-review/final-checks/final-public-policy-review/actual-field-checks.json",
+      "review": "output/font-review/final-checks/final-public-policy-review/review.json",
+      "nativeCacheProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json",
+      "images": [
+        {
+          "file": "output/font-review/final-checks/final-public-policy-review/chemical-public.png",
+          "sha256": "2c1de8dc83e2a226ba5ad101dbd8bd282aa37d6645725ddd0db494c75723583c"
+        },
+        {
+          "file": "output/font-review/final-checks/final-public-policy-review/geomantic-public.png",
+          "sha256": "23e3bec301d1d3c47fe9b52fbf3f66462a0135d4d7f877390d2269405d06a774"
+        }
+      ],
+      "rootInspected": true,
+      "acceptedSizes": [
+        22,
+        44
+      ],
+      "guardSizes": [
+        384,
+        1024
+      ],
+      "boundsRelaxed": false
+    }
+  },
+  "finalFonts": [
+    {
+      "sourceNumber": 45,
+      "file": "assets/fonts/scripts/819c3b953317.woff2",
+      "sha256": "490c3bde8c0bbb0ffbb2464ec3f1e1188c4facdc9237982078c4d46f65f5351f"
+    },
+    {
+      "sourceNumber": 50,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "sha256": "4d1b22c3ae6976bbe8681d6b2584c5cb9aa390a85196f933352c06507170a4f5"
+    },
+    {
+      "sourceNumber": 50,
+      "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "sha256": "4d1b22c3ae6976bbe8681d6b2584c5cb9aa390a85196f933352c06507170a4f5"
+    },
+    {
+      "sourceNumber": 192,
+      "file": "assets/fonts/scripts/1a10ab6b39c1.woff2",
+      "sha256": "a18a8966ff55e18e548f0319ad6f5646ff498afc47f4ebbe9ff054ba32fa17cd"
+    },
+    {
+      "sourceNumber": 21,
+      "file": "assets/fonts/scripts/342fc9939b91.woff2",
+      "sha256": "76254094338528218386f936841dd7ac723de715fe666d51eccee2e713a978e5"
+    },
+    {
+      "sourceNumber": 195,
+      "file": "assets/fonts/scripts/e789acc260ba.woff2",
+      "sha256": "d5784187ed8887c200853bee622eceffb2e5f3f56f14a6cb30ca49da8f2f55fa"
+    }
+  ],
+  "publicContinuityProof": "output/font-review/cubic-width-diagnosis/public-corrective-proof.json",
+  "scope": "Bounded actual-field acceptance, not exhaustive linguistic validation. Native source identities, exact preservation policies and strict cached lineage remain separate mandatory proofs.",
+  "preWidthCorrectionReview": {
+    "status": "Actual final policy font fields accepted at22/44 with all384/1024whole-field guards passing",
+    "sources": [
+      45,
+      50,
+      192
+    ],
+    "fields384": "output/font-review/final-policy-fields/whole-field-checks.json",
+    "fields1024": "output/font-review/final-policy-fields/whole-field-checks-1024.json",
+    "images": [
+      {
+        "file": "output/font-review/final-policy-fields/page-1.png",
+        "sha256": "768942c6b0ee10e03b4d9a255afd61f83292507fdb6da6e0c62d87bdfc85ad7b"
+      },
+      {
+        "file": "output/font-review/final-policy-fields/page-2.png",
+        "sha256": "86bf702948a69969e4836b1376d24446f85d80d0c0b76317d9bf2bcbeb929ec5"
+      }
+    ],
+    "finalFonts": [
+      {
+        "sourceNumber": 45,
+        "file": "assets/fonts/scripts/819c3b953317.woff2",
+        "sha256": "490c3bde8c0bbb0ffbb2464ec3f1e1188c4facdc9237982078c4d46f65f5351f"
+      },
+      {
+        "sourceNumber": 50,
+        "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+        "sha256": "4d1b22c3ae6976bbe8681d6b2584c5cb9aa390a85196f933352c06507170a4f5"
+      },
+      {
+        "sourceNumber": 50,
+        "file": "assets/fonts/scripts/b480b4bfab29.woff2",
+        "sha256": "4d1b22c3ae6976bbe8681d6b2584c5cb9aa390a85196f933352c06507170a4f5"
+      },
+      {
+        "sourceNumber": 192,
+        "file": "assets/fonts/scripts/1a10ab6b39c1.woff2",
+        "sha256": "d4f1798ac6e0a5bce3afa725208cb332b8088d8a22ea205f0a7d43ec5aea13bf"
+      }
+    ],
+    "scope": "Bounded actual-field acceptance, not exhaustive linguistic validation. Native source identities, exact preservation policies and strict cached lineage remain separate mandatory proofs."
+  },
+  "additionalPublicContinuityProof": "output/font-review/final-checks/chemical-harpoons/staging/two-policy-public-continuity.json",
+  "currentPrimaryManifestSha256": "7f5df7719a7f1187a49db3a0d721e6632ec4926141c6e41163e3d1141b3f4ac9"
+}

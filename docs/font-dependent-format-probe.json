@@ -1,0 +1,178 @@
+{
+  "status": "Historical pre-fix probe; visible glyph routing and complete native sign/number fields are now implemented. See docs/font-dependent-format-review.json for current evidence and limits.",
+  "property": "Prepended_Concatenation_Mark",
+  "data": "data/unicode/18.0.0/PropList.txt",
+  "dataSha256": "f438f532e8737bb8a2702126cdf9c4af5e357c58c7acf9d9eb2fc7c1a1d955d6",
+  "points": [
+    {
+      "cp": 1536,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni0600",
+      "rootBounds": [
+        50,
+        -139,
+        1304,
+        109
+      ],
+      "nativeAdvance": 1354
+    },
+    {
+      "cp": 1537,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni0601",
+      "rootBounds": [
+        41,
+        -267,
+        1463,
+        -60
+      ],
+      "nativeAdvance": 1518
+    },
+    {
+      "cp": 1538,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni0602",
+      "rootBounds": [
+        50,
+        -139,
+        1173,
+        157
+      ],
+      "nativeAdvance": 1223
+    },
+    {
+      "cp": 1539,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni0603",
+      "rootBounds": [
+        20,
+        -138,
+        1698,
+        242
+      ],
+      "nativeAdvance": 1748
+    },
+    {
+      "cp": 1540,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni0604",
+      "rootBounds": [
+        50,
+        -144,
+        2179,
+        473
+      ],
+      "nativeAdvance": 2264
+    },
+    {
+      "cp": 1541,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni0605",
+      "rootBounds": [
+        55,
+        544,
+        1486,
+        685
+      ],
+      "nativeAdvance": 1531
+    },
+    {
+      "cp": 1757,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni06DD",
+      "rootBounds": [
+        24,
+        -188,
+        1099,
+        886
+      ],
+      "nativeAdvance": 1123
+    },
+    {
+      "cp": 1807,
+      "candidateFamily": "Dad Script 000df19912cb",
+      "file": "assets/fonts/scripts/000df19912cb.woff2",
+      "glyph": "uni070F",
+      "rootBounds": [
+        -86,
+        -90,
+        97,
+        813
+      ],
+      "nativeAdvance": 0
+    },
+    {
+      "cp": 2192,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni0890",
+      "rootBounds": [
+        -0.4545454545454546,
+        796,
+        1650.4545454545455,
+        1139.046511627907
+      ],
+      "nativeAdvance": 1650
+    },
+    {
+      "cp": 2193,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni0891",
+      "rootBounds": [
+        -0.45454545454545414,
+        796,
+        1650.4545454545455,
+        1139.046511627907
+      ],
+      "nativeAdvance": 1650
+    },
+    {
+      "cp": 2274,
+      "candidateFamily": "Dad Script b081994f5e2f",
+      "file": "assets/fonts/scripts/b081994f5e2f.woff2",
+      "glyph": "uni08E2",
+      "rootBounds": [
+        53,
+        393,
+        520,
+        1083
+      ],
+      "nativeAdvance": 572
+    },
+    {
+      "cp": 69821,
+      "candidateFamily": "Dad Script bd6f2e70d0a7",
+      "file": "assets/fonts/scripts/bd6f2e70d0a7.woff2",
+      "glyph": "u110BD",
+      "rootBounds": [
+        59,
+        -5,
+        710,
+        543
+      ],
+      "nativeAdvance": 650
+    },
+    {
+      "cp": 69837,
+      "candidateFamily": "Dad Script bd6f2e70d0a7",
+      "file": "assets/fonts/scripts/bd6f2e70d0a7.woff2",
+      "glyph": "u110CD",
+      "rootBounds": [
+        59,
+        299,
+        710,
+        847
+      ],
+      "nativeAdvance": 650
+    }
+  ],
+  "next": "Separate font-dependent format marks from ignorable controls in font loading; skip empty preferred-script repertoires; verify standalone markers and number contexts against their native source fonts."
+}

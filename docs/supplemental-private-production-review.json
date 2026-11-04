@@ -1,0 +1,2342 @@
+{
+  "status": "Private terminal production samples under review; not final public integration acceptance",
+  "localOnly": true,
+  "accepted": [
+    {
+      "sourceNumber": 139,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "At 22/44 px beside Dad, signs retain component identities and readable fine geometry with smooth variable pen pressure. Whole field passes; no linguistic or full-repertoire visual approval.",
+      "font": "output/font-review/supplemental-warm/group-0/fonts/78fa95ffc680.woff2",
+      "fontSha256": "6dd31f7e79b1e588a3c9893e13c3986e4d818c5c88eb8c36bc2b4a6ab750263d",
+      "nativeSha256": "2c567994d59ff93a38ae10b343285765ca28c95a0c0891daa0f510df46eb3319",
+      "fieldChecks": "output/font-review/private-production-review-0/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-0/page-1.png",
+      "imageSha256": "c8c51cc90a6362992a329c7e27ddd0aa6157922d879a594dcc6e7e41eb521bf6"
+    },
+    {
+      "sourceNumber": 18,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/24035b96a3ea.woff2",
+      "fontSha256": "08edf70d0f190cb51adcb4c2f1bdd1f301d20fc55f60c38694d440974ab3852c",
+      "nativeSha256": "3eb0667f139c18961067a482aa861004d87f06074ee9153866d5350433025114",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-1.png",
+      "imageSha256": "2e8795888ad8194af30c4a829c993b2943ad4eb3395ecd6f8c3a0e64a406c377"
+    },
+    {
+      "sourceNumber": 20,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/b081994f5e2f.woff2",
+      "fontSha256": "d8bac4a68009e3c10a63b864798572f008511c97c142da8d292ef1c516d450a6",
+      "nativeSha256": "0b26e5cb5d1b7bf6e1c8933b89533854b3f705696fb7936c5ded416ff2afe341",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-1.png",
+      "imageSha256": "2e8795888ad8194af30c4a829c993b2943ad4eb3395ecd6f8c3a0e64a406c377"
+    },
+    {
+      "sourceNumber": 21,
+      "decision": "accepted-final-public-pressure-with-explicit-native-preservation",
+      "reason": "Actual public Music specimen inspected at22/44px beside Dad; exact native constructed low four-stroke tremolo retained, other pressure drawings preserved. All60native GSUB/count/offset/advance contexts and14fields at384/1024pass. Sampled style/semantics, not all-repertoire or linguistic approval.",
+      "font": "assets/fonts/scripts/342fc9939b91.woff2",
+      "fontSha256": "76254094338528218386f936841dd7ac723de715fe666d51eccee2e713a978e5",
+      "nativeSha256": "bb2c8e815620cca9135009428ef8712d051ba7e02ccdc34dc61c156a1919712d",
+      "fieldChecks": "output/font-review/final-checks/final-public-policy-review/actual-field-checks.json",
+      "image": "output/font-review/final-checks/final-public-policy-review/music-public.png",
+      "imageSha256": "621c5713c22837b0292fa341afb713328eedf74f33900292f5a9dc6949fa11bb",
+      "fieldChecksSha256": "0b4b448f8914c1d841e9f0dbe6ab6e5fc8d2d061d98834b6252ef587e53a4eab",
+      "priorAcceptedPrivateCandidate": {
+        "sourceNumber": 21,
+        "decision": "accepted-production-pressure-sample",
+        "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+        "font": "output/font-review/supplemental-warm/group-1/fonts/342fc9939b91.woff2",
+        "fontSha256": "79908614ee55267f5a5ce0dfc8ae9060e31fe95398a164ab385c097283cc6e3f",
+        "nativeSha256": "bb2c8e815620cca9135009428ef8712d051ba7e02ccdc34dc61c156a1919712d",
+        "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+        "image": "output/font-review/private-production-review-1/page-2.png",
+        "imageSha256": "23f5cfc656750581deceda3560c3cac2e56bc09099e0537d4143af6c5bf36d7a"
+      },
+      "historicalAcceptanceStatus": "Superseded by actual-public semantic/counter preservation review; prior private candidate and inspected image retained verbatim.",
+      "actualPublicReview": "output/font-review/final-checks/final-public-policy-review/review.json",
+      "actualPublicReviewSha256": "432b61ca248209f8644b5d46a63ce2c123bd8e30d9d7019841331c8b4f793d1f",
+      "nativeCacheConstructionProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json",
+      "sourcePolicy": {
+        "module": "tools/font/music_source_preservation.py",
+        "sha256": "d9ed362937dc571ee771b23c61d127979d40e73b100b31e5da762c95880b9a0b",
+        "codepoints": [],
+        "namedGlyphs": [
+          "u1D25B_low"
+        ],
+        "glyphs": [
+          {
+            "gid": 588,
+            "glyph": "u1D25B_low"
+          }
+        ],
+        "reason": "Retain exact constructed native low four-stroke tremolo and component closure after an extra vector contour and whole-field384/1024px counter-overlap rejection",
+        "sourceConstruction": {
+          "module": "tools/font/music_tremolos.py",
+          "sha256": "bc3f5f253119bec0a29debf46c2ff92e99a6154040f89c8018935dfe2dcb84ee",
+          "rulesModule": "tools/font/music_mark_rules.py",
+          "rulesSha256": "1a4409569b83477247cefa6e635fe16bf0ecc778b5b44ad42ca6b09f025eb11e",
+          "sourceCodepoint": 119145,
+          "sourceFile": "build/unicode-sources/noto/NotoMusic-Regular.ttf",
+          "sourceSha256": "26c0a28d7c6f96c70f1401db23066c5ea0ee1cdf155c79bc01ad2efb040de816"
+        }
+      },
+      "canonicalSourceDecision": {
+        "record": "docs/unicode-style-dispositions.json",
+        "number": 21,
+        "disposition": "sampled-pressure-with-explicit-native-preservation-accepted",
+        "decisionSha256": "99ff9a52cde524365e9ce8c0b901c96ea2480e32e7a140f05c0eec83461667f5",
+        "scope": "sampled source style; not all-glyph or linguistic approval"
+      }
+    },
+    {
+      "sourceNumber": 24,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/9164affa8eb1.woff2",
+      "fontSha256": "47b1b3cb675bdbc1e9e3dcf6f240b8c12445837f2752bf5e860b01fa0e833856",
+      "nativeSha256": "b75db423aeeb453a9fade11c0f630792f3444c8400a07394b6d33604f038f06e",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-2.png",
+      "imageSha256": "23f5cfc656750581deceda3560c3cac2e56bc09099e0537d4143af6c5bf36d7a"
+    },
+    {
+      "sourceNumber": 28,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/4593b99474d0.woff2",
+      "fontSha256": "fba8101df4458f32f9e1feb0dd72d3f695962da211d4c48c3ed51ce31cdcc77a",
+      "nativeSha256": "3c468e155215bc88ea779d071a2c53e99900ce8a5b1950119ce97abec59af59c",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-2.png",
+      "imageSha256": "23f5cfc656750581deceda3560c3cac2e56bc09099e0537d4143af6c5bf36d7a"
+    },
+    {
+      "sourceNumber": 29,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/449ee77058ae.woff2",
+      "fontSha256": "4c099ab380e8d6edfd13da8ffc61147aba096fe0a77694bf550854e5e33b8b3b",
+      "nativeSha256": "ec64b27cf04087d279dadb10de8390099c0e3ca612d2552d5d154086a3268d07",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-3.png",
+      "imageSha256": "0fdf4e171df716d64a3ae661febec06caab7b3933070e87228d8cb8a6747d0a0"
+    },
+    {
+      "sourceNumber": 30,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/f24bb83096a5.woff2",
+      "fontSha256": "97dd87242804b30db383210a5acf172b269199173ab21aaa368d17ced713ea58",
+      "nativeSha256": "748a4fc1d8036321e7643af42eaa735b4531ad19c7d5cd94a47285d9439a2f2e",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-3.png",
+      "imageSha256": "0fdf4e171df716d64a3ae661febec06caab7b3933070e87228d8cb8a6747d0a0"
+    },
+    {
+      "sourceNumber": 35,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/1327fda1d04d.woff2",
+      "fontSha256": "f5a7ce81459ac346bb97c8308344ea3c39d6b8968010c5dfe3f99ef3a6657c6d",
+      "nativeSha256": "25c629a0799d0985b6caa954f50804a9e607a75b035d8b87d14e0a9a2c98482d",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-3.png",
+      "imageSha256": "0fdf4e171df716d64a3ae661febec06caab7b3933070e87228d8cb8a6747d0a0"
+    },
+    {
+      "sourceNumber": 37,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/a10ffd7c831d.woff2",
+      "fontSha256": "fc565905894766ff3de05c66f487a6995910b5c6d0b6cfb4c2a48e51c6d3cdc1",
+      "nativeSha256": "70a631be18eee82b0b67a93279477792e4f5bb0002cfebdef4ae67c350f17763",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-4.png",
+      "imageSha256": "1bedcfbf7e39716b90d218236906add1daa0ef601ed634c9551a0ef36d321ba2"
+    },
+    {
+      "sourceNumber": 38,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/c8a7fa7e7421.woff2",
+      "fontSha256": "6c5df812bd8e365c4afcf1a1bd455d94591443c2d8c03937d3389b1117200698",
+      "nativeSha256": "54b7a770e63f70b7bfa3e4ba065ea343fd2768cdcea6db8293ed6285d09d0b6b",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-4.png",
+      "imageSha256": "1bedcfbf7e39716b90d218236906add1daa0ef601ed634c9551a0ef36d321ba2"
+    },
+    {
+      "sourceNumber": 39,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/6e4169f46cbb.woff2",
+      "fontSha256": "199d4d9c6cd8a84f0fa7f3089125023586206ff08eaa1a03ca789b9848a51c1a",
+      "nativeSha256": "49f3c84c15f5ffa54314aead1729a69fe0035725da887d3c32b07c334045e51c",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-4.png",
+      "imageSha256": "1bedcfbf7e39716b90d218236906add1daa0ef601ed634c9551a0ef36d321ba2"
+    },
+    {
+      "sourceNumber": 47,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/bae72ffd8363.woff2",
+      "fontSha256": "aa90eb94946515cf915cad8fed17dd106a4ae854f893fe046365bb621996bd48",
+      "nativeSha256": "37ba93663fde84b0a83784323e892442fefcaa443db2dedfe221bde523a92558",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-5.png",
+      "imageSha256": "735117338777d82d61329225f0993015da15c651bc2dda4662ee10e5aff454bb"
+    },
+    {
+      "sourceNumber": 48,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/b577f3d951b7.woff2",
+      "fontSha256": "4a10c1663259a9c0fc411500d714cea5b4ce17e950650cf5c0323ade2e434941",
+      "nativeSha256": "23fbf61520d805c8e1dbba9d6ffe862508cb7d1f5e960921dbd59533bd0d3990",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-5.png",
+      "imageSha256": "735117338777d82d61329225f0993015da15c651bc2dda4662ee10e5aff454bb"
+    },
+    {
+      "sourceNumber": 49,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/e21eb9b44360.woff2",
+      "fontSha256": "079c8b0c0e01369530b13f5a7260a2bd2c4e0bb939ad9631198f80956fa48b1d",
+      "nativeSha256": "e4b3b9ed82dc3170d43c94fc14b3367e817adf411f46f54d51e1926966a24e0d",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-5.png",
+      "imageSha256": "735117338777d82d61329225f0993015da15c651bc2dda4662ee10e5aff454bb"
+    },
+    {
+      "sourceNumber": 51,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad: smooth variable weight preserves sampled contours, fine details and spacing; all recorded production fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/e845a217b98b.woff2",
+      "fontSha256": "897635ae02594102f629c13ad052df79fe909cee35b063e71d57ad1fc3b5013b",
+      "nativeSha256": "38a6a87583229256fd6303d1eabff37732842fd33e0f9d0b27db3bbed9bdca3b",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-6.png",
+      "imageSha256": "67d5f13f7e884ceff45020f4de85ee1dbd22ce48ef7ae0af0485b95bd273e431"
+    },
+    {
+      "sourceNumber": 55,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/c35e72b9417c.woff2",
+      "fontSha256": "f87adc38643cf279dda7096113b3ce3d493d2f754e254b24855a04e59a734b70",
+      "nativeSha256": "64fefba9fcb0f9d160199f733e43280e754481de350ab31d884412d9ef1f47a3",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-7.png",
+      "imageSha256": "f4ca3d18a1a3366447bcd26f5a8fa022934f3f9afe41c5e71d067220fd3d164e"
+    },
+    {
+      "sourceNumber": 56,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/08b182c9ed16.woff2",
+      "fontSha256": "11fc49bb0c96899fc101fc7cb6f9e74967677959c58c5229cf674b0496ad41a3",
+      "nativeSha256": "ff8de14910028726eed1ef9712ccf70acff1bfe4f081ce91dd8edfe0fd51048a",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-7.png",
+      "imageSha256": "f4ca3d18a1a3366447bcd26f5a8fa022934f3f9afe41c5e71d067220fd3d164e"
+    },
+    {
+      "sourceNumber": 57,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/26528008c167.woff2",
+      "fontSha256": "1a622eb8a6bca9163d9e395d89dfe3987a531d3f1513882998698e04208738f9",
+      "nativeSha256": "4684516e8b9523e7a989baf8eb2d900377364c8b8627d5c2b5f84be024051456",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-7.png",
+      "imageSha256": "f4ca3d18a1a3366447bcd26f5a8fa022934f3f9afe41c5e71d067220fd3d164e"
+    },
+    {
+      "sourceNumber": 58,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/44c5dd2c1a55.woff2",
+      "fontSha256": "dc4afbf8b4742d8cee3c9c4dfe9cc25963d479eb8117b574e69421ed025812b7",
+      "nativeSha256": "b684231797b0336a98cd12ae3a4603230717d16a368df28e8b708842cb2f34e7",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-8.png",
+      "imageSha256": "4d4d4978e29d9cee0f44169ea5beeababf7f7226871304c9f46bd99319ed3750"
+    },
+    {
+      "sourceNumber": 59,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/0b535db09ad0.woff2",
+      "fontSha256": "6fd14172787646a0b86631fbf42d831ad12952b1bb281fdf685ee44570a3b5fa",
+      "nativeSha256": "751dd1d2e41d6af1421da088365511ad385980fd6bfbd8474d0d79d36a4b8c16",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-8.png",
+      "imageSha256": "4d4d4978e29d9cee0f44169ea5beeababf7f7226871304c9f46bd99319ed3750"
+    },
+    {
+      "sourceNumber": 63,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/5354043735b1.woff2",
+      "fontSha256": "94fdd5fcbef9f5a3e964f36a9a5381e877e579f6b3d4256071af2589bdd0f7bf",
+      "nativeSha256": "be2131bf7f4e2fef8bd24a0fa3595207539268056a30ff11c8231ba19df3686e",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-8.png",
+      "imageSha256": "4d4d4978e29d9cee0f44169ea5beeababf7f7226871304c9f46bd99319ed3750"
+    },
+    {
+      "sourceNumber": 67,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/fc26f1407726.woff2",
+      "fontSha256": "d0489f932de8f7a34024b49de10f202c5439044ea0e7d1049527bbc497116ca3",
+      "nativeSha256": "3884dfa59bf04937a13ce9aebdf2888280b8aeb403830664a7e1d74c9f401c23",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-9.png",
+      "imageSha256": "7d9a5fae86ef71a0dda60647b4c19014d159f0dd3d974ac7edc92ca74c2d331a"
+    },
+    {
+      "sourceNumber": 69,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/d4572392912b.woff2",
+      "fontSha256": "7e725433803755ff8a4392c9cf69fb8382aed4dfd5efa43897b263c13e0898db",
+      "nativeSha256": "9dddd4c2b8e433fbd02dc4d7dd018634fbf9129fc2031e70f12af4459ad6cf99",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-9.png",
+      "imageSha256": "7d9a5fae86ef71a0dda60647b4c19014d159f0dd3d974ac7edc92ca74c2d331a"
+    },
+    {
+      "sourceNumber": 70,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/3b7718b155a3.woff2",
+      "fontSha256": "ed8ac0863833676410282249009517b7481a5e5dea085e0d779fbc4dc341f94b",
+      "nativeSha256": "852db620a1cabcd3e0d034c1e278e2fa7fd86c115b5a52e8dc94cce580543fc0",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-9.png",
+      "imageSha256": "7d9a5fae86ef71a0dda60647b4c19014d159f0dd3d974ac7edc92ca74c2d331a"
+    },
+    {
+      "sourceNumber": 74,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/b12620743be1.woff2",
+      "fontSha256": "0b22cac676e649c3857a12a3a68ed05715b449e4a5fbdfe39bc9f20ce0b0d3e3",
+      "nativeSha256": "97b511ee78b10c7d86113f4a0220cbbbf9c0715e4db528b600d6b2a673292835",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-10.png",
+      "imageSha256": "a90d66f788c393be695ebb6fcaa36c980ab92545033711b04fef9a723ac8f8ad"
+    },
+    {
+      "sourceNumber": 77,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/a9c765f7a268.woff2",
+      "fontSha256": "ced0f1b967b679e434c060cc54986cf1c12908e313f6d6ba3b3092e6969f596c",
+      "nativeSha256": "4a09d9c1114d1c89ccdd0e6ebd05fc109ad431f9557c376765d66dc290cd21b0",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-10.png",
+      "imageSha256": "a90d66f788c393be695ebb6fcaa36c980ab92545033711b04fef9a723ac8f8ad"
+    },
+    {
+      "sourceNumber": 81,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/a146f893d140.woff2",
+      "fontSha256": "e8b1ff7a86fd6ac29d0fd01152ba1f6c9d60d0444a86235c0e7f6d416e72719f",
+      "nativeSha256": "a537e50cd585e5e3202cc9212230f12bcce92b10b9504aba8c7e87978f912917",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-10.png",
+      "imageSha256": "a90d66f788c393be695ebb6fcaa36c980ab92545033711b04fef9a723ac8f8ad"
+    },
+    {
+      "sourceNumber": 84,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/02840f21e543.woff2",
+      "fontSha256": "e56d70666854d5f9579f8f04b2cafa89a2ae95322619e1cef1b88476cf73e389",
+      "nativeSha256": "f357dd5438468afa30995d15f3fea3332e42ee3ef9b4459325c69820eaa58f9a",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-11.png",
+      "imageSha256": "940b4d77f8e4a5f700f08f7781da769a12757468f84705a06c2c5b077e56bdfa"
+    },
+    {
+      "sourceNumber": 85,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/453f7d9060d9.woff2",
+      "fontSha256": "c08acaba2831fb9868acc42a3896a1c45e816caf43a997f0d1bbb4528d63e566",
+      "nativeSha256": "04ecaf54562c0e60e2ba5fa548f66c52a118beb90af2f6133f5d51c3c6c6dd95",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-11.png",
+      "imageSha256": "940b4d77f8e4a5f700f08f7781da769a12757468f84705a06c2c5b077e56bdfa"
+    },
+    {
+      "sourceNumber": 86,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/10d0fa35decc.woff2",
+      "fontSha256": "9ec1fdbe232bb2950d174615f4d522121a4be1af00d93e81f1a538255830fe87",
+      "nativeSha256": "96cb45a3a6657bf1b1b623d8733e110bc6453df456bf6be3a1b2f748f719bd1a",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-11.png",
+      "imageSha256": "940b4d77f8e4a5f700f08f7781da769a12757468f84705a06c2c5b077e56bdfa"
+    },
+    {
+      "sourceNumber": 87,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/201983fec778.woff2",
+      "fontSha256": "d7b26a6bde1a6a5e86720ff03dea31932a74a8cb3ede0b13e895df8822ba11dd",
+      "nativeSha256": "1b224bb3d728b8df9dfad846faaa9a33f6a157621a62d0b3de0ae571de2b2378",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-12.png",
+      "imageSha256": "baf489592e98db42128548a57d329ec626cf75157d48717f919513291f9a7927"
+    },
+    {
+      "sourceNumber": 89,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/d92e6e8d91a7.woff2",
+      "fontSha256": "f2ae0690ea999c8b56b3df53efe5ec1f27fb5680affe6df8956daad36cdb9a19",
+      "nativeSha256": "a8b91ff95baf1d678bf0c8726aa9b02030810a72812c5c45338de78d6d9b3ab5",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-12.png",
+      "imageSha256": "baf489592e98db42128548a57d329ec626cf75157d48717f919513291f9a7927"
+    },
+    {
+      "sourceNumber": 92,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counters, stroke relationships, marks and spacing remain coherent with smooth variable weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/a469583d8b76.woff2",
+      "fontSha256": "032e9e4c259fa81278d25e238208759f047a3fd188590edbf7eaec4658173f1b",
+      "nativeSha256": "89fb542a4de9b388eb5b9a27afa40aa6efac52ead3ff08c2d23570a12fda9b7e",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-12.png",
+      "imageSha256": "baf489592e98db42128548a57d329ec626cf75157d48717f919513291f9a7927"
+    },
+    {
+      "sourceNumber": 94,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/9a35221942e7.woff2",
+      "fontSha256": "281e81edc11c8d3155ed2d9da5462d3f9194876e214acd7c72ab5f9153fb3ca0",
+      "nativeSha256": "301c6b558129c8bad0d5e0afbd0daa8be03c89f0e57eb1d2c3747213843d93f4",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-13.png",
+      "imageSha256": "f37e627ca5800a900accacbdb6c15ac040d071e085b14fb0e80a8266202cdcb4"
+    },
+    {
+      "sourceNumber": 97,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/1c1c03e4f91c.woff2",
+      "fontSha256": "3eea9d244f3f5126fd7d91bf4b5d86a6a1c6e92371a932c544e4b3575b78b17a",
+      "nativeSha256": "4f1ca90c6c225dec3434313a39952490456f8f82da06bf905e2ab88d1af69e11",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-13.png",
+      "imageSha256": "f37e627ca5800a900accacbdb6c15ac040d071e085b14fb0e80a8266202cdcb4"
+    },
+    {
+      "sourceNumber": 98,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/1c05b83e6a7a.woff2",
+      "fontSha256": "5e8e897adfd1a026799ec4045b6158b8d763045843607aa368018fa3e7718209",
+      "nativeSha256": "ce63e080ec1f56a0033c7f1107d6a8ea01263f8f24aa4f3eb658fc5544723ced",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-13.png",
+      "imageSha256": "f37e627ca5800a900accacbdb6c15ac040d071e085b14fb0e80a8266202cdcb4"
+    },
+    {
+      "sourceNumber": 99,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/2a94cb6d32fa.woff2",
+      "fontSha256": "e4e2554a9029ee059f85483ee931032c3a9106f61e5537a64c593c6cd72c03cf",
+      "nativeSha256": "17ae2fea904c7416051ea13fb14f53a41bf7b0d0f96a44ab957218536b119534",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-14.png",
+      "imageSha256": "bd1bd3231be32d2d519c24bf7a0d83f49d14a7dea8c8efe42d6c4851c4948276"
+    },
+    {
+      "sourceNumber": 110,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/65f72f449e56.woff2",
+      "fontSha256": "be832d3da688586032a2759e82168e07d2c3ebbc61d02d9fe47a922dc73f68f8",
+      "nativeSha256": "ee6fbed707ad945596c275e3345955314dc2a881e5d1a98729da7994bb7b045e",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-14.png",
+      "imageSha256": "bd1bd3231be32d2d519c24bf7a0d83f49d14a7dea8c8efe42d6c4851c4948276"
+    },
+    {
+      "sourceNumber": 113,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/d6a941fbf533.woff2",
+      "fontSha256": "910ab72db3a1b0202bacc5400457bcabb0428662d4fce981c9e08042f3cfd857",
+      "nativeSha256": "909799bc4f940f072b14a5dc306249cd72b8315d707e6001d0b721bfdbf7cb52",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-14.png",
+      "imageSha256": "bd1bd3231be32d2d519c24bf7a0d83f49d14a7dea8c8efe42d6c4851c4948276"
+    },
+    {
+      "sourceNumber": 118,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/c902ddb3b7bf.woff2",
+      "fontSha256": "666fccfe29e72c46f2c9ca3f4bce6d79bb0f77503ee69764685c7a0e2aee9f36",
+      "nativeSha256": "e093cecf01b6cc9065244d3adeadd6d91c87986c4ba3fd19e2c98dbefe23bc3e",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-15.png",
+      "imageSha256": "7a7ab1434f5a5a8596ce8651d016d53c01a94676da41edf26a8d0bccc099a041"
+    },
+    {
+      "sourceNumber": 120,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/158c38a18f0f.woff2",
+      "fontSha256": "8ee746bb18290705877c760f55c758a8a8e08257ab7571cb584da4a679fb0fa8",
+      "nativeSha256": "50c384406240e938ed0b8f898b3093b4f85ff86c83a89e55a9a55e3b315bd0e1",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-15.png",
+      "imageSha256": "7a7ab1434f5a5a8596ce8651d016d53c01a94676da41edf26a8d0bccc099a041"
+    },
+    {
+      "sourceNumber": 121,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/4298161054eb.woff2",
+      "fontSha256": "0c990dc57c07965cdb291079e686060d121a66a37d90a7045f7369e12d3bed2c",
+      "nativeSha256": "6395866e14cb4c24b29105695345c85fe281f0d13dd572aee5c0fa64e225ce69",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-15.png",
+      "imageSha256": "7a7ab1434f5a5a8596ce8651d016d53c01a94676da41edf26a8d0bccc099a041"
+    },
+    {
+      "sourceNumber": 122,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/ec3993e082b5.woff2",
+      "fontSha256": "a5413e33fd88deade986f275f5f0f7fa28fbe2cfa8eec1bedbc1c1f455a299d9",
+      "nativeSha256": "585fa78190fc53e6142a17910cd0ee7426e9731606cc0df3a35054a097f96dba",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-16.png",
+      "imageSha256": "8b98ee91e16cc9245c7a5a1c628000fe004236f54e619fe22e06acfbb005c7cd"
+    },
+    {
+      "sourceNumber": 125,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/b188df0bbbd9.woff2",
+      "fontSha256": "5a36f0c8c3c904a1acbc0d55356564c93c7a279301783d2e52f24fa94cabb34b",
+      "nativeSha256": "4fde469f0697986fb8cb5bef9525dc9095829dc9d50ee20d24de92c20a1cad05",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-16.png",
+      "imageSha256": "8b98ee91e16cc9245c7a5a1c628000fe004236f54e619fe22e06acfbb005c7cd"
+    },
+    {
+      "sourceNumber": 128,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/cc6e5b751a38.woff2",
+      "fontSha256": "1e25ca098764df5f820bdb2a0adac3712131e6474ad1da41dae7274508ca7e80",
+      "nativeSha256": "8887ae7f291c1e7436cf9244ae38715bb53131db69204a70571b22ec08316bb9",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-16.png",
+      "imageSha256": "8b98ee91e16cc9245c7a5a1c628000fe004236f54e619fe22e06acfbb005c7cd"
+    },
+    {
+      "sourceNumber": 133,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/21493f617cd3.woff2",
+      "fontSha256": "ddcd9e9fa58b6137b55cdf16f2af0d2868a4511cf07958fe7af976a9a489d637",
+      "nativeSha256": "625c31cf818ffc343b26953ce735bbca612e587cc9e183d2ee0f92cdbee37707",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-17.png",
+      "imageSha256": "304523c5802e9584c3f2a3dd5520cc8a2c06b93629b8fc1f8a028acc5188f464"
+    },
+    {
+      "sourceNumber": 136,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/00765286a510.woff2",
+      "fontSha256": "3c8a9eb7ffe76c2a66842e473396f7cc992d0ba6ec38dc30dc2b9b4a7b0bab54",
+      "nativeSha256": "08ba58ee03f4bb0a4b0ff728b504fe50272358fd960cc7bdbc3c9f3ab8c52740",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-17.png",
+      "imageSha256": "304523c5802e9584c3f2a3dd5520cc8a2c06b93629b8fc1f8a028acc5188f464"
+    },
+    {
+      "sourceNumber": 141,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/88f02f3abfda.woff2",
+      "fontSha256": "5c65cdc4936e3b76e6c87586e8f2fd772cdd2ba0ca8a110058623303dafb7fdc",
+      "nativeSha256": "fcdd1a0f88fecd7d74bc1417872d85a2a1ba1d1e5f50b58d430c855bb98f58e1",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-17.png",
+      "imageSha256": "304523c5802e9584c3f2a3dd5520cc8a2c06b93629b8fc1f8a028acc5188f464"
+    },
+    {
+      "sourceNumber": 144,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/5372d8e63c7c.woff2",
+      "fontSha256": "e79739c939b3c3b2c381573185a8604f977854887cbd477566ec46a689505c21",
+      "nativeSha256": "020a252845ed9a885511db41430797bad3b69039ed88d09eb72c3dcc36370586",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-18.png",
+      "imageSha256": "3b97f38c30d1024750ee2b170f4789c9ac685667262a3e86d8b2355db669901f"
+    },
+    {
+      "sourceNumber": 146,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/5ff389a7e3ab.woff2",
+      "fontSha256": "61ab2ea9d6180b619792d0866f1608fabf45922c54b9f4de35c8ddb9b56a38f7",
+      "nativeSha256": "9b15370f2433c450965008982869553c614939ae3dcb6bbaefddacd9cc7c2ec2",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-18.png",
+      "imageSha256": "3b97f38c30d1024750ee2b170f4789c9ac685667262a3e86d8b2355db669901f"
+    },
+    {
+      "sourceNumber": 147,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled counting bars/dots, angular strokes, counters, marks and spacing retain distinctions with smooth variable pen weight; all recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/9ad458ce052c.woff2",
+      "fontSha256": "38a16b229c7eb9a2d7b1204c8522e8c06b8587c07359dcfb3dac06007f7bb2ef",
+      "nativeSha256": "8923ea7623cc816d86d1b7de499949e9df6b50d1ea90936a4deb4dde2824e21a",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-18.png",
+      "imageSha256": "3b97f38c30d1024750ee2b170f4789c9ac685667262a3e86d8b2355db669901f"
+    },
+    {
+      "sourceNumber": 149,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/000df19912cb.woff2",
+      "fontSha256": "73f4b98fc352d83f817d6dd221403a05ff8aeb3fb6f3a9fe6e1c097cc5daaffd",
+      "nativeSha256": "0c4a37145e1e79a2addc299e459446238184e26bf233827312cce11588bc4451",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-19.png",
+      "imageSha256": "813107328e2e8a7a181b73c9600129fea3eabadd0e4fb55c4b109a71becfaa32"
+    },
+    {
+      "sourceNumber": 153,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/0a6faf67d460.woff2",
+      "fontSha256": "967bc5e823ee78e119dedeef122227f6cc3ad7de1e09dc357a36b9c01452329f",
+      "nativeSha256": "bb8a18a332c4cac42604be4eb4d41951b8c2fc2c70305813e9effca12ee4301c",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-19.png",
+      "imageSha256": "813107328e2e8a7a181b73c9600129fea3eabadd0e4fb55c4b109a71becfaa32"
+    },
+    {
+      "sourceNumber": 156,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/b205b918295e.woff2",
+      "fontSha256": "844592cd93b16a30e13979b765a992af87972acc544f954e26efa58b7342840f",
+      "nativeSha256": "b058fbc375a770e6c74168492a0a11f015abcb274830c40ab45c8401a06e99ea",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-19.png",
+      "imageSha256": "813107328e2e8a7a181b73c9600129fea3eabadd0e4fb55c4b109a71becfaa32"
+    },
+    {
+      "sourceNumber": 158,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/fa32143afa11.woff2",
+      "fontSha256": "611345912ddd10784d2f890e6148ea547b58f7a9337a87d81bd49ef1efe1e7ef",
+      "nativeSha256": "c6c51eb3c03e750ff5c5dff1fad3b915afe75290b274760cdbca4ec5d50200d2",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-20.png",
+      "imageSha256": "81bacfe1a58fdc92af975fef5e1e54f857d636321732352c11fb1e170663ce91"
+    },
+    {
+      "sourceNumber": 159,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/a39a7b09d1f3.woff2",
+      "fontSha256": "faa9281202709d1b0fb77704fa98ce53878e615d07c98901e9c4da9c708a906f",
+      "nativeSha256": "c63b43348ddd0f81eac02e1ef9655b1d758a21db7718c50e9f96485be44cb334",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-20.png",
+      "imageSha256": "81bacfe1a58fdc92af975fef5e1e54f857d636321732352c11fb1e170663ce91"
+    },
+    {
+      "sourceNumber": 164,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/f01220bb43e8.woff2",
+      "fontSha256": "da8347f64295300ca28ff998dde6fb37ade4f85312d26448b9f2589543926b53",
+      "nativeSha256": "42505104118b2af0ff3b207c8d8e220692214de8a69b474127494fc569160b73",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-20.png",
+      "imageSha256": "81bacfe1a58fdc92af975fef5e1e54f857d636321732352c11fb1e170663ce91"
+    },
+    {
+      "sourceNumber": 165,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/77962cc59e6b.woff2",
+      "fontSha256": "1b8d4c428fccd061a0f890cd2f51fe8904a63bd955c6897918eb9d1251968c5c",
+      "nativeSha256": "18422bace2682cb76522b042f1b6e3e2904fddd56df7ae568e05c7c579c5f68d",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-21.png",
+      "imageSha256": "14996d4e98918492d4687d0b41f7826df2e3d364170e7e0f135b555d558b1258"
+    },
+    {
+      "sourceNumber": 166,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/85e50be5f399.woff2",
+      "fontSha256": "b3f56aceb4fd5b86065cdd96acd89990170f58520acf8d0d80b92d377e72ca4f",
+      "nativeSha256": "6b0672ba110685f8603186e45bee5e94a2175d0987cfd6845cb757bdf9c6cdb4",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-21.png",
+      "imageSha256": "14996d4e98918492d4687d0b41f7826df2e3d364170e7e0f135b555d558b1258"
+    },
+    {
+      "sourceNumber": 170,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/8c654e3ef425.woff2",
+      "fontSha256": "809463fc3fee31ae05531bb0dc4e0e64f48d7b61d6e96611c75b02ab21071902",
+      "nativeSha256": "1f8abfe0b632db4d9fc714538a4558c31a77f4569647f4f0d98ae756bcc2017f",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-21.png",
+      "imageSha256": "14996d4e98918492d4687d0b41f7826df2e3d364170e7e0f135b555d558b1258"
+    },
+    {
+      "sourceNumber": 180,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/7aa60f94c4f0.woff2",
+      "fontSha256": "e8221060f00d4ca74aecaa0022f28d02f09fbba89afad0e82b4870e9ec346a31",
+      "nativeSha256": "245229a2f6b89798ddab2c6317a8754ea1a69d066c865f536b40e46e0d693593",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-22.png",
+      "imageSha256": "9aa31af4dbaa205538825c8be0652b8031b90b2e5d4afbb7477daf78d6721a29"
+    },
+    {
+      "sourceNumber": 193,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-1/fonts/fae09e76bdd7.woff2",
+      "fontSha256": "8d1d13d8490a56d037bb3df45e208635096df76addfb6fcbe4159e3f68c6d91a",
+      "nativeSha256": "60cf72d6aa77365af64b946a56848c72983a8cbdae4be0584687a0ff0729ac64",
+      "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-1/page-22.png",
+      "imageSha256": "9aa31af4dbaa205538825c8be0652b8031b90b2e5d4afbb7477daf78d6721a29"
+    },
+    {
+      "sourceNumber": 195,
+      "decision": "accepted-final-public-pressure-with-explicit-native-preservation",
+      "reason": "Actual public chemical and all16geomantic specimens inspected at22/44px beside Dad; fifteen already-hand-inked glyphs retained with exact pinned raw/constructor provenance. Original six-unit harpoon, strict four-unit geomantic center, dot count/gap/advance bounds and14fields at384/1024pass. Sampled style/semantics, not all-repertoire or linguistic approval.",
+      "font": "assets/fonts/scripts/e789acc260ba.woff2",
+      "fontSha256": "d5784187ed8887c200853bee622eceffb2e5f3f56f14a6cb30ca49da8f2f55fa",
+      "nativeSha256": "0ef64c6f599bccfd6b8b87c2cfe8d19ebb2a1490e87dd2ad82c85fab6b44b0da",
+      "fieldChecks": "output/font-review/final-checks/final-public-policy-review/actual-field-checks.json",
+      "image": "output/font-review/final-checks/final-public-policy-review/chemical-public.png",
+      "imageSha256": "2c1de8dc83e2a226ba5ad101dbd8bd282aa37d6645725ddd0db494c75723583c",
+      "fieldChecksSha256": "0b4b448f8914c1d841e9f0dbe6ab6e5fc8d2d061d98834b6252ef587e53a4eab",
+      "priorAcceptedPrivateCandidate": {
+        "sourceNumber": 195,
+        "decision": "accepted-production-pressure-sample",
+        "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, joined strokes, counters and historical symbol details remain clear with smooth variable weight; recorded fields pass. Not full-repertoire or linguistic approval.",
+        "font": "output/font-review/supplemental-warm/group-1/fonts/e789acc260ba.woff2",
+        "fontSha256": "8262688c0dc22bfa0d52dcaf019b512103a65e1e674f7215d1d765cf8179be9a",
+        "nativeSha256": "0ef64c6f599bccfd6b8b87c2cfe8d19ebb2a1490e87dd2ad82c85fab6b44b0da",
+        "fieldChecks": "output/font-review/private-production-review-1/whole-field-checks.json",
+        "image": "output/font-review/private-production-review-1/page-22.png",
+        "imageSha256": "9aa31af4dbaa205538825c8be0652b8031b90b2e5d4afbb7477daf78d6721a29"
+      },
+      "historicalAcceptanceStatus": "Superseded by actual-public semantic/counter preservation review; prior private candidate and inspected image retained verbatim.",
+      "actualPublicReview": "output/font-review/final-checks/final-public-policy-review/review.json",
+      "actualPublicReviewSha256": "432b61ca248209f8644b5d46a63ce2c123bd8e30d9d7019841331c8b4f793d1f",
+      "nativeCacheConstructionProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json",
+      "sourcePolicy": {
+        "module": "tools/font/chemical_source_preservation.py",
+        "sha256": "1d133e55e8b48ce3ab3b6eb7fce4c82bc7a95ab459a6036525b9baac0d3f8b0e",
+        "codepoints": [
+          118496,
+          118497,
+          118498,
+          118499,
+          118500,
+          118501,
+          118504,
+          118505,
+          118506,
+          118507,
+          118508,
+          118509,
+          118510,
+          118511,
+          129233
+        ],
+        "namedGlyphs": [],
+        "glyphs": [
+          {
+            "gid": 73,
+            "glyph": "u1CEE0"
+          },
+          {
+            "gid": 74,
+            "glyph": "u1CEE1"
+          },
+          {
+            "gid": 75,
+            "glyph": "u1CEE2"
+          },
+          {
+            "gid": 76,
+            "glyph": "u1CEE3"
+          },
+          {
+            "gid": 77,
+            "glyph": "u1CEE4"
+          },
+          {
+            "gid": 78,
+            "glyph": "u1CEE5"
+          },
+          {
+            "gid": 81,
+            "glyph": "u1CEE8"
+          },
+          {
+            "gid": 82,
+            "glyph": "u1CEE9"
+          },
+          {
+            "gid": 83,
+            "glyph": "u1CEEA"
+          },
+          {
+            "gid": 84,
+            "glyph": "u1CEEB"
+          },
+          {
+            "gid": 85,
+            "glyph": "u1CEEC"
+          },
+          {
+            "gid": 86,
+            "glyph": "u1CEED"
+          },
+          {
+            "gid": 87,
+            "glyph": "u1CEEE"
+          },
+          {
+            "gid": 88,
+            "glyph": "u1CEEF"
+          },
+          {
+            "gid": 312,
+            "glyph": "u1F8D1"
+          }
+        ],
+        "reason": "Retain already hand-inked equal-length harpoon and fourteen geomantic dot-grid figures with native component closure after pressure violated existing six-unit length and strict four-unit center bounds",
+        "sourceConstruction": {
+          "module": "tools/font/alphabet_ink.py",
+          "sha256": "21d8f8d0dcdf04e3a383b7a88b4a73e61c8a8122351e37194aaac0aa9fb93e17",
+          "scope": [
+            [
+              3164,
+              3164
+            ],
+            [
+              3292,
+              3292
+            ],
+            [
+              7305,
+              7306
+            ],
+            [
+              11158,
+              11158
+            ],
+            [
+              42955,
+              42959
+            ],
+            [
+              42962,
+              42962
+            ],
+            [
+              42964,
+              42964
+            ],
+            [
+              42970,
+              42973
+            ],
+            [
+              42978,
+              42978
+            ],
+            [
+              43884,
+              43885
+            ],
+            [
+              67515,
+              67519
+            ],
+            [
+              118464,
+              118480
+            ],
+            [
+              118496,
+              118511
+            ],
+            [
+              118512,
+              118512
+            ],
+            [
+              122655,
+              122753
+            ],
+            [
+              122768,
+              122774
+            ],
+            [
+              122829,
+              122866
+            ],
+            [
+              122869,
+              122879
+            ],
+            [
+              122928,
+              122989
+            ],
+            [
+              128887,
+              128890
+            ],
+            [
+              129232,
+              129240
+            ],
+            [
+              129620,
+              129623
+            ]
+          ],
+          "scopeManifest": "data/font-sources/unicodia.json",
+          "chemicalModule": "tools/font/chemical_symbols.py",
+          "chemicalSha256": "e3f550bf90872244ec0f9acb5576b6f3db8c690010ffc2680dbda43f47b642d9",
+          "sourceFile": "build/unicode-sources/unicodia/UnicodiaFunky.ttf",
+          "sourceSha256": "6ae19735dee1a7e64616de44a35e27e8329f80dff14171296173057e77bea18c"
+        }
+      },
+      "canonicalSourceDecision": {
+        "record": "docs/unicode-style-dispositions.json",
+        "number": 195,
+        "disposition": "sampled-pressure-with-explicit-native-preservation-accepted",
+        "decisionSha256": "21b9efdcc142a8a43fdfb7d00f36449eb065141fa421a415dc1abf1854b2278a",
+        "scope": "sampled source style; not all-glyph or linguistic approval"
+      },
+      "additionalImages": [
+        {
+          "file": "output/font-review/final-checks/final-public-policy-review/geomantic-public.png",
+          "sha256": "23e3bec301d1d3c47fe9b52fbf3f66462a0135d4d7f877390d2269405d06a774",
+          "scope": "All16actualpublicgeomanticfigures at22/44;strictoriginalcenter/count/gap bounds"
+        }
+      ]
+    },
+    {
+      "sourceNumber": 50,
+      "decision": "accepted-isolated-production-pressure-with-two-native-glyphs",
+      "reason": "Inspected native/rescued22/44px fields beside Dad; exact native two-glyph restoration repairs component merge and small counter artifact, preserving smooth pressure elsewhere. All4 saved-font fields384/1024 pass; all10240glyph/native-layout audit passes. Production wrapper/integration pending.",
+      "font": "assets/fonts/scripts/b480b4bfab29.woff2",
+      "fontSha256": "4d1b22c3ae6976bbe8681d6b2584c5cb9aa390a85196f933352c06507170a4f5",
+      "nativeSha256": "65aa01ba18c15ddc1687b6b533f8cddfe145bfbecb4f60d98639e009f397adae",
+      "fieldChecks": "docs/duployan-source-preservation-review.json",
+      "image": "output/font-review/final-policy-fields/page-1.png",
+      "imageSha256": "768942c6b0ee10e03b4d9a255afd61f83292507fdb6da6e0c62d87bdfc85ad7b",
+      "finalPublicRereview": {
+        "accepted": true,
+        "sizes": [
+          22,
+          44
+        ],
+        "fieldChecks384": "output/font-review/final-policy-fields/whole-field-checks.json",
+        "fieldChecks1024": "output/font-review/final-policy-fields/whole-field-checks-1024.json",
+        "observation": "Actual final fields inspected beside native and Dad; distinct dots, joins, strokes and counters preserved; exact native-preservation policy remains mandatory."
+      },
+      "supersededPreintegrationCandidate": {
+        "sourceNumber": 50,
+        "decision": "accepted-isolated-production-pressure-with-two-native-glyphs",
+        "reason": "Inspected native/rescued22/44px fields beside Dad; exact native two-glyph restoration repairs component merge and small counter artifact, preserving smooth pressure elsewhere. All4 saved-font fields384/1024 pass; all10240glyph/native-layout audit passes. Production wrapper/integration pending.",
+        "font": "output/font-review/duployan-production-rescue/restore-131-plus-6845.woff2",
+        "fontSha256": "2c9f401e6dc1c1155d2efd9126a5e18da7cee678c580e27f457f10a9f5391892",
+        "nativeSha256": "65aa01ba18c15ddc1687b6b533f8cddfe145bfbecb4f60d98639e009f397adae",
+        "fieldChecks": "docs/duployan-source-preservation-review.json",
+        "image": "output/font-review/duployan-production-rescue/restore-131-plus-6845-comparison.png",
+        "imageSha256": "794630dc9dc92e38986e7a66be773e01ffddb3b1d971822f479eed66c1d457ae"
+      }
+    },
+    {
+      "sourceNumber": 45,
+      "decision": "accepted-isolated-production-pressure-with-native-connector",
+      "reason": "Inspected native/rescued22/44px fields beside Dad; exact native U+12493 restores ink connectivity. Saved384/1024fields and all1239native-or-current glyph/layout audit pass. Separate production wrapper/integration pending.",
+      "font": "assets/fonts/scripts/819c3b953317.woff2",
+      "fontSha256": "490c3bde8c0bbb0ffbb2464ec3f1e1188c4facdc9237982078c4d46f65f5351f",
+      "nativeSha256": "36a696a313e70ec5b6632844a1f008f1dd524a4f9170cd07ced1137a8827bcfa",
+      "fieldChecks": "docs/cuneiform-source-preservation-review.json",
+      "image": "output/font-review/final-policy-fields/page-1.png",
+      "imageSha256": "768942c6b0ee10e03b4d9a255afd61f83292507fdb6da6e0c62d87bdfc85ad7b",
+      "finalPublicRereview": {
+        "accepted": true,
+        "sizes": [
+          22,
+          44
+        ],
+        "fieldChecks384": "output/font-review/final-policy-fields/whole-field-checks.json",
+        "fieldChecks1024": "output/font-review/final-policy-fields/whole-field-checks-1024.json",
+        "observation": "Actual final fields inspected beside native and Dad; distinct dots, joins, strokes and counters preserved; exact native-preservation policy remains mandatory."
+      },
+      "supersededPreintegrationCandidate": {
+        "sourceNumber": 45,
+        "decision": "accepted-isolated-production-pressure-with-native-connector",
+        "reason": "Inspected native/rescued22/44px fields beside Dad; exact native U+12493 restores ink connectivity. Saved384/1024fields and all1239native-or-current glyph/layout audit pass. Separate production wrapper/integration pending.",
+        "font": "output/font-review/cuneiform-production-rescue/restore-1061.woff2",
+        "fontSha256": "594890d847b45363671435b94b20c58f7c4b6abb0597adc45d0687556e5500a2",
+        "nativeSha256": "36a696a313e70ec5b6632844a1f008f1dd524a4f9170cd07ced1137a8827bcfa",
+        "fieldChecks": "docs/cuneiform-source-preservation-review.json",
+        "image": "output/font-review/cuneiform-production-rescue/restore-1061-comparison.png",
+        "imageSha256": "bd63b9bece5bef3a7002355a026f6008ee56c0ba1fd5d7da8a9d257d2171cc1d"
+      }
+    },
+    {
+      "sourceNumber": 9,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/e24e3ab74ef8.woff2",
+      "fontSha256": "df07bea87861c63f09981201f814e17d07c45a4de2bc1ce69aa622137b19d64f",
+      "nativeSha256": "8a54324994477c54f74e122d49023e9aa56f5fdae40eff3b90de215e5775fcc9",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-1.png",
+      "imageSha256": "17463a051fa010af48a8d49adf7494e00bbb3dad62419c9293a48f64df26b32c"
+    },
+    {
+      "sourceNumber": 17,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/cb7b0e110de3.woff2",
+      "fontSha256": "5f372dcac8b487b7d0d51ad21ba3052431030873ae5f3f7bf6da41214a970619",
+      "nativeSha256": "feee5b76ce7d8b72a1a1270038cd94311f31485235ba96cb0fd7d514d99dd89a",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-1.png",
+      "imageSha256": "17463a051fa010af48a8d49adf7494e00bbb3dad62419c9293a48f64df26b32c"
+    },
+    {
+      "sourceNumber": 31,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/738639b65b11.woff2",
+      "fontSha256": "cb03924743c9f5b9d98642283fb5a90dd8c83fa054fea9b34cf6780df227637a",
+      "nativeSha256": "dd6a1aedc3ef3ce57e34da1d388c04da31a3a775bda38293396664b0ace27a34",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-1.png",
+      "imageSha256": "17463a051fa010af48a8d49adf7494e00bbb3dad62419c9293a48f64df26b32c"
+    },
+    {
+      "sourceNumber": 34,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/c6ff9137f415.woff2",
+      "fontSha256": "42fc569ba55b7cad688161bc972e659c0f23b0d8e4353548ab747ccd42371a74",
+      "nativeSha256": "8bb158111a61574fb453d9aea09c602bbff04baea91eb03184890251979b64b1",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-2.png",
+      "imageSha256": "de6ea67d121b12b44c8c7df4ecb5d72ab48792ee8def58f62e81caa162f34a99"
+    },
+    {
+      "sourceNumber": 36,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/800feb52a77c.woff2",
+      "fontSha256": "cd1f5c637f5eb53bfd106c8645637ee30e054afa22df58434edc0d2740da5f6c",
+      "nativeSha256": "6c56cd3524a7c36ac51e3fd63bf19cd61e8482e1e084fb545938c1b9a910709c",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-2.png",
+      "imageSha256": "de6ea67d121b12b44c8c7df4ecb5d72ab48792ee8def58f62e81caa162f34a99"
+    },
+    {
+      "sourceNumber": 40,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/2aa8d63e193c.woff2",
+      "fontSha256": "59e9b818c6346df1bbcb42daecfe62b8dff85af37dbe10108d0d6913687e4d6d",
+      "nativeSha256": "8f252d7c1ff57bf20a917956849175c08f801c812373526b01cbc4315c0d4500",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-2.png",
+      "imageSha256": "de6ea67d121b12b44c8c7df4ecb5d72ab48792ee8def58f62e81caa162f34a99"
+    },
+    {
+      "sourceNumber": 42,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/53a65f364729.woff2",
+      "fontSha256": "b492eed35dea4535852bbc9d0586da0fc629dd1c830d29ee2ffd0051c6a34c71",
+      "nativeSha256": "a5e9595f3d8bacfda7f535e2b03649e5442232264becc5cd75fbb06e0a28c0fe",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-3.png",
+      "imageSha256": "e88f6e3c0bd0f5124769aa9ad4979d25d957a0e506eca5453c93f1b36dd0a2da"
+    },
+    {
+      "sourceNumber": 44,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/8edd0eb88f9d.woff2",
+      "fontSha256": "b6eb16391c3c18615932beabf1a95beacaf369e5ab70cf360dcc0d0e572dd74a",
+      "nativeSha256": "0bd4984902ea8b22e9b7902df5b8bb2cb329bd33457cfb43bade25db15381fe8",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-3.png",
+      "imageSha256": "e88f6e3c0bd0f5124769aa9ad4979d25d957a0e506eca5453c93f1b36dd0a2da"
+    },
+    {
+      "sourceNumber": 46,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/f433b5c42b25.woff2",
+      "fontSha256": "df62d3200fb20e7465a28137a8129b814ef0e3ef3c95bd1bf10dea61f0837d15",
+      "nativeSha256": "388a3f4715e3df5697a1aad126a28a0390a24fb3e287828a0d9d82cfba36c84d",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-4.png",
+      "imageSha256": "d3150e7148f2a6ccb8b542517066189108d67fa3de030f60633527a8f616fd89"
+    },
+    {
+      "sourceNumber": 52,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/0ff3f08974e1.woff2",
+      "fontSha256": "1d6a6053887cb0fba39d24d7e22d8278b6773bb200193445135e51e11df55a9e",
+      "nativeSha256": "35a2bc12b3a407245efddfcddb61179baff7b9b57df499e941dcde0900b7770b",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-4.png",
+      "imageSha256": "d3150e7148f2a6ccb8b542517066189108d67fa3de030f60633527a8f616fd89"
+    },
+    {
+      "sourceNumber": 61,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/f8fd08cb2111.woff2",
+      "fontSha256": "24443acdb5cd49294dda2cf605b6d70de782203547441cb50c7b39878e84a1c3",
+      "nativeSha256": "801edaae458ec39d344e8e81f4b7729a3be691cb5019128a7a124994200fc116",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-4.png",
+      "imageSha256": "d3150e7148f2a6ccb8b542517066189108d67fa3de030f60633527a8f616fd89"
+    },
+    {
+      "sourceNumber": 62,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/81fcc9ad5022.woff2",
+      "fontSha256": "150c83d7d72fa7a695b6b1744ecacbad9ecd5f607ddeeb642931f146c2ba93a1",
+      "nativeSha256": "2768e16141a84a15997b68398d6990b5ea3b3a43124255342c8bed154a3c76eb",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-5.png",
+      "imageSha256": "186864833e8b7242dc5e563221d7f9cfd7243e27caa2201add90538e4baa022a"
+    },
+    {
+      "sourceNumber": 64,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/d31ce6f59e32.woff2",
+      "fontSha256": "7df93a0c489ab8df12c175cf908187fc037827fd7a42cf77a3342f0ea42afc93",
+      "nativeSha256": "c97184d9c6b6cc100cf1af9b5d3c1fdb2f129a850bf80cb1e2d5e68387ac8294",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-5.png",
+      "imageSha256": "186864833e8b7242dc5e563221d7f9cfd7243e27caa2201add90538e4baa022a"
+    },
+    {
+      "sourceNumber": 66,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/f0218d109a4e.woff2",
+      "fontSha256": "257547ebfb73dd94b7f289d8fd6718aca46fcbddd61ad443d9c28a8a54cbcfeb",
+      "nativeSha256": "b85b61b24da43cbc57f63ac4cbe198f6a8a6c12f9b5572bde7657678aabd49f4",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-5.png",
+      "imageSha256": "186864833e8b7242dc5e563221d7f9cfd7243e27caa2201add90538e4baa022a"
+    },
+    {
+      "sourceNumber": 68,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/8d39a1c56d33.woff2",
+      "fontSha256": "ac601d09b699535e72be7207c200d913060aea07f357551ca129ac8382cae027",
+      "nativeSha256": "724d702e94b827afdd9c32f540e3cb5fe25b39f05346a28b0ecaf6e8d8647342",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-6.png",
+      "imageSha256": "9e4dce1b4edefbf1331c76bdd5265499c065317f4c466c6e5dbf4222acf8a6be"
+    },
+    {
+      "sourceNumber": 71,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/bd6f2e70d0a7.woff2",
+      "fontSha256": "58d69374c00adceaa80be20f04ba71bf4b7821536b58f8bd20dea9dcaf379daf",
+      "nativeSha256": "abd4cb54df50db2e0de2c084cf7c3786c91071d670609ecd089be7ef76445ef9",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-6.png",
+      "imageSha256": "9e4dce1b4edefbf1331c76bdd5265499c065317f4c466c6e5dbf4222acf8a6be"
+    },
+    {
+      "sourceNumber": 73,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled native counting geometry, joined strokes, marks and counters remain coherent with smooth variable pen pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/3d04444ca531.woff2",
+      "fontSha256": "bda3362cd4cd37931006fd382841318e461f1997314e03a0e6917c938ca40e34",
+      "nativeSha256": "ef332e91e29a1adfe2c897c5fe7c700e78d5422842add36efaf916b4d10131ab",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-6.png",
+      "imageSha256": "9e4dce1b4edefbf1331c76bdd5265499c065317f4c466c6e5dbf4222acf8a6be"
+    },
+    {
+      "sourceNumber": 78,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/94cca57feb0f.woff2",
+      "fontSha256": "a2b49366b301f910b91070b0014a2c8ef8323eab5a7b2531e6450db781068078",
+      "nativeSha256": "0ed50e08c08efab3413c7d0759e42878c2e8715a64a8fa4713176336e4006e18",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-7.png",
+      "imageSha256": "91376ab3a177a111cdb73bf2a5d90de9794df7fa2207575fda2146de0238482d"
+    },
+    {
+      "sourceNumber": 80,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/214345627acd.woff2",
+      "fontSha256": "403befba692b1bfe6086b83afdbd23c7b4f131a84d1c062726bb0261e987769e",
+      "nativeSha256": "fbb3a104f99b442e4c7462371bb3a7574bacba8f490c6955d2ab4bb01501b3b2",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-7.png",
+      "imageSha256": "91376ab3a177a111cdb73bf2a5d90de9794df7fa2207575fda2146de0238482d"
+    },
+    {
+      "sourceNumber": 83,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/063310161dc8.woff2",
+      "fontSha256": "ff1e17eb1cf71889c4339cdde4adc025a0ed976a567852b63b560893f8684c49",
+      "nativeSha256": "2c62250f794be24fd5c5ceee432a6f44baf6b949c34e726638738e891f8bc567",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-7.png",
+      "imageSha256": "91376ab3a177a111cdb73bf2a5d90de9794df7fa2207575fda2146de0238482d"
+    },
+    {
+      "sourceNumber": 90,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/ffa67c02b05a.woff2",
+      "fontSha256": "277c525ff895b1592ca6537c68ffbbe6448a32bb5c9baf7d6082a9cd180cfd7e",
+      "nativeSha256": "0b517a833aea5a1e613de34d24745f2f6b3a8486a2db52ed5c44926b3fc47865",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-8.png",
+      "imageSha256": "108264b4dc72e55854c0560bf7de814de1effef400e522134c216b9e41999966"
+    },
+    {
+      "sourceNumber": 91,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/ea056f4250d3.woff2",
+      "fontSha256": "6bfb119d34f225ade746ac88877cce081da3537338347e35e5a42b0e62605d87",
+      "nativeSha256": "40371ca04879eabe8002c5570ead22e589874aa6fbc025acd8beed281745c777",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-8.png",
+      "imageSha256": "108264b4dc72e55854c0560bf7de814de1effef400e522134c216b9e41999966"
+    },
+    {
+      "sourceNumber": 93,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/6b5f778a9ecc.woff2",
+      "fontSha256": "575572910c9c0bd9fc59e6a4e9bb5f21ca25abdb25dab93c03689e28473888a3",
+      "nativeSha256": "87d2d8e2f6e5c43acb64e6c8b674f47f3329e031698f789bf7ea3f5a081fc222",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-8.png",
+      "imageSha256": "108264b4dc72e55854c0560bf7de814de1effef400e522134c216b9e41999966"
+    },
+    {
+      "sourceNumber": 95,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/4a4b504c577c.woff2",
+      "fontSha256": "efced87d047cccb186d441b37f6d2049fbb41739417a1dd1a138586483f24d95",
+      "nativeSha256": "e28949ac035dee8345722b97c922b9410ef5d38c51c7773ab1666c413945b732",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-9.png",
+      "imageSha256": "40fdd47450b25cb0d89e9d02997c40d86cb71c0a05c0c97d8517161bd7efafe6"
+    },
+    {
+      "sourceNumber": 96,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/8183cf64cdfd.woff2",
+      "fontSha256": "e447eb089053199596ff44f352f6635ecd0c025bc3f504b15c3102211b6e5c4d",
+      "nativeSha256": "7fdf49f365c5af3040232a9dfd48a30352ed95ad6e822f09c840e1e4a9cd288f",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-9.png",
+      "imageSha256": "40fdd47450b25cb0d89e9d02997c40d86cb71c0a05c0c97d8517161bd7efafe6"
+    },
+    {
+      "sourceNumber": 100,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/e9942374bf5b.woff2",
+      "fontSha256": "52ba746ec9ccec7e944d251d07e15a477c4fe17e2582d9ff78f80a0bdbd755ec",
+      "nativeSha256": "e205cf1decaadfe6cad98d77bd42f19f84c157ab1974fd725436b8d0b24b07d5",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-9.png",
+      "imageSha256": "40fdd47450b25cb0d89e9d02997c40d86cb71c0a05c0c97d8517161bd7efafe6"
+    },
+    {
+      "sourceNumber": 101,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/9478b0a4d3a0.woff2",
+      "fontSha256": "c02b7cb99c2a5568e7883b49d8862c3ff5fbd86ecc12d563473b79c7a3533db6",
+      "nativeSha256": "a2c9337ea1b8b920ae153e4dff9b53813415d7555fc52abbfa5a858c300aba7b",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-10.png",
+      "imageSha256": "d0f98c2e66707fd4b2c11c9f6dbbbed717145d2c9945b63cf3ace2c2ab32e9eb"
+    },
+    {
+      "sourceNumber": 103,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/0dfc7890e0b9.woff2",
+      "fontSha256": "a9b6abed6d4d15c41922308ec901a3b53553b7580f0c4cb44ed416e3490b5617",
+      "nativeSha256": "366e5c486464e9cd272273d88a00db378003d7627147193e1c052476db69ea94",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-10.png",
+      "imageSha256": "d0f98c2e66707fd4b2c11c9f6dbbbed717145d2c9945b63cf3ace2c2ab32e9eb"
+    },
+    {
+      "sourceNumber": 106,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/f183cbedb1dc.woff2",
+      "fontSha256": "78ed036c447eb264aa4c3e93403dfeb755bcb9b7e5ded48f3847b3b470268ab8",
+      "nativeSha256": "4d280ac61e75604f10135afe81befc7630cc3a06975a61a717e41b2eddf92593",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-10.png",
+      "imageSha256": "d0f98c2e66707fd4b2c11c9f6dbbbed717145d2c9945b63cf3ace2c2ab32e9eb"
+    },
+    {
+      "sourceNumber": 107,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/a70407fa908a.woff2",
+      "fontSha256": "756d2def240af323f4ff3747f09262ba9d8507f2dd0d79995c7365497a21bbd5",
+      "nativeSha256": "226fd827a7cc75e0a376d3fb1b911a891ab089916bbc59f721e6f57ce9ca1b20",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-11.png",
+      "imageSha256": "64e5fa3b99882ff8a7dff41cdfee9b98a785a3982ec7543f18aaed8505fe4ca0"
+    },
+    {
+      "sourceNumber": 108,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/769798427bcc.woff2",
+      "fontSha256": "84d828ce1227418acd742e6b63b964acc6faa95759bf20b1a69029d1be60cbb1",
+      "nativeSha256": "6882c935743f6d879c328c9da6e9056d24a43fe054dd721da9f1d94e381bbafc",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-11.png",
+      "imageSha256": "64e5fa3b99882ff8a7dff41cdfee9b98a785a3982ec7543f18aaed8505fe4ca0"
+    },
+    {
+      "sourceNumber": 109,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/0d8fe7efe314.woff2",
+      "fontSha256": "c1a580306eca7b786381772c59e7ef7b473d9cd865dc24a50b2c3ceba135c1fe",
+      "nativeSha256": "af5da49f33c23696da3bd45b27f07959d8ed4e2066df7dc22b7af6069b862b60",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-11.png",
+      "imageSha256": "64e5fa3b99882ff8a7dff41cdfee9b98a785a3982ec7543f18aaed8505fe4ca0"
+    },
+    {
+      "sourceNumber": 111,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/258a685fb4d2.woff2",
+      "fontSha256": "05ee7bf7ea935ac59c7baaceb0e4b720fc9c6c47fadcab066137e15880894652",
+      "nativeSha256": "347d31b6b8dcfb0621068dc16400a0f3e4d2253d9ca845f10196f2bd305baf89",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-12.png",
+      "imageSha256": "41dd60f184ed7eb64e012e836826f7fe0ee292019c6c1c74e6558de722c72119"
+    },
+    {
+      "sourceNumber": 114,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/b3eaf1174a3c.woff2",
+      "fontSha256": "ff3dc6cba9e35c748a2214787f15b94e8e94f066ee55975f2b57246e80c37d1c",
+      "nativeSha256": "5cbc043c13e1a6e4bd0e1c53b27f401c0dc7e0a5d40ed40b8f9bcaa4df8fde0d",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-12.png",
+      "imageSha256": "41dd60f184ed7eb64e012e836826f7fe0ee292019c6c1c74e6558de722c72119"
+    },
+    {
+      "sourceNumber": 115,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled marks, counters, joined forms and mathematical/symbol distinctions retain coherent native structure with smooth variable pressure; recorded field passes. Glyph studies, not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/ac27235812ef.woff2",
+      "fontSha256": "c08b591465e880186164f0b2586e9eb9cec370a25e8b68c8d9e8ede3a348a012",
+      "nativeSha256": "eb0bfa602b59ca71b4df78847b7887e156245553945db8636c0a24f577e4916f",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-12.png",
+      "imageSha256": "41dd60f184ed7eb64e012e836826f7fe0ee292019c6c1c74e6558de722c72119"
+    },
+    {
+      "sourceNumber": 116,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/ced7eb13f610.woff2",
+      "fontSha256": "5f1cd4e4a3d7ca13e6ac77838bb28d5a3628787ef567701d8e03a80af542ec6d",
+      "nativeSha256": "c49ac7dda588d7bc78234a02d760d8d4e8abf5b9e89e320a7d7994be7ab1d85c",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-13.png",
+      "imageSha256": "5d294188537f07f6bd7751e62f10a51e8677a005650bab36f2dd60fbc8ab6a41"
+    },
+    {
+      "sourceNumber": 117,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/589580b9d05b.woff2",
+      "fontSha256": "0696913e5fc6a546be1fc979bb3d3977275c75627212641fa091e6b2500f33e3",
+      "nativeSha256": "6090461696ef9254227ae1b6e9385f4952c16397ddedcc10009737c48fca8887",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-13.png",
+      "imageSha256": "5d294188537f07f6bd7751e62f10a51e8677a005650bab36f2dd60fbc8ab6a41"
+    },
+    {
+      "sourceNumber": 119,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/c49182cd5750.woff2",
+      "fontSha256": "c96d7160c21223dc11b722b5d9808f518b48ffcc1fc1cd09a3ccc15cbcfa9035",
+      "nativeSha256": "75eb4428d8c84cd52c700002ca70857c598805c19cf39495077be95b7263970d",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-13.png",
+      "imageSha256": "5d294188537f07f6bd7751e62f10a51e8677a005650bab36f2dd60fbc8ab6a41"
+    },
+    {
+      "sourceNumber": 123,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/3d3c297b167c.woff2",
+      "fontSha256": "70726504c7205de27fa0eb058d01ffe2f40491f1f29e57c761ed5048433fa160",
+      "nativeSha256": "a791e22dc3cb914847802d26eb464b702867faf79ba28dc0a2ca30c4cf262f86",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-14.png",
+      "imageSha256": "b1cf3f810e1bc5a5485e008d341574116aed7f16846b8425a53065277d3be6bc"
+    },
+    {
+      "sourceNumber": 124,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/0bc178c824ef.woff2",
+      "fontSha256": "aae34a87f803820195653295f5a98ab1e4170689cff884c1b6dda75dfc1257a6",
+      "nativeSha256": "0a8a07729bf99b19ad307e778de6ddc22a2ca87cf47c2cfc137e41779ac295e3",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-14.png",
+      "imageSha256": "b1cf3f810e1bc5a5485e008d341574116aed7f16846b8425a53065277d3be6bc"
+    },
+    {
+      "sourceNumber": 126,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/cce737698e35.woff2",
+      "fontSha256": "6678912bc4ccb1cbc022d7508c50cb977736c5a95a53f70f7ab7a784dd4e75fa",
+      "nativeSha256": "56d93e93faed477f9a2427f130b051470493c781b1c7f24a671e2105c13d2c75",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-14.png",
+      "imageSha256": "b1cf3f810e1bc5a5485e008d341574116aed7f16846b8425a53065277d3be6bc"
+    },
+    {
+      "sourceNumber": 127,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/e9b5e5128788.woff2",
+      "fontSha256": "3665ba5268d65c5789aa3cea8dcf367cfb95d9fab488ee24d32b6fc77a4f521c",
+      "nativeSha256": "7b1ade9f503a2c009c1fe93c140c31eae0498724144a00ccbf5b4acc3e92d24f",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-15.png",
+      "imageSha256": "2bfef1bae85132972c92992887caaa219614f6fde327814817cce778423d31b7"
+    },
+    {
+      "sourceNumber": 129,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/796984ff7020.woff2",
+      "fontSha256": "a275613f2604392ce4a6fba36fe7f8d7b0286648349b912c4be4fd6b9e648fa1",
+      "nativeSha256": "a5da144e5c181acaa33776f1e45236fbcae51c91ebbcf40139b4153dd44c0374",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-15.png",
+      "imageSha256": "2bfef1bae85132972c92992887caaa219614f6fde327814817cce778423d31b7"
+    },
+    {
+      "sourceNumber": 130,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/774440559cdc.woff2",
+      "fontSha256": "7cc8d367d1462d0a1156fb62438ce4edefa3ca17d398c87a2a9b41aa50000d37",
+      "nativeSha256": "4f24cda83c4d19d458dbaca8ee698330e3f02e0b15b7943c78f0deae47aabdd5",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-15.png",
+      "imageSha256": "2bfef1bae85132972c92992887caaa219614f6fde327814817cce778423d31b7"
+    },
+    {
+      "sourceNumber": 131,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/15fb15108c0d.woff2",
+      "fontSha256": "920ebb7f0883a1cdb73f9b94fba23a2810f11a1a5d9b96980e516093d0a8a1aa",
+      "nativeSha256": "fe35876d58098a73df7d057a97d6a9809cfe1b491ee3e74b25deb86a853ea645",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-16.png",
+      "imageSha256": "efa99c6c8e1a28d56af3ad1576006a0b066afcdbb0979f1f2ff682aa3be6033e"
+    },
+    {
+      "sourceNumber": 135,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/ba1867bf31f9.woff2",
+      "fontSha256": "574a034129726b93cdc2900f5db26aeea7156a95cde00c43d1bbfca892392ef3",
+      "nativeSha256": "45ddc09bfd3bafd78929c6c2c632be9db25e3a7e73e89620ebbd29d61f844229",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-16.png",
+      "imageSha256": "efa99c6c8e1a28d56af3ad1576006a0b066afcdbb0979f1f2ff682aa3be6033e"
+    },
+    {
+      "sourceNumber": 137,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/64700a48e6e9.woff2",
+      "fontSha256": "03df5917799ac56f35d323a632e854e33eeb4664efa5cd6d297d052df3b94884",
+      "nativeSha256": "f8d4d24e3dad4d174f906e57051fabe3141301fcbe34590c45f2707d9f80c2bf",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-16.png",
+      "imageSha256": "efa99c6c8e1a28d56af3ad1576006a0b066afcdbb0979f1f2ff682aa3be6033e"
+    },
+    {
+      "sourceNumber": 142,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/081aecdc8fd5.woff2",
+      "fontSha256": "b148c9ccca518d5cdfd38ddd24b23d35cac992b47aa3c378f2faf639b72eb7c9",
+      "nativeSha256": "c8c721ffb389c3d7bb4b4b39d20f890c006f892aec39ea0115a0ab599a6aa90b",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-17.png",
+      "imageSha256": "acd8c5e7a2351e399fbda4a01a9980596a2a9d7bfaf1bcc4a55728056b18c5fd"
+    },
+    {
+      "sourceNumber": 143,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/3b414b70e719.woff2",
+      "fontSha256": "d243c716fe1e8c40d5986578f74f188cd5d07d9a752f168ab97f08c9e9bf137c",
+      "nativeSha256": "a5424f175b2caea76a05516f1a5180af80c7253b807b6f675a45fac83aaaf984",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-17.png",
+      "imageSha256": "acd8c5e7a2351e399fbda4a01a9980596a2a9d7bfaf1bcc4a55728056b18c5fd"
+    },
+    {
+      "sourceNumber": 145,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/11138da39427.woff2",
+      "fontSha256": "8bcca7f44ea22ac7013f3e99a3f6a86f58d5a6e4c560acd24ee93390809e42c9",
+      "nativeSha256": "341172556cac1ed2d0b826c1b5fdac8dde27e5f554ed026b87183d31f982dcfb",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-17.png",
+      "imageSha256": "acd8c5e7a2351e399fbda4a01a9980596a2a9d7bfaf1bcc4a55728056b18c5fd"
+    },
+    {
+      "sourceNumber": 148,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/080dab6b14f3.woff2",
+      "fontSha256": "bffc5e213aaadbdbc820d6c9702839ae25ee9d9ecfc4fb77a7768ec2a7a478b8",
+      "nativeSha256": "679e92bd066122bd663c5e3e82ff34b1444ee0c1ce33f609048a083b04c9a915",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-18.png",
+      "imageSha256": "e99ed7c1af4ea230571d133fcbcdfdc8688dde42e6bfb0d3b9ea9747a73f80d2"
+    },
+    {
+      "sourceNumber": 154,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/1b47385f39b5.woff2",
+      "fontSha256": "d2fc9241958751026ede37b481f468da94aa5896d8f8d63e130fc6d06dd35b56",
+      "nativeSha256": "422ea66dc1edd23341fe2daa5ece201054efa6731228060aa55d27fca230d4e6",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-18.png",
+      "imageSha256": "e99ed7c1af4ea230571d133fcbcdfdc8688dde42e6bfb0d3b9ea9747a73f80d2"
+    },
+    {
+      "sourceNumber": 167,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled angular/wedge strokes, native joining, counters, marks and symbol details retain coherent structure with smooth variable weight; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/44c9fafd2a4d.woff2",
+      "fontSha256": "6634d2c6fe71d74f450e3e72d5001baa49ef836850349a55e42286f8e6d294b4",
+      "nativeSha256": "a67b0f01ae8693b41fbac5fd488969a58eb24c79d31868187524fabad97ac731",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-18.png",
+      "imageSha256": "e99ed7c1af4ea230571d133fcbcdfdc8688dde42e6bfb0d3b9ea9747a73f80d2"
+    },
+    {
+      "sourceNumber": 168,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/6c59aadf7105.woff2",
+      "fontSha256": "83384bb37a59a595e44e553a87db7267325439098c68c93b729e64653c0b4474",
+      "nativeSha256": "7b54dddc132dd4f06101cdb57d0907ace076a7122a42452411cb28c8618ce51a",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-19.png",
+      "imageSha256": "57d550d079c83fbf24a7fb1a67a564ea7cf9190f7a9c5c644006fccff1d741ff"
+    },
+    {
+      "sourceNumber": 169,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/124bd4325cae.woff2",
+      "fontSha256": "6692aca50ce346eba7e8f2684c9c93f188570fd06cc4017f8c496623a7f4e5a7",
+      "nativeSha256": "4b3ed925bf0792619a1d25a9b436588b47ad6cb9c42e56bed25328b1ecbea1d7",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-19.png",
+      "imageSha256": "57d550d079c83fbf24a7fb1a67a564ea7cf9190f7a9c5c644006fccff1d741ff"
+    },
+    {
+      "sourceNumber": 171,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/ab9bed7b46c9.woff2",
+      "fontSha256": "0dc90b4041f3474b6e9bea224766e91a2dfd66be2f533a9b250b5df0735b09e7",
+      "nativeSha256": "6d6e1ce3b36d1cc4c26f2a10a849ec95c62e7ca081c343dd577df72f01bb6b61",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-19.png",
+      "imageSha256": "57d550d079c83fbf24a7fb1a67a564ea7cf9190f7a9c5c644006fccff1d741ff"
+    },
+    {
+      "sourceNumber": 172,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/106ae0402071.woff2",
+      "fontSha256": "ae87b275b352e74ac15f29ef9f60751513e2434e7794858f160209321960709e",
+      "nativeSha256": "e4168977a9c94d0996a4a94a4c32eb0e154a2be7ddf908fc4aa6436a7955b4cf",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-20.png",
+      "imageSha256": "40caf92c74d8d81703f82c7940549886fbfeb5e4c5d56970d1c650c08e6571f4"
+    },
+    {
+      "sourceNumber": 174,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/e26445ed3fa4.woff2",
+      "fontSha256": "5821b44fe208a1b94896cfca53c1d94d045ccebe84220fbc8c09075ecf55c9cf",
+      "nativeSha256": "7d98bd18885684a503728c4b0d0e6c217fe30da427348965881323de35462fe0",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-20.png",
+      "imageSha256": "40caf92c74d8d81703f82c7940549886fbfeb5e4c5d56970d1c650c08e6571f4"
+    },
+    {
+      "sourceNumber": 178,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/e98eea895522.woff2",
+      "fontSha256": "4b711b2c5947c4c2943e14118b681e39003abe6a7f65e83e804b2bd17b9922e3",
+      "nativeSha256": "7b6d86c5e28b884797df21b750c2a953085737763ec27af5c4de2c45bae9765a",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-20.png",
+      "imageSha256": "40caf92c74d8d81703f82c7940549886fbfeb5e4c5d56970d1c650c08e6571f4"
+    },
+    {
+      "sourceNumber": 179,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/845f635387c9.woff2",
+      "fontSha256": "6004cd4f6ddaf5ca16e34744935bd32b396876a411f402311fa9db2b09e6ad80",
+      "nativeSha256": "b76b8337b993831c187a5762f6b156f85a63f77a7bc210e9624c8bec54859ba4",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-21.png",
+      "imageSha256": "68af72543248594cf5789ce29d98b8d582e3b78f09ba23cfd117a7fe5ae64ab5"
+    },
+    {
+      "sourceNumber": 185,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/3d142d156eb0.woff2",
+      "fontSha256": "0cc1d383687c2baa4c415d80466f6f7e560b03bf7894dd73bf616ad9abb0b695",
+      "nativeSha256": "01e128f8a9902200f1a2e52165752b29af6e7a4e21430a9432e0eaf3c0655f33",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-21.png",
+      "imageSha256": "68af72543248594cf5789ce29d98b8d582e3b78f09ba23cfd117a7fe5ae64ab5"
+    },
+    {
+      "sourceNumber": 186,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/b55558c83b4e.woff2",
+      "fontSha256": "0f42966138f4fe789ed3d60e971d532c228a2754762a18dda3147483a12d2544",
+      "nativeSha256": "66239c7436e134ff7ca1650e69d529d9f392c479faf8ad895a024a3e94adbe01",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-21.png",
+      "imageSha256": "68af72543248594cf5789ce29d98b8d582e3b78f09ba23cfd117a7fe5ae64ab5"
+    },
+    {
+      "sourceNumber": 187,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/5b6e0d90343d.woff2",
+      "fontSha256": "21eec332f53a6a93d9b92a8d71e4232a08005efa08bc06c2243e42ec6cb091b4",
+      "nativeSha256": "75c5cd0f0b5c648c3bcdca48a48527c95caaffd77f953d84fbef3f0dd580edec",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-22.png",
+      "imageSha256": "1f4598f5227711bfe621136a6b0c285036c63bc3619c827cc70b8a7f1b79cad7"
+    },
+    {
+      "sourceNumber": 190,
+      "decision": "accepted-production-pressure-sample",
+      "reason": "Native/pressure comparison inspected at22/44px beside Dad. Sampled letter, numeric and mark distinctions remain legible with smooth variable pressure; recorded field passes. Not all-glyph or linguistic approval.",
+      "font": "output/font-review/supplemental-warm/group-2/fonts/cca262776eee.woff2",
+      "fontSha256": "b05706c2b593eb2e7261211fe8efa769a4f7800e4592262ada0827052434dc0f",
+      "nativeSha256": "66f599bf07a56b5aafb5bf5ef520e10e8c3cda39f843cf9bc5847f753c051cd4",
+      "fieldChecks": "output/font-review/private-production-review-2/whole-field-checks.json",
+      "image": "output/font-review/private-production-review-2/page-22.png",
+      "imageSha256": "1f4598f5227711bfe621136a6b0c285036c63bc3619c827cc70b8a7f1b79cad7"
+    }
+  ],
+  "pending": [
+    {
+      "sourceNumber": 50,
+      "issue": "Isolated two-glyph repair accepted; separate production wrapper, strict lineage tests and final public integration still pending."
+    },
+    {
+      "sourceNumber": 45,
+      "issue": "Isolated native U+12493 repair accepted; separate wrapper, strict fixtures and final public integration pending."
+    }
+  ],
+  "reuseGate": "Each final public source font SHA must equal the reviewed private font SHA before carrying this visual acceptance forward; final integrated invariant and field checks remain required.",
+  "group1PagesInspected": [
+    {
+      "page": 1,
+      "image": "output/font-review/private-production-review-1/page-1.png",
+      "sha256": "2e8795888ad8194af30c4a829c993b2943ad4eb3395ecd6f8c3a0e64a406c377",
+      "sources": [
+        18,
+        20
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 2,
+      "image": "output/font-review/private-production-review-1/page-2.png",
+      "sha256": "23f5cfc656750581deceda3560c3cac2e56bc09099e0537d4143af6c5bf36d7a",
+      "sources": [
+        21,
+        24,
+        28
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 3,
+      "image": "output/font-review/private-production-review-1/page-3.png",
+      "sha256": "0fdf4e171df716d64a3ae661febec06caab7b3933070e87228d8cb8a6747d0a0",
+      "sources": [
+        29,
+        30,
+        35
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 4,
+      "image": "output/font-review/private-production-review-1/page-4.png",
+      "sha256": "1bedcfbf7e39716b90d218236906add1daa0ef601ed634c9551a0ef36d321ba2",
+      "sources": [
+        37,
+        38,
+        39
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 5,
+      "image": "output/font-review/private-production-review-1/page-5.png",
+      "sha256": "735117338777d82d61329225f0993015da15c651bc2dda4662ee10e5aff454bb",
+      "sources": [
+        47,
+        48,
+        49
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 6,
+      "image": "output/font-review/private-production-review-1/page-6.png",
+      "sha256": "67d5f13f7e884ceff45020f4de85ee1dbd22ce48ef7ae0af0485b95bd273e431",
+      "sources": [
+        50,
+        51
+      ],
+      "excludedFromAcceptance": [
+        50
+      ]
+    },
+    {
+      "page": 7,
+      "image": "output/font-review/private-production-review-1/page-7.png",
+      "sha256": "f4ca3d18a1a3366447bcd26f5a8fa022934f3f9afe41c5e71d067220fd3d164e",
+      "sources": [
+        55,
+        56,
+        57
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 8,
+      "image": "output/font-review/private-production-review-1/page-8.png",
+      "sha256": "4d4d4978e29d9cee0f44169ea5beeababf7f7226871304c9f46bd99319ed3750",
+      "sources": [
+        58,
+        59,
+        63
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 9,
+      "image": "output/font-review/private-production-review-1/page-9.png",
+      "sha256": "7d9a5fae86ef71a0dda60647b4c19014d159f0dd3d974ac7edc92ca74c2d331a",
+      "sources": [
+        67,
+        69,
+        70
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 10,
+      "image": "output/font-review/private-production-review-1/page-10.png",
+      "sha256": "a90d66f788c393be695ebb6fcaa36c980ab92545033711b04fef9a723ac8f8ad",
+      "sources": [
+        74,
+        77,
+        81
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 11,
+      "image": "output/font-review/private-production-review-1/page-11.png",
+      "sha256": "940b4d77f8e4a5f700f08f7781da769a12757468f84705a06c2c5b077e56bdfa",
+      "sources": [
+        84,
+        85,
+        86
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 12,
+      "image": "output/font-review/private-production-review-1/page-12.png",
+      "sha256": "baf489592e98db42128548a57d329ec626cf75157d48717f919513291f9a7927",
+      "sources": [
+        87,
+        89,
+        92
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 13,
+      "image": "output/font-review/private-production-review-1/page-13.png",
+      "sha256": "f37e627ca5800a900accacbdb6c15ac040d071e085b14fb0e80a8266202cdcb4",
+      "sources": [
+        94,
+        97,
+        98
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 14,
+      "image": "output/font-review/private-production-review-1/page-14.png",
+      "sha256": "bd1bd3231be32d2d519c24bf7a0d83f49d14a7dea8c8efe42d6c4851c4948276",
+      "sources": [
+        99,
+        110,
+        113
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 15,
+      "image": "output/font-review/private-production-review-1/page-15.png",
+      "sha256": "7a7ab1434f5a5a8596ce8651d016d53c01a94676da41edf26a8d0bccc099a041",
+      "sources": [
+        118,
+        120,
+        121
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 16,
+      "image": "output/font-review/private-production-review-1/page-16.png",
+      "sha256": "8b98ee91e16cc9245c7a5a1c628000fe004236f54e619fe22e06acfbb005c7cd",
+      "sources": [
+        122,
+        125,
+        128
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 17,
+      "image": "output/font-review/private-production-review-1/page-17.png",
+      "sha256": "304523c5802e9584c3f2a3dd5520cc8a2c06b93629b8fc1f8a028acc5188f464",
+      "sources": [
+        133,
+        136,
+        141
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 18,
+      "image": "output/font-review/private-production-review-1/page-18.png",
+      "sha256": "3b97f38c30d1024750ee2b170f4789c9ac685667262a3e86d8b2355db669901f",
+      "sources": [
+        144,
+        146,
+        147
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 19,
+      "image": "output/font-review/private-production-review-1/page-19.png",
+      "sha256": "813107328e2e8a7a181b73c9600129fea3eabadd0e4fb55c4b109a71becfaa32",
+      "sources": [
+        149,
+        153,
+        156
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 20,
+      "image": "output/font-review/private-production-review-1/page-20.png",
+      "sha256": "81bacfe1a58fdc92af975fef5e1e54f857d636321732352c11fb1e170663ce91",
+      "sources": [
+        158,
+        159,
+        164
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 21,
+      "image": "output/font-review/private-production-review-1/page-21.png",
+      "sha256": "14996d4e98918492d4687d0b41f7826df2e3d364170e7e0f135b555d558b1258",
+      "sources": [
+        165,
+        166,
+        170
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 22,
+      "image": "output/font-review/private-production-review-1/page-22.png",
+      "sha256": "9aa31af4dbaa205538825c8be0652b8031b90b2e5d4afbb7477daf78d6721a29",
+      "sources": [
+        180,
+        193,
+        195
+      ],
+      "excludedFromAcceptance": []
+    }
+  ],
+  "group1FieldSummary": {
+    "sources": 64,
+    "fields": 66,
+    "passed": 64,
+    "rejected": 2,
+    "rejectedSourceNumbers": [
+      50
+    ]
+  },
+  "nextReviewPages": [],
+  "group1ReviewStatus": "All22pages inspected;63unmodified pressure samples accepted; source50 accepted only with separately audited two-native-glyph rescue. Final public SHA checks/integration remain.",
+  "group2NextReviewPages": [],
+  "group2PagesInspected": [
+    {
+      "page": 1,
+      "image": "output/font-review/private-production-review-2/page-1.png",
+      "sha256": "17463a051fa010af48a8d49adf7494e00bbb3dad62419c9293a48f64df26b32c",
+      "sources": [
+        9,
+        17,
+        31
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 2,
+      "image": "output/font-review/private-production-review-2/page-2.png",
+      "sha256": "de6ea67d121b12b44c8c7df4ecb5d72ab48792ee8def58f62e81caa162f34a99",
+      "sources": [
+        34,
+        36,
+        40
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 3,
+      "image": "output/font-review/private-production-review-2/page-3.png",
+      "sha256": "e88f6e3c0bd0f5124769aa9ad4979d25d957a0e506eca5453c93f1b36dd0a2da",
+      "sources": [
+        42,
+        44,
+        45
+      ],
+      "excludedFromAcceptance": [
+        45
+      ]
+    },
+    {
+      "page": 4,
+      "image": "output/font-review/private-production-review-2/page-4.png",
+      "sha256": "d3150e7148f2a6ccb8b542517066189108d67fa3de030f60633527a8f616fd89",
+      "sources": [
+        46,
+        52,
+        61
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 5,
+      "image": "output/font-review/private-production-review-2/page-5.png",
+      "sha256": "186864833e8b7242dc5e563221d7f9cfd7243e27caa2201add90538e4baa022a",
+      "sources": [
+        62,
+        64,
+        66
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 6,
+      "image": "output/font-review/private-production-review-2/page-6.png",
+      "sha256": "9e4dce1b4edefbf1331c76bdd5265499c065317f4c466c6e5dbf4222acf8a6be",
+      "sources": [
+        68,
+        71,
+        73
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 7,
+      "image": "output/font-review/private-production-review-2/page-7.png",
+      "sha256": "91376ab3a177a111cdb73bf2a5d90de9794df7fa2207575fda2146de0238482d",
+      "sources": [
+        78,
+        80,
+        83
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 8,
+      "image": "output/font-review/private-production-review-2/page-8.png",
+      "sha256": "108264b4dc72e55854c0560bf7de814de1effef400e522134c216b9e41999966",
+      "sources": [
+        90,
+        91,
+        93
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 9,
+      "image": "output/font-review/private-production-review-2/page-9.png",
+      "sha256": "40fdd47450b25cb0d89e9d02997c40d86cb71c0a05c0c97d8517161bd7efafe6",
+      "sources": [
+        95,
+        96,
+        100
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 10,
+      "image": "output/font-review/private-production-review-2/page-10.png",
+      "sha256": "d0f98c2e66707fd4b2c11c9f6dbbbed717145d2c9945b63cf3ace2c2ab32e9eb",
+      "sources": [
+        101,
+        103,
+        106
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 11,
+      "image": "output/font-review/private-production-review-2/page-11.png",
+      "sha256": "64e5fa3b99882ff8a7dff41cdfee9b98a785a3982ec7543f18aaed8505fe4ca0",
+      "sources": [
+        107,
+        108,
+        109
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 12,
+      "image": "output/font-review/private-production-review-2/page-12.png",
+      "sha256": "41dd60f184ed7eb64e012e836826f7fe0ee292019c6c1c74e6558de722c72119",
+      "sources": [
+        111,
+        114,
+        115
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 13,
+      "image": "output/font-review/private-production-review-2/page-13.png",
+      "sha256": "5d294188537f07f6bd7751e62f10a51e8677a005650bab36f2dd60fbc8ab6a41",
+      "sources": [
+        116,
+        117,
+        119
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 14,
+      "image": "output/font-review/private-production-review-2/page-14.png",
+      "sha256": "b1cf3f810e1bc5a5485e008d341574116aed7f16846b8425a53065277d3be6bc",
+      "sources": [
+        123,
+        124,
+        126
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 15,
+      "image": "output/font-review/private-production-review-2/page-15.png",
+      "sha256": "2bfef1bae85132972c92992887caaa219614f6fde327814817cce778423d31b7",
+      "sources": [
+        127,
+        129,
+        130
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 16,
+      "image": "output/font-review/private-production-review-2/page-16.png",
+      "sha256": "efa99c6c8e1a28d56af3ad1576006a0b066afcdbb0979f1f2ff682aa3be6033e",
+      "sources": [
+        131,
+        135,
+        137
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 17,
+      "image": "output/font-review/private-production-review-2/page-17.png",
+      "sha256": "acd8c5e7a2351e399fbda4a01a9980596a2a9d7bfaf1bcc4a55728056b18c5fd",
+      "sources": [
+        142,
+        143,
+        145
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 18,
+      "image": "output/font-review/private-production-review-2/page-18.png",
+      "sha256": "e99ed7c1af4ea230571d133fcbcdfdc8688dde42e6bfb0d3b9ea9747a73f80d2",
+      "sources": [
+        148,
+        154,
+        167
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 19,
+      "image": "output/font-review/private-production-review-2/page-19.png",
+      "sha256": "57d550d079c83fbf24a7fb1a67a564ea7cf9190f7a9c5c644006fccff1d741ff",
+      "sources": [
+        168,
+        169,
+        171
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 20,
+      "image": "output/font-review/private-production-review-2/page-20.png",
+      "sha256": "40caf92c74d8d81703f82c7940549886fbfeb5e4c5d56970d1c650c08e6571f4",
+      "sources": [
+        172,
+        174,
+        178
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 21,
+      "image": "output/font-review/private-production-review-2/page-21.png",
+      "sha256": "68af72543248594cf5789ce29d98b8d582e3b78f09ba23cfd117a7fe5ae64ab5",
+      "sources": [
+        179,
+        185,
+        186
+      ],
+      "excludedFromAcceptance": []
+    },
+    {
+      "page": 22,
+      "image": "output/font-review/private-production-review-2/page-22.png",
+      "sha256": "1f4598f5227711bfe621136a6b0c285036c63bc3619c827cc70b8a7f1b79cad7",
+      "sources": [
+        187,
+        190
+      ],
+      "excludedFromAcceptance": []
+    }
+  ],
+  "earlyDomainChecks": [
+    {
+      "test": "tests/test_supplemental_math_distinctions.py::test_math_bold_keeps_more_ink_than_its_native_normal_partner",
+      "testSha256": "b8ae194f414ce77f37f21cc1ab29a82ffd0da37a27d6ca44fa487528cec8dd33",
+      "inputManifest": "output/font-review/supplemental-warm/group-2/manifest.js",
+      "manifestSha256": "d5cad4f495f8180b084c4f884249fd82c73288f9ab0c5e26a05aa830d307207f",
+      "method": "Ran unchanged test function body with only public manifest Path.read_text redirected to the terminal private manifest; public assets untouched.",
+      "result": "pass",
+      "log": "/tmp/unicode-private-math-weight-check.log",
+      "remaining": "Run normal test against final public integrated assets."
+    }
+  ],
+  "group2ReviewStatus": "All22pages inspected;64pressure samples accepted; source45accepted only with independently audited native U+12493 repair.",
+  "scopeReconciliation": {
+    "plannedSources": 130,
+    "acceptedSamples": 130,
+    "exactSourceNumberSetMatchesWarmPlan": true,
+    "sourceSpecificRescues": [
+      45,
+      50
+    ],
+    "earlier15ProductionReview": "docs/supplemental-production-first15-review.json",
+    "remaining": "Final public integration/hash matching, both source-preservation wrappers, full native/cache invariants and final checks remain mandatory."
+  },
+  "finalPublicContinuity": {
+    "status": "145/145actualregularfonts match inspectedbytes;0pending;21/195actualpublicpolicyreviewaccepted",
+    "actualPublicManifestSha256": "7f5df7719a7f1187a49db3a0d721e6632ec4926141c6e41163e3d1141b3f4ac9",
+    "reviewedPublicPolicySources": [
+      {
+        "sourceNumber": 21,
+        "source": "build/unicode-sources/noto/NotoMusic-Regular.ttf",
+        "font": "assets/fonts/scripts/342fc9939b91.woff2",
+        "fontSha256": "76254094338528218386f936841dd7ac723de715fe666d51eccee2e713a978e5",
+        "decision": "accepted-final-public-pressure-with-explicit-native-preservation",
+        "canonicalSourceDecision": {
+          "record": "docs/unicode-style-dispositions.json",
+          "number": 21,
+          "disposition": "sampled-pressure-with-explicit-native-preservation-accepted",
+          "decisionSha256": "99ff9a52cde524365e9ce8c0b901c96ea2480e32e7a140f05c0eec83461667f5",
+          "scope": "sampled source style; not all-glyph or linguistic approval"
+        },
+        "images": [
+          {
+            "file": "output/font-review/final-checks/final-public-policy-review/music-public.png",
+            "sha256": "621c5713c22837b0292fa341afb713328eedf74f33900292f5a9dc6949fa11bb"
+          }
+        ]
+      },
+      {
+        "sourceNumber": 195,
+        "source": "build/unicode-sources/unicodia/UnicodiaFunky.ttf",
+        "font": "assets/fonts/scripts/e789acc260ba.woff2",
+        "fontSha256": "d5784187ed8887c200853bee622eceffb2e5f3f56f14a6cb30ca49da8f2f55fa",
+        "decision": "accepted-final-public-pressure-with-explicit-native-preservation",
+        "canonicalSourceDecision": {
+          "record": "docs/unicode-style-dispositions.json",
+          "number": 195,
+          "disposition": "sampled-pressure-with-explicit-native-preservation-accepted",
+          "decisionSha256": "21b9efdcc142a8a43fdfb7d00f36449eb065141fa421a415dc1abf1854b2278a",
+          "scope": "sampled source style; not all-glyph or linguistic approval"
+        },
+        "images": [
+          {
+            "file": "output/font-review/final-checks/final-public-policy-review/chemical-public.png",
+            "sha256": "2c1de8dc83e2a226ba5ad101dbd8bd282aa37d6645725ddd0db494c75723583c"
+          },
+          {
+            "file": "output/font-review/final-checks/final-public-policy-review/geomantic-public.png",
+            "sha256": "23e3bec301d1d3c47fe9b52fbf3f66462a0135d4d7f877390d2269405d06a774",
+            "scope": "All16actualpublicgeomanticfigures at22/44;strictoriginalcenter/count/gap bounds"
+          }
+        ]
+      }
+    ],
+    "unchangedOtherRegularSources": 143,
+    "previousStatement": "128 private candidates match final bytes; sources45/50 actual final bytes re-rendered, inspected and passed384/1024fields. The prior private candidate records remain nested without claiming SHA equality.",
+    "historicalReview": "output/font-review/final-checks/final-public-policy-review/private-production-review-before-two-policy-f502054b7c27e13964481cd3b70729cea261f089794f02a5ddc29b0dbd0601f8.json",
+    "fieldProof": "output/font-review/final-checks/final-public-policy-review/actual-field-checks.json",
+    "actualPublicReview": "output/font-review/final-checks/final-public-policy-review/review.json",
+    "nativeInvariantEvidence": "output/font-review/supplemental-production/verification.json",
+    "scope": "Exact inspected-font/image continuity; native/cache lineage, fields and finalfullsuite remain separate gates",
+    "visualContinuityVerifier": {
+      "output": "output/font-review/production-visual-match.json",
+      "sha256": "1b5d90ffa864adaffc314f7bac8142d52efe8f2f89d587bd0cd51b00b8ef3c89",
+      "sources": 145,
+      "matched": 145,
+      "pending": 0,
+      "terminalExitCode": 0,
+      "log": "/tmp/unicode-final-public-145-visual-continuity.log"
+    }
+  }
+}

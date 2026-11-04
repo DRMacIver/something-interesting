@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Source lettering style review</title>
+  <style>
+    body{margin:20px;background:#f5f3ed;color:#111;font:14px system-ui,sans-serif}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+    h1{font-size:20px;margin:0}button,a{font:inherit;padding:5px 10px}canvas{display:block;width:1180px;max-width:100%;background:white}
+    #summary{margin:8px 0}p{margin:6px 0}nav{display:flex;gap:8px;align-items:center}
+  </style>
+  <script type="importmap">
+      {
+        "imports": {
+          "../js/app.js": "../js/app.js?v=458fc556d5",
+          "../js/balloon.js": "../js/balloon.js?v=fabf62b266",
+          "../js/checks.js": "../js/checks.js?v=af32bd54e9",
+          "../js/cjk-variant-manifest.js": "../js/cjk-variant-manifest.js?v=5fc7000bd2",
+          "../js/clipboard.js": "../js/clipboard.js?v=c7602cc6de",
+          "../js/combining-annotations.js": "../js/combining-annotations.js?v=26a7e9a8f9",
+          "../js/combining-outline-manifest.js": "../js/combining-outline-manifest.js?v=f0d548c813",
+          "../js/comic.js": "../js/comic.js?v=ab19c83e52",
+          "../js/dictionary-breaks.js": "../js/dictionary-breaks.js?v=dea1779b78",
+          "../js/direction.js": "../js/direction.js?v=9860593d14",
+          "../js/egyptian-enclosure-manifest.js": "../js/egyptian-enclosure-manifest.js?v=1e418a87a6",
+          "../js/egyptian-insertion-manifest.js": "../js/egyptian-insertion-manifest.js?v=f4a3f7ab53",
+          "../js/egyptian-layout.js": "../js/egyptian-layout.js?v=f024496d0b",
+          "../js/egyptian-variant-manifest.js": "../js/egyptian-variant-manifest.js?v=697037528a",
+          "../js/emoji-manifest.js": "../js/emoji-manifest.js?v=b8f9a60f7a",
+          "../js/emoji-routing.js": "../js/emoji-routing.js?v=15334230e2",
+          "../js/font-manifest.js": "../js/font-manifest.js?v=7f5df7719a",
+          "../js/font-variations.js": "../js/font-variations.js?v=b372fabb91",
+          "../js/fonts.js": "../js/fonts.js?v=4bef6ed7f9",
+          "../js/format-fonts.js": "../js/format-fonts.js?v=4dff76861d",
+          "../js/greek-manifest.js": "../js/greek-manifest.js?v=c9f5883cc8",
+          "../js/grid-manifest.js": "../js/grid-manifest.js?v=bf48698af1",
+          "../js/grid.js": "../js/grid.js?v=4420838ab8",
+          "../js/hieroglyph-optics.js": "../js/hieroglyph-optics.js?v=82ec294c39",
+          "../js/layout.js": "../js/layout.js?v=c51f52a268",
+          "../js/line-breaks.js": "../js/line-breaks.js?v=c1906bebe7",
+          "../js/marked-cjk-variant-manifest.js": "../js/marked-cjk-variant-manifest.js?v=ba804ebba0",
+          "../js/math-variant-manifest.js": "../js/math-variant-manifest.js?v=615f325dc6",
+          "../js/native-shaping.js": "../js/native-shaping.js?v=fa1d772012",
+          "../js/sampler.js": "../js/sampler.js?v=bd5836ba52",
+          "../js/script-optics.js": "../js/script-optics.js?v=9127f3fdda",
+          "../js/share.js": "../js/share.js?v=efeeb7db2f",
+          "../js/standalone-fonts.js": "../js/standalone-fonts.js?v=50f2da2d34",
+          "../js/text-metrics.js": "../js/text-metrics.js?v=306601e0fd",
+          "../js/unicode-data.js": "../js/unicode-data.js?v=6c276da56f",
+          "../js/unicode-samples.js": "../js/unicode-samples.js?v=42b386e5b1",
+          "../js/unicode.js": "../js/unicode.js?v=503f9be2c6",
+          "../js/vendor/bidi/brackets.js": "../js/vendor/bidi/brackets.js?v=e2f5699c39",
+          "../js/vendor/bidi/charTypes.js": "../js/vendor/bidi/charTypes.js?v=ecad4e07f9",
+          "../js/vendor/bidi/embeddingLevels.js": "../js/vendor/bidi/embeddingLevels.js?v=9b1113008d",
+          "../js/vendor/bidi/reordering.js": "../js/vendor/bidi/reordering.js?v=77499d5718",
+          "../js/vendor/linebreak/EastAsianWidth.js": "../js/vendor/linebreak/EastAsianWidth.js?v=9eeb2c6e30",
+          "../js/vendor/linebreak/LineBreak.js": "../js/vendor/linebreak/LineBreak.js?v=c914a6c87a",
+          "../js/vendor/linebreak/break.js": "../js/vendor/linebreak/break.js?v=6c2035a866",
+          "../js/vendor/linebreak/index.js": "../js/vendor/linebreak/index.js?v=b75c6f4f7c",
+          "../js/vendor/linebreak/state.js": "../js/vendor/linebreak/state.js?v=c96df0bbc2",
+          "../js/vietnamese-marks.js": "../js/vietnamese-marks.js?v=e061cb79b5"
+        }
+      }
+    </script>
+</head>
+<body>
+  <header><h1>Source lettering style review</h1><nav><button id="previous">Previous</button><span id="page"></span><button id="next">Next</button></nav><a id="download" download="source-style.png">Download page PNG</a></header>
+  <p>22 px dialogue and 44 px detail beside original Dad lettering. Glyph studies are not translations. This sheet does not establish linguistic correctness.</p>
+  <p id="summary">Loading source specimens…</p>
+  <canvas id="atlas" aria-label="Native source lettering specimens"></canvas>
+  <script type="module">
+    import {paragraphDirection} from '../js/direction.js';
+    import {nativeShapingText} from '../js/native-shaping.js';
+    import {graphemes} from '../js/unicode.js';
+    const data=await (await fetch('../output/font-review/source-style-atlas.json',{cache:'no-store'})).json();
+    const perPage=12,total=Math.ceil(data.samples.length/perPage),params=new URLSearchParams(location.search);
+    let page=Math.max(0,Math.min(total-1,Number(params.get('page'))||0));
+    const canvas=document.querySelector('#atlas'),ctx=canvas.getContext('2d'),loaded=new Map();
+    const dad=await new FontFace('Review Dad','url(../assets/fonts/dad-lettering-unicode.woff2)').load();document.fonts.add(dad);
+    async function draw(){
+      document.querySelector('#summary').textContent='Loading source specimens…';
+      const rows=data.samples.slice(page*perPage,(page+1)*perPage),errors=[];
+      await Promise.all(rows.flatMap(r=>r.fonts).map(async f=>{
+        if(!loaded.has(f.family))loaded.set(f.family,new FontFace(f.family,`url(../${f.file}?v=${f.sha256.slice(0,10)})`).load().then(face=>document.fonts.add(face)).catch(e=>{errors.push(f.family);throw e;}));
+        await loaded.get(f.family);
+      }));
+      // Reserve painted bounds, including native stacking and overhang. Fixed
+      // rows hid descenders and Khitan clusters under the following caption.
+      const specimens=rows.map(row=>{
+        const family=row.fonts.map(f=>JSON.stringify(f.family)).join(',');
+        const line=size=>{
+          ctx.font=`${size}px ${family}`;ctx.direction=paragraphDirection(row.text);ctx.textAlign='left';
+          let text=row.text,metrics=ctx.measureText(nativeShapingText(text));
+          const width=m=>Math.max(m.width,m.actualBoundingBoxRight)+Math.max(0,m.actualBoundingBoxLeft);
+          while(graphemes(text).length>1&&width(metrics)>950){
+            text=graphemes(text).slice(0,-1).join('');metrics=ctx.measureText(nativeShapingText(text));
+          }
+          return {text,font:ctx.font,direction:ctx.direction,left:Math.max(0,metrics.actualBoundingBoxLeft),
+            ascent:Math.max(size*.75,metrics.actualBoundingBoxAscent),descent:Math.max(4,metrics.actualBoundingBoxDescent)};
+        };
+        const small=line(22),large=line(44);
+        return {row,small,large,height:26+small.ascent+small.descent+12+large.ascent+large.descent+12};
+      });
+      canvas.width=1180;canvas.height=Math.ceil(specimens.reduce((sum,r)=>sum+r.height,40));
+      ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);
+      ctx.font='18px "Review Dad"';ctx.fillStyle='#111';ctx.fillText(`SOURCE STYLE — ${page+1} / ${total}`,18,26);
+      let top=40;
+      for(const [i,{row,small,large,height}] of specimens.entries()){
+        ctx.fillStyle=i%2?'#f4f3ef':'#fff';ctx.fillRect(0,top,1180,height);ctx.fillStyle='#111';ctx.direction='ltr';ctx.textAlign='left';
+        ctx.font='12px system-ui';ctx.fillText(`${row.index+1}. ${row.source.split('/').at(-1)} — ${row.role} — ${row.files} shard(s), ${row.contributed} contributed characters`,18,top+16);
+        const baseline=top+26+small.ascent;
+        ctx.font='22px "Review Dad"';ctx.fillText('BESIDE DAD:',18,baseline);
+        for(const [line,y] of [[small,baseline],[large,baseline+small.descent+12+large.ascent]]){
+          ctx.font=line.font;ctx.direction=line.direction;
+          ctx.fillText(nativeShapingText(line.text),200+line.left,y);
+        }
+        top+=height;
+      }
+      document.querySelector('#page').textContent=`Page ${page+1} of ${total}`;
+      document.querySelector('#previous').disabled=page===0;document.querySelector('#next').disabled=page===total-1;
+      document.querySelector('#download').href=canvas.toDataURL('image/png');document.querySelector('#download').download=`source-style-${page+1}.png`;
+      document.querySelector('#summary').textContent=`Ready: sources ${rows[0].index+1}–${rows.at(-1).index+1} of ${data.sources}; ${data.shards} shards in inventory; font errors ${errors.length}.`;
+      history.replaceState(null,'',`?page=${page}`);
+    }
+    document.querySelector('#previous').onclick=async()=>{page--;await draw();};
+    document.querySelector('#next').onclick=async()=>{page++;await draw();};
+    await draw();
+  </script>
+</body>
+</html>

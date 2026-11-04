@@ -1,0 +1,585 @@
+{
+  "date": "2026-11-03",
+  "status": "Independent pre-integration audit; completion not established",
+  "scope": "Every requirement ID from docs/unicode-beta-audit.json; read-only production inspection, current Greek focused regression run, saved Greek PNG inspection, dated evidence reconciliation. Does not claim terminal verification of parallel edits.",
+  "requirements": [
+    {
+      "id": "scope-release",
+      "requirement": "Verify the current released standard and pin authoritative data.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "data/unicode/sources.json",
+        "tests/test_unicode_inventory.py",
+        "https://www.unicode.org/releases/",
+        "https://www.unicode.org/versions/Unicode18.0.0/"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": null,
+      "browserGate": false
+    },
+    {
+      "id": "scope-inventory",
+      "requirement": "Precisely inventory assigned public characters, sequences, controls and noncharacters/private use.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "tools/unicode/audit.py",
+        "data/unicode/18.0.0/UnicodeData.txt",
+        "docs/unicode-coverage.json",
+        "tests/test_unicode_inventory.py"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": ".venv/bin/python -m pytest -q tests/test_unicode_inventory.py",
+      "browserGate": false
+    },
+    {
+      "id": "drawing-coverage",
+      "requirement": "All scoped visible characters reach real custom drawings; no placeholders or system fallback as completion.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "tools/unicode/outline_audit.py",
+        "tests/test_outline_audit.py",
+        "docs/unicode-coverage.json",
+        "docs/unicode-outline-coverage.json",
+        "docs/tatweel-routing-review.json",
+        "docs/font-dependent-format-probe.json",
+        "docs/font-dependent-format-review.json"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": ".venv/bin/python tools/unicode/outline_audit.py --help",
+      "browserGate": false
+    },
+    {
+      "id": "emoji-sequences",
+      "requirement": "Applicable standard emoji sequences and standalone components use custom artwork.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/emoji-manifest.js",
+        "js/emoji-routing.js",
+        "tests/test_font_emoji.py",
+        "tests/emoji-routing.test.mjs",
+        "docs/unicode-coverage.json"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": "node --test tests/emoji-routing.test.mjs",
+      "browserGate": false
+    },
+    {
+      "id": "variation-sequences",
+      "requirement": "Preserve standardized and applicable native variation selection, including marked clusters.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/font-variations.js",
+        "tests/font-variations.test.mjs",
+        "docs/positional-mark-review.json",
+        "docs/variation-combining-review.json",
+        "docs/cgj-variation-review.json",
+        "docs/foreign-spacing-mark-probe.json",
+        "docs/spacing-variation-review.json",
+        "docs/contextual-variation-review.json"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": "node --test tests/font-variations.test.mjs tests/spacing-variations.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "combining",
+      "requirement": "Native mark placement, stacks, enclosures and double diacritics work without changing logical input.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/combining-annotations.js",
+        "js/vietnamese-marks.js",
+        "tools/font/math_unicode_marks.py",
+        "tests/combining-annotations.test.mjs",
+        "docs/positional-mark-review.json",
+        "docs/numeric-enclosures-review.json",
+        "docs/cgj-variation-probe.json"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": "node --test tests/combining-annotations.test.mjs tests/vietnamese-marks.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "shaping",
+      "requirement": "Keep native joining, letterforms and native mark attachment in complete and mixed-script text.",
+      "baselineStatus": "partial",
+      "evidenceState": "current targeted checks",
+      "evidence": [
+        "js/fonts.js",
+        "js/native-shaping.js",
+        "tests/test_font_scripts.py",
+        "tests/native-shaping.test.mjs",
+        "tests/fonts.test.mjs"
+      ],
+      "remaining": "Current source packaging and targeted regressions exist. Recheck native joins, offsets and advances for every changed source group; do not require universal linguistic approval.",
+      "verificationCommand": ".venv/bin/python -m pytest -q tests/test_font_scripts.py",
+      "browserGate": true
+    },
+    {
+      "id": "bidi",
+      "requirement": "Bidirectional and mixed-direction text retains reading order across wrapping and overrides.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/direction.js",
+        "tests/bidi.test.mjs",
+        "tests/direction.test.mjs",
+        "tools/unicode-checks.html"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": "node --test tests/bidi.test.mjs tests/direction.test.mjs",
+      "browserGate": false
+    },
+    {
+      "id": "graphemes",
+      "requirement": "Grapheme segmentation is pinned and editing/wrapping limits do not split clusters.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/unicode.js",
+        "tests/unicode.test.mjs",
+        "data/unicode/18.0.0/auxiliary/GraphemeBreakTest.txt"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": "node --test tests/unicode.test.mjs",
+      "browserGate": false
+    },
+    {
+      "id": "linebreak",
+      "requirement": "Unicode line breaking replaces whitespace-only splitting and preserves controls and native clusters.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/line-breaks.js",
+        "js/dictionary-breaks.js",
+        "tests/linebreak.test.mjs"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": "node --test tests/linebreak.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "measurement",
+      "requirement": "Measure and paint the same shaped/coloured/native geometry including overhangs and large emoji.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/text-metrics.js",
+        "js/comic.js",
+        "tests/text-metrics.test.mjs",
+        "tools/unicode-checks.html"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": "node --test tests/text-metrics.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "balloons",
+      "requirement": "Balloon sizing and panel growth handle extreme Unicode and protect the existing artwork.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/layout.js",
+        "js/balloon.js",
+        "js/checks.js",
+        "tests/layout.test.mjs",
+        "tools/checks.html",
+        "tools/unicode-checks.html"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": "node --test tests/layout.test.mjs tests/balloon.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "export",
+      "requirement": "Exported comics agree with the preview and wait for the current render.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/app.js",
+        "js/comic.js",
+        "tests/comic.test.mjs",
+        "tools/unicode-checks.html"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": "node --test tests/comic.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "case",
+      "requirement": "Remove destructive uppercasing while retaining source lettering and mathematical distinctions.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/comic.js",
+        "js/native-shaping.js",
+        "tests/comic.test.mjs",
+        "tests/test_font_alphabets.py"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": "node --test tests/comic.test.mjs tests/native-shaping.test.mjs",
+      "browserGate": false
+    },
+    {
+      "id": "grid",
+      "requirement": "Box drawing, block elements, Braille and text diagrams retain structure with hand-inked treatment.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/grid.js",
+        "tools/font/build_grid.py",
+        "tests/grid.test.mjs",
+        "tests/test_font_grid.py",
+        "tools/unicode-checks.html",
+        "docs/unicode-outline-coverage.json",
+        "docs/bounded-layout-review.json"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": "node --test tests/grid.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "math",
+      "requirement": "Keep meaningful bold/italic/script/fraktur/monospace/fullwidth/enclosed distinctions.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "tools/font/alphabet_ink.py",
+        "tests/test_font_alphabets.py",
+        "tests/test_font_math_variants.py",
+        "docs/math-variant-review.json",
+        "tools/unicode-checks.html"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": ".venv/bin/python -m pytest -q tests/test_font_math_variants.py",
+      "browserGate": true
+    },
+    {
+      "id": "egyptian",
+      "requirement": "Egyptian sign identities, formats and approved visual direction work in actual comics.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/egyptian-layout.js",
+        "docs/egyptian-insertion-build.json",
+        "docs/egyptian-insertion-review.json",
+        "tests/egyptian-layout.test.mjs",
+        "tools/unicode-checks.html",
+        "docs/bounded-layout-review.json",
+        "docs/egyptian-unmatched-output-probe.json",
+        "docs/insertion-mirror-helper-review.json"
+      ],
+      "remaining": "Blocking visual/integration work: verify proposed 0.014em optics in source-specific grouped/ungrouped, RTL, damage, enclosure and insertion examples. Verify matching measure/paint bounds.",
+      "verificationCommand": "node --test tests/egyptian-layout.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "source-licensing",
+      "requirement": "Retain provenance, licences, required attribution, derivative names and redistribution/source obligations.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "data/font-sources",
+        "assets/fonts/licenses",
+        "index.html",
+        "tests/test_font_scripts.py",
+        "tests/test_font_seal_sans.py"
+      ],
+      "remaining": "Rebuilds must retain derivative names, notices and exact source provenance. Refresh Seal Sans source offer if its derivative or recipe changes; do not imply existing offer covers unrecorded edits.",
+      "verificationCommand": ".venv/bin/python -m pytest -q tests/test_font_fetch.py tests/test_font_seal_sans.py tests/test_font_scripts.py",
+      "browserGate": false
+    },
+    {
+      "id": "pdf-references",
+      "requirement": "Use the supplied PDF and approved generated studies as visual references, not glyph truth.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "output/imagegen/unicode-prototypes/design-decisions.json",
+        "docs/emoji-pen-translation.md",
+        "output/imagegen/emoji-production/palette-source.json"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": null,
+      "browserGate": false
+    },
+    {
+      "id": "colour",
+      "requirement": "Match meaning-bearing emoji colour to the PDF while retaining hand-inked outlines and distinctions.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "output/imagegen/emoji-production/palette-source.json",
+        "output/imagegen/emoji-production/skin-palette-source.json",
+        "output/imagegen/emoji-production/heart-palette-source.json",
+        "tools/font/emoji_faces.py",
+        "output/imagegen/emoji-production/glyph-review.json"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": null,
+      "browserGate": true
+    },
+    {
+      "id": "emoji-finish",
+      "requirement": "Use expressive procedural strength1.7, fine-detail guards and approved smooth pressure variation.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "tools/font/pen_translate.py",
+        "tools/font/emoji_faces.py",
+        "tools/font/emoji_licensed.py",
+        "docs/emoji-pen-translation.md",
+        "output/font-review/pen-translation/review.json"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": ".venv/bin/python -m pytest -q tests/test_pen_translate.py tests/test_pen_translation_cache.py",
+      "browserGate": false
+    },
+    {
+      "id": "emoji-presence",
+      "requirement": "Keep approved1.4x custom emoji size and stronger ink in actual strips.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/text-metrics.js",
+        "js/comic.js",
+        "assets/fonts/dad-emoji-ink.woff2",
+        "tests/test_font_emoji_ink.py",
+        "tools/emoji-optical-review.html"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": "node --test tests/text-metrics.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "visual-script-style",
+      "requirement": "Apply the approved accent/math/dense/Egyptian/script style at realistic comic sizes.",
+      "baselineStatus": "partial",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "tools/font/alphabet_ink.py",
+        "tools/font/build_scripts.py",
+        "output/imagegen/unicode-prototypes/design-decisions.json",
+        "tools/unicode-checks.html",
+        "docs/source-style-review.json",
+        "docs/product-unicode-smoke-review.json",
+        "docs/unicode-beta-plan.md"
+      ],
+      "remaining": "Blocking: resolve all 128 pen findings and remaining guarded/weight/optical decisions with current artifacts and source-specific evidence. Include polytonic Greek NotoSans fallback.",
+      "verificationCommand": ".venv/bin/python tools/font/render_specimen.py --atlas-page 1 --output output/font-review/completion-source-01",
+      "browserGate": false
+    },
+    {
+      "id": "zalgo",
+      "requirement": "Allow approved overlapping/obscuring Zalgo marks without reserving an artificial clear corridor.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "tools/font/build_glyphs.py",
+        "js/text-metrics.js",
+        "tools/unicode-checks.html",
+        "output/imagegen/unicode-prototypes/03-zalgo-v2.png"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": null,
+      "browserGate": true
+    },
+    {
+      "id": "character-art",
+      "requirement": "Preserve the existing Dad/Calvin artwork and inspect any necessary new art against original references.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "assets/panels.json",
+        "tools/build_assets.py",
+        "tools/unicode-checks.html"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": null,
+      "browserGate": false
+    },
+    {
+      "id": "static-automatic",
+      "requirement": "Keep the product static, backend-free and automatic with no Unicode configuration.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "index.html",
+        "js/app.js",
+        "js/fonts.js",
+        "js/dictionary-breaks.js",
+        "README.md"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": null,
+      "browserGate": false
+    },
+    {
+      "id": "private-unassigned",
+      "requirement": "Handle private-use, unassigned and malformed input gracefully without inventing standard drawings.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "js/fonts.js",
+        "js/comic.js",
+        "js/share.js",
+        "tests/fonts.test.mjs",
+        "tools/unicode-checks.html"
+      ],
+      "remaining": "Preserve dated passing evidence; final bounded app/browser checks on integrated assets must include this behaviour. Local specimen renderer does not execute this app path.",
+      "verificationCommand": "node --test tests/fonts.test.mjs tests/unicode.test.mjs",
+      "browserGate": true
+    },
+    {
+      "id": "reproducibility",
+      "requirement": "Provide a reproducible pipeline and separate versioned coverage, sequence, shaping, visual and browser evidence.",
+      "baselineStatus": "partial",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "tools/font",
+        "tools/unicode",
+        "docs/unicode-progress.md",
+        "docs/unicode-coverage.json",
+        "docs/positional-mark-review.json"
+      ],
+      "remaining": "Final build must update manifests/catalogs and exact output hashes; no mass build has been accepted at this audit snapshot.",
+      "verificationCommand": ".venv/bin/python -m pytest -q tests/test_font_scripts.py",
+      "browserGate": false
+    },
+    {
+      "id": "checks",
+      "requirement": "Run documented project tests, browser checks and asset hash updates.",
+      "baselineStatus": "supported-with-limits",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "package.json",
+        "pyproject.toml",
+        "tools/checks.html",
+        "tools/version_assets.py"
+      ],
+      "remaining": "Need terminal affected-source tests and final current-assets browser evidence after integration. Prior complete Python run is terminal; do not restart for timestamp alone.",
+      "verificationCommand": "npm test",
+      "browserGate": false
+    },
+    {
+      "id": "corpus-handoff",
+      "requirement": "Maintain representative sentence/mixed-script/combining/emoji/layout/export cases and persistent progress for later playtesting.",
+      "baselineStatus": "supported",
+      "evidenceState": "inspected implementation and dated baseline evidence; not rerun by this auditor",
+      "evidence": [
+        "tools/unicode-checks.html",
+        "tools/checks.html",
+        "docs/unicode-progress.md",
+        "docs/positional-mark-review.json"
+      ],
+      "remaining": "No new implementation gap identified by this audit. Preserve baseline limitations and recheck only if affected.",
+      "verificationCommand": null,
+      "browserGate": false
+    }
+  ],
+  "currentGreekEvidence": {
+    "command": "node --test tests/greek-fonts.test.mjs tests/fonts.test.mjs tests/native-shaping.test.mjs",
+    "passed": 39,
+    "failures": 0,
+    "previousFullRun": {
+      "log": "/tmp/unicode-greek-js.log",
+      "terminal": true,
+      "passed": 361,
+      "failed": 0,
+      "durationMs": 14543.540542
+    },
+    "visual": "output/font-review/greek-routing/comparison.png inspected; WenKai solves full-cell spacing; NFC/NFD retain accents; NotoSans polytonic fallback remains typeset.",
+    "productionFilesChangedByAuditor": [],
+    "finalActualStrip": "pending coordinator integration"
+  },
+  "staleClaims": [
+    {
+      "file": "docs/unicode-beta-audit.json",
+      "finding": "next still requests finishing terminal Python run and performing completed whole-source triage."
+    },
+    {
+      "file": "docs/unicode-beta-audit.json",
+      "finding": "Several individual requirement strings retain browser/JS counts older than latestValidation/completedAuditChecks; retain dated scope or replace after final checks."
+    },
+    {
+      "file": "docs/unicode-beta-brief.md",
+      "finding": "Opening says paused although user has resumed goal; coordinator should reconcile status."
+    },
+    {
+      "file": "docs/unicode-beta-plan.md",
+      "finding": "Paused handoff is historical baseline; current production integration and final evidence still need recording."
+    }
+  ],
+  "integrationHazards": [
+    {
+      "file": "tests/test_font_lxgw_seal.py",
+      "test": "test_existing_script_fonts_remain_byte_identical_after_two_gap_addition",
+      "finding": "Historical blanket equality of 379 font entries will reject intentional new optical/pen rebuild. Update to permit only explicitly recorded intended changes while retaining untouched-source checks."
+    },
+    {
+      "file": "tests/test_font_scripts.py",
+      "finding": "Packaging test compares native design-unit shaping. Keep this protection; optical em scaling does not require weakening it."
+    },
+    {
+      "file": "docs/source-style-review.json",
+      "finding": "Original sample hashes deliberately identify baseline. New accepted treatment must record candidate hashes and decisions rather than silently relabel old baseline as finished."
+    },
+    {
+      "file": "tests/test_combining_outlines.py",
+      "finding": "Historical numeric-enclosure full-catalog equality will reject intentional pen-adapted source geometry or em-normalized changes. Keep native source/part identity tests and explicitly reconcile catalog changes for accepted recipes."
+    }
+  ],
+  "limits": [
+    "No additional mandatory expert approval or exhaustive browser/OS matrix introduced.",
+    "Positive outline geometry is reachability, not identity or style proof.",
+    "Native marks/joins are protected by native source tests; arbitrary malformed cross-script clusters can retain dotted-circle fallback."
+  ],
+  "inspectionSha256": {
+    "docs/unicode-beta-audit.json": "5ac0dafe2c7f8d907f6d26b484b343ad49bb7d797c8ded94bfe89c3099670dd8",
+    "docs/unicode-beta-brief.md": "cf677ce26af38d3e04be1aa8d0e08d3f945194625b5a9cee7fe128af869ed1da",
+    "js/fonts.js": "8010a4f681f90033f5a9ed09d85d82b9b2d469c2561c16212e9b3ad8dc6cf393",
+    "tests/greek-fonts.test.mjs": "35bf8b10364650c35c395d2b1039b92b319904097f22108ee61ed7367c15b289",
+    "output/font-review/greek-routing/comparison.png": "233d36c59d05e886168c10f985a3ea5d1efcf27d497b64242ca73ab0c4c9f9fc",
+    "docs/source-style-review.json": "15fc6ba31b62cf9c5856e303ee1be07aa8127b8d433d14d2c529f9fd833fba0f",
+    "docs/nonpen-source-review.json": "8024da6fb5279fbedc624b020e16b3696e7c3eceb9bfcff57699cc9f8b760ec3"
+  },
+  "remainingSourceCategories": {
+    "guardedSources": 25,
+    "weightSources": [
+      {
+        "number": 6,
+        "source": "egyptian-text/eot.ttf",
+        "owner": "Egyptian track"
+      },
+      {
+        "number": 18,
+        "source": "kreative-square/KreativeSquare.ttf",
+        "need": "Shape-preserving pen treatment; avoid blanket thickening."
+      },
+      {
+        "number": 25,
+        "source": "noto/NotoSansAnatolianHieroglyphs-Regular.ttf",
+        "need": "Fine-detail optical weight."
+      }
+    ],
+    "guardedConstraints": [
+      "SealSans modified source needs matching AGPL source offer.",
+      "Jigmo/Jigmo2/Jigmo3 dense CJK preserve counters and short strokes.",
+      "NotoSansMath preserve mathematical alphabets/weight distinctions.",
+      "SignWriting preserve direction/fill.",
+      "Ogham preserve stem continuity and counts.",
+      "NotoMusic/UFSZeroExt preserve music distinctions.",
+      "OldUyghur/Duployan/Kufi/Scheherazade preserve native joining."
+    ],
+    "resolvedByBaselineNonpenReview": [
+      "Attached Syriac U+1DFA and Khojki U+11241 retain native GPOS.",
+      "NotoTraditionalNushu has no novel visible repertoire under production precedence.",
+      "NotoSansMono structural cells retain exact geometry."
+    ]
+  }
+}

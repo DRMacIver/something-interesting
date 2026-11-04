@@ -1,0 +1,121 @@
+{
+  "reviewed": "2026-11-02",
+  "repository": "https://github.com/Mercury13/unicodia",
+  "commit": "dcbe251036833331f0a8f66c186a315751db24f9",
+  "candidates": [
+    {
+      "file": "Fonts/NotoSerifTaiYo-Regular.ttf",
+      "status": "not bundled; provenance and mark attachment unresolved",
+      "missing_characters_available": 55,
+      "evidence": [
+        "Font name table has only IDs 1–6; no copyright or licence attribution.",
+        "The Noto issue records that the distributor assumed permission from the Noto name. It also reports missing accent anchors. Neither is proof of an authorised, functional Noto release."
+      ],
+      "reference": "https://github.com/notofonts/notofonts.github.io/issues/81",
+      "next": "Find an explicitly licensed original source or draw original script forms from authoritative references, with native mark positioning.",
+      "rechecked": "2026-11-02",
+      "latestObservation": "The referenced Noto issue remains open and still records assumed permission and absent accent anchors; inspected discussion does not resolve the source/licence questions."
+    },
+    {
+      "file": "Fonts/SertoAntochBible_2020_Release.ttf",
+      "status": "not bundled; restrictive and conflicting licence notices",
+      "missing_characters_available": 11,
+      "evidence": [
+        "Embedded font notice specifies CC BY-NC 4.0; accompanying LICENSE-SertoAntioch specifies CC BY-NC-SA 4.0.",
+        "This project needs reusable generated comics and freely redistributable modified fonts. Do not silently add a noncommercial restriction."
+      ],
+      "reference": "https://github.com/Mercury13/unicodia/blob/dcbe251036833331f0a8f66c186a315751db24f9/Fonts/LICENSE-SertoAntioch",
+      "next": "Superseded for the eleven Malayalam Syriac letters by the explicitly OFL-licensed East Syriac Malankara source; keep the noncommercial Serto donor excluded."
+    },
+    {
+      "repository": "https://github.com/aliftype/amiri",
+      "commit": "d3d0c5cb6fe7196cb4a58608fc5c8ecd2e6e80fa",
+      "file": "fonts/Amiri-Regular.ttf",
+      "sha256": "2444788b85996d795f0db7e14f3f6bfc3ea1c985e391267db0269b9e40f3447d",
+      "status": "not added; no crown-letter or baseline-symbol coverage",
+      "evidence": [
+        "Pinned font version 1.003 has no cmap entries for U+10ED9–10EEE or U+10EC9–10ECA.",
+        "The pinned source inventory contains no glyph filenames identifying crown letters or those codepoints."
+      ],
+      "next": "Use the existing licensed UFS drawings with explicit native joining and old-browser shaping compatibility; do not infer joining from standalone coverage."
+    },
+    {
+      "family": "Garay",
+      "status": "not bundled; modification and redistribution permission unverified",
+      "evidence": [
+        "Unicodia LICENSE-Funky explicitly identifies its Garay source as an unidentified Latin-mapped font and describes the result as barely working. That does not establish donor permission.",
+        "Search located a Garay font attributed to Amdy Boubacar with donationware labels, but no verified permission to modify and redistribute."
+      ],
+      "next": "Find explicit reusable-source permission or draw and validate original forms.",
+      "followUp": {
+        "reviewed": "2026-11-02",
+        "reference": "https://www.reddit.com/r/typography/comments/1kpe46d/wip_first_unicodeencoded_modern_garay_font_repost/",
+        "evidence": "First-person WIP post by Simon Charwey describes an encoded contemporary Garay font and community review. The inspected post exposes neither a downloadable release nor a modification/redistribution licence. Treat as a new source lead, not permission or validated coverage.",
+        "next": "Locate the author's released font and explicit licence; otherwise continue original-form work from authoritative script references.",
+        "additionalReference": "https://github.com/notofonts/notofonts.github.io/issues/71",
+        "latestEvidence": "Noto issue71 remains open. In April2026 Simon Charwey proposed a structured partnership instead of simply sharing source files, and Noto maintainer Simon Cozens invited that collaboration. No downloadable release or licence grant is exposed in the inspected thread. Charwey also reports discrepancies in earlier donor forms and review against original manuscripts with the creator's son; a code-chart or donor copy alone is insufficient validation."
+      }
+    },
+    {
+      "family": "Kelly Tolong",
+      "status": "not bundled; no verified permissive source licence",
+      "evidence": [
+        "Unicode proposal L2/23-024 identifies Kelly Tolong as the Kislaya IT Services font used in community publications. This establishes script relevance, not permission to modify and redistribute.",
+        "A third-party donor-strategy page groups Kelly Tolong with OFL fonts, but no original-source OFL grant was located. Do not treat that grouping as a licence."
+      ],
+      "references": [
+        "https://www.unicode.org/L2/L2023/23024-tolong-siki.pdf",
+        "https://www.essenfont.org/docs/sources/"
+      ],
+      "next": "Obtain original source licensing evidence or create original validated drawings."
+    },
+    {
+      "family": "East Syriac Malankara",
+      "publisher": "Hendo Academy / Binu George",
+      "status": "bundled native calligraphic source; detailed comic-style and fluent-reader review pending",
+      "missing_characters_available": 11,
+      "licence": "SIL Open Font License 1.1; reserved name removed from derivative family",
+      "source_manifest": "data/font-sources/malankara.json",
+      "reference": "https://www.hendoacademy.org/articles/hendo-academy-launches-kerala's-first-indigenous-east-syriac-and-karshon-unicode-font-east-syriac-malankara",
+      "evidence": [
+        "Publisher explicitly offers OFL and archive includes copyright-specific OFL licence.",
+        "All U+0860..086A present; native Syriac joining and GPOS retained in one font shard.",
+        "All eleven letters tested isolated, before/after/between BETH, and with vowels; nonjoining JA/BHA and right-joining RA/LLLA/SSA checked against Unicode types."
+      ],
+      "limitations": [
+        "Native font is a specific East Syriac tradition; does not replace every Syriac variant.",
+        "Source does not cover every standard Syriac letter or vowel. Mixed extended repertoires may still need fallback and further joining review.",
+        "WOFF2 reconstructs two source glyph bounds with one-unit outline shifts; tests permit at most one unit while requiring exact advances and GPOS positions."
+      ]
+    },
+    {
+      "family": "GNU Unifont Upper 18.0.01",
+      "status": "pinned licensed donor; guarded Tolong, Garay and Tai Yo derivatives bundled with native mark attachment",
+      "reference": "https://unifoundry.com/unifont/",
+      "url": "https://unifoundry.com/pub/unifont/unifont-18.0.01/font-builds/unifont_upper-18.0.01.otf",
+      "sha256": "472201e45a050bff4c7658208b8c73e34ebce3764b287a5a46c7774038ef9391",
+      "size": 5954156,
+      "reviewed": "2026-11-02",
+      "license": "Dual SIL OFL 1.1 and GPL 2+ with font embedding exception, confirmed in embedded nameID13 and publisher page. Select OFL for any derivative and retain copyright/terms.",
+      "missing_characters_available": {
+        "Garay": 69,
+        "Tolong Siki": 54,
+        "Tai Yo": 55
+      },
+      "evidence": [
+        "All 178 currently missing script characters have nonempty outlines; complete sheets were visually inspected as actual script forms rather than hexadecimal placeholders.",
+        "Publisher attributes Garay and Tolong Siki contributions to Johnnie Weaver and Tai Yo to Paul Hardy.",
+        "Font contains GSUB/GPOS containers but their feature lists are empty; table presence does not establish mark positioning or shaping."
+      ],
+      "limitations": [
+        "Drawings are based on a 16-pixel grid and require deliberate smooth comic-style adaptation, not simply bundling as fallback.",
+        "Script anatomy, mark positioning, case distinctions, RTL behaviour and relevant combinations need authoritative reference checks.",
+        "Earlier unlicensed vector candidates remain excluded; this separate source does not resolve their provenance."
+      ],
+      "next": "Continue specialist/style review of the three derivatives; broader coverage work remains for Seal and emoji.",
+      "prototype": "docs/unifont-lettering-experiment.md; all 54 Tolong forms now delivered through the DadTolong derivative; 59 targeted Python and 261 JavaScript tests pass, and 207 browser scenarios pass.",
+      "garayExperiment": "docs/garay-lettering-experiment.md; 69 guarded outlines compiled, packaged and reviewed at dialogue size; native mark/mkmk, preserved case, nonjoining RTL letters and LTR AN digits validated.",
+      "taiYoExperiment": "docs/tai-yo-lettering-experiment.md; all 55 forms delivered with body-specific anchors and horizontal mkmk; source/WOFF2 geometry and browser wrapping/export checks pass. Native-reader and independent vertical-layout review are not claimed."
+    }
+  ]
+}

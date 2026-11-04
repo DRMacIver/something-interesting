@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-03",
+  "status": "Broadened first15 current public font-domain checks pass after strict native-identity/derived-ink reconciliation; no production files modified.",
+  "localOnly": true,
+  "browserActions": 0,
+  "python": {
+    "files": [
+      "tests/test_font.py",
+      "tests/test_font_extended.py",
+      "tests/test_font_scripts.py",
+      "tests/test_font_alphabets.py",
+      "tests/test_font_hebrew_marks.py",
+      "tests/test_font_bengali_ba.py",
+      "tests/test_font_bengali_anusvara.py",
+      "tests/test_cgj_variations.py",
+      "tests/test_contextual_variations.py",
+      "tests/test_spacing_variations.py",
+      "tests/test_variation_mark_closure.py",
+      "tests/test_native_variation_packaging.py",
+      "tests/test_vietnamese_marks.py"
+    ],
+    "initial": "83passed,1legacy exactfinishedtrace assertion failed in79.33s",
+    "log": "/tmp/unicode-first15-font-domains.log",
+    "resolvedRecheck": {
+      "command": ".venv/bin/python -m pytest -q tests/test_font_bengali_ba.py",
+      "passed": 4,
+      "seconds": 3.61,
+      "log": "/tmp/unicode-first15-bengali-identity-recheck.log"
+    },
+    "scope": "Original and extended Dad letters/accents, packaged native scripts, supplemental alphabets/Cyrillic stacking, Hebrew heavy marks and inventory, Bengali BA/anusvara/conjuncts, CGJ/native contextual variants, spacing fragments, variation closure/packaging and Vietnamese marks. All tests read-only or use memory/temporary font copies."
+  },
+  "javascript": {
+    "files": [
+      "greek-fonts",
+      "fonts",
+      "native-shaping",
+      "font-variations",
+      "spacing-variations",
+      "vietnamese-marks",
+      "combining-annotations"
+    ],
+    "passed": 64,
+    "seconds": 1.466683708,
+    "log": "/tmp/unicode-first15-font-domain-js.log"
+  },
+  "nativeIdentityReconciliation": {
+    "case": "Bengali alternateBAU+11DF1 and AssameseRAU+09F0 documented shared isolated form",
+    "cause": "Approved pressure seed uses native glyph name, so two identical native source drawings can receive different finished ink traces. Native frame/advance, diagonal form, GDEF/UVS and BAcontext shaping remained correct.",
+    "proof": [
+      "Frozen native alternateBA and AssameseRA drawings/metrics remain exact copies.",
+      "Both actual finished glyphs independently match their source-specific exact native SVG/metric/seed cachekeys, cachedrecords and cachedderived.glyf geometry.",
+      "Current equal frames/advances, alternate-versusordinaryBA distinction, native GDEF/UVS and all documented/contextual BA behaviours still tested directly."
+    ],
+    "visual": "Local22/44px specimen inspected: shared diagonal isolated form remains clear, ordinaryBA remains distinct and contextual marks/conjuncts preserved.",
+    "specimen": "output/font-review/bengali-ba-pressure-lineage/comparison.png",
+    "helper": "tests/font_baseline_checks.py::assert_pressure_glyph_lineage"
+  },
+  "publicState": {
+    "manifestAnd381FontFilesUnchanged": true,
+    "fingerprintsCaptured": 382,
+    "noBuilderCalls": true,
+    "noPublicFontOrManifestWrites": true
+  },
+  "deferred": [
+    "No fullPython/emoji rerun during private warming.",
+    "Publicdense CJK production and markedcompanion reproduction gate remain deferred until final integration; isolated prototype lineage already verified separately.",
+    "Final source-domain run must use fully integrated assets, not claim these first15results cover later warmed fonts."
+  ],
+  "inspectionSha256": {
+    "tests/test_font.py": "925dd0103e3fcbc9c1582ff1014dbf07635df1ee2eb065a2086e2e1169c6760c",
+    "tests/test_font_extended.py": "7277d777d886f1b0df0f48995bf3c66058fb8f36e76af58c60deb0ce771a71af",
+    "tests/test_font_scripts.py": "ae433c4b4f6abab1f1cb1cb187b09578c59af5f12dd827764b16d6d4ecb15fa0",
+    "tests/test_font_alphabets.py": "dd2413748464de5d829bb8b8732cccbf367013d69288b0429c53bce8c547934b",
+    "tests/test_font_hebrew_marks.py": "cb3d8459cc33ecf1df66e77a27ef887616e8052ef710748a4c886233fac57310",
+    "tests/test_font_bengali_ba.py": "84a5fb1ac55431e280e3522fb00309282d5903dbd5602c321c2f370f3faa8a37",
+    "tests/test_font_bengali_anusvara.py": "ba68b80b3f4ffe7cfb831585073a36d3a6991c9cceb5d591a150785b3e851663",
+    "tests/test_cgj_variations.py": "cfeab9afd34c2c1ef2850b68e5a866a9ccbfa50c9cfa770a605ccf2dff3eb454",
+    "tests/test_contextual_variations.py": "fdc8a19774c9ece8951586990980d3198a61451aecb8ca779127057a37a546d9",
+    "tests/test_spacing_variations.py": "99d0b224c812c18cd1db1e80113f44e2cc028dded21cb0ff184c424ce9cb3631",
+    "tests/test_variation_mark_closure.py": "950737e2b8d25015ecff337f095dec203a4a36fd2b79676a37fafd0532932fc4",
+    "tests/test_native_variation_packaging.py": "e7a28f97b8ce3c96898d4adf27307a6779d219b5d95958826c51eef0b81b5fca",
+    "tests/test_vietnamese_marks.py": "d028f648710cb6b9d630e22c6549c229826e56ace6f0aca272629794e1240e7e",
+    "tests/font_baseline_checks.py": "ada8ee118d89acfe4d5f2ef252ac97e75f3aeccb7336c3bc410f424a02a31d08",
+    "tests/test_font_marked_cjk.py": "a9ec768ec529acaf0613f3fa1b5adeec6d5efe5392d4e37959f50eab9cc3f937",
+    "js/font-manifest.js": "93c4236d678eccc29ade31e0d61f50f542ab8b6645e4f54cd57953aa2dbed28f",
+    "output/font-review/bengali-ba-pressure-lineage/comparison.png": "a293c34c4166de8524fed5cf3211bced182b8fac50b8673c92194da8c3bd857b"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "🧚",
+      "path": "build/unicode-sources/noto-emoji-fantasy-svg/emoji_u1f9da.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9da.svg",
+      "sha256": "6bfa4031dc2d4a587d5bb6415e0ee2c6d27d36cd93078417eddf52fd9ef6b5f9",
+      "git_blob_sha1": "c83bc3cec1d0c2cc6f93b5b17b0dfd4d42193525",
+      "size": 21460,
+      "shapeElementsIncludingDefinitions": 52,
+      "include_sequences": [
+        "🧚",
+        "🧚🏻",
+        "🧚🏼",
+        "🧚🏽",
+        "🧚🏾",
+        "🧚🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧚‍♂️",
+      "path": "build/unicode-sources/noto-emoji-fantasy-svg/emoji_u1f9da_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9da_200d_2642.svg",
+      "sha256": "e804459bb006500b7fad96ecb01dac8c3390eb15c45b9e51f1aa1f0f85c123ba",
+      "git_blob_sha1": "b2110c46f8c1ea6b786ac4712418be5a7ce0005d",
+      "size": 19855,
+      "shapeElementsIncludingDefinitions": 51,
+      "include_sequences": [
+        "🧚‍♂️",
+        "🧚‍♂",
+        "🧚🏻‍♂️",
+        "🧚🏻‍♂",
+        "🧚🏼‍♂️",
+        "🧚🏼‍♂",
+        "🧚🏽‍♂️",
+        "🧚🏽‍♂",
+        "🧚🏾‍♂️",
+        "🧚🏾‍♂",
+        "🧚🏿‍♂️",
+        "🧚🏿‍♂"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧚‍♀️",
+      "path": "build/unicode-sources/noto-emoji-fantasy-svg/emoji_u1f9da_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9da_200d_2640.svg",
+      "sha256": "9f70648ecfa11329e372f23a82fa352c6dc662538a8b115ee9f52a78b317a603",
+      "git_blob_sha1": "955892b7ceae93e4835af6af5029cb901018ca74",
+      "size": 20486,
+      "shapeElementsIncludingDefinitions": 51,
+      "include_sequences": [
+        "🧚‍♀️",
+        "🧚‍♀",
+        "🧚🏻‍♀️",
+        "🧚🏻‍♀",
+        "🧚🏼‍♀️",
+        "🧚🏼‍♀",
+        "🧚🏽‍♀️",
+        "🧚🏽‍♀",
+        "🧚🏾‍♀️",
+        "🧚🏾‍♀",
+        "🧚🏿‍♀️",
+        "🧚🏿‍♀"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧜",
+      "path": "build/unicode-sources/noto-emoji-fantasy-svg/emoji_u1f9dc.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9dc.svg",
+      "sha256": "dc0e3e54db09953cbceb454194893c11480c2936de3245a2cd8a0dbce694ded7",
+      "git_blob_sha1": "fba0bc6636bd7887dca1a7eab15dfa16c0778fd9",
+      "size": 13829,
+      "shapeElementsIncludingDefinitions": 52,
+      "include_sequences": [
+        "🧜",
+        "🧜🏻",
+        "🧜🏼",
+        "🧜🏽",
+        "🧜🏾",
+        "🧜🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧜‍♂️",
+      "path": "build/unicode-sources/noto-emoji-fantasy-svg/emoji_u1f9dc_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9dc_200d_2642.svg",
+      "sha256": "9ce969858a62473a35f42b8d9d6bbb07db547e30f81b231f4a6e0000849ff06c",
+      "git_blob_sha1": "ee6ad4d7bcee58047035c5cec82bea8ec626aaec",
+      "size": 13830,
+      "shapeElementsIncludingDefinitions": 47,
+      "include_sequences": [
+        "🧜‍♂️",
+        "🧜‍♂",
+        "🧜🏻‍♂️",
+        "🧜🏻‍♂",
+        "🧜🏼‍♂️",
+        "🧜🏼‍♂",
+        "🧜🏽‍♂️",
+        "🧜🏽‍♂",
+        "🧜🏾‍♂️",
+        "🧜🏾‍♂",
+        "🧜🏿‍♂️",
+        "🧜🏿‍♂"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧜‍♀️",
+      "path": "build/unicode-sources/noto-emoji-fantasy-svg/emoji_u1f9dc_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9dc_200d_2640.svg",
+      "sha256": "3aad53156c8333fc0b79bebe7c6d15eb5b492723f4c9d66f2cdbc0f5606f7c96",
+      "git_blob_sha1": "60e19f1858ed4789cd1cb205a1046deebe11ab13",
+      "size": 14442,
+      "shapeElementsIncludingDefinitions": 49,
+      "include_sequences": [
+        "🧜‍♀️",
+        "🧜‍♀",
+        "🧜🏻‍♀️",
+        "🧜🏻‍♀",
+        "🧜🏼‍♀️",
+        "🧜🏼‍♀",
+        "🧜🏽‍♀️",
+        "🧜🏽‍♀",
+        "🧜🏾‍♀️",
+        "🧜🏾‍♀",
+        "🧜🏿‍♀️",
+        "🧜🏿‍♀"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🦸",
+      "path": "build/unicode-sources/noto-emoji-fantasy-svg/emoji_u1f9b8.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9b8.svg",
+      "sha256": "4f093e8002ef130c64506f5f3a72bd7a8dc7728fc1b19f1bc3165bf47fd3e549",
+      "git_blob_sha1": "d19d2c2e7c38892c4421bb4a74492d72fdfd3a35",
+      "size": 20185,
+      "shapeElementsIncludingDefinitions": 44,
+      "include_sequences": [
+        "🦸",
+        "🦸🏻",
+        "🦸🏼",
+        "🦸🏽",
+        "🦸🏾",
+        "🦸🏿"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🦸‍♂️",
+      "path": "build/unicode-sources/noto-emoji-fantasy-svg/emoji_u1f9b8_200d_2642.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9b8_200d_2642.svg",
+      "sha256": "ab1b98422dd49d55442b49dcbe082458cecc242a42c9dd12c7de8861644cd2e7",
+      "git_blob_sha1": "75e43b6155cdb984e71056dd2b64d0fad68c2c6b",
+      "size": 13877,
+      "shapeElementsIncludingDefinitions": 32,
+      "include_sequences": [
+        "🦸‍♂️",
+        "🦸‍♂",
+        "🦸🏻‍♂️",
+        "🦸🏻‍♂",
+        "🦸🏼‍♂️",
+        "🦸🏼‍♂",
+        "🦸🏽‍♂️",
+        "🦸🏽‍♂",
+        "🦸🏾‍♂️",
+        "🦸🏾‍♂",
+        "🦸🏿‍♂️",
+        "🦸🏿‍♂"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🦸‍♀️",
+      "path": "build/unicode-sources/noto-emoji-fantasy-svg/emoji_u1f9b8_200d_2640.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9b8_200d_2640.svg",
+      "sha256": "fc6b2a1ca7aba3e1d82eab42c7d007d4e38264bdd44f3c05991146b0831ba7e3",
+      "git_blob_sha1": "5cb1de251109517f1fdcdeb2083d599872938627",
+      "size": 13749,
+      "shapeElementsIncludingDefinitions": 32,
+      "include_sequences": [
+        "🦸‍♀️",
+        "🦸‍♀",
+        "🦸🏻‍♀️",
+        "🦸🏻‍♀",
+        "🦸🏼‍♀️",
+        "🦸🏼‍♀",
+        "🦸🏽‍♀️",
+        "🦸🏽‍♀",
+        "🦸🏾‍♀️",
+        "🦸🏾‍♀",
+        "🦸🏿‍♀️",
+        "🦸🏿‍♀"
+      ],
+      "build_target": "emoji-artwork"
+    }
+  ]
+}

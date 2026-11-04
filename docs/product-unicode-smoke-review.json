@@ -1,0 +1,34 @@
+{
+  "status": "Representative actual editor smoke passed; typography style incomplete.",
+  "textsInModelOrder": [
+    "Hello, κόσμε! مرحبا بالعالم 😊",
+    "नमस्ते दुनिया — こんにちは世界\nZ̷a̸l̵g̶o̴, café, x² + 𝒙 = ∑ₙ aₙ.",
+    "עברית ו־123; 中文與한국어.\nမြန်မာဘာသာ ภาษาไทย\n𓀀𓐰𓁐 — ♥️ 💙",
+    "Really? 👩🏽‍🚀"
+  ],
+  "environment": "Local app localhost:8765 in IAB; current assets; cached-font reload, not network-throttled cold-cache proof.",
+  "checks": {
+    "edit": "All four textareas accepted exact Unicode/newlines and preview rendered.",
+    "copyLink": "Copied link exactly matched current app URL.",
+    "download": "Actual Download PNG control produced saved PNG; full exported artifact visually inspected.",
+    "reset": "Restored all four defaults and removed URL fragment.",
+    "sharedState": "Navigating copied URL restored all four texts; reload retained them.",
+    "fontWait": "Reload initially showed disabled export controls; Download PNG enabled after rendering.",
+    "copyImage": "Actual Copy image control showed Copied!; clipboard contains image/png."
+  },
+  "export": {
+    "path": "output/font-review/product-smoke-unicode.png",
+    "sha256": "62def0c65878abef3a66ba2609bc4d77138aa40f2e2e18a15fb3a66698f37a1a"
+  },
+  "visualFindings": [
+    "Existing character art preserved. Emoji retain approved stronger optical presence and meaningful colour.",
+    "Greek appears typeset and widely spaced beside Dad; needs style/layout follow-up.",
+    "Egyptian outlines look thin in mixed dialogue despite valid grouped arrangement.",
+    "Selected Devanagari/Japanese/Chinese/Korean forms have pen character; linguistic correctness not established by this visual review."
+  ],
+  "limitations": [
+    "One representative mixed-script strip is not exhaustive user-flow or script coverage.",
+    "No new claim of all-browser or cold-network coverage.",
+    "Browser share/download tool call took 1245.94 seconds to return despite successful final actions; avoid unbounded download waits."
+  ]
+}

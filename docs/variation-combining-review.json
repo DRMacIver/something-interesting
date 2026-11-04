@@ -1,0 +1,126 @@
+{
+  "status": "Historical milestone before the native positional-mark repair; see positional-mark-review.json for current hashes and verification.",
+  "date": "2026-11-03",
+  "unicode": "18.0.0",
+  "scope": {
+    "genericVisibleMarkDrawings": 1838,
+    "nativeContextOnly": 2,
+    "behaviouralRecords": 263,
+    "nativeFontMarkIdentities": 25087,
+    "nativeVariationFamiliesWithMarks": 191,
+    "uniqueNativeDrawings": 506,
+    "sourceRecords": 300,
+    "catalogBytes": 2688273
+  },
+  "preservation": "Complete native clusters keep existing shaping. For a nonjoining native variation cluster with missing nonspacing marks, the longest canonically ordered supported prefix keeps its font and size. The remaining marks are positioned geometrically in canonical order. Covered native marks in that tail use their exact selected-font source paths; generic missing marks use existing licensed catalog drawings. Source font assets are unchanged.",
+  "checks": {
+    "javascript": {
+      "passed": 342,
+      "log": "/tmp/variation-composition-placement-final-js.log"
+    },
+    "source": {
+      "passed": 9,
+      "seconds": 79.66,
+      "log": "/tmp/variation-composition-final-source.log",
+      "scope": "All generic source identities and licenses, all 25087 native font/mark identities and exact normalized SVG drawings, two contextual viramas, plus six pre-existing source-preservation gates"
+    },
+    "catalogReproduction": {
+      "status": "byte-identical",
+      "sha256": "0fbed2831fc09f6894a2bd00379c89f8d551f635ee990fb57c79c2e8b1e7118d"
+    },
+    "browser": {
+      "status": "passed",
+      "scenarios": 657,
+      "failures": [],
+      "geometry": [],
+      "tab": 42,
+      "scope": "Geometry/export regression pass. Native U+1DF7/U+031B positional defect remains explicitly recorded; this is not a full typography pass."
+    },
+    "priorBrowser": {
+      "scenarios": 656,
+      "failures": [],
+      "geometry": [],
+      "scope": "Before final explicit positional-class correction"
+    },
+    "visualReview": {
+      "cases": [
+        "combining-foreign-ivd",
+        "combining-foreign-supplementary",
+        "combining-foreign-standard",
+        "combining-foreign-math",
+        "combining-positional-classes"
+      ],
+      "result": "Four foreign-variant strips retain their variant fonts with visible marks. Math strip rechecked after final kana alignment. Positional-class strip exposes a separate native companion defect described below; it is not an all-typography pass."
+    }
+  },
+  "singleMarkRoutingProbe": {
+    "scope": "For each of the 1838 nonempty catalog marks appended separately to two example native variation bases; routing reachability only, not an exhaustive geometric or linguistic check.",
+    "cjkStandard": {
+      "base": "豈︀",
+      "native": 256,
+      "composed": 1577,
+      "remaining": 5
+    },
+    "math": {
+      "base": "𝓏︂",
+      "native": 83,
+      "composed": 1750,
+      "remaining": 5
+    },
+    "remaining": [
+      "U+0488",
+      "U+0489",
+      "U+A670",
+      "U+A671",
+      "U+A672"
+    ]
+  },
+  "knownNativeDefect": {
+    "family": "Dad Marked CJK a1216df1cdff",
+    "text": "豈︀᷷",
+    "baseInk": [
+      55,
+      -19,
+      969,
+      871
+    ],
+    "aboveLeftMarkInk": [
+      356,
+      -189,
+      668,
+      -55
+    ],
+    "hornText": "豈︀̛",
+    "aboveRightHornInk": [
+      407,
+      -261,
+      617,
+      -55
+    ],
+    "cause": "math_unicode_marks.py classifies an explicit above mark as below when its source drawing lies below the origin. Runtime SVG positioning now gives explicit positional classes precedence, but existing native companion GPOS still contains the old attachment.",
+    "next": "Repair the shared font attachment classification, rebuild dependent CJK/math assets, verify source outlines and native mark invariants, regenerate the catalog and rerun typography/browser checks."
+  },
+  "limits": [
+    "Joining/contextual bases, connected Egyptian, CGJ-sensitive input, exact emoji and undefined enclosure/double mixtures retain their native path.",
+    "Foreign Mc spacing marks and mark-specific variation selectors are outside this nonspacing composition path.",
+    "Five Cyrillic numeric enclosing forms still require dynamic enclosure treatment.",
+    "Native above-left/attached-above-right font placement defect remains; passing geometry/export does not prove mark semantics.",
+    "Tail mark placement is geometric, not a claim of complete native script attachment.",
+    "Broader style, script reader, Egyptian, dictionary, grid and cross-engine brief requirements remain incomplete."
+  ],
+  "sha256": {
+    "tools/font/build_combining_outlines.py": "402e99d12d78899c8aebee1d6525b1bb4fa14304347be134cf97d595d328798a",
+    "js/combining-outline-manifest.js": "0fbed2831fc09f6894a2bd00379c89f8d551f635ee990fb57c79c2e8b1e7118d",
+    "js/combining-annotations.js": "13cf52b7d6c54e48b0c8fd6b55b37092921eba1ac933926bbcdecebdface5e30",
+    "js/font-variations.js": "c48cbb02ee6fc7a62f75722d7004f7f85b85c25adfca9ed38beb83690fe4a439",
+    "js/fonts.js": "3e81ba8f8f9653eb8044fe9849497462b8f3e04b768ac57c8eb270ac07beb38d",
+    "js/text-metrics.js": "8fa98c76114185767c4d1e6da5e119bc7490852ea3ba1ad4a201ae19e9d30c18",
+    "js/comic.js": "b58a394f778e7c91f7b0cb4b654d9469db0a8d33109fddf0bcab2061f4cd3745",
+    "js/line-breaks.js": "7550bd31de5eeaf3229af431dd627341dfcff6433ce4415c9555dfb939306914",
+    "tests/combining-annotations.test.mjs": "4f1d4c7363c28e4e0e95e4aada0bbcd2245769eea2a53687524643e9fde89773",
+    "tests/test_combining_outlines.py": "5e5f7d47496ce8c4228e25b4b235cc8015285b1c81dd3d91ca441e10b8911124",
+    "tools/unicode-checks.html": "1fcda10cc65477ae1d00bab1b4bede0c39e9260a19bf42d86bc4eb53c8567017"
+  },
+  "nextReference": "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-7/",
+  "supersededBy": "docs/positional-mark-review.json"
+}

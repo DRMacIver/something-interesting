@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 import uharfbuzz as hb
-from fontTools.ttLib import TTFont
+from native_sfnt_loader import evidence_ttfont as TTFont
 
 FONT = Path(__file__).parent.parent / "assets" / "fonts" / "dad-lettering.woff2"
 

@@ -1,0 +1,93 @@
+{
+  "status": "Publicconstructed-nativepreservationintegrated;actualpublic/native/semantic/field/localreviewPASS; finaldependentrefresh/fullsuite/fingerprint/auditclosurepending",
+  "sourceNumber": 21,
+  "source": "build/unicode-sources/noto/NotoMusic-Regular.ttf",
+  "sourceSha256": "26c0a28d7c6f96c70f1401db23066c5ea0ee1cdf155c79bc01ad2efb040de816",
+  "codepoints": [],
+  "namedGlyphs": [
+    "u1D25B_low"
+  ],
+  "gids": [
+    588
+  ],
+  "closure": [
+    588
+  ],
+  "candidate": "output/font-review/final-checks/music-tremolo-fields/native-588-candidate.ttf",
+  "candidateSha256": "8eca43e481446ff1a80718acd3e4b3405b4f8ffcd426a4af667ce68427c1086e",
+  "currentPublicFont": "assets/fonts/scripts/342fc9939b91.woff2",
+  "currentPublicSha256": "79908614ee55267f5a5ce0dfc8ae9060e31fe95398a164ab385c097283cc6e3f",
+  "sourceConstruction": {
+    "module": "tools/font/music_tremolos.py",
+    "sha256": "bc3f5f253119bec0a29debf46c2ff92e99a6154040f89c8018935dfe2dcb84ee",
+    "rulesModule": "tools/font/music_mark_rules.py",
+    "rulesSha256": "1a4409569b83477247cefa6e635fe16bf0ecc778b5b44ad42ca6b09f025eb11e",
+    "exactRecipeToken": ":music-tremolos:bc3f5f253119bec0a29debf46c2ff92e99a6154040f89c8018935dfe2dcb84ee:1a4409569b83477247cefa6e635fe16bf0ecc778b5b44ad42ca6b09f025eb11e",
+    "meaning": "Repository-derived low four-stroke tremolo reconstructed from pinned rawMusic three-stroke form; not a direct encoded upstream glyph."
+  },
+  "reason": "Pressure adds a nonzero tiny fifth contour to the lowfour-bar glyph and causes a complete-field counter-overlap rejection. Exact derived-nativeGID588 alone fixes both; originalfive-flagGID369 stays treated.",
+  "nativeAndCandidateContextFailures": {
+    "native": [],
+    "candidate588": []
+  },
+  "contexts": 60,
+  "fieldChecks": 14,
+  "proof": "output/font-review/final-checks/music-tremolo-fields/native-588-proof.json",
+  "allContextsProof": "output/font-review/final-checks/music-tremolo-fields/all-60-contexts.json",
+  "failedFieldEvidence": "output/font-review/final-checks/music-tremolo-fields/whole-field-checks.json",
+  "coordinatorVisualReview": {
+    "file": "output/font-review/final-checks/music-tremolo-fields/native-588-comparison.png",
+    "sha256": "c756edb7d2e68630a8aff3b81762d7121b8a5c38695e6bb8bea0dcf6e25353ec",
+    "sizes": [
+      22,
+      44
+    ],
+    "decision": "Accepted native/current/rescue comparison beside Dad; four/fivebar identities, flags, stem joins and openings remain readable."
+  },
+  "historicalUnadopted369Proposal": {
+    "reason": "Passed14fields but left the independent four-contour invariant failing; superseded and never published.",
+    "review": {
+      "status": "Isolated native-flag preservation accepted; live public integration pending diagnostic completion",
+      "sourceNumber": 21,
+      "source": "build/unicode-sources/noto/NotoMusic-Regular.ttf",
+      "sourceSha256": "26c0a28d7c6f96c70f1401db23066c5ea0ee1cdf155c79bc01ad2efb040de816",
+      "codepoints": [
+        119154
+      ],
+      "gids": [
+        369
+      ],
+      "closure": [
+        369
+      ],
+      "currentPublicFont": "assets/fonts/scripts/342fc9939b91.woff2",
+      "currentPublicSha256": "79908614ee55267f5a5ce0dfc8ae9060e31fe95398a164ab385c097283cc6e3f",
+      "candidate": "output/font-review/final-checks/music-tremolo-fields/native-369-candidate.ttf",
+      "candidateSha256": "a7201db5d1b66022328aba3ba2b699b120e670ff61a855c8f5725cb02c719343",
+      "reason": "Combined six-note field fails existing75percent counter-overlap guard at384and1024; nativeGID369repair passes all14individual/combined checks without changing other611glyphs.",
+      "proof": "output/font-review/final-checks/music-tremolo-fields/native-369-proof.json",
+      "failedFieldEvidence": "output/font-review/final-checks/music-tremolo-fields/whole-field-checks.json",
+      "coordinatorVisualReview": {
+        "file": "output/font-review/final-checks/music-tremolo-fields/native-369-comparison.png",
+        "sha256": "cf729fce8a029fa0ba624f86365a3114b64807029f15cfc610e251e234472afb",
+        "sizes": [
+          22,
+          44
+        ],
+        "decision": "Accepted bounded native/current/rescue comparison beside Dad; flag and tremolo counts, stems and fine openings remain readable."
+      },
+      "remaining": "Isolated policy/hooks/helper/fixture proof, then normal public build after diagnostic readers finish; final source/corpus/catalog/hash evidence and complete suite."
+    }
+  },
+  "remaining": "Complete isolated policy/cache/native fixtures; publish only after diagnostic readers finish, rebuild affectedcatalog/version links and run final fresh fullsuite.",
+  "publicIntegration": {
+    "status": "Ordinarytransactionalbuildterminal0;actualfont/reportexactacceptedcandidate;actualpublicsemantic/fieldchecks androot22/44inspectionPASS",
+    "font": "assets/fonts/scripts/342fc9939b91.woff2",
+    "sha256": "76254094338528218386f936841dd7ac723de715fe666d51eccee2e713a978e5",
+    "report": "output/font-review/supplemental-production/edd8e596c5f6c4bed300a36ec974c6f48cac056103a938f88452d1814e32072e-a17f6691badb3948552d5e2f3f5579532035e4ab8085b2eec78fc402934d3c2c-music-preserve-d9ed362937dc571ee771b23c61d127979d40e73b100b31e5da762c95880b9a0b.json",
+    "reportSha256": "e36ad7b7b5c79ffaed41c4ed8ad24f73bd288a07d8b0653a273d5281dfde58b5",
+    "continuity": "output/font-review/final-checks/chemical-harpoons/staging/two-policy-public-continuity.json",
+    "actualReview": "output/font-review/final-checks/final-public-policy-review/review.json",
+    "nativeProof": "output/font-review/final-checks/final-public-policy-review/live-native-cache-construction-proof.json"
+  }
+}

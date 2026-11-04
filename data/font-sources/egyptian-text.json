@@ -1,0 +1,48 @@
+{
+  "repository": "https://github.com/microsoft/font-tools",
+  "commit": "d06068439ff23fff99bfd058a5ab44a43183ecd9",
+  "files": [
+    {
+      "path": "build/unicode-sources/egyptian-text/eot.ttf",
+      "url": "https://raw.githubusercontent.com/microsoft/font-tools/d06068439ff23fff99bfd058a5ab44a43183ecd9/EgyptianOpenType/font/eot.ttf",
+      "git_blob_sha1": "ced934f5eaa3621848608754e79c06132947d9aa",
+      "sha256": "33aa615f2a44bea78392bd6cf2c1d94f61dae7ca54fc37287c564908191999e9",
+      "size": 4168480
+    },
+    {
+      "path": "build/unicode-sources/egyptian-text/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/font-tools/d06068439ff23fff99bfd058a5ab44a43183ecd9/EgyptianOpenType/font/LICENSE.txt",
+      "git_blob_sha1": "ac8fdb956049621af2aecd3a8253c38789748c4a",
+      "sha256": "77b7c2506d4efb22e09c8ccf10159f4956eab3ef7c007fef95de136bcf45300c",
+      "size": 4509
+    },
+    {
+      "path": "build/unicode-sources/egyptian-text/testsequences.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/font-tools/d06068439ff23fff99bfd058a5ab44a43183ecd9/EgyptianOpenType/testsequences.txt",
+      "git_blob_sha1": "74683fd00fe2576577888ffd8d91f15db6a5c67b",
+      "sha256": "f30f2a58b371fb57cb51b6cafa4b2c7141fb14777605cbc83738eceab5837e43",
+      "size": 6967
+    },
+    {
+      "path": "build/unicode-sources/egyptian-text/insertions.py",
+      "url": "https://raw.githubusercontent.com/microsoft/font-tools/d06068439ff23fff99bfd058a5ab44a43183ecd9/EgyptianOpenType/insertions.py",
+      "git_blob_sha1": "c343b33654cde0b9ff23fb1fe2bf5bd96db73456",
+      "sha256": "380883bd5acdc36817049cc22122f14262cc811ba47a6fceb2ba9227eca94c3a",
+      "size": 10585
+    },
+    {
+      "path": "build/unicode-sources/egyptian-text/config.py",
+      "url": "https://raw.githubusercontent.com/microsoft/font-tools/d06068439ff23fff99bfd058a5ab44a43183ecd9/EgyptianOpenType/config.py",
+      "git_blob_sha1": "e6fceee08c65133f3b7cd9906fabbfcda0ccae8f",
+      "sha256": "f3690ba542d46611eea7550d0c9f07dcea86726e9d1905429b42e89762332836",
+      "size": 6560
+    },
+    {
+      "path": "build/unicode-sources/egyptian-text/TOOLS-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/font-tools/d06068439ff23fff99bfd058a5ab44a43183ecd9/LICENSE",
+      "git_blob_sha1": "3d8b93bc7987d14c848448c089e2ae15311380d7",
+      "sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b",
+      "size": 1162
+    }
+  ]
+}

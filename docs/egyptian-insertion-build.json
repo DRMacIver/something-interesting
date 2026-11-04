@@ -1,0 +1,3681 @@
+{
+  "accepted": 982,
+  "unmodified_single": 255,
+  "unmodified_multiple": 212,
+  "mirrored": 467,
+  "rotated": 24,
+  "rotated_mirrored": 24,
+  "consumedMirrorHelpers": 65,
+  "documentedCellRules": 4,
+  "rejected": [],
+  "sourceGeometryWarnings": [
+    {
+      "key": "13010-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13010-13440-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "13013-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "13014-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "13014-13440-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 31
+    },
+    {
+      "key": "13016-13440-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 23
+    },
+    {
+      "key": "1301E-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "13022-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1302D-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1302F-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 24
+    },
+    {
+      "key": "13032-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13035-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "1303B-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "13050-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "1305A-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1305C-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 32
+    },
+    {
+      "key": "13065-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13065-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 27
+    },
+    {
+      "key": "13066-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 27
+    },
+    {
+      "key": "13078-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "13087-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "13093-13439-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "13093-1343A-13439",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "13093-13440-13439-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "13093-13440-1343A-13439",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13098-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13098-13439-1343B",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13098-1343B-13439",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "13098-13440-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13098-13440-13439-1343B",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13098-13440-1343B-13439",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1309D-13432-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "1309D-1343A-13432",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "1309D-13440-13432-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "130A2-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "130A3-13432-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130A3-1343A-13432",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130A3-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130A3-13440-13432-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "130A3-13440-1343A-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130BB-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "130BE-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 17
+    },
+    {
+      "key": "130C0-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "130C8-13432-1343A",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130C8-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "130C8-13440-13432-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 24
+    },
+    {
+      "key": "130C8-13440-1343A-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "130D2-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "130D4-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "130D7-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "130D7-13434-1343B",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "130D7-1343B-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "130D7-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "130D7-13440-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "130D7-13440-13434-1343B",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 31
+    },
+    {
+      "key": "130D7-13440-1343B-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 37
+    },
+    {
+      "key": "130D8-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "130D9-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "130DA-13434",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "130DA-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "130DA-13434-13433",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "130DA-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 23
+    },
+    {
+      "key": "130DA-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "130DA-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 27
+    },
+    {
+      "key": "130DA-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 27
+    },
+    {
+      "key": "130DB-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130DB-13433-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130DB-13434-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130DB-1343A-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130DB-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130DB-13433-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "130DB-13433-1343A-13434",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130DB-13434-13433-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130DB-13434-1343A-13433",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130DB-1343A-13433-13434",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130DB-1343A-13434-13433",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130DB-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130DB-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "130DB-13440-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "130DB-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "130DB-13440-13433-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130DB-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "130DB-13440-13434-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "130DB-13440-1343A-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "130DB-13440-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "130DB-13440-13433-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "130DB-13440-13433-1343A-13434",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "130DB-13440-13434-13433-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "130DB-13440-13434-1343A-13433",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "130DB-13440-1343A-13433-13434",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "130DB-13440-1343A-13434-13433",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "130DD-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "130DE-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "130E2-13433-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130E2-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "130E2-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130E2-13433-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "130E2-13433-1343A-13434",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130E2-13434-13433-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130E2-13434-1343A-13433",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "130E2-1343A-13433-13434",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130E2-1343A-13434-13433",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130E2-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "130E2-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "130E2-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "130E2-13440-13433-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 11
+    },
+    {
+      "key": "130E2-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "130E2-13440-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "130E2-13440-1343A-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "130E2-13440-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "130E2-13440-13433-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 25
+    },
+    {
+      "key": "130E2-13440-13433-1343A-13434",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "130E2-13440-13434-13433-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "130E2-13440-13434-1343A-13433",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 25
+    },
+    {
+      "key": "130E2-13440-1343A-13433-13434",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "130E2-13440-1343A-13434-13433",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "130E3-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "130E3-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130E3-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "130E3-13440-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 23
+    },
+    {
+      "key": "130E3-13440-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "130E4-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "130E5-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 12
+    },
+    {
+      "key": "130E6-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "130E7-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "130E7-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "130E7-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "130E7-13440-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "130E7-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "130E7-13440-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "130E7-13440-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "130E7-13440-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "130E7-13440-13433-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "130E7-13440-13433-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "130E7-13440-13434-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "130E7-13440-13434-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "130E7-13440-13435-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "130E7-13440-13435-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "130E8-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "130E9-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130E9-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130E9-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130E9-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "130E9-13440-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "130E9-13440-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 26
+    },
+    {
+      "key": "130E9-13440-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "130EA-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 11
+    },
+    {
+      "key": "130EB-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130EB-13440-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "130F1-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "130F1-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "130F4-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 11
+    },
+    {
+      "key": "130F6-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "130F7-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "130F9-13434",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "130FD-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "130FE-13440-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13102-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 11
+    },
+    {
+      "key": "13103-13440-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "13104-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13104-13434-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13104-1343A-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13104-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13104-13440-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "13104-13440-13434-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "13104-13440-1343A-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 29
+    },
+    {
+      "key": "1310B-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13112-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13113-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "13113-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "13113-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "13113-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "13113-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "13113-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "13113-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "1311E-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1312A-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "1313F-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "1313F-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 23
+    },
+    {
+      "key": "13140-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 31
+    },
+    {
+      "key": "13141-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "13141-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 25
+    },
+    {
+      "key": "13142-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "13143-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 24
+    },
+    {
+      "key": "13144-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 23
+    },
+    {
+      "key": "13145-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13146-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "13146-13440-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13146-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "13146-13440-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13146-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "13146-13440-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13146-13440-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13146-13440-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13146-13440-13433-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13146-13440-13433-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13146-13440-13434-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13146-13440-13434-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13146-13440-13435-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13146-13440-13435-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "1314A-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "1314A-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "1314A-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "1314A-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "1314A-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 23
+    },
+    {
+      "key": "1314A-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 17
+    },
+    {
+      "key": "1314A-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 40
+    },
+    {
+      "key": "1314A-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 40
+    },
+    {
+      "key": "1314B-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "1314B-13440-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "1314B-13440-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 27
+    },
+    {
+      "key": "1314B-13440-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 27
+    },
+    {
+      "key": "1314D-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1314D-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1314D-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "1314D-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "1314F-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "13150-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13151-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13151-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13153-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13153-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "13153-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "13153-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 32
+    },
+    {
+      "key": "13153-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 32
+    },
+    {
+      "key": "13154-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13156-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13158-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "13158-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "13158-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "13158-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 47
+    },
+    {
+      "key": "13158-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 47
+    },
+    {
+      "key": "13159-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13159-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13159-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13159-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "13159-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "13159-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "1315A-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1315A-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1315A-13434-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1315A-13434-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1315A-13435-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1315A-13435-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1315A-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 11
+    },
+    {
+      "key": "1315A-13440-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1315A-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 11
+    },
+    {
+      "key": "1315A-13440-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1315A-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 11
+    },
+    {
+      "key": "1315A-13440-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1315A-13440-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "1315A-13440-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1315A-13440-13433-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1315A-13440-13433-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1315A-13440-13434-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1315A-13440-13434-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1315A-13440-13435-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1315A-13440-13435-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1315C-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1315C-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1315C-13434-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1315C-13434-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1315C-13435-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1315C-13435-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1315C-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "1315C-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "1315C-13440-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "1315C-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 30
+    },
+    {
+      "key": "1315C-13440-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "1315C-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 30
+    },
+    {
+      "key": "1315C-13440-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "1315C-13440-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "1315C-13440-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "1315C-13440-13433-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 37
+    },
+    {
+      "key": "1315C-13440-13433-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 37
+    },
+    {
+      "key": "1315C-13440-13434-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 37
+    },
+    {
+      "key": "1315C-13440-13434-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 37
+    },
+    {
+      "key": "1315C-13440-13435-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 37
+    },
+    {
+      "key": "1315C-13440-13435-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 37
+    },
+    {
+      "key": "1315D-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13433-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13433-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13434-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13434-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13435-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315D-13440-13435-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1315E-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "1315F-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "1315F-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1315F-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1315F-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "13163-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "13163-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "13163-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13163-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 17
+    },
+    {
+      "key": "13163-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 17
+    },
+    {
+      "key": "13164-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13165-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13166-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13167-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13167-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13167-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "13167-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "13167-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "13167-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "1316A-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "1316A-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "1316A-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "1316A-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "1316C-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316C-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "1316C-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "1316C-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "1316D-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316D-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316D-13434-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316D-13434-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316D-13435-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316D-13435-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316D-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1316D-13440-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316D-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1316D-13440-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316D-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 22
+    },
+    {
+      "key": "1316D-13440-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "1316D-13440-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "1316D-13440-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "1316D-13440-13433-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "1316D-13440-13433-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "1316D-13440-13434-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "1316D-13440-13434-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "1316D-13440-13435-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "1316D-13440-13435-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "13170-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13170-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "13170-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "13170-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "13170-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "13170-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "13171-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13171-13440-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13171-13440-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13171-13440-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13173-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "13173-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "13173-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "13173-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 19
+    },
+    {
+      "key": "13174-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13177-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "13177-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 17
+    },
+    {
+      "key": "13177-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 26
+    },
+    {
+      "key": "13177-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 26
+    },
+    {
+      "key": "1317D-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 12
+    },
+    {
+      "key": "13188-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "1318F-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "13190-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 11
+    },
+    {
+      "key": "13190-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 17
+    },
+    {
+      "key": "13190-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "13190-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 28
+    },
+    {
+      "key": "13193-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 6
+    },
+    {
+      "key": "13193-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 17
+    },
+    {
+      "key": "13193-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 23
+    },
+    {
+      "key": "13193-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 23
+    },
+    {
+      "key": "13194-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "13194-13433-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "13194-1343A-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "13194-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13194-13440-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13194-13440-13433-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "13194-13440-1343A-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 14
+    },
+    {
+      "key": "13195-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "13195-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 32
+    },
+    {
+      "key": "13195-13440-13433-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 40
+    },
+    {
+      "key": "13195-13440-13434-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 40
+    },
+    {
+      "key": "131A3-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "131A3-13440-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "131B8-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "13250-13439-1343B",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13250-1343B-13439",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13250-13440-13439-1343B",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13250-13440-1343B-13439",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13257-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "13257-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "13268-13440-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 8
+    },
+    {
+      "key": "1326A-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "1326A-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "1326B-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 20
+    },
+    {
+      "key": "1326B-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 20
+    },
+    {
+      "key": "13280-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13280-13439-1343B",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13280-1343B-13439",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "13280-13440-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13280-13440-13439-1343B",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13280-13440-1343B-13439",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "132A9-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "132B9-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "132BE-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "132BE-13440-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "132BE-13440-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "132BF-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "132BF-13440-13434-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "132BF-13440-13435-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "132D1-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "132D1-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 16
+    },
+    {
+      "key": "132D2-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "132E0-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "132E0-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "132E0-13440-13433-13435",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "132E0-13440-13435-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "132EB-1343A-1343B",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "132EB-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "132EB-13440-1343A-1343B",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 5
+    },
+    {
+      "key": "132EB-13440-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "1330C-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 25
+    },
+    {
+      "key": "1330C-13440-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "1330D-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "1330D-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 26
+    },
+    {
+      "key": "1330F-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 11
+    },
+    {
+      "key": "13319-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 20
+    },
+    {
+      "key": "1332C-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 10
+    },
+    {
+      "key": "1332C-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13333-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13334-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "13334-13440-13432-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "13334-13440-13434-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "13343-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "13347-13434-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13347-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13347-13440-13434-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13347-13440-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13434-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13434-1343B",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-1343A-1343B",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13434-1343A-1343B",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13434-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-1343A-13434-1343B",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-1343A-1343B-13434",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-1343B-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-1343B-1343A-13434",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-13434-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-13434-1343B",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-1343A-13434",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-1343A-1343B",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-13434-1343A-1343B",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-13434-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-1343A-13434-1343B",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-1343A-1343B-13434",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-1343B-13434-1343A",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13349-13440-1343B-1343A-13434",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13371-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 38
+    },
+    {
+      "key": "13371-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 38
+    },
+    {
+      "key": "13372-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 38
+    },
+    {
+      "key": "13372-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 38
+    },
+    {
+      "key": "1337C-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "13381-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 9
+    },
+    {
+      "key": "13394-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "13395-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13396-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 2
+    },
+    {
+      "key": "133B3-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 20
+    },
+    {
+      "key": "133B3-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 20
+    },
+    {
+      "key": "133F1-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "133F5-1343A-1343B",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "133F5-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "133F5-13440-1343A-1343B",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "133F5-13440-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13413-13432-1343A",
+      "warnings": [
+        "native region extends outside nominal cell"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13413-1343A-13432",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13413-13440-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "13413-13440-13432-1343A",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13413-13440-1343A-13432",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "1341B-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 20
+    },
+    {
+      "key": "1341B-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 20
+    },
+    {
+      "key": "13421-13439-1343B",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13421-1343B-13439",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13421-13440-13439-1343B",
+      "warnings": [
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13421-13440-1343B-13439",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "1310F-FE00-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "1310F-FE00-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "131B8-FE00-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "131B8-FE00-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 3
+    },
+    {
+      "key": "131B9-FE00-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 1
+    },
+    {
+      "key": "131B9-FE00-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 7
+    },
+    {
+      "key": "131F9-FE00-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "131F9-FE00-13440-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 18
+    },
+    {
+      "key": "13377-FE00-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "13377-FE00-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 4
+    },
+    {
+      "key": "133F5-FE00-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "133F5-FE00-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 12
+    },
+    {
+      "key": "133F5-FE00-1343A-1343B",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 41
+    },
+    {
+      "key": "133F5-FE00-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 12
+    },
+    {
+      "key": "133F5-FE00-13440-1343A",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "133F5-FE00-13440-1343B",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 12
+    },
+    {
+      "key": "133F5-FE00-13440-1343A-1343B",
+      "warnings": [
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 41
+    },
+    {
+      "key": "133F5-FE00-13440-1343B-1343A",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap",
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 12
+    },
+    {
+      "key": "13093-FE01-13439-1343B",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13093-FE01-1343B-13439",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13093-FE01-13440-13439-1343B",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13093-FE01-13440-1343B-13439",
+      "warnings": [
+        "native region extends outside nominal cell",
+        "native insertion regions overlap"
+      ],
+      "sampledInkHits": 0
+    },
+    {
+      "key": "13257-FE01-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 12
+    },
+    {
+      "key": "13257-FE01-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 12
+    },
+    {
+      "key": "130B8-FE03-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "130BA-FE03-13440-13433",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 13
+    },
+    {
+      "key": "1310F-FE03-13440-13434",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 15
+    },
+    {
+      "key": "13371-FE06-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    },
+    {
+      "key": "13371-FE06-13440-13439",
+      "warnings": [
+        "native region intersects sampled container ink"
+      ],
+      "sampledInkHits": 21
+    }
+  ],
+  "method": "Native full-blank probes for ordered subsets of documented controls and registered rotations; container-alone probes identify native mirror alternates.65explicit mr helpers become affine sign reflections while source slots/children retain their coordinates.4unresolved size rules use documented native slot dimensions/anchors, calibrated against a working native offset. Source regions may overlap/overflow; envelopes reserve every region and native ink. Sampling records observations, not collision-freedom or linguistic validation."
+}

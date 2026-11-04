@@ -1,0 +1,41 @@
+{
+  "repository": "https://github.com/lojjic/bidi-js",
+  "revision": "953d75cb176f0693aa77d60cdf3afde5f2a0927a",
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/lojjic/bidi-js/953d75cb176f0693aa77d60cdf3afde5f2a0927a/LICENSE.txt",
+      "sha256": "49d4d143fed599deb502a0fe6e02f49832f87e9a3a4cd0502e469596d50faa6d"
+    },
+    {
+      "path": "src/brackets.js",
+      "url": "https://raw.githubusercontent.com/lojjic/bidi-js/953d75cb176f0693aa77d60cdf3afde5f2a0927a/src/brackets.js",
+      "sha256": "7d8f738e5f2846dda4bc8c0b37927f1f0612b63e493b47fd6dd0e92cce011442"
+    },
+    {
+      "path": "src/charTypes.js",
+      "url": "https://raw.githubusercontent.com/lojjic/bidi-js/953d75cb176f0693aa77d60cdf3afde5f2a0927a/src/charTypes.js",
+      "sha256": "20fa32814428a127d0208d25fdce7b0deb4d2f35093902ffe3c296741dd9e331"
+    },
+    {
+      "path": "src/embeddingLevels.js",
+      "url": "https://raw.githubusercontent.com/lojjic/bidi-js/953d75cb176f0693aa77d60cdf3afde5f2a0927a/src/embeddingLevels.js",
+      "sha256": "4410f80ed0db244f11b2eb98c3304bec805f4a04025c6f5c9caf6b2c491e4a66"
+    },
+    {
+      "path": "src/reordering.js",
+      "url": "https://raw.githubusercontent.com/lojjic/bidi-js/953d75cb176f0693aa77d60cdf3afde5f2a0927a/src/reordering.js",
+      "sha256": "e1ca9fe5008caf4021f48c5cce5763970b72232c300219df996d2368803b8c1c"
+    },
+    {
+      "path": "test/BidiTest.js",
+      "url": "https://raw.githubusercontent.com/lojjic/bidi-js/953d75cb176f0693aa77d60cdf3afde5f2a0927a/test/BidiTest.js",
+      "sha256": "60e91b6a8c301185fbe60691f5c8a58bce873c5d8cb3b1202dca7d5a51fff0ab"
+    },
+    {
+      "path": "test/BidiCharacterTest.js",
+      "url": "https://raw.githubusercontent.com/lojjic/bidi-js/953d75cb176f0693aa77d60cdf3afde5f2a0927a/test/BidiCharacterTest.js",
+      "sha256": "9d7bb6ccf0cee51719d9729b659a78cdc693e15ebda2811368011f92fdbb3208"
+    }
+  ]
+}

@@ -1,0 +1,1799 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Unicode rendering checks</title>
+    <link rel="stylesheet" href="../style.css?v=48b0bddf58">
+    <style>
+      body { display: block; padding: 24px; }
+      canvas { display: block; width: min(800px, 95vw); height: auto; }
+      pre { white-space: pre-wrap; font: 14px monospace; }
+      section { margin-bottom: 40px; }
+      #samples { display: block; }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "../js/app.js": "../js/app.js?v=458fc556d5",
+          "../js/balloon.js": "../js/balloon.js?v=fabf62b266",
+          "../js/checks.js": "../js/checks.js?v=af32bd54e9",
+          "../js/cjk-variant-manifest.js": "../js/cjk-variant-manifest.js?v=5fc7000bd2",
+          "../js/clipboard.js": "../js/clipboard.js?v=c7602cc6de",
+          "../js/combining-annotations.js": "../js/combining-annotations.js?v=26a7e9a8f9",
+          "../js/combining-outline-manifest.js": "../js/combining-outline-manifest.js?v=f0d548c813",
+          "../js/comic.js": "../js/comic.js?v=ab19c83e52",
+          "../js/dictionary-breaks.js": "../js/dictionary-breaks.js?v=dea1779b78",
+          "../js/direction.js": "../js/direction.js?v=9860593d14",
+          "../js/egyptian-enclosure-manifest.js": "../js/egyptian-enclosure-manifest.js?v=1e418a87a6",
+          "../js/egyptian-insertion-manifest.js": "../js/egyptian-insertion-manifest.js?v=f4a3f7ab53",
+          "../js/egyptian-layout.js": "../js/egyptian-layout.js?v=f024496d0b",
+          "../js/egyptian-variant-manifest.js": "../js/egyptian-variant-manifest.js?v=697037528a",
+          "../js/emoji-manifest.js": "../js/emoji-manifest.js?v=b8f9a60f7a",
+          "../js/emoji-routing.js": "../js/emoji-routing.js?v=15334230e2",
+          "../js/font-manifest.js": "../js/font-manifest.js?v=7f5df7719a",
+          "../js/font-variations.js": "../js/font-variations.js?v=b372fabb91",
+          "../js/fonts.js": "../js/fonts.js?v=4bef6ed7f9",
+          "../js/format-fonts.js": "../js/format-fonts.js?v=4dff76861d",
+          "../js/greek-manifest.js": "../js/greek-manifest.js?v=c9f5883cc8",
+          "../js/grid-manifest.js": "../js/grid-manifest.js?v=bf48698af1",
+          "../js/grid.js": "../js/grid.js?v=4420838ab8",
+          "../js/hieroglyph-optics.js": "../js/hieroglyph-optics.js?v=82ec294c39",
+          "../js/layout.js": "../js/layout.js?v=c51f52a268",
+          "../js/line-breaks.js": "../js/line-breaks.js?v=c1906bebe7",
+          "../js/marked-cjk-variant-manifest.js": "../js/marked-cjk-variant-manifest.js?v=ba804ebba0",
+          "../js/math-variant-manifest.js": "../js/math-variant-manifest.js?v=615f325dc6",
+          "../js/native-shaping.js": "../js/native-shaping.js?v=fa1d772012",
+          "../js/sampler.js": "../js/sampler.js?v=bd5836ba52",
+          "../js/script-optics.js": "../js/script-optics.js?v=9127f3fdda",
+          "../js/share.js": "../js/share.js?v=efeeb7db2f",
+          "../js/standalone-fonts.js": "../js/standalone-fonts.js?v=50f2da2d34",
+          "../js/text-metrics.js": "../js/text-metrics.js?v=306601e0fd",
+          "../js/unicode-data.js": "../js/unicode-data.js?v=6c276da56f",
+          "../js/unicode-samples.js": "../js/unicode-samples.js?v=42b386e5b1",
+          "../js/unicode.js": "../js/unicode.js?v=503f9be2c6",
+          "../js/vendor/bidi/brackets.js": "../js/vendor/bidi/brackets.js?v=e2f5699c39",
+          "../js/vendor/bidi/charTypes.js": "../js/vendor/bidi/charTypes.js?v=ecad4e07f9",
+          "../js/vendor/bidi/embeddingLevels.js": "../js/vendor/bidi/embeddingLevels.js?v=9b1113008d",
+          "../js/vendor/bidi/reordering.js": "../js/vendor/bidi/reordering.js?v=77499d5718",
+          "../js/vendor/linebreak/EastAsianWidth.js": "../js/vendor/linebreak/EastAsianWidth.js?v=9eeb2c6e30",
+          "../js/vendor/linebreak/LineBreak.js": "../js/vendor/linebreak/LineBreak.js?v=c914a6c87a",
+          "../js/vendor/linebreak/break.js": "../js/vendor/linebreak/break.js?v=6c2035a866",
+          "../js/vendor/linebreak/index.js": "../js/vendor/linebreak/index.js?v=b75c6f4f7c",
+          "../js/vendor/linebreak/state.js": "../js/vendor/linebreak/state.js?v=c96df0bbc2",
+          "../js/vietnamese-marks.js": "../js/vietnamese-marks.js?v=e061cb79b5"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Unicode rendering checks</h1>
+    <pre id="summary">Running real canvas checks…</pre>
+    <main id="samples"></main>
+    <script type="module">
+      import scriptManifest from "../js/font-manifest.js";
+      import { nativeShapingText } from "../js/native-shaping.js";
+      import { renderComic, loadComic, DEFAULTS, makeFontString } from "../js/comic.js";
+      import { fontRuns } from "../js/emoji-routing.js";
+      import { checkComic } from "../js/checks.js";
+      import { breakUnits } from "../js/line-breaks.js";
+      import { createTextMeasurer } from "../js/text-metrics.js";
+      import { paragraphDirection } from "../js/direction.js";
+      import { nativeVariationFont,nativeSpacingVariationFont,requiresFormatGlyph } from "../js/font-variations.js";
+      import { loadTextFonts, requiredFonts } from "../js/fonts.js";
+      const summary = document.querySelector("#summary");
+      const stack = "\u0301\u0302\u0303\u0304".repeat(6) + "\u0323\u0324\u0325".repeat(5) + "\u0334\u0335\u0336";
+      const gestureSymbols=[...'✊✋🖐🖖👌🤌🤏✌🤞🫰🤟🤘🤙👈👉👆🖕👇☝👎👊🤛🤜🤚👋🫱🫲🫳🫴🫵🫶🫷🫸👏👐🙌🙏🤲🤝'];
+      const gestureScenarios=Array.from({length:Math.ceil(gestureSymbols.length/3)},(_,i)=>{
+        const forms=gestureSymbols.slice(i*3,i*3+3).flatMap(c=>[c,...Array.from({length:5},(_,t)=>c+String.fromCodePoint(0x1f3fb+t))]);
+        const chunk=Math.ceil(forms.length/4);
+        return ['emoji-gestures-'+(i+1),Array.from({length:4},(_,j)=>forms.slice(j*chunk,(j+1)*chunk).join(' '))];
+      });
+      const scenarios = [
+        ['greek-proportional',['Καλημέρα κόσμε','κόσμε κόσμε κόσμε','GREEK: αβγ Ωμέγα','ἄνθρωπος ἀλήθεια']],
+        ['hieroglyph-optical-ink',['DAD 𓀀𓁐 END','𓀀𔐀 𓑠𔙆','GROUP: 𓑠\u{13430}𓑡','𓆓\u{13433}𓑠 𓑠\u{13447}']],
+        ...Array.from({length:5},(_,i)=>{
+          const letters=Array.from({length:Math.min(6,26-i*6)},(_,j)=>String.fromCodePoint(0x1f1e6+i*6+j));
+          return ['emoji-standalone-regional-'+(i+1),[letters.slice(0,2).join(' '),letters.slice(2,4).join(' '),letters.slice(4).join(' '),'']];
+        }),
+        ['emoji-standalone-tones',['🏻 🏼','🏽 🏾 🏿','👍🏻 👍🏽 👍🏿','']],
+        ['emoji-standalone-hair',['🦰 🦱','🦲 🦳','🧑‍🦰 🧑‍🦱 🧑‍🦲 🧑‍🦳','']],
+        ['emoji-standalone-boundaries',['🇦 🇬 🇬🇧','🏻 👍🏻 🧑🏽‍🦰','🦰 🦱 🦲 🦳','']],
+        ['native-variation-cjk-standard',['豈 豈\ufe00 麗 麗\ufe00','龜 龜\ufe00 龜\ufe01','A麗\ufe00B 㒞\ufe00','']],
+        ['contextual-variation-mongolian',['ᠠ ᠠ\u180b ᠠ\u180c','ᠠ\u180bᠠ ᠠᠠ\u180bᠠ','MONGOLIAN: ᠠᠠ\u180b','']],
+        ['contextual-variation-phags-pa',['ꡖ ꡖ\ufe00','ꡀꡖ\ufe00ꡀ ꡀꡖꡀ','PHAGS PA: ꡖ\ufe00ꡀ','']],
+        ['contextual-variation-manichaean',['𐫅 𐫅\ufe00','𐫀𐫅\ufe00𐫀 𐫀𐫅𐫀','MANICHAEAN: 𐫅\ufe00𐫀','']],
+        ['native-variation-math',['ZERO: 0 0\ufe00','ℋ ℋ\ufe00 ℐ ℐ\ufe00','A0\ufe00B 0A0','']],
+        ['native-variation-math-explicit',['ℋ\ufe00 ℋ\ufe01 ℐ\ufe00 ℐ\ufe01','⦷ ⦷\ufe00 ℒ\ufe01 ℛ\ufe01','Aℋ\ufe01́B ℋ\ufe01̣̂̇','']],
+        ['native-variation-historical-lazy-1',['∽ ∽\ufe00','≃ ≃\ufe00','A⋍\ufe00B ⋍\ufe00́','']],
+        ['native-variation-historical-lazy-2',['≂ ≂\ufe00','≈ ≈\ufe00','A⩬\ufe00B ⩬\ufe00̣̂̇','']],
+        ['native-variation-historical-arms',['⋜ ⋜\ufe00','⋝ ⋝\ufe00','A𝬐\ufe00B 𝬐\ufe00́','']],
+        ['native-variation-kurrent',['𝓏 𝓏\ufe02','A𝓏\ufe02B 𝓏\ufe02́','𝓏\ufe02̣̂̇','']],
+        ['native-variation-quotes',['‘\ufe00 ‘\ufe01 ’\ufe00 ’\ufe01','A‘\ufe00B A’\ufe01B','ORDINARY: A0B','']],
+        ['native-variation-sibe',['‘\ufe02 ’\ufe02 “\ufe02 ”\ufe02','‘\ufe00 ’\ufe00 “\ufe00 ”\ufe00','ᠠ ‘\ufe02ᠠ’\ufe02 ᠠ','']],
+        ['native-variation-fullwidth',['０ ０\ufe00 0 0\ufe00','A０\ufe00B ０\ufe00́','０\ufe00̣̂̇ ００\ufe00','']],
+        ['native-variation-marked',['‘\ufe02́ ’\ufe02̂̇','㐂\u{e0101}゙ 㐂\u{e0100}゙','A‘\ufe02́B','']],
+        ...[['native-variation-supplementary-marks-b',0x20000,0xe0100],['native-variation-supplementary-marks-g',0x30654,0xe0101]].map(([name,base,selector])=>{
+          const sequence=String.fromCodePoint(base,selector);
+          const marked=[0x3099,0x309a,0x302a,0x302b,0x302c,0x302d,0x302e,0x302f].map(cp=>sequence+String.fromCodePoint(cp));
+          return [name,[marked.slice(0,2).join(' '),marked.slice(2,5).join(' '),'A'+marked[5]+'B '+marked.slice(6).join(' '),'']];
+        }),
+        ['native-variation-han',['㐂\u{e0100} 㐂\u{e0101}','A㐂\u{e0101}B','㐂 㐂\u{e0101}','']],
+        ...[['marked-cjk-ivd-bmp','㐂\u{e0101}'],['marked-cjk-ivd-b','\u{20000}\u{e0100}'],['marked-cjk-ivd-g','\u{30654}\u{e0101}'],['marked-cjk-standard','豈\ufe00']].map(([name,sequence])=>[
+          name,[sequence+'́ '+sequence+'̣',sequence+'̣̂̇ '+sequence+'᪰','A'+sequence+'̣̂̇B','']
+        ]),
+        ['cjk-native-with-foreign-accents',(()=>{
+          const forms=[0x302a,0x302b,0x302c,0x302d,0x302e,0x302f,0x3099,0x309a].map(cp=>'㐂\u{e0101}'+String.fromCodePoint(cp)+'́');
+          return [forms.slice(0,3).join(' '),forms.slice(3,6).join(' '),'A'+forms.slice(6).join(' ')+'B',''];
+        })()],
+        ['combining-enclosures-basic',['A⃝ B⃞ C⃟','D⃠ E⃢ F⃤','G᪾ H⃝⃞','']],
+        ['combining-numeric-cyrillic',['а҈ в҉ г꙰','д꙱ е꙲','Á҈ B̂҉ C꙰ D꙱ E꙲','']],
+        ['combining-numeric-variants',['㐂\u{e0101}҈ 豈\ufe00҉','𝓏\ufe02꙰ 𝓏\ufe02꙱','\u{20000}\u{e0100}꙲ A҈⃞','']],
+        ['combining-enclosures-stacked',['Á⃝ Ḅ̂⃞','C⃝́⃞ D⃞⃝','A⃝⃝⃝','']],
+        ['combining-enclosures-repeated',['A⃤⃤⃤','B⃟⃟⃟','C⃝⃝⃝⃝','']],
+        ['combining-enclosures-variants',['㐂\u{e0101}́⃝ \u{20000}\u{e0100}⃞','𝓏\ufe02⃝ 豈\ufe00⃟','A㐂\u{e0101}⃝B','']],
+        ['combining-double-spans',['a͡b a͜b','á͠b̂ c͢d','A㐂\u{e0101}͞月B','']],
+        ['combining-double-inventory',(()=>{
+          const forms=[0x35c,0x35d,0x35e,0x35f,0x360,0x361,0x362,0x1aeb,0x1dcd,0x1dfc].map(cp=>'a'+String.fromCodePoint(cp)+'b');
+          return [forms.slice(0,3).join(' '),forms.slice(3,6).join(' '),forms.slice(6).join(' '),''];
+        })()],
+        ['combining-enclosures-rtl',['\u202eA⃝ B́⃞\u202c','\u202ea͡b\u202c','A⃝ 😀 🧑🏽‍🦰','']],
+        ['combining-enclosures-keycap-text',['A⃣ 中⃣','1⃣ 1️⃣','A⃝ 😀','']],
+        ['combining-foreign-ivd',['㐂\u{e0101}⃒ 㐂\u{e0101}⃒゙','㐂\u{e0101}⃒́ 㐂\u{e0101}⃒⃝','A㐂\u{e0101}⃒B','']],
+        ['combining-foreign-supplementary',['\u{20000}\u{e0100}⃒ \u{30654}\u{e0101}⃒','\u{20000}\u{e0100}⃒゙ \u{30654}\u{e0101}⃒⃞','A\u{20000}\u{e0100}⃒B','']],
+        ['combining-foreign-standard',['豈\ufe00゙ 豈\ufe00゙́','豈\ufe00⃒ 豈\ufe00゙⃝','A豈\ufe00ְB 豈\ufe00़','']],
+        ['combining-foreign-math',['𝓏\ufe02゙ 𝓏\ufe02゙́','𝓏\ufe02゙⃝ 𝓏\ufe02゙͡b','A𝓏\ufe02゙B','']],
+        ['combining-positional-classes',['豈\ufe00᷷ 豈\ufe00̛','A⃝̛ B⃞᷷','A⃝ᢩ B⃝゙','']],
+        ['combining-cgj-variants',['𝓏\ufe02͏゙ 豈\ufe00͏゙','𝓏\ufe02́͏゙ 豈\ufe00́͏゙','㐂\u{e0101}͏゙ A𝓏\ufe02゙͏́B','']],
+        ['combining-cgj-enclosures',['𝓏\ufe02゙͏́⃝ 豈\ufe00゙͏́⃞','𝓏\ufe02゙͏́⃝͏̣','豈\ufe00͏゙҈ 𝓏\ufe02͏゙꙱','']],
+        ['native-spacing-variations',['𝓏\ufe02ি 豈\ufe00ि','𝓏\ufe02ெ 豈\ufe00ொ','𝓏\ufe02ើ 豈\ufe00ើ','']],
+        ['native-spacing-variation-complete',['𝓏\ufe02ः 𝓏\ufe02ा','𝓏\ufe02ါ 豈\ufe00ါ','㐂\u{e0101}ि 㐂\u{e0101}ো','']],
+        ['routing-standalone-visible',['␧ ␨ ␩','⃣  ⃣','A⃣ 中⃣','1⃣ 1️⃣']],
+        ['tatweel-isolated',['ـ ـــ','ب ـ ب','بـب بــب مرحبا','ـَ ـِ']],
+        ['tatweel-boundaries',['LOOK ـ HERE','ب\u200cـ ـ\u200cب','ب\u200dـب ب\u061cـب','ـ 😀']],
+        ['format-signs-isolated',['\u0600 \u0601 \u0602','\u0603 \u0604 \u0605','\u06dd \u070f \u0890 \u0891','\u08e2 \u{110bd} \u{110cd}']],
+        ['format-signs-numbers',['\u0600123 \u06012026','\u06dd١٢٣ \u0890123 \u0891456','\u070fܒܓܕ \u08e2١٢٣','\u{110bd}१२३ \u{110cd}१२३']],
+        ['native-variation-myanmar',['က\ufe00ခ ကခ','က\ufe00က\ufe00ခ','MYANMAR: က\ufe00ခ','']],
+        ['native-mark-selector-myanmar',['ကေ ကေ\ufe00','ကေ\ufe00ခ ကေ\ufe00ကေ','MYANMAR: ကေ\ufe00ခ','']],
+        ['emoji-transport-extra-1',["🚀 🚁 🚉", "Transport: 🚀 🚁 🚉", "🚀 🚁 🚉", "🚀 🚁 🚉 🚀 🚁 🚉"]],
+        ['emoji-transport-extra-2',["🚊 🚋 🚏", "Transport: 🚊 🚋 🚏", "🚊 🚋 🚏", "🚊 🚋 🚏 🚊 🚋 🚏"]],
+        ['emoji-transport-extra-3',["🚒 🚓 🚖", "Transport: 🚒 🚓 🚖", "🚒 🚓 🚖", "🚒 🚓 🚖 🚒 🚓 🚖"]],
+        ['emoji-transport-extra-4',["🚞 🚟 🚠", "Transport: 🚞 🚟 🚠", "🚞 🚟 🚠", "🚞 🚟 🚠 🚞 🚟 🚠"]],
+        ['emoji-transport-extra-5',["🚡 🛴 🛵", "Transport: 🚡 🛴 🛵", "🚡 🛴 🛵", "🚡 🛴 🛵 🚡 🛴 🛵"]],
+        ['emoji-transport-extra-6',["🛫 🛬 🛝", "Transport: 🛫 🛬 🛝", "🛫 🛬 🛝", "🛫 🛬 🛝 🛫 🛬 🛝"]],
+        ['emoji-transport-extra-7',["🛞 🛟 🛢", "Transport: 🛞 🛟 🛢", "🛞 🛟 🛢", "🛞 🛟 🛢 🛞 🛟 🛢"]],
+        ['emoji-transport-extra-astronaut',['🚀 🧑‍🚀 🚀','🚀 🧑🏽‍🚀 🚀','👨🏿‍🚀 👩🏻‍🚀 🚀','🛢 🛢️ 🛢︎']],
+
+        ["emoji-activity-people-1f486", ["Taking a break: 💆", "💆‍♂️ 💆‍♀️", "💆🏻 💆🏽 💆🏿", "💆🏾‍♂️ 💆🏼‍♀️"]],
+        ["emoji-activity-people-1f487", ["Taking a break: 💇", "💇‍♂️ 💇‍♀️", "💇🏻 💇🏽 💇🏿", "💇🏾‍♂️ 💇🏼‍♀️"]],
+        ["emoji-activity-people-ballet", ["At the ballet: 🧑‍🩰", "🧑🏻‍🩰 🧑🏼‍🩰", "🧑🏽‍🩰 🧑🏾‍🩰", "🧑🏿‍🩰"]],
+        ["emoji-activity-people-levitating", ["Above it all: 🕴️", "🕴🏻 🕴🏼", "🕴🏽 🕴🏾", "🕴🏿"]],
+        ["emoji-activity-people-bunny-pairs-1f9d1", ["Together: 🧑🏻‍🐰‍🧑🏿", "🧑🏿‍🐰‍🧑🏻", "🧑🏽‍🐰‍🧑🏾", "🧑🏼‍🐰‍🧑🏽"]],
+        ["emoji-activity-people-bunny-pairs-1f468", ["Together: 👨🏻‍🐰‍👨🏿", "👨🏿‍🐰‍👨🏻", "👨🏽‍🐰‍👨🏾", "👨🏼‍🐰‍👨🏽"]],
+        ["emoji-activity-people-bunny-pairs-1f469", ["Together: 👩🏻‍🐰‍👩🏿", "👩🏿‍🐰‍👩🏻", "👩🏽‍🐰‍👩🏾", "👩🏼‍🐰‍👩🏽"]],
+        ["emoji-activity-people-juggling-1f939", ["A juggling act: 🤹", "🤹🏻 🤹🏼", "🤹🏽 🤹🏾", "🤹🏿"]],
+        ["emoji-activity-people-juggling-1f939_200d_2642", ["A juggling act: 🤹‍♂️", "🤹🏻‍♂️ 🤹🏼‍♂️", "🤹🏽‍♂️ 🤹🏾‍♂️", "🤹🏿‍♂️"]],
+        ["emoji-activity-people-juggling-1f939_200d_2640", ["A juggling act: 🤹‍♀️", "🤹🏻‍♀️ 🤹🏼‍♀️", "🤹🏽‍♀️ 🤹🏾‍♀️", "🤹🏿‍♀️"]],
+        ["emoji-covered-snowboarding", ["Snow day: 🏂", "🏂🏻 🏂🏼", "🏂🏽 🏂🏾", "🏂🏿"]],
+        ["emoji-activity-people-horse-racing", ["Off to the races: 🏇", "🏇🏻 🏇🏼", "🏇🏽 🏇🏾", "🏇🏿"]],
+        ["emoji-activity-people-golf-neutral", ["Fore! 🏌️", "🏌🏻 🏌🏼", "🏌🏽 🏌🏾", "🏌🏿 🏌︎"]],
+        ["emoji-activity-people-golf-male", ["Fore! 🏌️‍♂️", "🏌🏻‍♂️ 🏌🏼‍♂️", "🏌🏽‍♂️ 🏌🏾‍♂️", "🏌🏿‍♂️"]],
+        ["emoji-activity-people-golf-female", ["Fore! 🏌️‍♀️", "🏌🏻‍♀️ 🏌🏼‍♀️", "🏌🏽‍♀️ 🏌🏾‍♀️", "🏌🏿‍♀️"]],
+        ["emoji-activity-people-swimming-neutral", ["Swimming: 🏊", "🏊🏻 🏊🏼", "🏊🏽 🏊🏾", "🏊🏿 🏊︎ 🏊️"]],
+        ["emoji-activity-people-swimming-male", ["Swimming: 🏊‍♂️", "🏊🏻‍♂️ 🏊🏼‍♂️", "🏊🏽‍♂️ 🏊🏾‍♂️", "🏊🏿‍♂️"]],
+        ["emoji-activity-people-swimming-female", ["Swimming: 🏊‍♀️", "🏊🏻‍♀️ 🏊🏼‍♀️", "🏊🏽‍♀️ 🏊🏾‍♀️", "🏊🏿‍♀️"]],
+        ["emoji-activity-people-basketball-neutral", ["On the court: ⛹", "⛹🏻 ⛹🏼", "⛹🏽 ⛹🏾", "⛹🏿 ⛹︎ ⛹️"]],
+        ["emoji-activity-people-basketball-male", ["On the court: ⛹‍♂️", "⛹🏻‍♂️ ⛹🏼‍♂️", "⛹🏽‍♂️ ⛹🏾‍♂️", "⛹🏿‍♂️"]],
+        ["emoji-activity-people-basketball-female", ["On the court: ⛹‍♀️", "⛹🏻‍♀️ ⛹🏼‍♀️", "⛹🏽‍♀️ ⛹🏾‍♀️", "⛹🏿‍♀️"]],
+        ["emoji-activity-people-weightlifting-neutral", ["One more rep! 🏋", "🏋🏻 🏋🏼", "🏋🏽 🏋🏾", "🏋🏿 🏋︎ 🏋️"]],
+        ["emoji-activity-people-weightlifting-male", ["One more rep! 🏋‍♂️", "🏋🏻‍♂️ 🏋🏼‍♂️", "🏋🏽‍♂️ 🏋🏾‍♂️", "🏋🏿‍♂️"]],
+        ["emoji-activity-people-weightlifting-female", ["One more rep! 🏋‍♀️", "🏋🏻‍♀️ 🏋🏼‍♀️", "🏋🏽‍♀️ 🏋🏾‍♀️", "🏋🏿‍♀️"]],
+        ["emoji-activity-people-rowing-neutral", ["Rowing: 🚣", "🚣🏻 🚣🏼", "🚣🏽 🚣🏾", "🚣🏿"]],
+        ["emoji-activity-people-rowing-male", ["Rowing: 🚣‍♂️", "🚣🏻‍♂️ 🚣🏼‍♂️", "🚣🏽‍♂️ 🚣🏾‍♂️", "🚣🏿‍♂️"]],
+        ["emoji-activity-people-rowing-female", ["Rowing: 🚣‍♀️", "🚣🏻‍♀️ 🚣🏼‍♀️", "🚣🏽‍♀️ 🚣🏾‍♀️", "🚣🏿‍♀️"]],
+        ["emoji-activity-people-surfing-neutral", ["Surfing: 🏄", "🏄🏻 🏄🏼", "🏄🏽 🏄🏾", "🏄🏿 🏄︎ 🏄️"]],
+        ["emoji-activity-people-surfing-male", ["Surfing: 🏄‍♂️", "🏄🏻‍♂️ 🏄🏼‍♂️", "🏄🏽‍♂️ 🏄🏾‍♂️", "🏄🏿‍♂️"]],
+        ["emoji-activity-people-surfing-female", ["Surfing: 🏄‍♀️", "🏄🏻‍♀️ 🏄🏼‍♀️", "🏄🏽‍♀️ 🏄🏾‍♀️", "🏄🏿‍♀️"]],
+        ["emoji-activity-people-cycling-neutral", ["Cycling: 🚴", "🚴🏻 🚴🏼", "🚴🏽 🚴🏾", "🚴🏿"]],
+        ["emoji-activity-people-cycling-male", ["Cycling: 🚴‍♂️", "🚴🏻‍♂️ 🚴🏼‍♂️", "🚴🏽‍♂️ 🚴🏾‍♂️", "🚴🏿‍♂️"]],
+        ["emoji-activity-people-cycling-female", ["Cycling: 🚴‍♀️", "🚴🏻‍♀️ 🚴🏼‍♀️", "🚴🏽‍♀️ 🚴🏾‍♀️", "🚴🏿‍♀️"]],
+        ["emoji-activity-people-mountain-cycling-neutral", ["Mountain Cycling: 🚵", "🚵🏻 🚵🏼", "🚵🏽 🚵🏾", "🚵🏿"]],
+        ["emoji-activity-people-mountain-cycling-male", ["Mountain Cycling: 🚵‍♂️", "🚵🏻‍♂️ 🚵🏼‍♂️", "🚵🏽‍♂️ 🚵🏾‍♂️", "🚵🏿‍♂️"]],
+        ["emoji-activity-people-mountain-cycling-female", ["Mountain Cycling: 🚵‍♀️", "🚵🏻‍♀️ 🚵🏼‍♀️", "🚵🏽‍♀️ 🚵🏾‍♀️", "🚵🏿‍♀️"]],
+        ["emoji-activity-people-cartwheel-neutral", ["Cartwheel: 🤸", "🤸🏻 🤸🏼", "🤸🏽 🤸🏾", "🤸🏿"]],
+        ["emoji-activity-people-cartwheel-male", ["Cartwheel: 🤸‍♂️", "🤸🏻‍♂️ 🤸🏼‍♂️", "🤸🏽‍♂️ 🤸🏾‍♂️", "🤸🏿‍♂️"]],
+        ["emoji-activity-people-cartwheel-female", ["Cartwheel: 🤸‍♀️", "🤸🏻‍♀️ 🤸🏼‍♀️", "🤸🏽‍♀️ 🤸🏾‍♀️", "🤸🏿‍♀️"]],
+        ["emoji-activity-people-handball-neutral", ["Handball: 🤾", "🤾🏻 🤾🏼", "🤾🏽 🤾🏾", "🤾🏿"]],
+        ["emoji-activity-people-handball-male", ["Handball: 🤾‍♂️", "🤾🏻‍♂️ 🤾🏼‍♂️", "🤾🏽‍♂️ 🤾🏾‍♂️", "🤾🏿‍♂️"]],
+        ["emoji-activity-people-handball-female", ["Handball: 🤾‍♀️", "🤾🏻‍♀️ 🤾🏼‍♀️", "🤾🏽‍♀️ 🤾🏾‍♀️", "🤾🏿‍♀️"]],
+        ["emoji-activity-people-water-polo-neutral", ["Water Polo: 🤽", "🤽🏻 🤽🏼", "🤽🏽 🤽🏾", "🤽🏿"]],
+        ["emoji-activity-people-water-polo-male", ["Water Polo: 🤽‍♂️", "🤽🏻‍♂️ 🤽🏼‍♂️", "🤽🏽‍♂️ 🤽🏾‍♂️", "🤽🏿‍♂️"]],
+        ["emoji-activity-people-water-polo-female", ["Water Polo: 🤽‍♀️", "🤽🏻‍♀️ 🤽🏼‍♀️", "🤽🏽‍♀️ 🤽🏾‍♀️", "🤽🏿‍♀️"]],
+        ["emoji-activity-people-1f93c", ["Wrestling: 🤼", "🤼🏻 🤼🏼", "🤼🏽 🤼🏾", "🤼🏿"]],
+        ["emoji-wrestling-pairs-1f93c", ["🧑🏻‍🫯‍🧑🏿 🧑🏿‍🫯‍🧑🏻", "🧑🏼‍🫯‍🧑🏾 🧑🏾‍🫯‍🧑🏼", "🧑🏻‍🫯‍🧑🏽 🧑🏽‍🫯‍🧑🏻", "🧑🏽‍🫯‍🧑🏿 🧑🏿‍🫯‍🧑🏽"]],
+        ["emoji-activity-people-1f93c_200d_2642", ["Wrestling: 🤼‍♂️", "🤼🏻‍♂️ 🤼🏼‍♂️", "🤼🏽‍♂️ 🤼🏾‍♂️", "🤼🏿‍♂️"]],
+        ["emoji-wrestling-pairs-1f93c_200d_2642", ["👨🏻‍🫯‍👨🏿 👨🏿‍🫯‍👨🏻", "👨🏼‍🫯‍👨🏾 👨🏾‍🫯‍👨🏼", "👨🏻‍🫯‍👨🏽 👨🏽‍🫯‍👨🏻", "👨🏽‍🫯‍👨🏿 👨🏿‍🫯‍👨🏽"]],
+        ["emoji-activity-people-1f93c_200d_2640", ["Wrestling: 🤼‍♀️", "🤼🏻‍♀️ 🤼🏼‍♀️", "🤼🏽‍♀️ 🤼🏾‍♀️", "🤼🏿‍♀️"]],
+        ["emoji-wrestling-pairs-1f93c_200d_2640", ["👩🏻‍🫯‍👩🏿 👩🏿‍🫯‍👩🏻", "👩🏼‍🫯‍👩🏾 👩🏾‍🫯‍👩🏼", "👩🏻‍🫯‍👩🏽 👩🏽‍🫯‍👩🏻", "👩🏽‍🫯‍👩🏿 👩🏿‍🫯‍👩🏽"]],
+        ["emoji-activity-people-1f385", ["Santa: 🎅", "🎅🏻 🎅🏼", "🎅🏽 🎅🏾", "🎅🏿"]],
+        ["emoji-activity-people-1f936", ["Santa: 🤶", "🤶🏻 🤶🏼", "🤶🏽 🤶🏾", "🤶🏿"]],
+        ["emoji-activity-people-1f9d1_200d_1f384", ["Santa: 🧑‍🎄", "🧑🏻‍🎄 🧑🏼‍🎄", "🧑🏽‍🎄 🧑🏾‍🎄", "🧑🏿‍🎄"]],
+        ["emoji-activity-people-1f9d9", ["Magic: 🧙", "🧙🏻 🧙🏼", "🧙🏽 🧙🏾", "🧙🏿"]],
+        ["emoji-activity-people-1f9d9_200d_2642", ["Magic: 🧙‍♂️", "🧙🏻‍♂️ 🧙🏼‍♂️", "🧙🏽‍♂️ 🧙🏾‍♂️", "🧙🏿‍♂️"]],
+        ["emoji-activity-people-1f9d9_200d_2640", ["Magic: 🧙‍♀️", "🧙🏻‍♀️ 🧙🏼‍♀️", "🧙🏽‍♀️ 🧙🏾‍♀️", "🧙🏿‍♀️"]],
+        ["emoji-activity-people-1f9db", ["Vampire: 🧛", "🧛🏻 🧛🏼", "🧛🏽 🧛🏾", "🧛🏿"]],
+        ["emoji-activity-people-1f9db_200d_2642", ["Vampire: 🧛‍♂️", "🧛🏻‍♂️ 🧛🏼‍♂️", "🧛🏽‍♂️ 🧛🏾‍♂️", "🧛🏿‍♂️"]],
+        ["emoji-activity-people-1f9db_200d_2640", ["Vampire: 🧛‍♀️", "🧛🏻‍♀️ 🧛🏼‍♀️", "🧛🏽‍♀️ 🧛🏾‍♀️", "🧛🏿‍♀️"]],
+        ["emoji-activity-people-1f9dd", ["Elf: 🧝", "🧝🏻 🧝🏼", "🧝🏽 🧝🏾", "🧝🏿"]],
+        ["emoji-activity-people-1f9dd_200d_2642", ["Elf: 🧝‍♂️", "🧝🏻‍♂️ 🧝🏼‍♂️", "🧝🏽‍♂️ 🧝🏾‍♂️", "🧝🏿‍♂️"]],
+        ["emoji-activity-people-1f9dd_200d_2640", ["Elf: 🧝‍♀️", "🧝🏻‍♀️ 🧝🏼‍♀️", "🧝🏽‍♀️ 🧝🏾‍♀️", "🧝🏿‍♀️"]],
+        ["emoji-activity-people-1f9da", ["Fairy: 🧚", "🧚🏻 🧚🏼", "🧚🏽 🧚🏾", "🧚🏿"]],
+        ["emoji-activity-people-1f9da_200d_2642", ["Fairy: 🧚‍♂️", "🧚🏻‍♂️ 🧚🏼‍♂️", "🧚🏽‍♂️ 🧚🏾‍♂️", "🧚🏿‍♂️"]],
+        ["emoji-activity-people-1f9da_200d_2640", ["Fairy: 🧚‍♀️", "🧚🏻‍♀️ 🧚🏼‍♀️", "🧚🏽‍♀️ 🧚🏾‍♀️", "🧚🏿‍♀️"]],
+        ["emoji-activity-people-1f9dc", ["Merperson: 🧜", "🧜🏻 🧜🏼", "🧜🏽 🧜🏾", "🧜🏿"]],
+        ["emoji-activity-people-1f9dc_200d_2642", ["Merperson: 🧜‍♂️", "🧜🏻‍♂️ 🧜🏼‍♂️", "🧜🏽‍♂️ 🧜🏾‍♂️", "🧜🏿‍♂️"]],
+        ["emoji-activity-people-1f9dc_200d_2640", ["Merperson: 🧜‍♀️", "🧜🏻‍♀️ 🧜🏼‍♀️", "🧜🏽‍♀️ 🧜🏾‍♀️", "🧜🏿‍♀️"]],
+        ["emoji-activity-people-1f9b8", ["Hero: 🦸", "🦸🏻 🦸🏼", "🦸🏽 🦸🏾", "🦸🏿"]],
+        ["emoji-activity-people-1f9b8_200d_2642", ["Hero: 🦸‍♂️", "🦸🏻‍♂️ 🦸🏼‍♂️", "🦸🏽‍♂️ 🦸🏾‍♂️", "🦸🏿‍♂️"]],
+        ["emoji-activity-people-1f9b8_200d_2640", ["Hero: 🦸‍♀️", "🦸🏻‍♀️ 🦸🏼‍♀️", "🦸🏽‍♀️ 🦸🏾‍♀️", "🦸🏿‍♀️"]],
+        ["emoji-fantasy-1f9b9", ["Villain: 🦹", "🦹🏻 🦹🏼", "🦹🏽 🦹🏾", "🦹🏿"]],
+        ["emoji-fantasy-1f9b9_200d_2642", ["Villain: 🦹‍♂️", "🦹🏻‍♂️ 🦹🏼‍♂️", "🦹🏽‍♂️ 🦹🏾‍♂️", "🦹🏿‍♂️"]],
+        ["emoji-fantasy-1f9b9_200d_2640", ["Villain: 🦹‍♀️", "🦹🏻‍♀️ 🦹🏼‍♀️", "🦹🏽‍♀️ 🦹🏾‍♀️", "🦹🏿‍♀️"]],
+        ["emoji-fantasy-1f9de", ["Genie: 🧞", "🧞 🧞", "Really? 🧞", "🧞"]],
+        ["emoji-fantasy-1f9de_200d_2642", ["Genie: 🧞‍♂️", "🧞‍♂️ 🧞‍♂️", "Really? 🧞‍♂️", "🧞‍♂️"]],
+        ["emoji-fantasy-1f9de_200d_2640", ["Genie: 🧞‍♀️", "🧞‍♀️ 🧞‍♀️", "Really? 🧞‍♀️", "🧞‍♀️"]],
+        ["emoji-fantasy-1f9df", ["Zombie: 🧟", "🧟 🧟", "Really? 🧟", "🧟"]],
+        ["emoji-fantasy-1f9df_200d_2642", ["Zombie: 🧟‍♂️", "🧟‍♂️ 🧟‍♂️", "Really? 🧟‍♂️", "🧟‍♂️"]],
+        ["emoji-fantasy-1f9df_200d_2640", ["Zombie: 🧟‍♀️", "🧟‍♀️ 🧟‍♀️", "Really? 🧟‍♀️", "🧟‍♀️"]],
+        ["emoji-fantasy-1f9cc", ["Troll: 🧌", "🧌 🧌", "Really? 🧌", "🧌"]],
+        ["emoji-baby-angel", ["Angel: 👼", "👼🏻 👼🏼", "👼🏽 👼🏾", "👼🏿"]],
+        ["emoji-symbol-tiles-1", ["Symbols: 🔠 🔡", "🔢 🔣", "Those? 🔤 🅰️", "🆎 🅱️"]],
+        ["emoji-symbol-tiles-2", ["Symbols: 🆑 🆒", "🆓 ℹ️", "Those? 🆔 Ⓜ️", "🆕 🆖"]],
+        ["emoji-symbol-tiles-3", ["Symbols: 🅾️ 🆗", "🅿️ 🆘", "Those? 🆙 🆚", "🈁 🈂️"]],
+        ["emoji-symbol-tiles-4", ["Symbols: 🈷️ 🈶", "🈯 🉐", "Those? 🈹 🈚", "🈲 🉑"]],
+        ["emoji-symbol-tiles-5", ["Symbols: 🈸 🈴", "🈳 ㊗️", "Those? ㊙️ 🈺", "🈵 ⬆️"]],
+        ["emoji-symbol-tiles-6", ["Symbols: ↗️ ➡️", "↘️ ⬇️", "Those? ↙️ ⬅️", "↖️ ↕️"]],
+        ["emoji-symbol-tiles-7", ["Symbols: ↔️ ↩️", "↪️ ⤴️", "Those? ⤵️ 🔃", "🔄 🔙"]],
+        ["emoji-symbol-tiles-8", ["Symbols: 🔚 🔛", "🔜 🔝", "Those? 🔀 🔁", "🔂 ▶️"]],
+        ["emoji-symbol-tiles-9", ["Symbols: ⏩ ⏭️", "⏯️ ◀️", "Those? ⏪ ⏮️", "🔼 ⏫"]],
+        ["emoji-symbol-tiles-10", ["Symbols: 🔽 ⏬", "⏸️ ⏹️", "Those? ⏺️ ⏏️", "🎦 🔅"]],
+        ["emoji-symbol-tiles-11", ["Symbols: 🔆 📶", "🛜 📳", "Those? 📴", ""]],
+        ["emoji-promoted-arrow-ligatures", ["➡️ 🚶‍➡️", "↔️ 🙂‍↔️", "↕️ 🙂‍↕️", "🚶🏿‍♀️‍➡️ 🙂‍↔️"]],
+        ["emoji-symbol-marks-1", ["Symbols: 🛐 ⚛️", "🕉️ ✡️", "Those? ☸️ ☯️", "✝️ ☦️"]],
+        ["emoji-symbol-marks-2", ["Symbols: ☪️ ☮️", "🕎 🔯", "Those? 🪯 ♈", "♉ ♊"]],
+        ["emoji-symbol-marks-3", ["Symbols: ♋ ♌", "♍ ♎", "Those? ♏ ♐", "♑ ♒"]],
+        ["emoji-symbol-marks-4", ["Symbols: ♓ ⛎", "♀️ ♂️", "Those? ⚧️ ✖️", "➕ ➖"]],
+        ["emoji-symbol-marks-5", ["Symbols: ➗ 🟰", "♾️ ‼️", "Those? ⁉️ ❓", "❔ ❕"]],
+        ["emoji-symbol-marks-6", ["Symbols: ❗ 〰️", "💱 💲", "Those? ", ""]],
+        ["emoji-promoted-gender-ligatures", ["♀️ 👩‍⚕️ ♂️", "♂️ 🧑🏿‍⚖️ ♀️", "🏃🏽‍♀️ ♀️", "♂️ 🧟‍♂️ 🧞‍♀️"]],
+        ["emoji-signs-1", ["Signs: 🏧 🚮", "🚰 ♿", "Those? 🚹 🚺", "🚻 🚼"]],
+        ["emoji-signs-2", ["Signs: 🚾 🛂", "🛃 🛄", "Those? 🛅 ⚠️", "🚸 ⛔"]],
+        ["emoji-signs-3", ["Signs: 🚫 🚳", "🚭 🚯", "Those? 🚱 🚷", "📵 🔞"]],
+        ["emoji-signs-4", ["Signs: ☢️ ☣️", "⚕️ ♻️", "Those? ⚜️ 🔱", "📛 🔰"]],
+        ["emoji-signs-5", ["Signs: ⭕ ✅", "☑️ ✔️", "Those? ❌ ❎", "➰ ➿"]],
+        ["emoji-signs-6", ["Signs: 〽️ ✳️", "✴️ ❇️", "Those? ©️ ®️", "™️"]],
+        ["emoji-promoted-medical-ligatures", ["⚕️ 🧑‍⚕️", "👩🏻‍⚕️ ⚕️", "⚕️ 👨🏿‍⚕️", "🧑🏽‍⚕️ ⚕️"]],
+        ["emoji-expression-expansion-1", ["Really? ☺️ 🤮", "☹️ 😳", "Oh! 🤬 👿", "☠️ 💩"]],
+        ["emoji-expression-expansion-2", ["Really? 🤡 👹", "👺 👻", "Oh! 👽 👾", "🤖 💌"]],
+        ["emoji-expression-expansion-3", ["Really? 💘 💝", "💖 💗", "Oh! 💓 💞", "💕 💟"]],
+        ["emoji-expression-expansion-4", ["Really? ❣️ 💔", "❤️‍🔥 ❤️‍🩹", "Oh! 💋 💯", "💢 💥"]],
+        ["emoji-expression-expansion-5", ["Really? 💫 💦", "💨 🕳️", "Oh! 💬 👁️‍🗨️", "🗨️ 🗯️"]],
+        ["emoji-expression-expansion-6", ["Really? 💭 💤", "", "Oh! ", ""]],
+        ["emoji-promoted-expression-ligatures", ["💨 😮‍💨", "💫 😵‍💫", "💥 ⛓️‍💥", "❤️‍🔥 ❤️‍🩹 👁️‍🗨️"]],
+        ["emoji-geometric-1", ["Signs: 🔶 🔷", "🔸 🔹", "Those? 🔺 🔻", "💠 🔘"]],
+        ["emoji-geometric-2", ["Signs: 🔳 🔲", "🔟", "Those? ", ""]],
+        ["emoji-geometric-size-pairs", ["🔶 🔸", "🔷 🔹", "🔺 🔻", "🔳 🔲 🔟"]],
+        ["emoji-hand-prop-writing", ["Really? ✍️ ✍🏻", "✍🏼 ✍🏽", "✍🏾 ✍🏿", "Yes. ✍️"]],
+        ["emoji-hand-prop-polish", ["Really? 💅 💅🏻", "💅🏼 💅🏽", "💅🏾 💅🏿", "Yes. 💅"]],
+        ["emoji-hand-prop-selfie", ["Really? 🤳 🤳🏻", "🤳🏼 🤳🏽", "🤳🏾 🤳🏿", "Yes. 🤳"]],
+        ["emoji-person-symbols-1", ["People: 🗣️ 👤", "👥 🫂", "Family? 👪 🧑‍🧑‍🧒", "🧑‍🧑‍🧒‍🧒 🧑‍🧒"]],
+        ["emoji-person-symbols-2", ["People: 🧑‍🧒‍🧒 👣", "", "Family? ", ""]],
+        ["emoji-neutral-family-boundaries", ["🧑‍🧒 🧑‍🧒‍🧒", "🧑‍🧑‍🧒 🧑‍🧑‍🧒‍🧒", "🧑 🧑‍🧒 🧒", "👪 🫂 👥"]],
+        ["emoji-game-medical-1", ["Signs: 🔫 ♠️", "♥️ ♦️", "Those? ♣️ ♟️", "🀄 🩸"]],
+        ["emoji-game-medical-2", ["Signs: 🩹", "", "Those? ", ""]],
+        ["emoji-promoted-bandage-ligatures", ["🩹 ❤️‍🩹", "❤️‍🩹 🩹", "❤‍🩹 🩹 ❤️‍🩹", "🩹 🩸"]],
+        ["emoji-sound-controls-1", ["Listen: 🔇 🔈", "🔉 🔊", "Louder? 📢 📣", "📯 🔔"]],
+        ["emoji-sound-controls-2", ["Listen: 🔕 🎙️", "🎚️ 🎛️", "Louder? ", ""]],
+        ["emoji-volume-and-controls", ["🔇 🔈 🔉 🔊", "🔔 🔕", "🎙️ 🎚️ 🎛️", "📢 📣 📯"]],
+        ["emoji-awards-events-1", ["Awards: ✨ 🧧", "🎗️ 🎖️", "Those? 🏆 🏅", "🥇 🥈"]],
+        ["emoji-awards-events-2", ["Awards: 🥉", "", "Those? ", ""]],
+        ["emoji-medal-ranks-and-envelope", ["🥇 🥈 🥉", "🎖️ 🏅 🏆", "🧧 ✨", "🎗️"]],
+        ["emoji-holding-hands-1f46d", ["Together: 👭 👭🏻", "👭🏼 👭🏽", "These too? 👭🏾 👭🏿", "👩🏻‍🤝‍👩🏿 👩🏿‍🤝‍👩🏻"]],
+        ["emoji-holding-hands-1f9d1_200d_1f91d_200d_1f9d1", ["Together: 🧑‍🤝‍🧑 🧑🏻‍🤝‍🧑🏻", "🧑🏼‍🤝‍🧑🏼 🧑🏽‍🤝‍🧑🏽", "These too? 🧑🏾‍🤝‍🧑🏾 🧑🏿‍🤝‍🧑🏿", "🧑🏻‍🤝‍🧑🏿 🧑🏿‍🤝‍🧑🏻"]],
+        ["emoji-holding-hands-1f46c", ["Together: 👬 👬🏻", "👬🏼 👬🏽", "These too? 👬🏾 👬🏿", "👨🏻‍🤝‍👨🏿 👨🏿‍🤝‍👨🏻"]],
+        ["emoji-holding-hands-1f46b", ["Together: 👫 👫🏻", "👫🏼 👫🏽", "These too? 👫🏾 👫🏿", "👩🏻‍🤝‍👨🏿 👩🏿‍🤝‍👨🏻"]],
+        ["emoji-holding-hands-mixed", ["🧑🏼‍🤝‍🧑🏾 🧑🏾‍🤝‍🧑🏼", "👩🏼‍🤝‍👩🏾 👩🏾‍🤝‍👩🏼", "👩🏼‍🤝‍👨🏾 👩🏾‍🤝‍👨🏼", "👨🏼‍🤝‍👨🏾 👨🏾‍🤝‍👨🏼"]],
+        ["emoji-holding-hands-boundaries", ["🧑🏻🧑🏻‍🤝‍🧑🏿👩🏿", "🧑🏻👩🏻‍🤝‍👩🏿👩🏿", "🧑🏻👩🏻‍🤝‍👨🏿👩🏿", "🧑🏻👨🏻‍🤝‍👨🏿👩🏿"]],
+        ["emoji-books-1", ["THESE BOOKS: 📔 📕 📖 📗", "📘 📙 📚 📓", "📃 📜 📄 📰", "📒 🗞️ 📑 🔖"]],
+        ["emoji-final-office-locks-1", ["🛎️ 🛎 🔏", "🔐 📈 📉", "📊", ""]],
+        ["emoji-final-tools-instruments-1", ["🗡️ 🗡 ⚔️", "⚔ 💣 🪃", "🏹 🛡️ 🛡", ""]],
+        ["emoji-final-tools-instruments-2", ["🪗 🪕 🪘", "🪇 🪈", "", ""]],
+        ["emoji-final-places-weather-1", ["🧱 🪨 🪵", "⛺ 💈 🌡️", "🌡 🪐 🌈", ""]],
+        ["emoji-final-other-objects-1", ["🚬 ⚰️ ⚰", "🪦 ⚱️ ⚱", "🧿 🪬 🗿", ""]],
+        ["emoji-final-other-objects-2", ["🪧 🪪", "", "", ""]],
+        ["emoji-final-globes-1", ["🌍 🌎 🌏", "", "", ""]],
+        ["emoji-final-phoenix-1", ["🐦‍🔥", "", "", ""]],
+        ["emoji-final-air-water-1", ["✈️ ✈ 🛩️", "🛩 🪂 💺", "🛰️ 🛰 🛸", ""]],
+        ["emoji-final-air-water-2", ["⚓ 🛳️ 🛳", "", "", ""]],
+        ["emoji-final-road-infrastructure-1", ["🛣️ 🛣 🛤️", "🛤 ⛽ 🚨", "🚥 🚦 🛑", ""]],
+        ["emoji-final-road-infrastructure-2", ["🚧", "", "", ""]],
+        ["emoji-final-ground-vehicles-1", ["🚍 🚑 🚔", "🚘 🛻 🏎️", "🏎 🏍️ 🏍", ""]],
+        ["emoji-final-ground-vehicles-2", ["🚲 🛹 🛼", "", "", ""]],
+        ["emoji-final-boundaries", ["🐦‍🔥🐦🔥", "🪕🌏🇬🇧", "🚲⛽🛼", ""]],
+        ["emoji-money-1", ["CASH: 🪙 💰 💴 💵", "💶 💷 💸 💳", "🧾 💹", ""]],
+        ["emoji-accessories-1", ["GLASSES: 👓 🕶️ 🕶", "🪭 🛍️ 🛍 🪮", "📿 💄 💍 💎", ""]],
+        ["emoji-object-boundaries", ["BEFORE: 🇬🇧📖💵", "AFTER: 💹📬👓", "💴💵💶💷", "🪙💰💎🛍️"]],
+        ["emoji-books-2", ["TAG IT: 🏷️ 🏷", "OLD NEWS: 🗞️ 🗞", "MIND THE PAGES: 📖 📚", "📔📕📗📘📙"]],
+        ["emoji-mail-1", ["MAIL: ✉️ ✉ 📧 📨", "📩 📤 📥 📦", "📫 📪 📬 📭", "📮 🗳️ 🗳"]],
+        ["emoji-book-mail-boundaries", ["MIXED: 📫📪📬📭", "📖📚📔📒", "✉️📤✉📥", "🏷️🗞️🗳️🇬🇧"]],
+        ["emoji-flags-general-1", ["🏁 🚩 🎌 🏴", "🏳️ 🏳 🏳️‍🌈 🏳‍🌈", "🏳️‍⚧️ 🏳‍⚧️ 🏳️‍⚧ 🏳‍⚧", "🏴‍☠️ 🏴‍☠"]],
+        ["emoji-flags-regional-1", ["🇦🇨 🇦🇩 🇦🇪 🇦🇫", "🇦🇬 🇦🇮 🇦🇱 🇦🇲", "🇦🇴 🇦🇶 🇦🇷 🇦🇸", "🇦🇹 🇦🇺 🇦🇼 🇦🇽"]],
+        ["emoji-flags-regional-2", ["🇦🇿 🇧🇦 🇧🇧 🇧🇩", "🇧🇪 🇧🇫 🇧🇬 🇧🇭", "🇧🇮 🇧🇯 🇧🇱 🇧🇲", "🇧🇳 🇧🇴 🇧🇶 🇧🇷"]],
+        ["emoji-flags-regional-3", ["🇧🇸 🇧🇹 🇧🇻 🇧🇼", "🇧🇾 🇧🇿 🇨🇦 🇨🇨", "🇨🇩 🇨🇫 🇨🇬 🇨🇭", "🇨🇮 🇨🇰 🇨🇱 🇨🇲"]],
+        ["emoji-flags-regional-4", ["🇨🇳 🇨🇴 🇨🇵 🇨🇶", "🇨🇷 🇨🇺 🇨🇻 🇨🇼", "🇨🇽 🇨🇾 🇨🇿 🇩🇪", "🇩🇬 🇩🇯 🇩🇰 🇩🇲"]],
+        ["emoji-flags-regional-5", ["🇩🇴 🇩🇿 🇪🇦 🇪🇨", "🇪🇪 🇪🇬 🇪🇭 🇪🇷", "🇪🇸 🇪🇹 🇪🇺 🇫🇮", "🇫🇯 🇫🇰 🇫🇲 🇫🇴"]],
+        ["emoji-flags-regional-6", ["🇫🇷 🇬🇦 🇬🇧 🇬🇩", "🇬🇪 🇬🇫 🇬🇬 🇬🇭", "🇬🇮 🇬🇱 🇬🇲 🇬🇳", "🇬🇵 🇬🇶 🇬🇷 🇬🇸"]],
+        ["emoji-flags-regional-7", ["🇬🇹 🇬🇺 🇬🇼 🇬🇾", "🇭🇰 🇭🇲 🇭🇳 🇭🇷", "🇭🇹 🇭🇺 🇮🇨 🇮🇩", "🇮🇪 🇮🇱 🇮🇲 🇮🇳"]],
+        ["emoji-flags-regional-8", ["🇮🇴 🇮🇶 🇮🇷 🇮🇸", "🇮🇹 🇯🇪 🇯🇲 🇯🇴", "🇯🇵 🇰🇪 🇰🇬 🇰🇭", "🇰🇮 🇰🇲 🇰🇳 🇰🇵"]],
+        ["emoji-flags-regional-9", ["🇰🇷 🇰🇼 🇰🇾 🇰🇿", "🇱🇦 🇱🇧 🇱🇨 🇱🇮", "🇱🇰 🇱🇷 🇱🇸 🇱🇹", "🇱🇺 🇱🇻 🇱🇾 🇲🇦"]],
+        ["emoji-flags-regional-10", ["🇲🇨 🇲🇩 🇲🇪 🇲🇫", "🇲🇬 🇲🇭 🇲🇰 🇲🇱", "🇲🇲 🇲🇳 🇲🇴 🇲🇵", "🇲🇶 🇲🇷 🇲🇸 🇲🇹"]],
+        ["emoji-flags-regional-11", ["🇲🇺 🇲🇻 🇲🇼 🇲🇽", "🇲🇾 🇲🇿 🇳🇦 🇳🇨", "🇳🇪 🇳🇫 🇳🇬 🇳🇮", "🇳🇱 🇳🇴 🇳🇵 🇳🇷"]],
+        ["emoji-flags-regional-12", ["🇳🇺 🇳🇿 🇴🇲 🇵🇦", "🇵🇪 🇵🇫 🇵🇬 🇵🇭", "🇵🇰 🇵🇱 🇵🇲 🇵🇳", "🇵🇷 🇵🇸 🇵🇹 🇵🇼"]],
+        ["emoji-flags-regional-13", ["🇵🇾 🇶🇦 🇷🇪 🇷🇴", "🇷🇸 🇷🇺 🇷🇼 🇸🇦", "🇸🇧 🇸🇨 🇸🇩 🇸🇪", "🇸🇬 🇸🇭 🇸🇮 🇸🇯"]],
+        ["emoji-flags-regional-14", ["🇸🇰 🇸🇱 🇸🇲 🇸🇳", "🇸🇴 🇸🇷 🇸🇸 🇸🇹", "🇸🇻 🇸🇽 🇸🇾 🇸🇿", "🇹🇦 🇹🇨 🇹🇩 🇹🇫"]],
+        ["emoji-flags-regional-15", ["🇹🇬 🇹🇭 🇹🇯 🇹🇰", "🇹🇱 🇹🇲 🇹🇳 🇹🇴", "🇹🇷 🇹🇹 🇹🇻 🇹🇼", "🇹🇿 🇺🇦 🇺🇬 🇺🇲"]],
+        ["emoji-flags-regional-16", ["🇺🇳 🇺🇸 🇺🇾 🇺🇿", "🇻🇦 🇻🇨 🇻🇪 🇻🇬", "🇻🇮 🇻🇳 🇻🇺 🇼🇫", "🇼🇸 🇽🇰 🇾🇪 🇾🇹"]],
+        ["emoji-flags-regional-17", ["🇿🇦 🇿🇲 🇿🇼 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "🏴󠁧󠁢󠁳󠁣󠁴󠁿 🏴󠁧󠁢󠁷󠁬󠁳󠁿", "", ""]],
+        ["emoji-flags-boundaries", ["🏴🏴‍☠️🏴", "🏳️🏳️‍🌈🏳️‍⚧️🏳️", "🇬🇧🇺🇸🇬🇧", "🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴"]],
+        ["emoji-flags-incomplete", ["🇬 🇬🇧 🇦🇦", "🏴󠁺󠁺󠁿 🏴", "🏳️‍🌈‍🌈 🏳️‍🌈", "🇺🇸 🇬"]],
+        ["emoji-family-tiles-1", ["Family: 👨‍👩‍👦 👨‍👩‍👧", "👨‍👩‍👧‍👦 👨‍👩‍👦‍👦", "And? 👨‍👩‍👧‍👧 👨‍👨‍👦", "👨‍👨‍👧 👨‍👨‍👧‍👦"]],
+        ["emoji-family-tiles-2", ["Family: 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧", "👩‍👩‍👦 👩‍👩‍👧", "And? 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦", "👩‍👩‍👧‍👧 👨‍👦"]],
+        ["emoji-family-tiles-3", ["Family: 👨‍👦‍👦 👨‍👧", "👨‍👧‍👦 👨‍👧‍👧", "And? 👩‍👦 👩‍👦‍👦", "👩‍👧 👩‍👧‍👦"]],
+        ["emoji-family-tiles-4", ["Family: 👩‍👧‍👧", "", "And? ", ""]],
+        ["emoji-couples-1f48f", ["Together: 💏 💏🏻", "💏🏼 💏🏽", "These too? 💏🏾 💏🏿", "🧑🏻‍❤️‍💋‍🧑🏿 🧑🏿‍❤️‍💋‍🧑🏻"]],
+        ["emoji-couples-1f469_200d_2764_200d_1f48b_200d_1f468", ["Together: 👩‍❤️‍💋‍👨 👩🏻‍❤️‍💋‍👨🏻", "👩🏼‍❤️‍💋‍👨🏼 👩🏽‍❤️‍💋‍👨🏽", "These too? 👩🏾‍❤️‍💋‍👨🏾 👩🏿‍❤️‍💋‍👨🏿", "👩🏻‍❤️‍💋‍👨🏿 👩🏿‍❤️‍💋‍👨🏻"]],
+        ["emoji-couples-1f468_200d_2764_200d_1f48b_200d_1f468", ["Together: 👨‍❤️‍💋‍👨 👨🏻‍❤️‍💋‍👨🏻", "👨🏼‍❤️‍💋‍👨🏼 👨🏽‍❤️‍💋‍👨🏽", "These too? 👨🏾‍❤️‍💋‍👨🏾 👨🏿‍❤️‍💋‍👨🏿", "👨🏻‍❤️‍💋‍👨🏿 👨🏿‍❤️‍💋‍👨🏻"]],
+        ["emoji-couples-1f469_200d_2764_200d_1f48b_200d_1f469", ["Together: 👩‍❤️‍💋‍👩 👩🏻‍❤️‍💋‍👩🏻", "👩🏼‍❤️‍💋‍👩🏼 👩🏽‍❤️‍💋‍👩🏽", "These too? 👩🏾‍❤️‍💋‍👩🏾 👩🏿‍❤️‍💋‍👩🏿", "👩🏻‍❤️‍💋‍👩🏿 👩🏿‍❤️‍💋‍👩🏻"]],
+        ["emoji-couples-1f491", ["Together: 💑 💑🏻", "💑🏼 💑🏽", "These too? 💑🏾 💑🏿", "🧑🏻‍❤️‍🧑🏿 🧑🏿‍❤️‍🧑🏻"]],
+        ["emoji-couples-1f469_200d_2764_200d_1f468", ["Together: 👩‍❤️‍👨 👩🏻‍❤️‍👨🏻", "👩🏼‍❤️‍👨🏼 👩🏽‍❤️‍👨🏽", "These too? 👩🏾‍❤️‍👨🏾 👩🏿‍❤️‍👨🏿", "👩🏻‍❤️‍👨🏿 👩🏿‍❤️‍👨🏻"]],
+        ["emoji-couples-1f468_200d_2764_200d_1f468", ["Together: 👨‍❤️‍👨 👨🏻‍❤️‍👨🏻", "👨🏼‍❤️‍👨🏼 👨🏽‍❤️‍👨🏽", "These too? 👨🏾‍❤️‍👨🏾 👨🏿‍❤️‍👨🏿", "👨🏻‍❤️‍👨🏿 👨🏿‍❤️‍👨🏻"]],
+        ["emoji-couples-1f469_200d_2764_200d_1f469", ["Together: 👩‍❤️‍👩 👩🏻‍❤️‍👩🏻", "👩🏼‍❤️‍👩🏼 👩🏽‍❤️‍👩🏽", "These too? 👩🏾‍❤️‍👩🏾 👩🏿‍❤️‍👩🏿", "👩🏻‍❤️‍👩🏿 👩🏿‍❤️‍👩🏻"]],
+        ["emoji-couples-mixed", ["🧑🏼‍❤️‍💋‍🧑🏾 🧑🏾‍❤️‍💋‍🧑🏼", "👩🏼‍❤️‍💋‍👨🏾 👩🏾‍❤️‍💋‍👨🏼", "👨🏼‍❤️‍👨🏾 👨🏾‍❤️‍👨🏼", "👩🏼‍❤️‍👩🏾 👩🏾‍❤️‍👩🏼"]],
+        ["emoji-couples-boundaries", ["🧑🏻👩🏻‍❤️‍💋‍👨🏿👩🏿", "💏🏻💏🏿", "🧑🏻👩🏻‍❤️‍👩🏿👩🏿", "💑🏻💑🏿"]],
+        ["emoji-couples-qualification", ["👩‍❤‍💋‍👨 👩‍❤️‍💋‍👨", "👨‍❤‍👨 👨‍❤️‍👨", "👩🏻‍❤‍👩🏿 👩🏻‍❤️‍👩🏿", "🧑🏻‍❤‍💋‍🧑🏿 🧑🏻‍❤️‍💋‍🧑🏿"]],
+        ["emoji-clothed-sport", ["On guard: 🤺", "⛷︎ ⛷️", "Skiing: ⛷", "🤺 ⛷️"]],
+        ["emoji-body-parts-head", ["Think: 🧠", "🦷 🦴", "Eyes: 👀 👁️", "👁︎ 👁️"]],
+        ["emoji-body-parts-mouth", ["👅 👄 🫦", "Say it: 👄", "👄 🫦 👅", "👀 👁️"]],
+        ["emoji-body-parts-anatomy", ["🫀 🫁", "🦾 🦿", "Strong: 🦾", "🫀 🧠"]],
+        ["emoji-activity-people-body-1f4aa", ["Body language: 💪", "💪🏻 💪🏼", "💪🏽 💪🏾", "💪🏿"]],
+        ["emoji-activity-people-body-1f442", ["Body language: 👂", "👂🏻 👂🏼", "👂🏽 👂🏾", "👂🏿"]],
+        ["emoji-activity-people-body-1f9bb", ["Body language: 🦻", "🦻🏻 🦻🏼", "🦻🏽 🦻🏾", "🦻🏿"]],
+        ["emoji-activity-people-body-1f443", ["Body language: 👃", "👃🏻 👃🏼", "👃🏽 👃🏾", "👃🏿"]],
+        ["emoji-activity-people-body-1f9b5", ["Body language: 🦵", "🦵🏻 🦵🏼", "🦵🏽 🦵🏾", "🦵🏿"]],
+        ["emoji-activity-people-body-1f9b6", ["Body language: 🦶", "🦶🏻 🦶🏼", "🦶🏽 🦶🏾", "🦶🏿"]],
+        ["emoji-activity-people-resting-lotus", ["A quiet moment: 🧘", "🧘‍♂️ 🧘‍♀️", "🧘🏻 🧘🏽 🧘🏿", "🧘🏾‍♂️ 🧘🏼‍♀️"]],
+        ["emoji-activity-people-resting-bath", ["Time for a bath: 🛀", "🛀🏻 🛀🏼", "🛀🏽 🛀🏾", "🛀🏿"]],
+        ["emoji-activity-people-resting-bed", ["Good night: 🛌", "🛌🏻 🛌🏼", "🛌🏽 🛌🏾", "🛌🏿"]],
+        ["emoji-mobility-components", ["Equipment: 🦯 🦼 🦽", "🧑‍🦯 🧑‍🦼 🧑‍🦽", "👨🏽‍🦯 👩🏼‍🦽", "On the move!"]],
+        ["emoji-activity-people-1f9af", ["On the move: 🧑‍🦯", "👨‍🦯 👩‍🦯", "🧑🏻‍🦯 🧑🏽‍🦯 🧑🏿‍🦯", "👨🏾‍🦯 👩🏼‍🦯"]],
+        ["emoji-activity-people-1f9af-right", ["On the move: 🧑‍🦯‍➡️", "👨‍🦯‍➡️ 👩‍🦯‍➡️", "🧑🏻‍🦯‍➡️ 🧑🏽‍🦯‍➡️ 🧑🏿‍🦯‍➡️", "👨🏾‍🦯‍➡️ 👩🏼‍🦯‍➡️"]],
+        ["emoji-activity-people-1f9bc", ["On the move: 🧑‍🦼", "👨‍🦼 👩‍🦼", "🧑🏻‍🦼 🧑🏽‍🦼 🧑🏿‍🦼", "👨🏾‍🦼 👩🏼‍🦼"]],
+        ["emoji-activity-people-1f9bc-right", ["On the move: 🧑‍🦼‍➡️", "👨‍🦼‍➡️ 👩‍🦼‍➡️", "🧑🏻‍🦼‍➡️ 🧑🏽‍🦼‍➡️ 🧑🏿‍🦼‍➡️", "👨🏾‍🦼‍➡️ 👩🏼‍🦼‍➡️"]],
+        ["emoji-activity-people-1f9bd", ["On the move: 🧑‍🦽", "👨‍🦽 👩‍🦽", "🧑🏻‍🦽 🧑🏽‍🦽 🧑🏿‍🦽", "👨🏾‍🦽 👩🏼‍🦽"]],
+        ["emoji-activity-people-1f9bd-right", ["On the move: 🧑‍🦽‍➡️", "👨‍🦽‍➡️ 👩‍🦽‍➡️", "🧑🏻‍🦽‍➡️ 🧑🏽‍🦽‍➡️ 🧑🏿‍🦽‍➡️", "👨🏾‍🦽‍➡️ 👩🏼‍🦽‍➡️"]],
+        ["emoji-activity-people-1f46f", ["Dancing together: 👯", "👯‍♂️ 👯‍♀️", "👯🏻 👯🏽 👯🏿", "👯🏾‍♂️ 👯🏼‍♀️"]],
+        ["emoji-activity-people-1f9d6", ["Time to relax: 🧖", "🧖‍♂️ 🧖‍♀️", "🧖🏻 🧖🏽 🧖🏿", "🧖🏾‍♂️ 🧖🏼‍♀️"]],
+        ["emoji-activity-people-1f9d7", ["Climbing higher: 🧗", "🧗‍♂️ 🧗‍♀️", "🧗🏻 🧗🏽 🧗🏿", "🧗🏾‍♂️ 🧗🏼‍♀️"]],
+        ["emoji-activity-people-1f483", ["Feeling expressive: 💃", "💃🏻 💃🏼", "💃🏽 💃🏾", "💃🏿"]],
+        ["emoji-activity-people-1f57a", ["Feeling expressive: 🕺", "🕺🏻 🕺🏼", "🕺🏽 🕺🏾", "🕺🏿"]],
+        ["emoji-activity-people-1f3c3", ["Feeling active: 🏃", "🏃‍♂️ 🏃‍♀️", "🏃🏻 🏃🏽 🏃🏿", "🏃🏾‍♂️ 🏃🏼‍♀️"]],
+        ["emoji-activity-people-1f3c3-right", ["Feeling active: 🏃‍➡️", "🏃‍♂️‍➡️ 🏃‍♀️‍➡️", "🏃🏻‍➡️ 🏃🏽‍➡️ 🏃🏿‍➡️", "🏃🏾‍♂️‍➡️ 🏃🏼‍♀️‍➡️"]],
+        ["emoji-activity-people-1f6b6", ["Feeling active: 🚶", "🚶‍♂️ 🚶‍♀️", "🚶🏻 🚶🏽 🚶🏿", "🚶🏾‍♂️ 🚶🏼‍♀️"]],
+        ["emoji-activity-people-1f6b6-right", ["Feeling active: 🚶‍➡️", "🚶‍♂️‍➡️ 🚶‍♀️‍➡️", "🚶🏻‍➡️ 🚶🏽‍➡️ 🚶🏿‍➡️", "🚶🏾‍♂️‍➡️ 🚶🏼‍♀️‍➡️"]],
+        ["emoji-activity-people-1f9ce", ["Feeling active: 🧎", "🧎‍♂️ 🧎‍♀️", "🧎🏻 🧎🏽 🧎🏿", "🧎🏾‍♂️ 🧎🏼‍♀️"]],
+        ["emoji-activity-people-1f9ce-right", ["Feeling active: 🧎‍➡️", "🧎‍♂️‍➡️ 🧎‍♀️‍➡️", "🧎🏻‍➡️ 🧎🏽‍➡️ 🧎🏿‍➡️", "🧎🏾‍♂️‍➡️ 🧎🏼‍♀️‍➡️"]],
+        ["emoji-activity-people-1f9cd", ["Feeling active: 🧍", "🧍‍♂️ 🧍‍♀️", "🧍🏻 🧍🏽 🧍🏿", "🧍🏾‍♂️ 🧍🏼‍♀️"]],
+        ["emoji-gesture-people-1f647", ["Feeling expressive: 🙇", "🙇‍♂️ 🙇‍♀️", "🙇🏻 🙇🏽 🙇🏿", "🙇🏾‍♂️ 🙇🏼‍♀️"]],
+        ["emoji-gesture-people-1f926", ["Feeling expressive: 🤦", "🤦‍♂️ 🤦‍♀️", "🤦🏻 🤦🏽 🤦🏿", "🤦🏾‍♂️ 🤦🏼‍♀️"]],
+        ["emoji-gesture-people-1f937", ["Feeling expressive: 🤷", "🤷‍♂️ 🤷‍♀️", "🤷🏻 🤷🏽 🤷🏿", "🤷🏾‍♂️ 🤷🏼‍♀️"]],
+        ["emoji-gesture-people-1f9cf", ["Feeling expressive: 🧏", "🧏‍♂️ 🧏‍♀️", "🧏🏻 🧏🏽 🧏🏿", "🧏🏾‍♂️ 🧏🏼‍♀️"]],
+        ["emoji-gesture-people-1f481", ["Feeling expressive: 💁", "💁‍♂️ 💁‍♀️", "💁🏻 💁🏽 💁🏿", "💁🏾‍♂️ 💁🏼‍♀️"]],
+        ["emoji-gesture-people-1f645", ["Feeling expressive: 🙅", "🙅‍♂️ 🙅‍♀️", "🙅🏻 🙅🏽 🙅🏿", "🙅🏾‍♂️ 🙅🏼‍♀️"]],
+        ["emoji-gesture-people-1f646", ["Feeling expressive: 🙆", "🙆‍♂️ 🙆‍♀️", "🙆🏻 🙆🏽 🙆🏿", "🙆🏾‍♂️ 🙆🏼‍♀️"]],
+        ["emoji-gesture-people-1f64b", ["Feeling expressive: 🙋", "🙋‍♂️ 🙋‍♀️", "🙋🏻 🙋🏽 🙋🏿", "🙋🏾‍♂️ 🙋🏼‍♀️"]],
+        ["emoji-gesture-people-1f64d", ["Feeling expressive: 🙍", "🙍‍♂️ 🙍‍♀️", "🙍🏻 🙍🏽 🙍🏿", "🙍🏾‍♂️ 🙍🏼‍♀️"]],
+        ["emoji-gesture-people-1f64e", ["Feeling expressive: 🙎", "🙎‍♂️ 🙎‍♀️", "🙎🏻 🙎🏽 🙎🏿", "🙎🏾‍♂️ 🙎🏼‍♀️"]],
+        ["emoji-new-svg-butterfly-chest", ["A monarch: 🫌", "Treasure! 🪎", "🫌 🪎 🦋", "🫌 🫌 🪎"]],
+        ["emoji-new-svg-thumb-left", ["Leftwards: 🫹", "🫹🏻 🫹🏼 🫹🏽", "🫹🏾 🫹🏿", "🫹 🫹🏿 🫹"]],
+        ["emoji-new-svg-thumb-right", ["Rightwards: 🫺", "🫺🏻 🫺🏼 🫺🏽", "🫺🏾 🫺🏿", "🫺 🫺🏿 🫺"]],
+        ["emoji-new-svg-scenes", ["A fight cloud: 🫯", "A meteor: 🪋", "A lighthouse: 🛙", "🫯 🪋 🛙"]],
+        ["emoji-new-svg-objects", ["Landslide! 🛘", "A net: 🪍", "An eraser: 🪌", "🛘 🪍 🪌"]],
+        ["emoji-new-svg-creature", ["A hairy creature: 🫈", "🫈 🐒", "🫈 🫈", "A mysterious sight!"]],
+        ["emoji-new-svg-faces", ["So tired: 🫩", "A strange day: 🫪", "Cracking up! 🫫", "🫩 🫪 🫫 😀"]],
+        ["emoji-new-svg-nature", ["Root vegetables: 🫜", "Splatter! 🫟", "An orca: 🫍", "🫜 🫟 🫍 🐳"]],
+        ["emoji-new-svg-instruments", ["A harp: 🪉", "A trombone: 🪊", "A shovel: 🪏", "🪉 🪊 🪏 🎺 🎻"]],
+        ["emoji-new-svg", ["A leafless tree: 🪾", "A fingerprint: 🫆", "Pickles! 🫝 🥒", "🪾 🫆 🫝"]],
+        ["emoji-dialogue-scale", ["Dad, why does this happen? 🤔", "Science. 🔬", "That explains everything. 😂", "Even this? 👩🏽‍🍼 🥒 🎻"]],
+        ["tai-yo-wide-marks", ["𞛍𞛣 𞛍𞛦 𞛍𞛮 𞛍𞛯 𞛍𞛵", "𞛕𞛣 𞛕𞛦 𞛕𞛮 𞛕𞛯 𞛕𞛵", "𞛅𞛮𞛮 𞛜𞛮𞛯", "𞛀𞛣 𞛀𞛦 𞛀𞛮 𞛀𞛯 𞛀𞛵"]],
+        ["tai-yo-vowel-spelling", ["𞛖𞛣 𞛆𞛣", "𞛑𞛢𞛏 𞛔𞛢𞛏", "𞛝 𞛀𞛙 𞛞 𞛁𞛙", "𞛅𞛮 𞛅𞛮𞛩𞛏"]],
+        ["tai-yo-mixed-wrap", ["Tai Yo: 𞛅𞛮𞛮 𞛜𞛮𞛯 — العربية", "𞛍𞛮 𞛍𞛯 𞛕𞛮 𞛕𞛯 𞛍𞛮 𞛍𞛯 𞛕𞛮 𞛕𞛯 𞛍𞛮 𞛍𞛯 𞛕𞛮 𞛕𞛯 𞛍𞛮 𞛍𞛯 𞛕𞛮 𞛕𞛯 ", "𞛖𞛣𞛆𞛣𞛅𞛮𞛮𞛜𞛮𞛯𞛖𞛣𞛆𞛣𞛅𞛮𞛮𞛜𞛮𞛯𞛖𞛣𞛆𞛣𞛅𞛮𞛮𞛜𞛮𞛯", "𞛾 𞛿、𞛀𞛮。"]],
+        ['garay-marks-and-case', ['𐵓𐵩 𐵳𐵩 𐵓𐵪 𐵳𐵪 𐵓𐵫 𐵳𐵫', '𐵓𐵬 𐵳𐵬 𐵓𐵭 𐵳𐵭', '𐵳𐵩𐵩𐵴𐵪', '']],
+        ['garay-vowel-spelling', ['𐵳 𐵳𐵩 𐵳𐵩𐵍', '𐵴𐵩 𐵴𐵩𐵍 𐵴𐵩𐵍𐵍', '𐵴 𐵴𐵍 𐵴𐵍𐵍', '']],
+        ['garay-numbers-and-mixed', ['𐵓𐵩𐵳 𐵁𐵂𐵃 123', 'Garay: 𐵓𐵩𐵳 𐵁𐵂𐵃 — العربية', '𐵀𐵁𐵂𐵃𐵄𐵅𐵆𐵇𐵈𐵉', '𐵊𐵎 𐵋𐵎 𐵌𐵎 𐵏 𐵮 𐵯 𐶎 𐶏']],
+        ['tolong-marks', ['𑶴̃𑷙 𑶰̆ 𑶴̇ 𑶴̄ 𑶴̣ 𑶴̱ 𑶴̰', '𑷊̤ 𑷌̤ 𑷅̤ 𑷇̤ 𑶷̤ 𑷒̤ 𑷔̤ 𑷔̈', '', '']],
+        ['tolong-spacing-and-digits', ['𑶰̃𑷙 𑶱̃𑷙 𑶲̃𑷙 𑶳̃𑷙 𑶴̃𑷙 𑶵̃𑷙', '𑶴𑷚 𑷠𑷡𑷢𑷣𑷤𑷥𑷦𑷧𑷨𑷩 𑷛', '', '']],
+        ['tolong-mixed-and-stacks', ['Tolong: 𑶴̤̃ 𑶴̃̃ 𑶴̤̤ — العربية', '𑶴̃𑷙 𑶰̆ 𑷊̤ 𑷌̤ 𑷅̤ 𑷇̤ 𑶷̤ 𑷒̤ 𑷔̤ 𑷔̈ 𑶴̃𑷙', '', '']],
+        ["original", DEFAULTS],
+        ['emoji-clothing-1',["👑 👒 🎩", "🎓 🧢 🪖", "⛑ 🧣 🧤", "🧥"]],
+        ['emoji-clothing-2',["🧦 👔 👕", "👖 👗 👘", "🥻 🩱 🩲", "🩳"]],
+        ['emoji-clothing-3',["👙 👚 👛", "👜 👝 🎒", "🩴 👞 👟", "🥾"]],
+        ['emoji-clothing-4',["🥿 👠 👡", "🩰 👢 🥼", "🦺 🥽", "🦺 🐕‍🦺"]],
+        ['emoji-electronics-1',["📱 📲 ☎", "📞 📟 📠", "🔋 🪫 🔌", "☎︎ ☎️ ⌨︎ ⌨️"]],
+        ['emoji-electronics-2',["💻 🖥 🖨", "⌨ 🖱 🖲", "💽 💾 💿", "🖥︎ 🖥️ 🖨︎ 🖨️"]],
+        ['emoji-electronics-3',["📀 🧮 🎥", "🎞 📽 🎬", "📺 📷 📸", "🎞︎ 🎞️ 📽︎ 📽️"]],
+        ['emoji-electronics-4',["📹 📼 🔍", "🔎 🕯 💡", "🔦 🏮 🪔", "🕯︎ 🕯️ 🔋 🪫"]],
+        ['emoji-celebrations-1',["🎀 🎁 🎃", "🎄 🎆 🎇", "🧨 🎈 🎉", "A party! 🎉 🎈 🎁"]],
+        ['emoji-celebrations-2',["🎊 🎋 🎍", "🎎 🎏 🎐", "🎑 🎟 🎫", "🎟︎ 🎟️ 🎫"]],
+        ['emoji-recreation-1',["🎯 🪀 🪁", "🎱 🔮 🪄", "🎮 🕹 🎰", "Play! 🎯 🎲 🎱"]],
+        ['emoji-recreation-2',["🎲 🧩 🧸", "🪅 🪩 🪆", "🃏 🎴 🎭", "🕹︎ 🕹️ 🃏 🎴"]],
+        ['emoji-recreation-3',["🖼 🎨 🧵", "🪡 🧶 🪢", "🎪", "🖼︎ 🖼️ 🎨 🧵"]],
+        ['emoji-household-1',["🚪 🛗 🪞", "🪟 🛏 🛋", "🪑 🚽 🪠", "🚿 🛁 🪒"]],
+        ['emoji-household-2',["🧴 🧷 🧹", "🧺 🧻 🪣", "🧼 🫧 🪥", "🧽 🛒 🧳"]],
+        ['emoji-science-1',["⚗ 🧪 🧫", "🧬 🔬 🔭", "📡 🩺 🩻", "🩼 💊 💉"]],
+        ['emoji-household-variants',['🛏︎ 🛏️ 🛋︎ 🛋️','⚗︎ ⚗️','A room: 🪟 🪑 🚪','Science! 🧬 🔬 🧪']],
+        ['emoji-people-1',["👶 👶🏻 👶🏼", "👶🏽 👶🏾 👶🏿", "👶 👶🏼 👶🏾", "👶🏻 👶🏽 👶🏿"]],
+        ['emoji-people-2',["🧒 🧒🏻 🧒🏼", "🧒🏽 🧒🏾 🧒🏿", "🧒 🧒🏼 🧒🏾", "🧒🏻 🧒🏽 🧒🏿"]],
+        ['emoji-people-3',["👦 👦🏻 👦🏼", "👦🏽 👦🏾 👦🏿", "👦 👦🏼 👦🏾", "👦🏻 👦🏽 👦🏿"]],
+        ['emoji-people-4',["👧 👧🏻 👧🏼", "👧🏽 👧🏾 👧🏿", "👧 👧🏼 👧🏾", "👧🏻 👧🏽 👧🏿"]],
+        ['emoji-people-5',["🧑 🧑🏻 🧑🏼", "🧑🏽 🧑🏾 🧑🏿", "🧑 🧑🏼 🧑🏾", "🧑🏻 🧑🏽 🧑🏿"]],
+        ['emoji-people-6',["👨 👨🏻 👨🏼", "👨🏽 👨🏾 👨🏿", "👨 👨🏼 👨🏾", "👨🏻 👨🏽 👨🏿"]],
+        ['emoji-people-7',["👩 👩🏻 👩🏼", "👩🏽 👩🏾 👩🏿", "👩 👩🏼 👩🏾", "👩🏻 👩🏽 👩🏿"]],
+        ['emoji-people-8',["🧓 🧓🏻 🧓🏼", "🧓🏽 🧓🏾 🧓🏿", "🧓 🧓🏼 🧓🏾", "🧓🏻 🧓🏽 🧓🏿"]],
+        ['emoji-people-9',["👴 👴🏻 👴🏼", "👴🏽 👴🏾 👴🏿", "👴 👴🏼 👴🏾", "👴🏻 👴🏽 👴🏿"]],
+        ['emoji-people-10',["👵 👵🏻 👵🏼", "👵🏽 👵🏾 👵🏿", "👵 👵🏼 👵🏾", "👵🏻 👵🏽 👵🏿"]],
+        ['emoji-people-11',["🧔 🧔🏻 🧔🏼", "🧔🏽 🧔🏾 🧔🏿", "🧔 🧔🏼 🧔🏾", "🧔🏻 🧔🏽 🧔🏿"]],
+        ['emoji-people-astronaut',['🧑 🧑‍🚀 🧑','🧑🏻 🧑🏻‍🚀 🧑🏻','🧑🏿 🧑🏿‍🚀 🧑🏿','People: 👶🏽 👩🏽 👴🏽']],
+        ['emoji-person-forms-1',["👱 👱🏻 👱🏼", "👱🏽 👱🏾 👱🏿", "👱 👱🏼 👱🏾", "👱🏻 👱🏽 👱🏿"]],
+        ['emoji-person-forms-2',["🧔‍♂️ 🧔🏻‍♂️ 🧔🏼‍♂️", "🧔🏽‍♂️ 🧔🏾‍♂️ 🧔🏿‍♂️", "🧔‍♂️ 🧔🏼‍♂️ 🧔🏾‍♂️", "🧔🏻‍♂️ 🧔🏽‍♂️ 🧔🏿‍♂️"]],
+        ['emoji-person-forms-3',["🧔‍♀️ 🧔🏻‍♀️ 🧔🏼‍♀️", "🧔🏽‍♀️ 🧔🏾‍♀️ 🧔🏿‍♀️", "🧔‍♀️ 🧔🏼‍♀️ 🧔🏾‍♀️", "🧔🏻‍♀️ 🧔🏽‍♀️ 🧔🏿‍♀️"]],
+        ['emoji-person-forms-4',["👨‍🦰 👨🏻‍🦰 👨🏼‍🦰", "👨🏽‍🦰 👨🏾‍🦰 👨🏿‍🦰", "👨‍🦰 👨🏼‍🦰 👨🏾‍🦰", "👨🏻‍🦰 👨🏽‍🦰 👨🏿‍🦰"]],
+        ['emoji-person-forms-5',["👨‍🦱 👨🏻‍🦱 👨🏼‍🦱", "👨🏽‍🦱 👨🏾‍🦱 👨🏿‍🦱", "👨‍🦱 👨🏼‍🦱 👨🏾‍🦱", "👨🏻‍🦱 👨🏽‍🦱 👨🏿‍🦱"]],
+        ['emoji-person-forms-6',["👨‍🦳 👨🏻‍🦳 👨🏼‍🦳", "👨🏽‍🦳 👨🏾‍🦳 👨🏿‍🦳", "👨‍🦳 👨🏼‍🦳 👨🏾‍🦳", "👨🏻‍🦳 👨🏽‍🦳 👨🏿‍🦳"]],
+        ['emoji-person-forms-7',["👨‍🦲 👨🏻‍🦲 👨🏼‍🦲", "👨🏽‍🦲 👨🏾‍🦲 👨🏿‍🦲", "👨‍🦲 👨🏼‍🦲 👨🏾‍🦲", "👨🏻‍🦲 👨🏽‍🦲 👨🏿‍🦲"]],
+        ['emoji-person-forms-8',["👩‍🦰 👩🏻‍🦰 👩🏼‍🦰", "👩🏽‍🦰 👩🏾‍🦰 👩🏿‍🦰", "👩‍🦰 👩🏼‍🦰 👩🏾‍🦰", "👩🏻‍🦰 👩🏽‍🦰 👩🏿‍🦰"]],
+        ['emoji-person-forms-9',["🧑‍🦰 🧑🏻‍🦰 🧑🏼‍🦰", "🧑🏽‍🦰 🧑🏾‍🦰 🧑🏿‍🦰", "🧑‍🦰 🧑🏼‍🦰 🧑🏾‍🦰", "🧑🏻‍🦰 🧑🏽‍🦰 🧑🏿‍🦰"]],
+        ['emoji-person-forms-10',["👩‍🦱 👩🏻‍🦱 👩🏼‍🦱", "👩🏽‍🦱 👩🏾‍🦱 👩🏿‍🦱", "👩‍🦱 👩🏼‍🦱 👩🏾‍🦱", "👩🏻‍🦱 👩🏽‍🦱 👩🏿‍🦱"]],
+        ['emoji-person-forms-11',["🧑‍🦱 🧑🏻‍🦱 🧑🏼‍🦱", "🧑🏽‍🦱 🧑🏾‍🦱 🧑🏿‍🦱", "🧑‍🦱 🧑🏼‍🦱 🧑🏾‍🦱", "🧑🏻‍🦱 🧑🏽‍🦱 🧑🏿‍🦱"]],
+        ['emoji-person-forms-12',["👩‍🦳 👩🏻‍🦳 👩🏼‍🦳", "👩🏽‍🦳 👩🏾‍🦳 👩🏿‍🦳", "👩‍🦳 👩🏼‍🦳 👩🏾‍🦳", "👩🏻‍🦳 👩🏽‍🦳 👩🏿‍🦳"]],
+        ['emoji-person-forms-13',["🧑‍🦳 🧑🏻‍🦳 🧑🏼‍🦳", "🧑🏽‍🦳 🧑🏾‍🦳 🧑🏿‍🦳", "🧑‍🦳 🧑🏼‍🦳 🧑🏾‍🦳", "🧑🏻‍🦳 🧑🏽‍🦳 🧑🏿‍🦳"]],
+        ['emoji-person-forms-14',["👩‍🦲 👩🏻‍🦲 👩🏼‍🦲", "👩🏽‍🦲 👩🏾‍🦲 👩🏿‍🦲", "👩‍🦲 👩🏼‍🦲 👩🏾‍🦲", "👩🏻‍🦲 👩🏽‍🦲 👩🏿‍🦲"]],
+        ['emoji-person-forms-15',["🧑‍🦲 🧑🏻‍🦲 🧑🏼‍🦲", "🧑🏽‍🦲 🧑🏾‍🦲 🧑🏿‍🦲", "🧑‍🦲 🧑🏼‍🦲 🧑🏾‍🦲", "🧑🏻‍🦲 🧑🏽‍🦲 🧑🏿‍🦲"]],
+        ['emoji-person-forms-16',["👱‍♀️ 👱🏻‍♀️ 👱🏼‍♀️", "👱🏽‍♀️ 👱🏾‍♀️ 👱🏿‍♀️", "👱‍♀️ 👱🏼‍♀️ 👱🏾‍♀️", "👱🏻‍♀️ 👱🏽‍♀️ 👱🏿‍♀️"]],
+        ['emoji-person-forms-17',["👱‍♂️ 👱🏻‍♂️ 👱🏼‍♂️", "👱🏽‍♂️ 👱🏾‍♂️ 👱🏿‍♂️", "👱‍♂️ 👱🏼‍♂️ 👱🏾‍♂️", "👱🏻‍♂️ 👱🏽‍♂️ 👱🏿‍♂️"]],
+        ['emoji-person-forms-qualification',['🧔🏻‍♀ 🧔🏻‍♀️','👱🏿‍♂ 👱🏿‍♂️','👨🏽 👨🏽‍🦰 👨🏽','Hair: 🧑‍🦰 🧑‍🦳 🧑‍🦱 🧑‍🦲']],
+        ['emoji-professions-1',["🧑‍⚕️ 🧑🏻‍⚕️ 🧑🏼‍⚕️", "🧑🏽‍⚕️ 🧑🏾‍⚕️ 🧑🏿‍⚕️", "🧑‍⚕️ 🧑🏼‍⚕️ 🧑🏾‍⚕️", "🧑🏻‍⚕️ 🧑🏽‍⚕️ 🧑🏿‍⚕️"]],
+        ['emoji-professions-2',["👨‍⚕️ 👨🏻‍⚕️ 👨🏼‍⚕️", "👨🏽‍⚕️ 👨🏾‍⚕️ 👨🏿‍⚕️", "👨‍⚕️ 👨🏼‍⚕️ 👨🏾‍⚕️", "👨🏻‍⚕️ 👨🏽‍⚕️ 👨🏿‍⚕️"]],
+        ['emoji-professions-3',["👩‍⚕️ 👩🏻‍⚕️ 👩🏼‍⚕️", "👩🏽‍⚕️ 👩🏾‍⚕️ 👩🏿‍⚕️", "👩‍⚕️ 👩🏼‍⚕️ 👩🏾‍⚕️", "👩🏻‍⚕️ 👩🏽‍⚕️ 👩🏿‍⚕️"]],
+        ['emoji-professions-4',["🧑‍🎓 🧑🏻‍🎓 🧑🏼‍🎓", "🧑🏽‍🎓 🧑🏾‍🎓 🧑🏿‍🎓", "🧑‍🎓 🧑🏼‍🎓 🧑🏾‍🎓", "🧑🏻‍🎓 🧑🏽‍🎓 🧑🏿‍🎓"]],
+        ['emoji-professions-5',["👨‍🎓 👨🏻‍🎓 👨🏼‍🎓", "👨🏽‍🎓 👨🏾‍🎓 👨🏿‍🎓", "👨‍🎓 👨🏼‍🎓 👨🏾‍🎓", "👨🏻‍🎓 👨🏽‍🎓 👨🏿‍🎓"]],
+        ['emoji-professions-6',["👩‍🎓 👩🏻‍🎓 👩🏼‍🎓", "👩🏽‍🎓 👩🏾‍🎓 👩🏿‍🎓", "👩‍🎓 👩🏼‍🎓 👩🏾‍🎓", "👩🏻‍🎓 👩🏽‍🎓 👩🏿‍🎓"]],
+        ['emoji-professions-7',["🧑‍🏫 🧑🏻‍🏫 🧑🏼‍🏫", "🧑🏽‍🏫 🧑🏾‍🏫 🧑🏿‍🏫", "🧑‍🏫 🧑🏼‍🏫 🧑🏾‍🏫", "🧑🏻‍🏫 🧑🏽‍🏫 🧑🏿‍🏫"]],
+        ['emoji-professions-8',["👨‍🏫 👨🏻‍🏫 👨🏼‍🏫", "👨🏽‍🏫 👨🏾‍🏫 👨🏿‍🏫", "👨‍🏫 👨🏼‍🏫 👨🏾‍🏫", "👨🏻‍🏫 👨🏽‍🏫 👨🏿‍🏫"]],
+        ['emoji-professions-9',["👩‍🏫 👩🏻‍🏫 👩🏼‍🏫", "👩🏽‍🏫 👩🏾‍🏫 👩🏿‍🏫", "👩‍🏫 👩🏼‍🏫 👩🏾‍🏫", "👩🏻‍🏫 👩🏽‍🏫 👩🏿‍🏫"]],
+        ['emoji-professions-10',["🧑‍⚖️ 🧑🏻‍⚖️ 🧑🏼‍⚖️", "🧑🏽‍⚖️ 🧑🏾‍⚖️ 🧑🏿‍⚖️", "🧑‍⚖️ 🧑🏼‍⚖️ 🧑🏾‍⚖️", "🧑🏻‍⚖️ 🧑🏽‍⚖️ 🧑🏿‍⚖️"]],
+        ['emoji-professions-11',["👨‍⚖️ 👨🏻‍⚖️ 👨🏼‍⚖️", "👨🏽‍⚖️ 👨🏾‍⚖️ 👨🏿‍⚖️", "👨‍⚖️ 👨🏼‍⚖️ 👨🏾‍⚖️", "👨🏻‍⚖️ 👨🏽‍⚖️ 👨🏿‍⚖️"]],
+        ['emoji-professions-12',["👩‍⚖️ 👩🏻‍⚖️ 👩🏼‍⚖️", "👩🏽‍⚖️ 👩🏾‍⚖️ 👩🏿‍⚖️", "👩‍⚖️ 👩🏼‍⚖️ 👩🏾‍⚖️", "👩🏻‍⚖️ 👩🏽‍⚖️ 👩🏿‍⚖️"]],
+        ['emoji-professions-13',["🧑‍🌾 🧑🏻‍🌾 🧑🏼‍🌾", "🧑🏽‍🌾 🧑🏾‍🌾 🧑🏿‍🌾", "🧑‍🌾 🧑🏼‍🌾 🧑🏾‍🌾", "🧑🏻‍🌾 🧑🏽‍🌾 🧑🏿‍🌾"]],
+        ['emoji-professions-14',["👨‍🌾 👨🏻‍🌾 👨🏼‍🌾", "👨🏽‍🌾 👨🏾‍🌾 👨🏿‍🌾", "👨‍🌾 👨🏼‍🌾 👨🏾‍🌾", "👨🏻‍🌾 👨🏽‍🌾 👨🏿‍🌾"]],
+        ['emoji-professions-15',["👩‍🌾 👩🏻‍🌾 👩🏼‍🌾", "👩🏽‍🌾 👩🏾‍🌾 👩🏿‍🌾", "👩‍🌾 👩🏼‍🌾 👩🏾‍🌾", "👩🏻‍🌾 👩🏽‍🌾 👩🏿‍🌾"]],
+        ['emoji-professions-16',["🧑‍🍳 🧑🏻‍🍳 🧑🏼‍🍳", "🧑🏽‍🍳 🧑🏾‍🍳 🧑🏿‍🍳", "🧑‍🍳 🧑🏼‍🍳 🧑🏾‍🍳", "🧑🏻‍🍳 🧑🏽‍🍳 🧑🏿‍🍳"]],
+        ['emoji-professions-17',["👨‍🍳 👨🏻‍🍳 👨🏼‍🍳", "👨🏽‍🍳 👨🏾‍🍳 👨🏿‍🍳", "👨‍🍳 👨🏼‍🍳 👨🏾‍🍳", "👨🏻‍🍳 👨🏽‍🍳 👨🏿‍🍳"]],
+        ['emoji-professions-18',["👩‍🍳 👩🏻‍🍳 👩🏼‍🍳", "👩🏽‍🍳 👩🏾‍🍳 👩🏿‍🍳", "👩‍🍳 👩🏼‍🍳 👩🏾‍🍳", "👩🏻‍🍳 👩🏽‍🍳 👩🏿‍🍳"]],
+        ['emoji-professions-19',["🧑‍🔧 🧑🏻‍🔧 🧑🏼‍🔧", "🧑🏽‍🔧 🧑🏾‍🔧 🧑🏿‍🔧", "🧑‍🔧 🧑🏼‍🔧 🧑🏾‍🔧", "🧑🏻‍🔧 🧑🏽‍🔧 🧑🏿‍🔧"]],
+        ['emoji-professions-20',["👨‍🔧 👨🏻‍🔧 👨🏼‍🔧", "👨🏽‍🔧 👨🏾‍🔧 👨🏿‍🔧", "👨‍🔧 👨🏼‍🔧 👨🏾‍🔧", "👨🏻‍🔧 👨🏽‍🔧 👨🏿‍🔧"]],
+        ['emoji-professions-21',["👩‍🔧 👩🏻‍🔧 👩🏼‍🔧", "👩🏽‍🔧 👩🏾‍🔧 👩🏿‍🔧", "👩‍🔧 👩🏼‍🔧 👩🏾‍🔧", "👩🏻‍🔧 👩🏽‍🔧 👩🏿‍🔧"]],
+        ['emoji-professions-22',["🧑‍🏭 🧑🏻‍🏭 🧑🏼‍🏭", "🧑🏽‍🏭 🧑🏾‍🏭 🧑🏿‍🏭", "🧑‍🏭 🧑🏼‍🏭 🧑🏾‍🏭", "🧑🏻‍🏭 🧑🏽‍🏭 🧑🏿‍🏭"]],
+        ['emoji-professions-23',["👨‍🏭 👨🏻‍🏭 👨🏼‍🏭", "👨🏽‍🏭 👨🏾‍🏭 👨🏿‍🏭", "👨‍🏭 👨🏼‍🏭 👨🏾‍🏭", "👨🏻‍🏭 👨🏽‍🏭 👨🏿‍🏭"]],
+        ['emoji-professions-24',["👩‍🏭 👩🏻‍🏭 👩🏼‍🏭", "👩🏽‍🏭 👩🏾‍🏭 👩🏿‍🏭", "👩‍🏭 👩🏼‍🏭 👩🏾‍🏭", "👩🏻‍🏭 👩🏽‍🏭 👩🏿‍🏭"]],
+        ['emoji-professions-25',["🧑‍💼 🧑🏻‍💼 🧑🏼‍💼", "🧑🏽‍💼 🧑🏾‍💼 🧑🏿‍💼", "🧑‍💼 🧑🏼‍💼 🧑🏾‍💼", "🧑🏻‍💼 🧑🏽‍💼 🧑🏿‍💼"]],
+        ['emoji-professions-26',["👨‍💼 👨🏻‍💼 👨🏼‍💼", "👨🏽‍💼 👨🏾‍💼 👨🏿‍💼", "👨‍💼 👨🏼‍💼 👨🏾‍💼", "👨🏻‍💼 👨🏽‍💼 👨🏿‍💼"]],
+        ['emoji-professions-27',["👩‍💼 👩🏻‍💼 👩🏼‍💼", "👩🏽‍💼 👩🏾‍💼 👩🏿‍💼", "👩‍💼 👩🏼‍💼 👩🏾‍💼", "👩🏻‍💼 👩🏽‍💼 👩🏿‍💼"]],
+        ['emoji-professions-28',["🧑‍🔬 🧑🏻‍🔬 🧑🏼‍🔬", "🧑🏽‍🔬 🧑🏾‍🔬 🧑🏿‍🔬", "🧑‍🔬 🧑🏼‍🔬 🧑🏾‍🔬", "🧑🏻‍🔬 🧑🏽‍🔬 🧑🏿‍🔬"]],
+        ['emoji-professions-29',["👨‍🔬 👨🏻‍🔬 👨🏼‍🔬", "👨🏽‍🔬 👨🏾‍🔬 👨🏿‍🔬", "👨‍🔬 👨🏼‍🔬 👨🏾‍🔬", "👨🏻‍🔬 👨🏽‍🔬 👨🏿‍🔬"]],
+        ['emoji-professions-30',["👩‍🔬 👩🏻‍🔬 👩🏼‍🔬", "👩🏽‍🔬 👩🏾‍🔬 👩🏿‍🔬", "👩‍🔬 👩🏼‍🔬 👩🏾‍🔬", "👩🏻‍🔬 👩🏽‍🔬 👩🏿‍🔬"]],
+        ['emoji-professions-31',["🧑‍💻 🧑🏻‍💻 🧑🏼‍💻", "🧑🏽‍💻 🧑🏾‍💻 🧑🏿‍💻", "🧑‍💻 🧑🏼‍💻 🧑🏾‍💻", "🧑🏻‍💻 🧑🏽‍💻 🧑🏿‍💻"]],
+        ['emoji-professions-32',["👨‍💻 👨🏻‍💻 👨🏼‍💻", "👨🏽‍💻 👨🏾‍💻 👨🏿‍💻", "👨‍💻 👨🏼‍💻 👨🏾‍💻", "👨🏻‍💻 👨🏽‍💻 👨🏿‍💻"]],
+        ['emoji-professions-33',["👩‍💻 👩🏻‍💻 👩🏼‍💻", "👩🏽‍💻 👩🏾‍💻 👩🏿‍💻", "👩‍💻 👩🏼‍💻 👩🏾‍💻", "👩🏻‍💻 👩🏽‍💻 👩🏿‍💻"]],
+        ['emoji-professions-34',["🧑‍🎤 🧑🏻‍🎤 🧑🏼‍🎤", "🧑🏽‍🎤 🧑🏾‍🎤 🧑🏿‍🎤", "🧑‍🎤 🧑🏼‍🎤 🧑🏾‍🎤", "🧑🏻‍🎤 🧑🏽‍🎤 🧑🏿‍🎤"]],
+        ['emoji-professions-35',["👨‍🎤 👨🏻‍🎤 👨🏼‍🎤", "👨🏽‍🎤 👨🏾‍🎤 👨🏿‍🎤", "👨‍🎤 👨🏼‍🎤 👨🏾‍🎤", "👨🏻‍🎤 👨🏽‍🎤 👨🏿‍🎤"]],
+        ['emoji-professions-36',["👩‍🎤 👩🏻‍🎤 👩🏼‍🎤", "👩🏽‍🎤 👩🏾‍🎤 👩🏿‍🎤", "👩‍🎤 👩🏼‍🎤 👩🏾‍🎤", "👩🏻‍🎤 👩🏽‍🎤 👩🏿‍🎤"]],
+        ['emoji-professions-37',["🧑‍🎨 🧑🏻‍🎨 🧑🏼‍🎨", "🧑🏽‍🎨 🧑🏾‍🎨 🧑🏿‍🎨", "🧑‍🎨 🧑🏼‍🎨 🧑🏾‍🎨", "🧑🏻‍🎨 🧑🏽‍🎨 🧑🏿‍🎨"]],
+        ['emoji-professions-38',["👨‍🎨 👨🏻‍🎨 👨🏼‍🎨", "👨🏽‍🎨 👨🏾‍🎨 👨🏿‍🎨", "👨‍🎨 👨🏼‍🎨 👨🏾‍🎨", "👨🏻‍🎨 👨🏽‍🎨 👨🏿‍🎨"]],
+        ['emoji-professions-39',["👩‍🎨 👩🏻‍🎨 👩🏼‍🎨", "👩🏽‍🎨 👩🏾‍🎨 👩🏿‍🎨", "👩‍🎨 👩🏼‍🎨 👩🏾‍🎨", "👩🏻‍🎨 👩🏽‍🎨 👩🏿‍🎨"]],
+        ['emoji-professions-40',["🧑‍✈️ 🧑🏻‍✈️ 🧑🏼‍✈️", "🧑🏽‍✈️ 🧑🏾‍✈️ 🧑🏿‍✈️", "🧑‍✈️ 🧑🏼‍✈️ 🧑🏾‍✈️", "🧑🏻‍✈️ 🧑🏽‍✈️ 🧑🏿‍✈️"]],
+        ['emoji-professions-41',["👨‍✈️ 👨🏻‍✈️ 👨🏼‍✈️", "👨🏽‍✈️ 👨🏾‍✈️ 👨🏿‍✈️", "👨‍✈️ 👨🏼‍✈️ 👨🏾‍✈️", "👨🏻‍✈️ 👨🏽‍✈️ 👨🏿‍✈️"]],
+        ['emoji-professions-42',["👩‍✈️ 👩🏻‍✈️ 👩🏼‍✈️", "👩🏽‍✈️ 👩🏾‍✈️ 👩🏿‍✈️", "👩‍✈️ 👩🏼‍✈️ 👩🏾‍✈️", "👩🏻‍✈️ 👩🏽‍✈️ 👩🏿‍✈️"]],
+        ['emoji-professions-43',["👨‍🚀 👨🏻‍🚀 👨🏼‍🚀", "👨🏽‍🚀 👨🏾‍🚀 👨🏿‍🚀", "👨‍🚀 👨🏼‍🚀 👨🏾‍🚀", "👨🏻‍🚀 👨🏽‍🚀 👨🏿‍🚀"]],
+        ['emoji-professions-44',["👩‍🚀 👩🏻‍🚀 👩🏼‍🚀", "👩🏽‍🚀 👩🏾‍🚀 👩🏿‍🚀", "👩‍🚀 👩🏼‍🚀 👩🏾‍🚀", "👩🏻‍🚀 👩🏽‍🚀 👩🏿‍🚀"]],
+        ['emoji-professions-45',["🧑‍🚒 🧑🏻‍🚒 🧑🏼‍🚒", "🧑🏽‍🚒 🧑🏾‍🚒 🧑🏿‍🚒", "🧑‍🚒 🧑🏼‍🚒 🧑🏾‍🚒", "🧑🏻‍🚒 🧑🏽‍🚒 🧑🏿‍🚒"]],
+        ['emoji-professions-46',["👨‍🚒 👨🏻‍🚒 👨🏼‍🚒", "👨🏽‍🚒 👨🏾‍🚒 👨🏿‍🚒", "👨‍🚒 👨🏼‍🚒 👨🏾‍🚒", "👨🏻‍🚒 👨🏽‍🚒 👨🏿‍🚒"]],
+        ['emoji-professions-47',["👩‍🚒 👩🏻‍🚒 👩🏼‍🚒", "👩🏽‍🚒 👩🏾‍🚒 👩🏿‍🚒", "👩‍🚒 👩🏼‍🚒 👩🏾‍🚒", "👩🏻‍🚒 👩🏽‍🚒 👩🏿‍🚒"]],
+        ['emoji-professions-qualification',['👨🏽‍⚕ 👨🏽‍⚕️','👩🏿‍✈ 👩🏿‍✈️','🧑🏻 🧑🏻‍⚖️ 🧑🏻','Work: 🧑‍🏫 🧑‍🚒 🧑‍🔬']],
+        ['emoji-roles-1',["👮 👮🏻 👮🏼", "👮🏽 👮🏾 👮🏿", "👮 👮🏼 👮🏾", "👮🏻 👮🏽 👮🏿"]],
+        ['emoji-roles-2',["👮‍♂️ 👮🏻‍♂️ 👮🏼‍♂️", "👮🏽‍♂️ 👮🏾‍♂️ 👮🏿‍♂️", "👮‍♂️ 👮🏼‍♂️ 👮🏾‍♂️", "👮🏻‍♂️ 👮🏽‍♂️ 👮🏿‍♂️"]],
+        ['emoji-roles-3',["👮‍♀️ 👮🏻‍♀️ 👮🏼‍♀️", "👮🏽‍♀️ 👮🏾‍♀️ 👮🏿‍♀️", "👮‍♀️ 👮🏼‍♀️ 👮🏾‍♀️", "👮🏻‍♀️ 👮🏽‍♀️ 👮🏿‍♀️"]],
+        ['emoji-roles-4',["🕵️ 🕵🏻 🕵🏼", "🕵🏽 🕵🏾 🕵🏿", "🕵️ 🕵🏼 🕵🏾", "🕵🏻 🕵🏽 🕵🏿"]],
+        ['emoji-roles-5',["🕵️‍♂️ 🕵🏻‍♂️ 🕵🏼‍♂️", "🕵🏽‍♂️ 🕵🏾‍♂️ 🕵🏿‍♂️", "🕵️‍♂️ 🕵🏼‍♂️ 🕵🏾‍♂️", "🕵🏻‍♂️ 🕵🏽‍♂️ 🕵🏿‍♂️"]],
+        ['emoji-roles-6',["🕵️‍♀️ 🕵🏻‍♀️ 🕵🏼‍♀️", "🕵🏽‍♀️ 🕵🏾‍♀️ 🕵🏿‍♀️", "🕵️‍♀️ 🕵🏼‍♀️ 🕵🏾‍♀️", "🕵🏻‍♀️ 🕵🏽‍♀️ 🕵🏿‍♀️"]],
+        ['emoji-roles-7',["💂 💂🏻 💂🏼", "💂🏽 💂🏾 💂🏿", "💂 💂🏼 💂🏾", "💂🏻 💂🏽 💂🏿"]],
+        ['emoji-roles-8',["💂‍♂️ 💂🏻‍♂️ 💂🏼‍♂️", "💂🏽‍♂️ 💂🏾‍♂️ 💂🏿‍♂️", "💂‍♂️ 💂🏼‍♂️ 💂🏾‍♂️", "💂🏻‍♂️ 💂🏽‍♂️ 💂🏿‍♂️"]],
+        ['emoji-roles-9',["💂‍♀️ 💂🏻‍♀️ 💂🏼‍♀️", "💂🏽‍♀️ 💂🏾‍♀️ 💂🏿‍♀️", "💂‍♀️ 💂🏼‍♀️ 💂🏾‍♀️", "💂🏻‍♀️ 💂🏽‍♀️ 💂🏿‍♀️"]],
+        ['emoji-roles-10',["🥷 🥷🏻 🥷🏼", "🥷🏽 🥷🏾 🥷🏿", "🥷 🥷🏼 🥷🏾", "🥷🏻 🥷🏽 🥷🏿"]],
+        ['emoji-roles-11',["👷 👷🏻 👷🏼", "👷🏽 👷🏾 👷🏿", "👷 👷🏼 👷🏾", "👷🏻 👷🏽 👷🏿"]],
+        ['emoji-roles-12',["👷‍♂️ 👷🏻‍♂️ 👷🏼‍♂️", "👷🏽‍♂️ 👷🏾‍♂️ 👷🏿‍♂️", "👷‍♂️ 👷🏼‍♂️ 👷🏾‍♂️", "👷🏻‍♂️ 👷🏽‍♂️ 👷🏿‍♂️"]],
+        ['emoji-roles-13',["👷‍♀️ 👷🏻‍♀️ 👷🏼‍♀️", "👷🏽‍♀️ 👷🏾‍♀️ 👷🏿‍♀️", "👷‍♀️ 👷🏼‍♀️ 👷🏾‍♀️", "👷🏻‍♀️ 👷🏽‍♀️ 👷🏿‍♀️"]],
+        ['emoji-roles-14',["🫅 🫅🏻 🫅🏼", "🫅🏽 🫅🏾 🫅🏿", "🫅 🫅🏼 🫅🏾", "🫅🏻 🫅🏽 🫅🏿"]],
+        ['emoji-roles-15',["🤴 🤴🏻 🤴🏼", "🤴🏽 🤴🏾 🤴🏿", "🤴 🤴🏼 🤴🏾", "🤴🏻 🤴🏽 🤴🏿"]],
+        ['emoji-roles-16',["👸 👸🏻 👸🏼", "👸🏽 👸🏾 👸🏿", "👸 👸🏼 👸🏾", "👸🏻 👸🏽 👸🏿"]],
+        ['emoji-roles-17',["👳 👳🏻 👳🏼", "👳🏽 👳🏾 👳🏿", "👳 👳🏼 👳🏾", "👳🏻 👳🏽 👳🏿"]],
+        ['emoji-roles-18',["👳‍♂️ 👳🏻‍♂️ 👳🏼‍♂️", "👳🏽‍♂️ 👳🏾‍♂️ 👳🏿‍♂️", "👳‍♂️ 👳🏼‍♂️ 👳🏾‍♂️", "👳🏻‍♂️ 👳🏽‍♂️ 👳🏿‍♂️"]],
+        ['emoji-roles-19',["👳‍♀️ 👳🏻‍♀️ 👳🏼‍♀️", "👳🏽‍♀️ 👳🏾‍♀️ 👳🏿‍♀️", "👳‍♀️ 👳🏼‍♀️ 👳🏾‍♀️", "👳🏻‍♀️ 👳🏽‍♀️ 👳🏿‍♀️"]],
+        ['emoji-roles-20',["👲 👲🏻 👲🏼", "👲🏽 👲🏾 👲🏿", "👲 👲🏼 👲🏾", "👲🏻 👲🏽 👲🏿"]],
+        ['emoji-roles-21',["🧕 🧕🏻 🧕🏼", "🧕🏽 🧕🏾 🧕🏿", "🧕 🧕🏼 🧕🏾", "🧕🏻 🧕🏽 🧕🏿"]],
+        ['emoji-roles-22',["🤵 🤵🏻 🤵🏼", "🤵🏽 🤵🏾 🤵🏿", "🤵 🤵🏼 🤵🏾", "🤵🏻 🤵🏽 🤵🏿"]],
+        ['emoji-roles-23',["🤵‍♂️ 🤵🏻‍♂️ 🤵🏼‍♂️", "🤵🏽‍♂️ 🤵🏾‍♂️ 🤵🏿‍♂️", "🤵‍♂️ 🤵🏼‍♂️ 🤵🏾‍♂️", "🤵🏻‍♂️ 🤵🏽‍♂️ 🤵🏿‍♂️"]],
+        ['emoji-roles-24',["🤵‍♀️ 🤵🏻‍♀️ 🤵🏼‍♀️", "🤵🏽‍♀️ 🤵🏾‍♀️ 🤵🏿‍♀️", "🤵‍♀️ 🤵🏼‍♀️ 🤵🏾‍♀️", "🤵🏻‍♀️ 🤵🏽‍♀️ 🤵🏿‍♀️"]],
+        ['emoji-roles-25',["👰 👰🏻 👰🏼", "👰🏽 👰🏾 👰🏿", "👰 👰🏼 👰🏾", "👰🏻 👰🏽 👰🏿"]],
+        ['emoji-roles-26',["👰‍♂️ 👰🏻‍♂️ 👰🏼‍♂️", "👰🏽‍♂️ 👰🏾‍♂️ 👰🏿‍♂️", "👰‍♂️ 👰🏼‍♂️ 👰🏾‍♂️", "👰🏻‍♂️ 👰🏽‍♂️ 👰🏿‍♂️"]],
+        ['emoji-roles-27',["👰‍♀️ 👰🏻‍♀️ 👰🏼‍♀️", "👰🏽‍♀️ 👰🏾‍♀️ 👰🏿‍♀️", "👰‍♀️ 👰🏼‍♀️ 👰🏾‍♀️", "👰🏻‍♀️ 👰🏽‍♀️ 👰🏿‍♀️"]],
+        ['emoji-roles-qualification',['🕵 🕵️ 🕵🏽 🕵🏽','🕵🏻‍♂ 🕵🏻‍♂️','👮🏿 👮🏿‍♀️ 👮🏿','Roles: 🧕 👲 🥷 👸']],
+        ['emoji-detailed-people-1',["👩‍🍼 👩🏻‍🍼 👩🏼‍🍼", "👩🏽‍🍼 👩🏾‍🍼 👩🏿‍🍼", "👩‍🍼 👩🏼‍🍼 👩🏾‍🍼", "👩🏻‍🍼 👩🏽‍🍼 👩🏿‍🍼"]],
+        ['emoji-detailed-people-2',["🧑‍🍼 🧑🏻‍🍼 🧑🏼‍🍼", "🧑🏽‍🍼 🧑🏾‍🍼 🧑🏿‍🍼", "🧑‍🍼 🧑🏼‍🍼 🧑🏾‍🍼", "🧑🏻‍🍼 🧑🏽‍🍼 🧑🏿‍🍼"]],
+        ['emoji-detailed-people-3',["🤱 🤱🏻 🤱🏼", "🤱🏽 🤱🏾 🤱🏿", "🤱 🤱🏼 🤱🏾", "🤱🏻 🤱🏽 🤱🏿"]],
+        ['emoji-detailed-people-4',["🤰 🤰🏻 🤰🏼", "🤰🏽 🤰🏾 🤰🏿", "🤰 🤰🏼 🤰🏾", "🤰🏻 🤰🏽 🤰🏿"]],
+        ['emoji-detailed-people-5',["🫃 🫃🏻 🫃🏼", "🫃🏽 🫃🏾 🫃🏿", "🫃 🫃🏼 🫃🏾", "🫃🏻 🫃🏽 🫃🏿"]],
+        ['emoji-detailed-people-6',["🫄 🫄🏻 🫄🏼", "🫄🏽 🫄🏾 🫄🏿", "🫄 🫄🏼 🫄🏾", "🫄🏻 🫄🏽 🫄🏿"]],
+        ['emoji-detailed-people-7',["👨‍🍼 👨🏻‍🍼 👨🏼‍🍼", "👨🏽‍🍼 👨🏾‍🍼 👨🏿‍🍼", "👨‍🍼 👨🏼‍🍼 👨🏾‍🍼", "👨🏻‍🍼 👨🏽‍🍼 👨🏿‍🍼"]],
+        ['emoji-detailed-people-adjacent',['👩🏽 👩🏽‍🍼 👩🏽','👨🏻 👨🏻‍🍼 👨🏻','Family: 🤰🏿 🫃🏼 🫄🏽 🤱🏻','🧑🏿‍🍼 🧑🏻‍🍼']],
+        ...gestureScenarios,
+        ['emoji-gestures-mixed-handshakes',["🫱🏻‍🫲🏼 🫱🏻‍🫲🏽 🫱🏻‍🫲🏾 🫱🏻‍🫲🏿 🫱🏼‍🫲🏻", "🫱🏼‍🫲🏽 🫱🏼‍🫲🏾 🫱🏼‍🫲🏿 🫱🏽‍🫲🏻 🫱🏽‍🫲🏼", "🫱🏽‍🫲🏾 🫱🏽‍🫲🏿 🫱🏾‍🫲🏻 🫱🏾‍🫲🏼 🫱🏾‍🫲🏽", "🫱🏾‍🫲🏿 🫱🏿‍🫲🏻 🫱🏿‍🫲🏼 🫱🏿‍🫲🏽 🫱🏿‍🫲🏾"]],
+        ["yangqin-signs", ["〦 𖿴 𖿵 𖿶", "〡 〢 〣 〤 〦", "揚琴 𖿴 𖿵 𖿶", "MUSIC 𖿴 𖿵 𖿶"]],
+        ["vietnamese-reading-marks", ["日𖿰 日𖿱 量𖿰", "外𖿱 尼𖿱 律𖿱", "READ 量𖿰 AGAIN", "𖿰 𖿱"]],
+        ["malayalam-syriac", ["ܒࡠܒ ܒࡡܒ ܒࡢܒ ܒࡣܒ", "ܒࡤܒ ܒࡥܒ ܒࡦܒ ܒࡧܒ", "ܒࡨܒ ܒࡩܒ ܒࡪܒ", "ܡܲܠܲܝܵࡨܲܡ ܟܲܪܫܘܿܢ"]],
+        ["custom-emoji", ["😀 😂 🥺 🤔", "😭 🤯 😈 💀", "TEXT ❤︎ EMOJI ❤️ FIRE 🔥", "👍"]],
+        ["emoji-sequences", ["😀 👍🏻 👍🏼 👍🏽 👍🏾 👍🏿", "👨‍👦 😀 ❤️‍🔥 👍 👨‍👩‍👧‍👦 👨‍👦‍👦‍👦", "مرحبا 😀 👩🏽‍🦽 عالم 👍🏽", "🇫🇷 1️⃣ ☎︎ ☎️"]],
+        ["geometric-emoji", ["🔴 🔵 🟠 🟡 🟢 🟣 🟤 ⚫ ⚪", "🟥 🟦 🟧 🟨 🟩 🟪 🟫 ⬛ ⬜", "▪ ◾ ◼ ⬛ ▫ ◽ ◻ ⬜", "▪︎ ▪️ ◼︎ ◼️ ⚪︎ ⚪️"]],
+        ["coloured-hearts", ["❤️ 🧡 💛 💚 💙 💜", "🖤 🤍 🤎 🩵 🩶 🩷", "❤ ❤︎ ❤️", "💙 🩵 🩶 🤍"]],
+        ["emoji-expressions-1", ["🤣 🫠 😇 🥰 😍 🤩", "😘 😗 😚 😙 🥲 🤑", "🤗 🤭 🫢 🫣 🤫 🫡", "🫥 🤥 🫨 😌 🥴 🤠"]],
+        ["emoji-expressions-2", ["🥳 🥸 🫤 🥹 😨 😰", "😥 😱 😓 😺 😸 😹", "😻 😼 😽 🙀 😿 😾", "🙈 🙉 🙊"]],
+        ["emoji-mammals-1", ["🐵 🐒 🦍 🦧 🐶 🐕", "🦮 🐩 🐺 🦊 🦝 🐱", "🐈 🦁 🐯 🐅 🐆 🐴", "🫎 🫏 🐎 🦄 🦓 🦌"]],
+        ["emoji-mammals-2", ["🦬 🐮 🐂 🐃 🐄 🐷", "🐖 🐗 🐽 🐏 🐑 🐐", "🐪 🐫 🦙 🦒 🐘 🦣", "🦏 🦛 🐭 🐁 🐀 🐹"]],
+        ["emoji-mammals-3", ["🐰 🐇 🐿 🦫 🦔 🦇", "🐻 🐨 🐼 🦥 🦦 🦨", "🦘 🦡 🐾", "🐈 🐈‍⬛ 🐕 🐕‍🦺 🐻 🐻‍❄️"]],
+        ["emoji-buildings-1", ["🏠 🏡 🏢", "🏣 🏤 🏥", "🏦 🏨 🏩", "🏪 🏫 🏬"]],
+        ["emoji-buildings-2", ["🏭 🏯 🏰", "💒 ⛪ 🕌", "🛕 🕍 ⛩", "🕋 ⛲ 🛖"]],
+        ["emoji-produce-sequences", ["🍋‍🟩 🍄‍🟫", "🍋 🟩 🍄 🟫", "🍋‍🟩🍋‍🟩", "🍄‍🟫🍄‍🟫"]],
+        ["emoji-produce-1", ["🍇 🍈 🍉", "🍊 🍋 🍌", "🍍 🥭 🍎", "🍏 🍐 🍑"]],
+        ["emoji-produce-2", ["🍒 🍓 🫐", "🥝 🍅 🫒", "🥥 🥑 🍆", "🥔 🥕 🌽"]],
+        ["emoji-produce-3", ["🌶 🫑 🥒", "🥬 🥦 🧄", "🧅 🥜 🫘", "🌰 🫚 🫛"]],
+        ["emoji-office-time", ["⌚ ⏰ ⏱", "⏲ 🕰", "⌛ ⏳", "TIME ⏰"]],
+        ["emoji-office-pens", ["✏ ✒ 🖋", "🖊 🖌 🖍", "📝 💼 📁", "📂 🗂"]],
+        ["emoji-office-calendar", ["📅 📆 🗒", "🗓 📇 📋", "📌 📍", "📎 🖇"]],
+        ["emoji-office-storage", ["📏 📐 ✂", "🗃 🗄 🗑", "FILE 🗂", "DONE 📋"]],
+        ["emoji-places-1", ["🏔 ⛰ 🌋", "🗻 🏕 🏖", "🏜 🏝 🏞", "🏟 🏛 🏗"]],
+        ["emoji-places-2", ["🏘 🏚 🌁", "🌃 🏙 🌄", "🌅 🌆 🌇", "🌉 ♨ 🎠"]],
+        ["emoji-places-3", ["🎡 🎢 🗼", "🗽 🗾 🗺", "🌐 🧭", "PLACES 🎡"]],
+        ["emoji-colour-faces", ["😠 😡 🤢", "🥵 🥶", "HOT 🥵 COLD 🥶", "ANGRY 😡 SICK 🤢"]],
+        ["emoji-sky-1", ["🌑 🌒 🌓 🌔", "🌕 🌖 🌗 🌘", "🌙 🌚 🌛 🌜", "🌝 🌞 ⭐ 🌟"]],
+        ["emoji-sky-2", ["🌠 🌌 ☀ ☁", "⛅ ⛈ 🌤 🌥", "🌦 🌧 🌨 🌩", "🌪 🌫 🌬 🌀"]],
+        ["emoji-sky-3", ["🌂 ☂ ☔ ⛱", "⚡ ❄ ☃ ⛄", "☄ 💧 🌊", "❄️ ❄︎ 🌫️ 🌫︎"]],
+        ["emoji-dining-1", ["🍦 🍧 🍨 🍩", "🍪 🎂 🍰 🧁", "🥧 🍫 🍬 🍭", "🍮 🍯"]],
+        ["emoji-dining-2", ["🍼 🥛 ☕ 🫖", "🍵 🍶 🍾 🍷", "🍸 🍹 🍺 🍻", "🥂 🥃 ☕️ ☕︎ 🍸️ 🍸︎"]],
+        ["emoji-dining-3", ["🫗 🥤 🧋 🧃", "🧉 🧊 🥢 🍽", "🍴 🥄 🔪 🫙", "🏺 🍽️ 🍽︎"]],
+        ["emoji-food-1", ["🍞 🥐 🥖 🫓 🥨", "🥯 🥞 🧇 🧀 🍖", "🍗 🥩 🥓 🍔 🍟", "🍕 🌭"]],
+        ["emoji-food-2", ["🥪 🌮 🌯 🫔 🥙", "🧆 🥚 🍳 🥘 🍲", "🫕 🥣 🥗 🍿 🧈", "🧂 🥫"]],
+        ["emoji-food-3", ["🍱 🍘 🍙 🍚 🍛", "🍜 🍝 🍠 🍢 🍣", "🍤 🍥 🥮 🍡 🥟", "🥠 🥡"]],
+        ["emoji-sports-1", ["⚽ ⚾ 🥎 🏀", "🏐 🏈 🏉 🎾", "🥏 🎳 🏏 🏑", "🏒 🥍 ⚽️ ⚾︎"]],
+        ["emoji-sports-2", ["🏓 🏸 🥊 🥋", "🥅 ⛳ ⛸ 🎣", "🤿 🎽 🎿 🛷", "🥌 ⛳️ ⛸︎"]],
+        ["emoji-plants-1", ["💐 🌸 💮 🪷", "🏵 🌹 🥀 🌺", "🌻 🌼 🌷 🪻", "🌱 🪴 🏵️ 🏵︎"]],
+        ["emoji-plants-2", ["🌲 🌳 🌴 🌵", "🌾 🌿 ☘ 🍀", "🍁 🍂 🍃 🪹", "🪺 🍄 ☘️ ☘︎"]],
+        ["emoji-birds", ["🦃 🐔 🐓 🐣 🐤", "🐥 🐦 🐧 🕊 🦅", "🦆 🦢 🦉 🦤 🪶", "🦩 🦚 🦜 🪽 🪿"]],
+        ["emoji-wildlife-1", ["🐸 🐊 🐢 🦎 🐍 🐲", "🐉 🦕 🦖 🐳 🐋 🐬", "🦭 🐟 🐠 🐡 🦈 🐙", "🐚 🪸 🪼 🦀 🦞 🦐"]],
+        ["emoji-wildlife-2", ["🦑 🦪 🐌 🦋 🐛 🐜", "🐝 🪲 🐞 🦗 🪳 🕷", "🕸 🦂 🦟 🪰 🪱 🦠", "🐦 🐦‍⬛ 🐣 🐤 🐥"]],
+        ["emoji-compounds", ["😶‍🌫️ 😮‍💨 😵‍💫 🙂‍↔️ 🙂‍↕️", "🐈‍⬛ 🐕‍🦺 🐻‍❄️ ⛓️‍💥 🐦‍⬛", "😶‍🌫 🙂‍↔ 🙂‍↕", "🐻‍❄ ⛓‍💥"]],
+        ["emoji-tools", ["🛠 ⚒ 🔨 ⛏ 🔧 🪛", "🔩 ⚙ 🗜 ⚖ 🔗 ⛓", "🪝 🧰 🧲 🪜 🪚 🪓", "🪤 🧯 🔑 🗝 🔒 🔓"]],
+        ["emoji-transport", ["🚗 🚕 🚙 🚌 🚎 🚐", "🚚 🚛 🚜 🛺 🚂 🚃", "🚄 🚅 🚆 🚇 🚈 🚝", "🚢 ⛵ 🚤 🛥 🛶 ⛴"]],
+        ["emoji-clocks", ["🕐 🕑 🕒 🕓 🕔 🕕", "🕖 🕗 🕘 🕙 🕚 🕛", "🕜 🕝 🕞 🕟 🕠 🕡", "🕢 🕣 🕤 🕥 🕦 🕧"]],
+        ["emoji-music", ["🥁 🎷 🎺 🎸", "🎻 🎹 🎵 🎶", "🎼 🎤 🎧 📻", "MUSIC 🎵 RADIO 📻"]],
+        ["emoji-ailing", ["😷 🤒 🤕 🤧", "🥱 😪 🤤 😵", "😲 😦 😧 😢", "MASK 😷 YAWN 🥱"]],
+        ["emoji-strained", ["😕 😟 😞 😔", "😖 😣 😩 😫", "😤 😠 🙃 😶", "WORRIED 😟 ANGRY 😠"]],
+        ["emoji-playful", ["😛 😜 😝 🤪", "🤨 🧐 🤓 🤐", "🙄 😏 😒 😬", "WINK 😜 ZIP 🤐"]],
+        ["emoji-faces", ["😊 😆 😐 😴", "😁 😃 😄 😅", "😉 😋 😎 😑", "🙂🙁😮😯"]],
+        ["keycap-sequences", ["0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣", "6️⃣ 7️⃣ 8️⃣ 9️⃣ #️⃣ *️⃣", "0⃣ 1⃣ 2⃣ 3⃣ 4⃣ 5⃣ 6⃣ 7⃣ 8⃣ 9⃣ #⃣ *⃣", "TEXT 0123456789 # *"]],
+        ["astronaut-sequences", ["🧑‍🚀 🧑🏻‍🚀 🧑🏼‍🚀", "🧑🏽‍🚀 🧑🏾‍🚀 🧑🏿‍🚀", "CUSTOM 🧑‍🚀 NATIVE 👨‍👦‍👦‍👦", "🧑🏽‍🚀"]],
+        ["emoji-grid", ["┌──────┐\n│😀👍🏽❤️│\n│👩🏽‍🚀🇫🇷👍│\n└──────┘", "😀 👍🏾", "👩🏽‍🚀 ❤︎ ❤️", "👍🏻"]],
+        ["seal-recovery-alternate-1", ["𿎐𿎒", "𿎓𿎔", "𿎕𿎖", "SEAL 𿎐"]],
+        ["seal-recovery-alternate-2", ["𿎗𿎘", "𿎙𿎚", "𿎜𿎝", "SEAL 𿎗"]],
+        ["seal-recovery-alternate-3", ["𿎞𿎟", "𿎠𿎡", "𿎣", "SEAL 𿎞"]],
+        ["seal-recovery-qjz", ["𽀥𽀬𽁢𽂋", "𽂋𽁢𽀬𽀥", "𽀥𽀬𽁢𽂋", "SEAL 𽁢"]],
+        ["seal-recovery-dyc-bird-mouth", ["𽍕𽍺", "𽍺𽍕", "𽍕𽍺", "SEAL 𽍺"]],
+        ["seal-recovery-dyc-heart-arches", ["𾺦", "𾺦𾺦", "SEAL 𾺦", ""]],
+        ["seal-recovery-dyc-heart-great", ["𾺉", "𾺉𾺉", "SEAL 𾺉", ""]],
+        ["seal-recovery-dyc-heart-coils", ["𾹙", "𾹙𾹙", "SEAL 𾹙", ""]],
+        ["seal-recovery-dyc-heart-west", ["𾹑", "𾹑𾹑", "SEAL 𾹑", ""]],
+        ["seal-recovery-dyc-heart-enclosure", ["𾹇", "𾹇𾹇", "SEAL 𾹇", ""]],
+        ["seal-recovery-dyc-fire-roof", ["𾵨𾶟𾶻", "𾵨𾶟𾶻𾵨𾶟𾶻", "𾵨𾶟𾶻", "SEAL 𾵨𾶟𾶻"]],
+        ["seal-recovery-dyc-forest-fire", ["𾴥", "𾴥𾴥", "𾴥", "SEAL 𾴥"]],
+        ["seal-recovery-dyc-deer-rabbit-dogs", ["𾱌𾱝𾲚𾲧", "𾱌𾱝𾲚𾲧𾱌𾱝𾲚𾲧", "𾱌𾱝𾲚𾲧", "SEAL 𾱌𾱝𾲚𾲧"]],
+        ["seal-recovery-dyc-later-horses", ["𾮜𾯪𾰌", "𾮜𾯪𾰌𾮜𾯪𾰌", "𾮜𾯪𾰌", "SEAL 𾮜𾯪𾰌"]],
+        ["seal-recovery-dyc-horses", ["𾮱𾮽", "𾮱𾮽𾮱𾮽", "𾮱𾮽", "SEAL 𾮱𾮽"]],
+        ["seal-recovery-dyc-stone7", ["𾬵", "𾬵𾬵", "𾬵", "SEAL 𾬵"]],
+        ["seal-recovery-dyc-stones", ["𾬕𾬟", "𾬕𾬟𾬕𾬟", "𾬕𾬟", "SEAL 𾬕𾬟"]],
+        ["seal-recovery-dyc-head-ghost", ["𾥨𾩉𾩾𾫮", "𾥨𾩉𾩾𾫮𾥨𾩉𾩾𾫮", "𾥨𾩉𾩾𾫮", "SEAL 𾥨𾩉𾩾𾫮"]],
+        ["seal-recovery-dyc-head", ["𾤿", "𾤿𾤿", "𾤿", "SEAL 𾤿"]],
+        ["seal-recovery-dyc-see", ["𾣐", "𾣐𾣐", "𾣐", "SEAL 𾣐"]],
+        ["seal-recovery-dyc-garments", ["𾟭𾡚", "𾟭𾡚𾟭𾡚", "𾟭𾡚", "SEAL 𾟭𾡚"]],
+        ["seal-recovery-dyc-volume6", ["𾝭𾞸", "𾝭𾞸𾝭𾞸", "𾝭𾞸", "SEAL 𾝭𾞸"]],
+        ["seal-recovery-dyc-sickness", ["𾕿𾖡𾘅", "𾕿𾖡𾘅𾕿𾖡𾘅", "𾕿𾖡𾘅", "SEAL 𾕿𾖡𾘅"]],
+        ["seal-recovery-dyc-rice", ["𾑒𾑢𾔟𾕂", "𾑒𾑢𾔟𾕂𾑒𾑢𾔟𾕂", "𾑒𾑢𾔟𾕂", "SEAL 𾑒𾑢𾔟𾕂"]],
+        ["seal-recovery-dyc-moonvessel", ["𾎱𾎳𾏇𾍷", "𾎱𾎳𾏇𾍷𾎱𾎳𾏇𾍷", "𾎱𾎳𾏇𾍷", "SEAL 𾎱𾎳𾏇𾍷"]],
+        ["seal-recovery-dyc-daymoon", ["𾌻𾎆", "𾌻𾎆𾌻𾎆", "𾌻𾎆", "SEAL 𾌻𾎆"]],
+        ["seal-recovery-dyc-volume5", ["𾋧𾋽𾌐", "𾋧𾋽𾌐𾋧𾋽𾌐", "𾋧𾋽𾌐", "SEAL 𾋧𾋽𾌐"]],
+        ["seal-recovery-dyc-latewood", ["𾂖𾆗𾆼𾇧", "𾂖𾆗𾆼𾇧𾂖𾆗𾆼𾇧", "𾂖𾆗𾆼𾇧", "SEAL 𾂖𾆗𾆼𾇧"]],
+        ["seal-recovery-dyc-wood", ["𾀪𾁳", "𾀪𾁳𾀪𾁳", "𾀪𾁳", "SEAL 𾀪𾁳"]],
+        ["seal-recovery-dyc-enclosed", ["𾃧", "𾃧𾃧", "𾃧", "SEAL 𾃧"]],
+        ["seal-recovery-dyc-walking", ["𽽲", "𽽲𽽲", "𽽲", "SEAL 𽽲"]],
+        ["seal-recovery-dyc-food", ["𽹹𽻥", "𽹹𽻥𽹹𽻥", "𽹹𽻥", "SEAL 𽹹𽻥"]],
+        ["seal-recovery-dyc-vessels", ["𽷎𽷼𽸖", "𽷎𽷼𽸖𽷎𽷼𽸖", "𽷎𽷼𽸖", "SEAL 𽷎𽷼𽸖"]],
+        ["seal-recovery-dyc-bamboo", ["𽵣𽵥𽶤𽶥", "𽵣𽵥𽶤𽶥𽵣𽵥𽶤𽶥", "𽵣𽵥𽶤𽶥", "SEAL 𽵣𽵥𽶤𽶥"]],
+        ["seal-recovery-dyc-container-dot", ["𽵑", "𽵑𽵑", "𽵑", "SEAL 𽵑"]],
+        ["seal-recovery-dyc-hand-remains", ["𽭭𽮢", "𽮢𽭭", "𽭭𽮢", "SEAL 𽮢"]],
+        ["seal-recovery-dyc-birds4", ["𽫝𽫟𽫪𽬃", "𽬃𽫪𽫟𽫝", "𽫝𽫟𽫪𽬃", "SEAL 𽬃"]],
+        ["seal-recovery-dyc-eye-knowledge", ["𽥑𽧄𽨕", "𽨕𽧄𽥑", "𽥑𽧄𽨕", "SEAL 𽨕"]],
+        ["seal-recovery-dyc-variants4", ["𽢓𽢿𽣯𽣳", "𽣳𽣯𽢿𽢓", "𽢓𽢿𽣯𽣳", "SEAL 𽣳"]],
+        ["seal-recovery-dyc-speech-lift", ["𽛏𽝵𽟐", "𽟐𽝵𽛏", "𽛏𽝵𽟐", "SEAL 𽟐"]],
+        ["seal-recovery-dyc-volume2", ["𽕏𽖴", "𽖴𽕏", "𽕏𽖴", "SEAL 𽖴"]],
+        ["seal-recovery-dyc-mouth-walk", ["𽐍𽐔𽑫𽒠𽓕", "𽓕𽒠𽑫𽐔𽐍", "𽐍𽐔𽑫𽒠𽓕", "SEAL 𽒠"]],
+        ["seal-recovery-dyc-grass", ["𽆂𽆘𽈜𽊦", "𽊦𽈜𽆘𽆂", "𽆂𽆘𽈜𽊦", "SEAL 𽈜"]],
+        ["seal-recovery-dyc-complex", ["𽂨𽄢", "𽄢𽂨", "𽂨𽄢", "SEAL 𽄢"]],
+        ["seal-recovery-dyc-alt", ["𽀐𽂇", "𽂇𽀐", "𽀐𽂇", "SEAL 𽂇"]],
+        ['seal-licensed-supplement',['\u{3e34f} \u{3fa42}','A\u{3e34f}B \u{3fa42}','\u{3e34f}\u{3fa42}','']],
+        ...(()=>{
+          const entry=scriptManifest.fonts.find(f=>f.source.endsWith('/DadSealSans-Regular.otf'));
+          const points=entry.ranges.flatMap(([a,b])=>Array.from({length:b-a+1},(_,i)=>String.fromCodePoint(a+i)));
+          return Array.from({length:Math.ceil(points.length/12)},(_,i)=>{
+            const group=points.slice(i*12,i*12+12);
+            return ['seal-sans-supplement-'+(i+1),[group.slice(0,4).join(' '),group.slice(4,8).join(' '),group.slice(8).join(' '),'']];
+          });
+        })(),
+        ['seal-sans-mixed',['A\u{3d06c}B \u{3eed4}','\u{3f8ca}\u{3f8cb} \u{3e34f}\u{3fa42}','\u{3fbff}\u{3fc32} SEAL','']],
+        ["seal-recovery-dyc", ["𽀇𽁕", "𽁕 𽀆", "𽀇𽁕", "SEAL 𽁕"]],
+        ["seal-recovery-cleaner-copy", ["𽳡𾺴𿕶", "𿕶𾺴𽳡", "𽳡𾺴𿕶", "SEAL 𽳡𾺴𿕶"]],
+        ["seal-recovery-final-locations", ["𿟬𿭥", "𿭦𿭲", "𿟬𿭥", "SEAL 𿭦𿭲"]],
+        ["seal-recovery-thread", ["𿘎𿜑", "𿜑𿘎", "𿘎𿜑", "SEAL 𿘎𿜑"]],
+        ["seal-recovery-gates", ["𿊸𿊹", "𿊺𿊻", "𿊸𿊹", "SEAL 𿊺"]],
+        ["seal-recovery-fish", ["𿈔𿈕", "𿈖𿈗", "𿈘𿈝", "SEAL 𿈘"]],
+        ["seal-recovery-shifted", ["𾺯𾺰", "𾺱𾼬", "𾿅𾿆", "SEAL 𾺱"]],
+        ["seal-recovery-water", ["𾯸𿅜", "𿅞𿅡", "𿅢𿅣", "SEAL 𿅜"]],
+        ["seal-recovery-cross-pages", ["𾌲 𾚛", "𾢈 𾪊", "𾚚 𾚛", "SEAL 𾪊"]],
+        ["seal-recovery-book4c", ["𾉝 𾉞", "𾎔 𾔿", "𾖭", "𾉝 𾉞"]],
+        ["seal-recovery-next-pages", ["𽝦 𽢊", "𾈟", "𽢊 𾈟", "SEAL 𽝦"]],
+        ["seal-recovery-corrected", ["𾺳 𾺶", "𾃲 𾓪", "𿊃 𿣽", "𾓩 𾓪"]],
+        ["seal-recovery-page-search", ["𽞩 𾇣", "𾺘 𾺵", "𽞨 𽞩", "SEAL 𾺵"]],
+        ["seal-recovery-final-candidates", ["𽙫 𾴺", "𾴻 𾺲", "𾴺 𾴻", "SEAL 𽙫"]],
+        ["seal-recovery-book6", ["𾵷 𾺓", "𾿓 𿇮", "𾵷 𾿓", "SEAL 𿇮"]],
+        ["seal-recovery-book5", ["𾨺 𾨻", "𾩙 𾭭", "𾨺 𾩙", "SEAL 𾨻"]],
+        ["seal-recovery-book4b", ["𾃴 𾇥", "𾇦 𾕮", "𾇥 𾇦", "SEAL 𾃴"]],
+        ["seal-recovery-adjacent", ["𿉽 𿉾", "𿞝", "𿉽 𿞝", "SEAL 𿉾"]],
+        ["seal-recovery-cluster", ["𿘃 𿘄", "𿘅", "𿘃 𿘅", "SEAL 𿘄"]],
+        ["seal-recovery-book4", ["𾇑 𾊘", "𾊥 𾓭", "𾇑 𾊥", "SEAL 𾊘 𾓭"]],
+        ["seal-recovery-latest", ["𿒂 𿓱", "𿗍", "𿒂 𿗍", "SEAL 𿓱"]],
+        ["seal-recovery-more", ["𽒸 𽴪", "𽷲 𽷳", "𿘣 𿘥", "SEAL 𽷲 𽷳"]],
+        ["seal-recovery", ["𽞨 𽬎 𿖱", "𿗱 𿘢 𿣼", "SEAL 𽞨 𿣼", "𽀀 𽞨 𿘢"]],
+        ["small-seal", ["\u{3D000} \u{3D002} \u{3D003}", "\u{3D3FC} \u{3E3FE}", "\u{3F43F} \u{3FC3F}", "\u{3D004}"]],
+        ["tulu-sidetic", ["𑎒𑏐𑎒 𑎒𑏇 𑎒𑏇", "𑏑𑎒 𑎒𑎻 𑎒𑏎", "𐥀𐥁𐥂 123 ABC 𐥃𐥄𐥅", "𑎒𑏐𑎒"]],
+        ["jurchen-tangut", ["𘸀𘸁𘸂𘸃𘸄𘸅𙇍𙇎𙇏𙇐𙇑𙇒", "𘟸𘟹𘟺𘟻𘟼𘟽𘷭𘷮𘷯𘷰𘷱𘷲", "JURCHEN 𘸀𘸁 123 TANGUT 𘟺𘷲", "𘸀𘟺"]],
+        ["new-scripts", ["\u{16EA0}\u{16EA1}\u{16EA2}", "\u{16D44}\u{16D45}\u{16D67}", "\u{16101}\u{1611E}\u{1612D} \u{16101}\u{16126}", "\u{1E5D0}\u{1E5D1}\u{1E5EE}"]],
+        ["cuneiform-numerals", ["𒕐 𒕑 𒕒 𒕓 𒕔 𒕕 𒕖 𒕗 𒕘", "𒕙 𒕚 𒕛 𒕜 𒚆", "𒑯 𒑵 𒑶 𒑷 𒑸 𒑹 𒑺 𒑻 𒑼 𒑽 𒑾 𒑿", "𒕘"]],
+        ["hieroglyphs", ["𓀀 𓂀 𓃀", "\u{13460} \u{13461}", "𓀀\u{13430}𓀁", "𓆣"]],
+        ["egyptian-extended-groups", ["𓑠𓑡 𓑠𓐰𓑡 𓑠𓐱𓑡", "𓐷𓑠𓐰𓑡𓐸𓐱𓑢 𓑠𓐰𓑡𓐱𓑢", "𓑠𓐰𔉴︅ 𓑠𓐶𓑡 𓑠𓐰𓑡𓑢𓐰𓑣", "𓑠𓐰𓑡"]],
+        ["egyptian-enclosure-ends", ["𓉘𓐼𓑠𓐽𓉝 𓉙𓐼𓑡𓐽𓉜", "𓉚𓐼𓑠𓐽𓉛 𓐯𓐼𓑡𓐽𓍻", "𓊈𓐾𓑠𓑡𓐿𓊉", "𓐼𓑠𓑡𓑢𓑠𓑡𓑢𓐽𓍺"]],
+        ["egyptian-enclosures", ["𓍹𓐼𓇳𓄤𓂓𓐽𓍺", "𓊆𓐾𓑠𓐰𓑡𓑢𓐿𓊇", "𓍹𓐼𓑠𓐼𓑡𓐽𓑢𓐽", "\u202e𓍹𓐼𓑠𓑡𓐽𓍺\u202c"]],
+        ["egyptian-modified-insertions", ["𓀠𓑀𓐳𓑠 𓀠𓑀𓐵𓑡", "𓂓︁𓐹𓑠 𓊅︀𓐹𓑡", "𓇹︁𓑀𓐻𓑠", "\u202e𓇹︁𓑀𓐻𓑠\u202c"]],
+        ["egyptian-multiple-insertions", ["𓆓𓐳𓑠𓐴𓑡 𓆓𓐴𓑡𓐳𓑠", "𓅜𓐳𓑠𓐴𓑡𓐵𓑢", "𓆓𓐳𓐷𓑠𓐰𓑡𓐸𓐴𓑢", "\u202e𓆓𓐳𓑠𓐴𓑡\u202c"]],
+        ["egyptian-insertions", ["𓆓𓐳𓑠 𓄂𓐲𓑡", "𓂇𓐴𓑠 𓅜𓐵𓑡", "𓆓𓐳𓐷𓑠𓐰𓑡𓐸", "\u202e𓆓𓐳𓑠\u202c"]],
+        ["egyptian-rtl", ["𓑠𓐱𓑡  \u202e𓑠𓐱𓑡\u202c", "\u202e𓐷𓑠𓐰𓑡𓐸𓐱𓑢\u202c", "\u202e𔉴︅𓑀𓑇 𓑠𓑁𓑡\u202c", "\u202e𓀀𓀁\u202c"]],
+        ["egyptian-damage", ["𓄿𓑇 𓆓𓑒 𓅜𓑔 𓆣𓑕", "𓑠𓑇 𓑠𓑈 𓑠𓑊 𓑠𓑎", "𔉴︅𓑀𓑏 𓑠𓑔𓐰𓑡", "𓑠𓑕"]],
+        ["egyptian-editorial", ["𓑠𓑁𓑠 𓑠𓑂𓑠", "𓑃𓑄𓑅𓑆", "𓑃︀𓑃︀ 𓑃𓑃", "𓑠𓐰𓑃"]],
+        ["egyptian-mirrors", ["𓑠 𓑠𓑀", "𔉴︅ 𔉴︅𓑀", "𓑠𓑀𓐰𓑡 𓑠𓐰𓑡𓑀", "𓀀 𓀀𓑀"]],
+        ["egyptian-rotations", ["𓄹 𓄹︀ 𓄹︁ 𓄹︂ 𓄹︃ 𓄹︄ 𓄹︅ 𓄹︆", "𓯨 𓯨︀ 𔉴 𔉴︁ 𔉴︂ 𔉴︅ 𔉴︆", "𓀒 𓀒︃ 𓐙 𓐙︃ 𓐙︆", "𓆄 𓆄︃ 𓆄︆"]],
+        ["egyptian-composition", ["𓀀𓀁 𓀀\u{13430}𓀁", "𓀀\u{13431}𓀁", "\u{13437}𓀀\u{13430}𓀁\u{13438}\u{13431}𓂀", "𓅓 𓅓\ufe00"]],
+        ["bidi-wrap", ["LEFT \u202e" + "abc def ghi jkl mno pqr ".repeat(4) + "\u202c END", "English \u2068אבג " + "123 xyz 456 ".repeat(5) + "\u2069 end", "العربية " + "(123) hello عالم ".repeat(5), "\u{1e900}\u{1e901} 123"]],
+        ["mixed-rtl", ["مرحبا بالعالم (123) hello مرحبا بالعالم (456) world", "שלום (123) hello שלום (456) world", "English العربية 123 English العربية 456", "כן, 123!"]],
+        ["scripts", ["مرحبا بالعالم", "नमस्ते दुनिया", "你好，世界。こんにちは。", "안녕하세요"]],
+        ["dictionary-scripts", ["ภาษาไทยเป็นภาษาที่สวยงาม".repeat(5), "ພາສາລາວ".repeat(8), "ភាសាខ្មែរជាភាសាជាតិ".repeat(5), "မြန်မာဘာသာစကား".repeat(3)]],
+        ['dictionary-mixed-controls',['ภาษาไทย ภาษา\u2060ไทย (ภาษาไทย)','(ພາສາລາວ) ພາສາ\u00a0ລາວ','ភាសាខ្មែរជាភាសាជាតិ 123 ភាសាខ្មែរ','မြန်မာဘာသာစကား 😀 မြန်မာဘာသာစကား']],
+        ['egyptian-enclosure-damage',['𓍹\u{1343c}𓑠\u{13447}𓑡\u{13455}\u{1343d}𓍺','𓍹\u{1343c}𓑠\u{13447}\u{13430}𓑡\u{1344e}\u{1343d}𓍺','\u202e𓍹\u{1343c}𓑠\u{13440}\u{13447}𓑡\u{13455}\u{1343d}𓍺\u202c','']],
+        ['egyptian-native-region-overlaps',['𓀐\u{1343b}𓀀 𓀐\u{1343b}𓑠','𓆓\u{13440}\u{13433}𓀀 𓆓\u{13440}\u{13433}𓑠','𓆓\u{13447}\u{13433}𓑠 𓀐\u{1343b}𓑠','']],
+        ['egyptian-mirror-helpers',['\u{13093}\u{13440}\u{13439}𓑠 \u{13250}\u{13440}\u{1343b}𓑡','\u{13093}\ufe01\u{13440}\u{13439}𓑠 \u{13093}\u{13440}\u{13439}𓑠\u{1343a}𓑡','\u202e\u{13093}\u{13440}\u{13439}𓑠\u202c','']],
+        ['egyptian-native-mirror-alternates',['\u{1305c}\u{13440}\u{13432}𓑠','\u{130bb}\u{13440}\u{13432}𓑠 \u{130bd}\u{13440}\u{13434}𓑡','\u202e\u{130bb}\u{13440}\u{13432}𓑠\u202c','']],
+        ['egyptian-documented-cells',['\u{13154}\u{13433}𓑠 \u{13154}\u{13440}\u{13433}𓑡','\u{1318f}\u{13434}𓑠 \u{1318f}\u{13440}\u{13434}𓑡','\u{1315c}\u{13433}𓑠 \u{13154}\u{13447}\u{13433}𓑠','']],
+        ["supplemental-script-forms", ["ե՘ ի֋ յ֌ ψ𝿳 ω𝿴", "𛄣 𛄤 𛄥 𛄦 𛄧 𛄨 𛅨", "𘳖 𘳗 𘳘 𘳙 𘳚 𘳿", "᭎ ᭏ ᭿"]],
+        ["arabic-crown-letters", ["ب𐻙ب ب𐻚ب ب𐻛ب ب𐻜ب ب𐻝ب ب𐻞ب", "ب𐻟ب ب𐻠ب ب𐻡ب ب𐻢ب ب𐻣ب ب𐻤ب", "ب𐻥ب ب𐻦ب ب𐻧ب ب𐻨ب ب𐻩ب ب𐻪ب", "ب𐻫ب ب𐻬ب ب𐻭ب ب𐻮ب"]],
+        ["arabic-baseline-symbols", ["ب𐻉ب ب𐻊ب", "𐻉𐻊𐻉𐻊", "عربي 𐻉𐻊 123 Latin", "𐻉 𐻊"]],
+        ["arabic-crown-placement", ["ا𐻹 د𐻹 ذ𐻹", "ر𐻹 ز𐻹 ل𐻹 و𐻹", "د𐻹َ ر𐻹ُ", "ا𐻹𐻹"]],
+        ["arabic-mark-stacks", ["ب𐻋 ب𐻎 ب𐻏 ب𐻳 ب𐻵", "ب𐻌 ب𐻍 ب𐻰 ب𐻱 ب𐻲 ب𐻴 ب𐻶", "لا𐻷 لا𐻸 لا𐻹", "ب𐻋𐻋 م𐻱𐻱 ا𐻹"]],
+        ["arabic-honorifics", ["﯃ ﯄ ﯅ ﯈ ﯉", "﯊ ﯋ ﯌ ﯍ ﯎ ﯏ ﯐ ﯑ ﯒", "﷈ ﷉ ﷊ ﷋ ﷌ ﷍ ﷎", "𐻑 𐻒 𐻓 𐻔 𐻕 𐻖 𐻗 𐻘"]],
+        ["extended-arabic", ["ب𐻂ب ب𐻃ب ب𐻄ب", "ب࢏ب ب𐻆ب ب𐻇ب", "بࢗ ب𐻺 ب𐻻 ب𐻼", "﯆ ﯇ ﶐ ﶑ 𐻐"]],
+        ["dives-myanmar", ["𑤁 𑤃 𑤅 𑤍 𑤑 𑤓", "𑤌𑤸 𑤌𑤸 𑤌𑤾𑤌 𑥁𑤌𑤲", "𑛐𑛑𑛒𑛓𑛔𑛕𑛖𑛗𑛘𑛙 𑛚𑛛𑛜𑛝𑛞𑛟𑛠𑛡𑛢𑛣", "𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙"]],
+        ["supplemental-alphabets", ["Ꟍꟍ ꟎꟏ Ꟛꟛ Ᲊᲊ", "𞀰𞁑 𞀱𞁒 𞀲𞁓 𞀳𞁔", "𝼟 𝼠 𝼡 𝼢 𝼣 𝼤", "Ɤ ꟝ а𞂏 А𞂏"]],
+        ["extended-marks", ["X̊᫁ X̊᫂ X̥᫃ X̥᫄", "A᫏ E᫐ I᫑ O᫒ U᫓ Y᫔", "X᫕ A᫖ E᫗ I᫘ O᫙ U᫚ X᫝ Y᫦ Z᫯", "X᫆᫐᫤"]],
+        ["accents", ["UN CAFÉ, S’IL VOUS PLAÎT.", "À Á Â Ã Ä Å Æ Ç È É Ê Ë", "Ñ Ò Ó Ô Õ Ö Ø Œ Ù Ú Û Ü", "¿DÓNDE ESTÁ EL CAFÉ?"]],
+        ["deep-zalgo", ["IT BUILDS " + Array.from("CHARACTER", c => c+stack).join(""), "ANOTHER LINE.\nSTILL HERE.", "VISIBLE OVERLAYS: X\u0334\u0335\u0336", "I CAN HEAR THE ACCENTS."]],
+        ["calvin-zalgo", ["HELLO.", "HELLO AGAIN.", "A THIRD LINE.", "X"+stack]],
+        ["calvin-wide-cluster", ["HELLO.", "", "", "👨\u200d".repeat(40) + "👨"]],
+        ["sharada-kashmiri-vowels", ["𑆑𑭠 𑆑𑭡 𑆑𑭢 𑆑𑭣", "𑆑𑭤 𑆑𑭥 𑆑𑭦 𑆑𑭧", "𑆘𑭢 𑆘𑭣 𑆨𑇀𑆘𑭡 𑆰𑇀𑆟𑭧", "𑆃𑭠 𑆍𑭤 𑆏𑭥  A عربي"]],
+        ["chess-compensation", ["1. e4 e5 ⮖  🩔 🩕", "1. d4 d5 ⯹  🩖 🩗", "⮖ ≠ ⯹   =   ∞", "A ⮖ عربي ⯹"]],
+        ["legacy-text-pictographs", ["𜳺 𜳻 𜳼", "𜺺 𜺻 𜺼 🯺", "𜺽 𜺾 𜺿", "A 𜳺 عربي 𜺽"]],
+        ["asteroid-symbols", ["𜻀 𜻁 𜻂 𜻃 𜻄 𜻅", "𜻆 𜻇 𜻈 𜻉 𜻊 𜻋", "𜻌 𜻍 𜻎 𜻏 𜻐", "🝷 🝸 🝹 🝺  A عربي"]],
+        ["geomantic-figures", ["𜻠 𜻡 𜻢 𜻣", "𜻤 𜻥 𜻦 𜻧", "𜻨 𜻩 𜻪 𜻫", "𜻬 𜻭 𜻮 𜻯  A 𜻠 عربي"]],
+        ["chemical-reaction-symbols", ["A 🣐 B   A 🣑 B", "A 🣒 B   A 🣓 B   A 🣔 B   A 🣕 B", "A 🣖 B   A 🣗 B   A 🣘 B", "ΔG𜻰 = −RT ln K   تفاعل A 🣒 B"]],
+        ["kawi-nukta", ["𑼦 𑼦𑽚 𑼖𑽚 𑼲𑽚", "𑼦𑽚𑼶 𑼦𑽚𑼸 𑼦𑽚𑼾", "𑼲𑽚𑼁 𑼦𑽚𑼶𑼁", "𑼂𑼦𑽚𑼶 𑼦𑽂𑼒𑽚𑼸"]],
+        ["glagolitic-caudate-chrivi", ["Ⱍ Ⱟ ⱍ ⱟ", "Ⱟ̃ Ⱟ҃ ⱟ̃ ⱟ҃ Ⱍ҃ ⱍ҃", "ⱍⱃⱐⰲⱐ ⱟⱃⱐⰲⱐ", "Ⱟ̅ ⱟ҇ Latin 123"]],
+        ["music-special-stems", ["𝅘𝅥 𝅘𝉟 𝅘𝊀 𝅘𝊁", "𝅗𝉟 𝅗𝊀 𝅗𝊁", "𝅘𝉟𝅮 𝅘𝊀𝅮 𝅘𝊁𝅮", "𝅘𝉟𝉛 𝅘𝊀𝅻 𝅘𝊁𝅻"]],
+        ["music-higher-tremolos", ["𝅘𝅩𝅥 𝅘𝅥𝉛 𝅘𝅥𝉜", "𝅘𝅥𝅮𝉛 𝅘𝅥𝅮𝉜", "𝅗𝅥𝉛 𝅗𝅥𝉜", "𝅘𝅥𝉐𝉛 𝅘𝅥𝉒𝉜"]],
+        ["music-higher-flags", ["𝅘𝅥𝅲 𝅘𝅥𝉐", "𝅘𝅥𝉑 𝅘𝅥𝉒", "𝅗𝅥𝉐 𝅗𝅥𝉒", "𝅘𝅥𝉐𝅭 𝅘𝅥𝉒𝄧"]],
+        ["music-stress-unstress", ["𝅘𝅥𝄧 𝅘𝅥𝄨 𝅘𝅥𝅻", "𝅝𝄧 𝅗𝅥𝄨 𝅘𝅥𝅮𝄧", "𝅘𝅥𝄧 𝅘𝅥𝄨", "𝅘𝅥𝅮𝄧 𝅘𝅥𝅲𝄨"]],
+        ["devanagari-alternate-ddda", ["द ॾ 𑬊   𑬊ा 𑬊ि 𑬊ी", "𑬊ु 𑬊ू 𑬊े 𑬊ै", "𑬊ो 𑬊ौ 𑬊ं 𑬊ः", "र्𑬊 𑬊्र 𑬊्य 𑬊्क"]],
+        ["bengali-above-anusvara", ["ক𑷰 খ𑷰 ম𑷰 অ𑷰", "কা𑷰 কি𑷰 কী𑷰", "র্ক𑷰 ক্ষি𑷰 কো𑷰 কৌ𑷰", "কং কঁ ক𑷰 𑷱ু𑷰"]],
+        ["bengali-alternate-ba", ["ব 𑷱 ৰ   𑷱ু 𑷱ূ", "র্𑷱 𑷱্র 𑷱্রু 𑷱্য", "𑷱্দ 𑷱্ধ ম্𑷱 𑷱্𑷱", "𑷱ি 𑷱ে 𑷱ো 𑷱ৌ"]],
+        ["archaic-shrii", ["ఱ శ్రీ \u0c5c శ్రీ", "ಶ್ರೀ \u0cdc ಶ್ರೀ", "\u0c5c \u0c5c \u0c5c", "\u0cdc \u0cdc \u0cdc"]],
+        ["odia-tone-dots", ["କ୓ ଖ୓ ଗ୓ କ୍କ୓", "କା୓ କି୓ କେ୓", "ଅ୔ ଆ୔ ଏ୔", "ଓଡ଼ିଆ କ୕ କ୓"]],
+        ["hebrew-heavy-points", ["בְ ב׈ בּ ב׉", "שְּׁ ש׈׉ׁ", "ב׈ ג׈ ד׈ ת׈", "ב׉ כ׉ פ׉ ת׉"]],
+        ["historical-math-symbols", ["𝬀 𝬁 𝬂 𝬃 𝬄 𝬅 𝬆 𝬇", "𜻝 𜻞 𜻟", "𜻱 𜻲 𜻳 𝚦", "⹠ ⹡ ⹢ ⹣ 🟴 🟵"]],
+        ["new-music-symbols", ["𝇫 𝇬 𝇭 𝇮", "𝉓 𝉔 𝉕 𝉠", "𝉵 𝉶 𝉸 𝉾", "𝉧 𝉨 𝉩 𝉪"]],
+        ["legacy-constructed", ["𜰰𜰱𜰲𜰳\n𜰴𜰵𜰶𜰷\n𜰸𜰹𜰺𜰻\n𜰼𜰽𜰾𜰿", "𜲦𜲧\n𜲪𜲫", "𜲲𜲳\n𜲴𜲵", "𜱛\n𜱞"]],
+        ["legacy-pictures", ["LOOK 𜰀 𜱊 𜱖 𜲒", "𜳖𜳗𜳘 𜳰𜳱𜳲", "ARROWS 🢲 🢳 🢸", "𜱌 𜱍 𜱎 𜱏"]],
+        ["legacy-grid", ["𜴀𜴁𜴂𜴃𜴄𜴅𜴆𜴇\n𜵸𜵹𜵺𜵻𜵼𜵽𜵾𜵿\n𜷐𜷑𜷒𜷓𜷔𜷕𜷖𜷗", "𜺐𜺑𜺒𜺓\n𜺔𜺕𜺖𜺗\n𜺘𜺙𜺚𜺛\n𜺜𜺝𜺞𜺟", "𜰯𜺏𜰠🮠\n𜸚𜸛𜸠𜸨", "𜰯"]],
+        ["grids", ["┌────────┐\n│A B CAFÉ│\n├────────┤\n│界 界   │\n└────────┘", "╔════════╗\n║مرحبا   ║\n╠════════╣\n║123 ABC ║\n╚════════╝", "█▀▄█ ░▒▓\n▌▐▖▗ ▘▝▚\n████ ▙▛▜▟", "⠁⠂⠄⡀\n⠈⠐⠠⢀\n⣿⠿⣀⠀"]],
+        ["ascii-grid", ["+--------+\n| A -> B |\n|    |   |\n|    v   |\n|    C   |\n+--------+", "┌───┐\n│ A │\n└───┘", "╭───╮\n│ B │\n╰───╯", "╔══╗\n║OK║\n╚══╝"]],
+        ['grid-symbols-in-prose',['Use ─ as a rule in this sentence.','This Braille letter is ⠁ and this is ⠂.','A single █ can represent a filled cell.','A long sentence mentioning ░▒▓ still needs normal wrapping.']],
+        ["grid-wide", ["┌" + "─".repeat(70) + "┐\n│" + " ".repeat(70) + "│\n└" + "─".repeat(70) + "┘", "", "", "┌" + "─".repeat(40) + "┐\n└" + "─".repeat(40) + "┘"]],
+        ["resource-limits", ["X" + "\u0301".repeat(2_000_000), "你好世界".repeat(1250), "A\n".repeat(2500), "DONE"]],
+        ["dad-wide-cluster", ["👨\u200d".repeat(40) + "👨", "", "", "HELLO."]],
+      ];
+      try {
+        if (new Set(scenarios.map(([name])=>name)).size !== scenarios.length) throw new Error('Duplicate Unicode fixture names');
+        const comic = await loadComic("../");
+        const results = [];
+        const selectedCases = new Set(new URLSearchParams(location.search).getAll('case'));
+        for (const [name, texts] of scenarios.filter(([name]) => !selectedCases.size || selectedCases.has(name))) {
+          const section = document.createElement("section");
+          const heading = document.createElement("h2");
+          heading.textContent = name;
+          const canvas = document.createElement("canvas");
+          canvas.setAttribute("aria-label", name);
+          section.append(heading, canvas);
+          document.querySelector("#samples").append(section);
+          const started = performance.now();
+          const report = await renderComic(canvas, comic, texts);
+          const renderMs = Math.round(performance.now() - started);
+          const ctx = canvas.getContext("2d");
+          const failures = [];
+          if (!report.fits) failures.push("layout does not fit");
+          if (name === 'resource-limits') {
+            if (report.clipped.join(',') !== '0') failures.push('unexpected truncation at resource limit');
+            if (canvas.width < 1 || canvas.height < 1 || canvas.width > 16384 || canvas.height > 16384 || canvas.width * canvas.height > 16777216)
+              failures.push('canvas allocation exceeds export budget');
+            if (renderMs > 15000) failures.push('maximum input took more than 15 seconds to render');
+            const letters = report.panels[1].speeches.find(s => s.who === 'dad').lines.flatMap(l => l.units).join('');
+            if (letters !== texts[1]) failures.push('maximum-length CJK lost text');
+            const shortLines = report.panels[2].speeches.find(s => s.who === 'dad').lines;
+            if (shortLines.length !== 2500 || shortLines.some(l => l.text !== 'A')) failures.push('hard-line stress lost text');
+          } else if (report.clipped.length) failures.push("input was truncated");
+          ctx.font = report.font;
+          ctx.textAlign = "left";
+          ctx.textBaseline = "alphabetic";
+          let count = 0;
+          for (const { panel, meta, speeches } of report.panels) {
+            for (const [x0, y0, x1, y1] of meta.keepVisible ?? []) {
+              if (x0 * panel.scale < 0 || x1 * panel.scale > panel.width ||
+                  panel.artTop + y0 * panel.scale < 0 || panel.artTop + y1 * panel.scale > panel.height)
+                failures.push("camera crops protected artwork");
+            }
+            for (const speech of speeches) {
+              ctx.font = report.font.replace(/^[\d.]+px/, `${speech.fontSize ?? report.fontSize}px`);
+              for (const line of speech.lines) {
+                ctx.font = report.font.replace(/^[\d.]+px/, `${line.fontSize ?? speech.fontSize ?? report.fontSize}px`);
+                // Re-measure the final shaped line independently of the
+                // renderer's stored metrics and assert its full ink extent.
+                // Independently measure each logical run at its final visual
+                // position; a wrapped line cannot be re-resolved in isolation.
+                let inkLeft = Infinity, inkRight = -Infinity, inkAscent = 0, inkDescent = 0;
+                for (const run of line.ink.runs ?? [{direction: line.direction, drawText: line.text, offset: 0, glyphs:line.ink.glyphs}]) {
+                  ctx.direction = run.direction;
+                  ctx.font = run.font ?? report.font.replace(/^[\d.]+px/, `${run.fontSize ?? line.fontSize ?? report.fontSize}px`);
+                  if (run.glyphs) {
+                    for (const glyph of run.glyphs) {
+                      if (glyph.primitive==='outline') {
+                        const sx=run.scaleX??1,dy=run.baselineOffset??0;
+                        const spread=(glyph.strokeWidth??0)*glyph.scale/2;
+                        const horizontalSpread=spread*(glyph.stretchX??1);
+                        inkLeft=Math.min(inkLeft,run.offset+(glyph.x-(glyph.flipX?glyph.width*glyph.scale:0)-horizontalSpread)*sx);
+                        inkRight=Math.max(inkRight,run.offset+(glyph.x+(glyph.flipX?0:glyph.width*glyph.scale)+horizontalSpread)*sx);
+                        inkAscent=Math.max(inkAscent,-glyph.y+spread-dy);
+                        inkDescent=Math.max(inkDescent,glyph.y+glyph.height*glyph.scale+spread+dy);continue;
+                      }
+                      if (glyph.primitive==='lost'||glyph.primitive==='damage') {
+                        const sx=run.scaleX??1,dy=run.baselineOffset??0;
+                        inkLeft=Math.min(inkLeft,run.offset+glyph.x*sx);
+                        inkRight=Math.max(inkRight,run.offset+(glyph.x+glyph.width*glyph.scale)*sx);
+                        inkAscent=Math.max(inkAscent,-glyph.y-dy);
+                        inkDescent=Math.max(inkDescent,glyph.y+glyph.height*glyph.scale+dy);
+                        continue;
+                      }
+                      ctx.font=glyph.font;ctx.direction=glyph.direction;
+                      const b=ctx.measureText(glyph.drawText),scale=glyph.scale,sx=run.scaleX??1,dy=run.baselineOffset??0;
+                      const spread=(glyph.strokeWidth??0)/2;
+                      const left=(glyph.flipX?-b.actualBoundingBoxRight:-b.actualBoundingBoxLeft)-spread;
+                      const right=(glyph.flipX?b.actualBoundingBoxLeft:b.actualBoundingBoxRight)+spread;
+                      inkLeft=Math.min(inkLeft,run.offset+(glyph.x+left*scale)*sx);
+                      inkRight=Math.max(inkRight,run.offset+(glyph.x+right*scale)*sx);
+                      inkAscent=Math.max(inkAscent,(b.actualBoundingBoxAscent+spread)*scale-glyph.y-dy);
+                      inkDescent=Math.max(inkDescent,(b.actualBoundingBoxDescent+spread)*scale+glyph.y+dy);
+                    }
+                    continue;
+                  }
+                  const box = ctx.measureText(nativeShapingText(run.drawText));
+                  const sx = run.scaleX ?? 1, dy = run.baselineOffset ?? 0;
+                  const spread = (run.strokeWidth ?? 0)/2;
+                  inkLeft = Math.min(inkLeft, run.offset - (box.actualBoundingBoxLeft+spread)*sx);
+                  inkRight = Math.max(inkRight, run.offset + (box.actualBoundingBoxRight+spread)*sx);
+                  inkAscent = Math.max(inkAscent, box.actualBoundingBoxAscent+spread-dy);
+                  inkDescent = Math.max(inkDescent, box.actualBoundingBoxDescent+spread+dy);
+                }
+                const actual = {actualBoundingBoxLeft: -inkLeft, actualBoundingBoxRight: inkRight,
+                  actualBoundingBoxAscent: inkAscent, actualBoundingBoxDescent: inkDescent};
+                if (name === 'scripts' && /^[，。）」』]/u.test(line.text))
+                  failures.push("closing punctuation starts a wrapped line: " + line.text);
+                const baseline = line.y + line.baseline;
+                const origin = line.x + line.ink.drawOffset;
+                const left = origin - actual.actualBoundingBoxLeft;
+                const right = origin + actual.actualBoundingBoxRight;
+                const top = baseline - actual.actualBoundingBoxAscent;
+                const bottom = baseline + actual.actualBoundingBoxDescent;
+                const eps = 0.1;
+                if (left < line.x-eps || right > line.x+line.width+eps || top < line.y-eps || bottom > line.y+line.height+eps)
+                  failures.push("ink escapes line box: " + line.text);
+                if (left < -eps || top < -eps || right > panel.width+eps || bottom > panel.height+eps)
+                  failures.push("ink escapes panel: " + line.text);
+                count++;
+              }
+            }
+          }
+          const geometry = checkComic(report);
+          if (['grids','ascii-grid','grid-wide','legacy-grid','legacy-constructed'].includes(name)) {
+            if (!report.loadedFontFamilies.includes('Dad Grid')) failures.push('grid font was not loaded');
+            const speeches = [report.panels[0].speeches.find(s=>s.who==='dad'),
+              report.panels[1].speeches.find(s=>s.who==='dad'),
+              report.panels[2].speeches.find(s=>s.who==='dad'),
+              report.panels[1].speeches.find(s=>s.who==='calvin')];
+            speeches.forEach((speech,i) => {
+              if (!texts[i]) return;
+              if (speech.lines.map(l=>l.text).join('\n') !== texts[i]) failures.push('grid rows were changed');
+              if (new Set(speech.lines.map(l=>l.x)).size !== 1) failures.push('grid columns do not align');
+              for (let k=1;k<speech.lines.length;k++) {
+                if (Math.abs(speech.lines[k].y-speech.lines[k-1].y-speech.lines[k-1].height)>0.01)
+                  failures.push('grid rows do not connect');
+              }
+            });
+          }
+          if(name==='grid-symbols-in-prose'){
+            if(report.panels.some(p=>p.speeches.some(s=>s.lines.some(l=>l.grid))))failures.push('Inline structural symbols forced prose into fixed cells');
+            if(!report.loadedFontFamilies.includes('Dad Grid'))failures.push('Inline structural symbols lost their custom drawing font');
+            if(report.unmappedCodepoints.length)failures.push('Inline structural symbol used missing glyph');
+          }
+          if(name==='dictionary-mixed-controls'){
+            const speeches=[report.panels[0].speeches.find(s=>s.who==='dad'),report.panels[1].speeches.find(s=>s.who==='dad'),report.panels[2].speeches.find(s=>s.who==='dad'),report.panels.flatMap(p=>p.speeches).find(s=>s.who==='calvin')];
+            for(const [i,speech] of speeches.entries()){
+              if(speech.lines.flatMap(l=>l.units).join('')!==texts[i])failures.push('Mixed dictionary text or its controls changed');
+              const ends=new Set();let end=0;for(const unit of breakUnits(texts[i]))ends.add(end+=unit.length);
+              for(const line of speech.lines)if(!ends.has(line.sourceOffset+line.units.join('').length))failures.push('Mixed dictionary line divided a protected word/control span: '+i+' '+JSON.stringify({text:line.text,start:line.sourceOffset,units:line.units}));
+            }
+          }
+          if (name.startsWith('contextual-variation-')) {
+            const expected={'contextual-variation-mongolian':'NotoSansMongolian-Regular.ttf','contextual-variation-phags-pa':'NotoSansPhagsPa-Regular.ttf','contextual-variation-manichaean':'NotoSansManichaean-Regular.ttf'}[name];
+            if (report.emojiFallbacks.length || report.unmappedCodepoints.length) failures.push('Contextual variation used fallback or unmapped codepoint');
+            if (!report.loadedFontFamilies.some(f=>scriptManifest.fonts.find(e=>e.family===f)?.source.endsWith('/'+expected)))
+              failures.push('Contextual variation did not load its native script font');
+          }
+          if(name==='routing-standalone-visible') {
+            if(report.emojiFallbacks.length||report.unmappedCodepoints.length)failures.push('Existing custom symbol drawing was bypassed by routing');
+            if(!report.loadedFontFamilies.includes('Dad Grid'))failures.push('Delete checker forms did not load their actual drawing font');
+            ctx.font=report.font;const keycap=ctx.measureText('\u20e3');
+            if(keycap.actualBoundingBoxAscent+keycap.actualBoundingBoxDescent<=0)failures.push('Leading keycap combining mark has no painted bounds');
+          }
+          if(name.startsWith('tatweel-')) {
+            const kufi=scriptManifest.fonts.find(f=>f.source.endsWith('/NotoKufiArabic-Regular.ttf'));
+            const aref=scriptManifest.fonts.find(f=>f.source.endsWith('/ArefRuqaa-Regular.ttf'));
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const fields=runs.filter(r=>r.fontFamily===kufi.family);
+            if(!fields.length||!fields.some(r=>r.text.includes('ـ')))failures.push('Disconnected Tatweel did not select a visible source font');
+            if(fields.some(r=>r.font.split('"')[1]!==kufi.family))failures.push('Tatweel override was loaded but did not lead the painted font stack');
+            if(!runs.some(r=>r.text.includes('بـب')||r.text.includes('ب\u200dـب')))failures.push('Connected Arabic extender word was split apart');
+            if(!runs.some(r=>r.fontFamily===kufi.family&&(r.text.includes('بـب')||r.text.includes('ب\u200dـب'))))failures.push('Connected extender word did not use one complete visible native font');
+            if(!report.loadedFontFamilies.includes(aref.family))failures.push('Original native Arabic font was not retained');
+            ctx.font='128px "'+kufi.family+'"';const ink=ctx.measureText('ـ');
+            if(ink.width<=0||ink.actualBoundingBoxAscent+ink.actualBoundingBoxDescent<=0)failures.push('Standalone Tatweel has no real ink/advance');
+            if(ctx.measureText('بـب').width<=ctx.measureText('بب').width)failures.push('Tatweel did not extend its connected word');
+            if(name==='tatweel-isolated'&&!runs.some(r=>r.text.includes('مرحبا')&&!r.fontFamily))failures.push('Extender-free Arabic word lost its normal routing');
+            if(report.emojiFallbacks.length||report.unmappedCodepoints.length)failures.push('Tatweel regression used missing/system glyphs');
+          }
+          if(name.startsWith('format-signs-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            if(report.unmappedCodepoints.length||report.emojiFallbacks.length)failures.push('Font-dependent format sign used missing/system glyphs');
+            for(const cp of new Set([...texts.join('')].map(c=>c.codePointAt(0)).filter(requiresFormatGlyph))){
+              const f=scriptManifest.fonts.find(f=>report.loadedFontFamilies.includes(f.family)&&f.ranges.some(([a,b])=>a<=cp&&cp<=b));
+              if(!f){failures.push('Format sign has no actual loaded source font: '+cp.toString(16));continue;}
+              ctx.font='128px "'+f.family+'"';const bounds=ctx.measureText(String.fromCodePoint(cp));
+              if(bounds.actualBoundingBoxAscent+bounds.actualBoundingBoxDescent<=0)failures.push('Format sign has no real painted ink: '+cp.toString(16));
+            }
+            if(name==='format-signs-numbers')for(const text of ['\u0600123','\u06012026','\u06dd١٢٣','\u0890123','\u0891456','\u070fܒܓܕ','\u08e2١٢٣','\u{110bd}१२३','\u{110cd}१२३']){
+              const run=runs.find(r=>r.text.includes(text));
+              if(!run?.fontFamily||run.font.split('"')[1]!==run.fontFamily)failures.push('Prefixed sign and following text lost their complete native font: '+text);
+            }
+          }
+          if(name.startsWith('native-spacing-variation')){
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            if(report.unmappedCodepoints.length||report.emojiFallbacks.length)failures.push('Spacing variation used missing/system glyphs');
+            const sample=document.createElement('canvas');sample.width=512;sample.height=256;
+            const paint=sample.getContext('2d',{willReadFrequently:true});
+            for(const text of texts.flatMap(t=>t.split(' ')).filter(Boolean)){
+              const chars=[...text],prefix=chars.slice(0,2).join('');
+              const family=(nativeSpacingVariationFont(text)??nativeVariationFont(prefix))?.family;
+              const run=runs.find(r=>r.text.includes(prefix)&&r.fontFamily===family);
+              if(!run||run.font.split('"')[1]!==family){failures.push('Spacing vowel bypassed its registered variant: '+text);continue;}
+              paint.textBaseline='alphabetic';paint.direction='ltr';
+              const pieces=fontRuns(text);
+              for(const part of pieces)if(!runs.some(r=>r.text.includes(part.text)&&r.fontFamily===part.fontFamily))failures.push('Spacing fragment did not reach actual paint: '+part.text);
+              const pixels=parts=>{
+                paint.clearRect(0,0,512,256);let x=100;
+                for(const part of parts){paint.font=makeFontString(96,report.loadedFontFamilies,part.emojiPolicy,part.fontFamily);const value=nativeShapingText(part.text);paint.fillText(value,x,160);x+=paint.measureText(value).width;}
+                return paint.getImageData(0,0,512,256).data;
+              };
+              const prefixSelected=pixels([{text:prefix,emojiPolicy:'text',fontFamily:family}]),prefixOrdinary=pixels([{text:chars[0],emojiPolicy:'text',fontFamily:family}]);
+              const discriminates=prefixSelected.some((v,i)=>v!==prefixOrdinary[i]);
+              const selected=pixels(pieces),ordinary=pixels(pieces.map(part=>({...part,text:part.text.replace(chars[1],'')})));
+              if(!selected.some((v,i)=>v!==prefixSelected[i]))failures.push('Foreign spacing vowel contributed no actual ink: '+text);
+              // Some standard CJK variants have identical native default/UVS
+              // curves. Demand selector discrimination where it exists in the
+              // source; do not invent a difference for identical drawings.
+              if(discriminates&&!selected.some((v,i)=>v!==ordinary[i]))failures.push('Actual spacing-vowel raster ignored the registered selector: '+text);
+            }
+          }
+          if (name.startsWith('combining-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const glyphs=runs.flatMap(r=>r.glyphs??[]),annotations=glyphs.filter(g=>g.annotation);
+            if(!annotations.length)failures.push('Dynamic combining layout was not used');
+            if(glyphs.some(g=>!g.primitive&&g.scale!==1))failures.push('Dynamic marks stretched a native base');
+            if(name==='combining-enclosures-variants')for(const body of ['㐂\u{e0101}́','\u{20000}\u{e0100}','𝓏\ufe02','豈\ufe00']) {
+              const family=nativeVariationFont(body)?.family;
+              if(!family||!report.loadedFontFamilies.includes(family)||!glyphs.some(g=>g.drawText?.includes(body)&&g.font.includes(family)))failures.push('Enclosure lost its native variant: '+body);
+            }
+            if(name==='combining-double-spans'&&!annotations.some(g=>g.annotation==='double'))failures.push('Double marks did not span native bases');
+            if(name.startsWith('combining-cgj-')){
+              if(annotations.some(g=>g.codepoint===0x34f))failures.push('CGJ incorrectly painted a glyph');
+              if(report.unmappedCodepoints.length||report.emojiFallbacks.length)failures.push('CGJ variation used missing/system glyphs');
+              for(const body of ['𝓏\ufe02͏','豈\ufe00͏']){
+                const family=nativeVariationFont(body)?.family;
+                if(!family||!report.loadedFontFamilies.includes(family)||!glyphs.some(g=>g.drawText?.includes(body)&&g.font.includes(family)&&g.scale===1))failures.push('CGJ lost native variation prefix: '+body);
+              }
+            }
+            if(name.startsWith('combining-numeric-')){
+              for(const cp of [0x488,0x489,0xa670,0xa671,0xa672])if(!annotations.some(g=>g.codepoint===cp&&g.numericEnclosure))failures.push('Numeric enclosure lost its native components: '+cp.toString(16));
+              if(report.unmappedCodepoints.length||report.emojiFallbacks.length)failures.push('Numeric enclosure used missing/system glyphs');
+              if(name==='combining-numeric-variants')for(const body of ['㐂\u{e0101}','豈\ufe00','𝓏\ufe02','\u{20000}\u{e0100}']){
+                const family=nativeVariationFont(body)?.family;
+                if(!family||!report.loadedFontFamilies.includes(family)||!glyphs.some(g=>g.drawText===body&&g.font.includes(family)&&g.scale===1))failures.push('Numeric enclosure lost its native variant: '+body);
+              }
+            }
+            if(name==='combining-enclosures-rtl'&&!glyphs.some(g=>g.strokeWidth>0&&g.font.includes('Dad Emoji')))failures.push('Nested native emoji lost its approved ink stroke');
+            if(name==='combining-enclosures-keycap-text') {
+              if(!annotations.some(g=>g.codepoint===0x20e3))failures.push('Text keycap enclosure was mistaken for an emoji sequence');
+              if(!glyphs.some(g=>g.strokeWidth>0&&g.font.includes('Dad Emoji')))failures.push('Standard keycap emoji lost exact custom routing');
+            }
+            if(name.startsWith('combining-foreign-')) {
+              const bodies={'combining-foreign-ivd':['㐂\u{e0101}'],'combining-foreign-supplementary':['\u{20000}\u{e0100}','\u{30654}\u{e0101}'],'combining-foreign-standard':['豈\ufe00'],'combining-foreign-math':['𝓏\ufe02']}[name];
+              for(const body of bodies){
+                const family=nativeVariationFont(body)?.family;
+                if(!family||!report.loadedFontFamilies.includes(family)||!glyphs.some(g=>g.drawText?.includes(body)&&g.font.includes(family)))failures.push('Foreign mark replaced its requested variant: '+body);
+              }
+              if(!annotations.some(g=>g.annotation==='mark'))failures.push('Foreign mark drawing is absent');
+              if(name==='combining-foreign-math'&&!annotations.some(g=>g.codepoint===0x301&&g.nativeMarkFamily==='Dad Math Variants'))failures.push('Mixed native acute lost its source outline');
+              if(report.emojiFallbacks.length||report.unmappedCodepoints.length)failures.push('Foreign mark used system fallback or an unmapped codepoint');
+            }
+            if(name==='combining-positional-classes')for(const mark of ['᷷','̛']) {
+              const body='豈\ufe00',text=body+mark,family=nativeVariationFont(text)?.family;
+              if(!family||!report.loadedFontFamilies.includes(family))failures.push('Native positional mark font was not loaded');
+              else {
+                ctx.font='128px "'+family+'"';ctx.direction='ltr';
+                const plain=ctx.measureText(body),marked=ctx.measureText(text);
+                if(marked.actualBoundingBoxAscent<=plain.actualBoundingBoxAscent)failures.push('Native above mark stayed below its base: '+mark);
+                if(mark==='᷷'&&marked.actualBoundingBoxLeft<=plain.actualBoundingBoxLeft)failures.push('Above-left mark lost its left alignment');
+              }
+            }
+          }
+          if (name==='cjk-native-with-foreign-accents') {
+            const sequence='㐂\u{e0101}',original=nativeVariationFont(sequence),expected=nativeVariationFont(sequence+'́');
+            await loadTextFonts([sequence]);
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const paint=(text,family)=>{
+              const c=document.createElement('canvas');c.width=c.height=320;
+              const ctx=c.getContext('2d');ctx.font='128px "'+family+'"';ctx.fillText(text,75,220);
+              return ctx.getImageData(0,0,320,320).data;
+            };
+            for(const cp of [0x302a,0x302b,0x302c,0x302d,0x302e,0x302f,0x3099,0x309a]) {
+              const native=sequence+String.fromCodePoint(cp),text=native+'́';
+              const a=paint(native,original.family),b=paint(native,expected.family),c=paint(text,expected.family);
+              if(a.some((v,i)=>v!==b[i])) failures.push('Companion shifted native CJK mark: U+'+cp.toString(16));
+              if(!b.some((v,i)=>v!==c[i])) failures.push('Accent disappeared beside native CJK mark: U+'+cp.toString(16));
+              if(!runs.some(r=>r.text.includes(text)&&r.fontFamily===expected.family)) failures.push('Mixed CJK accents lost their complete font');
+            }
+          }
+          if (name.startsWith('marked-cjk-')) {
+            const sequence={'marked-cjk-ivd-bmp':'㐂\u{e0101}','marked-cjk-ivd-b':'\u{20000}\u{e0100}','marked-cjk-ivd-g':'\u{30654}\u{e0101}','marked-cjk-standard':'豈\ufe00'}[name];
+            const expected=nativeVariationFont(sequence+'́');
+            const original=nativeVariationFont(sequence);
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            if (!expected?.baseVariantFamily || !report.loadedFontFamilies.includes(expected.family)) failures.push('Marked CJK companion was not loaded');
+            for(const suffix of ['́','̣','̣̂̇','᪰','̣̂̇'])
+              if(!runs.some(r=>r.text.includes(sequence+suffix)&&r.fontFamily===expected.family&&r.font.includes(expected.family))) failures.push('Marked CJK did not use its complete companion: '+suffix);
+            if(runs.some(r=>!r.fontFamily&&r.font.includes('Dad Marked CJK'))) failures.push('Marked companion leaked into ordinary text');
+            // Compare painted source/companion pixels, not only their CSS names.
+            // A missing accent would pass the base-region check, so independently
+            // require new ink and a larger ascent for the acute form.
+            await loadTextFonts([sequence]);
+            const paint=(text,family)=>{
+              const c=document.createElement('canvas');c.width=280;c.height=280;
+              const ctx=c.getContext('2d');ctx.font='128px "'+family+'"';ctx.fillText(text,50,210);
+              return {c,metrics:ctx.measureText(text),pixels:ctx.getImageData(0,0,280,280).data,base:ctx.getImageData(0,145,280,110).data};
+            };
+            const source=paint(sequence,original.family),copy=paint(sequence,expected.family),accent=paint(sequence+'́',expected.family);
+            const different=(a,b)=>a.some((value,i)=>value!==b[i]);
+            if(different(source.pixels,copy.pixels)) failures.push('Unmarked companion changed native variant pixels');
+            if(different(source.base,accent.base)) failures.push('Accent replaced or shifted native variant pixels');
+            if(!different(copy.pixels,accent.pixels)||accent.metrics.actualBoundingBoxAscent<=copy.metrics.actualBoundingBoxAscent) failures.push('Foreign acute accent disappeared');
+            if(accent.metrics.width!==copy.metrics.width) failures.push('Foreign acute changed CJK advance');
+          }
+          if(name==='native-mark-selector-myanmar'){
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const source=scriptManifest.fonts.find(f=>f.source.endsWith('/PadaukBook-Regular.ttf'));
+            const run=runs.find(r=>r.text.includes('ကေ\ufe00ခ'));
+            if(!report.loadedFontFamilies.includes(source.family)||!run?.font.includes(source.family)||runs.some(r=>r.fontFamily))failures.push('Myanmar mark selector split or bypassed its complete native source');
+            if(report.unmappedCodepoints.length||report.emojiFallbacks.length)failures.push('Myanmar mark selector used missing/system glyphs');
+            if(run){
+              const canvas=document.createElement('canvas');canvas.width=512;canvas.height=256;
+              const paint=canvas.getContext('2d',{willReadFrequently:true});paint.font=run.font.replace(/^[\d.]+px/,'96px');
+              const pixels=text=>{paint.clearRect(0,0,512,256);paint.fillText(text,100,160);return paint.getImageData(0,0,512,256).data;};
+              const dotted=pixels('ကေ\ufe00ခ'),ordinary=pixels('ကေခ');
+              if(!dotted.some((v,i)=>v!==ordinary[i]))failures.push('Myanmar dotted E selector did not change actual contextual pixels');
+            }
+          }
+          if (name.startsWith('native-variation-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            if (report.emojiFallbacks.length || report.unmappedCodepoints.length) failures.push('Native variation used fallback or unmapped codepoint');
+            if (name!=='native-variation-myanmar') {
+              const historicalSamples={
+                'native-variation-historical-lazy-1':['∽\ufe00','≃\ufe00','⋍\ufe00́'],
+                'native-variation-historical-lazy-2':['≂\ufe00','≈\ufe00','⩬\ufe00̣̂̇'],
+                'native-variation-historical-arms':['⋜\ufe00','⋝\ufe00','𝬐\ufe00́'],
+              }[name];
+              const supplementaryBase={
+                'native-variation-supplementary-marks-b':'\u{20000}\u{e0100}',
+                'native-variation-supplementary-marks-g':'\u{30654}\u{e0101}',
+              }[name];
+              const supplementarySamples=supplementaryBase?[0x302a,0x302b,0x302c,0x302d,0x302e,0x302f,0x3099,0x309a].map(cp=>supplementaryBase+String.fromCodePoint(cp)):undefined;
+              const samples=historicalSamples??supplementarySamples??{math:['0\ufe00','ℋ\ufe00','ℐ\ufe00'],explicit:['ℋ\ufe01','ℐ\ufe01','⦷\ufe00','ℒ\ufe01','ℛ\ufe01'],kurrent:['𝓏\ufe02','𝓏\ufe02́','𝓏\ufe02̣̂̇'],quotes:['‘\ufe00','‘\ufe01','’\ufe00','’\ufe01'],sibe:['‘\ufe02','’\ufe02','“\ufe02','”\ufe02'],fullwidth:['０\ufe00','0\ufe00'],marked:['‘\ufe02́','’\ufe02̂̇','㐂\u{e0101}゙','㐂\u{e0100}゙'],han:['㐂\u{e0100}','㐂\u{e0101}'],standard:['豈\ufe00','麗\ufe00','龜\ufe00','龜\ufe01','㒞\ufe00']}[name.split('-').at(-1)];
+              for (const text of samples) {
+                const family=nativeVariationFont(text)?.family;
+                if (!family || !report.loadedFontFamilies.includes(family) || !runs.some(r=>r.text.includes(text) && r.fontFamily===family && r.font.slice(r.font.indexOf('px ')+3).startsWith(`"${family}"`)))
+                  failures.push('Native variation font did not lead its measured/painted run: '+text);
+              }
+              const plain=runs.filter(r=>/^[A-Z0-9 :]+$/.test(r.text));
+              if ((name!=='native-variation-sibe' && !plain.length) || plain.some(r=>r.fontFamily)) failures.push('Native variation changed ordinary Latin font priority');
+              const ordinary=runs.filter(r=>r.emojiPolicy==='text' && !r.fontFamily);
+              if (ordinary.some(r=>r.font.includes('Dad CJK Variants') || r.font.includes('Dad Math Variants')))
+                failures.push('Loaded variation font leaked into ordinary text fallback');
+            } else {
+              if (!report.loadedFontFamilies.some(f=>scriptManifest.fonts.find(e=>e.family===f)?.source.endsWith('/PadaukBook-Regular.ttf')))
+                failures.push('Myanmar variation did not load its complete native script font');
+              if (runs.some(r=>r.text==='က\ufe00' || r.fontFamily)) failures.push('Myanmar joining text was split at a variation selector');
+            }
+          }
+          if (name === 'emoji-mobility-components') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const equipment of ['🦯','🦼','🦽']) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text===equipment && r.font.includes('Dad Emoji')) || report.emojiFallbacks.includes(equipment))
+                failures.push('standalone equipment failed to use its custom drawing: '+equipment);
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes('🧑‍'+equipment)))
+                failures.push('mobility sequence stopped using its custom drawing: '+equipment);
+            }
+          }
+          if (name.startsWith('emoji-flags-') && name !== 'emoji-flags-incomplete') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            if (report.emojiFallbacks.length || report.unmappedCodepoints?.length) failures.push('Reviewed flag used fallback or an unmapped codepoint');
+            if (!runs.some(r=>r.emojiPolicy==='custom' && r.font.includes('Dad Emoji'))) failures.push('Flag fixture did not use the custom colour font');
+          }
+          if (name==='emoji-flags-incomplete') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes('🇬'))) failures.push('Standalone regional indicator lost its reviewed drawing');
+            if (!report.emojiFallbacks.includes('🇦🇦') || !runs.some(r=>r.emojiPolicy==='native' && r.text.includes('🇦🇦'))) failures.push('Unknown regional pair was captured by standalone component art');
+          }
+          if (name.startsWith('emoji-standalone-') || name.startsWith('emoji-final-') || name.startsWith('emoji-books-') || name.startsWith('emoji-mail-') || name==='emoji-book-mail-boundaries' || name.startsWith('emoji-money-') || name.startsWith('emoji-accessories-') || name.startsWith('emoji-clothing-') || name==='emoji-object-boundaries') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            if (report.emojiFallbacks.length || report.unmappedCodepoints?.length) failures.push('Reviewed object form used fallback or an unmapped codepoint');
+            if (!runs.some(r=>r.emojiPolicy==='custom' && r.font.includes('Dad Emoji'))) failures.push('Object fixture did not use the custom colour font');
+          }
+          if (name === 'emoji-sequences') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes('😀') && r.font.includes('Dad Emoji')))
+              failures.push('supported custom emoji was disabled by a composite');
+            for (const sequence of ['👨‍👦‍👦‍👦']) {
+              if (!runs.some(r=>r.emojiPolicy==='native' && r.text.includes(sequence) && !r.font.includes('Dad Emoji')))
+                failures.push('native emoji sequence was fragmented or captured: '+sequence);
+              if (!report.emojiFallbacks.includes(sequence)) failures.push('native emoji fallback was not audited: '+sequence);
+            }
+            for (const sequence of ['👨‍👦','👨‍👩‍👧‍👦','🇫🇷']) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(sequence) && r.font.includes('Dad Emoji')) || report.emojiFallbacks.includes(sequence))
+                failures.push('reviewed family failed custom routing: '+sequence);
+            }
+            if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes('❤️‍🔥') && r.font.includes('Dad Emoji'))) failures.push('heart on fire lost its custom drawing');
+            if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes('👩🏽‍🦽') && r.font.includes('Dad Emoji')))
+              failures.push('custom mobility emoji was lost in mixed RTL dialogue');
+            for (const tone of ['🏻','🏼','🏽','🏾','🏿']) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes('👍'+tone)))
+                failures.push('custom thumb modifier was not routed: '+tone);
+            }
+          }
+          if (name==='sharada-kashmiri-vowels' && report.unmappedCodepoints.length) failures.push('Sharada vowel mapping missing');
+          if (name==='chess-compensation' && report.unmappedCodepoints.length) failures.push('chess annotation mapping missing');
+          if (name==='legacy-text-pictographs') {
+            if(report.unmappedCodepoints.length) failures.push('legacy text pictograph mapping missing');
+            if(report.emojiFallbacks.length) failures.push('legacy text pictographs routed as emoji');
+            if(report.panels.some(p=>p.speeches.some(s=>s.lines.some(l=>l.grid)))) failures.push('legacy text pictograph forced grid layout');
+          }
+          if (name==='asteroid-symbols' && report.unmappedCodepoints.length) failures.push('asteroid symbol mapping missing');
+          if (name==='geomantic-figures') {
+            if(report.unmappedCodepoints.length) failures.push('geomantic figure mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script e789acc260ba')) failures.push('geomantic font missing');
+          }
+          if (name==='chemical-reaction-symbols') {
+            if(report.unmappedCodepoints.length) failures.push('chemical symbol mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script e789acc260ba')) failures.push('chemical symbol font missing');
+          }
+          if (name==='kawi-nukta') {
+            if(report.unmappedCodepoints.length) failures.push('Kawi nukta mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script 3d04444ca531')) failures.push('native Kawi font missing');
+          }
+          if (name==='glagolitic-caudate-chrivi') {
+            if(report.unmappedCodepoints.length) failures.push('caudate chrivi mapping missing');
+            const probe=document.createElement('canvas').getContext('2d');
+            probe.font='100px "Dad Script c35e72b9417c"';
+            for(const [mark,ascent] of [['҃',120.8],['҄',104.7],['҇',104.7]]) {
+              const box=probe.measureText(nativeShapingText('Ⱟ'+mark));
+              if(Math.abs(box.actualBoundingBoxAscent-ascent)>1) failures.push('Glagolitic mark lost native attachment: '+mark);
+              if(Math.abs(box.width-probe.measureText('Ⱟ').width)>0.1) failures.push('Glagolitic mark changed advance: '+mark);
+            }
+            if(!report.loadedFontFamilies.includes('Dad Script c35e72b9417c')) failures.push('native Glagolitic font missing');
+          }
+          if (name==='music-special-stems') {
+            if(report.unmappedCodepoints.length) failures.push('special stem mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script 342fc9939b91')) failures.push('native special stem font missing');
+          }
+          if (name==='music-higher-tremolos') {
+            if(report.unmappedCodepoints.length) failures.push('higher tremolo mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script 342fc9939b91')) failures.push('native tremolo font missing');
+          }
+          if (name==='music-higher-flags') {
+            if(report.unmappedCodepoints.length) failures.push('higher musical flag mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script 342fc9939b91')) failures.push('native music flag font missing');
+          }
+          if (name==='music-stress-unstress') {
+            if(report.unmappedCodepoints.length) failures.push('musical articulation mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script 342fc9939b91')) failures.push('native music font missing');
+          }
+          if (name==='devanagari-alternate-ddda') {
+            if(report.unmappedCodepoints.length) failures.push('alternate DDDA mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script e21eb9b44360')) failures.push('native Devanagari font missing');
+          }
+          if (name==='bengali-above-anusvara') {
+            if(report.unmappedCodepoints.length) failures.push('above anusvara mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script c5b1e8b8b27e')) failures.push('native Bengali mark font missing');
+          }
+          if (name==='bengali-alternate-ba') {
+            if(report.unmappedCodepoints.length) failures.push('alternate BA mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script c5b1e8b8b27e')) failures.push('native Bengali font missing');
+          }
+          if (name==='archaic-shrii') {
+            if(report.unmappedCodepoints.length) failures.push('archaic SHRII mapping missing');
+            if(report.emojiFallbacks.length) failures.push('archaic SHRII routed as emoji');
+          }
+          if (name==='odia-tone-dots') {
+            if(report.unmappedCodepoints.length) failures.push('Odia tone dot mapping missing');
+            if(!report.loadedFontFamilies.includes('Dad Script 3d3c297b167c')) failures.push('native Odia attachment font missing');
+          }
+          if (name==='hebrew-heavy-points') {
+            if(report.unmappedCodepoints.length) failures.push('Hebrew heavy point mapping missing');
+            if(!report.loadedFontFamilies.some(f=>f==='Dad Script 9f0e722e1340')) failures.push('native Rashi attachment font missing');
+          }
+          if (['historical-math-symbols','new-music-symbols'].includes(name)) {
+            if(report.unmappedCodepoints.length) failures.push('standalone symbol mapping missing');
+            if(report.emojiFallbacks.length) failures.push('standalone symbols routed as emoji');
+          }
+          if (name === 'legacy-pictures') {
+            if(!report.loadedFontFamilies.includes('Dad Grid')) failures.push('legacy picture font missing');
+            if(report.panels.some(p=>p.speeches.some(s=>s.lines.some(l=>l.grid)))) failures.push('standalone picture forced grid layout');
+          }
+          if (name.startsWith('egyptian-enclosure')) {
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            if(!glyphs.some(g=>g.primitive==='outline' && ['𓐼','𓐾'].includes(g.sourceText))) failures.push('missing native enclosure outline');
+            if(name==='egyptian-enclosures' && !glyphs.some(g=>g.primitive==='outline' && g.flipX)) failures.push('missing reflected enclosure');
+          }
+          if(name==='egyptian-native-region-overlaps'){
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            if(glyphs.filter(g=>g.primitive==='outline').length!==6)failures.push('Matched source insertion template was rejected');
+            if(glyphs.some(g=>g.drawText&&/[\u{13432}-\u{13435}\u{13439}-\u{1343b}]/u.test(g.drawText)))failures.push('Source insertion helper boxes reached native fallback paint');
+            if(!glyphs.some(g=>g.primitive==='damage'))failures.push('Damaged native insertion lost its surface modifier');
+            if(report.unmappedCodepoints.length||report.emojiFallbacks.length)failures.push('Matched native insertion used missing/system glyphs');
+          }
+          if(['egyptian-mirror-helpers','egyptian-native-mirror-alternates','egyptian-documented-cells'].includes(name)){
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            const expected={'egyptian-mirror-helpers':5,'egyptian-native-mirror-alternates':4,'egyptian-documented-cells':6}[name];
+            if(glyphs.filter(g=>g.primitive==='outline').length!==expected)failures.push('Recovered native insertion container missing');
+            if(glyphs.some(g=>g.drawText&&/[\u{13432}-\u{13435}\u{13439}-\u{13440}]/u.test(g.drawText)))failures.push('Source helper/control reached fallback paint');
+            if(!glyphs.some(g=>g.drawText==='𓑠'&&g.scale<1))failures.push('Recovered source region did not fit its actual child drawing');
+            if(name!=='egyptian-documented-cells'&&!glyphs.some(g=>g.primitive==='outline'&&g.flipX))failures.push('Recovered source template lost RTL reflection');
+            if(report.unmappedCodepoints.length||report.emojiFallbacks.length)failures.push('Recovered source template used missing/system glyphs');
+          }
+          if (name === 'egyptian-modified-insertions') {
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            if(glyphs.filter(g=>g.primitive==='outline').length!==6) failures.push('modified insertion native outline missing');
+            if(!glyphs.some(g=>g.primitive==='outline' && g.flipX)) failures.push('modified insertion RTL reflection missing');
+          }
+          if (name === 'egyptian-multiple-insertions') {
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            if(glyphs.filter(g=>g.primitive==='outline').length!==5) failures.push('multiple insertions did not retain one container per group');
+            if(!glyphs.some(g=>g.primitive==='outline' && g.flipX)) failures.push('multiple insertion RTL reflection missing');
+          }
+          if (name === 'greek-proportional') {
+            const selected=requiredFonts(['Γειά σου κόσμε']);
+            if(selected.missing.length || selected.fonts.length!==1 || !selected.fonts[0].source.endsWith('/LXGWWenKai-Regular.ttf'))
+              failures.push('Greek prose lost its complete proportional handwriting source');
+            const family=selected.fonts[0]?.family;
+            if(family){
+              ctx.font='22px "'+family+'"';
+              if(ctx.measureText('κοσμε').width>=22*3.5)
+                failures.push('Greek prose still has full-cell advances');
+            }
+          }
+          if (name === 'hieroglyph-optical-ink') {
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const runs=lines.flatMap(l=>l.ink.runs??[{...l.ink,text:l.text}]);
+            if(!runs.some(r=>r.text==='𓀀'&&Math.abs(r.strokeWidth/r.fontSize-.014)<1e-9))
+              failures.push('Egyptian optical ink missing from adjacent native field');
+            if(!runs.some(r=>r.text==='𔐀'&&Math.abs(r.strokeWidth/r.fontSize-.010)<1e-9))
+              failures.push('Anatolian optical ink did not retain finer weight');
+            if(runs.some(r=>/DAD|END|GROUP/u.test(r.text)&&r.strokeWidth))
+              failures.push('hieroglyph optical ink leaked onto dialogue');
+            if(!runs.flatMap(r=>r.glyphs??[]).some(g=>g.primitive==='outline'&&g.strokeWidth>0))
+              failures.push('source insertion outline missing optical ink');
+          }
+          if (name === 'egyptian-insertions') {
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            for(const text of ['𓆓','𓄂','𓂇','𓅜'])
+              if(!glyphs.some(g=>g.primitive==='outline' && g.sourceText===text)) failures.push('missing insertion container '+text);
+            if(!glyphs.some(g=>g.drawText==='𓑠' && g.scale<.5)) failures.push('extended inserted sign was not fitted');
+            if(!glyphs.some(g=>g.primitive==='outline' && g.flipX)) failures.push('RTL insertion container was not reflected');
+          }
+          if (name === 'egyptian-rtl') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const rtl=runs.filter(r=>r.direction==='rtl').flatMap(r=>r.glyphs??[]);
+            if(!rtl.some(g=>g.drawText==='𓑠' && g.flipX)) failures.push('RTL extended signs were not reflected');
+            if(!rtl.some(g=>g.drawText==='𓀀' && g.flipX)) failures.push('RTL core signs were not reflected');
+            if(!rtl.some(g=>g.drawText==='𔉴︅' && !g.flipX)) failures.push('RTL explicit mirror did not cancel directional reflection');
+          }
+          if (name === 'egyptian-damage') {
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            for(const cp of [0x13447,0x13448,0x1344a,0x1344e,0x1344f,0x13452,0x13454,0x13455])
+              if(!glyphs.some(g=>g.primitive==='damage' && g.sourceText===String.fromCodePoint(cp))) failures.push('missing damage control '+cp.toString(16));
+            if(!glyphs.some(g=>g.drawText==='𔉴︅' && g.flipX && g.font.includes('Dad Egyptian Variants'))) failures.push('damaged mirrored rotation lost its font');
+          }
+          if (name === 'egyptian-editorial') {
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            if (!glyphs.some(g=>g.primitive==='lost' && g.sourceText==='𓑃︀')) failures.push('missing expanded lost-sign shading');
+            if (glyphs.some(g=>/[𓑁𓑂]/u.test(g.drawText??''))) failures.push('blank controls produced visible glyphs');
+          }
+          if (name === 'egyptian-mirrors') {
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            const rotated=glyphs.filter(g=>g.drawText==='𔉴︅');
+            if (rotated.length!==2 || !rotated.every(g=>g.font.includes('Dad Egyptian Variants')))
+              failures.push('mirrored rotation comparison lost its shared variant font');
+            for (const text of ['𓑠','𔉴︅','𓀀']) {
+              if (!glyphs.some(g=>g.drawText===text && g.flipX)) failures.push('missing mirrored sign: '+text);
+            }
+          }
+          if (name === 'egyptian-extended-groups') {
+            const lines=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines));
+            const glyphs=lines.flatMap(l=>l.ink.glyphs??l.ink.runs?.flatMap(r=>r.glyphs??[])??[]);
+            if (!glyphs.some(g=>g.drawText==='𓑠') || !glyphs.some(g=>g.drawText==='𔉴︅'))
+              failures.push('extended or rotated glyphs absent from composition plan');
+            if (!glyphs.some(g=>g.scale<1)) failures.push('quadrats did not scale signs');
+          }
+          if (name === 'egyptian-rotations') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            if (!runs.some(r=>r.emojiPolicy==='egyptian-variant' && r.font.includes('Dad Egyptian Variants')))
+              failures.push('Egyptian rotation font was not selected for drawing');
+            const paint=document.createElement('canvas').getContext('2d');
+            paint.font='64px "Dad Egyptian Variants"';
+            for (const [a,b] of [['𓆄','𓆄︃'],['𔉴','𔉴︅']]) {
+              if (Math.abs(paint.measureText(a).actualBoundingBoxAscent-paint.measureText(b).actualBoundingBoxAscent)<.1)
+                failures.push('rotation did not change visible bounds: '+b);
+            }
+          }
+          if (name.startsWith('emoji-mammals-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const all=[...'🐵🐒🦍🦧🐶🐕🦮🐩🐺🦊🦝🐱🐈🦁🐯🐅🐆🐴🫎🫏🐎🦄🦓🦌🦬🐮🐂🐃🐄🐷🐖🐗🐽🐏🐑🐐🐪🐫🦙🦒🐘🦣🦏🦛🐭🐁🐀🐹🐰🐇🐿🦫🦔🦇🐻🐨🐼🦥🦦🦨🦘🦡🐾'];
+            const start=(Number(name.slice(-1))-1)*24;
+            for (const symbol of all.slice(start,start+24)) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('mammal did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('mammal used native fallback');
+          }
+          if (name.startsWith('emoji-buildings-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const symbol of texts.join(' ').replaceAll(' ','')) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('building did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('building used native fallback');
+          }
+          if (name.startsWith('emoji-places-') || name.startsWith('emoji-office-') || (name.startsWith('emoji-produce-') && name !== 'emoji-produce-sequences')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const symbol of texts.join(' ').replace(/[A-Z ]/g,'')) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('place did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('place used native fallback');
+          }
+          if (name === 'emoji-colour-faces') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const symbol of [...'😡🤢🥵🥶']) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('colour face did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('colour face used native fallback');
+          }
+          if (name === 'yangqin-signs' || name === 'vietnamese-reading-marks') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[{text:l.text,font:l.ink.font}])));
+            for (const symbol of [...(name === 'yangqin-signs' ? '𖿴𖿵𖿶' : '𖿰𖿱')]) {
+              const cp=symbol.codePointAt(0);
+              const expected=scriptManifest.fonts.find(f=>f.source.includes('LXGWWenKai') && f.ranges.some(([a,b])=>a<=cp && cp<=b));
+              if (!expected || !report.loadedFontFamilies.includes(expected.family)
+                  || !runs.some(r=>r.text.includes(symbol) && r.font.includes(expected.family)))
+                failures.push('Supplemental Han sign did not use its bundled WenKai shard: '+symbol);
+            }
+          }
+          if (name === 'vietnamese-reading-marks') {
+            const ctx=document.createElement('canvas').getContext('2d');
+            const families=report.loadedFontFamilies.map(f=>JSON.stringify(f)).join(',');
+            const measure=createTextMeasurer(ctx,size=>size+'px '+families);
+            for (const [mark,advance] of [['𖿰',340],['𖿱',220]]) {
+              for (const base of ['日','量','外']) {
+                const metrics=measure.ink(base+mark,1000,'ltr');
+                const extra=metrics.advance-measure.ink(base,1000,'ltr').advance;
+                if (Math.abs(extra-advance)>2) failures.push('Reading mark lost its side spacing: '+base+mark+' got '+extra+' expected '+advance);
+                if (!metrics.runs?.some(r=>r.drawText===mark)) failures.push('Reading mark was not isolated from cross-shard fallback');
+              }
+            }
+          }
+          if (name==='seal-licensed-supplement') {
+            const expected=scriptManifest.fonts.find(f=>f.source.endsWith('/LXGWSeal-Regular.ttf'));
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[{text:l.text,font:l.ink.font}])));
+            if (!expected || !report.loadedFontFamilies.includes(expected.family)) failures.push('Licensed Seal subset was not loaded');
+            for(const symbol of ['\u{3e34f}','\u{3fa42}'])
+              if (!runs.some(r=>r.text.includes(symbol)&&r.font.includes(expected.family))) failures.push('Licensed Seal did not use its verified font: '+symbol);
+          }
+          if (name.startsWith('seal-sans-')) {
+            const expected=scriptManifest.fonts.find(f=>f.source.endsWith('/DadSealSans-Regular.otf'));
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[{text:l.text,font:l.ink.font}])));
+            if (!expected || !report.loadedFontFamilies.includes(expected.family)) failures.push('Seal Sans subset was not loaded');
+            for(const symbol of [...texts.join('')].filter(c=>expected.ranges.some(([a,b])=>a<=c.codePointAt(0)&&c.codePointAt(0)<=b)))
+              if (!runs.some(r=>r.text.includes(symbol)&&r.font.includes(expected.family))) failures.push('Seal Sans glyph did not use its verified font: '+symbol);
+          }
+          if (name.startsWith('seal-recovery')) {
+            const expected=scriptManifest.fonts.find(f=>f.source.endsWith('/DadSealRecovery-Regular.ttf'));
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[{text:l.text,font:l.ink.font}])));
+            for (const symbol of [...(name === 'seal-recovery-alternate-1' ? '𿎐𿎒𿎓𿎔𿎕𿎖' : name === 'seal-recovery-alternate-2' ? '𿎗𿎘𿎙𿎚𿎜𿎝' : name === 'seal-recovery-alternate-3' ? '𿎞𿎟𿎠𿎡𿎣' : name === 'seal-recovery-qjz' ? '𽀥𽀬𽁢𽂋' : name === 'seal-recovery-dyc-bird-mouth' ? '𽍕𽍺' : name === 'seal-recovery-dyc-heart-arches' ? '𾺦' : name === 'seal-recovery-dyc-heart-great' ? '𾺉' : name === 'seal-recovery-dyc-heart-coils' ? '𾹙' : name === 'seal-recovery-dyc-heart-west' ? '𾹑' : name === 'seal-recovery-dyc-heart-enclosure' ? '𾹇' : name === 'seal-recovery-dyc-fire-roof' ? '𾵨𾶟𾶻' : name === 'seal-recovery-dyc-forest-fire' ? '𾴥' : name === 'seal-recovery-dyc-deer-rabbit-dogs' ? '𾱌𾱝𾲚𾲧' : name === 'seal-recovery-dyc-later-horses' ? '𾮜𾯪𾰌' : name === 'seal-recovery-dyc-horses' ? '𾮱𾮽' : name === 'seal-recovery-dyc-stone7' ? '𾬵' : name === 'seal-recovery-dyc-stones' ? '𾬕𾬟' : name === 'seal-recovery-dyc-head-ghost' ? '𾥨𾩉𾩾𾫮' : name === 'seal-recovery-dyc-head' ? '𾤿' : name === 'seal-recovery-dyc-see' ? '𾣐' : name === 'seal-recovery-dyc-garments' ? '𾟭𾡚' : name === 'seal-recovery-dyc-volume6' ? '𾝭𾞸' : name === 'seal-recovery-dyc-sickness' ? '𾕿𾖡𾘅' : name === 'seal-recovery-dyc-rice' ? '𾑒𾑢𾔟𾕂' : name === 'seal-recovery-dyc-moonvessel' ? '𾎱𾎳𾏇𾍷' : name === 'seal-recovery-dyc-daymoon' ? '𾌻𾎆' : name === 'seal-recovery-dyc-volume5' ? '𾋧𾋽𾌐' : name === 'seal-recovery-dyc-latewood' ? '𾂖𾆗𾆼𾇧' : name === 'seal-recovery-dyc-wood' ? '𾀪𾁳' : name === 'seal-recovery-dyc-enclosed' ? '𾃧' : name === 'seal-recovery-dyc-walking' ? '𽽲' : name === 'seal-recovery-dyc-food' ? '𽹹𽻥' : name === 'seal-recovery-dyc-vessels' ? '𽷎𽷼𽸖' : name === 'seal-recovery-dyc-bamboo' ? '𽵣𽵥𽶤𽶥' : name === 'seal-recovery-dyc-container-dot' ? '𽵑' : name === 'seal-recovery-dyc-hand-remains' ? '𽭭𽮢' : name === 'seal-recovery-dyc-birds4' ? '𽫝𽫟𽫪𽬃' : name === 'seal-recovery-dyc-eye-knowledge' ? '𽥑𽧄𽨕' : name === 'seal-recovery-dyc-variants4' ? '𽢓𽢿𽣯𽣳' : name === 'seal-recovery-dyc-speech-lift' ? '𽛏𽝵𽟐' : name === 'seal-recovery-dyc-volume2' ? '𽕏𽖴' : name === 'seal-recovery-dyc-mouth-walk' ? '𽐍𽐔𽑫𽒠𽓕' : name === 'seal-recovery-dyc-grass' ? '𽆂𽆘𽈜𽊦' : name === 'seal-recovery-dyc-complex' ? '𽂨𽄢' : name === 'seal-recovery-dyc-alt' ? '𽀐𽂇' : name === 'seal-recovery-dyc' ? '𽀇𽁕' : name === 'seal-recovery-cleaner-copy' ? '𽳡𾺴𿕶' : name === 'seal-recovery-final-locations' ? '𿟬𿭥𿭦𿭲' : name === 'seal-recovery-thread' ? '𿘎𿜑' : name === 'seal-recovery-gates' ? '𿊸𿊹𿊺𿊻' : name === 'seal-recovery-fish' ? '𿈔𿈕𿈖𿈗𿈘𿈝' : name === 'seal-recovery-shifted' ? '𾺯𾺰𾺱𾼬𾿅𾿆' : name === 'seal-recovery-water' ? '𾯸𿅜𿅞𿅡𿅢𿅣' : name === 'seal-recovery-cross-pages' ? '𾌲𾚛𾢈𾪊𾚚' : name === 'seal-recovery-book4c' ? '𾉞𾎔𾔿𾖭𾉝' : name === 'seal-recovery-next-pages' ? '𽝦𽢊𾈟' : name === 'seal-recovery-corrected' ? '𾺳𾺶𾃲𾓪𿊃𿣽𾓩' : name === 'seal-recovery-page-search' ? '𽞨𽞩𾇣𾺘𾺵' : name === 'seal-recovery-final-candidates' ? '𽙫𾴺𾴻𾺲' : name === 'seal-recovery-book6' ? '𾵷𾺓𾿓𿇮' : name === 'seal-recovery-book5' ? '𾨺𾨻𾩙𾭭' : name === 'seal-recovery-book4b' ? '𾃴𾇥𾇦𾕮' : name === 'seal-recovery-adjacent' ? '𿉽𿉾𿞝' : name === 'seal-recovery-cluster' ? '𿘃𿘄𿘅' : name === 'seal-recovery-book4' ? '𾇑𾊘𾊥𾓭' : name === 'seal-recovery-latest' ? '𿒂𿓱𿗍' : name === 'seal-recovery' ? '𽞨𽬎𿖱𿗱𿘢𿣼' : '𽒸𽴪𽷲𽷳𿘣𿘥')]) {
+              if (!expected || !report.loadedFontFamilies.includes(expected.family) || !runs.some(r=>r.text.includes(symbol) && r.font.includes(expected.family)))
+                failures.push('recovered Seal did not use its verified font: '+symbol);
+            }
+          }
+          if (name === 'malayalam-syriac') {
+            const expected=scriptManifest.fonts.find(f=>f.source.endsWith('/EastSyriacMalankara.ttf'));
+            if (!expected || !report.loadedFontFamilies.includes(expected.family) || report.unmappedCodepoints.length)
+              failures.push('Malayalam Syriac native repertoire was not loaded');
+            const ctx=document.createElement('canvas').getContext('2d');
+            ctx.font='1000px '+JSON.stringify(expected.family);ctx.direction='rtl';
+            for (let cp=0x860;cp<=0x86a;cp++) {
+              const c=String.fromCodePoint(cp);
+              const delta=Math.abs(ctx.measureText('ܒ'+c+'ܒ').width-ctx.measureText('ܒ\u200c'+c+'\u200cܒ').width);
+              if ((cp===0x861 || cp===0x866) ? delta>0.1 : delta<0.1)
+                failures.push('Syriac joining type mismatch: U+'+cp.toString(16));
+            }
+          }
+          if ((name.startsWith('emoji-activity-people-') || name.startsWith('emoji-body-parts-') || name==='emoji-clothed-sport' || name==='emoji-covered-snowboarding') || name.startsWith('emoji-gesture-people-') || name.startsWith('emoji-transport-extra-') || name.startsWith('emoji-new-svg') || name.startsWith('emoji-gestures-') || name.startsWith('emoji-clothing-') || name.startsWith('emoji-electronics-') || name.startsWith('emoji-celebrations-') || name.startsWith('emoji-recreation-') || name.startsWith('emoji-household-') || name.startsWith('emoji-science-') || name.startsWith('emoji-people-') || name.startsWith('emoji-person-forms-') || name.startsWith('emoji-professions-') || name.startsWith('emoji-roles-') || name.startsWith('emoji-detailed-people-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            // These fixtures contain emoji tokens plus optional ASCII prose.
+            for (const text of texts.flatMap(t=>t.split(' ')).filter(t=>t && !/^[\x00-\x7f]+$/.test(t))) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(text) && r.font.includes('Dad Emoji')))
+                failures.push('Emoji did not use its custom drawing: '+text);
+            }
+            if (report.emojiFallbacks.length) failures.push('Emoji used native fallback');
+          }
+          if ((name.startsWith('emoji-activity-people-') || name.startsWith('emoji-body-parts-') || name==='emoji-clothed-sport' || name==='emoji-covered-snowboarding')) {
+            // A CSS family match does not prove the browser avoided native
+            // emoji fallback. Qualified aliases must paint the same pixels.
+            for (const text of texts.flatMap(t=>t.split(' ')).filter(t=>/[\ufe0e\ufe0f]/u.test(t) || (name==='emoji-covered-snowboarding' && t.startsWith('🏂')))) {
+              for (const family of ['Dad Emoji','Dad Emoji Ink']) {
+                const canvas=document.createElement('canvas');canvas.width=256;canvas.height=128;
+                const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.font='72px '+JSON.stringify(family);
+                ctx.fillText(text,24,96);const qualified=ctx.getImageData(0,0,256,128).data;
+                ctx.clearRect(0,0,256,128);ctx.fillText(text,24,96);
+                const repeated=ctx.getImageData(0,0,256,128).data;
+                if (qualified.some((value,i)=>value!==repeated[i]))
+                  failures.push('Identical emoji repaint changed pixels in '+family+': '+text);
+                let bareText=text.replace(/[\ufe0e\ufe0f]/gu,'');
+                if (name==='emoji-covered-snowboarding') bareText=bareText.replace(/[\u{1f3fb}-\u{1f3ff}]/gu,'');
+                ctx.clearRect(0,0,256,128);ctx.fillText(bareText,24,96);
+                const bare=ctx.getImageData(0,0,256,128).data;
+                if (qualified.some((value,i)=>value!==bare[i]))
+                  failures.push('Equivalent emoji form painted different pixels in '+family+': '+text);
+              }
+            }
+          }
+          if (name.startsWith('emoji-sky-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const symbols=[...'🌑🌒🌓🌔🌕🌖🌗🌘🌙🌚🌛🌜🌝🌞⭐🌟🌠🌌☀☁⛅⛈🌤🌥🌦🌧🌨🌩🌪🌫🌬🌀🌂☂☔⛱⚡❄☃⛄☄💧🌊'];
+            const start=(Number(name.slice(-1))-1)*16;
+            for (const symbol of symbols.slice(start,start+16)) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('sky symbol did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('sky symbol used native fallback');
+          }
+          if (name.startsWith('emoji-dining-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const symbols=[...'🍦🍧🍨🍩🍪🎂🍰🧁🥧🍫🍬🍭🍮🍯🍼🥛☕🫖🍵🍶🍾🍷🍸🍹🍺🍻🥂🥃🫗🥤🧋🧃🧉🧊🥢🍽🍴🥄🔪🫙🏺'];
+            const start=(Number(name.slice(-1))-1)*14;
+            for (const symbol of symbols.slice(start,start+14)) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('dining symbol did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('dining symbol used native fallback');
+          }
+          if (name.startsWith('emoji-food-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const symbols=[...'🍞🥐🥖🫓🥨🥯🥞🧇🧀🍖🍗🥩🥓🍔🍟🍕🌭🥪🌮🌯🫔🥙🧆🥚🍳🥘🍲🫕🥣🥗🍿🧈🧂🥫🍱🍘🍙🍚🍛🍜🍝🍠🍢🍣🍤🍥🥮🍡🥟🥠🥡'];
+            const start=(Number(name.slice(-1))-1)*17;
+            for (const symbol of symbols.slice(start,start+17)) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('food did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('food used native fallback');
+          }
+          if (name.startsWith('emoji-sports-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const symbols=[...'⚽⚾🥎🏀🏐🏈🏉🎾🥏🎳🏏🏑🏒🥍🏓🏸🥊🥋🥅⛳⛸🎣🤿🎽🎿🛷🥌'];
+            const start=(Number(name.slice(-1))-1)*14;
+            for (const symbol of symbols.slice(start,start+14)) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('sport did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('sport used native fallback');
+          }
+          if (name.startsWith('emoji-plants-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const symbols=[...'💐🌸💮🪷🏵🌹🥀🌺🌻🌼🌷🪻🌱🪴🌲🌳🌴🌵🌾🌿☘🍀🍁🍂🍃🪹🪺🍄'];
+            const start=(Number(name.slice(-1))-1)*14;
+            for (const symbol of symbols.slice(start,start+14)) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('plant did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('plant used native fallback');
+          }
+          if (name === 'emoji-birds' || name.startsWith('emoji-wildlife-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const wildlife=[...'🐸🐊🐢🦎🐍🐲🐉🦕🦖🐳🐋🐬🦭🐟🐠🐡🦈🐙🐚🪸🪼🦀🦞🦐🦑🦪🐌🦋🐛🐜🐝🪲🐞🦗🪳🕷🕸🦂🦟🪰🪱🦠'];
+            const symbols=name === 'emoji-birds' ? [...'🦃🐔🐓🐣🐤🐥🐦🐧🕊🦅🦆🦢🦉🦤🪶🦩🦚🦜🪽🪿'] : wildlife.slice((Number(name.slice(-1))-1)*24,Number(name.slice(-1))*24);
+            for (const symbol of symbols) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('animal did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('animal used native fallback');
+          }
+          if (name === 'emoji-produce-sequences') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const sequence of ['🍋‍🟩','🍄‍🟫']) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(sequence) && r.font.includes('Dad Emoji')))
+                failures.push('produce sequence did not use custom font: '+sequence);
+            }
+            if (report.emojiFallbacks.length) failures.push('produce sequence used native fallback');
+          }
+          if (name === 'emoji-compounds') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const sequence of ['😶‍🌫️','😮‍💨','😵‍💫','🙂‍↔️','🙂‍↕️','🐈‍⬛','🐕‍🦺','🐻‍❄️','⛓️‍💥','😶‍🌫','🙂‍↔','🙂‍↕','🐻‍❄','⛓‍💥','🐦‍⬛']) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(sequence) && r.font.includes('Dad Emoji')))
+                failures.push('compound did not use custom font: '+sequence);
+            }
+            if (report.emojiFallbacks.length) failures.push('compound used native fallback');
+          }
+          if (/^emoji-(expression-expansion-|promoted-expression-|geometric-|hand-prop-|person-symbols-|neutral-family-|game-medical-|promoted-bandage-|sound-controls-|volume-and-controls|awards-events-|medal-ranks-and-envelope|holding-hands-|family-tiles-|couples-)/.test(name)) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const symbol of texts.join(' ').split(/\s+/).filter(t=>/\p{Emoji}/u.test(t))) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('new symbol did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length || report.unmappedCodepoints.length) failures.push('new symbols have fallback or unmapped characters');
+          }
+          if (name.startsWith('emoji-expressions-')) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const symbols=name.endsWith('-1') ? '🤣🫠😇🥰😍🤩😘😗😚😙🥲🤑🤗🤭🫢🫣🤫🫡🫥🤥🫨😌🥴🤠' : '🥳🥸🫤🥹😨😰😥😱😓😺😸😹😻😼😽🙀😿😾🙈🙉🙊';
+            for (const symbol of [...symbols]) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('expression did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('expression used native fallback');
+          }
+          if (name === 'emoji-transport' || name === 'emoji-tools') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            const symbols=name === 'emoji-tools' ? '🛠⚒🔨⛏🔧🪛🔩⚙🗜⚖🔗⛓🪝🧰🧲🪜🪚🪓🪤🧯🔑🗝🔒🔓' : '🚗🚕🚙🚌🚎🚐🚚🚛🚜🛺🚂🚃🚄🚅🚆🚇🚈🚝🚢⛵🚤🛥🛶⛴';
+            for (const symbol of [...symbols]) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push(name+' did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push(name+' used native fallback');
+          }
+          if (name === 'emoji-clocks') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (let cp=0x1f550; cp<=0x1f567; cp++) {
+              const symbol=String.fromCodePoint(cp);
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('clock did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('clock used native fallback');
+          }
+          if (name === 'emoji-music') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const symbol of [...'🥁🎷🎺🎸🎻🎹🎵🎶🎼🎤🎧📻']) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('music emoji did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('music emoji used native fallback');
+          }
+          if (['emoji-faces', 'emoji-playful', 'emoji-strained', 'emoji-ailing'].includes(name)) {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const symbol of [...(name === 'emoji-faces' ? '😊😆😐😴😁😃😄😅😉😋😎😑🙂🙁😮😯' : name === 'emoji-playful' ? '😛😜😝🤪🤨🧐🤓🤐🙄😏😒😬' : name === 'emoji-strained' ? '😕😟😞😔😖😣😩😫😤😠🙃😶' : '😷🤒🤕🤧🥱😪🤤😵😲😦😧😢')]) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('approved face did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('approved faces used native fallback');
+          }
+          if (name === 'geometric-emoji') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const symbol of [...'🔴🔵🟠🟡🟢🟣🟤⚫⚪🟥🟦🟧🟨🟩🟪🟫⬛⬜▪◾◼▫◽◻']) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(symbol) && r.font.includes('Dad Emoji')))
+                failures.push('geometric emoji did not use custom font: '+symbol);
+            }
+            if (report.emojiFallbacks.length) failures.push('geometric emoji used native fallback');
+          }
+          if (name === 'coloured-hearts') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const heart of ['❤️',...'🧡💛💚💙💜🖤🤍🤎🩵🩶🩷']) {
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(heart) && r.font.includes('Dad Emoji')))
+                failures.push('coloured heart did not use custom font: '+heart);
+            }
+            if (report.emojiFallbacks.length) failures.push('coloured heart used native fallback');
+          }
+          if (name === 'keycap-sequences') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const key of '#*0123456789') for (const vs of ['', '\ufe0f']) {
+              const sequence=key+vs+'\u20e3';
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(sequence) && r.font.includes('Dad Emoji')))
+                failures.push('keycap was not routed as custom: '+sequence);
+            }
+            if (report.emojiFallbacks.length) failures.push('keycaps unexpectedly used native fallback');
+          }
+          if (name === 'astronaut-sequences') {
+            const runs=report.panels.flatMap(p=>p.speeches.flatMap(s=>s.lines.flatMap(l=>l.ink.runs??[])));
+            for (const tone of ['', '🏻', '🏼', '🏽', '🏾', '🏿']) {
+              const sequence='🧑'+tone+'‍🚀';
+              if (!runs.some(r=>r.emojiPolicy==='custom' && r.text.includes(sequence) && r.font.includes('Dad Emoji')))
+                failures.push('custom astronaut was not routed: '+sequence);
+            }
+          }
+          if (name === 'custom-emoji'   && !report.loadedFontFamilies.includes('Dad Emoji'))
+            failures.push('custom emoji font was not loaded');
+          if (name === 'arabic-mark-stacks') {
+            ctx.font = report.font.replace(/^[\d.]+px/, '48px');
+            ctx.direction = 'rtl';
+            const oneAbove = ctx.measureText(nativeShapingText('ب𐻋'));
+            const twoAbove = ctx.measureText(nativeShapingText('ب𐻋𐻋'));
+            const oneBelow = ctx.measureText(nativeShapingText('ب𐻱'));
+            const twoBelow = ctx.measureText(nativeShapingText('ب𐻱𐻱'));
+            if (!(twoAbove.actualBoundingBoxAscent > oneAbove.actualBoundingBoxAscent + 10))
+              failures.push('new Arabic above marks overlap instead of stacking');
+            if (!(twoBelow.actualBoundingBoxDescent > oneBelow.actualBoundingBoxDescent + 4))
+              failures.push('new Arabic below marks overlap instead of stacking');
+          }
+          if (name === 'egyptian-composition') {
+            ctx.font = report.font;
+            ctx.direction = 'ltr';
+            const widths = ['𓀀𓀁', '𓀀\u{13430}𓀁', '𓀀\u{13431}𓀁'].map(s => ctx.measureText(s).width);
+            if (!(widths[1] > 0 && widths[1] < widths[2] && widths[2] < widths[0]))
+              failures.push('Egyptian joiners did not produce the expected compact arrangements');
+          }
+          if (name === 'bidi-wrap') {
+            const rasterCanvas = document.createElement('canvas');
+            rasterCanvas.width = 2000; rasterCanvas.height = 180;
+            const raster = rasterCanvas.getContext('2d');
+            raster.font = report.font.replace(/^[\d.]+px/, '48px');
+            raster.textAlign = 'left'; raster.textBaseline = 'alphabetic';
+            const measure = createTextMeasurer(raster, () => report.font.replace(/^[\d.]+px/, '48px'));
+            for (const text of ['Hello العربية (123) world', 'שלום (123) hello',
+              'LEFT \u202eabc def\u202c END', 'English \u2068אבג 123 xyz\u2069 end',
+              '\u{1e900}\u{1e901} 123']) {
+              raster.clearRect(0,0,2000,180);
+              raster.direction = paragraphDirection(text);
+              const nativeWidth = raster.measureText(text).width;
+              raster.fillText(text, 50, 110);
+              const native = raster.getImageData(0,0,2000,180).data;
+              const box = measure.forParagraph(text).at(0).ink(text,48);
+              raster.clearRect(0,0,2000,180);
+              for (const run of box.runs) {
+                raster.direction = run.direction;
+                raster.fillText(run.drawText, 50 + run.offset, 110);
+              }
+              const actual = raster.getImageData(0,0,2000,180).data;
+              let error = 0, mass = 0;
+              for (let i = 3; i < actual.length; i += 4) {
+                error += Math.abs(actual[i] - native[i]); mass += native[i];
+              }
+              // Subpixel run origins may differ slightly between browser
+              // shaping calls; require matching advance and near-identical ink.
+              if (Math.abs(nativeWidth - box.advance) > 0.1 || error / mass > 0.03)
+                failures.push('bidi runs differ from native whole-paragraph shaping: ' + text + ' (' + error / mass + ')');
+            }
+          }
+          if (name === 'dictionary-scripts') {
+            const speeches = [report.panels[0].speeches.find(s => s.who === 'dad'),
+              report.panels[1].speeches.find(s => s.who === 'dad'),
+              report.panels[2].speeches.find(s => s.who === 'dad'),
+              report.panels.flatMap(p => p.speeches).find(s => s.who === 'calvin')];
+            for (const [i, speech] of speeches.entries()) {
+              const units = breakUnits(texts[i]);
+              if (units.length < 2) failures.push('dictionary did not supply opportunities');
+              const ends = new Set();
+              let offset = 0;
+              for (const unit of units) ends.add(offset += unit.length);
+              offset = 0;
+              for (const line of speech.lines) {
+                if (!ends.has(offset += line.text.length)) failures.push('line divided a dictionary word');
+              }
+              if (speech.lines.map(line => line.text).join('') !== texts[i]) failures.push('dictionary text changed');
+            }
+          }
+          if (name === 'calvin-wide-cluster') {
+            const reply = report.panels.flatMap(p => p.speeches).find(s => s.who === 'calvin');
+            if (reply.lines.map(line => line.text).join('') !== texts[3])
+              failures.push('unbreakable reply was altered');
+            if (!(reply.fontSize < report.fontSize)) failures.push('oversized reply was not reduced');
+          }
+          for (const problem of geometry.filter(p => ["encloses", "text-in-panel", "text-off-art"].includes(p.check))) {
+            failures.push(problem.check + ": " + problem.detail);
+          }
+          if (['new-scripts','tulu-sidetic'].includes(name)) {
+            const raster = text => {
+              const sample = document.createElement('canvas');
+              sample.width = 256; sample.height = 160;
+              const paint = sample.getContext('2d');
+              paint.font = report.font.replace(/^[\d.]+px/, '64px');
+              paint.direction = 'ltr';
+              paint.fillText(text, 10, 100);
+              return paint.getImageData(0, 0, sample.width, sample.height).data;
+            };
+            const pairs = name === 'tulu-sidetic' ? [
+              ['𑎃', '𑎃'], ['𑎅', '𑎅'], ['𑎎', '𑎎'], ['𑎑', '𑎑'],
+              ['𑎒𑏅', '𑎒𑏅'], ['𑎒𑏇', '𑎒𑏇'], ['𑎒𑏈', '𑎒𑏈'],
+            ] : [
+              ['\u{16101}\u{16126}', '\u{16101}\u{1611E}\u{1611E}\u{1611F}'],
+              ['\u{16D44}\u{16D68}', '\u{16D44}\u{16D67}\u{16D67}'],
+              ['\u{16D44}\u{16D6A}', '\u{16D44}\u{16D63}\u{16D67}\u{16D67}'],
+              ['\u{16D44}\u{16D6A}', '\u{16D44}\u{16D69}\u{16D67}'],
+            ];
+            for (const [a,b] of pairs) {
+              const left = raster(a), right = raster(b);
+              if (!left.some(byte => byte) || left.some((byte,i) => byte !== right[i]))
+                failures.push('canonically equivalent strings render differently: ' + a + ' / ' + b);
+            }
+          }
+          if (['calvin-wide-cluster', 'grid-wide'].includes(name)) {
+            for (const problem of geometry.filter(p => ['clearance', 'smooth'].includes(p.check)))
+              failures.push(problem.check + ': ' + problem.detail);
+          }
+          if (name === 'dad-wide-cluster') {
+            const line = report.panels[0].speeches.find(s => s.who === 'dad').lines[0];
+            if (line.text !== texts[0] || !(line.fontSize < report.fontSize)) failures.push('oversized Dad cluster was altered or not reduced');
+          }
+          const png = await new Promise(resolve => canvas.toBlob(resolve, "image/png"));
+          const decoded = png && await createImageBitmap(png);
+          if (!decoded || decoded.width !== canvas.width || decoded.height !== canvas.height)
+            failures.push("PNG export failed to round-trip at canvas dimensions");
+          decoded?.close();
+          const knownLimitations = ['hieroglyphs', 'egyptian-composition'].includes(name)
+            ? ['Core sign composition now uses the Egyptian Text reference font. Basic LTR extended and rotated groups use the application layout path; exhaustive controls and comic styling remain pending.']
+            : name === 'small-seal' ? ['Most source glyphs have automatic alignment only; historical sign review and comic styling remain pending.']
+            : ['new-scripts','tulu-sidetic','cuneiform-numerals','jurchen-tangut','supplemental-alphabets','dives-myanmar','extended-arabic','arabic-honorifics','arabic-mark-stacks','arabic-crown-placement','arabic-baseline-symbols','arabic-crown-letters','supplemental-script-forms'].includes(name) ? ['Native outlines and sample shaping are provisional; fluent-reader and style review remain pending.']
+            : name === 'dictionary-scripts' ? ['Word segmentation uses host browser dictionaries, not version-pinned linguistic data; fluent-reader review remains pending.']
+            : ['mixed-rtl', 'bidi-wrap'].includes(name) ? ['Unicode 18 bidi corpora pass; browser shaping and mirroring still require broader cross-engine and fluent-reader review.'] : [];
+          if (name === 'egyptian-extended-groups') knownLimitations.push('Basic horizontal/vertical/overlay composition and nested segments use native sign outlines. Broader insertions and native-reader/style review remain pending.');
+          if (name === 'egyptian-rtl') knownLimitations.push('Explicit RTL override supports basic Egyptian groups, rotations, mirroring, blanks and damage. Broader insertions, vertical columns and native-reader/style review remain pending.');
+          if (name.startsWith('egyptian-enclosure')) knownLimitations.push('Native ends and tiled connecting strips support horizontal enclosures, missing ends, nesting and RTL. Strip sizing, native-reader review and custom style remain provisional; vertical columns remain pending.');
+          if(name==='asteroid-symbols') knownLimitations.push('All 21 historical asteroid forms compared with the Unicode proposal. Light pen variation preserves topology and spacing; final style and specialist review remain provisional.');
+          if(name==='geomantic-figures') knownLimitations.push('All sixteen four-row dot patterns verified; fixed advances and separated cells retained under light pen variation. Final comic-style and specialist review remain provisional.');
+          if(name==='chemical-reaction-symbols') knownLimitations.push('Native reaction-arrow geometry retains long/short and directional distinctions under light pen treatment. Chemical annotations and superscript placement require markup; this is plain Unicode text. Final style review remains provisional.');
+          if(name==='kawi-nukta') knownLimitations.push('Three-dot nukta and four-dot anusvara combination preserve native above-form bodies. Dense combinations and final comic styling require specialist review.');
+          if(name==='glagolitic-caudate-chrivi') knownLimitations.push('OFL specialist letterforms fitted to native case heights and above-mark anchors. Cyrillic marks use inherited carriers with original-glyph UVS selection to preserve browser attachment. Historical/specialist and final comic-style review remain provisional.');
+          if(name==='music-special-stems') knownLimitations.push('Special ornaments retain native stem variants and attachment. Dense ornament/flag/tremolo combinations and final comic styling need specialist review.');
+          if(name==='music-higher-tremolos') knownLimitations.push('Four/five native-slant strokes fit the existing tremolo area with reduced stroke weight. Native normal/low variants and count-specific reinsertion preserve identity. Specialist and final style review remain pending.');
+          if(name==='music-higher-flags') knownLimitations.push('Flags 6–8 retain distinct drawings and native stem/contextual attachment. Inline music only; full score layout, specialist and final style review remain pending.');
+          if(name==='music-stress-unstress') knownLimitations.push('Stress and unstress use native articulation attachment with distinct uninverted forms. These are inline musical symbols, not a complete score-layout system; specialist and final style review remain pending.');
+          if(name==='devanagari-alternate-ddda') knownLimitations.push('Alternate DDDA uses a native DA-shaped body above the native implosive stroke, with DDDA attachment rules. Shape-only compatibility preserves logical text. Specialist and final style review remain pending.');
+          if(name==='bengali-above-anusvara') knownLimitations.push('Historical ring uses native above-mark anchors with raised drawing variants for tall vowels and reph. Original text is preserved. Specialist and final style review remain pending.');
+          if(name==='bengali-alternate-ba') knownLimitations.push('Alternate BA retains a diagonal isolated form and native BA conjunct behavior, distinct from Assamese RA. Drawing-only compatibility aliases and canonical split vowels preserve logical input. Specialist and final style review remain pending.');
+          if(name==='archaic-shrii') knownLimitations.push('Archaic SHRII is distinct from modern letter sequences and does not combine with letters. Source drawings have light pen adaptation; specialist and final style review remain pending.');
+          if(name==='odia-tone-dots') knownLimitations.push('Historical Kui tone marks use native overline classes and supplemental vowel anchors. Shape-only UVS aliases preserve original logical text. Specialist review and final visual style remain pending.');
+          if(name==='hebrew-heavy-points') knownLimitations.push('Heavy points use native sheva/dagesh attachment classes and preserve distinct weights. Unusual combinations inherit the source font’s anchor coverage; native-reader and final style review remain pending.');
+          if (['historical-math-symbols','new-music-symbols'].includes(name)) knownLimitations.push('Standalone symbols preserve source distinctions and advances with light pen variation. New combining music marks, full notation layout and specialist/style review remain pending.');
+          if (['legacy-constructed','legacy-pictures'].includes(name)) knownLimitations.push('Pinned native legacy symbol identities and connecting cells are retained; standalone outlines have light pen variation. Exhaustive historical-reference and comic-style review remain pending.');
+          if (name==='egyptian-modified-insertions') knownLimitations.push('467 mirrored, 24 registered rotated and 24 rotated/mirrored source templates retain native artwork and source/documented positions. Source-specific overlap and broader style review remain provisional.');
+          if (['egyptian-insertions','egyptian-multiple-insertions','egyptian-native-region-overlaps','egyptian-mirror-helpers','egyptian-native-mirror-alternates','egyptian-documented-cells'].includes(name)) knownLimitations.push('All 982 enumerated native insertion templates are recovered; 65 explicit mirror helpers become sign reflections and four missing size rules use documented native cells. Earlier 910 templates are unchanged. Source overlap observations are not a claim of collision freedom or linguistic validation; style review remains open.');
+          if (name === 'egyptian-damage') knownLimitations.push('All fifteen damage masks work on individual signs and matched insertion containers, including rotated/mirrored signs and enclosed groups. Broader source-style review remains open.');
+          if (name === 'egyptian-editorial') knownLimitations.push('Blank spacing and lost-sign shading, including expanded variants, use the shared layout path; broader editorial typography remains pending.');
+          if (name === 'egyptian-mirrors') knownLimitations.push('Explicit horizontal mirroring is applied after registered rotations before directional reflection; custom styling and advanced control interactions remain pending.');
+          if (name === 'egyptian-rotations') knownLimitations.push('Registered rotations use affine native outlines and work in basic quadrats; advanced controls and custom style remain pending.');
+          if (name === 'supplemental-script-forms') knownLimitations.push('Khitan is shown as separate horizontal characters; cluster arrangement and vertical orientation remain unimplemented. U+18CFF is intentionally a hollow square indicating a lost character.');
+          if (report.emojiFallbacks.length) knownLimitations.push('Listed emoji fallbacks use native system artwork; their custom drawing/sequence coverage remains incomplete.');
+          const typography = ['egyptian-enclosure-ends', 'hieroglyphs', 'egyptian-composition', 'calvin-wide-cluster', 'grid-wide'].includes(name)
+            ? {cap:report.cap, fontSize:report.fontSize, lines:report.panels.flatMap(p => p.speeches.flatMap(s => s.lines.map(l => ({text:l.text,fontSize:l.fontSize,x:l.x,y:l.y,width:l.width,height:l.height,ink:l.ink}))))} : undefined;
+          const geometryDetails=geometry.length ? {cap:report.cap,panels:report.panels.map(p=>({width:p.panel.width,height:p.panel.height,speeches:p.speeches.map(s=>({who:s.who,lines:s.lines.map(({x,y,width,height})=>({x,y,width,height}))}))}))} : undefined;
+          results.push({ name, renderMs, emojiFallbacks:report.emojiFallbacks, pngBytes: png?.size, knownLimitations, bundledScriptFonts: report.loadedFontFamilies.length, unmappedCodepoints: report.unmappedCodepoints, lines: count, canvas: [canvas.width, canvas.height], typography, failures, geometry, geometryDetails });
+        }
+        summary.textContent = JSON.stringify({ fontLoaded: document.fonts.check('20px "Dad Lettering"'), results }, null, 2);
+        document.title = results.some(r => r.failures.length) ? "FAIL: Unicode rendering checks"
+          : results.some(r => r.geometry.length) ? "REVIEW: Unicode balloon geometry"
+          : "PASS geometry/export: typography review pending";
+      } catch (error) {
+        summary.textContent = String(error.stack ?? error);
+        document.title = "ERROR: Unicode rendering checks";
+      }
+    </script>
+  </body>
+</html>

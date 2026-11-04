@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/notofonts/gurung-khema",
+  "commit": "f41f88ef0ec6960577357439645d8336c2b03336",
+  "builder": "glyphs",
+  "build_input": "build/unicode-sources/noto-gurung/NotoSansGurungKhema.glyphs",
+  "family": "Dad Gurung Khema Source",
+  "files": [
+    {
+      "path": "build/unicode-sources/noto-gurung/NotoSansGurungKhema.glyphs",
+      "url": "https://raw.githubusercontent.com/notofonts/gurung-khema/f41f88ef0ec6960577357439645d8336c2b03336/sources/NotoSansGurungKhema.glyphs",
+      "git_blob_sha1": "5ee94f80ea042d06d6e51e6ea4a601e97cb15170",
+      "sha256": "658fc1f015da8c839a5815681a06e9a3c9d2e8c3dba6c445616b5f15279c9f6b",
+      "size": 103361
+    },
+    {
+      "path": "build/unicode-sources/noto-gurung/OFL.txt",
+      "url": "https://raw.githubusercontent.com/notofonts/gurung-khema/f41f88ef0ec6960577357439645d8336c2b03336/OFL.txt",
+      "git_blob_sha1": "6d8addab5285f73ced0d3c172837ae270fb673af",
+      "sha256": "e504bdd0c729d52ac94b648abd946371409fc4c59cde56d4bab3b72ed07b452d",
+      "size": 4397
+    }
+  ]
+}

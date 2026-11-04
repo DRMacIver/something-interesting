@@ -1,0 +1,425 @@
+{
+  "date": "2026-11-03",
+  "status": "Offline candidate research; no production dense-style modification accepted or applied.",
+  "scope": {
+    "sources": [
+      176,
+      183,
+      198,
+      199
+    ],
+    "sampleGlyphsPerSource": 4,
+    "sizes": [
+      22,
+      44
+    ],
+    "additionalReferences": "Klee One and WenKai native pen samples beside original Dad; common reference characters are different identities, not substitute validation."
+  },
+  "experiments": [
+    {
+      "directory": "output/font-review/dense-pen",
+      "module": "tools/font/dense_pen.py",
+      "specimen": "output/font-review/dense-pen/comparison.png",
+      "specimenSha256": "2ee7b523805c6954915e071ee63519f870ad2238995eedb8a00ad63c6d55ef90",
+      "glyphReview": "output/font-review/dense-pen/review.json"
+    },
+    {
+      "directory": "output/font-review/dense-pen-protected",
+      "module": "tools/font/dense_pen.py",
+      "specimen": "output/font-review/dense-pen-protected/comparison.png",
+      "specimenSha256": "a32bfba8cc3e7f2c5fc6e854ad6748dfb4a4226be992351eb2e5e8ce0580207c",
+      "glyphReview": "output/font-review/dense-pen-protected/review.json"
+    },
+    {
+      "directory": "output/font-review/vector-dense-pen",
+      "module": "tools/font/vector_dense_pen.py",
+      "specimen": "output/font-review/vector-dense-pen/comparison.png",
+      "specimenSha256": "22db49cbc1f2ed2b87177d961d995026c3d7ab2efeda526d3d31bf6029f30151",
+      "glyphReview": "output/font-review/vector-dense-pen/review.json",
+      "wholeFields": [
+        {
+          "sourceNumber": 176,
+          "size": 384,
+          "sourceTopology": [
+            5,
+            4
+          ],
+          "candidateTopology": [
+            5,
+            4
+          ],
+          "status": "pass",
+          "checks": {
+            "componentAreaRatios": [
+              0.9935253254198422,
+              0.9592281356987239,
+              0.9660845355606176,
+              0.9901393269192383,
+              1.0027274015301786
+            ],
+            "counterOverlap": [
+              0.9044883303411131,
+              0.8995024875621891,
+              0.9621318373071529,
+              0.9293647267880942
+            ]
+          }
+        },
+        {
+          "sourceNumber": 183,
+          "size": 384,
+          "sourceTopology": [
+            23,
+            5
+          ],
+          "candidateTopology": [
+            23,
+            5
+          ],
+          "status": "pass",
+          "checks": {
+            "componentAreaRatios": [
+              0.9438841355575738,
+              0.9934299058022639,
+              0.984622342831298,
+              1.150974025974026,
+              1.118414845101431,
+              0.973397823458283,
+              0.9685494223363287,
+              0.975114854517611,
+              1.0302583025830259,
+              0.9634477648802173,
+              0.9818374451339489,
+              0.9999176751461266,
+              1.0339913438192758,
+              0.9885864793678666,
+              1.0187680461982676,
+              1.0267326732673268,
+              0.993974147147439,
+              1.0241985780217038,
+              0.9935577271082157,
+              1.0217491193138306,
+              1.0205128205128204,
+              1.0430585055029928,
+              1.0201556575533826
+            ],
+            "counterOverlap": [
+              0.9128,
+              0.811304347826087,
+              0.8968799576943416,
+              0.8899470899470899,
+              0.8947646747752512
+            ]
+          }
+        },
+        {
+          "sourceNumber": 198,
+          "size": 384,
+          "sourceTopology": [
+            16,
+            8
+          ],
+          "candidateTopology": [
+            16,
+            8
+          ],
+          "status": "reject-whole-field",
+          "reason": "Reconstruction merged or lost a component"
+        },
+        {
+          "sourceNumber": 199,
+          "size": 384,
+          "sourceTopology": [
+            23,
+            6
+          ],
+          "candidateTopology": [
+            24,
+            6
+          ],
+          "status": "reject-whole-field",
+          "reason": "Reconstruction changed topology"
+        }
+      ]
+    },
+    {
+      "directory": "output/font-review/vector-pressure-dense-pen",
+      "module": "tools/font/vector_pressure_dense_pen.py",
+      "specimen": "output/font-review/vector-pressure-dense-pen/comparison.png",
+      "specimenSha256": "b6fe8e718956fff404274aa1a8027424bf8014396465226f942c8168a564b12e",
+      "glyphReview": "output/font-review/vector-pressure-dense-pen/review.json",
+      "wholeFields": [
+        {
+          "sourceNumber": 176,
+          "size": 384,
+          "sourceTopology": [
+            5,
+            4
+          ],
+          "candidateTopology": [
+            5,
+            4
+          ],
+          "status": "pass",
+          "checks": {
+            "componentAreaRatios": [
+              1.0337897079651985,
+              0.9701213818860878,
+              0.9670969374841812,
+              1.0243921913050422,
+              1.015089260413715
+            ],
+            "counterOverlap": [
+              0.8641532016756434,
+              0.8616915422885573,
+              0.9250188801380947,
+              0.8886050644158152
+            ]
+          }
+        },
+        {
+          "sourceNumber": 183,
+          "size": 384,
+          "sourceTopology": [
+            23,
+            5
+          ],
+          "candidateTopology": [
+            23,
+            5
+          ],
+          "status": "reject-whole-field",
+          "reason": "Reconstruction merged or lost a component"
+        },
+        {
+          "sourceNumber": 198,
+          "size": 384,
+          "sourceTopology": [
+            16,
+            8
+          ],
+          "candidateTopology": [
+            16,
+            8
+          ],
+          "status": "pass",
+          "checks": {
+            "componentAreaRatios": [
+              1.0606296979151892,
+              1.0,
+              1.0,
+              1.0,
+              1.05658317666323,
+              1.0,
+              1.184864864864865,
+              1.0,
+              1.1243399937881768,
+              1.0765035165781542,
+              1.0,
+              1.0,
+              1.0744257950530036,
+              1.1602497398543183,
+              1.0,
+              1.0
+            ],
+            "counterOverlap": [
+              1.0,
+              0.9018860735378167,
+              1.0,
+              0.9555652680652681,
+              0.9249380834444656,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "sourceNumber": 199,
+          "size": 384,
+          "sourceTopology": [
+            23,
+            6
+          ],
+          "candidateTopology": [
+            24,
+            6
+          ],
+          "status": "reject-whole-field",
+          "reason": "Reconstruction changed topology"
+        }
+      ]
+    },
+    {
+      "directory": "output/font-review/rounded-dense-pen",
+      "module": "tools/font/rounded_dense_pen.py",
+      "specimen": "output/font-review/rounded-dense-pen/comparison.png",
+      "specimenSha256": "6665e499fbc6b83a6c3e3184ac875bc0a6f1cd0e472bb53b6d1279bb6b43dd35",
+      "glyphReview": "output/font-review/rounded-dense-pen/review.json"
+    },
+    {
+      "directory": "output/font-review/monoline-dense-pen",
+      "module": "tools/font/monoline_dense_pen.py",
+      "specimen": "output/font-review/monoline-dense-pen/comparison.png",
+      "specimenSha256": "3562c9c910cfb96740c1a5c36ef215dd4bd5a41cc732b2d1de2c5a1a94c607ca",
+      "glyphReview": "output/font-review/monoline-dense-pen/review.json",
+      "wholeFields": [
+        {
+          "sourceNumber": 176,
+          "size": 384,
+          "sourceTopology": [
+            5,
+            4
+          ],
+          "candidateTopology": [
+            5,
+            4
+          ],
+          "status": "pass",
+          "checks": {
+            "componentAreaRatios": [
+              1.0628814187936209,
+              1.009014609884986,
+              1.0118927125506072,
+              1.0260761919974444,
+              1.0349615670716588
+            ],
+            "counterOverlap": [
+              0.8338719329742669,
+              0.83204777307788,
+              0.874946050927924,
+              0.8488617434758468
+            ]
+          }
+        },
+        {
+          "sourceNumber": 183,
+          "size": 384,
+          "sourceTopology": [
+            23,
+            5
+          ],
+          "candidateTopology": [
+            23,
+            5
+          ],
+          "status": "pass",
+          "checks": {
+            "componentAreaRatios": [
+              1.0341794540848033,
+              1.1274864376130198,
+              1.0074396517609814,
+              1.170157493099529,
+              1.1274185936762624,
+              0.9552599758162031,
+              1.0057766367137355,
+              1.0555130168453293,
+              1.124507874015748,
+              1.058039021980736,
+              1.0588724933787363,
+              1.0542833607907742,
+              1.0382098374498627,
+              0.9894551845342706,
+              1.085439229843562,
+              1.1549504950495049,
+              1.036353032659409,
+              1.0417809927662758,
+              1.0347398132735037,
+              1.0562107520294073,
+              1.0783898305084745,
+              1.0791658621355473,
+              1.0323159784560143
+            ],
+            "counterOverlap": [
+              0.9208,
+              0.9121739130434783,
+              0.9344262295081968,
+              0.9232804232804233,
+              0.938127974616605
+            ]
+          }
+        },
+        {
+          "sourceNumber": 198,
+          "size": 384,
+          "sourceTopology": [
+            15,
+            7
+          ],
+          "candidateTopology": [
+            14,
+            7
+          ],
+          "status": "reject-whole-field",
+          "reason": "Reconstruction changed topology"
+        },
+        {
+          "sourceNumber": 199,
+          "size": 384,
+          "sourceTopology": [
+            23,
+            6
+          ],
+          "candidateTopology": [
+            23,
+            6
+          ],
+          "status": "reject-whole-field",
+          "reason": "Reconstruction changed component area too far"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    "The native-vector approach keeps the exact source contour graph, quadratic curve types and all original short-stroke contours; unlike raster reconstruction it does not rebuild outlines as polygons.",
+    "Pure vector flex accepts15/16 sample glyphs under per-glyph geometry guards and makes long strokes less mechanically straight. Whole Khitan/Tangut fields pass at384px; Jigmo2/3 fields fail and must not be adopted.",
+    "Contour-normal width normalization plus low-frequency flex and rounded native line corners reduces mechanical edge character. Guard reductions preserve counters but often suppress the visually useful normalization.",
+    "Stronger near-monoline normalization preserves whole Khitan and Tangut samples at384px, but Tangut retreats to .25 strength. Jigmo2/3 whole fields fail despite individual glyph acceptance.",
+    "At22px dominant thin-horizontal/thick-vertical serif construction still remains for sampled Tangut and rare Han. None of these candidates establishes complete approved dense comic styling.",
+    "Native Seal Sans sampled in output/font-review/cubic-pressure/comparison.png already has tapered stroke starts and flowing variable width. Provisional native retention protects sign identity and is appropriate for this bounded sample; .35 pressure is too subtle to count as new style adaptation."
+  ],
+  "recommendedDispositions": [
+    {
+      "source": 176,
+      "decision": "native-vector candidate eligible for larger bounded Khitan review",
+      "candidate": "output/font-review/monoline-dense-pen/176.ttf",
+      "limits": "Four glyphs only, not full source or linguistic validation; visual improvement modest."
+    },
+    {
+      "source": 183,
+      "decision": "retain native/finer ink provisionally; no full style closure",
+      "candidate": "output/font-review/monoline-dense-pen/183.ttf",
+      "limits": "Whole sample geometry passes but required conservative .25 normalization leaves serif character."
+    },
+    {
+      "source": 198,
+      "decision": "reject current candidates; retain explicit dense-style gap",
+      "reason": "Whole-field topology fails across all tested vector variants with a completed whole-field check."
+    },
+    {
+      "source": 199,
+      "decision": "reject current candidates; retain explicit dense-style gap",
+      "reason": "Whole-field topology fails despite per-glyph topology success."
+    },
+    {
+      "source": 12,
+      "decision": "provisional retain native Seal Sans outline style",
+      "reason": "Already naturally tapered, flowing native ink; existing AGPL source/rebuild obligations remain unchanged."
+    }
+  ],
+  "boundedProductionStrategy": [
+    "Treat source categories separately: native calligraphic seal may retain ink; Khitan needs native stacked layout with bounded curve flex; Tangut/rare Han need serif-contrast treatment, not generic edge noise.",
+    "Before production, run8–16 representative complete clusters per dense source, including small counters and shortest detached strokes, with a single common viewport at1024 and384px and actual22/44px visual specimens.",
+    "Choose optical-finer-ink candidates only where the authoritative native form survives and style visibly improves. Do not raise normalization strength until a source passes both per-glyph and whole-field guards.",
+    "Cache by source hash, glyph outline hash, and treatment constants. Process only routed contributing glyphs in bounded groups. Preserve all native GSUB/GPOS/GDEF/hmtx and hint/layout metadata deliberately; invalidate dependent CJK/variant assets only after accepted group builds.",
+    "For failed rare Han, a better next implementation is native contour-pair stroke correspondence with local feature-size constraints: normalize wide vertical stems and round terminal serifs while keeping each short native stroke and counter. The current nearest-skeleton normal estimate is too conservative or unsafe and should not be mass applied.",
+    "Refresh licences, derivative names, source offers where relevant, manifests and coverage only after a production candidate is accepted. These experiments do not authorize or require a mass rebuild."
+  ],
+  "limitations": [
+    "No browser calls were used. All rendered specimens use local native outlines/HarfBuzz/PyMuPDF.",
+    "Local contour/raster guards are geometry checks, not proof of linguistic identity or arbitrary expression correctness.",
+    "No production font, manifest, B-owned input, licence or source-offer file was modified in this task.",
+    "The first dense-pen output predates added skeleton-protection; its PNG/JSON are saved but the current dense_pen.py implements the protected trial. Vector variants remain separately reproducible."
+  ],
+  "followup": "docs/dense-native-adapter-review.json records the accepted scalable native-normal finer-ink adapter; docs/dense-skeleton-review.json retains the earlier style oracle."
+}

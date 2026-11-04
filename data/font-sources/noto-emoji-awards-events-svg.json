@@ -1,0 +1,126 @@
+{
+  "repository": "https://github.com/googlefonts/noto-emoji",
+  "commit": "99701e07d3d1fe1bdbcdb14964547f0fd592966f",
+  "license": "Apache-2.0; existing Noto SVG licence and notice",
+  "files": [
+    {
+      "sequence": "✨",
+      "path": "build/unicode-sources/noto-emoji-awards-events-svg/emoji_u2728.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u2728.svg",
+      "sha256": "e17f4ea67fb41fd082235eae90f03722980342d478c817e1359ec068d2fa64ab",
+      "git_blob_sha1": "35d540e9b364e0e57c160d1eb5890981a0d9012c",
+      "size": 2637,
+      "shapeElementsIncludingDefinitions": 7,
+      "include_sequences": [
+        "✨"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🧧",
+      "path": "build/unicode-sources/noto-emoji-awards-events-svg/emoji_u1f9e7.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f9e7.svg",
+      "sha256": "1acd085910b31d74e2d2efccdb6f5133c0138cf77392f39c63a74680fa9e5cf6",
+      "git_blob_sha1": "34ad136be186347ac6967c24153f5914102993e3",
+      "size": 3856,
+      "shapeElementsIncludingDefinitions": 12,
+      "include_sequences": [
+        "🧧"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🎗️",
+      "path": "build/unicode-sources/noto-emoji-awards-events-svg/emoji_u1f397.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f397.svg",
+      "sha256": "2e676c85ad7f73330e9637ca812dd49f6b536625ccb7fff4f6a098716c3105c1",
+      "git_blob_sha1": "55401c158a311fb12ad7c68f76497b18ec91a7f0",
+      "size": 1137,
+      "shapeElementsIncludingDefinitions": 3,
+      "include_sequences": [
+        "🎗️",
+        "🎗"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🎖️",
+      "path": "build/unicode-sources/noto-emoji-awards-events-svg/emoji_u1f396.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f396.svg",
+      "sha256": "7a4c03844ee298fb8dedf1921118678a4609a13e5de6ceef3839816729ed7b93",
+      "git_blob_sha1": "9f3bb327068f3f8ffa0094376d3351e41c3c75ec",
+      "size": 4346,
+      "shapeElementsIncludingDefinitions": 14,
+      "include_sequences": [
+        "🎖️",
+        "🎖"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🏆",
+      "path": "build/unicode-sources/noto-emoji-awards-events-svg/emoji_u1f3c6.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3c6.svg",
+      "sha256": "58ee1c738abfdd3559d68b953a6675a1c9d9296cde6d5248d90872d413209faf",
+      "git_blob_sha1": "d033197d35ba11e0d9712527187c52578c02f77f",
+      "size": 5893,
+      "shapeElementsIncludingDefinitions": 13,
+      "include_sequences": [
+        "🏆"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🏅",
+      "path": "build/unicode-sources/noto-emoji-awards-events-svg/emoji_u1f3c5.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f3c5.svg",
+      "sha256": "3952a5ea94390a0170cfaa768739a2759f4499ae90a948e4934a2b752289ab2b",
+      "git_blob_sha1": "52b95a59f54f44d926cb85d3ae603b8a563c4e2c",
+      "size": 2366,
+      "shapeElementsIncludingDefinitions": 8,
+      "include_sequences": [
+        "🏅"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🥇",
+      "path": "build/unicode-sources/noto-emoji-awards-events-svg/emoji_u1f947.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f947.svg",
+      "sha256": "8d73fd7bb886ea84d81fb14bdbd674fb080d8e3e3259896c1582f241dc25a1f5",
+      "git_blob_sha1": "2283cf6fa8c9c8504121cfb867097fe7339a1566",
+      "size": 2751,
+      "shapeElementsIncludingDefinitions": 9,
+      "include_sequences": [
+        "🥇"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🥈",
+      "path": "build/unicode-sources/noto-emoji-awards-events-svg/emoji_u1f948.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f948.svg",
+      "sha256": "1f934e60df90b6152df76e1528cb7a6f4ba7957d2f873f42b7fb13f28d6a409d",
+      "git_blob_sha1": "20bdd4d74c805d5862ce1d34f1692cc7a8dffa45",
+      "size": 2798,
+      "shapeElementsIncludingDefinitions": 9,
+      "include_sequences": [
+        "🥈"
+      ],
+      "build_target": "emoji-artwork"
+    },
+    {
+      "sequence": "🥉",
+      "path": "build/unicode-sources/noto-emoji-awards-events-svg/emoji_u1f949.svg",
+      "url": "https://raw.githubusercontent.com/googlefonts/noto-emoji/99701e07d3d1fe1bdbcdb14964547f0fd592966f/2D/svg/emoji_u1f949.svg",
+      "sha256": "655a7d163b236c3e26606d179c92f782adefc1519dab84c5a83d10ff1f782b6a",
+      "git_blob_sha1": "8ec9606e796c949033ce2a89767069337e367143",
+      "size": 2944,
+      "shapeElementsIncludingDefinitions": 9,
+      "include_sequences": [
+        "🥉"
+      ],
+      "build_target": "emoji-artwork"
+    }
+  ]
+}

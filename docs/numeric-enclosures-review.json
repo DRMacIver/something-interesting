@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-03",
+  "status": "implemented and source/JS/browser verified",
+  "points": [
+    "0488",
+    "0489",
+    "A670",
+    "A671",
+    "A672"
+  ],
+  "reference": "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-3/",
+  "source": "assets/fonts/scripts/bfa39f1d9951.woff2",
+  "licence": "SIL Open Font License 1.1; original catalog provenance retained",
+  "layout": {
+    "0488": "eight native semicircles translated radially",
+    "0489": "eight native rays translated radially",
+    "A670": "eight native crosses translated radially",
+    "A671": "paired native polygonal brackets; horizontal bars widen while leg/stroke dimensions remain fixed",
+    "A672": "native top plus, three left bars, three right bars and three bottom strokes kept in four rigid groups"
+  },
+  "preservation": [
+    "Native grapheme base and its variation selection remain shaped, unscaled.",
+    "All existing catalog paths, bounds, identities, native variation drawings and source hashes stay identical; only five component metadata records are added.",
+    "Font programs and existing Dad/Calvin art unchanged.",
+    "Numeric enclosures participate in nesting, canonical mark ordering and existing depth limits."
+  ],
+  "baseline": "output/font-review/pre-numeric-enclosures/combining-outline-manifest.js",
+  "catalogBytes": 2695327,
+  "checks": {
+    "focusedJS": {
+      "passed": 10,
+      "log": "/tmp/numeric-enclosure-js.log"
+    },
+    "fullJS": {
+      "passed": 351,
+      "log": "/tmp/numeric-enclosure-full-js.log"
+    },
+    "focusedBrowser": [
+      "combining-numeric-cyrillic",
+      "combining-numeric-variants"
+    ],
+    "focusedVisual": "Both actual comic strips inspected; all five distinct forms visible, preserved CJK/math variants, no clipping/geometry failures.",
+    "sourceLog": "/tmp/numeric-enclosure-source.log",
+    "fullBrowser": {
+      "cases": 664,
+      "failures": [],
+      "geometry": []
+    },
+    "source": {
+      "tests": 7,
+      "passed": 7,
+      "seconds": 138.58,
+      "log": "/tmp/numeric-enclosure-source.log",
+      "strengthenedNumericAreaRecheck": {
+        "passed": 1,
+        "seconds": 0.27,
+        "log": "/tmp/numeric-enclosure-final-source.log"
+      }
+    }
+  },
+  "limits": [
+    "CGJ, joining scripts and undefined enclosure/double combinations retain their current guards.",
+    "Preserves licensed source shape and stroke weight; does not claim source-family style or native-reader validation is complete."
+  ],
+  "sha256": {
+    "js/combining-annotations.js": "c1ba2f86358092ebb3591f119e8671769d7b8cdff1b1eeeae0bf2899397e2525",
+    "js/combining-outline-manifest.js": "758cc6bf44a9b61951c30dfb208e232ea85b4019d908949e9527054f348e3c20",
+    "tools/font/build_combining_outlines.py": "bf7ff1faa65abcd86999a4a5bb7999a6e1ecdb696852eb2735cb14af3e32a5eb",
+    "tests/combining-annotations.test.mjs": "0b5a784978a71d404dd02538ecd04d0e73b9452aa1c6eeba5e2a5dc121d3ddb6",
+    "tests/test_combining_outlines.py": "d391dbb9ad8facff4ee16f4a88eaef8dc581180618c5c8fb197f29e73890c55f",
+    "tools/unicode-checks.html": "c91855e954974bf9fde0905593bd4ee8da36b8f587f81de2faf6c8533dc8b34b"
+  }
+}
