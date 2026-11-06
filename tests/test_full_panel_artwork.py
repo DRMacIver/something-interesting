@@ -8,6 +8,7 @@ from PIL import Image, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'assets/full-panels'
 UNDERARM = (730, 1000, 1880, 1960)  # as in drawn_legs.UNDERARM
+SEAT = (700, 1966)  # drawn_legs.panel_two redraws x < 700 below y = 1966
 
 
 def test_original_overlaps_and_panel2_repair_are_preserved():
@@ -31,21 +32,22 @@ def test_original_overlaps_and_panel2_repair_are_preserved():
             x0, x1, y0, y1 = UNDERARM
             for a in (approved, actual):
                 a[y0:y1, x0 - 4 - 400:x1 + 4 - 400] = 0
+                # Dad's seat is redrawn below his shirt's hem (SEAT in the export).
+                a[SEAT[1]:, :SEAT[0] - 400] = 0
             assert np.array_equal(actual, approved)
 
 
 def test_panel3_reuses_the_scanned_child_and_player_at_closeup_scale():
     image = Image.open(OUT / 'panel3.png')
     pair = Image.open(OUT / 'reused-calvin-player.png')
-    # Check each insert away from the shoe-to-player contact which was separated.
-    for bounds, (x, y), interior, mirrored in [
-        ((6, 16, 452, 730), (2422, 2024), (25, 15, 655, 580), False),
-        ((-10, 16, 436, 730), (2422, 2024), (32, 701, 630, 1050), True),
-        ((436, 458, 828, 696), (1782, 2714), (80, 80, 510, 340), False),
+    # Calvin is used whole, exactly as drawn in panel 1, so his head and body
+    # join as Watterson drew them. Check each insert away from the shoe-to-
+    # player contact which was separated.
+    for bounds, (x, y), interior in [
+        ((6, 16, 452, 730), (2422, 2024), (25, 15, 600, 1080)),
+        ((436, 458, 828, 696), (1782, 2714), (80, 80, 510, 340)),
     ]:
         source = pair.crop(bounds)
-        if mirrored:
-            source = ImageOps.mirror(source)
         scaled = source.resize(tuple(round(v * 1.56) for v in source.size), Image.Resampling.LANCZOS)
         actual = image.crop((x, y, x + scaled.width, y + scaled.height))
         assert np.array_equal(np.asarray(actual.crop(interior)), np.asarray(scaled.crop(interior)))

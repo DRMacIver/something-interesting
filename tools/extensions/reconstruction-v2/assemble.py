@@ -73,20 +73,7 @@ def scaled_inserts():
     ImageDraw.Draw(child).polygon([(231, 219), (217, 242), (216, 291),
                                    (214, 316), (210, 337), (216, 379),
                                    (432, 379), (432, 219)], fill=255)
-    # Keep the upward glance from the scan. Turn just the seated body so
-    # Calvin's shoes still point towards the player as they do in panel 2.
-    head = child.copy()
-    ImageDraw.Draw(head).polygon(
-        [(0, 213), (56, 213), (62, 212), (71, 216), (78, 219), (86, 217),
-         (99, 214), (116, 215), (123, 221), (210, 225), (228, 225),
-         (228, 380), (0, 380)], fill=255)
-    body = child.copy()
-    ImageDraw.Draw(body).polygon(
-        [(0, 0), (228, 0), (228, 228), (102, 228), (94, 224), (89, 221),
-         (80, 220), (67, 218), (58, 215), (0, 215)], fill=255)
-    seated = Image.new('L', child.size, 255)
-    seated.paste(ImageOps.mirror(body), (-7, 0))
-    child = ImageChops.darker(head, seated)
+    # Calvin exactly as Watterson drew him in panel 1: head and body together.
     player = source.crop((218, 226, 415, 349))
     ImageDraw.Draw(player).polygon([(0, 84), (5, 84), (7, 101), (0, 101)], fill=255)
     # Anchor the face to the original seated figure's box even when the toes move.

@@ -93,33 +93,31 @@ PANEL2_SHOE_SCALE = (1.7, 1.7)
 
 
 def panel_two(image):
-    """Dad sits on his heels facing right, knee by the record player."""
+    """Dad sits back on his heels facing right, knee by the record player."""
     w, h = image.size
     ink = Ink((w, h), seed=2)
-    # His near foot lies behind him on its upper, toe back on the floor and
-    # sole turned up, heel under his seat. The far foot is hidden behind it.
-    shoe_ink, shoe_shape = panel_one_shoe(PANEL2_SHOE, PANEL2_SHOE_TURN, PANEL2_SHOE_SCALE, (w, h))
-    ink.paint(shoe_shape, 255)
-    ink.paint(shoe_ink, 0)
-    # The trousers: seat, thigh and the shin folded under it along the floor,
-    # ending in a cuff at the ankle just behind the seat. The first and last
-    # three points are the scanned silhouette's edges on the crop's last
-    # rows, so the drawing continues it without a step.
-    ink.fill([(426, 2000), (429, 2040), (432, 2058), (440, 2112), (458, 2160),
-              (488, 2196), (504, 2214), (478, 2236), (462, 2280), (460, 2336),
-              (474, 2376), (800, 2382), (1000, 2384), (1200, 2380), (1282, 2362),
-              (1326, 2312), (1334, 2252), (1306, 2196), (1240, 2150), (1150, 2112),
-              (1090, 2082), (1051, 2058), (1033, 2040), (980, 2000), (700, 1990)],
-             wobble=1.2)
-    # Folds: where the thigh lies on the calf, and round the knee.
-    ink.stroke([(1238, 2302), (1100, 2290), (900, 2282), (760, 2286)],
-               [3, 13, 11, 6, 2], colour=255, wobble=0.8)
-    ink.stroke([(1180, 2178), (1250, 2208), (1290, 2252), (1296, 2296)],
-               [2, 9, 11, 3], colour=255, wobble=0.6)
-    ink.stroke([(560, 2150), (640, 2178), (700, 2186)],
-               [2, 8, 2], colour=255, wobble=0.6)
+    # His near foot trails behind him, toe on the floor and heel up under his
+    # seat, the sole turned back: the same shoe as in panel 3, seen side on.
+    shoe(ink, heel=(446, 2196), angle=146, scale=0.95, flip=True, foreshorten=0.78)
+    # The trousers. His seat rounds out behind him over his heels; the
+    # thigh runs forward to one round knee on the floor; the shin lies under
+    # it, back to the ankle under his seat. The top edge continues the
+    # scanned silhouette (the last points) and the hem of his shirt.
+    ink.fill([(428, 1962), (420, 2000), (400, 2048), (378, 2104), (366, 2160),
+              (370, 2214), (392, 2252), (432, 2262), (452, 2290), (452, 2340),
+              (466, 2380), (700, 2385), (1000, 2386), (1180, 2383), (1252, 2376),
+              (1302, 2352), (1330, 2308), (1336, 2252), (1318, 2196), (1280, 2150),
+              (1215, 2110), (1140, 2082), (1090, 2068), (1051, 2058), (1033, 2040),
+              (980, 2000), (720, 1990), (720, 1962)], wobble=1.2)
+    # Folds: where the thigh lies on the shin, the back of the knee and the seat.
+    ink.stroke([(1268, 2258), (1150, 2236), (960, 2226), (780, 2232), (660, 2246)],
+               [3, 14, 13, 9, 3], colour=255, wobble=0.8)
+    ink.stroke([(1196, 2132), (1262, 2166), (1302, 2216), (1312, 2262)],
+               [2, 10, 11, 3], colour=255, wobble=0.6)
+    ink.stroke([(470, 2120), (560, 2160), (640, 2172)],
+               [2, 9, 2], colour=255, wobble=0.6)
     yy, xx = np.mgrid[:h, :w]
-    region = (yy >= 2060) & (xx < 1540)
+    region = ((yy >= 2060) & (xx < 1540)) | ((yy >= 1966) & (xx < 700))
     return composite(thin_underarm(image), ink.mask(), region)
 
 
@@ -132,7 +130,9 @@ def outlined(ink, points, width=OUTLINE + 2):
 # The scanned gesturing hand in panel 3: its bounding box and the wrist, where
 # the two lines of the forearm reach the thumb (A) and the palm (B).
 SCAN_HAND_BOX = (1585, 1770, 2200, 2080)
-SCAN_WRIST = ((1745, 1950), (1875, 2005))
+SCAN_WRIST = ((1792, 1960), (1875, 2007))
+# Where the thumb joins the palm: up from the wrist's thumb end to the palm's top.
+SCAN_THUMB_BASE = ((1838, 1860), (1846, 1770))
 
 
 def transplant(source, keep, closing, pivot, target, angle, flip=False,
@@ -178,23 +178,32 @@ def transplant(source, keep, closing, pivot, target, angle, flip=False,
     return out[0], out[1], lambda point: tuple(forward @ (np.asarray(point) - pivot) + target)
 
 
-def resting_hand(image, target, angle):
+def resting_hand(image, target, angle, scale=1.0):
     """Panel 3's scanned open hand, turned palm down to rest on the thigh.
 
     The hand is flipped top to bottom about its wrist, which turns the palm
-    over and puts the thumb on the near side, then tilted by `angle` degrees
-    so the fingers follow the thigh down towards the knee, with the wrist's
-    midpoint at `target`. Returns the hand's ink and silhouette, and where
+    over, then tilted by `angle` degrees so the fingers lie along the thigh
+    towards the knee, with the wrist's midpoint at `target`. Its thumb is
+    left out: on a hand resting palm down it lies along the inside of the
+    thigh, out of sight. Returns the hand's ink and silhouette, and where
     the wrist's thumb and palm ends land.
     """
     x0, y0, x1, y1 = SCAN_HAND_BOX
     a, b = SCAN_WRIST
-    # Only the hand: the side of the wrist away from the elbow.
-    keep = [(x0, y0), (x1, y0), (x1, y1), (b[0] + 80, b[1] + 60), b, a, (x0, a[1])]
+    c, d = SCAN_THUMB_BASE
+    # The hand without its thumb: right of the thumb's base (cut a little
+    # inside it, clear of the thumb's own outline), beyond the wrist.
+    a = (a[0] + 14, a[1] + 4)
+    c, d = (c[0] + 10, c[1]), (d[0] + 10, d[1])
+    keep = [c, d, (x1, y0), (x1, y1), (b[0] + 80, b[1] + 60), b, a]
     middle = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
-    ink, shape, move = transplant(image, keep, [(a, b)], middle, target, angle,
-                                  flip=True, size=image.size)
-    return ink, shape, move(a), move(b)
+    ink, shape, move = transplant(image, keep, [(a, b), (a, c)], middle, target,
+                                  angle, flip=True, scale=(scale, scale), size=image.size)
+    # Ink the side of the hand where the thumb was cut away.
+    edge = Ink(image.size, seed=6)
+    edge.stroke([move(a), move(((a[0] + c[0]) / 2, (a[1] + c[1]) / 2)), move(c)],
+                [20, 22, 20])
+    return ink | edge.mask(), shape, move(a), move(b)
 
 
 # Dad's planted back shoe in panel 1, in side view, in the coordinates of
@@ -222,8 +231,9 @@ def panel_one_shoe(target, angle, scale, size):
     return ink | edge.mask(), shape
 
 
-HAND_WRIST = (975, 2648)
-HAND_TILT = 24
+HAND_WRIST = (1000, 2700)
+HAND_TILT = 28
+HAND_SCALE = 0.95
 
 
 def panel_three(image):
@@ -240,21 +250,23 @@ def panel_three(image):
     ink = Ink((w, h), seed=3)
     # The near foot trails behind him, toe on the floor and its sole turned
     # back towards the left, so we see it foreshortened under his seat.
-    shoe(ink, heel=(612, 2846), angle=124, scale=1.08, flip=True, foreshorten=0.6)
+    shoe(ink, heel=(610, 2980), angle=124, scale=1.08, flip=True, foreshorten=0.6)
     # The seat, the thigh running towards us to the knee and the shin folded
     # back under it to the cuff.
-    ink.fill([(458, 2580), (446, 2642), (457, 2700), (456, 2740), (456, 2780),
-              (466, 2820), (488, 2860), (528, 2896), (590, 2924), (640, 2944),
-              (628, 2980), (668, 3030), (720, 3070), (800, 3104), (900, 3126),
-              (1050, 3134), (1200, 3132), (1317, 3120), (1357, 3100), (1394, 3060),
-              (1416, 3020), (1429, 2980), (1436, 2940), (1430, 2900), (1412, 2860),
-              (1376, 2806), (1310, 2748), (1220, 2700), (1120, 2660), (900, 2660),
-              (600, 2640)], wobble=1.2)
-    ink.stroke([(1318, 3082), (1160, 3060), (960, 3024), (780, 2986)],
+    # Panel 1 makes his legs about 3.4 head widths long, so on his heels his
+    # hip is about a head width above the floor. He is nearer us than Calvin,
+    # so he meets the floor lower in the panel than Calvin does.
+    ink.fill([(458, 2580), (446, 2642), (457, 2700), (452, 2780), (450, 2860),
+              (462, 2940), (490, 3010), (540, 3062), (590, 3104), (650, 3160),
+              (730, 3210), (830, 3250), (950, 3276), (1080, 3286), (1170, 3280),
+              (1240, 3250), (1286, 3196), (1302, 3122), (1292, 3042), (1258, 2966),
+              (1196, 2896), (1120, 2830), (1040, 2774), (960, 2728), (880, 2702),
+              (700, 2690), (600, 2650)], wobble=1.2)
+    ink.stroke([(1206, 3232), (1060, 3196), (890, 3146), (760, 3104)],
                [3, 14, 12, 6, 2], colour=255, wobble=0.8)
-    ink.stroke([(1262, 2884), (1336, 2910), (1384, 2956), (1398, 3002)],
+    ink.stroke([(1150, 2952), (1226, 3000), (1266, 3070), (1276, 3130)],
                [2, 10, 11, 3], colour=255, wobble=0.6)
-    ink.stroke([(560, 2800), (640, 2836), (720, 2850)],
+    ink.stroke([(560, 2810), (640, 2846), (720, 2860)],
                [2, 9, 2], colour=255, wobble=0.6)
 
     # The shirt, hanging loose over the trousers. Its back runs on from the
@@ -264,12 +276,12 @@ def panel_three(image):
             (610, 2095), (562, 2210), (530, 2310), (508, 2400), (494, 2490),
             (470, 2570), (452, 2632), (462, 2672)]
     hem = [(452, 2640), (474, 2684), (522, 2718), (592, 2742), (690, 2754),
-           (800, 2748), (900, 2728), (980, 2700)]
+           (800, 2748), (900, 2740), (1000, 2748), (1090, 2760)]
     far_side = [(1217, 2000), (1210, 2059), (1190, 2105), (1150, 2165),
                 (1105, 2235), (1068, 2310), (1046, 2390), (1042, 2470),
-                (1050, 2560), (1068, 2650)]
+                (1050, 2560), (1066, 2660), (1086, 2756)]
     # White grounds first, so no fill covers another part's line.
-    ink.fill(back + hem[1:] + [(1070, 2660)] + far_side[::-1] + [(1100, 1700)],
+    ink.fill(back + hem[1:] + [(1086, 2756)] + far_side[::-1] + [(1100, 1700)],
              colour=255, wobble=0)
     ink.fill([(1200, 2110), (1250, 2242), (1330, 2282), (1480, 2334), (1570, 2300),
               (1799, 2059), (1680, 2059), (1500, 2192), (1452, 2100), (1419, 2059),
@@ -303,21 +315,22 @@ def panel_three(image):
                 (1572, 2298), (1640, 2234), (1722, 2148), (1799, 2059), (1846, 2005)],
                [18, 20, 21, 22, 22, 21, 22, 23])
 
-    # The near sleeve, rolled into a cuff above the elbow.
-    ink.stroke([(794, 1930), (772, 2000), (752, 2090)], [3, 16, 18])
-    ink.stroke([(953, 2000), (942, 2059), (936, 2094)], [20, 20, 18])
-    outlined(ink, [(708, 2094), (830, 2080), (948, 2098), (966, 2150), (958, 2206),
-                   (850, 2194), (706, 2192), (698, 2142)])
-    ink.stroke([(716, 2150), (830, 2142), (956, 2160)], [3, 11, 10, 3])
-    # The near arm hangs from the cuff, bends a little at the elbow and
-    # reaches forward to the thigh.
-    hand_ink, hand_shape, thumb_end, palm_end = resting_hand(image, HAND_WRIST, HAND_TILT)
-    left = [(745, 2196), (738, 2300), (714, 2400), (708, 2445), (734, 2506),
-            (800, 2574), thumb_end,
-            tuple(np.add(thumb_end, np.subtract(thumb_end, (800, 2574)) * 0.3))]
-    right = [(900, 2202), (880, 2300), (864, 2380), (862, 2440), (898, 2516),
-             (950, 2570), palm_end]
+    # The near sleeve: a loose short sleeve with a plain hem, as Dad's
+    # sleeves are drawn in panels 1 and 2, ending just below where its front
+    # edge leaves the crop at x=942.
+    ink.stroke([(794, 1930), (766, 2010), (740, 2094)], [3, 16, 19])
+    ink.stroke([(953, 2000), (942, 2059), (950, 2100)], [20, 20, 19])
+    hem = [(738, 2096), (800, 2110), (880, 2114), (952, 2104)]
+    # The arm comes out of the sleeve, drops to the elbow and reaches forward
+    # along his thigh to the hand.
+    hand_ink, hand_shape, thumb_end, palm_end = resting_hand(image, HAND_WRIST, HAND_TILT, HAND_SCALE)
+    # The forearm's underside meets the wrist's thumb end, its top the palm end.
+    left = [(772, 2110), (760, 2200), (750, 2290), (752, 2362), (790, 2450),
+            (866, 2590), thumb_end]
+    right = [(912, 2112), (904, 2200), (896, 2300), (930, 2400), (978, 2520),
+             palm_end]
     ink.fill(left + right[::-1], colour=255, wobble=0)
+    ink.stroke(hem, [19, 20, 20, 18])
     # The forearm's edges go over the hand's wrist so the two join.
     edges = Ink((w, h), seed=4)
     edges.stroke(left, [19, 20, 19, 20, 18])
