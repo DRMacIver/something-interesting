@@ -1,8 +1,8 @@
 {
   "purpose": "Full lettering-free panel reconstruction, with original artwork restored after generated extension work.",
   "inputs": "prepare_inputs.py extracts page 247 from the local PDF through the established ink/background pipeline. The raw originals, smoothed locks, fixed canvases, reference crops and selected generated results are retained here.",
-  "assembly": "assemble.py builds panel 2 from the locked upper and the player and child patches; drawn_legs.py then draws Dad's trousers and shoe below the crop. Panel 3's lower shirt and hand come from kneeling-3.png at (40, 1185) scan pixels; drawn_legs.py then redraws the trousers, knee and shoe below the hem, keeping the shirt and hand. Existing player and child inserts are retained.",
-  "generation": "Built-in imagegen adapted the page 110 pose; only its panel 3 lower shirt and hand remain in the output. kneeling-2.png is no longer used.",
+  "assembly": "assemble.py builds panel 2 from the locked upper and the player and child patches; drawn_legs.py then draws Dad's trousers and shoe below the crop. Panel 3 starts from the cleaned scan crop alone; drawn_legs.py draws everything of Dad outside it (left of x=800 and below y=2060 in the export), continuing each line from where it crosses the crop's edge. Existing player and child inserts are retained.",
+  "generation": "Built-in imagegen was used for earlier versions of the lower scenes (prompts kept here); none of its output remains in Dad's figure.",
   "preservation": "Panels 1, 3 and 4 preserve the full cleaned scan rectangle pixel for pixel. Panel 2 retains the earlier elbow repair. Its original-crop match is 99.206%.",
   "review": "build_review.py creates panels.html with full-resolution links and a source overlay, and output/full-panels.zip. The editor crop/layout assets are separate from these full-art exports.",
   "commands": [
@@ -15,8 +15,8 @@
   "visualReview": [
     "1: Wide view. Dad walks toward the seated child, shoes and player are visible.",
     "2: The thigh continues from the scanned silhouette to a rounded knee short of the player, the shin folds under it along the floor, and the near shoe lies behind him with its sole turned up.",
-    "3: The shirt and hand are kept; below them the drawn lap runs to the knee, with a fold where the thigh lies on the shin, and the foreshortened shoe trails under his seat. The planted feet and upturned face of Calvin come from panel 1.",
+    "3: The shirt hangs loose over the drawn lap, the near arm drops from its rolled cuff to a hand resting on the thigh with its fingers towards the knee, and the gesturing arm bends at an elbow below the crop. The foreshortened shoe trails under his seat. The planted feet and upturned face of Calvin come from panel 1.",
     "4: Bed scene. Calvin, his hands and the hatching on the blanket remain legible against the black ground."
   ],
-  "drawing": "drawn_legs.py and ink.py draw Dad's legs in code: Catmull-Rom outlines, tapered brush strokes with a slight wobble, supersampled and thresholded to 1-bit ink. Trousers are flat black with a few thin white folds as in panel 1; the shoe is panel 1's white shoe (heavy outline, inner sole line, heel notch, toe cap), sized from panel 1 by Dad's head width. He sits back on his heels with the foot laid behind him, sole up, as on page 8."
+  "drawing": "drawn_legs.py and ink.py draw Dad's legs in code: Catmull-Rom outlines, tapered brush strokes with a slight wobble, supersampled and thresholded to 1-bit ink. Trousers are flat black with a few thin white folds as in panel 1; the shoe is panel 1's white shoe (heavy outline, inner sole line, heel notch, toe cap), sized from panel 1 by Dad's head width. He sits back on his heels with the foot laid behind him, sole up, as on page 8. In panel 3 it also draws his back and loose shirt with its folds, the rolled near sleeve, the hanging arm, the hand resting on his thigh (palm and finger capsules inked as one silhouette, with gaps drawn towards the fingertips), the far side of the shirt, the far sleeve and the gesturing arm's elbow."
 }

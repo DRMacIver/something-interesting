@@ -10,11 +10,11 @@
     "237": "Crouching hip, diagonal thigh and torso",
     "247": "Original four panels, seated Calvin, portable record player"
   },
-  "generation": "Built-in imagegen supplied panel 3's lower shirt and hand (see prompts-page-110.json in tools/extensions/reconstruction-v2/). Dad's trousers and shoes below both close-up crops are drawn programmatically by drawn_legs.py with the ink.py brush kit, modelled on panel 1's trousers and shoes and the kneeling Dad on page 8.",
+  "generation": "No generated imagery remains in Dad's figure: everything of him outside the panel 2 upper and the panel 3 crop is drawn programmatically by drawn_legs.py with the ink.py brush kit, modelled on panel 1's trousers and shoes and the kneeling Dad on page 8.",
   "directReuse": {
     "1": "Entire cleaned original panel; existing left extension retained.",
     "2": "Prior repaired upper artwork, including original head, hands, record and Calvin expression. The legs and shoe below the crop are drawn by drawn_legs.py. The grille and paired knobs come from panel 1, with the seated pose and player as drawing guides.",
-    "3": "Entire cleaned scan crop retained. Lower shirt and hand generated; trousers, knee and shoe drawn by drawn_legs.py. Calvin and the player from panel 1 are enlarged 1.56\u00d7. The original upward-looking head joins the reflected seated body at its collar. The shoes point toward the player in both close-ups.",
+    "3": "Entire cleaned scan crop retained. Dad outside the crop (back, shirt, both sleeves, the gesturing arm's elbow, the resting arm and hand, trousers and shoe) is drawn by drawn_legs.py. Calvin and the player from panel 1 are enlarged 1.56\u00d7. The original upward-looking head joins the reflected seated body at its collar. The shoes point toward the player in both close-ups.",
     "4": "Entire cleaned original night panel; existing left bed extension retained."
   },
   "scaleCheck": {

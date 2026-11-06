@@ -6,7 +6,6 @@ import sys
 import numpy as np
 from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageOps
 from scipy import ndimage
-from scipy.interpolate import PchipInterpolator
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -100,42 +99,10 @@ def scaled_inserts():
     return result
 
 
-def join_cuff(staged):
-    """Join the five cut brushstrokes of the scanned shirt to the new lower cuff."""
-    draw = ImageDraw.Draw(staged)
-    draw.rectangle((555, 1030, 745, 1054), fill=255)
-    draw.rectangle((457, 1030, 502, 1038), fill=255)
-    # (row, left edge, right edge) in the original scan's pixel units.
-    # The first and last widths come from the ink on either side of the join.
-    strokes = [
-        [(1029, 466, 475), (1034, 463, 473), (1039, 460, 472)],
-        [(1036, 490, 491), (1039, 487, 493)],
-        [(1029, 597, 612), (1036, 594, 607), (1046, 586, 599), (1055, 580, 594)],
-        [(1029, 621, 627), (1038, 614, 622), (1048, 603, 611), (1054, 593, 599)],
-        [(1029, 662, 666), (1037, 658, 663), (1045, 650, 655)],
-        [(1029, 688, 692), (1033, 695, 699), (1036, 696, 701)],
-        [(1029, 701, 720), (1033, 697, 717), (1041, 708, 722), (1055, 705, 725)],
-        [(1030, 704, 713), (1036, 677, 695), (1045, 642, 657), (1055, 612, 624)],
-    ]
-    for stroke in strokes:
-        rows, edges = np.array(stroke)[:, 0], np.array(stroke)[:, 1:]
-        interpolator = PchipInterpolator(rows, edges)
-        for row in range(max(rows[0], 1030), rows[-1] + 1):
-            left, right = np.rint(interpolator(row)).astype(int)
-            draw.line((left, row, right, row), fill=0)
-
-
 def panel_three(original):
+    # Everything of Dad outside the scan is drawn by drawn_legs.panel_three.
     staged = Image.new('L', (1587, 1830), 255)
-    lap = drawing('panel3-lap.png', (1530, 1120))
-    # Isolate Dad. Reinsert the actual child and player from the scan below.
-    staged.paste(lap.crop((0, 0, 1090, 750)), (40, 525))
-    staged.paste(lap.crop((0, 750, 735, 1120)), (40, 1275))
-    # The lower patch begins halfway down the shirt, clear of the original crop.
-    staged.paste(Image.open(HERE / 'kneeling-3.png'), (40, 1185))
-    raw = Image.open(HERE / 'original-3.png')
-    staged.paste(raw, (400, 0))
-    join_cuff(staged)
+    staged.paste(Image.open(HERE / 'original-3.png'), (400, 0))
     result = b.smooth(np.asarray(staged) < 128)
     result.paste(original, (800, 0))
     child, player = scaled_inserts()

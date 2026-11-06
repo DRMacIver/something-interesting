@@ -30,10 +30,10 @@ The [completed panel artwork](panels.html), at
 <http://localhost:8765/panels.html>, includes all four full-resolution exports
 and an adjustable overlay of each original crop. The reconstructed lower scenes
 are in `assets/full-panels/`; their source comparisons and rebuild commands are
-recorded in `assets/full-panels/provenance.json`. Dad's kneeling legs and
-shoes in panels 2 and 3 are drawn in code by
-`tools/extensions/reconstruction-v2/drawn_legs.py`, after panel 1's trousers
-and shoes. These artwork exports are
+recorded in `assets/full-panels/provenance.json`. Everything of Dad below
+the panel 2 crop, and outside the panel 3 crop, is drawn in code by
+`tools/extensions/reconstruction-v2/drawn_legs.py`, after his drawing in
+panel 1. These artwork exports are
 separate from the editor's layout assets.
 
 The [Unicode sampler](sampler.html), at <http://localhost:8765/sampler.html>,
