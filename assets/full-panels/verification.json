@@ -1,0 +1,74 @@
+[
+  {
+    "panel": 1,
+    "size": [
+      2834,
+      2066
+    ],
+    "originalOffset": [
+      400,
+      0
+    ],
+    "originalSize": [
+      1634,
+      2066
+    ],
+    "changedOriginalPixels": 0,
+    "originalMatchFraction": 1.0,
+    "changedOriginalInkPixels": 0
+  },
+  {
+    "panel": 2,
+    "size": [
+      3182,
+      3660
+    ],
+    "originalOffset": [
+      800,
+      0
+    ],
+    "originalSize": [
+      1582,
+      2060
+    ],
+    "changedOriginalPixels": 25863,
+    "originalMatchFraction": 0.9920639352914462,
+    "changedOriginalInkPixels": 9645
+  },
+  {
+    "panel": 3,
+    "size": [
+      3174,
+      3660
+    ],
+    "originalOffset": [
+      800,
+      0
+    ],
+    "originalSize": [
+      1574,
+      2060
+    ],
+    "changedOriginalPixels": 0,
+    "originalMatchFraction": 1.0,
+    "changedOriginalInkPixels": 0
+  },
+  {
+    "panel": 4,
+    "size": [
+      2368,
+      2042
+    ],
+    "originalOffset": [
+      400,
+      0
+    ],
+    "originalSize": [
+      1568,
+      2042
+    ],
+    "changedOriginalPixels": 0,
+    "originalMatchFraction": 1.0,
+    "changedOriginalInkPixels": 0
+  }
+]

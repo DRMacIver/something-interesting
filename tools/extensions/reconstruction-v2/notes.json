@@ -1,0 +1,22 @@
+{
+  "purpose": "Full lettering-free panel reconstruction, with original artwork restored after generated extension work.",
+  "inputs": "prepare_inputs.py extracts page 247 from the local PDF through the established ink/background pipeline. The raw originals, smoothed locks, fixed canvases, reference crops and selected generated results are retained here.",
+  "assembly": "assemble.py builds panel 2 from the locked upper and the player and child patches; drawn_legs.py then draws Dad's trousers and shoe below the crop. Panel 3's lower shirt and hand come from kneeling-3.png at (40, 1185) scan pixels; drawn_legs.py then redraws the trousers, knee and shoe below the hem, keeping the shirt and hand. Existing player and child inserts are retained.",
+  "generation": "Built-in imagegen adapted the page 110 pose; only its panel 3 lower shirt and hand remain in the output. kneeling-2.png is no longer used.",
+  "preservation": "Panels 1, 3 and 4 preserve the full cleaned scan rectangle pixel for pixel. Panel 2 retains the earlier elbow repair. Its original-crop match is 99.206%.",
+  "review": "build_review.py creates panels.html with full-resolution links and a source overlay, and output/full-panels.zip. The editor crop/layout assets are separate from these full-art exports.",
+  "commands": [
+    ".venv/bin/python tools/extensions/reconstruction-v2/prepare_inputs.py",
+    ".venv/bin/python tools/extensions/reconstruction-v2/assemble.py",
+    ".venv/bin/python tools/extensions/reconstruction-v2/build_review.py",
+    ".venv/bin/python -m pytest tests/test_full_panel_artwork.py tests/test_build_assets.py tests/test_versions.py -q"
+  ],
+  "scale": "At full resolution the head widths of Calvin and Dad are respectively 602 and 493 pixels in panel 2, 693 and 562 pixels in panel 3. The enlargement of the original seated child and player in panel 3 is 1.56\u00d7.",
+  "visualReview": [
+    "1: Wide view. Dad walks toward the seated child, shoes and player are visible.",
+    "2: The thigh continues from the scanned silhouette to a rounded knee short of the player, the shin folds under it along the floor, and the near shoe lies behind him with its sole turned up.",
+    "3: The shirt and hand are kept; below them the drawn lap runs to the knee, with a fold where the thigh lies on the shin, and the foreshortened shoe trails under his seat. The planted feet and upturned face of Calvin come from panel 1.",
+    "4: Bed scene. Calvin, his hands and the hatching on the blanket remain legible against the black ground."
+  ],
+  "drawing": "drawn_legs.py and ink.py draw Dad's legs in code: Catmull-Rom outlines, tapered brush strokes with a slight wobble, supersampled and thresholded to 1-bit ink. Trousers are flat black with a few thin white folds as in panel 1; the shoe is panel 1's white shoe (heavy outline, inner sole line, heel notch, toe cap), sized from panel 1 by Dad's head width. He sits back on his heels with the foot laid behind him, sole up, as on page 8."
+}

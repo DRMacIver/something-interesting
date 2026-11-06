@@ -1,0 +1,110 @@
+{
+  "source": "The Indispensable Calvin and Hobbes, local scanned PDF",
+  "sourcePage": 247,
+  "stripDate": "1990-06-05",
+  "sourceProcessing": "Existing build_assets.py ink/background extraction, lettering removal, and ART_SCALE=2 smoothing.",
+  "references": {
+    "8": "Two-knee pose with folded shins and trailing shoes, mirrored for the scene",
+    "110": "Bottom strip, panels 3 and 4. Folded-leg reference and directly sampled sneaker ink.",
+    "226": "Compact folded lower legs and shoes",
+    "237": "Crouching hip, diagonal thigh and torso",
+    "247": "Original four panels, seated Calvin, portable record player"
+  },
+  "generation": "Built-in imagegen supplied panel 3's lower shirt and hand (see prompts-page-110.json in tools/extensions/reconstruction-v2/). Dad's trousers and shoes below both close-up crops are drawn programmatically by drawn_legs.py with the ink.py brush kit, modelled on panel 1's trousers and shoes and the kneeling Dad on page 8.",
+  "directReuse": {
+    "1": "Entire cleaned original panel; existing left extension retained.",
+    "2": "Prior repaired upper artwork, including original head, hands, record and Calvin expression. The legs and shoe below the crop are drawn by drawn_legs.py. The grille and paired knobs come from panel 1, with the seated pose and player as drawing guides.",
+    "3": "Entire cleaned scan crop retained. Lower shirt and hand generated; trousers, knee and shoe drawn by drawn_legs.py. Calvin and the player from panel 1 are enlarged 1.56\u00d7. The original upward-looking head joins the reflected seated body at its collar. The shoes point toward the player in both close-ups.",
+    "4": "Entire cleaned original night panel; existing left bed extension retained."
+  },
+  "scaleCheck": {
+    "metric": "Calvin head width / Dad head width, thresholded ink at full resolution",
+    "panel2": [
+      602,
+      493
+    ],
+    "panel3": [
+      693,
+      562
+    ]
+  },
+  "rebuild": [
+    ".venv/bin/python tools/extensions/reconstruction-v2/prepare_inputs.py",
+    ".venv/bin/python tools/extensions/reconstruction-v2/assemble.py",
+    ".venv/bin/python tools/extensions/reconstruction-v2/build_review.py"
+  ],
+  "outputs": [
+    {
+      "panel": 1,
+      "size": [
+        2834,
+        2066
+      ],
+      "originalOffset": [
+        400,
+        0
+      ],
+      "originalSize": [
+        1634,
+        2066
+      ],
+      "changedOriginalPixels": 0,
+      "originalMatchFraction": 1.0,
+      "changedOriginalInkPixels": 0
+    },
+    {
+      "panel": 2,
+      "size": [
+        3182,
+        3660
+      ],
+      "originalOffset": [
+        800,
+        0
+      ],
+      "originalSize": [
+        1582,
+        2060
+      ],
+      "changedOriginalPixels": 25863,
+      "originalMatchFraction": 0.9920639352914462,
+      "changedOriginalInkPixels": 9645
+    },
+    {
+      "panel": 3,
+      "size": [
+        3174,
+        3660
+      ],
+      "originalOffset": [
+        800,
+        0
+      ],
+      "originalSize": [
+        1574,
+        2060
+      ],
+      "changedOriginalPixels": 0,
+      "originalMatchFraction": 1.0,
+      "changedOriginalInkPixels": 0
+    },
+    {
+      "panel": 4,
+      "size": [
+        2368,
+        2042
+      ],
+      "originalOffset": [
+        400,
+        0
+      ],
+      "originalSize": [
+        1568,
+        2042
+      ],
+      "changedOriginalPixels": 0,
+      "originalMatchFraction": 1.0,
+      "changedOriginalInkPixels": 0
+    }
+  ]
+}
