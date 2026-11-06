@@ -40,17 +40,29 @@ def test_original_overlaps_and_panel2_repair_are_preserved():
 def test_panel3_reuses_the_scanned_child_and_player_at_closeup_scale():
     image = Image.open(OUT / 'panel3.png')
     pair = Image.open(OUT / 'reused-calvin-player.png')
-    # Calvin is used whole, exactly as drawn in panel 1, so his head and body
-    # join as Watterson drew them. Check each insert away from the shoe-to-
-    # player contact which was separated.
-    for bounds, (x, y), interior in [
-        ((6, 16, 452, 730), (2422, 2024), (25, 15, 600, 1080)),
-        ((436, 458, 828, 696), (1782, 2714), (80, 80, 510, 340)),
-    ]:
-        source = pair.crop(bounds)
-        scaled = source.resize(tuple(round(v * 1.56) for v in source.size), Image.Resampling.LANCZOS)
-        actual = image.crop((x, y, x + scaled.width, y + scaled.height))
-        assert np.array_equal(np.asarray(actual.crop(interior)), np.asarray(scaled.crop(interior)))
+    scale = 1.56
+
+    def scaled(art):
+        return art.resize(tuple(round(v * scale) for v in art.size), Image.Resampling.LANCZOS)
+
+    # Calvin's head is exactly as in panel 1, looking up towards Dad.
+    def agreement(art, x, y):
+        actual = image.crop((x, y, x + art.width, y + art.height))
+        return np.mean((np.asarray(actual) < 128) == (np.asarray(art) < 128))
+
+    head = scaled(pair.crop((6, 16, 452, 420)))
+    assert agreement(head, 2422, 2024) > 0.98
+    # His seated body is panel 1's turned about the middle of his torso
+    # (x=134 in the reused export), so he faces the player as in panel 2,
+    # and stays under his head at the same scale.
+    body = scaled(ImageOps.mirror(pair.crop((0, 450, 268, 730))))
+    # (Mirroring about a pixel boundary moves it by a couple of export pixels.)
+    assert agreement(body, round(2422 - 6 * scale) + 2, round(2024 + (450 - 16) * scale)) > 0.97
+    # The player, away from the shoe-to-player contact which was separated.
+    player = scaled(pair.crop((436, 458, 828, 696)))
+    actual = image.crop((1500, 2714, 1500 + player.width, 2714 + player.height))
+    interior = (80, 80, 510, 340)
+    assert np.array_equal(np.asarray(actual.crop(interior)), np.asarray(player.crop(interior)))
 
 
 def test_calvin_keeps_his_scale_relative_to_dad():

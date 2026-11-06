@@ -16,6 +16,15 @@ HERE = Path(__file__).resolve().parent
 OUT = b.ROOT / 'assets/full-panels'
 RESAMPLE = Image.Resampling.LANCZOS
 CALVIN_SCALE = 1.56
+# Turning Calvin's body about his torso needs room on the left for his legs.
+CALVIN_TURN_MARGIN = 100
+CALVIN_TORSO_MIDDLE = 67
+# Where panel 3's Calvin and player go: his head where it was, the crop now
+# starting CALVIN_SHIFT source pixels further left for his turned legs (100
+# source pixels are exactly 312 export pixels), the player beyond his toes.
+CALVIN_SHIFT = 100
+CALVIN_AT = (2422 - round(CALVIN_SHIFT * 2 * CALVIN_SCALE), 2024)
+PLAYER_AT = (1500, 2714)
 
 
 def drawing(filename, size):
@@ -73,11 +82,26 @@ def scaled_inserts():
     ImageDraw.Draw(child).polygon([(231, 219), (217, 242), (216, 291),
                                    (214, 316), (210, 337), (216, 379),
                                    (432, 379), (432, 219)], fill=255)
-    # Calvin exactly as Watterson drew him in panel 1: head and body together.
+    # In panel 2 Calvin sits facing left, his feet towards the player, so turn
+    # his seated body about the middle of his torso (x=67) to face left too,
+    # keeping it under his head, which still looks up towards Dad. The neck
+    # line divides head from body.
+    neck = [(0, 213), (56, 213), (62, 212), (71, 216), (78, 219), (86, 217),
+            (99, 214), (116, 215), (123, 221), (210, 225), (228, 225)]
+    head = child.copy()
+    ImageDraw.Draw(head).polygon(neck + [(228, 380), (0, 380)], fill=255)
+    body = child.copy()
+    ImageDraw.Draw(body).polygon([(0, 0), (228, 0)] + neck[::-1], fill=255)
+    margin, axis = CALVIN_TURN_MARGIN, CALVIN_TORSO_MIDDLE
+    child = Image.new('L', (228 + margin, 380), 255)
+    child.paste(head, (margin, 0))
+    turned = Image.new('L', child.size, 255)
+    turned.paste(ImageOps.mirror(body), (margin + 2 * axis - 227, 0))
+    child = ImageChops.darker(child, turned)
     player = source.crop((218, 226, 415, 349))
     ImageDraw.Draw(player).polygon([(0, 84), (5, 84), (7, 101), (0, 101)], fill=255)
     # Anchor the face to the original seated figure's box even when the toes move.
-    child = child.crop((3, 8, 226, 365))
+    child = child.crop((margin + 3 - CALVIN_SHIFT, 8, margin + 226, 365))
     player = player.crop(ImageChops.invert(player).getbbox())
     result = []
     for art in (child, player):
@@ -93,8 +117,10 @@ def panel_three(original):
     result = b.smooth(np.asarray(staged) < 128)
     result.paste(original, (800, 0))
     child, player = scaled_inserts()
-    result.paste(child, (2422, 2024))
-    result.paste(player, (1782, 2714))
+    # Ink them over the panel, so their white surround leaves the scan alone.
+    for art, at in ((child, CALVIN_AT), (player, PLAYER_AT)):
+        box = (*at, at[0] + art.width, at[1] + art.height)
+        result.paste(ImageChops.darker(result.crop(box), art), box)
     return result
 
 
