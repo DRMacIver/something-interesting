@@ -7,6 +7,7 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'assets/full-panels'
+UNDERARM = (730, 1000, 1880, 1960)  # as in drawn_legs.UNDERARM
 
 
 def test_original_overlaps_and_panel2_repair_are_preserved():
@@ -24,8 +25,13 @@ def test_original_overlaps_and_panel2_repair_are_preserved():
             assert np.mean(overlap == source) > 0.99
             # The prior elbow repair is retained; generation cannot redraw
             # the existing head, arms, expression or the visible record.
-            approved = Image.open(ROOT / 'tools/extensions/reconstruction-v2/upper-2.png')
-            assert np.array_equal(np.asarray(image.crop((400, 0, 3182, 2060))), np.asarray(approved))
+            # Only the line under the arm is thinned back to the scan's weight.
+            approved = np.asarray(Image.open(ROOT / 'tools/extensions/reconstruction-v2/upper-2.png')).copy()
+            actual = np.asarray(image.crop((400, 0, 3182, 2060))).copy()
+            x0, x1, y0, y1 = UNDERARM
+            for a in (approved, actual):
+                a[y0:y1, x0 - 4 - 400:x1 + 4 - 400] = 0
+            assert np.array_equal(actual, approved)
 
 
 def test_panel3_reuses_the_scanned_child_and_player_at_closeup_scale():
@@ -69,4 +75,16 @@ def test_dads_kneeling_legs_are_the_programmatic_drawing():
     # each crop are exactly what drawn_legs.py draws.
     for number, draw in ((2, drawn_legs.panel_two), (3, drawn_legs.panel_three)):
         image = Image.open(OUT / f'panel{number}.png').convert('L')
-        assert np.array_equal(np.asarray(draw(image)), np.asarray(image))
+        redrawn, original = np.asarray(draw(image)), np.asarray(image)
+        if number == 2:
+            redrawn, original = redrawn[2060:], original[2060:]
+        assert np.array_equal(redrawn, original)
+
+
+def test_line_under_dads_arm_in_panel2_has_the_scans_weight():
+    image = np.asarray(Image.open(OUT / 'panel2.png')) < 128
+    x0, x1, y0, y1 = UNDERARM
+    for x in range(800, x1 - 10):
+        column = image[y0:y1, x]
+        top = np.argmax(column)
+        assert np.argmin(column[top:]) <= 26

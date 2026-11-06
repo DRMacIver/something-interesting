@@ -3,7 +3,10 @@
 The scan stops at Dad's waist in panel 2 and at his chest in panel 3, so
 everything of him beyond the crops is drawn here rather than generated:
 his legs and shoes in both, and in panel 3 also his back, shirt, sleeves,
-arms and the hand resting on his thigh. The drawing follows the
+arms and the hand resting on his thigh. Where Watterson drew the same
+thing elsewhere in the strip it is reused instead (see transplant): panel
+2's trailing shoe is panel 1's planted shoe turned sole up, and panel 3's
+resting hand is his own gesturing hand turned palm down. The drawing follows the
 strip itself: Dad's trousers are a flat black silhouette with a few thin
 white folds, as in panel 1, and his shoes are panel 1's white shoes with a
 heavy outline, a sole line just inside it and a small heel notch. Sizes come
@@ -54,13 +57,50 @@ def shoe(ink, heel, angle, scale=1.0, flip=False, foreshorten=1.0, width=22):
     ink.stroke(parts['toe_cap'], [3, 11, 10, 2])
 
 
+def thin_underarm(image):
+    """Bring the line under Dad's arm in panel 2 back to the scan's weight.
+
+    The earlier elbow repair (upper-2.png) thickened the arm's underside
+    into a wedge of black that read as a stray bit of trouser above a gap.
+    In the scan the line is about 20px; keep that much of it, from its top.
+    """
+    a = np.asarray(image).copy()
+    for x in range(UNDERARM[0], UNDERARM[1]):
+        column = a[UNDERARM[2]:UNDERARM[3], x] < 128
+        top = np.argmax(column)
+        if not column[top]:
+            continue
+        end = top + np.argmin(column[top:]) if not column[top:].all() else len(column)
+        # Taper into the shirt's hem at the left, where the gap closes.
+        weight = 21 + max(0, 790 - x) * 0.9
+        if end - top > weight and end < len(column):
+            a[UNDERARM[2] + top + int(weight):UNDERARM[2] + end + 2, x] = 255
+    from PIL import Image, ImageFilter
+    # Smooth the new edge as the rest of the art is smoothed.
+    result = Image.fromarray(a)
+    box = (UNDERARM[0] - 4, UNDERARM[2], UNDERARM[1] + 4, UNDERARM[3])
+    edge = result.crop(box).filter(ImageFilter.GaussianBlur(2))
+    edge = edge.point(lambda v: 0 if v < 100 else 255 if v > 156 else int((v - 100) * 255 / 56))
+    result.paste(edge, box[:2])
+    return result
+
+
+# Columns and rows of the underarm line in the panel 2 export.
+UNDERARM = (730, 1000, 1880, 1960)
+PANEL2_SHOE = (300, 2256)
+PANEL2_SHOE_TURN = 180
+PANEL2_SHOE_SCALE = (1.7, 1.7)
+
+
 def panel_two(image):
     """Dad sits on his heels facing right, knee by the record player."""
     w, h = image.size
     ink = Ink((w, h), seed=2)
     # His near foot lies behind him on its upper, toe back on the floor and
     # sole turned up, heel under his seat. The far foot is hidden behind it.
-    shoe(ink, heel=(600, 2270), angle=176, scale=0.86, flip=True)
+    shoe_ink, shoe_shape = panel_one_shoe(PANEL2_SHOE, PANEL2_SHOE_TURN, PANEL2_SHOE_SCALE, (w, h))
+    ink.paint(shoe_shape, 255)
+    ink.paint(shoe_ink, 0)
     # The trousers: seat, thigh and the shin folded under it along the floor,
     # ending in a cuff at the ankle just behind the seat. The first and last
     # three points are the scanned silhouette's edges on the crop's last
@@ -80,7 +120,7 @@ def panel_two(image):
                [2, 8, 2], colour=255, wobble=0.6)
     yy, xx = np.mgrid[:h, :w]
     region = (yy >= 2060) & (xx < 1540)
-    return composite(image, ink.mask(), region)
+    return composite(thin_underarm(image), ink.mask(), region)
 
 
 def outlined(ink, points, width=OUTLINE + 2):
@@ -89,32 +129,101 @@ def outlined(ink, points, width=OUTLINE + 2):
     ink.stroke(points, [width, width * 1.1, width * 0.95, width * 1.15, width], closed=True)
 
 
-HAND = [  # (centre line, width): back of the hand, then far to near fingers
-    ([(965, 2640), (1050, 2690), (1130, 2730)], 96),
-    ([(1150, 2700), (1230, 2735), (1300, 2790)], 40),
-    ([(1135, 2722), (1215, 2762), (1275, 2825)], 44),
-    ([(1110, 2745), (1185, 2790), (1235, 2855)], 46),
-    ([(1080, 2765), (1140, 2810), (1175, 2862)], 44),
-    ([(1000, 2715), (1030, 2765), (1052, 2805)], 42),
-]
+# The scanned gesturing hand in panel 3: its bounding box and the wrist, where
+# the two lines of the forearm reach the thumb (A) and the palm (B).
+SCAN_HAND_BOX = (1585, 1770, 2200, 2080)
+SCAN_WRIST = ((1745, 1950), (1875, 2005))
 
 
-def hand_outline(ink):
-    for points, width in HAND:
-        ink.stroke(points, [width + 2 * OUTLINE], wobble=1.0)
+def transplant(source, keep, closing, pivot, target, angle, flip=False,
+               scale=(1.0, 1.0), axis=0.0, size=None):
+    """Move a piece of Watterson's own ink to a new place and pose.
+
+    `keep` is a polygon around the piece in `source`, `closing` a list of
+    segments that close its outline where `keep` cuts it off (so its inside
+    can be filled). The piece is optionally flipped top to bottom about
+    `pivot`, scaled by `scale` along and across the direction `axis`
+    (degrees), turned by `angle` degrees and moved so `pivot` lands on
+    `target`. Returns its ink and filled silhouette as masks of `size`, and
+    the function mapping source points to their new places.
+    """
+    from PIL import Image, ImageDraw
+    from scipy import ndimage
+    mask = Image.new('L', source.size, 0)
+    ImageDraw.Draw(mask).polygon(keep, fill=255)
+    ink = (np.asarray(source.convert('L')) < 128) & (np.asarray(mask) > 0)
+    closed = Image.fromarray(ink)
+    for segment in closing:
+        ImageDraw.Draw(closed).line(segment, fill=1, width=14)
+    silhouette = ndimage.binary_fill_holes(np.asarray(closed))
+    def turn(degrees):
+        t = np.radians(degrees)
+        return np.array([[np.cos(t), -np.sin(t)], [np.sin(t), np.cos(t)]])
+    stretch = turn(axis) @ np.diag(scale) @ turn(-axis)
+    forward = turn(angle) @ stretch @ np.diag([1, -1 if flip else 1])
+    inverse = np.linalg.inv(forward)
+    pivot, target = np.asarray(pivot, float), np.asarray(target, float)
+    w, h = size
+    xs, ys = zip(*keep)
+    reach = max(np.hypot(x - pivot[0], y - pivot[1]) for x, y in keep) * max(scale) + 10
+    yy, xx = np.mgrid[max(0, int(target[1] - reach)):min(h, int(target[1] + reach)),
+                      max(0, int(target[0] - reach)):min(w, int(target[0] + reach))]
+    src = inverse @ np.stack([xx.ravel() - target[0], yy.ravel() - target[1]]) + pivot[:, None]
+    out = []
+    for layer in (ink, silhouette):
+        sampled = ndimage.map_coordinates(layer.astype(float), [src[1], src[0]], order=1, cval=0)
+        full = np.zeros((h, w), bool)
+        full[yy.ravel(), xx.ravel()] = sampled > 0.5
+        out.append(full)
+    return out[0], out[1], lambda point: tuple(forward @ (np.asarray(point) - pivot) + target)
 
 
-def hand_fill(ink):
-    for points, width in HAND:
-        ink.stroke(points, [width], colour=255, wobble=0.6)
+def resting_hand(image, target, angle):
+    """Panel 3's scanned open hand, turned palm down to rest on the thigh.
+
+    The hand is flipped top to bottom about its wrist, which turns the palm
+    over and puts the thumb on the near side, then tilted by `angle` degrees
+    so the fingers follow the thigh down towards the knee, with the wrist's
+    midpoint at `target`. Returns the hand's ink and silhouette, and where
+    the wrist's thumb and palm ends land.
+    """
+    x0, y0, x1, y1 = SCAN_HAND_BOX
+    a, b = SCAN_WRIST
+    # Only the hand: the side of the wrist away from the elbow.
+    keep = [(x0, y0), (x1, y0), (x1, y1), (b[0] + 80, b[1] + 60), b, a, (x0, a[1])]
+    middle = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
+    ink, shape, move = transplant(image, keep, [(a, b)], middle, target, angle,
+                                  flip=True, size=image.size)
+    return ink, shape, move(a), move(b)
 
 
-def hand_gaps(ink):
-    for gap in ([(1175, 2735), (1240, 2770), (1288, 2812)],
-                [(1150, 2757), (1210, 2795), (1255, 2846)],
-                [(1118, 2780), (1162, 2820), (1200, 2862)],
-                [(1045, 2775), (1065, 2805)]):
-        ink.stroke(gap, [3, 12, 14, 6])
+# Dad's planted back shoe in panel 1, in side view, in the coordinates of
+# the full panel 1 export. Only the part inside the scanned crop (x >= 400)
+# is used; the trouser leg covers its top at the heel, so `keep` stops just
+# under the trouser's hem.
+PANEL1_SHOE_KEEP = [(400, 1872), (520, 1866), (670, 1866), (670, 2016), (400, 2016)]
+PANEL1_SHOE_CLOSE = [((400, 1872), (400, 2016)), ((400, 1874), (520, 1868))]
+PANEL1_SHOE_CENTRE = (530, 1940)
+PANEL1_SHOE_HIDDEN_TOP = [(380, 1874), (450, 1871), (520, 1872), (560, 1880)]
+
+
+def panel_one_shoe(target, angle, scale, size):
+    """Panel 1's planted shoe, turned over to lie behind Dad, sole up."""
+    from pathlib import Path
+    from PIL import Image
+    locked = Image.open(Path(__file__).resolve().parent / 'locked-1.png').convert('L')
+    source = Image.new('L', (locked.width + 400, locked.height), 255)
+    source.paste(locked, (400, 0))
+    ink, shape, move = transplant(source, PANEL1_SHOE_KEEP, PANEL1_SHOE_CLOSE,
+                                  PANEL1_SHOE_CENTRE, target, angle, scale=scale, size=size)
+    # Ink the top of the shoe where panel 1's trouser hem hid it.
+    edge = Ink(size, seed=5)
+    edge.stroke([move(p) for p in PANEL1_SHOE_HIDDEN_TOP], [18, 22, 22, 20])
+    return ink | edge.mask(), shape
+
+
+HAND_WRIST = (975, 2648)
+HAND_TILT = 24
 
 
 def panel_three(image):
@@ -202,17 +311,21 @@ def panel_three(image):
     ink.stroke([(716, 2150), (830, 2142), (956, 2160)], [3, 11, 10, 3])
     # The near arm hangs from the cuff, bends a little at the elbow and
     # reaches forward to the thigh.
+    hand_ink, hand_shape, thumb_end, palm_end = resting_hand(image, HAND_WRIST, HAND_TILT)
     left = [(745, 2196), (738, 2300), (714, 2400), (708, 2445), (734, 2506),
-            (800, 2580), (880, 2640), (930, 2662)]
+            (800, 2574), thumb_end,
+            tuple(np.add(thumb_end, np.subtract(thumb_end, (800, 2574)) * 0.3))]
     right = [(900, 2202), (880, 2300), (864, 2380), (862, 2440), (898, 2516),
-             (946, 2582), (962, 2598)]
-    hand_outline(ink)
-    ink.fill(left + [(960, 2700), (1010, 2690)] + right[::-1], colour=255, wobble=0)
-    hand_fill(ink)
-    ink.stroke(left, [19, 20, 19, 20, 18])
-    ink.stroke(right, [19, 19, 20, 18])
-    hand_gaps(ink)
+             (950, 2570), palm_end]
+    ink.fill(left + right[::-1], colour=255, wobble=0)
+    # The forearm's edges go over the hand's wrist so the two join.
+    edges = Ink((w, h), seed=4)
+    edges.stroke(left, [19, 20, 19, 20, 18])
+    edges.stroke(right, [19, 19, 20, 18])
 
     yy, xx = np.mgrid[:h, :w]
     region = ((xx < 800) | (yy >= 2060)) & (xx < 1900) & ~((xx >= 1700) & (yy >= 2600))
-    return composite(image, ink.mask(), region)
+    drawing = ink.mask()
+    drawing[hand_shape] = False
+    drawing |= hand_ink | edges.mask()
+    return composite(image, drawing, region)

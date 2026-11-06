@@ -112,6 +112,11 @@ class Ink:
                     self.pen.ellipse((x - r, y - r, x + r, y + r), fill=colour)
         return curve
 
+    def paint(self, mask, colour):
+        """Set the pixels of a boolean mask (at the canvas size) to a colour."""
+        big = Image.fromarray(mask).resize(self.image.size, Image.Resampling.NEAREST)
+        self.image.paste(colour, mask=big.convert('L').point(lambda v: 255 if v else 0))
+
     def mask(self):
         """The drawing as a boolean ink mask at the canvas size."""
         small = self.image.resize(self.size, Image.Resampling.BOX)
