@@ -84,3 +84,36 @@ with them.
 
 The best scripts are kept beside each pose's drawing here. They read their
 task from a scratch directory: rebuild one with `tasks.py`.
+
+## Round 2: shared part routines
+
+Four routines were built, one per part: shoe, hand, sleeve and trouser leg
+(`parts/<kind>/<kind>.py`, with the API in each docstring). Sonnet builders
+reproduced 10 of Watterson's examples of each part
+(`tools/extensions/parts/practice.py`). Each round, two critics scored the
+new version against the best so far, and the new version was kept only if
+its average was higher. A routine stopped after two rejections in a row or
+six rounds. Each routine was then fitted, without changes, to 4 held-out
+examples.
+
+| Part | Rounds | Best dev score | Held-out score |
+|---|---|---|---|
+| Shoe | 4 | 4.3 | 5.1 |
+| Hand | 3 | 3.85 | 4.0 |
+| Sleeve | 6 | 4.15 | 3.5 |
+| Leg | 6 | 3.5 (rescored 4.2) | 4.25 |
+
+`dev.png` and `held.png` show each reference (left) beside its
+reproduction. My own reading:
+
+- **Shoes:** one generic loaf template in every side view.
+- **Hands:** still often five-fingered.
+- **Legs:** black silhouettes are passable; light ones lack Watterson's line.
+
+Many reference cut-outs are tight crops full of clutter, which made fitting
+and judging hard.
+
+The six poses were then redrawn using the routines, with two rounds each.
+**Every redraw was judged worse than the round 1 drawing (2.5–3.5 against
+4–5.75).** So the routines are not yet good enough to use. The critics' own
+scores for an unchanged drawing vary by about a point.

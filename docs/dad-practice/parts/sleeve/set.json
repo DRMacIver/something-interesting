@@ -1,0 +1,114 @@
+[
+ {
+  "id": 185,
+  "file": "parts/sleeve/p115-07-36.png",
+  "head_width": 197.8,
+  "view": "hanging",
+  "note": "plain short sleeve hanging from shoulder to elbow, wide",
+  "split": "dev"
+ },
+ {
+  "id": 144,
+  "file": "parts/sleeve/p115-01-30.png",
+  "head_width": 220.0,
+  "view": "hanging, side view",
+  "note": "plain short-sleeved upper arm hanging, side view",
+  "split": "dev"
+ },
+ {
+  "id": 279,
+  "file": "parts/sleeve/p152-01-52.png",
+  "head_width": 175.1,
+  "view": "reaching down",
+  "note": "plain sleeve, upper arm hanging then forearm angled down-right to wrist",
+  "split": "dev"
+ },
+ {
+  "id": 421,
+  "file": "parts/sleeve/p186-09-80.png",
+  "head_width": 139.3,
+  "view": "forearm across",
+  "note": "plain short sleeve, forearm folded across torso",
+  "split": "dev"
+ },
+ {
+  "id": 368,
+  "file": "parts/sleeve/p112-01-70.png",
+  "head_width": 150.0,
+  "view": "bent forward",
+  "note": "plain sleeve, upper arm vertical then forearm bent horizontal",
+  "split": "dev"
+ },
+ {
+  "id": 360,
+  "file": "parts/sleeve/p245-03-69.png",
+  "head_width": 183.0,
+  "view": "hanging bent, striped",
+  "note": "striped sleeve hanging, bent forward at elbow",
+  "split": "dev"
+ },
+ {
+  "id": 27,
+  "file": "parts/sleeve/p065-03-9.png",
+  "head_width": 176.0,
+  "view": "hanging, striped",
+  "note": "striped sleeve hanging down the side of torso",
+  "split": "dev"
+ },
+ {
+  "id": 54,
+  "file": "parts/sleeve/p107-09-15.png",
+  "head_width": 145.0,
+  "view": "raised, striped",
+  "note": "striped sleeve running diagonally down-right from raised shoulder",
+  "split": "dev"
+ },
+ {
+  "id": 443,
+  "file": "parts/sleeve/p202-01-85.png",
+  "head_width": 167.0,
+  "view": "reaching down",
+  "note": "bulky light sleeve, arm reaching down-left",
+  "split": "dev"
+ },
+ {
+  "id": 122,
+  "file": "parts/sleeve/p110-11-28.png",
+  "head_width": 151.1,
+  "view": "bent forward, striped",
+  "note": "dark striped sleeve, arm hangs then forearm extends right",
+  "split": "dev"
+ },
+ {
+  "id": 412,
+  "file": "parts/sleeve/p186-07-79.png",
+  "head_width": 167.3,
+  "view": "hanging",
+  "note": "light short rolled sleeve, arm hanging along body",
+  "split": "held"
+ },
+ {
+  "id": 176,
+  "file": "parts/sleeve/p115-06-35.png",
+  "head_width": 163.0,
+  "view": "bent forward",
+  "note": "short sleeve, arm bent, hanging from shoulder",
+  "split": "held"
+ },
+ {
+  "id": 22,
+  "file": "parts/sleeve/p065-01-7.png",
+  "head_width": 183.3,
+  "view": "hanging, striped",
+  "note": "striped sleeve hanging down the near side",
+  "split": "held"
+ },
+ {
+  "id": 354,
+  "file": "parts/sleeve/p237-03-67.png",
+  "head_width": 167.8,
+  "view": "bent forward, striped",
+  "note": "striped sleeve hunched forward, diagonal stripes, forearm leading right",
+  "split": "held"
+ }
+]

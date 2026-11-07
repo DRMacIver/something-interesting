@@ -1,0 +1,114 @@
+[
+ {
+  "id": 14,
+  "file": "parts/trouser_leg/p054-01-2.png",
+  "head_width": 134.1,
+  "view": "seated, thigh left then shin down",
+  "note": "black thigh going left-down from hip to knee then shin down; clean large silhouette",
+  "split": "dev"
+ },
+ {
+  "id": 196,
+  "file": "parts/trouser_leg/p116-01-37.png",
+  "head_width": 189.0,
+  "view": "armchair, thigh horizontal",
+  "note": "black thigh horizontal then shin down from knee to ankle",
+  "split": "dev"
+ },
+ {
+  "id": 255,
+  "file": "parts/trouser_leg/p137-03-47.png",
+  "head_width": 162.0,
+  "view": "armchair, thigh right",
+  "note": "solid black leg from lap right and down, thigh near horizontal then shin descending",
+  "split": "dev"
+ },
+ {
+  "id": 342,
+  "file": "parts/trouser_leg/p235-07-62.png",
+  "head_width": 166.9,
+  "view": "armchair, thigh horizontal",
+  "note": "black thigh horizontal then vertical shin on right, large and legible",
+  "split": "dev"
+ },
+ {
+  "id": 147,
+  "file": "parts/trouser_leg/p115-01-27.png",
+  "head_width": 220.0,
+  "view": "knee raised, foot on step",
+  "note": "light baggy near thigh and shin, knee raised and bent, fold lines",
+  "split": "dev"
+ },
+ {
+  "id": 160,
+  "file": "parts/trouser_leg/p115-02-29.png",
+  "head_width": 192.3,
+  "view": "sitting, baggy bent",
+  "note": "light baggy thigh going right to knee then shin down to shoe",
+  "split": "dev"
+ },
+ {
+  "id": 263,
+  "file": "parts/trouser_leg/p151-01-49.png",
+  "head_width": 196.4,
+  "view": "sitting, thigh left",
+  "note": "light loose trouser, thigh left from hip to knee then shin drops to shoe",
+  "split": "dev"
+ },
+ {
+  "id": 274,
+  "file": "parts/trouser_leg/p151-05-52.png",
+  "head_width": 201.0,
+  "view": "sitting/reclining, knee raised",
+  "note": "light trouser leg with fold lines, knee at left, thigh toward hip at right",
+  "split": "dev"
+ },
+ {
+  "id": 91,
+  "file": "parts/trouser_leg/p109-03-13.png",
+  "head_width": 205.0,
+  "view": "sitting, baggy thigh and shin",
+  "note": "light baggy near thigh and shin with many folds, down to shoe",
+  "split": "dev"
+ },
+ {
+  "id": 415,
+  "file": "parts/trouser_leg/p186-07-77.png",
+  "head_width": 167.3,
+  "view": "walking, straight",
+  "note": "straight black trouser, angled down-right, cuff above lifted shoe",
+  "split": "dev"
+ },
+ {
+  "id": 349,
+  "file": "parts/trouser_leg/p235-08-63.png",
+  "head_width": 178.1,
+  "view": "armchair, thigh right",
+  "note": "black near leg, thigh horizontal right, shin dropping at right",
+  "split": "held"
+ },
+ {
+  "id": 179,
+  "file": "parts/trouser_leg/p115-06-33.png",
+  "head_width": 163.0,
+  "view": "sitting, thigh right shin left",
+  "note": "light thigh right from hip to knee, shin descending left to ankle",
+  "split": "held"
+ },
+ {
+  "id": 101,
+  "file": "parts/trouser_leg/p109-04-15.png",
+  "head_width": 204.1,
+  "view": "sitting, thigh right shin down-left",
+  "note": "light near leg with folds, thigh right then shin angled down-left",
+  "split": "held"
+ },
+ {
+  "id": 423,
+  "file": "parts/trouser_leg/p186-09-79.png",
+  "head_width": 139.3,
+  "view": "standing, straight",
+  "note": "straight vertical black trouser leg, solid fill",
+  "split": "held"
+ }
+]
