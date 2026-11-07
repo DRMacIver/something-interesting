@@ -117,3 +117,36 @@ The six poses were then redrawn using the routines, with two rounds each.
 **Every redraw was judged worse than the round 1 drawing (2.5–3.5 against
 4–5.75).** So the routines are not yet good enough to use. The critics' own
 scores for an unchanged drawing vary by about a point.
+
+## Round 3: panel 2 with Codex as the judge
+
+Three Sonnet drawers each worked on Dad's back, sleeve and lower body in
+panel 2 for up to six rounds. Each new version was compared with Codex's
+A/B critique (`crit2.py`) against the best so far, and a drawer stopped
+after two rejections in a row.
+
+| Approach | Rounds | Accepted | Best (Codex) |
+|---|---|---|---|
+| Refine draft A from Codex's critique | 6 | 4 | 4.5–5 |
+| Page 167's black-trapezoid lap | 2 | 0 | 5 at best, but lost to A both times |
+| Use the shared part routines | 6 | 5 | 4.5, lost to refine in the final |
+
+In the final knockout, Codex chose the refined version over draft A (5
+against about 4); see `panel2-A-vs-refined.png`. Its gains:
+
+- the sleeve hem is closed and loosely bowed;
+- the elbow is smaller;
+- the seat is tighter;
+- the trouser cuff now overlaps the shoe's heel.
+
+It is `tools/extensions/reconstruction-v2/dad2_refine.py`, variant 4. The
+exported panels are unchanged.
+
+Codex's complaints barely moved over all the rounds:
+
+- the folded legs still read as one black cushion;
+- the elbow under the sleeve reads as a pouch;
+- the shoe has no definite ankle.
+
+Moving contours within this design shifts Codex's scores by about half a
+point. Every automated loop in these three rounds plateaued at 4–5/10.
