@@ -78,3 +78,17 @@ def test_close_ups_stop_above_dads_legs():
     from scipy import ndimage
     assert not ndimage.binary_erosion(image[2060:, :1300], iterations=25).any()
 
+
+
+def test_panel3_near_sleeve_is_watterson_s_from_panel_one():
+    # The near sleeve below the crop is panel 1's sleeve moved into place,
+    # not a drawn one: its shape, and a single-line hem with no cuff.
+    import sys
+    sys.path.insert(0, str(ROOT / 'tools/extensions/reconstruction-v2'))
+    import drawn_legs
+    image = np.asarray(Image.open(OUT / 'panel3.png').convert('L')) < 128
+    ink, shape = drawn_legs.near_sleeve(image.shape[::-1])
+    region = shape.copy()
+    region[:2060, 800:] = False
+    assert region.sum() > 50_000
+    assert (image[region] == ink[region]).all()

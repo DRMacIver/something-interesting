@@ -50,12 +50,6 @@ def shoe(ink, heel, angle, scale=1.0, flip=False, foreshorten=1.0, width=22):
     ink.stroke(parts['toe_cap'], [3, 11, 10, 2])
 
 
-def outlined(ink, points, width=OUTLINE + 2):
-    """A white shape with a closed ink outline."""
-    ink.fill(points, colour=255, wobble=0)
-    ink.stroke(points, [width, width * 1.1, width * 0.95, width * 1.15, width], closed=True)
-
-
 # The scanned gesturing hand in panel 3: its bounding box and the wrist, where
 # the two lines of the forearm reach the thumb (A) and the palm (B).
 SCAN_HAND_BOX = (1585, 1770, 2200, 2080)
@@ -157,6 +151,39 @@ def resting_thumb(image, target, angle, scale, bend):
     return ink, shape
 
 
+# Dad's near sleeve in panel 1 (locked-1.png): a polygon around its two
+# open-topped side lines and its hem, the tops of those lines, and where
+# the arm's two edges leave the hem (just inside it, so they meet
+# the stubs of them that come with the sleeve).
+SLEEVE_KEEP = [(56, 612), (205, 520), (245, 520), (258, 620), (292, 740), (306, 782),
+               (304, 812), (250, 822), (140, 842), (90, 846), (84, 800), (60, 700)]
+SLEEVE_TOPS = ((73, 618), (223, 538))
+SLEEVE_ARM = ((212, 822), (276, 812))
+# The point on panel 1's front sleeve line that lands where panel 3's own
+# sleeve line leaves the crop, the scale between the two (Dad's head is
+# about 290px wide in panel 1, 562px here) and the turn that lines the two
+# up without tipping the hem much.
+SLEEVE_PIVOT = (238, 620)
+SLEEVE_AT = (942, 2059)
+SLEEVE_SCALE = 562 / 290
+SLEEVE_TURN = 15
+
+
+def _sleeve(size):
+    from PIL import Image
+    from pathlib import Path
+    source = Image.open(Path(__file__).resolve().parent / 'locked-1.png')
+    return transplant(source, SLEEVE_KEEP, [SLEEVE_TOPS], SLEEVE_PIVOT, SLEEVE_AT,
+                      SLEEVE_TURN, scale=(SLEEVE_SCALE, SLEEVE_SCALE), size=size)
+
+
+def near_sleeve(size):
+    """Panel 1's near sleeve moved onto Dad's near arm in panel 3: its ink
+    and its filled silhouette, as masks of `size`."""
+    ink, shape, _ = _sleeve(size)
+    return ink, shape
+
+
 HAND_WRIST = (1000, 2700)
 HAND_TILT = 28
 HAND_SCALE = 0.95
@@ -169,7 +196,7 @@ def panel_three(image):
 
     Everything of him outside the scanned crop (left of x=800 and below
     y=2060) down to the panel's foot, just above his trousers, is drawn
-    here: his back and shirt, the rolled near sleeve, the hanging arm, the
+    here: his back and shirt, the near sleeve (panel 1's), the hanging arm, the
     far side of his shirt, the far sleeve and the gesturing arm down to its
     elbow. Lines that leave the crop are continued from where they cross
     its edge.
@@ -179,9 +206,10 @@ def panel_three(image):
     # The shirt, hanging loose over the trousers. Its back runs on from the
     # shoulder where it leaves the crop at (800, 1796); its far side from the
     # placket line crossing the crop's foot at x=1210.
-    back = [(830, 1752), (800, 1796), (750, 1855), (690, 1940), (650, 2020),
-            (610, 2095), (562, 2210), (530, 2310), (508, 2400), (494, 2490),
-            (470, 2570), (452, 2632), (462, 2672)]
+    # It stands clear of the near sleeve, as in panel 1.
+    back = [(830, 1752), (800, 1796), (730, 1850), (650, 1915), (588, 1992),
+            (545, 2080), (518, 2180), (500, 2280), (488, 2380), (478, 2480),
+            (464, 2570), (452, 2632), (462, 2672)]
     hem = [(452, 2640), (474, 2684), (522, 2718), (592, 2742), (690, 2754),
            (800, 2748), (900, 2740), (1000, 2748), (1090, 2760)]
     far_side = [(1217, 2000), (1210, 2059), (1190, 2105), (1150, 2165),
@@ -222,25 +250,16 @@ def panel_three(image):
                 (1572, 2298), (1640, 2234), (1722, 2148), (1799, 2059), (1846, 2005)],
                [18, 20, 21, 22, 22, 21, 22, 23])
 
-    # The near sleeve, as Dad's sleeves are drawn in panels 1 and 2: long
-    # and loose, nearly to the elbow and about twice the arm's width, with a
-    # turned-up cuff. Its front edge is the line leaving the crop at x=942;
-    # its back edge leaves his back below the shoulder.
+    # The near sleeve is Watterson's own from panel 1 (see near_sleeve).
     hand_ink, hand_shape, thumb_end, palm_end = resting_hand(image, HAND_WRIST, HAND_TILT, HAND_SCALE)
     thumb_ink, thumb_shape = resting_thumb(image, HAND_WRIST, HAND_TILT, HAND_SCALE, THUMB_BEND)
-    # The arm below the sleeve: a short stretch of upper arm, the elbow, and
-    # the forearm reaching forward along his thigh to the hand.
-    left = [(721, 2392), (714, 2440), (722, 2496), (760, 2560), (830, 2630), thumb_end]
-    right = [(901, 2390), (896, 2430), (924, 2500), (962, 2580), palm_end]
+    sleeve_ink, sleeve_shape, sleeve_place = _sleeve((w, h))
+    # The arm comes out of the sleeve where it does in panel 1 and reaches
+    # forward along his thigh to the hand.
+    arm_back, arm_front = (sleeve_place(p) for p in SLEEVE_ARM)
+    left = [arm_back, (786, 2520), (818, 2588), (866, 2646), thumb_end]
+    right = [arm_front, (918, 2548), (952, 2606), palm_end]
     ink.fill(left + right[::-1], colour=255, wobble=0)
-    sleeve_back = [(728, 1900), (700, 2000), (682, 2120), (670, 2240), (664, 2330)]
-    sleeve_front = [(953, 2000), (942, 2059), (946, 2150), (956, 2250), (964, 2330)]
-    ink.fill(sleeve_back + sleeve_front[::-1], colour=255, wobble=0)
-    ink.stroke(sleeve_back, [4, 18, 20, 20, 19])
-    ink.stroke(sleeve_front, [20, 20, 20, 19, 19])
-    ink.stroke([(860, 2160), (852, 2230), (842, 2280)], [3, 12, 3])
-    outlined(ink, [(660, 2318), (810, 2306), (968, 2322), (978, 2352), (972, 2388),
-                   (810, 2376), (658, 2386), (650, 2352)])
     # The forearm's edges go over the hand's wrist so the two join.
     edges = Ink((w, h), seed=4)
     edges.stroke(left, [19, 20, 19, 20, 18])
@@ -253,4 +272,6 @@ def panel_three(image):
     drawing |= thumb_ink
     drawing[hand_shape] = False
     drawing |= hand_ink | edges.mask()
+    drawing[sleeve_shape] = False
+    drawing |= sleeve_ink
     return composite(image, drawing, region)
