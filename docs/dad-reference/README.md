@@ -72,3 +72,7 @@ Verified panels useful for: sleeves 52, hands at rest 46, sitting legs 35, shoes
 | p235 #7 | sitting chair | left | sitting legs, sleeves | 2 |
 | p235 #8 | sitting chair | left | sitting legs, hands at rest, sleeves | 2 |
 | p237 #3 | crouching | left | crouching legs, sleeves, hands at rest | 2 |
+
+## Measurements and parts kit
+
+`style.md` gives measurements of Dad across 77 of these drawings (proportions, part sizes and line weights in head widths) and describes the parts kit in `parts/` (`parts.json`), cut from them using the joint and part marks in `annotations.json`.

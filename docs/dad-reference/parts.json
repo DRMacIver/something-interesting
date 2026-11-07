@@ -1,0 +1,7277 @@
+[
+ {
+  "file": "parts/shoe/p008-01-1.png",
+  "kind": "shoe",
+  "source": "crops/p008-01.png",
+  "box": [
+   682,
+   1462,
+   1147,
+   1847
+  ],
+  "near": true,
+  "note": "shoe seen from behind/sole toward viewer, toe pointing down-right, large rounded heel",
+  "head_width": 290.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p008-01-1.png",
+  "kind": "hand",
+  "source": "crops/p008-01.png",
+  "box": [
+   72,
+   1192,
+   417,
+   1417
+  ],
+  "near": true,
+  "note": "hand at end of forearm, fingers pointing left toward floor, partly hidden by clutter",
+  "head_width": 290.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p008-01-1.png",
+  "kind": "sleeve",
+  "source": "crops/p008-01.png",
+  "box": [
+   332,
+   882,
+   1017,
+   1267
+  ],
+  "near": true,
+  "note": "striped short sleeve hanging from shoulder over bent arm",
+  "head_width": 290.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p008-01-1.png",
+  "kind": "knee",
+  "source": "crops/p008-01.png",
+  "box": [
+   172,
+   1512,
+   437,
+   1747
+  ],
+  "near": true,
+  "note": "kneeling knee on floor at lower left, trouser covering",
+  "head_width": 290.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p008-01-1.png",
+  "kind": "seat",
+  "source": "crops/p008-01.png",
+  "box": [
+   762,
+   1032,
+   1107,
+   1467
+  ],
+  "near": true,
+  "note": "buttocks in dark trousers at right, rounded",
+  "head_width": 290.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p008-01-1.png",
+  "kind": "trouser_leg",
+  "source": "crops/p008-01.png",
+  "box": [
+   172,
+   1522,
+   737,
+   1757
+  ],
+  "near": true,
+  "note": "lower leg lying horizontally on floor from knee to ankle, trouser cuff near ankle",
+  "head_width": 290.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p027-08-2.png",
+  "kind": "hand",
+  "source": "crops/p027-08.png",
+  "box": [
+   44,
+   664,
+   130,
+   780
+  ],
+  "near": true,
+  "note": "fist gripping left edge of paper, knuckles facing viewer, thumb up",
+  "head_width": 168.5,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p027-08-3.png",
+  "kind": "hand",
+  "source": "crops/p027-08.png",
+  "box": [
+   184,
+   679,
+   310,
+   810
+  ],
+  "near": false,
+  "note": "hand with splayed fingers holding right side of paper, fingers pointing down-right",
+  "head_width": 168.5,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p027-08-2.png",
+  "kind": "sleeve",
+  "source": "crops/p027-08.png",
+  "box": [
+   0,
+   579,
+   120,
+   850
+  ],
+  "near": true,
+  "note": "striped sleeve running down from shoulder to elbow at left edge, bending forward to hand",
+  "head_width": 168.5,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p027-08-3.png",
+  "kind": "sleeve",
+  "source": "crops/p027-08.png",
+  "box": [
+   239,
+   589,
+   355,
+   810
+  ],
+  "near": false,
+  "note": "striped sleeve of far arm, going down-right from shoulder to bent elbow",
+  "head_width": 168.5,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p027-08-2.png",
+  "kind": "seat",
+  "source": "crops/p027-08.png",
+  "box": [
+   0,
+   879,
+   360,
+   975
+  ],
+  "near": true,
+  "note": "dark trousers on the bed, only the top partly visible at the bottom of the crop",
+  "head_width": 168.5,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p054-01-2.png",
+  "kind": "shoe",
+  "source": "crops/p054-01.png",
+  "box": [
+   126,
+   716,
+   263,
+   813
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, laces visible",
+  "head_width": 134.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p054-01-3.png",
+  "kind": "shoe",
+  "source": "crops/p054-01.png",
+  "box": [
+   246,
+   741,
+   428,
+   813
+  ],
+  "near": false,
+  "note": "shoe in side view, long, toe pointing right, sole down",
+  "head_width": 134.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p054-01-4.png",
+  "kind": "sleeve",
+  "source": "crops/p054-01.png",
+  "box": [
+   76,
+   271,
+   208,
+   363
+  ],
+  "near": true,
+  "note": "rolled striped sleeve and hand/cuff pointing left and down, forearm angled down-left",
+  "head_width": 134.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p054-01-2.png",
+  "kind": "trouser_leg",
+  "source": "crops/p054-01.png",
+  "box": [
+   131,
+   481,
+   408,
+   768
+  ],
+  "near": true,
+  "note": "black thigh going left-down from hip to knee, then shin going down to ankle",
+  "head_width": 134.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p054-01-3.png",
+  "kind": "trouser_leg",
+  "source": "crops/p054-01.png",
+  "box": [
+   261,
+   591,
+   353,
+   773
+  ],
+  "near": false,
+  "note": "far shin, black, nearly vertical",
+  "head_width": 134.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p054-01-2.png",
+  "kind": "knee",
+  "source": "crops/p054-01.png",
+  "box": [
+   126,
+   521,
+   238,
+   628
+  ],
+  "near": true,
+  "note": "knee bent, at left end of thigh, facing left",
+  "head_width": 134.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p054-01-3.png",
+  "kind": "seat",
+  "source": "crops/p054-01.png",
+  "box": [
+   271,
+   431,
+   428,
+   548
+  ],
+  "near": true,
+  "note": "buttocks and back of thigh at right, hidden by chair back",
+  "head_width": 134.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p063-07-5.png",
+  "kind": "sleeve",
+  "source": "crops/p063-07.png",
+  "box": [
+   153,
+   423,
+   256,
+   506
+  ],
+  "near": true,
+  "note": "rolled plaid sleeve at near elbow, bent arm going down-left",
+  "head_width": 138.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p063-07-6.png",
+  "kind": "sleeve",
+  "source": "crops/p063-07.png",
+  "box": [
+   336,
+   446,
+   498,
+   563
+  ],
+  "near": false,
+  "note": "far sleeve/cuff at far elbow, forearm angles down",
+  "head_width": 138.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p063-07-4.png",
+  "kind": "hand",
+  "source": "crops/p063-07.png",
+  "box": [
+   101,
+   591,
+   208,
+   683
+  ],
+  "near": true,
+  "note": "near hand in suds, fingers curled, resting on car surface",
+  "head_width": 138.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p063-07-5.png",
+  "kind": "hand",
+  "source": "crops/p063-07.png",
+  "box": [
+   386,
+   631,
+   518,
+   738
+  ],
+  "near": false,
+  "note": "far hand open on car hood/sponge, fingers pointing right",
+  "head_width": 138.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p065-01-7.png",
+  "kind": "sleeve",
+  "source": "crops/p065-01.png",
+  "box": [
+   89,
+   489,
+   260,
+   750
+  ],
+  "near": true,
+  "note": "striped pajama sleeve/arm hanging down the near side to the book",
+  "head_width": 183.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p065-01-6.png",
+  "kind": "hand",
+  "source": "crops/p065-01.png",
+  "box": [
+   94,
+   679,
+   260,
+   780
+  ],
+  "near": true,
+  "note": "hand holding open book, fingers along the page",
+  "head_width": 183.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p065-01-7.png",
+  "kind": "hand",
+  "source": "crops/p065-01.png",
+  "box": [
+   289,
+   649,
+   410,
+   810
+  ],
+  "near": false,
+  "note": "far hand with fingers pointing down, gripping book edge, seen from the side",
+  "head_width": 183.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p065-01-8.png",
+  "kind": "sleeve",
+  "source": "crops/p065-01.png",
+  "box": [
+   229,
+   529,
+   350,
+   730
+  ],
+  "near": false,
+  "note": "far arm striped sleeve angled toward book",
+  "head_width": 183.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p065-01-4.png",
+  "kind": "seat",
+  "source": "crops/p065-01.png",
+  "box": [
+   89,
+   729,
+   310,
+   870
+  ],
+  "near": true,
+  "note": "striped pajama torso/lap at bottom of crop, sitting on bed edge; legs lie below crop",
+  "head_width": 183.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p065-03-9.png",
+  "kind": "sleeve",
+  "source": "crops/p065-03.png",
+  "box": [
+   214,
+   564,
+   330,
+   840
+  ],
+  "near": true,
+  "note": "striped pajama sleeve of near arm, hanging down the left side of torso to the elbow",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p065-03-10.png",
+  "kind": "sleeve",
+  "source": "crops/p065-03.png",
+  "box": [
+   394,
+   579,
+   490,
+   770
+  ],
+  "near": false,
+  "note": "far arm sleeve, striped, running down the right side of the torso toward the book",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p065-03-8.png",
+  "kind": "hand",
+  "source": "crops/p065-03.png",
+  "box": [
+   444,
+   734,
+   550,
+   880
+  ],
+  "near": true,
+  "note": "near hand gripping the open book from the front, fingers curled over the cover",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p065-03-9.png",
+  "kind": "hand",
+  "source": "crops/p065-03.png",
+  "box": [
+   534,
+   779,
+   615,
+   870
+  ],
+  "near": false,
+  "note": "far hand holding right edge of the open book, fingers curled",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/knee/p065-03-3.png",
+  "kind": "knee",
+  "source": "crops/p065-03.png",
+  "box": [
+   234,
+   869,
+   340,
+   950
+  ],
+  "near": true,
+  "note": "bent knee under blanket, partly hidden by bedclothes",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/seat/p065-03-5.png",
+  "kind": "seat",
+  "source": "crops/p065-03.png",
+  "box": [
+   259,
+   849,
+   490,
+   970
+  ],
+  "near": true,
+  "note": "hips sitting on bed, mostly hidden by blanket and shadow",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p087-01-11.png",
+  "kind": "sleeve",
+  "source": "crops/p087-01.png",
+  "box": [
+   46,
+   386,
+   173,
+   528
+  ],
+  "near": true,
+  "note": "short rolled shirt sleeve on near upper arm, bulging at left edge of crop, opening toward lower right",
+  "head_width": 148.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p087-01-10.png",
+  "kind": "hand",
+  "source": "crops/p087-01.png",
+  "box": [
+   246,
+   411,
+   358,
+   553
+  ],
+  "near": true,
+  "note": "hand gripping the notebook, fingers curled to the right, seen from the side",
+  "head_width": 148.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p087-01-6.png",
+  "kind": "seat",
+  "source": "crops/p087-01.png",
+  "box": [
+   241,
+   586,
+   418,
+   788
+  ],
+  "near": true,
+  "note": "buttocks/thigh in dark trousers resting on armchair seat, mostly hidden behind armchair arm",
+  "head_width": 148.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p087-01-4.png",
+  "kind": "knee",
+  "source": "crops/p087-01.png",
+  "box": [
+   391,
+   591,
+   598,
+   708
+  ],
+  "near": true,
+  "note": "knee area of dark trousers, thigh heading right, partly obscured by side table",
+  "head_width": 148.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p087-01-4.png",
+  "kind": "trouser_leg",
+  "source": "crops/p087-01.png",
+  "box": [
+   241,
+   589,
+   598,
+   878
+  ],
+  "near": true,
+  "note": "solid black trouser thigh horizontal then shin dropping down to the right toward shoe",
+  "head_width": 148.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p087-01-4.png",
+  "kind": "shoe",
+  "source": "crops/p087-01.png",
+  "box": [
+   361,
+   849,
+   628,
+   943
+  ],
+  "near": true,
+  "note": "shoe in side view, toe pointing right, sole down, laces visible on top",
+  "head_width": 148.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p095-14-5.png",
+  "kind": "shoe",
+  "source": "crops/p095-14.png",
+  "box": [
+   299,
+   679,
+   465,
+   890
+  ],
+  "near": true,
+  "note": "shoe with sock cuff, raised foot, toe pointing down-right, seen from side",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p095-14-11.png",
+  "kind": "hand",
+  "source": "crops/p095-14.png",
+  "box": [
+   189,
+   429,
+   345,
+   580
+  ],
+  "near": true,
+  "note": "large open hand, fingers spread pointing right, resting on the book's lower left",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p095-14-12.png",
+  "kind": "hand",
+  "source": "crops/p095-14.png",
+  "box": [
+   409,
+   459,
+   500,
+   570
+  ],
+  "near": false,
+  "note": "fist gripping the right edge of the book, knuckles toward viewer",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p095-14-12.png",
+  "kind": "sleeve",
+  "source": "crops/p095-14.png",
+  "box": [
+   69,
+   429,
+   220,
+   530
+  ],
+  "near": true,
+  "note": "forearm sleeve of viewer-left arm, horizontal, bent at elbow",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p095-14-13.png",
+  "kind": "sleeve",
+  "source": "crops/p095-14.png",
+  "box": [
+   429,
+   319,
+   550,
+   490
+  ],
+  "near": false,
+  "note": "upper arm sleeve of viewer-right arm descending to the book",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/knee/p095-14-5.png",
+  "kind": "knee",
+  "source": "crops/p095-14.png",
+  "box": [
+   269,
+   589,
+   410,
+   690
+  ],
+  "near": true,
+  "note": "dark trousered knee raised below the book",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/seat/p095-14-7.png",
+  "kind": "seat",
+  "source": "crops/p095-14.png",
+  "box": [
+   79,
+   549,
+   340,
+   910
+  ],
+  "near": true,
+  "note": "dark trousers mass on the chair seat, thighs and buttocks, mostly solid black",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p095-14-5.png",
+  "kind": "trouser_leg",
+  "source": "crops/p095-14.png",
+  "box": [
+   289,
+   599,
+   430,
+   750
+  ],
+  "near": true,
+  "note": "dark trouser leg running from knee down to the ankle above the shoe",
+  "head_width": 176.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p101-01-6.png",
+  "kind": "shoe",
+  "source": "crops/p101-01.png",
+  "box": [
+   211,
+   509,
+   355,
+   660
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole facing viewer-right/down, rounded oblong, foot angled up slightly",
+  "head_width": 174.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p101-01-13.png",
+  "kind": "hand",
+  "source": "crops/p101-01.png",
+  "box": [
+   467,
+   444,
+   600,
+   585
+  ],
+  "near": true,
+  "note": "hand holding newspaper edge, fingers pointing left, thumb up, 4 fingers curled",
+  "head_width": 174.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p101-01-14.png",
+  "kind": "sleeve",
+  "source": "crops/p101-01.png",
+  "box": [
+   679,
+   494,
+   785,
+   620
+  ],
+  "near": true,
+  "note": "short rolled shirt sleeve at elbow, right side by panel border",
+  "head_width": 174.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p101-01-6.png",
+  "kind": "knee",
+  "source": "crops/p101-01.png",
+  "box": [
+   389,
+   584,
+   550,
+   670
+  ],
+  "near": true,
+  "note": "knee bent slightly, trouser top edge along y~600",
+  "head_width": 174.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p101-01-8.png",
+  "kind": "seat",
+  "source": "crops/p101-01.png",
+  "box": [
+   569,
+   589,
+   785,
+   770
+  ],
+  "near": true,
+  "note": "buttocks sunk in patterned armchair seat, at right of panel",
+  "head_width": 174.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p101-01-6.png",
+  "kind": "trouser_leg",
+  "source": "crops/p101-01.png",
+  "box": [
+   189,
+   587,
+   630,
+   910
+  ],
+  "near": true,
+  "note": "large solid black trouser leg stretched out to the left, tapering toward ankle at upper left",
+  "head_width": 174.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p107-09-14.png",
+  "kind": "hand",
+  "source": "crops/p107-09.png",
+  "box": [
+   76,
+   516,
+   203,
+   613
+  ],
+  "near": true,
+  "note": "hand low left, fingers pointing down, gripping near log/stick",
+  "head_width": 145.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p107-09-15.png",
+  "kind": "sleeve",
+  "source": "crops/p107-09.png",
+  "box": [
+   296,
+   216,
+   548,
+   528
+  ],
+  "near": true,
+  "note": "striped shirt sleeve/torso side running diagonally down-right from shoulder",
+  "head_width": 145.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p107-09-9.png",
+  "kind": "seat",
+  "source": "crops/p107-09.png",
+  "box": [
+   421,
+   481,
+   548,
+   598
+  ],
+  "near": true,
+  "note": "buttocks/thigh area at right, in trousers, on log",
+  "head_width": 145.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p107-09-7.png",
+  "kind": "trouser_leg",
+  "source": "crops/p107-09.png",
+  "box": [
+   311,
+   471,
+   548,
+   608
+  ],
+  "near": true,
+  "note": "thigh/trouser leg bent, going left to knee",
+  "head_width": 145.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p107-09-7.png",
+  "kind": "knee",
+  "source": "crops/p107-09.png",
+  "box": [
+   361,
+   531,
+   458,
+   608
+  ],
+  "near": true,
+  "note": "bent knee, side view",
+  "head_width": 145.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p107-09-7.png",
+  "kind": "shoe",
+  "source": "crops/p107-09.png",
+  "box": [
+   311,
+   581,
+   438,
+   653
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down",
+  "head_width": 145.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p107-10-16.png",
+  "kind": "sleeve",
+  "source": "crops/p107-10.png",
+  "box": [
+   367,
+   442,
+   742,
+   712
+  ],
+  "near": true,
+  "note": "near arm striped sleeve sweeping from shoulder right and down toward Calvin's head, long diagonal fold lines",
+  "head_width": 215.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p107-10-15.png",
+  "kind": "hand",
+  "source": "crops/p107-10.png",
+  "box": [
+   427,
+   747,
+   592,
+   882
+  ],
+  "near": true,
+  "note": "near hand reaching down onto Calvin's head, partly cropped by Calvin's hair, fingers pointing down-left",
+  "head_width": 215.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p107-10-16.png",
+  "kind": "hand",
+  "source": "crops/p107-10.png",
+  "box": [
+   62,
+   602,
+   247,
+   872
+  ],
+  "near": false,
+  "note": "far hand/forearm hanging at left edge, dark sleeve above, fingers pointing down-right, partly against black panel border",
+  "head_width": 215.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p107-10-17.png",
+  "kind": "sleeve",
+  "source": "crops/p107-10.png",
+  "box": [
+   57,
+   512,
+   247,
+   632
+  ],
+  "near": false,
+  "note": "dark shirt back/far shoulder at upper left, mostly solid black",
+  "head_width": 215.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p107-11-18.png",
+  "kind": "sleeve",
+  "source": "crops/p107-11.png",
+  "box": [
+   142,
+   207,
+   347,
+   352
+  ],
+  "near": true,
+  "note": "striped shirt back/sleeve sloping down-left from shoulder, bent over, stripes diagonal",
+  "head_width": 126.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p107-11-10.png",
+  "kind": "seat",
+  "source": "crops/p107-11.png",
+  "box": [
+   87,
+   312,
+   222,
+   437
+  ],
+  "near": true,
+  "note": "buttocks/trousers at left, raised as he bends forward, dark",
+  "head_width": 126.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p107-11-8.png",
+  "kind": "trouser_leg",
+  "source": "crops/p107-11.png",
+  "box": [
+   77,
+   392,
+   207,
+   511
+  ],
+  "near": true,
+  "note": "leg descending from seat, cropped at bottom, nearly vertical",
+  "head_width": 126.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p107-11-17.png",
+  "kind": "hand",
+  "source": "crops/p107-11.png",
+  "box": [
+   332,
+   327,
+   477,
+   392
+  ],
+  "near": true,
+  "note": "thin arm extending right toward Calvin, hand uncertain, partly outlined",
+  "head_width": 126.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p108-05-8.png",
+  "kind": "shoe",
+  "source": "crops/p108-05.png",
+  "box": [
+   139,
+   744,
+   315,
+   825
+  ],
+  "near": true,
+  "note": "shoe in side view, toe right, sole down, partly white with outline",
+  "head_width": 168.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p108-05-18.png",
+  "kind": "hand",
+  "source": "crops/p108-05.png",
+  "box": [
+   374,
+   359,
+   455,
+   510
+  ],
+  "near": true,
+  "note": "hand raised to chin/cheek, fingers up, palm toward face",
+  "head_width": 168.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p108-05-19.png",
+  "kind": "sleeve",
+  "source": "crops/p108-05.png",
+  "box": [
+   179,
+   484,
+   405,
+   600
+  ],
+  "near": true,
+  "note": "short striped sleeve / forearm cuff, running from elbow up to wrist",
+  "head_width": 168.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p108-05-8.png",
+  "kind": "knee",
+  "source": "crops/p108-05.png",
+  "box": [
+   219,
+   579,
+   350,
+   690
+  ],
+  "near": true,
+  "note": "bent knee pointing right, covered by black trousers",
+  "head_width": 168.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p108-05-11.png",
+  "kind": "seat",
+  "source": "crops/p108-05.png",
+  "box": [
+   54,
+   559,
+   170,
+   730
+  ],
+  "near": true,
+  "note": "buttocks at left edge of crop, crouched low",
+  "head_width": 168.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p108-05-9.png",
+  "kind": "trouser_leg",
+  "source": "crops/p108-05.png",
+  "box": [
+   54,
+   584,
+   350,
+   780
+  ],
+  "near": true,
+  "note": "thigh and shin in solid black, folded in crouch, going from hip at left to knee then down to shoe",
+  "head_width": 168.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p108-05-19.png",
+  "kind": "hand",
+  "source": "crops/p108-05.png",
+  "box": [
+   94,
+   584,
+   240,
+   675
+  ],
+  "near": false,
+  "note": "white shape resting on knee/thigh, likely the other hand, fingers pointing right",
+  "head_width": 168.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p109-02-9.png",
+  "kind": "shoe",
+  "source": "crops/p109-02.png",
+  "box": [
+   366,
+   826,
+   609,
+   931
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, sole thick, lace area top",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p109-02-10.png",
+  "kind": "shoe",
+  "source": "crops/p109-02.png",
+  "box": [
+   488,
+   800,
+   693,
+   873
+  ],
+  "near": false,
+  "note": "shoe in side view, toe right, partly behind near shoe, sole down",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p109-02-20.png",
+  "kind": "sleeve",
+  "source": "crops/p109-02.png",
+  "box": [
+   148,
+   348,
+   271,
+   561
+  ],
+  "near": true,
+  "note": "short patterned sleeve with cuff hem at bottom, arm hangs down along torso",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p109-02-20.png",
+  "kind": "hand",
+  "source": "crops/p109-02.png",
+  "box": [
+   208,
+   588,
+   391,
+   701
+  ],
+  "near": true,
+  "note": "hand with fingers curled resting at lap, holding palette or brush, knuckles up",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p109-02-21.png",
+  "kind": "hand",
+  "source": "crops/p109-02.png",
+  "box": [
+   318,
+   503,
+   441,
+   591
+  ],
+  "near": false,
+  "note": "hand holding the board edge/brush, fingers pointing right",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p109-02-9.png",
+  "kind": "knee",
+  "source": "crops/p109-02.png",
+  "box": [
+   488,
+   618,
+   601,
+   731
+  ],
+  "near": true,
+  "note": "knee bent, thigh heading right and slightly up, trousers wrinkled",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p109-02-12.png",
+  "kind": "seat",
+  "source": "crops/p109-02.png",
+  "box": [
+   178,
+   648,
+   311,
+   756
+  ],
+  "near": true,
+  "note": "buttocks on rock, rounded, trouser fabric",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-02-10.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-02.png",
+  "box": [
+   248,
+   628,
+   611,
+   791
+  ],
+  "near": true,
+  "note": "thigh horizontal from hip to knee, wrinkled folds",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-02-11.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-02.png",
+  "box": [
+   468,
+   688,
+   621,
+   851
+  ],
+  "near": true,
+  "note": "shin going down and slightly left from knee to ankle, wrinkled",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-02-12.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-02.png",
+  "box": [
+   548,
+   628,
+   651,
+   841
+  ],
+  "near": false,
+  "note": "far leg behind near leg, vertical shin with creases",
+  "head_width": 189.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p109-03-11.png",
+  "kind": "shoe",
+  "source": "crops/p109-03.png",
+  "box": [
+   349,
+   882,
+   602,
+   1002
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, large rounded",
+  "head_width": 205.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p109-03-12.png",
+  "kind": "shoe",
+  "source": "crops/p109-03.png",
+  "box": [
+   487,
+   849,
+   717,
+   957
+  ],
+  "near": false,
+  "note": "shoe in side view, toe right, sole down, partly behind near shoe",
+  "head_width": 205.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p109-03-22.png",
+  "kind": "hand",
+  "source": "crops/p109-03.png",
+  "box": [
+   287,
+   597,
+   432,
+   712
+  ],
+  "near": true,
+  "note": "hand gripping brush at the canvas, fingers right",
+  "head_width": 205.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p109-03-23.png",
+  "kind": "hand",
+  "source": "crops/p109-03.png",
+  "box": [
+   532,
+   532,
+   607,
+   602
+  ],
+  "near": false,
+  "note": "far hand holding top of canvas, thumb visible",
+  "head_width": 205.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p109-03-21.png",
+  "kind": "sleeve",
+  "source": "crops/p109-03.png",
+  "box": [
+   307,
+   527,
+   432,
+   637
+  ],
+  "near": true,
+  "note": "short patterned sleeve with forearm extending right toward canvas",
+  "head_width": 205.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p109-03-10.png",
+  "kind": "knee",
+  "source": "crops/p109-03.png",
+  "box": [
+   387,
+   677,
+   482,
+   792
+  ],
+  "near": true,
+  "note": "near knee bent, thigh going right from hip",
+  "head_width": 205.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p109-03-13.png",
+  "kind": "seat",
+  "source": "crops/p109-03.png",
+  "box": [
+   177,
+   717,
+   432,
+   832
+  ],
+  "near": true,
+  "note": "buttocks/seat in baggy shorts, resting on chair low at left",
+  "head_width": 205.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-03-13.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-03.png",
+  "box": [
+   187,
+   677,
+   482,
+   882
+  ],
+  "near": true,
+  "note": "near baggy trouser thigh and shin, folds, going down to shoe",
+  "head_width": 205.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-03-14.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-03.png",
+  "box": [
+   457,
+   677,
+   662,
+   892
+  ],
+  "near": false,
+  "note": "far trouser leg, shin angled down to right shoe",
+  "head_width": 205.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p109-04-13.png",
+  "kind": "shoe",
+  "source": "crops/p109-04.png",
+  "box": [
+   387,
+   792,
+   584,
+   892
+  ],
+  "near": true,
+  "note": "shoe in side view, flat sole down, heel left, toe right",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p109-04-14.png",
+  "kind": "shoe",
+  "source": "crops/p109-04.png",
+  "box": [
+   552,
+   767,
+   739,
+   867
+  ],
+  "near": false,
+  "note": "shoe in side view, toe right, sole down, partly behind near leg",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p109-04-24.png",
+  "kind": "hand",
+  "source": "crops/p109-04.png",
+  "box": [
+   197,
+   487,
+   312,
+   567
+  ],
+  "near": true,
+  "note": "near hand lower left holding something, fingers pointing left",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p109-04-25.png",
+  "kind": "hand",
+  "source": "crops/p109-04.png",
+  "box": [
+   427,
+   392,
+   622,
+   522
+  ],
+  "near": false,
+  "note": "far hand reaching right over the keyboard, fingers curled",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p109-04-22.png",
+  "kind": "sleeve",
+  "source": "crops/p109-04.png",
+  "box": [
+   212,
+   362,
+   347,
+   482
+  ],
+  "near": true,
+  "note": "short patterned sleeve of near arm hanging down",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p109-04-23.png",
+  "kind": "sleeve",
+  "source": "crops/p109-04.png",
+  "box": [
+   387,
+   387,
+   472,
+   512
+  ],
+  "near": false,
+  "note": "far arm short sleeve angled forward-right",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p109-04-11.png",
+  "kind": "knee",
+  "source": "crops/p109-04.png",
+  "box": [
+   547,
+   577,
+   712,
+   662
+  ],
+  "near": true,
+  "note": "knee bent, raised, right",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p109-04-14.png",
+  "kind": "seat",
+  "source": "crops/p109-04.png",
+  "box": [
+   317,
+   582,
+   512,
+   702
+  ],
+  "near": true,
+  "note": "buttocks seated on floor, left of the legs",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-04-15.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-04.png",
+  "box": [
+   357,
+   587,
+   652,
+   782
+  ],
+  "near": true,
+  "note": "near leg: thigh going right then shin angled down-left to shoe",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-04-16.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-04.png",
+  "box": [
+   507,
+   597,
+   712,
+   782
+  ],
+  "near": false,
+  "note": "far leg: shin sloping down-left from knee to ankle",
+  "head_width": 204.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p109-05-15.png",
+  "kind": "shoe",
+  "source": "crops/p109-05.png",
+  "box": [
+   374,
+   779,
+   645,
+   895
+  ],
+  "near": true,
+  "note": "shoe in side view, toe right, sole down, flat on ground",
+  "head_width": 175.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p109-05-26.png",
+  "kind": "hand",
+  "source": "crops/p109-05.png",
+  "box": [
+   384,
+   484,
+   480,
+   580
+  ],
+  "near": true,
+  "note": "fist gripping pencil/brush, held up at the canvas on lap",
+  "head_width": 175.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p109-05-24.png",
+  "kind": "sleeve",
+  "source": "crops/p109-05.png",
+  "box": [
+   179,
+   319,
+   370,
+   550
+  ],
+  "near": true,
+  "note": "short patterned sleeve, upper arm hanging down from shoulder to elbow",
+  "head_width": 175.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p109-05-12.png",
+  "kind": "knee",
+  "source": "crops/p109-05.png",
+  "box": [
+   409,
+   589,
+   530,
+   700
+  ],
+  "near": true,
+  "note": "bent knee under thigh, side view, thigh horizontal",
+  "head_width": 175.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p109-05-15.png",
+  "kind": "seat",
+  "source": "crops/p109-05.png",
+  "box": [
+   149,
+   629,
+   330,
+   710
+  ],
+  "near": true,
+  "note": "buttocks on chair at left, side view",
+  "head_width": 175.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-05-17.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-05.png",
+  "box": [
+   229,
+   609,
+   530,
+   750
+  ],
+  "near": true,
+  "note": "thigh horizontal going right, then shin going down to shoe",
+  "head_width": 175.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-05-18.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-05.png",
+  "box": [
+   469,
+   619,
+   620,
+   800
+  ],
+  "near": true,
+  "note": "lower leg near side, angled down and slightly right to shoe",
+  "head_width": 175.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p109-05-19.png",
+  "kind": "trouser_leg",
+  "source": "crops/p109-05.png",
+  "box": [
+   519,
+   599,
+   630,
+   790
+  ],
+  "near": false,
+  "note": "far lower leg partly hidden behind near leg, striped",
+  "head_width": 175.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p110-09-25.png",
+  "kind": "sleeve",
+  "source": "crops/p110-09.png",
+  "box": [
+   101,
+   386,
+   223,
+   503
+  ],
+  "near": true,
+  "note": "dark striped sleeve/forearm angled down-left from shoulder, partly in heavy shadow",
+  "head_width": 147.6,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p110-09-20.png",
+  "kind": "trouser_leg",
+  "source": "crops/p110-09.png",
+  "box": [
+   131,
+   581,
+   408,
+   731
+  ],
+  "near": true,
+  "note": "light trouser leg running from hip at right down-left to knee near bottom-left; crop cuts it off at bottom",
+  "head_width": 147.6,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p110-09-13.png",
+  "kind": "knee",
+  "source": "crops/p110-09.png",
+  "box": [
+   111,
+   601,
+   258,
+   708
+  ],
+  "near": true,
+  "note": "bent knee at lower left, trouser fabric with fold lines",
+  "head_width": 147.6,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p110-09-16.png",
+  "kind": "seat",
+  "source": "crops/p110-09.png",
+  "box": [
+   281,
+   491,
+   418,
+   598
+  ],
+  "near": true,
+  "note": "buttocks/hip area at lower right of striped torso, partly hidden by shadow",
+  "head_width": 147.6,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p110-10-27.png",
+  "kind": "hand",
+  "source": "crops/p110-10.png",
+  "box": [
+   31,
+   806,
+   218,
+   978
+  ],
+  "near": true,
+  "note": "fist gripping a stick, knuckles/fingers toward the left, stick runs up-left from the fist to the panel edge",
+  "head_width": 228.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p110-10-28.png",
+  "kind": "hand",
+  "source": "crops/p110-10.png",
+  "box": [
+   141,
+   936,
+   218,
+   1023
+  ],
+  "near": true,
+  "note": "small thumb or fingers of the lower hand wrapped around the stick end below the fist, partly hidden",
+  "head_width": 228.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p110-10-26.png",
+  "kind": "sleeve",
+  "source": "crops/p110-10.png",
+  "box": [
+   221,
+   776,
+   513,
+   998
+  ],
+  "near": true,
+  "note": "striped shirt sleeve of the near arm running from shoulder down-left to the wrist, forearm angled down-left",
+  "head_width": 228.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p110-10-27.png",
+  "kind": "sleeve",
+  "source": "crops/p110-10.png",
+  "box": [
+   466,
+   686,
+   713,
+   1088
+  ],
+  "near": false,
+  "note": "striped shirt torso and far shoulder/back on the right, vertical stripes",
+  "head_width": 228.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p110-11-16.png",
+  "kind": "shoe",
+  "source": "crops/p110-11.png",
+  "box": [
+   80,
+   550,
+   164,
+   709
+  ],
+  "near": true,
+  "note": "shoe seen from the side/front at left, toe pointing down-left, sole at bottom",
+  "head_width": 151.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p110-11-29.png",
+  "kind": "hand",
+  "source": "crops/p110-11.png",
+  "box": [
+   415,
+   505,
+   514,
+   614
+  ],
+  "near": true,
+  "note": "hand resting on the knee, fingers pointing down-right, partly gripping",
+  "head_width": 151.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p110-11-30.png",
+  "kind": "hand",
+  "source": "crops/p110-11.png",
+  "box": [
+   445,
+   445,
+   514,
+   509
+  ],
+  "near": false,
+  "note": "far hand partly hidden behind panel border at right",
+  "head_width": 151.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p110-11-28.png",
+  "kind": "sleeve",
+  "source": "crops/p110-11.png",
+  "box": [
+   95,
+   275,
+   379,
+   579
+  ],
+  "near": true,
+  "note": "striped shirt torso and sleeve, dark with white stripes, arm hangs down then forearm extends right",
+  "head_width": 151.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p110-11-14.png",
+  "kind": "knee",
+  "source": "crops/p110-11.png",
+  "box": [
+   330,
+   580,
+   449,
+   699
+  ],
+  "near": true,
+  "note": "bent knee at right, trouser leg rising",
+  "head_width": 151.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p110-11-17.png",
+  "kind": "seat",
+  "source": "crops/p110-11.png",
+  "box": [
+   95,
+   550,
+   269,
+   649
+  ],
+  "near": true,
+  "note": "buttocks on floor at left, trousers light",
+  "head_width": 151.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p110-11-21.png",
+  "kind": "trouser_leg",
+  "source": "crops/p110-11.png",
+  "box": [
+   190,
+   560,
+   439,
+   724
+  ],
+  "near": true,
+  "note": "leg extends right from hip to knee, crossed, diagonal fold lines",
+  "head_width": 151.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p110-11-22.png",
+  "kind": "trouser_leg",
+  "source": "crops/p110-11.png",
+  "box": [
+   370,
+   580,
+   509,
+   709
+  ],
+  "near": false,
+  "note": "far leg at right, partly cut by panel border",
+  "head_width": 151.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p110-12-31.png",
+  "kind": "hand",
+  "source": "crops/p110-12.png",
+  "box": [
+   213,
+   186,
+   300,
+   300
+  ],
+  "near": true,
+  "note": "fist/hand propped under chin, fingers curled at left, viewed from the side",
+  "head_width": 136.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p110-12-29.png",
+  "kind": "sleeve",
+  "source": "crops/p110-12.png",
+  "box": [
+   196,
+   311,
+   308,
+   553
+  ],
+  "near": true,
+  "note": "striped sleeve running down from shoulder to elbow, roughly vertical, slightly leaning left",
+  "head_width": 136.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p110-12-18.png",
+  "kind": "seat",
+  "source": "crops/p110-12.png",
+  "box": [
+   321,
+   421,
+   458,
+   548
+  ],
+  "near": false,
+  "note": "dark trouser/back area at right, seated on floor, partly obscured",
+  "head_width": 136.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p110-12-15.png",
+  "kind": "knee",
+  "source": "crops/p110-12.png",
+  "box": [
+   251,
+   511,
+   353,
+   608
+  ],
+  "near": true,
+  "note": "bent knee near bottom centre, rising toward elbow",
+  "head_width": 136.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p110-12-23.png",
+  "kind": "trouser_leg",
+  "source": "crops/p110-12.png",
+  "box": [
+   81,
+   551,
+   348,
+   708
+  ],
+  "near": true,
+  "note": "leg running down-left from knee toward the bottom-left, cropped by the frame",
+  "head_width": 136.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p113-06-32.png",
+  "kind": "hand",
+  "source": "crops/p113-06.png",
+  "box": [
+   555,
+   445,
+   674,
+   559
+  ],
+  "near": true,
+  "note": "hand clenched around lotion/pressing on Calvin's shoulder, fingers pointing right-down",
+  "head_width": 237.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p113-06-19.png",
+  "kind": "seat",
+  "source": "crops/p113-06.png",
+  "box": [
+   70,
+   485,
+   314,
+   794
+  ],
+  "near": true,
+  "note": "shaded buttocks/trouser seat at left, hatched texture, kneeling",
+  "head_width": 237.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p113-06-24.png",
+  "kind": "trouser_leg",
+  "source": "crops/p113-06.png",
+  "box": [
+   70,
+   685,
+   374,
+   864
+  ],
+  "near": true,
+  "note": "lower leg and shin lying along floor from knee at right to foot at left, side view",
+  "head_width": 237.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p113-06-16.png",
+  "kind": "knee",
+  "source": "crops/p113-06.png",
+  "box": [
+   255,
+   705,
+   384,
+   834
+  ],
+  "near": true,
+  "note": "kneeling knee on floor, rounded, right end of the thigh/shin",
+  "head_width": 237.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p113-06-17.png",
+  "kind": "shoe",
+  "source": "crops/p113-06.png",
+  "box": [
+   65,
+   785,
+   194,
+   864
+  ],
+  "near": true,
+  "note": "foot at far left bottom, toe pointing left, sole on floor (barely visible, bare/sock tip)",
+  "head_width": 237.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p113-09-33.png",
+  "kind": "hand",
+  "source": "crops/p113-09.png",
+  "box": [
+   191,
+   666,
+   308,
+   773
+  ],
+  "near": true,
+  "note": "hand reaching down to the ground at left, fingers splayed forward, seen from above",
+  "head_width": 147.8,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p113-09-18.png",
+  "kind": "shoe",
+  "source": "crops/p113-09.png",
+  "box": [
+   281,
+   681,
+   408,
+   798
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, partly hidden by hand",
+  "head_width": 147.8,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p113-09-19.png",
+  "kind": "shoe",
+  "source": "crops/p113-09.png",
+  "box": [
+   421,
+   691,
+   598,
+   803
+  ],
+  "near": false,
+  "note": "shoe on right, toe pointing right, sole down, heel raised",
+  "head_width": 147.8,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p113-09-17.png",
+  "kind": "knee",
+  "source": "crops/p113-09.png",
+  "box": [
+   321,
+   386,
+   478,
+   478
+  ],
+  "near": true,
+  "note": "bent knee raised high at centre, covered by trouser",
+  "head_width": 147.8,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p113-09-20.png",
+  "kind": "seat",
+  "source": "crops/p113-09.png",
+  "box": [
+   481,
+   471,
+   658,
+   698
+  ],
+  "near": true,
+  "note": "buttocks and trouser seat at right, rounded, near ground",
+  "head_width": 147.8,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p113-09-25.png",
+  "kind": "trouser_leg",
+  "source": "crops/p113-09.png",
+  "box": [
+   321,
+   391,
+   498,
+   708
+  ],
+  "near": true,
+  "note": "shin going down from knee to ankle, nearly vertical, dark sock/shadow",
+  "head_width": 147.8,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p113-09-26.png",
+  "kind": "trouser_leg",
+  "source": "crops/p113-09.png",
+  "box": [
+   391,
+   431,
+   648,
+   708
+  ],
+  "near": false,
+  "note": "thigh and shorts bulging right, folded crouch",
+  "head_width": 147.8,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p115-01-30.png",
+  "kind": "sleeve",
+  "source": "crops/p115-01.png",
+  "box": [
+   86,
+   466,
+   228,
+   773
+  ],
+  "near": true,
+  "note": "Short-sleeved upper arm hanging down from shoulder to elbow, seen from the side",
+  "head_width": 220.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p115-01-31.png",
+  "kind": "sleeve",
+  "source": "crops/p115-01.png",
+  "box": [
+   186,
+   686,
+   353,
+   803
+  ],
+  "near": true,
+  "note": "Forearm angled up and right from elbow toward the mug",
+  "head_width": 220.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p115-01-34.png",
+  "kind": "hand",
+  "source": "crops/p115-01.png",
+  "box": [
+   291,
+   621,
+   433,
+   753
+  ],
+  "near": true,
+  "note": "Fist gripping the mug, wrapped around the left side of the mug, fingers curled",
+  "head_width": 220.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p115-01-27.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-01.png",
+  "box": [
+   236,
+   726,
+   523,
+   938
+  ],
+  "near": true,
+  "note": "Near thigh and shin, knee raised and bent, foot on the step",
+  "head_width": 220.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p115-01-28.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-01.png",
+  "box": [
+   476,
+   726,
+   673,
+   938
+  ],
+  "near": false,
+  "note": "Far leg, knee rising at upper left and shin dropping down on the right",
+  "head_width": 220.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p115-01-18.png",
+  "kind": "knee",
+  "source": "crops/p115-01.png",
+  "box": [
+   346,
+   746,
+   533,
+   843
+  ],
+  "near": true,
+  "note": "Near knee, rounded, under the mug",
+  "head_width": 220.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p115-01-21.png",
+  "kind": "seat",
+  "source": "crops/p115-01.png",
+  "box": [
+   86,
+   816,
+   303,
+   938
+  ],
+  "near": true,
+  "note": "Buttocks and back of thigh sitting on the step, at left behind Calvin",
+  "head_width": 220.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p115-01-20.png",
+  "kind": "shoe",
+  "source": "crops/p115-01.png",
+  "box": [
+   166,
+   886,
+   243,
+   938
+  ],
+  "near": true,
+  "note": "Mostly hidden shoe, only a sliver at the baseline",
+  "head_width": 220.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p115-01-21.png",
+  "kind": "shoe",
+  "source": "crops/p115-01.png",
+  "box": [
+   476,
+   876,
+   558,
+   938
+  ],
+  "near": false,
+  "note": "Far shoe, sole on the step, mostly hidden",
+  "head_width": 220.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p115-02-22.png",
+  "kind": "shoe",
+  "source": "crops/p115-02.png",
+  "box": [
+   578,
+   858,
+   821,
+   946
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, on lower step",
+  "head_width": 192.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p115-02-23.png",
+  "kind": "shoe",
+  "source": "crops/p115-02.png",
+  "box": [
+   480,
+   706,
+   603,
+   811
+  ],
+  "near": false,
+  "note": "shoe seen from front/top, two oval lace areas, toe pointing left",
+  "head_width": 192.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p115-02-35.png",
+  "kind": "hand",
+  "source": "crops/p115-02.png",
+  "box": [
+   713,
+   518,
+   783,
+   606
+  ],
+  "near": false,
+  "note": "fist gripping mug side, fingers curled",
+  "head_width": 192.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p115-02-36.png",
+  "kind": "hand",
+  "source": "crops/p115-02.png",
+  "box": [
+   623,
+   513,
+   721,
+   601
+  ],
+  "near": true,
+  "note": "hand wrapped around mug from near side",
+  "head_width": 192.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p115-02-32.png",
+  "kind": "sleeve",
+  "source": "crops/p115-02.png",
+  "box": [
+   558,
+   518,
+   711,
+   661
+  ],
+  "near": true,
+  "note": "shirt sleeve bent at elbow, forearm going right to mug",
+  "head_width": 192.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p115-02-19.png",
+  "kind": "knee",
+  "source": "crops/p115-02.png",
+  "box": [
+   688,
+   628,
+   841,
+   751
+  ],
+  "near": true,
+  "note": "bent knee rising on right, trouser fold",
+  "head_width": 192.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p115-02-22.png",
+  "kind": "seat",
+  "source": "crops/p115-02.png",
+  "box": [
+   588,
+   618,
+   711,
+   731
+  ],
+  "near": true,
+  "note": "buttocks hidden mostly behind thigh, on porch step",
+  "head_width": 192.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p115-02-29.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-02.png",
+  "box": [
+   588,
+   628,
+   852,
+   911
+  ],
+  "near": true,
+  "note": "thigh goes right to knee then shin down to shoe, baggy",
+  "head_width": 192.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p115-02-30.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-02.png",
+  "box": [
+   468,
+   608,
+   791,
+   731
+  ],
+  "near": false,
+  "note": "far leg extends left toward Calvin, ending at shoe",
+  "head_width": 192.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p115-03-37.png",
+  "kind": "hand",
+  "source": "crops/p115-03.png",
+  "box": [
+   346,
+   336,
+   513,
+   553
+  ],
+  "near": true,
+  "note": "hand gripping a mug, fingers curled around handle, mug to the right, upright",
+  "head_width": 219.7,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p115-03-33.png",
+  "kind": "sleeve",
+  "source": "crops/p115-03.png",
+  "box": [
+   136,
+   316,
+   463,
+   733
+  ],
+  "near": true,
+  "note": "short shirt sleeve; upper arm descends left from shoulder to elbow, forearm rises back up to the mug hand",
+  "head_width": 219.7,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p115-03-23.png",
+  "kind": "seat",
+  "source": "crops/p115-03.png",
+  "box": [
+   416,
+   686,
+   568,
+   1053
+  ],
+  "near": true,
+  "note": "buttocks on the step at right, dark trouser mass",
+  "head_width": 219.7,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p115-03-20.png",
+  "kind": "knee",
+  "source": "crops/p115-03.png",
+  "box": [
+   296,
+   746,
+   433,
+   873
+  ],
+  "near": true,
+  "note": "knee bent, pointing left, rounded trousers",
+  "head_width": 219.7,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p115-03-31.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-03.png",
+  "box": [
+   146,
+   726,
+   433,
+   1043
+  ],
+  "near": true,
+  "note": "baggy trouser leg running from hip leftward and down to the foot, shoe not visible",
+  "head_width": 219.7,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p115-04-24.png",
+  "kind": "shoe",
+  "source": "crops/p115-04.png",
+  "box": [
+   243,
+   705,
+   394,
+   774
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, resting on lower step",
+  "head_width": 113.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p115-04-38.png",
+  "kind": "hand",
+  "source": "crops/p115-04.png",
+  "box": [
+   248,
+   443,
+   346,
+   541
+  ],
+  "near": true,
+  "note": "hand at chest/waist height, fingers curled to the right, partly outlined",
+  "head_width": 113.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p115-04-34.png",
+  "kind": "sleeve",
+  "source": "crops/p115-04.png",
+  "box": [
+   198,
+   333,
+   296,
+   506
+  ],
+  "near": true,
+  "note": "shirt sleeve running down along torso beside tie",
+  "head_width": 113.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p115-04-21.png",
+  "kind": "knee",
+  "source": "crops/p115-04.png",
+  "box": [
+   253,
+   543,
+   346,
+   646
+  ],
+  "near": true,
+  "note": "bent knee, thigh rising to the right toward the seat",
+  "head_width": 113.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p115-04-24.png",
+  "kind": "seat",
+  "source": "crops/p115-04.png",
+  "box": [
+   323,
+   513,
+   436,
+   616
+  ],
+  "near": true,
+  "note": "buttocks/hip region seated on step, right of the knee",
+  "head_width": 113.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p115-04-32.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-04.png",
+  "box": [
+   248,
+   538,
+   401,
+   736
+  ],
+  "near": true,
+  "note": "trouser leg bent at knee, shin going down to shoe",
+  "head_width": 113.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p115-06-25.png",
+  "kind": "shoe",
+  "source": "crops/p115-06.png",
+  "box": [
+   290,
+   820,
+   509,
+   924
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down",
+  "head_width": 163.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p115-06-26.png",
+  "kind": "shoe",
+  "source": "crops/p115-06.png",
+  "box": [
+   490,
+   830,
+   669,
+   914
+  ],
+  "near": false,
+  "note": "far shoe partly hidden, toe right, mostly dark",
+  "head_width": 163.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p115-06-39.png",
+  "kind": "hand",
+  "source": "crops/p115-06.png",
+  "box": [
+   315,
+   485,
+   399,
+   604
+  ],
+  "near": true,
+  "note": "fist clenched resting at chest/knee height, knuckles right",
+  "head_width": 163.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p115-06-35.png",
+  "kind": "sleeve",
+  "source": "crops/p115-06.png",
+  "box": [
+   205,
+   460,
+   354,
+   649
+  ],
+  "near": true,
+  "note": "short sleeve and forearm region hanging down from shoulder, arm bent",
+  "head_width": 163.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p115-06-22.png",
+  "kind": "knee",
+  "source": "crops/p115-06.png",
+  "box": [
+   430,
+   590,
+   609,
+   719
+  ],
+  "near": true,
+  "note": "large raised knee, rounded, facing right",
+  "head_width": 163.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p115-06-25.png",
+  "kind": "seat",
+  "source": "crops/p115-06.png",
+  "box": [
+   150,
+   610,
+   329,
+   709
+  ],
+  "near": true,
+  "note": "buttocks on step at left of thigh, partly hidden by shirt",
+  "head_width": 163.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p115-06-33.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-06.png",
+  "box": [
+   290,
+   590,
+   609,
+   859
+  ],
+  "near": true,
+  "note": "thigh going right from hip to knee, shin descending left to ankle",
+  "head_width": 163.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p115-06-34.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-06.png",
+  "box": [
+   490,
+   690,
+   634,
+   839
+  ],
+  "near": false,
+  "note": "far leg, dark, shin descending behind near leg",
+  "head_width": 163.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p115-07-27.png",
+  "kind": "shoe",
+  "source": "crops/p115-07.png",
+  "box": [
+   408,
+   893,
+   656,
+   1006
+  ],
+  "near": true,
+  "note": "shoe in side view, toe right, sole down, resting on the step",
+  "head_width": 197.8,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p115-07-28.png",
+  "kind": "shoe",
+  "source": "crops/p115-07.png",
+  "box": [
+   578,
+   596,
+   709,
+   703
+  ],
+  "near": false,
+  "note": "far foot raised/crossed, shoe in side view, toe right, laces visible",
+  "head_width": 197.8,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p115-07-40.png",
+  "kind": "hand",
+  "source": "crops/p115-07.png",
+  "box": [
+   348,
+   508,
+   486,
+   636
+  ],
+  "near": true,
+  "note": "hand draped fingers down over knee, fingers pointing down-right",
+  "head_width": 197.8,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p115-07-41.png",
+  "kind": "hand",
+  "source": "crops/p115-07.png",
+  "box": [
+   418,
+   383,
+   561,
+   556
+  ],
+  "near": false,
+  "note": "other hand/forearm resting on knee, fingers curled, right of the body",
+  "head_width": 197.8,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p115-07-36.png",
+  "kind": "sleeve",
+  "source": "crops/p115-07.png",
+  "box": [
+   163,
+   298,
+   321,
+   631
+  ],
+  "near": true,
+  "note": "short shirt sleeve, wide, hanging from shoulder down to elbow, light fabric",
+  "head_width": 197.8,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/knee/p115-07-23.png",
+  "kind": "knee",
+  "source": "crops/p115-07.png",
+  "box": [
+   458,
+   558,
+   581,
+   691
+  ],
+  "near": true,
+  "note": "bent knee pointing right, covered by trouser",
+  "head_width": 197.8,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/seat/p115-07-26.png",
+  "kind": "seat",
+  "source": "crops/p115-07.png",
+  "box": [
+   118,
+   628,
+   301,
+   751
+  ],
+  "near": true,
+  "note": "buttocks/seat at left, sitting on the step edge",
+  "head_width": 197.8,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p115-07-35.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-07.png",
+  "box": [
+   188,
+   628,
+   591,
+   821
+  ],
+  "near": true,
+  "note": "near thigh going horizontally right from hip to knee, white trousers with fold lines",
+  "head_width": 197.8,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p115-07-36.png",
+  "kind": "trouser_leg",
+  "source": "crops/p115-07.png",
+  "box": [
+   388,
+   668,
+   676,
+   921
+  ],
+  "near": true,
+  "note": "near lower leg going down from knee to ankle, slightly angled, wide trouser",
+  "head_width": 197.8,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p116-01-29.png",
+  "kind": "shoe",
+  "source": "crops/p116-01.png",
+  "box": [
+   330,
+   1003,
+   477,
+   1094
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, partly hidden by the chair",
+  "head_width": 189.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p116-01-42.png",
+  "kind": "hand",
+  "source": "crops/p116-01.png",
+  "box": [
+   216,
+   568,
+   343,
+   695
+  ],
+  "near": true,
+  "note": "near hand holding the lower edge of the newspaper, fingers curled right",
+  "head_width": 189.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p116-01-43.png",
+  "kind": "hand",
+  "source": "crops/p116-01.png",
+  "box": [
+   366,
+   578,
+   441,
+   674
+  ],
+  "near": false,
+  "note": "far hand gripping the newspaper edge, fingers curled",
+  "head_width": 189.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p116-01-37.png",
+  "kind": "sleeve",
+  "source": "crops/p116-01.png",
+  "box": [
+   92,
+   433,
+   244,
+   633
+  ],
+  "near": true,
+  "note": "short shirt sleeve hanging from shoulder, forearm going forward-right",
+  "head_width": 189.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p116-01-24.png",
+  "kind": "knee",
+  "source": "crops/p116-01.png",
+  "box": [
+   330,
+   651,
+   488,
+   746
+  ],
+  "near": true,
+  "note": "knee in black trousers bent up to the right, side view",
+  "head_width": 189.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p116-01-27.png",
+  "kind": "seat",
+  "source": "crops/p116-01.png",
+  "box": [
+   185,
+   703,
+   280,
+   902
+  ],
+  "near": true,
+  "note": "buttocks and thigh in black trousers sunk in the armchair",
+  "head_width": 189.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p116-01-37.png",
+  "kind": "trouser_leg",
+  "source": "crops/p116-01.png",
+  "box": [
+   211,
+   661,
+   508,
+   1037
+  ],
+  "near": true,
+  "note": "black trouser leg, thigh horizontal then shin going down from knee to ankle",
+  "head_width": 189.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p116-03-38.png",
+  "kind": "sleeve",
+  "source": "crops/p116-03.png",
+  "box": [
+   59,
+   539,
+   530,
+   1010
+  ],
+  "near": true,
+  "note": "patterned sleeve/torso sweeping from the upper left down and right, bent over; low confidence",
+  "head_width": 175.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p116-03-44.png",
+  "kind": "hand",
+  "source": "crops/p116-03.png",
+  "box": [
+   259,
+   919,
+   400,
+   1040
+  ],
+  "near": true,
+  "note": "hand hanging down with fingers pointing down, outline only; low confidence",
+  "head_width": 175.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p116-03-25.png",
+  "kind": "knee",
+  "source": "crops/p116-03.png",
+  "box": [
+   389,
+   779,
+   550,
+   1000
+  ],
+  "near": true,
+  "note": "rounded knee in floral trousers facing right",
+  "head_width": 175.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p116-03-38.png",
+  "kind": "trouser_leg",
+  "source": "crops/p116-03.png",
+  "box": [
+   339,
+   769,
+   550,
+   1010
+  ],
+  "near": true,
+  "note": "floral trouser leg going down from the knee",
+  "head_width": 175.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p116-03-30.png",
+  "kind": "shoe",
+  "source": "crops/p116-03.png",
+  "box": [
+   389,
+   959,
+   630,
+   1100
+  ],
+  "near": true,
+  "note": "black shoe mass at bottom, toe pointing right, sole down; low confidence",
+  "head_width": 175.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p116-03-28.png",
+  "kind": "seat",
+  "source": "crops/p116-03.png",
+  "box": [
+   59,
+   969,
+   310,
+   1120
+  ],
+  "near": true,
+  "note": "floral-patterned buttocks/thigh at the bottom left corner",
+  "head_width": 175.2,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p116-04-45.png",
+  "kind": "hand",
+  "source": "crops/p116-04.png",
+  "box": [
+   233,
+   888,
+   326,
+   966
+  ],
+  "near": true,
+  "note": "hand at lower centre, fingers pointing left-down, resting near the ground",
+  "head_width": 110.5,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p116-04-39.png",
+  "kind": "sleeve",
+  "source": "crops/p116-04.png",
+  "box": [
+   283,
+   753,
+   406,
+   906
+  ],
+  "near": true,
+  "note": "arm and sleeve running down-right from the shoulder, elbow at right edge",
+  "head_width": 110.5,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p116-04-29.png",
+  "kind": "seat",
+  "source": "crops/p116-04.png",
+  "box": [
+   83,
+   813,
+   206,
+   926
+  ],
+  "near": true,
+  "note": "buttocks at left, bent-over posture, trouser seat",
+  "head_width": 110.5,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p116-04-39.png",
+  "kind": "trouser_leg",
+  "source": "crops/p116-04.png",
+  "box": [
+   83,
+   853,
+   306,
+   1006
+  ],
+  "near": true,
+  "note": "trouser leg going down-right toward the black ground area",
+  "head_width": 110.5,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p123-05-46.png",
+  "kind": "hand",
+  "source": "crops/p123-05.png",
+  "box": [
+   44,
+   389,
+   195,
+   580
+  ],
+  "near": true,
+  "note": "hand gripping the lower edge of the open book, fingers curled over the cover, facing left",
+  "head_width": 183.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p123-05-40.png",
+  "kind": "sleeve",
+  "source": "crops/p123-05.png",
+  "box": [
+   189,
+   429,
+   410,
+   630
+  ],
+  "near": true,
+  "note": "rolled shirt sleeve with cuff stripes, upper arm hangs from shoulder, forearm angles down-left to the book",
+  "head_width": 183.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p123-05-31.png",
+  "kind": "shoe",
+  "source": "crops/p123-05.png",
+  "box": [
+   0,
+   689,
+   235,
+   795
+  ],
+  "near": true,
+  "note": "shoe of the crossed leg in side view, toe left, sole down, strap or lace band at right",
+  "head_width": 183.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p123-05-26.png",
+  "kind": "knee",
+  "source": "crops/p123-05.png",
+  "box": [
+   0,
+   689,
+   120,
+   780
+  ],
+  "near": true,
+  "note": "crossed knee at far left, thigh runs left from the hip",
+  "head_width": 183.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p123-05-30.png",
+  "kind": "seat",
+  "source": "crops/p123-05.png",
+  "box": [
+   279,
+   629,
+   440,
+   750
+  ],
+  "near": true,
+  "note": "buttocks and hip on the bed edge at right, partly hidden by bed covers",
+  "head_width": 183.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p123-05-40.png",
+  "kind": "trouser_leg",
+  "source": "crops/p123-05.png",
+  "box": [
+   0,
+   539,
+   390,
+   790
+  ],
+  "near": true,
+  "note": "dark trouser thigh running horizontally left from hip, mostly solid black",
+  "head_width": 183.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p123-05-41.png",
+  "kind": "trouser_leg",
+  "source": "crops/p123-05.png",
+  "box": [
+   84,
+   774,
+   150,
+   935
+  ],
+  "near": false,
+  "note": "lower leg of the other leg, vertical, with shoe at the floor line",
+  "head_width": 183.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p127-05-41.png",
+  "kind": "sleeve",
+  "source": "crops/p127-05.png",
+  "box": [
+   156,
+   391,
+   318,
+   593
+  ],
+  "near": true,
+  "note": "short shirt sleeve of near arm, angled down-left to elbow at lower left, forearm then goes right",
+  "head_width": 147.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p127-05-47.png",
+  "kind": "hand",
+  "source": "crops/p127-05.png",
+  "box": [
+   386,
+   426,
+   473,
+   548
+  ],
+  "near": true,
+  "note": "near hand gripping the book, fingers curled, pointing right-down",
+  "head_width": 147.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p127-05-42.png",
+  "kind": "sleeve",
+  "source": "crops/p127-05.png",
+  "box": [
+   321,
+   266,
+   483,
+   428
+  ],
+  "near": false,
+  "note": "far arm shirt sleeve at upper right, bent down toward the book",
+  "head_width": 147.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p127-05-48.png",
+  "kind": "hand",
+  "source": "crops/p127-05.png",
+  "box": [
+   491,
+   486,
+   598,
+   553
+  ],
+  "near": false,
+  "note": "far hand holding the far edge of the book, fingers visible",
+  "head_width": 147.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p127-05-42.png",
+  "kind": "trouser_leg",
+  "source": "crops/p127-05.png",
+  "box": [
+   381,
+   486,
+   598,
+   698
+  ],
+  "near": true,
+  "note": "solid black trouser leg extending right from the seat, thigh horizontal",
+  "head_width": 147.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p127-05-31.png",
+  "kind": "seat",
+  "source": "crops/p127-05.png",
+  "box": [
+   261,
+   531,
+   408,
+   648
+  ],
+  "near": true,
+  "note": "buttocks mostly hidden in patterned armchair",
+  "head_width": 147.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p127-07-49.png",
+  "kind": "hand",
+  "source": "crops/p127-07.png",
+  "box": [
+   328,
+   493,
+   436,
+   601
+  ],
+  "near": true,
+  "note": "hand gripping/resting on the knee/armrest area, side view pointing right and down",
+  "head_width": 187.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p127-07-43.png",
+  "kind": "sleeve",
+  "source": "crops/p127-07.png",
+  "box": [
+   188,
+   428,
+   311,
+   611
+  ],
+  "near": false,
+  "note": "crumpled loose shirt sleeve/cuff hanging down on the left, thin wrinkled lines",
+  "head_width": 187.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p127-07-32.png",
+  "kind": "seat",
+  "source": "crops/p127-07.png",
+  "box": [
+   53,
+   588,
+   461,
+   711
+  ],
+  "near": true,
+  "note": "black dark-trouser mass of buttocks and thigh seated in armchair, extends right to knee",
+  "head_width": 187.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p127-07-27.png",
+  "kind": "knee",
+  "source": "crops/p127-07.png",
+  "box": [
+   368,
+   598,
+   463,
+   711
+  ],
+  "near": true,
+  "note": "rounded knee at right end of the thigh, in dark trousers",
+  "head_width": 187.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p127-07-43.png",
+  "kind": "trouser_leg",
+  "source": "crops/p127-07.png",
+  "box": [
+   138,
+   678,
+   451,
+   891
+  ],
+  "near": true,
+  "note": "dark trouser lower leg hanging down from knee, mostly solid black",
+  "head_width": 187.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p127-07-32.png",
+  "kind": "shoe",
+  "source": "crops/p127-07.png",
+  "box": [
+   188,
+   848,
+   471,
+   928
+  ],
+  "near": true,
+  "note": "shoe in side view, toe right, sole down, cropped at the bottom of the crop",
+  "head_width": 187.4,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p127-08-50.png",
+  "kind": "hand",
+  "source": "crops/p127-08.png",
+  "box": [
+   180,
+   405,
+   284,
+   549
+  ],
+  "near": true,
+  "note": "left hand gripping left page of open book, fingers curled in front of book, seen from front",
+  "head_width": 152.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p127-08-51.png",
+  "kind": "hand",
+  "source": "crops/p127-08.png",
+  "box": [
+   325,
+   395,
+   409,
+   479
+  ],
+  "near": false,
+  "note": "right hand holding right side of book, fingers curled",
+  "head_width": 152.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p127-08-44.png",
+  "kind": "sleeve",
+  "source": "crops/p127-08.png",
+  "box": [
+   75,
+   460,
+   209,
+   569
+  ],
+  "near": true,
+  "note": "near sleeve and forearm bent at elbow, rolled cuff, heading toward book",
+  "head_width": 152.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p127-08-45.png",
+  "kind": "sleeve",
+  "source": "crops/p127-08.png",
+  "box": [
+   330,
+   385,
+   469,
+   509
+  ],
+  "near": false,
+  "note": "far sleeve going from shoulder down to hand, partly hidden behind book",
+  "head_width": 152.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/seat/p127-08-33.png",
+  "kind": "seat",
+  "source": "crops/p127-08.png",
+  "box": [
+   90,
+   530,
+   269,
+   629
+  ],
+  "near": true,
+  "note": "buttocks/hip area sunk in armchair, partly hidden by chair pattern",
+  "head_width": 152.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/knee/p127-08-28.png",
+  "kind": "knee",
+  "source": "crops/p127-08.png",
+  "box": [
+   370,
+   490,
+   509,
+   589
+  ],
+  "near": false,
+  "note": "knee raised, trouser in black, uncertain crossing",
+  "head_width": 152.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p127-08-44.png",
+  "kind": "trouser_leg",
+  "source": "crops/p127-08.png",
+  "box": [
+   200,
+   490,
+   619,
+   789
+  ],
+  "near": true,
+  "note": "thigh and shin in solid black trousers extending right from hip, lower leg hanging down toward right",
+  "head_width": 152.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p127-08-33.png",
+  "kind": "shoe",
+  "source": "crops/p127-08.png",
+  "box": [
+   378,
+   635,
+   509,
+   724
+  ],
+  "near": true,
+  "note": "shoe in side view, white, toe pointing left, sole down",
+  "head_width": 152.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p137-01-52.png",
+  "kind": "hand",
+  "source": "crops/p137-01.png",
+  "box": [
+   384,
+   484,
+   530,
+   610
+  ],
+  "near": true,
+  "note": "large hand in profile gripping the lower edge of the open book, fingers pointing left",
+  "head_width": 180.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p137-01-53.png",
+  "kind": "hand",
+  "source": "crops/p137-01.png",
+  "box": [
+   309,
+   419,
+   405,
+   555
+  ],
+  "near": false,
+  "note": "other hand on the far side of the book, fingers curled around the left cover edge",
+  "head_width": 180.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p137-01-46.png",
+  "kind": "sleeve",
+  "source": "crops/p137-01.png",
+  "box": [
+   549,
+   529,
+   740,
+   700
+  ],
+  "near": true,
+  "note": "rolled shirt sleeve, forearm running from elbow at right toward the book at left",
+  "head_width": 180.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p137-01-34.png",
+  "kind": "seat",
+  "source": "crops/p137-01.png",
+  "box": [
+   489,
+   589,
+   730,
+   710
+  ],
+  "near": true,
+  "note": "buttocks sunk in armchair, mostly hidden by sleeve and cushion",
+  "head_width": 180.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p137-01-45.png",
+  "kind": "trouser_leg",
+  "source": "crops/p137-01.png",
+  "box": [
+   59,
+   614,
+   580,
+   765
+  ],
+  "near": true,
+  "note": "solid black trouser leg extending left horizontally from hip, thigh and shin merged",
+  "head_width": 180.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p137-01-34.png",
+  "kind": "shoe",
+  "source": "crops/p137-01.png",
+  "box": [
+   184,
+   717,
+   320,
+   765
+  ],
+  "near": true,
+  "note": "black shoe at bottom edge, partly cropped, sole down",
+  "head_width": 180.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p137-01-29.png",
+  "kind": "knee",
+  "source": "crops/p137-01.png",
+  "box": [
+   59,
+   629,
+   180,
+   730
+  ],
+  "near": true,
+  "note": "bent knee at left end of dark trouser mass",
+  "head_width": 180.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p137-02-54.png",
+  "kind": "hand",
+  "source": "crops/p137-02.png",
+  "box": [
+   280,
+   385,
+   384,
+   499
+  ],
+  "near": true,
+  "note": "hand gripping the book, fingers pointing right-down, seen from above",
+  "head_width": 152.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p137-02-55.png",
+  "kind": "hand",
+  "source": "crops/p137-02.png",
+  "box": [
+   120,
+   400,
+   209,
+   479
+  ],
+  "near": false,
+  "note": "small hand resting on chair armrest at left, fingers curled",
+  "head_width": 152.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p137-02-47.png",
+  "kind": "sleeve",
+  "source": "crops/p137-02.png",
+  "box": [
+   150,
+   320,
+   309,
+   519
+  ],
+  "near": true,
+  "note": "shirt sleeve running from shoulder down to elbow then forearm toward the book",
+  "head_width": 152.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p137-02-30.png",
+  "kind": "knee",
+  "source": "crops/p137-02.png",
+  "box": [
+   215,
+   505,
+   344,
+   609
+  ],
+  "near": true,
+  "note": "knee in dotted trousers bent forward, rounded",
+  "head_width": 152.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p137-02-35.png",
+  "kind": "seat",
+  "source": "crops/p137-02.png",
+  "box": [
+   75,
+   490,
+   244,
+   589
+  ],
+  "near": true,
+  "note": "seat/buttocks in dotted trousers sunk in the armchair",
+  "head_width": 152.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p137-02-46.png",
+  "kind": "trouser_leg",
+  "source": "crops/p137-02.png",
+  "box": [
+   320,
+   420,
+   559,
+   689
+  ],
+  "near": true,
+  "note": "large black trouser leg extending right from thigh to shin, partly cut by panel border",
+  "head_width": 152.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p137-02-35.png",
+  "kind": "shoe",
+  "source": "crops/p137-02.png",
+  "box": [
+   330,
+   610,
+   549,
+   709
+  ],
+  "near": true,
+  "note": "shoe/foot area at lower right, side view, toe right-ish, uncertain",
+  "head_width": 152.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p137-03-36.png",
+  "kind": "shoe",
+  "source": "crops/p137-03.png",
+  "box": [
+   495,
+   835,
+   614,
+   1029
+  ],
+  "near": true,
+  "note": "shoe seen from side/below, toe pointing down-left, sole facing left, big oval sole outline",
+  "head_width": 162.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p137-03-37.png",
+  "kind": "shoe",
+  "source": "crops/p137-03.png",
+  "box": [
+   610,
+   830,
+   699,
+   1009
+  ],
+  "near": false,
+  "note": "far shoe partly hidden behind near shoe, side view, toe down-left",
+  "head_width": 162.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p137-03-56.png",
+  "kind": "hand",
+  "source": "crops/p137-03.png",
+  "box": [
+   250,
+   580,
+   489,
+   729
+  ],
+  "near": true,
+  "note": "large near hand stretched right across lap, fingers spread and pointing right, palm down",
+  "head_width": 162.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p137-03-57.png",
+  "kind": "hand",
+  "source": "crops/p137-03.png",
+  "box": [
+   450,
+   590,
+   569,
+   699
+  ],
+  "near": false,
+  "note": "far hand with curled fingers resting near knee, below the book",
+  "head_width": 162.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p137-03-48.png",
+  "kind": "sleeve",
+  "source": "crops/p137-03.png",
+  "box": [
+   180,
+   630,
+   289,
+   769
+  ],
+  "near": true,
+  "note": "cuffed shirt sleeve, forearm resting on the armrest, hanging down from elbow",
+  "head_width": 162.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/knee/p137-03-31.png",
+  "kind": "knee",
+  "source": "crops/p137-03.png",
+  "box": [
+   530,
+   680,
+   669,
+   769
+  ],
+  "near": true,
+  "note": "knee bent, covered by black trousers, raised toward right",
+  "head_width": 162.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/seat/p137-03-36.png",
+  "kind": "seat",
+  "source": "crops/p137-03.png",
+  "box": [
+   90,
+   730,
+   349,
+   829
+  ],
+  "near": true,
+  "note": "hips sunk in the chair, mostly hidden by chair cushion and trousers",
+  "head_width": 162.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p137-03-47.png",
+  "kind": "trouser_leg",
+  "source": "crops/p137-03.png",
+  "box": [
+   355,
+   680,
+   679,
+   929
+  ],
+  "near": true,
+  "note": "solid black trouser leg running from lap right and down to the ankle, thigh nearly horizontal then shin descending",
+  "head_width": 162.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p137-03-48.png",
+  "kind": "trouser_leg",
+  "source": "crops/p137-03.png",
+  "box": [
+   590,
+   710,
+   699,
+   909
+  ],
+  "near": false,
+  "note": "far leg black trouser, mostly hidden behind near leg, descending at right edge",
+  "head_width": 162.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p151-01-38.png",
+  "kind": "shoe",
+  "source": "crops/p151-01.png",
+  "box": [
+   619,
+   944,
+   771,
+   1053
+  ],
+  "near": true,
+  "note": "shoe in side view, toe pointing left, sole down, resting on lower step",
+  "head_width": 196.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p151-01-58.png",
+  "kind": "hand",
+  "source": "crops/p151-01.png",
+  "box": [
+   687,
+   656,
+   814,
+   746
+  ],
+  "near": false,
+  "note": "hand gripping the coffee mug at left, fingers curled around the handle",
+  "head_width": 196.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p151-01-59.png",
+  "kind": "hand",
+  "source": "crops/p151-01.png",
+  "box": [
+   1055,
+   276,
+   1206,
+   471
+  ],
+  "near": true,
+  "note": "hand raised to the face/ear, palm toward head, fingers up",
+  "head_width": 196.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p151-01-49.png",
+  "kind": "sleeve",
+  "source": "crops/p151-01.png",
+  "box": [
+   883,
+   442,
+   1268,
+   820
+  ],
+  "near": true,
+  "note": "dark sweater torso and sleeve, elbow bent out to the right, forearm raised",
+  "head_width": 196.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p151-01-32.png",
+  "kind": "knee",
+  "source": "crops/p151-01.png",
+  "box": [
+   687,
+   723,
+   820,
+   808
+  ],
+  "near": true,
+  "note": "knee bent, pointing left and up, rounded",
+  "head_width": 196.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p151-01-37.png",
+  "kind": "seat",
+  "source": "crops/p151-01.png",
+  "box": [
+   895,
+   773,
+   1114,
+   906
+  ],
+  "near": true,
+  "note": "seated on the step at right, buttocks over the dark step edge",
+  "head_width": 196.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p151-01-49.png",
+  "kind": "trouser_leg",
+  "source": "crops/p151-01.png",
+  "box": [
+   619,
+   736,
+   918,
+   1028
+  ],
+  "near": true,
+  "note": "thigh goes left from hip to knee, then shin drops down to the shoe, loose trouser",
+  "head_width": 196.4,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p151-03-39.png",
+  "kind": "shoe",
+  "source": "crops/p151-03.png",
+  "box": [
+   403,
+   663,
+   656,
+   796
+  ],
+  "near": true,
+  "note": "shoe in side view, toe right, sole facing viewer/up-left, foot raised; large foreground shape",
+  "head_width": 185.2,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p151-03-60.png",
+  "kind": "hand",
+  "source": "crops/p151-03.png",
+  "box": [
+   310,
+   543,
+   436,
+   701
+  ],
+  "near": true,
+  "note": "hand wrapped around mug handle, fingers curled, thumb up",
+  "head_width": 185.2,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p151-03-50.png",
+  "kind": "sleeve",
+  "source": "crops/p151-03.png",
+  "box": [
+   293,
+   428,
+   421,
+   621
+  ],
+  "near": true,
+  "note": "white shirt sleeve hanging down from shoulder to wrist, slightly bent forearm",
+  "head_width": 185.2,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/knee/p151-03-33.png",
+  "kind": "knee",
+  "source": "crops/p151-03.png",
+  "box": [
+   318,
+   678,
+   461,
+   781
+  ],
+  "near": true,
+  "note": "knee of crossed leg, pointing right, under mug hand",
+  "head_width": 185.2,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/seat/p151-03-38.png",
+  "kind": "seat",
+  "source": "crops/p151-03.png",
+  "box": [
+   88,
+   708,
+   311,
+   811
+  ],
+  "near": true,
+  "note": "buttocks and rear of seated trousers on the step at left",
+  "head_width": 185.2,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p151-03-50.png",
+  "kind": "trouser_leg",
+  "source": "crops/p151-03.png",
+  "box": [
+   118,
+   688,
+   441,
+   871
+  ],
+  "near": true,
+  "note": "thigh running roughly horizontal from hip at left to knee at right, light trousers with fold lines",
+  "head_width": 185.2,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p151-03-51.png",
+  "kind": "trouser_leg",
+  "source": "crops/p151-03.png",
+  "box": [
+   388,
+   728,
+   571,
+   941
+  ],
+  "near": false,
+  "note": "lower leg descending diagonally down-right toward the floor at bottom",
+  "head_width": 185.2,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p151-05-61.png",
+  "kind": "hand",
+  "source": "crops/p151-05.png",
+  "box": [
+   162,
+   507,
+   324,
+   652
+  ],
+  "near": true,
+  "note": "gesturing hand, loose fist with fingers pointing left, palm down, sitting in front of belly",
+  "head_width": 201.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p151-05-51.png",
+  "kind": "sleeve",
+  "source": "crops/p151-05.png",
+  "box": [
+   317,
+   367,
+   537,
+   682
+  ],
+  "near": true,
+  "note": "black sleeve of the near arm, upper arm sloping down-right to a bent elbow, forearm returning left",
+  "head_width": 201.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/knee/p151-05-34.png",
+  "kind": "knee",
+  "source": "crops/p151-05.png",
+  "box": [
+   152,
+   677,
+   342,
+   812
+  ],
+  "near": true,
+  "note": "knee rising at lower left, rounded, thigh heading right and up toward the hip",
+  "head_width": 201.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p151-05-52.png",
+  "kind": "trouser_leg",
+  "source": "crops/p151-05.png",
+  "box": [
+   147,
+   677,
+   482,
+   912
+  ],
+  "near": true,
+  "note": "light trouser leg with fold lines, thigh going from the knee at left back toward the hip at right, shin dropping down out of the crop",
+  "head_width": 201.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/seat/p151-05-39.png",
+  "kind": "seat",
+  "source": "crops/p151-05.png",
+  "box": [
+   317,
+   627,
+   492,
+   742
+  ],
+  "near": true,
+  "note": "buttocks and hip region hidden behind the thigh and Calvin, around the junction of torso and thigh",
+  "head_width": 201.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p152-01-40.png",
+  "kind": "shoe",
+  "source": "crops/p152-01.png",
+  "box": [
+   509,
+   994,
+   660,
+   1085
+  ],
+  "near": true,
+  "note": "shoe in side view, toe right, sole down, at bottom right edge of crop",
+  "head_width": 175.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p152-01-62.png",
+  "kind": "hand",
+  "source": "crops/p152-01.png",
+  "box": [
+   384,
+   579,
+   485,
+   670
+  ],
+  "near": false,
+  "note": "far hand gripping newspaper edge, fingers curled around paper",
+  "head_width": 175.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p152-01-63.png",
+  "kind": "hand",
+  "source": "crops/p152-01.png",
+  "box": [
+   344,
+   689,
+   410,
+   745
+  ],
+  "near": true,
+  "note": "near hand resting on knee, fingers pointing right",
+  "head_width": 175.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p152-01-52.png",
+  "kind": "sleeve",
+  "source": "crops/p152-01.png",
+  "box": [
+   184,
+   509,
+   340,
+   770
+  ],
+  "near": true,
+  "note": "near shirt sleeve hanging from shoulder to elbow then forearm angled down-right to wrist",
+  "head_width": 175.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p152-01-35.png",
+  "kind": "knee",
+  "source": "crops/p152-01.png",
+  "box": [
+   284,
+   769,
+   390,
+   860
+  ],
+  "near": true,
+  "note": "near knee, rounded, dotted trousers, pointing up-right",
+  "head_width": 175.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p152-01-40.png",
+  "kind": "seat",
+  "source": "crops/p152-01.png",
+  "box": [
+   189,
+   729,
+   320,
+   840
+  ],
+  "near": true,
+  "note": "buttocks/thigh in dotted trousers sunk in armchair, mostly hidden",
+  "head_width": 175.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p152-01-53.png",
+  "kind": "trouser_leg",
+  "source": "crops/p152-01.png",
+  "box": [
+   389,
+   689,
+   620,
+   1050
+  ],
+  "near": false,
+  "note": "crossed leg in solid black trousers, thigh going right then shin dropping down to shoe",
+  "head_width": 175.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p152-01-54.png",
+  "kind": "trouser_leg",
+  "source": "crops/p152-01.png",
+  "box": [
+   289,
+   769,
+   570,
+   1000
+  ],
+  "near": true,
+  "note": "near leg in dotted trousers, thigh from seat over knee, shin angling down-right",
+  "head_width": 175.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p152-02-41.png",
+  "kind": "shoe",
+  "source": "crops/p152-02.png",
+  "box": [
+   434,
+   929,
+   585,
+   990
+  ],
+  "near": false,
+  "note": "shoe in side view, toe pointing left, sole down, partly hidden by blanket-like cloth at bottom right",
+  "head_width": 176.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p152-02-64.png",
+  "kind": "hand",
+  "source": "crops/p152-02.png",
+  "box": [
+   349,
+   509,
+   455,
+   640
+  ],
+  "near": true,
+  "note": "hand gripping the left edge of the open book, fingers curled around it",
+  "head_width": 176.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p152-02-65.png",
+  "kind": "hand",
+  "source": "crops/p152-02.png",
+  "box": [
+   459,
+   509,
+   535,
+   610
+  ],
+  "near": false,
+  "note": "far hand mostly hidden behind the book, a few fingers visible at its right edge",
+  "head_width": 176.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p152-02-53.png",
+  "kind": "sleeve",
+  "source": "crops/p152-02.png",
+  "box": [
+   204,
+   584,
+   310,
+   705
+  ],
+  "near": true,
+  "note": "shirt sleeve with cuff, forearm angled up to the right toward the book",
+  "head_width": 176.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p152-02-55.png",
+  "kind": "trouser_leg",
+  "source": "crops/p152-02.png",
+  "box": [
+   344,
+   599,
+   595,
+   960
+  ],
+  "near": true,
+  "note": "solid black trouser leg extending right from the lap, then down to the shoe",
+  "head_width": 176.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/knee/p152-02-36.png",
+  "kind": "knee",
+  "source": "crops/p152-02.png",
+  "box": [
+   459,
+   599,
+   575,
+   690
+  ],
+  "near": true,
+  "note": "black knee raised at right, top of the leg behind the book",
+  "head_width": 176.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/seat/p152-02-41.png",
+  "kind": "seat",
+  "source": "crops/p152-02.png",
+  "box": [
+   109,
+   629,
+   350,
+   770
+  ],
+  "near": true,
+  "note": "seat/buttocks hidden in the armchair, lower torso rests on the dotted cushion",
+  "head_width": 176.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p152-04-54.png",
+  "kind": "sleeve",
+  "source": "crops/p152-04.png",
+  "box": [
+   574,
+   459,
+   665,
+   565
+  ],
+  "near": true,
+  "note": "short rolled shirt sleeve on near upper arm, right of the head",
+  "head_width": 168.7,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p152-04-66.png",
+  "kind": "hand",
+  "source": "crops/p152-04.png",
+  "box": [
+   489,
+   509,
+   580,
+   650
+  ],
+  "near": false,
+  "note": "hand gripping a small book/paper in front of chest, fingers pointing down",
+  "head_width": 168.7,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p152-04-42.png",
+  "kind": "shoe",
+  "source": "crops/p152-04.png",
+  "box": [
+   604,
+   614,
+   755,
+   685
+  ],
+  "near": false,
+  "note": "shoe in side view, toe pointing right, sole down, resting on chair seat",
+  "head_width": 168.7,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p152-04-43.png",
+  "kind": "shoe",
+  "source": "crops/p152-04.png",
+  "box": [
+   629,
+   889,
+   819,
+   970
+  ],
+  "near": true,
+  "note": "shoe in side view, toe pointing left, sole down, on floor at lower right",
+  "head_width": 168.7,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p152-04-56.png",
+  "kind": "trouser_leg",
+  "source": "crops/p152-04.png",
+  "box": [
+   534,
+   629,
+   819,
+   870
+  ],
+  "near": true,
+  "note": "large black trouser leg from hip at chair edge toward right, going down to ankle",
+  "head_width": 168.7,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p152-04-37.png",
+  "kind": "knee",
+  "source": "crops/p152-04.png",
+  "box": [
+   729,
+   619,
+   819,
+   730
+  ],
+  "near": true,
+  "note": "knee at right edge of the crop, partly cut off",
+  "head_width": 168.7,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p152-04-42.png",
+  "kind": "seat",
+  "source": "crops/p152-04.png",
+  "box": [
+   449,
+   589,
+   710,
+   730
+  ],
+  "near": true,
+  "note": "buttocks and hip seated at the chair's rear, partly hidden by the chair",
+  "head_width": 168.7,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p168-01-44.png",
+  "kind": "shoe",
+  "source": "crops/p168-01.png",
+  "box": [
+   75,
+   860,
+   401,
+   954
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, partly merged with black chair shadow",
+  "head_width": 154.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p168-01-67.png",
+  "kind": "hand",
+  "source": "crops/p168-01.png",
+  "box": [
+   325,
+   460,
+   434,
+   604
+  ],
+  "near": true,
+  "note": "hand holding book from below, fingers pointing left, thumb up",
+  "head_width": 154.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p168-01-68.png",
+  "kind": "hand",
+  "source": "crops/p168-01.png",
+  "box": [
+   235,
+   410,
+   309,
+   559
+  ],
+  "near": false,
+  "note": "far hand gripping left edge of book, fingers curled, vertical",
+  "head_width": 154.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p168-01-55.png",
+  "kind": "sleeve",
+  "source": "crops/p168-01.png",
+  "box": [
+   530,
+   390,
+   669,
+   604
+  ],
+  "near": true,
+  "note": "upper arm sweater sleeve hanging down along torso, bent at elbow at bottom right, forearm going left",
+  "head_width": 154.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p168-01-56.png",
+  "kind": "sleeve",
+  "source": "crops/p168-01.png",
+  "box": [
+   390,
+   320,
+   509,
+   499
+  ],
+  "near": false,
+  "note": "far arm sleeve with dark shading, running down from shoulder toward the book",
+  "head_width": 154.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p168-01-43.png",
+  "kind": "seat",
+  "source": "crops/p168-01.png",
+  "box": [
+   290,
+   570,
+   629,
+   649
+  ],
+  "near": true,
+  "note": "buttocks and lap hidden in black dark trousers/chair, bottom of sweater at y~600",
+  "head_width": 154.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p168-01-38.png",
+  "kind": "knee",
+  "source": "crops/p168-01.png",
+  "box": [
+   280,
+   575,
+   409,
+   649
+  ],
+  "near": true,
+  "note": "knee hidden in dark trousers beneath sweater hem, left of lap",
+  "head_width": 154.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p168-01-57.png",
+  "kind": "trouser_leg",
+  "source": "crops/p168-01.png",
+  "box": [
+   90,
+   580,
+   429,
+   909
+  ],
+  "near": true,
+  "note": "dark trousers merged with black chair, shin descending to shoe at bottom left",
+  "head_width": 154.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p175-01-57.png",
+  "kind": "sleeve",
+  "source": "crops/p175-01.png",
+  "box": [
+   192,
+   415,
+   342,
+   672
+  ],
+  "near": true,
+  "note": "shirt sleeve of near arm hanging down-left from shoulder, dark patterned, toward paper",
+  "head_width": 202.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p175-01-69.png",
+  "kind": "hand",
+  "source": "crops/p175-01.png",
+  "box": [
+   57,
+   627,
+   162,
+   799
+  ],
+  "near": true,
+  "note": "hand gripping the left edge of the newspaper at bottom left, fingers curled",
+  "head_width": 202.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p175-03-45.png",
+  "kind": "shoe",
+  "source": "crops/p175-03.png",
+  "box": [
+   188,
+   1018,
+   411,
+   1111
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, big rounded",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/shoe/p175-03-46.png",
+  "kind": "shoe",
+  "source": "crops/p175-03.png",
+  "box": [
+   508,
+   1028,
+   628,
+   1111
+  ],
+  "near": false,
+  "note": "shoe toe left, partly cropped at right edge",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/hand/p175-03-70.png",
+  "kind": "hand",
+  "source": "crops/p175-03.png",
+  "box": [
+   323,
+   688,
+   396,
+   776
+  ],
+  "near": true,
+  "note": "hand resting on lap, fingers pointing down toward knee",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/hand/p175-03-71.png",
+  "kind": "hand",
+  "source": "crops/p175-03.png",
+  "box": [
+   533,
+   688,
+   616,
+   771
+  ],
+  "near": false,
+  "note": "hand resting on lap, fingers pointing down-left",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/sleeve/p175-03-58.png",
+  "kind": "sleeve",
+  "source": "crops/p175-03.png",
+  "box": [
+   283,
+   458,
+   396,
+   731
+  ],
+  "near": true,
+  "note": "patterned sleeve running down from shoulder, forearm angled inward to lap",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/sleeve/p175-03-59.png",
+  "kind": "sleeve",
+  "source": "crops/p175-03.png",
+  "box": [
+   528,
+   418,
+   628,
+   731
+  ],
+  "near": false,
+  "note": "patterned sleeve from far shoulder, elbow out at right edge, forearm to lap",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/knee/p175-03-39.png",
+  "kind": "knee",
+  "source": "crops/p175-03.png",
+  "box": [
+   318,
+   818,
+   491,
+   911
+  ],
+  "near": true,
+  "note": "knee, facing viewer, patterned trousers",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/knee/p175-03-40.png",
+  "kind": "knee",
+  "source": "crops/p175-03.png",
+  "box": [
+   468,
+   818,
+   601,
+   911
+  ],
+  "near": false,
+  "note": "knee facing viewer, patterned trousers",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/seat/p175-03-44.png",
+  "kind": "seat",
+  "source": "crops/p175-03.png",
+  "box": [
+   288,
+   743,
+   623,
+   841
+  ],
+  "near": true,
+  "note": "dark seat/thighs area seen from front, mostly solid black",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/trouser_leg/p175-03-58.png",
+  "kind": "trouser_leg",
+  "source": "crops/p175-03.png",
+  "box": [
+   288,
+   818,
+   411,
+   1041
+  ],
+  "near": true,
+  "note": "lower leg going down, mostly black, front view",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/trouser_leg/p175-03-59.png",
+  "kind": "trouser_leg",
+  "source": "crops/p175-03.png",
+  "box": [
+   518,
+   818,
+   623,
+   1051
+  ],
+  "near": false,
+  "note": "lower leg going down, black, cropped at right",
+  "head_width": 190.0,
+  "facing": "front"
+ },
+ {
+  "file": "parts/hand/p175-11-72.png",
+  "kind": "hand",
+  "source": "crops/p175-11.png",
+  "box": [
+   76,
+   351,
+   178,
+   403
+  ],
+  "near": true,
+  "note": "hand pointing left, fingers extended, palm down, resting near bed edge",
+  "head_width": 147.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p175-11-60.png",
+  "kind": "sleeve",
+  "source": "crops/p175-11.png",
+  "box": [
+   171,
+   356,
+   273,
+   553
+  ],
+  "near": true,
+  "note": "sweater sleeve hanging diagonally down from shoulder toward lower left, light-coloured",
+  "head_width": 147.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p175-11-41.png",
+  "kind": "knee",
+  "source": "crops/p175-11.png",
+  "box": [
+   136,
+   406,
+   243,
+   508
+  ],
+  "near": true,
+  "note": "black trouser knee bulge at left, bent",
+  "head_width": 147.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p175-11-45.png",
+  "kind": "seat",
+  "source": "crops/p175-11.png",
+  "box": [
+   321,
+   386,
+   506,
+   568
+  ],
+  "near": true,
+  "note": "black trouser seat and thigh mass at right, bent over",
+  "head_width": 147.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p175-11-60.png",
+  "kind": "trouser_leg",
+  "source": "crops/p175-11.png",
+  "box": [
+   136,
+   406,
+   338,
+   568
+  ],
+  "near": true,
+  "note": "black near thigh/shin going left from seat to knee then down",
+  "head_width": 147.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p175-11-47.png",
+  "kind": "shoe",
+  "source": "crops/p175-11.png",
+  "box": [
+   181,
+   526,
+   273,
+   583
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down",
+  "head_width": 147.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p175-11-48.png",
+  "kind": "shoe",
+  "source": "crops/p175-11.png",
+  "box": [
+   291,
+   566,
+   458,
+   638
+  ],
+  "near": false,
+  "note": "far shoe, toe left, sole down, partly cut off at bottom",
+  "head_width": 147.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p199-01-73.png",
+  "kind": "hand",
+  "source": "crops/p199-01.png",
+  "box": [
+   305,
+   440,
+   441,
+   589
+  ],
+  "near": true,
+  "note": "hand gripping left edge of newspaper, fingers curled over paper facing right, thumb behind",
+  "head_width": 150.7,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p199-01-61.png",
+  "kind": "sleeve",
+  "source": "crops/p199-01.png",
+  "box": [
+   90,
+   420,
+   344,
+   709
+  ],
+  "near": true,
+  "note": "dark shirt back and sleeve mass, filled black, with cuff near wrist at about (305,590)",
+  "head_width": 150.7,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p199-01-74.png",
+  "kind": "hand",
+  "source": "crops/p199-01.png",
+  "box": [
+   535,
+   490,
+   604,
+   584
+  ],
+  "near": false,
+  "note": "far hand partly visible at right edge of newspaper, holding it",
+  "head_width": 150.7,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p199-01-46.png",
+  "kind": "seat",
+  "source": "crops/p199-01.png",
+  "box": [
+   30,
+   680,
+   309,
+   889
+  ],
+  "near": true,
+  "note": "rounded curve of thigh/seat in side view at bottom left of chair, mostly outline",
+  "head_width": 150.7,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p202-03-75.png",
+  "kind": "hand",
+  "source": "crops/p202-03.png",
+  "box": [
+   184,
+   659,
+   276,
+   753
+  ],
+  "near": true,
+  "note": "black-gloved hand gripping tool handle, fist pointing down-left",
+  "head_width": 148.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p202-03-62.png",
+  "kind": "sleeve",
+  "source": "crops/p202-03.png",
+  "box": [
+   226,
+   581,
+   438,
+   713
+  ],
+  "near": true,
+  "note": "striped cuffed sleeve running from shoulder down-left to the glove, bent at elbow",
+  "head_width": 148.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p202-03-63.png",
+  "kind": "sleeve",
+  "source": "crops/p202-03.png",
+  "box": [
+   446,
+   391,
+   593,
+   523
+  ],
+  "near": false,
+  "note": "far arm sleeve seen behind torso, striped cuff pointing up-right",
+  "head_width": 148.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p202-03-47.png",
+  "kind": "seat",
+  "source": "crops/p202-03.png",
+  "box": [
+   461,
+   681,
+   558,
+   788
+  ],
+  "near": true,
+  "note": "rear of dark trousers at right, back bulge",
+  "head_width": 148.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p202-03-61.png",
+  "kind": "trouser_leg",
+  "source": "crops/p202-03.png",
+  "box": [
+   336,
+   711,
+   553,
+   893
+  ],
+  "near": true,
+  "note": "dark filled trousers, legs bent, lower part hidden in snow at bottom",
+  "head_width": 148.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p202-03-42.png",
+  "kind": "knee",
+  "source": "crops/p202-03.png",
+  "box": [
+   341,
+   751,
+   438,
+   848
+  ],
+  "near": true,
+  "note": "bent knee at left edge of trousers",
+  "head_width": 148.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p235-07-49.png",
+  "kind": "shoe",
+  "source": "crops/p235-07.png",
+  "box": [
+   384,
+   704,
+   600,
+   810
+  ],
+  "near": true,
+  "note": "shoe in side view, toe right, sole down, flat on floor",
+  "head_width": 166.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p235-07-76.png",
+  "kind": "hand",
+  "source": "crops/p235-07.png",
+  "box": [
+   184,
+   359,
+   315,
+   490
+  ],
+  "near": true,
+  "note": "hand resting on thigh, pointing right, fingers curled",
+  "head_width": 166.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p235-07-77.png",
+  "kind": "hand",
+  "source": "crops/p235-07.png",
+  "box": [
+   384,
+   334,
+   480,
+   435
+  ],
+  "near": false,
+  "note": "hand gripping right edge of book, thumb up",
+  "head_width": 166.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p235-07-64.png",
+  "kind": "sleeve",
+  "source": "crops/p235-07.png",
+  "box": [
+   44,
+   384,
+   210,
+   480
+  ],
+  "near": true,
+  "note": "rolled/forearm sleeve running horizontally from elbow at left to wrist",
+  "head_width": 166.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p235-07-43.png",
+  "kind": "knee",
+  "source": "crops/p235-07.png",
+  "box": [
+   389,
+   429,
+   510,
+   610
+  ],
+  "near": true,
+  "note": "knee bent, raised at right of thigh, black trousers",
+  "head_width": 166.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p235-07-48.png",
+  "kind": "seat",
+  "source": "crops/p235-07.png",
+  "box": [
+   109,
+   469,
+   270,
+   610
+  ],
+  "near": true,
+  "note": "buttocks sunk in armchair, hidden behind chair arm",
+  "head_width": 166.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p235-07-62.png",
+  "kind": "trouser_leg",
+  "source": "crops/p235-07.png",
+  "box": [
+   179,
+   439,
+   510,
+   740
+  ],
+  "near": true,
+  "note": "black trouser thigh horizontal then shin descending vertically on right",
+  "head_width": 166.9,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p235-08-78.png",
+  "kind": "hand",
+  "source": "crops/p235-08.png",
+  "box": [
+   229,
+   384,
+   345,
+   510
+  ],
+  "near": true,
+  "note": "near hand gripping the lower left of the open paper/book, fingers curled over the edge, seen from above/side",
+  "head_width": 178.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p235-08-79.png",
+  "kind": "hand",
+  "source": "crops/p235-08.png",
+  "box": [
+   409,
+   374,
+   510,
+   445
+  ],
+  "near": false,
+  "note": "far hand holding upper right edge of the paper, fingers pointing right",
+  "head_width": 178.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p235-08-65.png",
+  "kind": "sleeve",
+  "source": "crops/p235-08.png",
+  "box": [
+   84,
+   394,
+   260,
+   495
+  ],
+  "near": true,
+  "note": "near forearm sleeve, striped, extends from elbow at left to wrist, horizontal",
+  "head_width": 178.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p235-08-66.png",
+  "kind": "sleeve",
+  "source": "crops/p235-08.png",
+  "box": [
+   59,
+   194,
+   185,
+   305
+  ],
+  "near": false,
+  "note": "far shoulder/upper arm sleeve at the left edge, behind the torso",
+  "head_width": 178.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p235-08-44.png",
+  "kind": "knee",
+  "source": "crops/p235-08.png",
+  "box": [
+   419,
+   444,
+   540,
+   550
+  ],
+  "near": true,
+  "note": "knee, bent, rounded black trouser top at right",
+  "head_width": 178.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p235-08-49.png",
+  "kind": "seat",
+  "source": "crops/p235-08.png",
+  "box": [
+   219,
+   479,
+   340,
+   610
+  ],
+  "near": true,
+  "note": "buttocks and rear thigh in black trousers, mostly hidden by the chair arm",
+  "head_width": 178.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p235-08-63.png",
+  "kind": "trouser_leg",
+  "source": "crops/p235-08.png",
+  "box": [
+   219,
+   439,
+   540,
+   710
+  ],
+  "near": true,
+  "note": "near leg in solid black trousers, thigh horizontal to the right, shin dropping down at right",
+  "head_width": 178.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p235-08-50.png",
+  "kind": "shoe",
+  "source": "crops/p235-08.png",
+  "box": [
+   504,
+   524,
+   602,
+   655
+  ],
+  "near": true,
+  "note": "shoe in side view, toe pointing right, sole down, tilted",
+  "head_width": 178.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p237-03-50.png",
+  "kind": "seat",
+  "source": "crops/p237-03.png",
+  "box": [
+   79,
+   499,
+   260,
+   700
+  ],
+  "near": true,
+  "note": "rounded buttocks at far left, crouching low, outlined bulge with black trousers fill",
+  "head_width": 167.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p237-03-64.png",
+  "kind": "trouser_leg",
+  "source": "crops/p237-03.png",
+  "box": [
+   129,
+   519,
+   440,
+   710
+  ],
+  "near": true,
+  "note": "solid black trouser mass, thigh running horizontally right from hip toward knee, shin going down to the right",
+  "head_width": 167.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p237-03-45.png",
+  "kind": "knee",
+  "source": "crops/p237-03.png",
+  "box": [
+   339,
+   494,
+   460,
+   610
+  ],
+  "near": true,
+  "note": "knee at right end of black thigh, bent forward",
+  "head_width": 167.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p237-03-67.png",
+  "kind": "sleeve",
+  "source": "crops/p237-03.png",
+  "box": [
+   179,
+   224,
+   480,
+   530
+  ],
+  "near": true,
+  "note": "striped long shirt sleeve and torso, hunched forward, stripes running diagonally down-left; forearm leading to the right",
+  "head_width": 167.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p237-03-80.png",
+  "kind": "hand",
+  "source": "crops/p237-03.png",
+  "box": [
+   444,
+   429,
+   570,
+   555
+  ],
+  "near": true,
+  "note": "near hand gripping the gas can top, fingers curled, pointing right and down",
+  "head_width": 167.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p237-03-81.png",
+  "kind": "hand",
+  "source": "crops/p237-03.png",
+  "box": [
+   484,
+   401,
+   578,
+   465
+  ],
+  "near": false,
+  "note": "far hand raised above the can, fist with fingers curled, holding bag or dollar",
+  "head_width": 167.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p237-03-51.png",
+  "kind": "shoe",
+  "source": "crops/p237-03.png",
+  "box": [
+   84,
+   599,
+   200,
+   700
+  ],
+  "near": false,
+  "note": "partial shoe/heel outline at lower left, side view, sole down; uncertain",
+  "head_width": 167.8,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p245-01-82.png",
+  "kind": "hand",
+  "source": "crops/p245-01.png",
+  "box": [
+   144,
+   683,
+   250,
+   816
+  ],
+  "near": true,
+  "note": "hand gripping the left edge of the open book, fingers curled around the cover, facing left",
+  "head_width": 175.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p245-01-68.png",
+  "kind": "sleeve",
+  "source": "crops/p245-01.png",
+  "box": [
+   294,
+   733,
+   427,
+   866
+  ],
+  "near": true,
+  "note": "striped shirt sleeve, bent forearm angled down-left from elbow toward the book hand",
+  "head_width": 175.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p245-03-69.png",
+  "kind": "sleeve",
+  "source": "crops/p245-03.png",
+  "box": [
+   219,
+   619,
+   320,
+   865
+  ],
+  "near": true,
+  "note": "striped sleeve hanging from shoulder, bent forward at the elbow with a cuff at the bottom",
+  "head_width": 183.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p245-03-83.png",
+  "kind": "hand",
+  "source": "crops/p245-03.png",
+  "box": [
+   309,
+   727,
+   432,
+   882
+  ],
+  "near": true,
+  "note": "hand holding the open book edge, fingers curled at the lower right, seen from the side",
+  "head_width": 183.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p245-03-51.png",
+  "kind": "seat",
+  "source": "crops/p245-03.png",
+  "box": [
+   53,
+   887,
+   245,
+   999
+  ],
+  "near": true,
+  "note": "dark trouser seat at the lower left, partly cropped by the panel border",
+  "head_width": 183.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p245-03-46.png",
+  "kind": "knee",
+  "source": "crops/p245-03.png",
+  "box": [
+   342,
+   877,
+   454,
+   1005
+  ],
+  "near": true,
+  "note": "rounded dark knee at the right end of the thigh, pointing right",
+  "head_width": 183.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p245-03-65.png",
+  "kind": "trouser_leg",
+  "source": "crops/p245-03.png",
+  "box": [
+   53,
+   877,
+   454,
+   1010
+  ],
+  "near": true,
+  "note": "dark thigh running horizontally from the seat to the knee, lower leg and shoe cropped out",
+  "head_width": 183.0,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p112-01-52.png",
+  "kind": "shoe",
+  "source": "crops/p112-01.png",
+  "box": [
+   495,
+   1045,
+   649,
+   1124
+  ],
+  "near": true,
+  "note": "shoe in side view, toe pointing left, sole down, black",
+  "head_width": 150.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p112-01-53.png",
+  "kind": "shoe",
+  "source": "crops/p112-01.png",
+  "box": [
+   590,
+   1030,
+   729,
+   1119
+  ],
+  "near": false,
+  "note": "far shoe, toe pointing right, splayed outward, sole down",
+  "head_width": 150.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p112-01-84.png",
+  "kind": "hand",
+  "source": "crops/p112-01.png",
+  "box": [
+   585,
+   430,
+   714,
+   544
+  ],
+  "near": true,
+  "note": "hands clasped together at chest holding the tie, fingers curled, viewed from front",
+  "head_width": 150.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p112-01-70.png",
+  "kind": "sleeve",
+  "source": "crops/p112-01.png",
+  "box": [
+   400,
+   390,
+   589,
+   609
+  ],
+  "near": true,
+  "note": "white shirt sleeve, upper arm vertical then forearm bent horizontally to cuff at wrist",
+  "head_width": 150.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p112-01-66.png",
+  "kind": "trouser_leg",
+  "source": "crops/p112-01.png",
+  "box": [
+   490,
+   640,
+   649,
+   1094
+  ],
+  "near": true,
+  "note": "near dark trouser leg, straight vertical, slightly wider at the bottom",
+  "head_width": 150.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p112-01-67.png",
+  "kind": "trouser_leg",
+  "source": "crops/p112-01.png",
+  "box": [
+   590,
+   640,
+   709,
+   1084
+  ],
+  "near": false,
+  "note": "far dark trouser leg, behind near one, straight vertical",
+  "head_width": 150.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p113-08-54.png",
+  "kind": "shoe",
+  "source": "crops/p113-08.png",
+  "box": [
+   1407,
+   851,
+   1579,
+   967
+  ],
+  "near": true,
+  "note": "bare foot, side view, toes right, sole down, striding forward",
+  "head_width": 152.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p113-08-55.png",
+  "kind": "shoe",
+  "source": "crops/p113-08.png",
+  "box": [
+   1109,
+   884,
+   1176,
+   959
+  ],
+  "near": false,
+  "note": "bare back foot, toes pointing down/left, heel lifted, narrow",
+  "head_width": 152.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p113-08-85.png",
+  "kind": "hand",
+  "source": "crops/p113-08.png",
+  "box": [
+   1318,
+   626,
+   1394,
+   717
+  ],
+  "near": true,
+  "note": "hand hanging at side, fingers pointing down, brushing shorts",
+  "head_width": 152.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p113-08-68.png",
+  "kind": "trouser_leg",
+  "source": "crops/p113-08.png",
+  "box": [
+   1210,
+   545,
+   1429,
+   734
+  ],
+  "near": true,
+  "note": "baggy shorts, hem at upper thigh, hatched shading on left",
+  "head_width": 152.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/knee/p113-08-47.png",
+  "kind": "knee",
+  "source": "crops/p113-08.png",
+  "box": [
+   1380,
+   770,
+   1469,
+   859
+  ],
+  "near": true,
+  "note": "front leg knee, slightly bent, leg angled forward-right",
+  "head_width": 152.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/knee/p113-08-48.png",
+  "kind": "knee",
+  "source": "crops/p113-08.png",
+  "box": [
+   1170,
+   780,
+   1249,
+   869
+  ],
+  "near": false,
+  "note": "rear leg knee, leg angled back-left",
+  "head_width": 152.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p122-07-56.png",
+  "kind": "shoe",
+  "source": "crops/p122-07.png",
+  "box": [
+   191,
+   751,
+   448,
+   848
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, flat on ground",
+  "head_width": 138.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p122-07-57.png",
+  "kind": "shoe",
+  "source": "crops/p122-07.png",
+  "box": [
+   401,
+   711,
+   633,
+   808
+  ],
+  "near": false,
+  "note": "shoe in side view, toe right, laces visible, sole down",
+  "head_width": 138.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p122-07-71.png",
+  "kind": "sleeve",
+  "source": "crops/p122-07.png",
+  "box": [
+   131,
+   181,
+   398,
+   268
+  ],
+  "near": true,
+  "note": "short white sleeve at upper left of torso, arm bent",
+  "head_width": 138.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p122-07-86.png",
+  "kind": "hand",
+  "source": "crops/p122-07.png",
+  "box": [
+   396,
+   216,
+   498,
+   368
+  ],
+  "near": true,
+  "note": "hand hanging/open, fingers curled, near torso right side",
+  "head_width": 138.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p122-07-52.png",
+  "kind": "seat",
+  "source": "crops/p122-07.png",
+  "box": [
+   171,
+   381,
+   308,
+   488
+  ],
+  "near": true,
+  "note": "rear of shorts at left, bulging back",
+  "head_width": 138.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/knee/p122-07-49.png",
+  "kind": "knee",
+  "source": "crops/p122-07.png",
+  "box": [
+   421,
+   491,
+   548,
+   598
+  ],
+  "near": true,
+  "note": "bent knee pointing right, shorts hem above",
+  "head_width": 138.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p122-07-69.png",
+  "kind": "trouser_leg",
+  "source": "crops/p122-07.png",
+  "box": [
+   181,
+   391,
+   528,
+   628
+  ],
+  "near": true,
+  "note": "white shorts leg running down-right from hip, thigh angled forward",
+  "head_width": 138.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p122-07-70.png",
+  "kind": "trouser_leg",
+  "source": "crops/p122-07.png",
+  "box": [
+   421,
+   531,
+   618,
+   728
+  ],
+  "near": false,
+  "note": "far leg: thigh/shin extending right then down to shoe",
+  "head_width": 138.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p139-03-72.png",
+  "kind": "sleeve",
+  "source": "crops/p139-03.png",
+  "box": [
+   22,
+   611,
+   251,
+   904
+  ],
+  "near": true,
+  "note": "long shirt sleeve hanging from shoulder down to bent elbow, forearm angling right toward the hip",
+  "head_width": 154.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p139-03-87.png",
+  "kind": "hand",
+  "source": "crops/p139-03.png",
+  "box": [
+   132,
+   869,
+   235,
+   1025
+  ],
+  "near": true,
+  "note": "hand at hip level, fingers pointing down, seen from the side",
+  "head_width": 154.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p139-03-71.png",
+  "kind": "trouser_leg",
+  "source": "crops/p139-03.png",
+  "box": [
+   22,
+   890,
+   251,
+   1114
+  ],
+  "near": true,
+  "note": "dark trousers filling the lower left, cropped at the panel bottom; legs not fully visible",
+  "head_width": 154.1,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p142-04-73.png",
+  "kind": "sleeve",
+  "source": "crops/p142-04.png",
+  "box": [
+   353,
+   573,
+   461,
+   971
+  ],
+  "near": true,
+  "note": "white shirt sleeve hanging down at his right side, cuff at bottom around y=940, seen from front",
+  "head_width": 187.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p142-04-74.png",
+  "kind": "sleeve",
+  "source": "crops/p142-04.png",
+  "box": [
+   548,
+   588,
+   623,
+   911
+  ],
+  "near": false,
+  "note": "far side shirt sleeve/arm edge hanging beside torso, right edge of the figure",
+  "head_width": 187.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p142-04-88.png",
+  "kind": "hand",
+  "source": "crops/p142-04.png",
+  "box": [
+   598,
+   768,
+   706,
+   896
+  ],
+  "near": false,
+  "note": "hand gripping a mug at right, fingers curled around the mug, likely his far arm",
+  "head_width": 187.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p142-04-72.png",
+  "kind": "trouser_leg",
+  "source": "crops/p142-04.png",
+  "box": [
+   418,
+   858,
+   611,
+   1106
+  ],
+  "near": true,
+  "note": "dark trousers front view, both legs merged, running off the bottom of the crop",
+  "head_width": 187.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p175-02-75.png",
+  "kind": "sleeve",
+  "source": "crops/p175-02.png",
+  "box": [
+   409,
+   459,
+   650,
+   690
+  ],
+  "near": true,
+  "note": "short sleeve of spotted shirt, upper arm angled down-left to elbow then forearm back right",
+  "head_width": 168.4,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p175-02-89.png",
+  "kind": "hand",
+  "source": "crops/p175-02.png",
+  "box": [
+   519,
+   529,
+   730,
+   670
+  ],
+  "near": true,
+  "note": "hand with fingers curled, palm toward viewer, pointing right",
+  "head_width": 168.4,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p175-02-90.png",
+  "kind": "hand",
+  "source": "crops/p175-02.png",
+  "box": [
+   699,
+   534,
+   880,
+   690
+  ],
+  "near": false,
+  "note": "far hand with spread fingers, palm out, gesturing",
+  "head_width": 168.4,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p175-02-58.png",
+  "kind": "shoe",
+  "source": "crops/p175-02.png",
+  "box": [
+   584,
+   974,
+   790,
+   1070
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down",
+  "head_width": 168.4,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p175-02-73.png",
+  "kind": "trouser_leg",
+  "source": "crops/p175-02.png",
+  "box": [
+   619,
+   729,
+   870,
+   1020
+  ],
+  "near": true,
+  "note": "dark solid black trouser leg hanging vertically",
+  "head_width": 168.4,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p175-02-74.png",
+  "kind": "trouser_leg",
+  "source": "crops/p175-02.png",
+  "box": [
+   409,
+   679,
+   610,
+   1020
+  ],
+  "near": false,
+  "note": "spotted/dotted trouser leg, vertical, left of dark leg",
+  "head_width": 168.4,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/knee/p175-02-50.png",
+  "kind": "knee",
+  "source": "crops/p175-02.png",
+  "box": [
+   579,
+   709,
+   710,
+   810
+  ],
+  "near": true,
+  "note": "knee area under shirt hem, roughly facing viewer",
+  "head_width": 168.4,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p177-10-59.png",
+  "kind": "shoe",
+  "source": "crops/p177-10.png",
+  "box": [
+   341,
+   976,
+   508,
+   1078
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, flat on ground",
+  "head_width": 137.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p177-10-60.png",
+  "kind": "shoe",
+  "source": "crops/p177-10.png",
+  "box": [
+   596,
+   936,
+   758,
+   1073
+  ],
+  "near": false,
+  "note": "shoe in side view, toe pointing right and raised, heel dark, mid-stride",
+  "head_width": 137.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p177-10-91.png",
+  "kind": "hand",
+  "source": "crops/p177-10.png",
+  "box": [
+   461,
+   696,
+   628,
+   808
+  ],
+  "near": true,
+  "note": "hand gripping briefcase handle, mostly hidden by dark cuff and case top",
+  "head_width": 137.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p177-10-76.png",
+  "kind": "sleeve",
+  "source": "crops/p177-10.png",
+  "box": [
+   406,
+   551,
+   618,
+   788
+  ],
+  "near": true,
+  "note": "overcoat sleeve hanging down and bent forward at elbow toward briefcase",
+  "head_width": 137.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p177-10-75.png",
+  "kind": "trouser_leg",
+  "source": "crops/p177-10.png",
+  "box": [
+   376,
+   886,
+   478,
+   1008
+  ],
+  "near": true,
+  "note": "near leg mostly covered by overcoat hem, dark trouser visible above shoe",
+  "head_width": 137.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p177-10-76.png",
+  "kind": "trouser_leg",
+  "source": "crops/p177-10.png",
+  "box": [
+   591,
+   911,
+   688,
+   1008
+  ],
+  "near": false,
+  "note": "far leg dark trouser, slanted forward, behind coat hem and briefcase",
+  "head_width": 137.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p177-11-77.png",
+  "kind": "sleeve",
+  "source": "crops/p177-11.png",
+  "box": [
+   290,
+   625,
+   427,
+   1077
+  ],
+  "near": true,
+  "note": "coat sleeve hanging straight down along the body on the viewer's left, cuff at the bottom",
+  "head_width": 201.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p177-11-78.png",
+  "kind": "sleeve",
+  "source": "crops/p177-11.png",
+  "box": [
+   667,
+   625,
+   783,
+   1047
+  ],
+  "near": false,
+  "note": "coat sleeve on the right side hanging down, slightly bent at the elbow, cuff near the bottom",
+  "head_width": 201.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p177-11-61.png",
+  "kind": "shoe",
+  "source": "crops/p177-11.png",
+  "box": [
+   290,
+   1045,
+   421,
+   1117
+  ],
+  "near": true,
+  "note": "dark shoe, mostly cut off by the panel border, seen from the front/three-quarter, sole down",
+  "head_width": 201.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p177-11-92.png",
+  "kind": "hand",
+  "source": "crops/p177-11.png",
+  "box": [
+   667,
+   1002,
+   757,
+   1112
+  ],
+  "near": false,
+  "note": "dark shape at the bottom of the right sleeve, possibly hand or shoe, mostly cropped by the panel border",
+  "head_width": 201.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p186-07-62.png",
+  "kind": "shoe",
+  "source": "crops/p186-07.png",
+  "box": [
+   614,
+   877,
+   772,
+   1012
+  ],
+  "near": true,
+  "note": "shoe in side view, toe pointing up-right, lifted forward foot, sole angled",
+  "head_width": 167.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p186-07-63.png",
+  "kind": "shoe",
+  "source": "crops/p186-07.png",
+  "box": [
+   319,
+   932,
+   517,
+   1008
+  ],
+  "near": false,
+  "note": "low flat shoe in side view, toe left, sole down, trailing foot",
+  "head_width": 167.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/hand/p186-07-93.png",
+  "kind": "hand",
+  "source": "crops/p186-07.png",
+  "box": [
+   557,
+   509,
+   668,
+   638
+  ],
+  "near": true,
+  "note": "hand hanging at side, fingers curled, pointing down-right, knuckles forward",
+  "head_width": 167.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/sleeve/p186-07-79.png",
+  "kind": "sleeve",
+  "source": "crops/p186-07.png",
+  "box": [
+   414,
+   204,
+   630,
+   530
+  ],
+  "near": true,
+  "note": "light shirt torso and short rolled sleeve ending at cuff near wrist, arm hanging down along body",
+  "head_width": 167.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/knee/p186-07-51.png",
+  "kind": "knee",
+  "source": "crops/p186-07.png",
+  "box": [
+   534,
+   709,
+   660,
+   840
+  ],
+  "near": true,
+  "note": "front leg knee, slightly bent, trouser fabric",
+  "head_width": 167.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/seat/p186-07-53.png",
+  "kind": "seat",
+  "source": "crops/p186-07.png",
+  "box": [
+   409,
+   489,
+   550,
+   630
+  ],
+  "near": true,
+  "note": "buttocks under shirt hem, trousers dark, behind",
+  "head_width": 167.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p186-07-77.png",
+  "kind": "trouser_leg",
+  "source": "crops/p186-07.png",
+  "box": [
+   519,
+   589,
+   700,
+   960
+  ],
+  "near": true,
+  "note": "front leg dark trouser, angled down-right with cuff above lifted shoe",
+  "head_width": 167.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/trouser_leg/p186-07-78.png",
+  "kind": "trouser_leg",
+  "source": "crops/p186-07.png",
+  "box": [
+   344,
+   579,
+   550,
+   955
+  ],
+  "near": false,
+  "note": "rear leg dark trouser, angled down-left, cuff at ankle",
+  "head_width": 167.3,
+  "facing": "right"
+ },
+ {
+  "file": "parts/shoe/p186-09-64.png",
+  "kind": "shoe",
+  "source": "crops/p186-09.png",
+  "box": [
+   91,
+   941,
+   243,
+   1005
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down",
+  "head_width": 139.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p186-09-65.png",
+  "kind": "shoe",
+  "source": "crops/p186-09.png",
+  "box": [
+   216,
+   936,
+   340,
+   1000
+  ],
+  "near": false,
+  "note": "far shoe in side view, toe right, partly behind near shoe",
+  "head_width": 139.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p186-09-94.png",
+  "kind": "hand",
+  "source": "crops/p186-09.png",
+  "box": [
+   229,
+   271,
+   318,
+   398
+  ],
+  "near": true,
+  "note": "fist with thumb up held at chest, outlined in white",
+  "head_width": 139.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p186-09-95.png",
+  "kind": "hand",
+  "source": "crops/p186-09.png",
+  "box": [
+   376,
+   491,
+   438,
+   556
+  ],
+  "near": false,
+  "note": "far hand at right, resting on or gripping door edge",
+  "head_width": 139.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p186-09-80.png",
+  "kind": "sleeve",
+  "source": "crops/p186-09.png",
+  "box": [
+   53,
+   261,
+   243,
+   488
+  ],
+  "near": true,
+  "note": "white short sleeve, forearm folded across torso",
+  "head_width": 139.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p186-09-81.png",
+  "kind": "sleeve",
+  "source": "crops/p186-09.png",
+  "box": [
+   281,
+   271,
+   428,
+   503
+  ],
+  "near": false,
+  "note": "dark sleeve of far arm hanging down to right, filled black",
+  "head_width": 139.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p186-09-79.png",
+  "kind": "trouser_leg",
+  "source": "crops/p186-09.png",
+  "box": [
+   101,
+   561,
+   298,
+   968
+  ],
+  "near": true,
+  "note": "dark trouser, straight vertical, black fill",
+  "head_width": 139.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p186-09-80.png",
+  "kind": "trouser_leg",
+  "source": "crops/p186-09.png",
+  "box": [
+   191,
+   561,
+   308,
+   958
+  ],
+  "near": false,
+  "note": "far leg overlapped by near leg, black fill",
+  "head_width": 139.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p186-09-54.png",
+  "kind": "seat",
+  "source": "crops/p186-09.png",
+  "box": [
+   66,
+   511,
+   238,
+   608
+  ],
+  "near": true,
+  "note": "back of hips at left edge of trousers, covered by shirt hem",
+  "head_width": 139.3,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p186-10-66.png",
+  "kind": "shoe",
+  "source": "crops/p186-10.png",
+  "box": [
+   309,
+   936,
+   483,
+   1003
+  ],
+  "near": true,
+  "note": "shoe in side view, toe pointing right, sole down, black",
+  "head_width": 142.2,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p186-10-67.png",
+  "kind": "shoe",
+  "source": "crops/p186-10.png",
+  "box": [
+   239,
+   936,
+   328,
+   1003
+  ],
+  "near": false,
+  "note": "far shoe mostly hidden behind near one, toe pointing left/right ambiguous, sole down",
+  "head_width": 142.2,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p186-10-96.png",
+  "kind": "hand",
+  "source": "crops/p186-10.png",
+  "box": [
+   446,
+   301,
+   558,
+   393
+  ],
+  "near": true,
+  "note": "hand reaching up/forward against door frame, fingers spread upward-right, seen from back",
+  "head_width": 142.2,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p186-10-82.png",
+  "kind": "sleeve",
+  "source": "crops/p186-10.png",
+  "box": [
+   226,
+   246,
+   538,
+   478
+  ],
+  "near": true,
+  "note": "white shirt sleeve, upper arm bulging at left back, forearm bent up toward door, cuff at wrist near 490,380",
+  "head_width": 142.2,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/seat/p186-10-55.png",
+  "kind": "seat",
+  "source": "crops/p186-10.png",
+  "box": [
+   241,
+   491,
+   428,
+   628
+  ],
+  "near": true,
+  "note": "buttocks/hips under shirt tail, black trousers, back view",
+  "head_width": 142.2,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p186-10-81.png",
+  "kind": "trouser_leg",
+  "source": "crops/p186-10.png",
+  "box": [
+   239,
+   531,
+   428,
+   968
+  ],
+  "near": true,
+  "note": "black trouser legs together, back view, straight down to shoes",
+  "head_width": 142.2,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p186-10-82.png",
+  "kind": "trouser_leg",
+  "source": "crops/p186-10.png",
+  "box": [
+   391,
+   421,
+   508,
+   868
+  ],
+  "near": false,
+  "note": "far side black trouser merging with dark doorway, partly hidden",
+  "head_width": 142.2,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p191-11-97.png",
+  "kind": "hand",
+  "source": "crops/p191-11.png",
+  "box": [
+   134,
+   89,
+   260,
+   245
+  ],
+  "near": true,
+  "note": "dark mitten-like fist/hand at end of outstretched left arm, thumb up, mostly black",
+  "head_width": 182.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p191-11-83.png",
+  "kind": "sleeve",
+  "source": "crops/p191-11.png",
+  "box": [
+   219,
+   119,
+   480,
+   250
+  ],
+  "near": true,
+  "note": "red jacket sleeve of arm stretched horizontally left, tapering to cuff at wrist",
+  "head_width": 182.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p191-11-84.png",
+  "kind": "sleeve",
+  "source": "crops/p191-11.png",
+  "box": [
+   529,
+   29,
+   725,
+   340
+  ],
+  "near": false,
+  "note": "far arm sleeve rising to upper right, cropped at panel edge",
+  "head_width": 182.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p191-11-68.png",
+  "kind": "shoe",
+  "source": "crops/p191-11.png",
+  "box": [
+   344,
+   599,
+   490,
+   690
+  ],
+  "near": true,
+  "note": "dark shoe, toe pointing left, sole down, half buried in snow, black mass",
+  "head_width": 182.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p191-11-69.png",
+  "kind": "shoe",
+  "source": "crops/p191-11.png",
+  "box": [
+   589,
+   629,
+   720,
+   710
+  ],
+  "near": false,
+  "note": "far shoe mostly hidden by snow, toe right, black",
+  "head_width": 182.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p191-11-83.png",
+  "kind": "trouser_leg",
+  "source": "crops/p191-11.png",
+  "box": [
+   404,
+   449,
+   550,
+   675
+  ],
+  "near": true,
+  "note": "black trouser leg, wide stance, going down-left to near shoe",
+  "head_width": 182.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p191-11-84.png",
+  "kind": "trouser_leg",
+  "source": "crops/p191-11.png",
+  "box": [
+   529,
+   449,
+   710,
+   670
+  ],
+  "near": false,
+  "note": "black trouser leg going down-right to far foot, with snow gaps",
+  "head_width": 182.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/knee/p191-11-52.png",
+  "kind": "knee",
+  "source": "crops/p191-11.png",
+  "box": [
+   409,
+   509,
+   510,
+   610
+  ],
+  "near": true,
+  "note": "near knee bent outward in black trousers, approximate",
+  "head_width": 182.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p202-01-98.png",
+  "kind": "hand",
+  "source": "crops/p202-01.png",
+  "box": [
+   307,
+   584,
+   410,
+   700
+  ],
+  "near": true,
+  "note": "black mitten gripping shovel handle end, left side",
+  "head_width": 167.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p202-01-99.png",
+  "kind": "hand",
+  "source": "crops/p202-01.png",
+  "box": [
+   704,
+   754,
+   815,
+   870
+  ],
+  "near": false,
+  "note": "black mitten gripping shovel shaft at lower right",
+  "head_width": 167.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p202-01-85.png",
+  "kind": "sleeve",
+  "source": "crops/p202-01.png",
+  "box": [
+   324,
+   419,
+   510,
+   790
+  ],
+  "near": true,
+  "note": "bulky light sleeve and shoulder hunched at left, arm reaching down-left to shovel",
+  "head_width": 167.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p202-01-86.png",
+  "kind": "sleeve",
+  "source": "crops/p202-01.png",
+  "box": [
+   649,
+   579,
+   810,
+   830
+  ],
+  "near": false,
+  "note": "far arm sleeve hanging down right side, cuff at glove",
+  "head_width": 167.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p202-01-85.png",
+  "kind": "trouser_leg",
+  "source": "crops/p202-01.png",
+  "box": [
+   394,
+   749,
+   730,
+   1045
+  ],
+  "near": true,
+  "note": "dark trousers as one solid black mass, legs merged, front view slightly angled",
+  "head_width": 167.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p202-02-100.png",
+  "kind": "hand",
+  "source": "crops/p202-02.png",
+  "box": [
+   308,
+   588,
+   421,
+   671
+  ],
+  "near": false,
+  "note": "gloved hand gripping top of shovel handle, fingers curled over, right of torso",
+  "head_width": 184.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p202-02-87.png",
+  "kind": "sleeve",
+  "source": "crops/p202-02.png",
+  "box": [
+   278,
+   628,
+   476,
+   781
+  ],
+  "near": true,
+  "note": "bulky puffy coat sleeve forming a loop from elbow back toward shovel handle",
+  "head_width": 184.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/trouser_leg/p202-02-86.png",
+  "kind": "trouser_leg",
+  "source": "crops/p202-02.png",
+  "box": [
+   48,
+   928,
+   221,
+   1091
+  ],
+  "near": true,
+  "note": "solid black trouser leg, vertical, cropped at bottom of panel, no shoe visible",
+  "head_width": 184.1,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p208-05-88.png",
+  "kind": "sleeve",
+  "source": "crops/p208-05.png",
+  "box": [
+   59,
+   629,
+   225,
+   785
+  ],
+  "near": true,
+  "note": "near suit sleeve, upper arm hanging then forearm angled right toward the papers",
+  "head_width": 172.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/hand/p208-05-101.png",
+  "kind": "hand",
+  "source": "crops/p208-05.png",
+  "box": [
+   189,
+   709,
+   310,
+   800
+  ],
+  "near": true,
+  "note": "hand holding papers at lower centre, fingers pointing right",
+  "head_width": 172.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/sleeve/p208-05-89.png",
+  "kind": "sleeve",
+  "source": "crops/p208-05.png",
+  "box": [
+   204,
+   589,
+   295,
+   720
+  ],
+  "near": false,
+  "note": "far sleeve/forearm beside tie, narrow, angled down-right",
+  "head_width": 172.0,
+  "facing": "three_quarter_right"
+ },
+ {
+  "file": "parts/shoe/p217-09-70.png",
+  "kind": "shoe",
+  "source": "crops/p217-09.png",
+  "box": [
+   267,
+   948,
+   386,
+   999
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, white highlights",
+  "head_width": 160.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p217-09-71.png",
+  "kind": "shoe",
+  "source": "crops/p217-09.png",
+  "box": [
+   367,
+   938,
+   485,
+   1004
+  ],
+  "near": false,
+  "note": "far shoe, side view, toe pointing right, partly behind near leg",
+  "head_width": 160.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p217-09-102.png",
+  "kind": "hand",
+  "source": "crops/p217-09.png",
+  "box": [
+   19,
+   466,
+   145,
+   580
+  ],
+  "near": true,
+  "note": "hand gripping door knob/handle, fingers curled left, four knuckles visible",
+  "head_width": 160.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p217-09-90.png",
+  "kind": "sleeve",
+  "source": "crops/p217-09.png",
+  "box": [
+   100,
+   262,
+   276,
+   533
+  ],
+  "near": true,
+  "note": "dark suit sleeve running down and left from shoulder, bent at elbow, forearm reaching toward door",
+  "head_width": 160.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p217-09-87.png",
+  "kind": "trouser_leg",
+  "source": "crops/p217-09.png",
+  "box": [
+   252,
+   576,
+   501,
+   972
+  ],
+  "near": true,
+  "note": "dark trousers, both legs merged as a black mass, straight and vertical",
+  "head_width": 160.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/seat/p217-09-56.png",
+  "kind": "seat",
+  "source": "crops/p217-09.png",
+  "box": [
+   340,
+   560,
+   501,
+   689
+  ],
+  "near": true,
+  "note": "back of trousers/jacket hem at right, merged into black mass",
+  "head_width": 160.0,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p237-01-72.png",
+  "kind": "shoe",
+  "source": "crops/p237-01.png",
+  "box": [
+   482,
+   967,
+   617,
+   1057
+  ],
+  "near": true,
+  "note": "shoe in side view, toe pointing left, sole down, dark",
+  "head_width": 128.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p237-01-73.png",
+  "kind": "shoe",
+  "source": "crops/p237-01.png",
+  "box": [
+   682,
+   952,
+   857,
+   1017
+  ],
+  "near": false,
+  "note": "shoe in side view, toe pointing right, partly white outlined",
+  "head_width": 128.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p237-01-103.png",
+  "kind": "hand",
+  "source": "crops/p237-01.png",
+  "box": [
+   697,
+   632,
+   782,
+   727
+  ],
+  "near": true,
+  "note": "hand gripping top of gas can handle, hanging at side",
+  "head_width": 128.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p237-01-91.png",
+  "kind": "sleeve",
+  "source": "crops/p237-01.png",
+  "box": [
+   682,
+   292,
+   797,
+   497
+  ],
+  "near": true,
+  "note": "short striped sleeve ending above the elbow, shoulder to mid-upper arm",
+  "head_width": 128.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p237-01-57.png",
+  "kind": "seat",
+  "source": "crops/p237-01.png",
+  "box": [
+   692,
+   562,
+   777,
+   647
+  ],
+  "near": true,
+  "note": "buttocks hidden by shirt hem and dark trousers, to the right of torso",
+  "head_width": 128.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p237-01-88.png",
+  "kind": "trouser_leg",
+  "source": "crops/p237-01.png",
+  "box": [
+   512,
+   582,
+   727,
+   997
+  ],
+  "near": true,
+  "note": "dark near leg, straight, angled slightly left down to shoe",
+  "head_width": 128.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p237-01-89.png",
+  "kind": "trouser_leg",
+  "source": "crops/p237-01.png",
+  "box": [
+   692,
+   582,
+   797,
+   967
+  ],
+  "near": false,
+  "note": "far leg mostly hidden behind gas can, dark, straight down",
+  "head_width": 128.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p245-13-74.png",
+  "kind": "shoe",
+  "source": "crops/p245-13.png",
+  "box": [
+   555,
+   1004,
+   735,
+   1088
+  ],
+  "near": true,
+  "note": "shoe in side view, toe left, sole down, flat wide",
+  "head_width": 172.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p245-13-75.png",
+  "kind": "shoe",
+  "source": "crops/p245-13.png",
+  "box": [
+   702,
+   999,
+   800,
+   1075
+  ],
+  "near": false,
+  "note": "shoe in side view, toe right, sole down, partly behind near shoe",
+  "head_width": 172.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p245-13-92.png",
+  "kind": "sleeve",
+  "source": "crops/p245-13.png",
+  "box": [
+   480,
+   382,
+   615,
+   496
+  ],
+  "near": true,
+  "note": "short striped sleeve, elbow bent out to left, forearm going down into pocket",
+  "head_width": 172.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p245-13-93.png",
+  "kind": "sleeve",
+  "source": "crops/p245-13.png",
+  "box": [
+   707,
+   371,
+   811,
+   506
+  ],
+  "near": false,
+  "note": "short sleeve on far arm, elbow out to right",
+  "head_width": 172.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p245-13-104.png",
+  "kind": "hand",
+  "source": "crops/p245-13.png",
+  "box": [
+   549,
+   544,
+   612,
+   613
+  ],
+  "near": true,
+  "note": "hand tucked into trouser pocket, mostly hidden",
+  "head_width": 172.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/seat/p245-13-58.png",
+  "kind": "seat",
+  "source": "crops/p245-13.png",
+  "box": [
+   712,
+   568,
+   792,
+   675
+  ],
+  "near": false,
+  "note": "rear/buttocks bulge of dark trousers at right",
+  "head_width": 172.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p245-13-90.png",
+  "kind": "trouser_leg",
+  "source": "crops/p245-13.png",
+  "box": [
+   557,
+   579,
+   700,
+   1040
+  ],
+  "near": true,
+  "note": "long straight dark trouser leg, hanging, baggy folds at left edge",
+  "head_width": 172.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p245-13-91.png",
+  "kind": "trouser_leg",
+  "source": "crops/p245-13.png",
+  "box": [
+   679,
+   579,
+   792,
+   1040
+  ],
+  "near": false,
+  "note": "far trouser leg, mostly merged with near leg as solid black",
+  "head_width": 172.0,
+  "facing": "left"
+ },
+ {
+  "file": "parts/shoe/p245-15-76.png",
+  "kind": "shoe",
+  "source": "crops/p245-15.png",
+  "box": [
+   479,
+   964,
+   616,
+   1055
+  ],
+  "near": true,
+  "note": "shoe in side view, toe pointing left, sole down, large rounded",
+  "head_width": 116.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/shoe/p245-15-77.png",
+  "kind": "shoe",
+  "source": "crops/p245-15.png",
+  "box": [
+   603,
+   974,
+   724,
+   1044
+  ],
+  "near": false,
+  "note": "shoe in side view, toe pointing right, partly behind other shoe",
+  "head_width": 116.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p245-15-105.png",
+  "kind": "hand",
+  "source": "crops/p245-15.png",
+  "box": [
+   680,
+   623,
+   779,
+   719
+  ],
+  "near": true,
+  "note": "open hand hanging at side, fingers pointing right and slightly down, thumb towards the body",
+  "head_width": 116.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p245-15-94.png",
+  "kind": "sleeve",
+  "source": "crops/p245-15.png",
+  "box": [
+   633,
+   262,
+   765,
+   481
+  ],
+  "near": true,
+  "note": "short striped sleeve on right of image, ending mid-upper-arm with ragged cuff",
+  "head_width": 116.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/sleeve/p245-15-95.png",
+  "kind": "sleeve",
+  "source": "crops/p245-15.png",
+  "box": [
+   556,
+   282,
+   667,
+   543
+  ],
+  "near": false,
+  "note": "striped shirt body/left sleeve, hanging down on left of image",
+  "head_width": 116.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p245-15-92.png",
+  "kind": "trouser_leg",
+  "source": "crops/p245-15.png",
+  "box": [
+   546,
+   561,
+   636,
+   987
+  ],
+  "near": false,
+  "note": "dark filled trouser leg, vertical, slightly widening to the hem",
+  "head_width": 116.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/trouser_leg/p245-15-93.png",
+  "kind": "trouser_leg",
+  "source": "crops/p245-15.png",
+  "box": [
+   623,
+   592,
+   729,
+   987
+  ],
+  "near": true,
+  "note": "dark filled trouser leg, vertical, with a ragged right edge",
+  "head_width": 116.1,
+  "facing": "three_quarter_left"
+ },
+ {
+  "file": "parts/hand/p249-06-106.png",
+  "kind": "hand",
+  "source": "crops/p249-06.png",
+  "box": [
+   502,
+   189,
+   687,
+   307
+  ],
+  "near": true,
+  "note": "raised hand spread over eyes and forehead, fingers pointing right, thumb at left near x 515",
+  "head_width": 179.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p249-06-96.png",
+  "kind": "sleeve",
+  "source": "crops/p249-06.png",
+  "box": [
+   353,
+   379,
+   492,
+   466
+  ],
+  "near": true,
+  "note": "short sleeve cuff of the raised arm, elbow pointing left, bare forearm rises up-right to the face",
+  "head_width": 179.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/sleeve/p249-06-97.png",
+  "kind": "sleeve",
+  "source": "crops/p249-06.png",
+  "box": [
+   707,
+   543,
+   820,
+   728
+  ],
+  "near": false,
+  "note": "rolled/short sleeve of the hanging arm at right, bunched folds",
+  "head_width": 179.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/hand/p249-06-107.png",
+  "kind": "hand",
+  "source": "crops/p249-06.png",
+  "box": [
+   748,
+   871,
+   836,
+   984
+  ],
+  "near": false,
+  "note": "hanging hand at right edge, relaxed, partly cut off by the panel border",
+  "head_width": 179.1,
+  "facing": "left"
+ },
+ {
+  "file": "parts/trouser_leg/p249-06-94.png",
+  "kind": "trouser_leg",
+  "source": "crops/p249-06.png",
+  "box": [
+   512,
+   727,
+   748,
+   1107
+  ],
+  "near": true,
+  "note": "dark trousers, both legs merged into one black mass, front view legs straight down; knees, feet and shoes cut off/not visible",
+  "head_width": 179.1,
+  "facing": "left"
+ }
+]

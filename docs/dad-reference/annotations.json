@@ -1,0 +1,10097 @@
+[
+ {
+  "is_dad": true,
+  "head_back": [
+   410,
+   725
+  ],
+  "head_front": [
+   120,
+   740
+  ],
+  "joints": {
+   "shoulder": [
+    530,
+    820
+   ],
+   "elbow": [
+    570,
+    1190
+   ],
+   "wrist": [
+    260,
+    1250
+   ],
+   "fingertips": [
+    110,
+    1300
+   ],
+   "hip": [
+    880,
+    1250
+   ],
+   "knee": [
+    240,
+    1610
+   ],
+   "ankle": [
+    710,
+    1630
+   ],
+   "toe": [
+    940,
+    1800
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     700,
+     1480,
+     1130,
+     1830
+    ],
+    "near": true,
+    "note": "shoe seen from behind/sole toward viewer, toe pointing down-right, large rounded heel"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     90,
+     1210,
+     400,
+     1400
+    ],
+    "near": true,
+    "note": "hand at end of forearm, fingers pointing left toward floor, partly hidden by clutter"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     350,
+     900,
+     1000,
+     1250
+    ],
+    "near": true,
+    "note": "striped short sleeve hanging from shoulder over bent arm"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     190,
+     1530,
+     420,
+     1730
+    ],
+    "near": true,
+    "note": "kneeling knee on floor at lower left, trouser covering"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     780,
+     1050,
+     1090,
+     1450
+    ],
+    "near": true,
+    "note": "buttocks in dark trousers at right, rounded"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     190,
+     1540,
+     720,
+     1740
+    ],
+    "near": true,
+    "note": "lower leg lying horizontally on floor from knee to ankle, trouser cuff near ankle"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad kneeling and bent far forward, facing left with head low; back arched to the right, seat on heels, soles of shoes toward viewer at lower right. Joint positions are estimates.",
+  "name": "p008-01.png",
+  "width": 1213,
+  "height": 1987
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   130,
+   415
+  ],
+  "head_front": [
+   298,
+   428
+  ],
+  "joints": {
+   "shoulder": [
+    105,
+    575
+   ],
+   "elbow": [
+    35,
+    745
+   ],
+   "wrist": [
+    75,
+    715
+   ],
+   "fingertips": [
+    70,
+    700
+   ],
+   "hip": [],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    250,
+    590
+   ],
+   "far_elbow": [
+    325,
+    700
+   ],
+   "far_wrist": [
+    250,
+    730
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     55,
+     675,
+     120,
+     770
+    ],
+    "near": true,
+    "note": "fist gripping left edge of paper, knuckles facing viewer, thumb up"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     195,
+     690,
+     300,
+     800
+    ],
+    "near": false,
+    "note": "hand with splayed fingers holding right side of paper, fingers pointing down-right"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     0,
+     590,
+     110,
+     840
+    ],
+    "near": true,
+    "note": "striped sleeve running down from shoulder to elbow at left edge, bending forward to hand"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     250,
+     600,
+     345,
+     800
+    ],
+    "near": false,
+    "note": "striped sleeve of far arm, going down-right from shoulder to bent elbow"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     0,
+     890,
+     350,
+     975
+    ],
+    "near": true,
+    "note": "dark trousers on the bed, only the top partly visible at the bottom of the crop"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Upper body only: Dad faces right in profile, head slightly bowed, both hands holding a sheet of paper in front of his chest; hips, knees and feet fall below the crop, with dark trousers and bed visible at the bottom.",
+  "name": "p027-08.png",
+  "width": 483,
+  "height": 975
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   272,
+   150
+  ],
+  "head_front": [
+   138,
+   155
+  ],
+  "joints": {
+   "shoulder": [
+    195,
+    285
+   ],
+   "elbow": [
+    150,
+    320
+   ],
+   "wrist": [
+    120,
+    340
+   ],
+   "fingertips": [
+    92,
+    325
+   ],
+   "hip": [
+    300,
+    490
+   ],
+   "knee": [
+    160,
+    590
+   ],
+   "ankle": [
+    195,
+    745
+   ],
+   "toe": [
+    135,
+    775
+   ],
+   "far_shoulder": [
+    275,
+    245
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    330,
+    610
+   ],
+   "far_ankle": [
+    320,
+    760
+   ],
+   "far_toe": [
+    415,
+    790
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     135,
+     725,
+     255,
+     805
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, laces visible"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     255,
+     750,
+     420,
+     805
+    ],
+    "near": false,
+    "note": "shoe in side view, long, toe pointing right, sole down"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     85,
+     280,
+     200,
+     355
+    ],
+    "near": true,
+    "note": "rolled striped sleeve and hand/cuff pointing left and down, forearm angled down-left"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     140,
+     490,
+     400,
+     760
+    ],
+    "near": true,
+    "note": "black thigh going left-down from hip to knee, then shin going down to ankle"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     270,
+     600,
+     345,
+     765
+    ],
+    "near": false,
+    "note": "far shin, black, nearly vertical"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     135,
+     530,
+     230,
+     620
+    ],
+    "near": true,
+    "note": "knee bent, at left end of thigh, facing left"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     280,
+     440,
+     420,
+     540
+    ],
+    "near": true,
+    "note": "buttocks and back of thigh at right, hidden by chair back"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Seated in an armchair in profile facing left, torso leaning forward slightly, near arm reaching down-left; thigh horizontal, shin vertical, feet on floor. Positions approximate because the lower body is mostly black fill.",
+  "name": "p054-01.png",
+  "width": 504,
+  "height": 906
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   190,
+   215
+  ],
+  "head_front": [
+   328,
+   222
+  ],
+  "joints": {
+   "shoulder": [
+    235,
+    335
+   ],
+   "elbow": [
+    190,
+    480
+   ],
+   "wrist": [
+    152,
+    615
+   ],
+   "fingertips": [
+    130,
+    660
+   ],
+   "hip": [],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    390,
+    335
+   ],
+   "far_elbow": [
+    420,
+    525
+   ],
+   "far_wrist": [
+    432,
+    645
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": [],
+   "far_wrist_dummy": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     162,
+     432,
+     248,
+     498
+    ],
+    "near": true,
+    "note": "rolled plaid sleeve at near elbow, bent arm going down-left"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     345,
+     455,
+     490,
+     555
+    ],
+    "near": false,
+    "note": "far sleeve/cuff at far elbow, forearm angles down"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     110,
+     600,
+     200,
+     675
+    ],
+    "near": true,
+    "note": "near hand in suds, fingers curled, resting on car surface"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     395,
+     640,
+     510,
+     730
+    ],
+    "near": false,
+    "note": "far hand open on car hood/sponge, fingers pointing right"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Bent forward over the car, torso diagonal, head turned right with eyes closed; both arms hang down to wash the car. Hips, legs and feet are outside the crop.",
+  "name": "p063-07.png",
+  "width": 604,
+  "height": 836
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   388,
+   345
+  ],
+  "head_front": [
+   205,
+   335
+  ],
+  "joints": {
+   "shoulder": [
+    150,
+    495
+   ],
+   "elbow": [
+    115,
+    680
+   ],
+   "wrist": [
+    150,
+    725
+   ],
+   "fingertips": [
+    215,
+    745
+   ],
+   "hip": [
+    170,
+    810
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    285,
+    490
+   ],
+   "far_elbow": [
+    290,
+    665
+   ],
+   "far_wrist": [
+    335,
+    700
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     100,
+     500,
+     250,
+     740
+    ],
+    "near": true,
+    "note": "striped pajama sleeve/arm hanging down the near side to the book"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     105,
+     690,
+     250,
+     770
+    ],
+    "near": true,
+    "note": "hand holding open book, fingers along the page"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     300,
+     660,
+     400,
+     800
+    ],
+    "near": false,
+    "note": "far hand with fingers pointing down, gripping book edge, seen from the side"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     240,
+     540,
+     340,
+     720
+    ],
+    "near": false,
+    "note": "far arm striped sleeve angled toward book"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     100,
+     740,
+     300,
+     860
+    ],
+    "near": true,
+    "note": "striped pajama torso/lap at bottom of crop, sitting on bed edge; legs lie below crop"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Upper body only: Dad sits upright in striped pajamas, head turned to the left toward Calvin, holding an open book in front of his lap; legs, knees and feet are below the crop.",
+  "name": "p065-01.png",
+  "width": 552,
+  "height": 975
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   276,
+   416
+  ],
+  "head_front": [
+   452,
+   416
+  ],
+  "joints": {
+   "shoulder": [
+    335,
+    553
+   ],
+   "elbow": [
+    262,
+    795
+   ],
+   "wrist": [
+    447,
+    833
+   ],
+   "fingertips": [
+    523,
+    812
+   ],
+   "hip": [
+    310,
+    893
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    416,
+    579
+   ],
+   "far_elbow": [
+    457,
+    711
+   ],
+   "far_wrist": [
+    553,
+    843
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     225,
+     575,
+     320,
+     830
+    ],
+    "near": true,
+    "note": "striped pajama sleeve of near arm, hanging down the left side of torso to the elbow"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     405,
+     590,
+     480,
+     760
+    ],
+    "near": false,
+    "note": "far arm sleeve, striped, running down the right side of the torso toward the book"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     455,
+     745,
+     540,
+     870
+    ],
+    "near": true,
+    "note": "near hand gripping the open book from the front, fingers curled over the cover"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     545,
+     790,
+     605,
+     860
+    ],
+    "near": false,
+    "note": "far hand holding right edge of the open book, fingers curled"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     245,
+     880,
+     330,
+     940
+    ],
+    "near": true,
+    "note": "bent knee under blanket, partly hidden by bedclothes"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     270,
+     860,
+     480,
+     960
+    ],
+    "near": true,
+    "note": "hips sitting on bed, mostly hidden by blanket and shadow"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Dad sits upright in bed in striped pajamas, torso nearly frontal with head turned three-quarter right, holding an open book at waist level with both hands. Legs, feet and hips are hidden under the blanket and dark shadow, so knee and hip positions are rough estimates and the ankles and toes are not visible.",
+  "name": "p065-03.png",
+  "width": 724,
+  "height": 1114
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   178,
+   192
+  ],
+  "head_front": [
+   326,
+   198
+  ],
+  "joints": {
+   "shoulder": [
+    140,
+    350
+   ],
+   "elbow": [
+    110,
+    505
+   ],
+   "wrist": [
+    250,
+    468
+   ],
+   "fingertips": [
+    335,
+    465
+   ],
+   "hip": [
+    270,
+    630
+   ],
+   "knee": [
+    440,
+    660
+   ],
+   "ankle": [
+    510,
+    850
+   ],
+   "toe": [
+    612,
+    890
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     55,
+     395,
+     165,
+     520
+    ],
+    "near": true,
+    "note": "short rolled shirt sleeve on near upper arm, bulging at left edge of crop, opening toward lower right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     255,
+     420,
+     350,
+     545
+    ],
+    "near": true,
+    "note": "hand gripping the notebook, fingers curled to the right, seen from the side"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     250,
+     595,
+     410,
+     780
+    ],
+    "near": true,
+    "note": "buttocks/thigh in dark trousers resting on armchair seat, mostly hidden behind armchair arm"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     400,
+     600,
+     590,
+     700
+    ],
+    "near": true,
+    "note": "knee area of dark trousers, thigh heading right, partly obscured by side table"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     250,
+     598,
+     590,
+     870
+    ],
+    "near": true,
+    "note": "solid black trouser thigh horizontal then shin dropping down to the right toward shoe"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     370,
+     858,
+     620,
+     935
+    ],
+    "near": true,
+    "note": "shoe in side view, toe pointing right, sole down, laces visible on top"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad seated in an armchair in profile facing right, leaning slightly forward, holding a notebook in his near hand, with the thigh horizontal and the shin dropping to a shoe at lower right. The far side is hidden. Joint positions below the shoulder are estimates because the trousers are solid black.",
+  "name": "p087-01.png",
+  "width": 709,
+  "height": 1045
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   272,
+   195
+  ],
+  "head_front": [
+   448,
+   195
+  ],
+  "joints": {
+   "shoulder": [
+    265,
+    330
+   ],
+   "elbow": [
+    135,
+    470
+   ],
+   "wrist": [
+    195,
+    495
+   ],
+   "fingertips": [
+    325,
+    525
+   ],
+   "hip": [
+    250,
+    600
+   ],
+   "knee": [
+    330,
+    640
+   ],
+   "ankle": [
+    345,
+    720
+   ],
+   "toe": [
+    440,
+    855
+   ],
+   "far_shoulder": [
+    440,
+    330
+   ],
+   "far_elbow": [
+    500,
+    450
+   ],
+   "far_wrist": [
+    455,
+    495
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     310,
+     690,
+     455,
+     880
+    ],
+    "near": true,
+    "note": "shoe with sock cuff, raised foot, toe pointing down-right, seen from side"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     200,
+     440,
+     335,
+     570
+    ],
+    "near": true,
+    "note": "large open hand, fingers spread pointing right, resting on the book's lower left"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     420,
+     470,
+     490,
+     560
+    ],
+    "near": false,
+    "note": "fist gripping the right edge of the book, knuckles toward viewer"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     80,
+     440,
+     210,
+     520
+    ],
+    "near": true,
+    "note": "forearm sleeve of viewer-left arm, horizontal, bent at elbow"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     440,
+     330,
+     540,
+     480
+    ],
+    "near": false,
+    "note": "upper arm sleeve of viewer-right arm descending to the book"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     280,
+     600,
+     400,
+     680
+    ],
+    "near": true,
+    "note": "dark trousered knee raised below the book"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     90,
+     560,
+     330,
+     900
+    ],
+    "near": true,
+    "note": "dark trousers mass on the chair seat, thighs and buttocks, mostly solid black"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     300,
+     610,
+     420,
+     740
+    ],
+    "near": true,
+    "note": "dark trouser leg running from knee down to the ankle above the shoe"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Reclined in armchair, head tilted down toward an open book held in front of his chest, eyes lowered; legs crossed with one foot raised in front.",
+  "name": "p095-14.png",
+  "width": 639,
+  "height": 975
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   722,
+   262
+  ],
+  "head_front": [
+   548,
+   268
+  ],
+  "joints": {
+   "shoulder": [
+    690,
+    375
+   ],
+   "elbow": [
+    725,
+    545
+   ],
+   "wrist": [
+    585,
+    515
+   ],
+   "fingertips": [
+    482,
+    492
+   ],
+   "hip": [
+    640,
+    650
+   ],
+   "knee": [
+    470,
+    625
+   ],
+   "ankle": [
+    325,
+    585
+   ],
+   "toe": [
+    228,
+    590
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     222,
+     520,
+     345,
+     650
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole facing viewer-right/down, rounded oblong, foot angled up slightly"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     478,
+     455,
+     590,
+     575
+    ],
+    "near": true,
+    "note": "hand holding newspaper edge, fingers pointing left, thumb up, 4 fingers curled"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     690,
+     505,
+     775,
+     610
+    ],
+    "near": true,
+    "note": "short rolled shirt sleeve at elbow, right side by panel border"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     400,
+     595,
+     540,
+     660
+    ],
+    "near": true,
+    "note": "knee bent slightly, trouser top edge along y~600"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     580,
+     600,
+     775,
+     760
+    ],
+    "near": true,
+    "note": "buttocks sunk in patterned armchair seat, at right of panel"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     200,
+     598,
+     620,
+     900
+    ],
+    "near": true,
+    "note": "large solid black trouser leg stretched out to the left, tapering toward ankle at upper left"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad reclines in armchair at right, head in profile facing left, holding newspaper at left of his face with hand; legs stretched out leftwards in solid black trousers ending in shoe at left; far limbs hidden.",
+  "name": "p101-01.png",
+  "width": 816,
+  "height": 1068
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   138,
+   165
+  ],
+  "head_front": [
+   283,
+   165
+  ],
+  "facing": "right",
+  "joints": {
+   "shoulder": [
+    300,
+    260
+   ],
+   "elbow": [
+    170,
+    440
+   ],
+   "wrist": [
+    140,
+    540
+   ],
+   "fingertips": [
+    120,
+    595
+   ],
+   "hip": [
+    470,
+    510
+   ],
+   "knee": [
+    430,
+    585
+   ],
+   "ankle": [
+    380,
+    615
+   ],
+   "toe": [
+    335,
+    630
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     85,
+     525,
+     195,
+     605
+    ],
+    "near": true,
+    "note": "hand low left, fingers pointing down, gripping near log/stick"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     305,
+     225,
+     540,
+     520
+    ],
+    "near": true,
+    "note": "striped shirt sleeve/torso side running diagonally down-right from shoulder"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     430,
+     490,
+     540,
+     590
+    ],
+    "near": true,
+    "note": "buttocks/thigh area at right, in trousers, on log"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     320,
+     480,
+     540,
+     600
+    ],
+    "near": true,
+    "note": "thigh/trouser leg bent, going left to knee"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     370,
+     540,
+     450,
+     600
+    ],
+    "near": true,
+    "note": "bent knee, side view"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     320,
+     590,
+     430,
+     645
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down"
+   }
+  ],
+  "pose_note": "Dad seated on a log facing right, head turned toward the viewer's right, glasses and big nose; striped shirt, arm reaching down left to a hand near the log. Lower-body and arm positions are low-confidence estimates because the crop's line art is ambiguous.",
+  "name": "p107-09.png",
+  "width": 639,
+  "height": 836
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   142,
+   390
+  ],
+  "head_front": [
+   357,
+   372
+  ],
+  "joints": {
+   "shoulder": [
+    400,
+    490
+   ],
+   "elbow": [
+    570,
+    640
+   ],
+   "wrist": [
+    500,
+    790
+   ],
+   "fingertips": [
+    470,
+    840
+   ],
+   "hip": [],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    260,
+    580
+   ],
+   "far_elbow": [
+    215,
+    665
+   ],
+   "far_wrist": [
+    130,
+    710
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     380,
+     455,
+     730,
+     700
+    ],
+    "near": true,
+    "note": "near arm striped sleeve sweeping from shoulder right and down toward Calvin's head, long diagonal fold lines"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     440,
+     760,
+     580,
+     870
+    ],
+    "near": true,
+    "note": "near hand reaching down onto Calvin's head, partly cropped by Calvin's hair, fingers pointing down-left"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     75,
+     615,
+     235,
+     860
+    ],
+    "near": false,
+    "note": "far hand/forearm hanging at left edge, dark sleeve above, fingers pointing down-right, partly against black panel border"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     70,
+     525,
+     235,
+     620
+    ],
+    "near": false,
+    "note": "dark shirt back/far shoulder at upper left, mostly solid black"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad bent far forward at the waist, head tilted down toward Calvin, smiling with eyes closed behind round glasses; near arm extends to the right toward Calvin's head. Lower body, legs, and feet are outside the crop, so hip, knee, ankle and toe are unmarked. Arm joint positions are rough estimates because the arm overlaps shirt stripes and Calvin's hair.",
+  "name": "p107-10.png",
+  "width": 763,
+  "height": 952
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   325,
+   165
+  ],
+  "head_front": [
+   447,
+   200
+  ],
+  "joints": {
+   "shoulder": [
+    300,
+    262
+   ],
+   "elbow": [
+    290,
+    395
+   ],
+   "wrist": [
+    345,
+    365
+   ],
+   "fingertips": [
+    400,
+    362
+   ],
+   "hip": [
+    150,
+    350
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     150,
+     215,
+     340,
+     345
+    ],
+    "near": true,
+    "note": "striped shirt back/sleeve sloping down-left from shoulder, bent over, stripes diagonal"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     95,
+     320,
+     215,
+     430
+    ],
+    "near": true,
+    "note": "buttocks/trousers at left, raised as he bends forward, dark"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     85,
+     400,
+     200,
+     511
+    ],
+    "near": true,
+    "note": "leg descending from seat, cropped at bottom, nearly vertical"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     340,
+     335,
+     470,
+     385
+    ],
+    "near": true,
+    "note": "thin arm extending right toward Calvin, hand uncertain, partly outlined"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad bent forward at the waist facing right, head low with glasses at upper centre, back sloping down to raised seat at left; arm reaches right toward Calvin; feet outside crop. Joint positions are low-confidence estimates.",
+  "name": "p107-11.png",
+  "width": 603,
+  "height": 511
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   212,
+   325
+  ],
+  "head_front": [
+   380,
+   335
+  ],
+  "joints": {
+   "shoulder": [
+    170,
+    400
+   ],
+   "elbow": [
+    335,
+    525
+   ],
+   "wrist": [
+    385,
+    480
+   ],
+   "fingertips": [
+    430,
+    395
+   ],
+   "hip": [
+    120,
+    590
+   ],
+   "knee": [
+    290,
+    640
+   ],
+   "ankle": [
+    185,
+    775
+   ],
+   "toe": [
+    300,
+    785
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     150,
+     755,
+     305,
+     815
+    ],
+    "near": true,
+    "note": "shoe in side view, toe right, sole down, partly white with outline"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     385,
+     370,
+     445,
+     500
+    ],
+    "near": true,
+    "note": "hand raised to chin/cheek, fingers up, palm toward face"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     190,
+     495,
+     395,
+     590
+    ],
+    "near": true,
+    "note": "short striped sleeve / forearm cuff, running from elbow up to wrist"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     230,
+     590,
+     340,
+     680
+    ],
+    "near": true,
+    "note": "bent knee pointing right, covered by black trousers"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     65,
+     570,
+     160,
+     720
+    ],
+    "near": true,
+    "note": "buttocks at left edge of crop, crouched low"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     65,
+     595,
+     340,
+     770
+    ],
+    "near": true,
+    "note": "thigh and shin in solid black, folded in crouch, going from hip at left to knee then down to shoe"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     105,
+     595,
+     230,
+     665
+    ],
+    "near": false,
+    "note": "white shape resting on knee/thigh, likely the other hand, fingers pointing right"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Crouching, facing right, leaning forward with one elbow on knee and hand held up at chin; head tilted. Estimates are approximate because the crop cuts off the left side of the body and the leg shapes are merged in solid black.",
+  "name": "p108-05.png",
+  "width": 579,
+  "height": 914
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   232,
+   250
+  ],
+  "head_front": [
+   420,
+   272
+  ],
+  "joints": {
+   "shoulder": [
+    235,
+    365
+   ],
+   "elbow": [
+    190,
+    535
+   ],
+   "wrist": [
+    320,
+    600
+   ],
+   "fingertips": [
+    365,
+    645
+   ],
+   "hip": [
+    245,
+    690
+   ],
+   "knee": [
+    540,
+    675
+   ],
+   "ankle": [
+    480,
+    830
+   ],
+   "toe": [
+    395,
+    885
+   ],
+   "far_shoulder": [
+    320,
+    385
+   ],
+   "far_elbow": [
+    350,
+    505
+   ],
+   "far_wrist": [
+    415,
+    550
+   ],
+   "far_knee": [
+    600,
+    660
+   ],
+   "far_ankle": [
+    570,
+    830
+   ],
+   "far_toe": [
+    678,
+    840
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     378,
+     838,
+     598,
+     920
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, sole thick, lace area top"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     500,
+     812,
+     682,
+     862
+    ],
+    "near": false,
+    "note": "shoe in side view, toe right, partly behind near shoe, sole down"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     160,
+     360,
+     260,
+     550
+    ],
+    "near": true,
+    "note": "short patterned sleeve with cuff hem at bottom, arm hangs down along torso"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     220,
+     600,
+     380,
+     690
+    ],
+    "near": true,
+    "note": "hand with fingers curled resting at lap, holding palette or brush, knuckles up"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     330,
+     515,
+     430,
+     580
+    ],
+    "near": false,
+    "note": "hand holding the board edge/brush, fingers pointing right"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     500,
+     630,
+     590,
+     720
+    ],
+    "near": true,
+    "note": "knee bent, thigh heading right and slightly up, trousers wrinkled"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     190,
+     660,
+     300,
+     745
+    ],
+    "near": true,
+    "note": "buttocks on rock, rounded, trouser fabric"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     260,
+     640,
+     600,
+     780
+    ],
+    "near": true,
+    "note": "thigh horizontal from hip to knee, wrinkled folds"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     480,
+     700,
+     610,
+     840
+    ],
+    "near": true,
+    "note": "shin going down and slightly left from knee to ankle, wrinkled"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     560,
+     640,
+     640,
+     830
+    ],
+    "near": false,
+    "note": "far leg behind near leg, vertical shin with creases"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Seated on a rock in profile facing right, torso upright, leaning slightly forward, both hands forward at a board in his lap; knees bent about 90 degrees with feet planted at lower right. Joint positions estimated from the gridded image.",
+  "name": "p109-02.png",
+  "width": 727,
+  "height": 1068
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   237,
+   305
+  ],
+  "head_front": [
+   442,
+   305
+  ],
+  "joints": {
+   "shoulder": [
+    300,
+    432
+   ],
+   "elbow": [
+    350,
+    572
+   ],
+   "wrist": [
+    405,
+    611
+   ],
+   "fingertips": [
+    470,
+    632
+   ],
+   "hip": [
+    222,
+    675
+   ],
+   "knee": [
+    425,
+    727
+   ],
+   "ankle": [
+    455,
+    865
+   ],
+   "toe": [
+    365,
+    925
+   ],
+   "far_shoulder": [
+    262,
+    395
+   ],
+   "far_elbow": [],
+   "far_wrist": [
+    568,
+    565
+   ],
+   "far_knee": [
+    595,
+    722
+   ],
+   "far_ankle": [
+    560,
+    880
+   ],
+   "far_toe": [
+    700,
+    918
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     362,
+     895,
+     590,
+     990
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, large rounded"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     500,
+     862,
+     705,
+     945
+    ],
+    "near": false,
+    "note": "shoe in side view, toe right, sole down, partly behind near shoe"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     300,
+     610,
+     420,
+     700
+    ],
+    "near": true,
+    "note": "hand gripping brush at the canvas, fingers right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     545,
+     545,
+     595,
+     590
+    ],
+    "near": false,
+    "note": "far hand holding top of canvas, thumb visible"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     320,
+     540,
+     420,
+     625
+    ],
+    "near": true,
+    "note": "short patterned sleeve with forearm extending right toward canvas"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     400,
+     690,
+     470,
+     780
+    ],
+    "near": true,
+    "note": "near knee bent, thigh going right from hip"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     190,
+     730,
+     420,
+     820
+    ],
+    "near": true,
+    "note": "buttocks/seat in baggy shorts, resting on chair low at left"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     200,
+     690,
+     470,
+     870
+    ],
+    "near": true,
+    "note": "near baggy trouser thigh and shin, folds, going down to shoe"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     470,
+     690,
+     650,
+     880
+    ],
+    "near": false,
+    "note": "far trouser leg, shin angled down to right shoe"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad sits low, facing right, leaning toward a canvas and painting with brush held in near hand; head in profile, torso upright-leaning, legs bent with feet planted on ground. Estimates; some joints approximate due to dense line art.",
+  "name": "p109-03.png",
+  "width": 746,
+  "height": 1161
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   348,
+   185
+  ],
+  "head_front": [
+   552,
+   190
+  ],
+  "joints": {
+   "shoulder": [
+    310,
+    290
+   ],
+   "elbow": [
+    295,
+    440
+   ],
+   "wrist": [
+    255,
+    505
+   ],
+   "fingertips": [
+    215,
+    520
+   ],
+   "hip": [
+    440,
+    610
+   ],
+   "knee": [
+    590,
+    615
+   ],
+   "ankle": [
+    510,
+    775
+   ],
+   "toe": [
+    570,
+    845
+   ],
+   "far_shoulder": [
+    385,
+    290
+   ],
+   "far_elbow": [
+    440,
+    440
+   ],
+   "far_wrist": [
+    490,
+    470
+   ],
+   "far_knee": [
+    680,
+    615
+   ],
+   "far_ankle": [
+    610,
+    770
+   ],
+   "far_toe": [
+    725,
+    820
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     400,
+     805,
+     572,
+     880
+    ],
+    "near": true,
+    "note": "shoe in side view, flat sole down, heel left, toe right"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     565,
+     780,
+     727,
+     855
+    ],
+    "near": false,
+    "note": "shoe in side view, toe right, sole down, partly behind near leg"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     210,
+     500,
+     300,
+     555
+    ],
+    "near": true,
+    "note": "near hand lower left holding something, fingers pointing left"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     440,
+     405,
+     610,
+     510
+    ],
+    "near": false,
+    "note": "far hand reaching right over the keyboard, fingers curled"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     225,
+     375,
+     335,
+     470
+    ],
+    "near": true,
+    "note": "short patterned sleeve of near arm hanging down"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     400,
+     400,
+     460,
+     500
+    ],
+    "near": false,
+    "note": "far arm short sleeve angled forward-right"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     560,
+     590,
+     700,
+     650
+    ],
+    "near": true,
+    "note": "knee bent, raised, right"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     330,
+     595,
+     500,
+     690
+    ],
+    "near": true,
+    "note": "buttocks seated on floor, left of the legs"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     370,
+     600,
+     640,
+     770
+    ],
+    "near": true,
+    "note": "near leg: thigh going right then shin angled down-left to shoe"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     520,
+     610,
+     700,
+     770
+    ],
+    "near": false,
+    "note": "far leg: shin sloping down-left from knee to ankle"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad sits on the floor leaning forward, facing right in profile, head tilted down, glasses on. Knees are bent up to the right. Arms reach forward to paint or use a keyboard. Limb positions are rough estimates because the lines overlap, especially the legs and shoes.",
+  "name": "p109-04.png",
+  "width": 781,
+  "height": 1021
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   298,
+   240
+  ],
+  "head_front": [
+   470,
+   272
+  ],
+  "joints": {
+   "shoulder": [
+    275,
+    345
+   ],
+   "elbow": [
+    320,
+    540
+   ],
+   "wrist": [
+    400,
+    528
+   ],
+   "fingertips": [
+    445,
+    505
+   ],
+   "hip": [
+    235,
+    650
+   ],
+   "knee": [
+    470,
+    640
+   ],
+   "ankle": [
+    525,
+    780
+   ],
+   "toe": [
+    630,
+    835
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    600,
+    625
+   ],
+   "far_ankle": [
+    560,
+    770
+   ],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     385,
+     790,
+     635,
+     885
+    ],
+    "near": true,
+    "note": "shoe in side view, toe right, sole down, flat on ground"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     395,
+     495,
+     470,
+     570
+    ],
+    "near": true,
+    "note": "fist gripping pencil/brush, held up at the canvas on lap"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     190,
+     330,
+     360,
+     540
+    ],
+    "near": true,
+    "note": "short patterned sleeve, upper arm hanging down from shoulder to elbow"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     420,
+     600,
+     520,
+     690
+    ],
+    "near": true,
+    "note": "bent knee under thigh, side view, thigh horizontal"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     160,
+     640,
+     320,
+     700
+    ],
+    "near": true,
+    "note": "buttocks on chair at left, side view"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     240,
+     620,
+     520,
+     740
+    ],
+    "near": true,
+    "note": "thigh horizontal going right, then shin going down to shoe"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     480,
+     630,
+     610,
+     790
+    ],
+    "near": true,
+    "note": "lower leg near side, angled down and slightly right to shoe"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     530,
+     610,
+     620,
+     780
+    ],
+    "near": false,
+    "note": "far lower leg partly hidden behind near leg, striped"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Seated in profile facing right, torso upright, holding a pencil/brush up to a canvas on his lap with near hand; thighs horizontal, shins angled down to shoes on ground.",
+  "name": "p109-05.png",
+  "width": 710,
+  "height": 975
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   228,
+   268
+  ],
+  "head_front": [
+   82,
+   290
+  ],
+  "joints": {
+   "shoulder": [
+    255,
+    340
+   ],
+   "elbow": [
+    175,
+    455
+   ],
+   "wrist": [],
+   "fingertips": [],
+   "hip": [
+    345,
+    570
+   ],
+   "knee": [
+    180,
+    640
+   ],
+   "ankle": [],
+   "toe": [
+    65,
+    690
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     110,
+     395,
+     215,
+     495
+    ],
+    "near": true,
+    "note": "dark striped sleeve/forearm angled down-left from shoulder, partly in heavy shadow"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     140,
+     590,
+     400,
+     725
+    ],
+    "near": true,
+    "note": "light trouser leg running from hip at right down-left to knee near bottom-left; crop cuts it off at bottom"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     120,
+     610,
+     250,
+     700
+    ],
+    "near": true,
+    "note": "bent knee at lower left, trouser fabric with fold lines"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     290,
+     500,
+     410,
+     590
+    ],
+    "near": true,
+    "note": "buttocks/hip area at lower right of striped torso, partly hidden by shadow"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad sits leaning forward and down-left in profile, head tilted forward with glasses pointing left; striped torso runs diagonally from the shoulders (about 250,330) down to the hips (about 350,570). The crop cuts off the legs and feet. Joint positions below the torso are estimates.",
+  "name": "p110-09.png",
+  "width": 545,
+  "height": 731
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   272,
+   520
+  ],
+  "head_front": [
+   500,
+   530
+  ],
+  "joints": {
+   "shoulder": [
+    420,
+    740
+   ],
+   "elbow": [
+    285,
+    925
+   ],
+   "wrist": [
+    185,
+    915
+   ],
+   "fingertips": [
+    50,
+    870
+   ],
+   "hip": [],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    540,
+    730
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     45,
+     820,
+     205,
+     965
+    ],
+    "near": true,
+    "note": "fist gripping a stick, knuckles/fingers toward the left, stick runs up-left from the fist to the panel edge"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     155,
+     950,
+     205,
+     1010
+    ],
+    "near": true,
+    "note": "small thumb or fingers of the lower hand wrapped around the stick end below the fist, partly hidden"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     235,
+     790,
+     500,
+     985
+    ],
+    "near": true,
+    "note": "striped shirt sleeve of the near arm running from shoulder down-left to the wrist, forearm angled down-left"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     480,
+     700,
+     700,
+     1075
+    ],
+    "near": false,
+    "note": "striped shirt torso and far shoulder/back on the right, vertical stripes"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Cropped at the chest and upper torso, so hips, legs and shoes are not visible. Dad faces right in profile or three-quarter view, with glasses and big nose. His near arm reaches down-left, holding a stick with a fist. Joint positions below the head are rough estimates.",
+  "name": "p110-10.png",
+  "width": 784,
+  "height": 1096
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   388,
+   190
+  ],
+  "head_front": [
+   237,
+   185
+  ],
+  "joints": {
+   "shoulder": [
+    270,
+    320
+   ],
+   "elbow": [
+    295,
+    455
+   ],
+   "wrist": [
+    440,
+    505
+   ],
+   "fingertips": [
+    485,
+    590
+   ],
+   "hip": [
+    170,
+    570
+   ],
+   "knee": [
+    385,
+    625
+   ],
+   "ankle": [
+    140,
+    640
+   ],
+   "toe": [
+    105,
+    685
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [
+    490,
+    420
+   ],
+   "far_knee": [
+    440,
+    660
+   ],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     90,
+     560,
+     155,
+     700
+    ],
+    "near": true,
+    "note": "shoe seen from the side/front at left, toe pointing down-left, sole at bottom"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     425,
+     515,
+     505,
+     605
+    ],
+    "near": true,
+    "note": "hand resting on the knee, fingers pointing down-right, partly gripping"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     455,
+     455,
+     505,
+     500
+    ],
+    "near": false,
+    "note": "far hand partly hidden behind panel border at right"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     105,
+     285,
+     370,
+     570
+    ],
+    "near": true,
+    "note": "striped shirt torso and sleeve, dark with white stripes, arm hangs down then forearm extends right"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     340,
+     590,
+     440,
+     690
+    ],
+    "near": true,
+    "note": "bent knee at right, trouser leg rising"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     105,
+     560,
+     260,
+     640
+    ],
+    "near": true,
+    "note": "buttocks on floor at left, trousers light"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     200,
+     570,
+     430,
+     715
+    ],
+    "near": true,
+    "note": "leg extends right from hip to knee, crossed, diagonal fold lines"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     380,
+     590,
+     500,
+     700
+    ],
+    "near": false,
+    "note": "far leg at right, partly cut by panel border"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad sits on the floor facing left, torso leaning slightly forward, legs crossed with knees right, arm resting forearm out to the right with hand on knee. Coordinates are approximate estimates read from the grid.",
+  "name": "p110-11.png",
+  "width": 579,
+  "height": 822
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   402,
+   180
+  ],
+  "head_front": [
+   266,
+   185
+  ],
+  "joints": {
+   "shoulder": [
+    310,
+    335
+   ],
+   "elbow": [
+    235,
+    505
+   ],
+   "wrist": [
+    262,
+    285
+   ],
+   "fingertips": [
+    232,
+    215
+   ],
+   "hip": [
+    400,
+    470
+   ],
+   "knee": [
+    300,
+    570
+   ],
+   "ankle": [
+    200,
+    640
+   ],
+   "toe": [
+    110,
+    665
+   ],
+   "far_shoulder": [
+    360,
+    335
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     222,
+     195,
+     292,
+     292
+    ],
+    "near": true,
+    "note": "fist/hand propped under chin, fingers curled at left, viewed from the side"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     205,
+     320,
+     300,
+     545
+    ],
+    "near": true,
+    "note": "striped sleeve running down from shoulder to elbow, roughly vertical, slightly leaning left"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     330,
+     430,
+     450,
+     540
+    ],
+    "near": false,
+    "note": "dark trouser/back area at right, seated on floor, partly obscured"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     260,
+     520,
+     345,
+     600
+    ],
+    "near": true,
+    "note": "bent knee near bottom centre, rising toward elbow"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     90,
+     560,
+     340,
+     708
+    ],
+    "near": true,
+    "note": "leg running down-left from knee toward the bottom-left, cropped by the frame"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad seated on the floor, upper body upright, facing left in profile with his head tipped slightly. His near hand is propped under his chin and the striped sleeve hangs down to an elbow resting near his knee. Lower body is cropped at the bottom, so the hip, knee and ankle positions are rough estimates.",
+  "name": "p110-12.png",
+  "width": 580,
+  "height": 708
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   372,
+   150
+  ],
+  "head_front": [
+   606,
+   190
+  ],
+  "joints": {
+   "shoulder": [
+    345,
+    215
+   ],
+   "elbow": [
+    470,
+    365
+   ],
+   "wrist": [
+    585,
+    485
+   ],
+   "fingertips": [
+    655,
+    520
+   ],
+   "hip": [
+    210,
+    540
+   ],
+   "knee": [
+    340,
+    770
+   ],
+   "ankle": [
+    150,
+    805
+   ],
+   "toe": [
+    95,
+    835
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     570,
+     460,
+     660,
+     545
+    ],
+    "near": true,
+    "note": "hand clenched around lotion/pressing on Calvin's shoulder, fingers pointing right-down"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     85,
+     500,
+     300,
+     780
+    ],
+    "near": true,
+    "note": "shaded buttocks/trouser seat at left, hatched texture, kneeling"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     85,
+     700,
+     360,
+     850
+    ],
+    "near": true,
+    "note": "lower leg and shin lying along floor from knee at right to foot at left, side view"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     270,
+     720,
+     370,
+     820
+    ],
+    "near": true,
+    "note": "kneeling knee on floor, rounded, right end of the thigh/shin"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     80,
+     800,
+     180,
+     850
+    ],
+    "near": true,
+    "note": "foot at far left bottom, toe pointing left, sole on floor (barely visible, bare/sock tip)"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad kneels at left, leaning forward with torso angled down-right, long straight arm reaching to Calvin's shoulder; shirtless so no sleeve; head tilted, glasses in profile facing right. Hip/leg estimates are uncertain because the lower body is partly cropped and shaded.",
+  "name": "p113-06.png",
+  "width": 1065,
+  "height": 975
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   372,
+   215
+  ],
+  "head_front": [
+   226,
+   238
+  ],
+  "joints": {
+   "shoulder": [
+    350,
+    310
+   ],
+   "elbow": [
+    270,
+    470
+   ],
+   "wrist": [
+    185,
+    650
+   ],
+   "fingertips": [
+    235,
+    730
+   ],
+   "hip": [
+    520,
+    530
+   ],
+   "knee": [
+    400,
+    415
+   ],
+   "ankle": [
+    345,
+    670
+   ],
+   "toe": [
+    255,
+    760
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    470,
+    470
+   ],
+   "far_ankle": [
+    470,
+    700
+   ],
+   "far_toe": [
+    560,
+    760
+   ]
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     200,
+     675,
+     300,
+     765
+    ],
+    "near": true,
+    "note": "hand reaching down to the ground at left, fingers splayed forward, seen from above"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     290,
+     690,
+     400,
+     790
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, partly hidden by hand"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     430,
+     700,
+     590,
+     795
+    ],
+    "near": false,
+    "note": "shoe on right, toe pointing right, sole down, heel raised"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     330,
+     395,
+     470,
+     470
+    ],
+    "near": true,
+    "note": "bent knee raised high at centre, covered by trouser"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     490,
+     480,
+     650,
+     690
+    ],
+    "near": true,
+    "note": "buttocks and trouser seat at right, rounded, near ground"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     330,
+     400,
+     490,
+     700
+    ],
+    "near": true,
+    "note": "shin going down from knee to ankle, nearly vertical, dark sock/shadow"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     400,
+     440,
+     640,
+     700
+    ],
+    "near": false,
+    "note": "thigh and shorts bulging right, folded crouch"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Shirtless crouch, facing left, torso leaning forward and down, one arm reaching to the ground at lower left, knees bent, seat low at right. Coordinates are approximate, as the leg and arm assignments are partly ambiguous.",
+  "name": "p113-09.png",
+  "width": 710,
+  "height": 928
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   172,
+   325
+  ],
+  "head_front": [
+   392,
+   325
+  ],
+  "joints": {
+   "shoulder": [
+    190,
+    500
+   ],
+   "elbow": [
+    212,
+    748
+   ],
+   "wrist": [
+    335,
+    668
+   ],
+   "fingertips": [
+    400,
+    690
+   ],
+   "hip": [
+    200,
+    850
+   ],
+   "knee": [
+    420,
+    790
+   ],
+   "ankle": [
+    385,
+    905
+   ],
+   "toe": [
+    440,
+    915
+   ],
+   "far_shoulder": [
+    320,
+    500
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    600,
+    765
+   ],
+   "far_ankle": [
+    615,
+    908
+   ],
+   "far_toe": [
+    650,
+    915
+   ]
+  },
+  "parts": [
+   {
+    "box": [
+     100,
+     480,
+     215,
+     760
+    ],
+    "kind": "sleeve",
+    "near": true,
+    "note": "Short-sleeved upper arm hanging down from shoulder to elbow, seen from the side"
+   },
+   {
+    "box": [
+     200,
+     700,
+     340,
+     790
+    ],
+    "kind": "sleeve",
+    "near": true,
+    "note": "Forearm angled up and right from elbow toward the mug"
+   },
+   {
+    "box": [
+     305,
+     635,
+     420,
+     740
+    ],
+    "kind": "hand",
+    "near": true,
+    "note": "Fist gripping the mug, wrapped around the left side of the mug, fingers curled"
+   },
+   {
+    "box": [
+     250,
+     740,
+     510,
+     925
+    ],
+    "kind": "trouser_leg",
+    "near": true,
+    "note": "Near thigh and shin, knee raised and bent, foot on the step"
+   },
+   {
+    "box": [
+     490,
+     740,
+     660,
+     925
+    ],
+    "kind": "trouser_leg",
+    "near": false,
+    "note": "Far leg, knee rising at upper left and shin dropping down on the right"
+   },
+   {
+    "box": [
+     360,
+     760,
+     520,
+     830
+    ],
+    "kind": "knee",
+    "near": true,
+    "note": "Near knee, rounded, under the mug"
+   },
+   {
+    "box": [
+     100,
+     830,
+     290,
+     925
+    ],
+    "kind": "seat",
+    "near": true,
+    "note": "Buttocks and back of thigh sitting on the step, at left behind Calvin"
+   },
+   {
+    "box": [
+     180,
+     900,
+     230,
+     925
+    ],
+    "kind": "shoe",
+    "near": true,
+    "note": "Mostly hidden shoe, only a sliver at the baseline"
+   },
+   {
+    "box": [
+     490,
+     890,
+     545,
+     925
+    ],
+    "kind": "shoe",
+    "near": false,
+    "note": "Far shoe, sole on the step, mostly hidden"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad sits on the step in profile facing right, torso upright, holding a mug in front with his near arm bent. Knees are raised, and the lower body is partly hidden by the mug and Calvin at left. Positions of the legs and the hip are rough estimates.",
+  "name": "p115-01.png",
+  "width": 817,
+  "height": 1022
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   508,
+   235
+  ],
+  "head_front": [
+   700,
+   245
+  ],
+  "joints": {
+   "shoulder": [
+    590,
+    370
+   ],
+   "elbow": [
+    610,
+    560
+   ],
+   "wrist": [
+    690,
+    555
+   ],
+   "fingertips": [
+    765,
+    550
+   ],
+   "hip": [
+    640,
+    650
+   ],
+   "knee": [
+    790,
+    690
+   ],
+   "ankle": [
+    720,
+    850
+   ],
+   "toe": [
+    640,
+    915
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    560,
+    660
+   ],
+   "far_ankle": [
+    550,
+    750
+   ],
+   "far_toe": [
+    497,
+    765
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     590,
+     870,
+     810,
+     935
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, on lower step"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     492,
+     718,
+     592,
+     800
+    ],
+    "near": false,
+    "note": "shoe seen from front/top, two oval lace areas, toe pointing left"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     725,
+     530,
+     772,
+     595
+    ],
+    "near": false,
+    "note": "fist gripping mug side, fingers curled"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     635,
+     525,
+     710,
+     590
+    ],
+    "near": true,
+    "note": "hand wrapped around mug from near side"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     570,
+     530,
+     700,
+     650
+    ],
+    "near": true,
+    "note": "shirt sleeve bent at elbow, forearm going right to mug"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     700,
+     640,
+     830,
+     740
+    ],
+    "near": true,
+    "note": "bent knee rising on right, trouser fold"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     600,
+     630,
+     700,
+     720
+    ],
+    "near": true,
+    "note": "buttocks hidden mostly behind thigh, on porch step"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     600,
+     640,
+     850,
+     900
+    ],
+    "near": true,
+    "note": "thigh goes right to knee then shin down to shoe, baggy"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     480,
+     620,
+     780,
+     720
+    ],
+    "near": false,
+    "note": "far leg extends left toward Calvin, ending at shoe"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad sits on the porch step, upper body leaning forward slightly behind Calvin, holding a mug in both hands at chest height, knees bent up to the right, head in profile facing right with glasses. Estimates are approximate, especially for the legs.",
+  "name": "p115-02.png",
+  "width": 852,
+  "height": 1068
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   236,
+   243
+  ],
+  "head_front": [
+   455,
+   225
+  ],
+  "joints": {
+   "shoulder": [
+    310,
+    352
+   ],
+   "elbow": [
+    222,
+    615
+   ],
+   "wrist": [
+    362,
+    512
+   ],
+   "fingertips": [
+    388,
+    455
+   ],
+   "hip": [
+    496,
+    786
+   ],
+   "knee": [
+    383,
+    796
+   ],
+   "ankle": [
+    362,
+    993
+   ],
+   "toe": [],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     360,
+     350,
+     500,
+     540
+    ],
+    "near": true,
+    "note": "hand gripping a mug, fingers curled around handle, mug to the right, upright"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     150,
+     330,
+     450,
+     720
+    ],
+    "near": true,
+    "note": "short shirt sleeve; upper arm descends left from shoulder to elbow, forearm rises back up to the mug hand"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     430,
+     700,
+     555,
+     1040
+    ],
+    "near": true,
+    "note": "buttocks on the step at right, dark trouser mass"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     310,
+     760,
+     420,
+     860
+    ],
+    "near": true,
+    "note": "knee bent, pointing left, rounded trousers"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     160,
+     740,
+     420,
+     1030
+    ],
+    "near": true,
+    "note": "baggy trouser leg running from hip leftward and down to the foot, shoe not visible"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad sits on a step in profile facing right, sipping from a mug held in one hand; the elbow is drawn back and down at left. Legs and shoes are largely cropped or hidden, so lower-body joint positions are rough estimates.",
+  "name": "p115-03.png",
+  "width": 663,
+  "height": 1138
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   305,
+   225
+  ],
+  "head_front": [
+   193,
+   240
+  ],
+  "joints": {
+   "shoulder": [
+    232,
+    350
+   ],
+   "elbow": [
+    262,
+    445
+   ],
+   "wrist": [
+    290,
+    478
+   ],
+   "fingertips": [
+    308,
+    495
+   ],
+   "hip": [
+    385,
+    575
+   ],
+   "knee": [
+    295,
+    590
+   ],
+   "ankle": [
+    335,
+    712
+   ],
+   "toe": [
+    255,
+    748
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     250,
+     712,
+     388,
+     768
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, resting on lower step"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     255,
+     450,
+     340,
+     535
+    ],
+    "near": true,
+    "note": "hand at chest/waist height, fingers curled to the right, partly outlined"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     205,
+     340,
+     290,
+     500
+    ],
+    "near": true,
+    "note": "shirt sleeve running down along torso beside tie"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     260,
+     550,
+     340,
+     640
+    ],
+    "near": true,
+    "note": "bent knee, thigh rising to the right toward the seat"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     330,
+     520,
+     430,
+     610
+    ],
+    "near": true,
+    "note": "buttocks/hip region seated on step, right of the knee"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     255,
+     545,
+     395,
+     730
+    ],
+    "near": true,
+    "note": "trouser leg bent at knee, shin going down to shoe"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Seated on the step, head turned left toward Calvin, glasses and large nose visible; torso upright with tie, arm bent with hand near waist; legs bent and low in the lower right of the crop. Leg and seat positions are estimates because the black-filled trousers merge with shadows.",
+  "name": "p115-04.png",
+  "width": 497,
+  "height": 883
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   408,
+   258
+  ],
+  "head_front": [
+   245,
+   255
+  ],
+  "joints": {
+   "shoulder": [
+    320,
+    420
+   ],
+   "elbow": [
+    300,
+    545
+   ],
+   "wrist": [
+    345,
+    565
+   ],
+   "fingertips": [
+    352,
+    585
+   ],
+   "hip": [
+    300,
+    650
+   ],
+   "knee": [
+    520,
+    640
+   ],
+   "ankle": [
+    410,
+    820
+   ],
+   "toe": [
+    308,
+    885
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    595,
+    650
+   ],
+   "far_ankle": [
+    570,
+    800
+   ],
+   "far_toe": [
+    655,
+    865
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     300,
+     830,
+     500,
+     915
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     500,
+     840,
+     660,
+     905
+    ],
+    "near": false,
+    "note": "far shoe partly hidden, toe right, mostly dark"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     325,
+     495,
+     390,
+     595
+    ],
+    "near": true,
+    "note": "fist clenched resting at chest/knee height, knuckles right"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     215,
+     470,
+     345,
+     640
+    ],
+    "near": true,
+    "note": "short sleeve and forearm region hanging down from shoulder, arm bent"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     440,
+     600,
+     600,
+     710
+    ],
+    "near": true,
+    "note": "large raised knee, rounded, facing right"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     160,
+     620,
+     320,
+     700
+    ],
+    "near": true,
+    "note": "buttocks on step at left of thigh, partly hidden by shirt"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     300,
+     600,
+     600,
+     850
+    ],
+    "near": true,
+    "note": "thigh going right from hip to knee, shin descending left to ankle"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     500,
+     700,
+     625,
+     830
+    ],
+    "near": false,
+    "note": "far leg, dark, shin descending behind near leg"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Seated on a step, torso leaning back-left toward Calvin, head turned left with glasses, near arm bent with fist at chest height, knees raised to the right, feet on floor.",
+  "name": "p115-06.png",
+  "width": 745,
+  "height": 929
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   295,
+   235
+  ],
+  "head_front": [
+   490,
+   268
+  ],
+  "joints": {
+   "shoulder": [
+    275,
+    325
+   ],
+   "elbow": [
+    225,
+    545
+   ],
+   "wrist": [
+    360,
+    590
+   ],
+   "fingertips": [
+    430,
+    620
+   ],
+   "hip": [
+    200,
+    690
+   ],
+   "knee": [
+    530,
+    640
+   ],
+   "ankle": [
+    490,
+    905
+   ],
+   "toe": [
+    640,
+    955
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [
+    610,
+    655
+   ],
+   "far_toe": [
+    695,
+    630
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     420,
+     905,
+     645,
+     995
+    ],
+    "near": true,
+    "note": "shoe in side view, toe right, sole down, resting on the step"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     590,
+     608,
+     698,
+     692
+    ],
+    "near": false,
+    "note": "far foot raised/crossed, shoe in side view, toe right, laces visible"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     360,
+     520,
+     475,
+     625
+    ],
+    "near": true,
+    "note": "hand draped fingers down over knee, fingers pointing down-right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     430,
+     395,
+     550,
+     545
+    ],
+    "near": false,
+    "note": "other hand/forearm resting on knee, fingers curled, right of the body"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     175,
+     310,
+     310,
+     620
+    ],
+    "near": true,
+    "note": "short shirt sleeve, wide, hanging from shoulder down to elbow, light fabric"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     470,
+     570,
+     570,
+     680
+    ],
+    "near": true,
+    "note": "bent knee pointing right, covered by trouser"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     130,
+     640,
+     290,
+     740
+    ],
+    "near": true,
+    "note": "buttocks/seat at left, sitting on the step edge"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     200,
+     640,
+     580,
+     810
+    ],
+    "near": true,
+    "note": "near thigh going horizontally right from hip to knee, white trousers with fold lines"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     400,
+     680,
+     665,
+     910
+    ],
+    "near": true,
+    "note": "near lower leg going down from knee to ankle, slightly angled, wide trouser"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Dad sits on the step, leaning forward toward the right, head turned right, arm resting with hand draped over knee; near leg bent with shin down to shoe on the step, other foot crossed up at right.",
+  "name": "p115-07.png",
+  "width": 887,
+  "height": 1092
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   104,
+   347
+  ],
+  "head_front": [
+   293,
+   347
+  ],
+  "joints": {
+   "shoulder": [
+    135,
+    462
+   ],
+   "elbow": [
+    118,
+    650
+   ],
+   "wrist": [
+    235,
+    630
+   ],
+   "fingertips": [
+    322,
+    632
+   ],
+   "hip": [
+    225,
+    730
+   ],
+   "knee": [
+    405,
+    690
+   ],
+   "ankle": [
+    394,
+    1020
+   ],
+   "toe": [
+    347,
+    1046
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [
+    385,
+    625
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     342,
+     1015,
+     466,
+     1083
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, partly hidden by the chair"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     228,
+     580,
+     332,
+     684
+    ],
+    "near": true,
+    "note": "near hand holding the lower edge of the newspaper, fingers curled right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     378,
+     590,
+     430,
+     663
+    ],
+    "near": false,
+    "note": "far hand gripping the newspaper edge, fingers curled"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     104,
+     445,
+     233,
+     622
+    ],
+    "near": true,
+    "note": "short shirt sleeve hanging from shoulder, forearm going forward-right"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     342,
+     663,
+     477,
+     735
+    ],
+    "near": true,
+    "note": "knee in black trousers bent up to the right, side view"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     197,
+     715,
+     269,
+     891
+    ],
+    "near": true,
+    "note": "buttocks and thigh in black trousers sunk in the armchair"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     223,
+     673,
+     497,
+     1026
+    ],
+    "near": true,
+    "note": "black trouser leg, thigh horizontal then shin going down from knee to ankle"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Seated in armchair in profile facing right, reading a held newspaper, thigh horizontal and shin vertical, far arm and leg largely hidden.",
+  "name": "p116-01.png",
+  "width": 681,
+  "height": 1142
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   108,
+   475
+  ],
+  "head_front": [
+   283,
+   467
+  ],
+  "joints": {
+   "shoulder": [
+    162,
+    638
+   ],
+   "elbow": [
+    270,
+    843
+   ],
+   "wrist": [
+    346,
+    951
+   ],
+   "fingertips": [
+    335,
+    1011
+   ],
+   "hip": [
+    141,
+    1027
+   ],
+   "knee": [
+    476,
+    854
+   ],
+   "ankle": [
+    476,
+    973
+   ],
+   "toe": [
+    605,
+    1027
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     70,
+     550,
+     520,
+     1000
+    ],
+    "near": true,
+    "note": "patterned sleeve/torso sweeping from the upper left down and right, bent over; low confidence"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     270,
+     930,
+     390,
+     1030
+    ],
+    "near": true,
+    "note": "hand hanging down with fingers pointing down, outline only; low confidence"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     400,
+     790,
+     540,
+     990
+    ],
+    "near": true,
+    "note": "rounded knee in floral trousers facing right"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     350,
+     780,
+     540,
+     1000
+    ],
+    "near": true,
+    "note": "floral trouser leg going down from the knee"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     400,
+     970,
+     620,
+     1090
+    ],
+    "near": true,
+    "note": "black shoe mass at bottom, toe pointing right, sole down; low confidence"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     70,
+     980,
+     300,
+     1110
+    ],
+    "near": true,
+    "note": "floral-patterned buttocks/thigh at the bottom left corner"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad is seated and bent far forward, facing right with glasses at eye level. The head is clear. The body below the head is a tangle of patterned cloth, so the limb joints are low-confidence estimates.",
+  "name": "p116-03.png",
+  "width": 852,
+  "height": 1189
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   205,
+   575
+  ],
+  "head_front": [
+   308,
+   615
+  ],
+  "joints": {
+   "shoulder": [
+    225,
+    755
+   ],
+   "elbow": [
+    384,
+    815
+   ],
+   "wrist": [
+    290,
+    915
+   ],
+   "fingertips": [
+    256,
+    930
+   ],
+   "hip": [
+    125,
+    880
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     240,
+     895,
+     320,
+     960
+    ],
+    "near": true,
+    "note": "hand at lower centre, fingers pointing left-down, resting near the ground"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     290,
+     760,
+     400,
+     900
+    ],
+    "near": true,
+    "note": "arm and sleeve running down-right from the shoulder, elbow at right edge"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     90,
+     820,
+     200,
+     920
+    ],
+    "near": true,
+    "note": "buttocks at left, bent-over posture, trouser seat"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     90,
+     860,
+     300,
+     1000
+    ],
+    "near": true,
+    "note": "trouser leg going down-right toward the black ground area"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad bent over at the waist with seat at left and head at right, mouth open shouting, glasses; lower body is partly lost in black ground, so leg and foot joints are not visible. Coordinates are rough estimates.",
+  "name": "p116-04.png",
+  "width": 512,
+  "height": 1417
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   315,
+   215
+  ],
+  "head_front": [
+   132,
+   215
+  ],
+  "joints": {
+   "shoulder": [
+    320,
+    385
+   ],
+   "elbow": [
+    300,
+    585
+   ],
+   "wrist": [
+    205,
+    500
+   ],
+   "fingertips": [
+    70,
+    470
+   ],
+   "hip": [
+    370,
+    695
+   ],
+   "knee": [
+    70,
+    715
+   ],
+   "ankle": [
+    170,
+    745
+   ],
+   "toe": [
+    12,
+    745
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [
+    120,
+    905
+   ],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     55,
+     400,
+     185,
+     570
+    ],
+    "near": true,
+    "note": "hand gripping the lower edge of the open book, fingers curled over the cover, facing left"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     200,
+     440,
+     400,
+     620
+    ],
+    "near": true,
+    "note": "rolled shirt sleeve with cuff stripes, upper arm hangs from shoulder, forearm angles down-left to the book"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     5,
+     700,
+     225,
+     785
+    ],
+    "near": true,
+    "note": "shoe of the crossed leg in side view, toe left, sole down, strap or lace band at right"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     5,
+     700,
+     110,
+     770
+    ],
+    "near": true,
+    "note": "crossed knee at far left, thigh runs left from the hip"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     290,
+     640,
+     430,
+     740
+    ],
+    "near": true,
+    "note": "buttocks and hip on the bed edge at right, partly hidden by bed covers"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     0,
+     550,
+     380,
+     780
+    ],
+    "near": true,
+    "note": "dark trouser thigh running horizontally left from hip, mostly solid black"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     95,
+     785,
+     140,
+     925
+    ],
+    "near": false,
+    "note": "lower leg of the other leg, vertical, with shoe at the floor line"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Seated on the bed edge, torso upright and turned left, head facing left, holding an open book in front of him with one hand while the arm bends at the elbow. One leg crossed over the other with the shoe pointing left. Estimates for the legs are uncertain because of the heavy black fill.",
+  "name": "p123-05.png",
+  "width": 496,
+  "height": 1022
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   385,
+   185
+  ],
+  "head_front": [
+   238,
+   190
+  ],
+  "joints": {
+   "shoulder": [
+    305,
+    305
+   ],
+   "elbow": [
+    225,
+    540
+   ],
+   "wrist": [
+    385,
+    505
+   ],
+   "fingertips": [
+    445,
+    525
+   ],
+   "hip": [
+    340,
+    590
+   ],
+   "knee": [
+    540,
+    540
+   ],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    360,
+    290
+   ],
+   "far_elbow": [
+    445,
+    410
+   ],
+   "far_wrist": [
+    510,
+    505
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     165,
+     400,
+     310,
+     585
+    ],
+    "near": true,
+    "note": "short shirt sleeve of near arm, angled down-left to elbow at lower left, forearm then goes right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     395,
+     435,
+     465,
+     540
+    ],
+    "near": true,
+    "note": "near hand gripping the book, fingers curled, pointing right-down"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     330,
+     275,
+     475,
+     420
+    ],
+    "near": false,
+    "note": "far arm shirt sleeve at upper right, bent down toward the book"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     500,
+     495,
+     590,
+     545
+    ],
+    "near": false,
+    "note": "far hand holding the far edge of the book, fingers visible"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     390,
+     495,
+     590,
+     690
+    ],
+    "near": true,
+    "note": "solid black trouser leg extending right from the seat, thigh horizontal"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     270,
+     540,
+     400,
+     640
+    ],
+    "near": true,
+    "note": "buttocks mostly hidden in patterned armchair"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Seated in armchair, head turned left, torso upright, both forearms forward holding a book at lower right; legs mostly hidden by chair and black trousers at right. Lower body and feet largely obscured or outside the crop, so knee and hip are estimates.",
+  "name": "p127-05.png",
+  "width": 657,
+  "height": 882
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   213,
+   250
+  ],
+  "head_front": [
+   400,
+   262
+  ],
+  "joints": {
+   "shoulder": [
+    285,
+    375
+   ],
+   "elbow": [
+    330,
+    455
+   ],
+   "wrist": [
+    372,
+    520
+   ],
+   "fingertips": [
+    395,
+    555
+   ],
+   "hip": [
+    290,
+    595
+   ],
+   "knee": [
+    430,
+    650
+   ],
+   "ankle": [
+    380,
+    880
+   ],
+   "toe": [
+    330,
+    905
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     340,
+     505,
+     425,
+     590
+    ],
+    "near": true,
+    "note": "hand gripping/resting on the knee/armrest area, side view pointing right and down"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     200,
+     440,
+     300,
+     600
+    ],
+    "near": false,
+    "note": "crumpled loose shirt sleeve/cuff hanging down on the left, thin wrinkled lines"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     65,
+     600,
+     450,
+     700
+    ],
+    "near": true,
+    "note": "black dark-trouser mass of buttocks and thigh seated in armchair, extends right to knee"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     380,
+     610,
+     452,
+     700
+    ],
+    "near": true,
+    "note": "rounded knee at right end of the thigh, in dark trousers"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     150,
+     690,
+     440,
+     880
+    ],
+    "near": true,
+    "note": "dark trouser lower leg hanging down from knee, mostly solid black"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     200,
+     860,
+     460,
+     928
+    ],
+    "near": true,
+    "note": "shoe in side view, toe right, sole down, cropped at the bottom of the crop"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Seated in an armchair, head and torso leaning forward toward the right, glasses forward. Right arm extends down to a hand on the knee. Lower body is mostly a solid black trouser mass, and the shoes are cropped at the bottom. Joint positions are rough estimates because the lower body is hard to read.",
+  "name": "p127-07.png",
+  "width": 568,
+  "height": 928
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   120,
+   215
+  ],
+  "head_front": [
+   272,
+   215
+  ],
+  "facing": "three_quarter_right",
+  "joints": {
+   "shoulder": [
+    130,
+    330
+   ],
+   "elbow": [
+    140,
+    520
+   ],
+   "wrist": [
+    215,
+    455
+   ],
+   "fingertips": [
+    245,
+    490
+   ],
+   "hip": [
+    220,
+    590
+   ],
+   "knee": [
+    440,
+    545
+   ],
+   "ankle": [
+    520,
+    650
+   ],
+   "toe": [
+    392,
+    675
+   ],
+   "far_shoulder": [
+    330,
+    310
+   ],
+   "far_elbow": [
+    395,
+    470
+   ],
+   "far_wrist": [
+    355,
+    445
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     190,
+     415,
+     275,
+     540
+    ],
+    "near": true,
+    "note": "left hand gripping left page of open book, fingers curled in front of book, seen from front"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     335,
+     405,
+     400,
+     470
+    ],
+    "near": false,
+    "note": "right hand holding right side of book, fingers curled"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     85,
+     470,
+     200,
+     560
+    ],
+    "near": true,
+    "note": "near sleeve and forearm bent at elbow, rolled cuff, heading toward book"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     340,
+     395,
+     460,
+     500
+    ],
+    "near": false,
+    "note": "far sleeve going from shoulder down to hand, partly hidden behind book"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     100,
+     540,
+     260,
+     620
+    ],
+    "near": true,
+    "note": "buttocks/hip area sunk in armchair, partly hidden by chair pattern"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     380,
+     500,
+     500,
+     580
+    ],
+    "near": false,
+    "note": "knee raised, trouser in black, uncertain crossing"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     210,
+     500,
+     610,
+     780
+    ],
+    "near": true,
+    "note": "thigh and shin in solid black trousers extending right from hip, lower leg hanging down toward right"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     388,
+     645,
+     500,
+     715
+    ],
+    "near": true,
+    "note": "shoe in side view, white, toe pointing left, sole down"
+   }
+  ],
+  "pose_note": "Seated in armchair, torso upright and facing right three-quarter, holding open book at chest height with both hands; legs in black trousers extend to the right, possibly crossed. Lower body is partly obscured by chair pattern, so leg joints are rough estimates.",
+  "name": "p127-08.png",
+  "width": 692,
+  "height": 952
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   688,
+   235
+  ],
+  "head_front": [
+   508,
+   235
+  ],
+  "joints": {
+   "shoulder": [
+    650,
+    395
+   ],
+   "elbow": [
+    690,
+    585
+   ],
+   "wrist": [
+    525,
+    535
+   ],
+   "fingertips": [
+    405,
+    525
+   ],
+   "hip": [
+    600,
+    650
+   ],
+   "knee": [
+    100,
+    680
+   ],
+   "ankle": [
+    260,
+    740
+   ],
+   "toe": [
+    195,
+    745
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     395,
+     495,
+     520,
+     600
+    ],
+    "near": true,
+    "note": "large hand in profile gripping the lower edge of the open book, fingers pointing left"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     320,
+     430,
+     395,
+     545
+    ],
+    "near": false,
+    "note": "other hand on the far side of the book, fingers curled around the left cover edge"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     560,
+     540,
+     730,
+     690
+    ],
+    "near": true,
+    "note": "rolled shirt sleeve, forearm running from elbow at right toward the book at left"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     500,
+     600,
+     720,
+     700
+    ],
+    "near": true,
+    "note": "buttocks sunk in armchair, mostly hidden by sleeve and cushion"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     70,
+     625,
+     570,
+     755
+    ],
+    "near": true,
+    "note": "solid black trouser leg extending left horizontally from hip, thigh and shin merged"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     195,
+     728,
+     310,
+     755
+    ],
+    "near": true,
+    "note": "black shoe at bottom edge, partly cropped, sole down"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     70,
+     640,
+     170,
+     720
+    ],
+    "near": true,
+    "note": "bent knee at left end of dark trouser mass"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Seated in a patterned armchair, leaning back and reading an open book held low in both hands; head in left profile with big nose, glasses, and dark hair; legs and feet are mostly a solid black mass, so leg joints are approximate.",
+  "name": "p137-01.png",
+  "width": 869,
+  "height": 836
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   188,
+   180
+  ],
+  "head_front": [
+   340,
+   185
+  ],
+  "joints": {
+   "shoulder": [
+    235,
+    290
+   ],
+   "elbow": [
+    200,
+    470
+   ],
+   "wrist": [
+    300,
+    440
+   ],
+   "fingertips": [
+    375,
+    480
+   ],
+   "hip": [
+    270,
+    540
+   ],
+   "knee": [
+    480,
+    460
+   ],
+   "ankle": [
+    520,
+    650
+   ],
+   "toe": [
+    400,
+    670
+   ],
+   "far_shoulder": [
+    320,
+    280
+   ],
+   "far_elbow": [
+    350,
+    370
+   ],
+   "far_wrist": [
+    400,
+    450
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     290,
+     395,
+     375,
+     490
+    ],
+    "near": true,
+    "note": "hand gripping the book, fingers pointing right-down, seen from above"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     130,
+     410,
+     200,
+     470
+    ],
+    "near": false,
+    "note": "small hand resting on chair armrest at left, fingers curled"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     160,
+     330,
+     300,
+     510
+    ],
+    "near": true,
+    "note": "shirt sleeve running from shoulder down to elbow then forearm toward the book"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     225,
+     515,
+     335,
+     600
+    ],
+    "near": true,
+    "note": "knee in dotted trousers bent forward, rounded"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     85,
+     500,
+     235,
+     580
+    ],
+    "near": true,
+    "note": "seat/buttocks in dotted trousers sunk in the armchair"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     330,
+     430,
+     550,
+     680
+    ],
+    "near": true,
+    "note": "large black trouser leg extending right from thigh to shin, partly cut by panel border"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     340,
+     620,
+     540,
+     700
+    ],
+    "near": true,
+    "note": "shoe/foot area at lower right, side view, toe right-ish, uncertain"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad sits in a polka-dot armchair facing right, reading a book held in his hands; head profile in glasses, arm bent with elbow near armrest, legs extend right in black trousers. The lower right is partly hidden by the panel border.",
+  "name": "p137-02.png",
+  "width": 638,
+  "height": 928
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   210,
+   393
+  ],
+  "head_front": [
+   372,
+   393
+  ],
+  "joints": {
+   "shoulder": [
+    253,
+    510
+   ],
+   "elbow": [
+    226,
+    678
+   ],
+   "wrist": [
+    250,
+    745
+   ],
+   "fingertips": [
+    330,
+    725
+   ],
+   "hip": [
+    355,
+    775
+   ],
+   "knee": [
+    624,
+    712
+   ],
+   "ankle": [
+    640,
+    865
+   ],
+   "toe": [
+    517,
+    1000
+   ],
+   "far_shoulder": [
+    360,
+    500
+   ],
+   "far_elbow": [],
+   "far_wrist": [
+    440,
+    640
+   ],
+   "far_knee": [],
+   "far_ankle": [
+    670,
+    850
+   ],
+   "far_toe": [
+    655,
+    1000
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     505,
+     845,
+     605,
+     1020
+    ],
+    "near": true,
+    "note": "shoe seen from side/below, toe pointing down-left, sole facing left, big oval sole outline"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     620,
+     840,
+     690,
+     1000
+    ],
+    "near": false,
+    "note": "far shoe partly hidden behind near shoe, side view, toe down-left"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     260,
+     590,
+     480,
+     720
+    ],
+    "near": true,
+    "note": "large near hand stretched right across lap, fingers spread and pointing right, palm down"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     460,
+     600,
+     560,
+     690
+    ],
+    "near": false,
+    "note": "far hand with curled fingers resting near knee, below the book"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     190,
+     640,
+     280,
+     760
+    ],
+    "near": true,
+    "note": "cuffed shirt sleeve, forearm resting on the armrest, hanging down from elbow"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     540,
+     690,
+     660,
+     760
+    ],
+    "near": true,
+    "note": "knee bent, covered by black trousers, raised toward right"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     100,
+     740,
+     340,
+     820
+    ],
+    "near": true,
+    "note": "hips sunk in the chair, mostly hidden by chair cushion and trousers"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     365,
+     690,
+     670,
+     920
+    ],
+    "near": true,
+    "note": "solid black trouser leg running from lap right and down to the ankle, thigh nearly horizontal then shin descending"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     600,
+     720,
+     690,
+     900
+    ],
+    "near": false,
+    "note": "far leg black trouser, mostly hidden behind near leg, descending at right edge"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Dad slumped in a patterned armchair, facing right; glasses held up in the air and a black book falling or rising to the right. Legs extend right to the frame edge with shoes pointing down-left. Coordinates are estimates read from scaled grid.",
+  "name": "p137-03.png",
+  "width": 763,
+  "height": 1184
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   864,
+   306
+  ],
+  "head_front": [
+   1060,
+   294
+  ],
+  "joints": {
+   "shoulder": [
+    1067,
+    472
+   ],
+   "elbow": [
+    1232,
+    607
+   ],
+   "wrist": [
+    1140,
+    447
+   ],
+   "fingertips": [
+    1079,
+    300
+   ],
+   "hip": [
+    981,
+    797
+   ],
+   "knee": [
+    748,
+    766
+   ],
+   "ankle": [
+    735,
+    968
+   ],
+   "toe": [
+    637,
+    1005
+   ],
+   "far_shoulder": [
+    968,
+    490
+   ],
+   "far_elbow": [
+    858,
+    735
+   ],
+   "far_wrist": [
+    748,
+    705
+   ],
+   "far_knee": [
+    858,
+    858
+   ],
+   "far_ankle": [
+    858,
+    1005
+   ],
+   "far_toe": [
+    785,
+    1017
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     631,
+     956,
+     760,
+     1042
+    ],
+    "near": true,
+    "note": "shoe in side view, toe pointing left, sole down, resting on lower step"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     699,
+     668,
+     803,
+     735
+    ],
+    "near": false,
+    "note": "hand gripping the coffee mug at left, fingers curled around the handle"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     1067,
+     288,
+     1195,
+     460
+    ],
+    "near": true,
+    "note": "hand raised to the face/ear, palm toward head, fingers up"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     895,
+     454,
+     1257,
+     809
+    ],
+    "near": true,
+    "note": "dark sweater torso and sleeve, elbow bent out to the right, forearm raised"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     699,
+     735,
+     809,
+     797
+    ],
+    "near": true,
+    "note": "knee bent, pointing left and up, rounded"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     907,
+     785,
+     1103,
+     895
+    ],
+    "near": true,
+    "note": "seated on the step at right, buttocks over the dark step edge"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     631,
+     748,
+     907,
+     1017
+    ],
+    "near": true,
+    "note": "thigh goes left from hip to knee, then shin drops down to the shoe, loose trouser"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad seated on a step in profile facing left, head turned slightly toward viewer, mug in hand at left, other hand raised to his head. Coordinates are estimated from a scaled view, so some joints are approximate.",
+  "name": "p151-01.png",
+  "width": 1349,
+  "height": 1161
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   400,
+   250
+  ],
+  "head_front": [
+   215,
+   258
+  ],
+  "joints": {
+   "shoulder": [
+    330,
+    440
+   ],
+   "elbow": [
+    345,
+    560
+   ],
+   "wrist": [
+    375,
+    640
+   ],
+   "fingertips": [
+    420,
+    680
+   ],
+   "hip": [
+    200,
+    760
+   ],
+   "knee": [
+    400,
+    730
+   ],
+   "ankle": [
+    470,
+    760
+   ],
+   "toe": [
+    640,
+    695
+   ],
+   "far_shoulder": [
+    150,
+    385
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     415,
+     675,
+     645,
+     785
+    ],
+    "near": true,
+    "note": "shoe in side view, toe right, sole facing viewer/up-left, foot raised; large foreground shape"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     322,
+     555,
+     425,
+     690
+    ],
+    "near": true,
+    "note": "hand wrapped around mug handle, fingers curled, thumb up"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     305,
+     440,
+     410,
+     610
+    ],
+    "near": true,
+    "note": "white shirt sleeve hanging down from shoulder to wrist, slightly bent forearm"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     330,
+     690,
+     450,
+     770
+    ],
+    "near": true,
+    "note": "knee of crossed leg, pointing right, under mug hand"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     100,
+     720,
+     300,
+     800
+    ],
+    "near": true,
+    "note": "buttocks and rear of seated trousers on the step at left"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     130,
+     700,
+     430,
+     860
+    ],
+    "near": true,
+    "note": "thigh running roughly horizontal from hip at left to knee at right, light trousers with fold lines"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     400,
+     740,
+     560,
+     930
+    ],
+    "near": false,
+    "note": "lower leg descending diagonally down-right toward the floor at bottom"
+   }
+  ],
+  "facing": "three_quarter_left",
+  "pose_note": "Dad sits on the back step, torso in a black sweater vest, head turned three-quarter to the left toward Calvin, nose pointing left; near arm holds a mug at right of the torso; legs crossed with a big shoe raised at right. Joint positions are rough estimates because the crop is cut off.",
+  "name": "p151-03.png",
+  "width": 710,
+  "height": 975
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   395,
+   235
+  ],
+  "head_front": [
+   195,
+   215
+  ],
+  "facing": "three_quarter_left",
+  "pose_note": "Seated on steps, torso nearly frontal in a black sweater, head turned three-quarter left, smiling. Near arm bent sharply: upper arm goes down-right to the elbow, then the forearm comes back left across the belly to a fist-like gesturing hand. Only one thigh and knee are visible at the bottom, with Calvin's spiky head at lower right. Feet are outside the crop.",
+  "joints": {
+   "shoulder": [
+    365,
+    395
+   ],
+   "elbow": [
+    495,
+    545
+   ],
+   "wrist": [
+    300,
+    570
+   ],
+   "fingertips": [
+    180,
+    595
+   ],
+   "hip": [
+    390,
+    660
+   ],
+   "knee": [
+    240,
+    730
+   ],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    110,
+    375
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     175,
+     520,
+     312,
+     640
+    ],
+    "near": true,
+    "note": "gesturing hand, loose fist with fingers pointing left, palm down, sitting in front of belly"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     330,
+     380,
+     525,
+     670
+    ],
+    "near": true,
+    "note": "black sleeve of the near arm, upper arm sloping down-right to a bent elbow, forearm returning left"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     165,
+     690,
+     330,
+     800
+    ],
+    "near": true,
+    "note": "knee rising at lower left, rounded, thigh heading right and up toward the hip"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     160,
+     690,
+     470,
+     900
+    ],
+    "near": true,
+    "note": "light trouser leg with fold lines, thigh going from the knee at left back toward the hip at right, shin dropping down out of the crop"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     330,
+     640,
+     480,
+     730
+    ],
+    "near": true,
+    "note": "buttocks and hip region hidden behind the thigh and Calvin, around the junction of torso and thigh"
+   }
+  ],
+  "name": "p151-05.png",
+  "width": 746,
+  "height": 929
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   244,
+   432
+  ],
+  "head_front": [
+   419,
+   427
+  ],
+  "joints": {
+   "shoulder": [
+    259,
+    530
+   ],
+   "elbow": [
+    265,
+    713
+   ],
+   "wrist": [
+    324,
+    746
+   ],
+   "fingertips": [
+    373,
+    714
+   ],
+   "hip": [
+    249,
+    746
+   ],
+   "knee": [
+    330,
+    795
+   ],
+   "ankle": [
+    562,
+    1016
+   ],
+   "toe": [
+    649,
+    1043
+   ],
+   "far_shoulder": [
+    357,
+    519
+   ],
+   "far_elbow": [
+    346,
+    681
+   ],
+   "far_wrist": [
+    416,
+    627
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     520,
+     1005,
+     650,
+     1075
+    ],
+    "near": true,
+    "note": "shoe in side view, toe right, sole down, at bottom right edge of crop"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     395,
+     590,
+     475,
+     660
+    ],
+    "near": false,
+    "note": "far hand gripping newspaper edge, fingers curled around paper"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     355,
+     700,
+     400,
+     735
+    ],
+    "near": true,
+    "note": "near hand resting on knee, fingers pointing right"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     195,
+     520,
+     330,
+     760
+    ],
+    "near": true,
+    "note": "near shirt sleeve hanging from shoulder to elbow then forearm angled down-right to wrist"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     295,
+     780,
+     380,
+     850
+    ],
+    "near": true,
+    "note": "near knee, rounded, dotted trousers, pointing up-right"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     200,
+     740,
+     310,
+     830
+    ],
+    "near": true,
+    "note": "buttocks/thigh in dotted trousers sunk in armchair, mostly hidden"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     400,
+     700,
+     610,
+     1040
+    ],
+    "near": false,
+    "note": "crossed leg in solid black trousers, thigh going right then shin dropping down to shoe"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     300,
+     780,
+     560,
+     990
+    ],
+    "near": true,
+    "note": "near leg in dotted trousers, thigh from seat over knee, shin angling down-right"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Seated deep in armchair facing right, head bowed with eyes closed, holding newspaper up with far hand, near forearm resting on crossed knee. Leg positions uncertain due to black fill.",
+  "name": "p152-01.png",
+  "width": 682,
+  "height": 1188
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   172,
+   340
+  ],
+  "head_front": [
+   348,
+   335
+  ],
+  "joints": {
+   "shoulder": [
+    170,
+    470
+   ],
+   "elbow": [
+    185,
+    640
+   ],
+   "wrist": [
+    300,
+    625
+   ],
+   "fingertips": [
+    410,
+    545
+   ],
+   "hip": [
+    220,
+    690
+   ],
+   "knee": [
+    420,
+    690
+   ],
+   "ankle": [
+    530,
+    930
+   ],
+   "toe": [
+    455,
+    962
+   ],
+   "far_shoulder": [
+    320,
+    455
+   ],
+   "far_elbow": [],
+   "far_wrist": [
+    490,
+    580
+   ],
+   "far_knee": [
+    540,
+    640
+   ],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     445,
+     940,
+     575,
+     980
+    ],
+    "near": false,
+    "note": "shoe in side view, toe pointing left, sole down, partly hidden by blanket-like cloth at bottom right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     360,
+     520,
+     445,
+     630
+    ],
+    "near": true,
+    "note": "hand gripping the left edge of the open book, fingers curled around it"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     470,
+     520,
+     525,
+     600
+    ],
+    "near": false,
+    "note": "far hand mostly hidden behind the book, a few fingers visible at its right edge"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     215,
+     595,
+     300,
+     695
+    ],
+    "near": true,
+    "note": "shirt sleeve with cuff, forearm angled up to the right toward the book"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     355,
+     610,
+     585,
+     950
+    ],
+    "near": true,
+    "note": "solid black trouser leg extending right from the lap, then down to the shoe"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     470,
+     610,
+     565,
+     680
+    ],
+    "near": true,
+    "note": "black knee raised at right, top of the leg behind the book"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     120,
+     640,
+     340,
+     760
+    ],
+    "near": true,
+    "note": "seat/buttocks hidden in the armchair, lower torso rests on the dotted cushion"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Dad sits in the armchair reading an open book held at chest height, head tilted slightly down, body three-quarter to the right. His legs are crossed or extended to the right as solid black trousers. Chair pattern covers much of the lower body, so hip, knee and seat positions are estimates.",
+  "name": "p152-02.png",
+  "width": 596,
+  "height": 1028
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   600,
+   350
+  ],
+  "head_front": [
+   432,
+   365
+  ],
+  "joints": {
+   "shoulder": [
+    610,
+    490
+   ],
+   "elbow": [
+    600,
+    545
+   ],
+   "wrist": [
+    540,
+    610
+   ],
+   "fingertips": [
+    520,
+    625
+   ],
+   "hip": [
+    650,
+    700
+   ],
+   "knee": [
+    800,
+    670
+   ],
+   "ankle": [
+    790,
+    880
+   ],
+   "toe": [
+    650,
+    940
+   ],
+   "far_shoulder": [
+    500,
+    500
+   ],
+   "far_elbow": [
+    520,
+    590
+   ],
+   "far_wrist": [
+    570,
+    650
+   ],
+   "far_knee": [],
+   "far_ankle": [
+    610,
+    640
+   ],
+   "far_toe": [
+    740,
+    630
+   ]
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     585,
+     470,
+     655,
+     555
+    ],
+    "near": true,
+    "note": "short rolled shirt sleeve on near upper arm, right of the head"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     500,
+     520,
+     570,
+     640
+    ],
+    "near": false,
+    "note": "hand gripping a small book/paper in front of chest, fingers pointing down"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     615,
+     625,
+     745,
+     675
+    ],
+    "near": false,
+    "note": "shoe in side view, toe pointing right, sole down, resting on chair seat"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     640,
+     900,
+     830,
+     960
+    ],
+    "near": true,
+    "note": "shoe in side view, toe pointing left, sole down, on floor at lower right"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     545,
+     640,
+     819,
+     860
+    ],
+    "near": true,
+    "note": "large black trouser leg from hip at chair edge toward right, going down to ankle"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     740,
+     630,
+     819,
+     720
+    ],
+    "near": true,
+    "note": "knee at right edge of the crop, partly cut off"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     460,
+     600,
+     700,
+     720
+    ],
+    "near": true,
+    "note": "buttocks and hip seated at the chair's rear, partly hidden by the chair"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad is seated in the armchair, leaning forward and looking left toward Calvin. His body and legs extend to the right and are partly cropped by the panel edge, so the joint positions are rough estimates.",
+  "name": "p152-04.png",
+  "width": 819,
+  "height": 1189
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   572,
+   235
+  ],
+  "head_front": [
+   418,
+   240
+  ],
+  "joints": {
+   "shoulder": [
+    540,
+    345
+   ],
+   "elbow": [
+    600,
+    545
+   ],
+   "wrist": [
+    445,
+    525
+   ],
+   "fingertips": [
+    335,
+    510
+   ],
+   "hip": [
+    500,
+    600
+   ],
+   "knee": [
+    330,
+    610
+   ],
+   "ankle": [
+    330,
+    890
+   ],
+   "toe": [
+    90,
+    885
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     85,
+     870,
+     392,
+     945
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, partly merged with black chair shadow"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     335,
+     470,
+     425,
+     595
+    ],
+    "near": true,
+    "note": "hand holding book from below, fingers pointing left, thumb up"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     245,
+     420,
+     300,
+     550
+    ],
+    "near": false,
+    "note": "far hand gripping left edge of book, fingers curled, vertical"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     540,
+     400,
+     660,
+     595
+    ],
+    "near": true,
+    "note": "upper arm sweater sleeve hanging down along torso, bent at elbow at bottom right, forearm going left"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     400,
+     330,
+     500,
+     490
+    ],
+    "near": false,
+    "note": "far arm sleeve with dark shading, running down from shoulder toward the book"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     300,
+     580,
+     620,
+     640
+    ],
+    "near": true,
+    "note": "buttocks and lap hidden in black dark trousers/chair, bottom of sweater at y~600"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     290,
+     585,
+     400,
+     640
+    ],
+    "near": true,
+    "note": "knee hidden in dark trousers beneath sweater hem, left of lap"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     100,
+     590,
+     420,
+     900
+    ],
+    "near": true,
+    "note": "dark trousers merged with black chair, shin descending to shoe at bottom left"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Seated in armchair, profile facing left, leaning slightly forward holding a book with both hands at chest level; upper arm down along body; legs and chair mostly merged into solid black so lower-body joints are estimates.",
+  "name": "p168-01.png",
+  "width": 801,
+  "height": 1042
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   528,
+   320
+  ],
+  "head_front": [
+   326,
+   322
+  ],
+  "joints": {
+   "shoulder": [
+    390,
+    560
+   ],
+   "elbow": [
+    245,
+    610
+   ],
+   "wrist": [
+    150,
+    670
+   ],
+   "fingertips": [
+    90,
+    700
+   ],
+   "hip": [],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     205,
+     428,
+     330,
+     660
+    ],
+    "near": true,
+    "note": "shirt sleeve of near arm hanging down-left from shoulder, dark patterned, toward paper"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     70,
+     640,
+     150,
+     799
+    ],
+    "near": true,
+    "note": "hand gripping the left edge of the newspaper at bottom left, fingers curled"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Crop shows head and upper torso only, in profile facing left. Glasses at front, large nose, dark hair swept back. Torso, hips and legs are outside the crop. The near arm and sleeve run down-left to a hand holding the newspaper. The two hands at right (x 480-600, y 400-560) look like a different figure or the chair, so I did not mark them as Dad's. Shoulder and elbow positions are rough estimates.",
+  "name": "p175-01.png",
+  "width": 680,
+  "height": 799
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   574,
+   330
+  ],
+  "head_front": [
+   384,
+   330
+  ],
+  "joints": {
+   "shoulder": [
+    360,
+    487
+   ],
+   "elbow": [
+    312,
+    629
+   ],
+   "wrist": [
+    355,
+    712
+   ],
+   "fingertips": [
+    372,
+    757
+   ],
+   "hip": [
+    406,
+    782
+   ],
+   "knee": [
+    345,
+    865
+   ],
+   "ankle": [
+    315,
+    1005
+   ],
+   "toe": [
+    205,
+    1071
+   ],
+   "far_shoulder": [
+    579,
+    477
+   ],
+   "far_elbow": [
+    609,
+    612
+   ],
+   "far_wrist": [
+    568,
+    722
+   ],
+   "far_knee": [
+    568,
+    885
+   ],
+   "far_ankle": [
+    579,
+    1015
+   ],
+   "far_toe": [
+    530,
+    1081
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     200,
+     1030,
+     400,
+     1100
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, big rounded"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     520,
+     1040,
+     628,
+     1100
+    ],
+    "near": false,
+    "note": "shoe toe left, partly cropped at right edge"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     335,
+     700,
+     385,
+     765
+    ],
+    "near": true,
+    "note": "hand resting on lap, fingers pointing down toward knee"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     545,
+     700,
+     605,
+     760
+    ],
+    "near": false,
+    "note": "hand resting on lap, fingers pointing down-left"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     295,
+     470,
+     385,
+     720
+    ],
+    "near": true,
+    "note": "patterned sleeve running down from shoulder, forearm angled inward to lap"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     540,
+     430,
+     628,
+     720
+    ],
+    "near": false,
+    "note": "patterned sleeve from far shoulder, elbow out at right edge, forearm to lap"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     330,
+     830,
+     480,
+     900
+    ],
+    "near": true,
+    "note": "knee, facing viewer, patterned trousers"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     480,
+     830,
+     590,
+     900
+    ],
+    "near": false,
+    "note": "knee facing viewer, patterned trousers"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     300,
+     755,
+     612,
+     830
+    ],
+    "near": true,
+    "note": "dark seat/thighs area seen from front, mostly solid black"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     300,
+     830,
+     400,
+     1030
+    ],
+    "near": true,
+    "note": "lower leg going down, mostly black, front view"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     530,
+     830,
+     612,
+     1040
+    ],
+    "near": false,
+    "note": "lower leg going down, black, cropped at right"
+   }
+  ],
+  "facing": "front",
+  "pose_note": "Dad seated in an armchair facing the viewer, head slightly tilted toward Calvin on the left, mouth open in a grin. Both forearms rest on his lap with hands near the knees. Legs apart with shoes pointing left. Coordinates were estimated from the scaled grid (about 0.985 displayed px per original px), so they are approximate.",
+  "name": "p175-03.png",
+  "width": 628,
+  "height": 1128
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   297,
+   170
+  ],
+  "head_front": [
+   150,
+   170
+  ],
+  "joints": {
+   "shoulder": [
+    320,
+    200
+   ],
+   "elbow": [
+    235,
+    400
+   ],
+   "wrist": [
+    178,
+    382
+   ],
+   "fingertips": [
+    88,
+    378
+   ],
+   "hip": [
+    420,
+    430
+   ],
+   "knee": [
+    175,
+    455
+   ],
+   "ankle": [
+    225,
+    550
+   ],
+   "toe": [
+    195,
+    555
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [
+    390,
+    590
+   ],
+   "far_toe": [
+    305,
+    628
+   ]
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     85,
+     360,
+     170,
+     395
+    ],
+    "near": true,
+    "note": "hand pointing left, fingers extended, palm down, resting near bed edge"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     180,
+     365,
+     265,
+     545
+    ],
+    "near": true,
+    "note": "sweater sleeve hanging diagonally down from shoulder toward lower left, light-coloured"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     145,
+     415,
+     235,
+     500
+    ],
+    "near": true,
+    "note": "black trouser knee bulge at left, bent"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     330,
+     395,
+     506,
+     560
+    ],
+    "near": true,
+    "note": "black trouser seat and thigh mass at right, bent over"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     145,
+     415,
+     330,
+     560
+    ],
+    "near": true,
+    "note": "black near thigh/shin going left from seat to knee then down"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     190,
+     535,
+     265,
+     575
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     300,
+     575,
+     450,
+     630
+    ],
+    "near": false,
+    "note": "far shoe, toe left, sole down, partly cut off at bottom"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad bent forward at the waist, head low and facing left, one arm reaching down-left toward the bed; uncertain limb assignment due to heavy black fills.",
+  "name": "p175-11.png",
+  "width": 506,
+  "height": 705
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   245,
+   360
+  ],
+  "head_front": [
+   395,
+   345
+  ],
+  "joints": {
+   "shoulder": [
+    255,
+    470
+   ],
+   "elbow": [
+    235,
+    650
+   ],
+   "wrist": [
+    305,
+    585
+   ],
+   "fingertips": [
+    420,
+    545
+   ],
+   "hip": [
+    230,
+    720
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [
+    565,
+    545
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     315,
+     450,
+     432,
+     580
+    ],
+    "near": true,
+    "note": "hand gripping left edge of newspaper, fingers curled over paper facing right, thumb behind"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     100,
+     430,
+     335,
+     700
+    ],
+    "near": true,
+    "note": "dark shirt back and sleeve mass, filled black, with cuff near wrist at about (305,590)"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     545,
+     500,
+     595,
+     575
+    ],
+    "near": false,
+    "note": "far hand partly visible at right edge of newspaper, holding it"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     40,
+     690,
+     300,
+     880
+    ],
+    "near": true,
+    "note": "rounded curve of thigh/seat in side view at bottom left of chair, mostly outline"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Seated in armchair seen from behind-left, face hidden behind a large open newspaper; only hair at upper left, dark back and near hand gripping paper are visible. Legs and feet are outside or hidden, so lower joints are omitted and the elbow, hip and shoulder positions are estimates.",
+  "name": "p199-01.png",
+  "width": 977,
+  "height": 987
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   385,
+   415
+  ],
+  "head_front": [
+   237,
+   410
+  ],
+  "joints": {
+   "shoulder": [
+    410,
+    500
+   ],
+   "elbow": [
+    320,
+    615
+   ],
+   "wrist": [
+    250,
+    675
+   ],
+   "fingertips": [
+    200,
+    700
+   ],
+   "hip": [
+    500,
+    730
+   ],
+   "knee": [
+    390,
+    800
+   ],
+   "ankle": [
+    440,
+    880
+   ],
+   "toe": [],
+   "far_shoulder": [
+    500,
+    440
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     193,
+     668,
+     268,
+     745
+    ],
+    "near": true,
+    "note": "black-gloved hand gripping tool handle, fist pointing down-left"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     235,
+     590,
+     430,
+     705
+    ],
+    "near": true,
+    "note": "striped cuffed sleeve running from shoulder down-left to the glove, bent at elbow"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     455,
+     400,
+     585,
+     515
+    ],
+    "near": false,
+    "note": "far arm sleeve seen behind torso, striped cuff pointing up-right"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     470,
+     690,
+     550,
+     780
+    ],
+    "near": true,
+    "note": "rear of dark trousers at right, back bulge"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     345,
+     720,
+     545,
+     885
+    ],
+    "near": true,
+    "note": "dark filled trousers, legs bent, lower part hidden in snow at bottom"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     350,
+     760,
+     430,
+     840
+    ],
+    "near": true,
+    "note": "bent knee at left edge of trousers"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad bent far forward at the waist facing left, in a beanie, holding a rake/shovel handle with a gloved hand low at left; shoes are hidden in snow and not visible; torso is a large rounded mass with the head lowered at upper left.",
+  "name": "p202-03.png",
+  "width": 614,
+  "height": 1006
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   188,
+   395
+  ],
+  "head_front": [
+   397,
+   395
+  ],
+  "joints": {
+   "shoulder": [
+    210,
+    610
+   ],
+   "elbow": [],
+   "wrist": [],
+   "fingertips": [],
+   "hip": [],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    385,
+    595
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [],
+  "facing": "right",
+  "pose_note": "Crop shows only head, neck and upper chest of Dad in profile facing right, with round glasses, ear at left and a smile. The torso is cut off near y=870. Arms, hands, hips, legs and shoes are not visible. The shapes at the bottom, about x 70-470 and y 700-870, look like couch cushions, not his knees. Shoulders are estimated from the sweater outline.",
+  "name": "p208-04.png",
+  "width": 631,
+  "height": 892
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   115,
+   125
+  ],
+  "head_front": [
+   280,
+   150
+  ],
+  "joints": {
+   "shoulder": [
+    175,
+    255
+   ],
+   "elbow": [
+    105,
+    420
+   ],
+   "wrist": [
+    205,
+    440
+   ],
+   "fingertips": [
+    295,
+    445
+   ],
+   "hip": [
+    160,
+    520
+   ],
+   "knee": [
+    455,
+    520
+   ],
+   "ankle": [
+    455,
+    715
+   ],
+   "toe": [
+    580,
+    748
+   ],
+   "far_shoulder": [
+    235,
+    265
+   ],
+   "far_elbow": [],
+   "far_wrist": [
+    425,
+    400
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     395,
+     715,
+     590,
+     800
+    ],
+    "near": true,
+    "note": "shoe in side view, toe right, sole down, flat on floor"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     195,
+     370,
+     305,
+     480
+    ],
+    "near": true,
+    "note": "hand resting on thigh, pointing right, fingers curled"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     395,
+     345,
+     470,
+     425
+    ],
+    "near": false,
+    "note": "hand gripping right edge of book, thumb up"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     55,
+     395,
+     200,
+     470
+    ],
+    "near": true,
+    "note": "rolled/forearm sleeve running horizontally from elbow at left to wrist"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     400,
+     440,
+     500,
+     600
+    ],
+    "near": true,
+    "note": "knee bent, raised at right of thigh, black trousers"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     120,
+     480,
+     260,
+     600
+    ],
+    "near": true,
+    "note": "buttocks sunk in armchair, hidden behind chair arm"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     190,
+     450,
+     500,
+     730
+    ],
+    "near": true,
+    "note": "black trouser thigh horizontal then shin descending vertically on right"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Seated in armchair, leaning back, facing right, holding open book on lap with far hand, near hand resting on thigh; legs bent with shin vertical.",
+  "name": "p235-07.png",
+  "width": 667,
+  "height": 869
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   158,
+   135
+  ],
+  "head_front": [
+   333,
+   168
+  ],
+  "joints": {
+   "shoulder": [
+    215,
+    262
+   ],
+   "elbow": [
+    125,
+    440
+   ],
+   "wrist": [
+    185,
+    440
+   ],
+   "fingertips": [
+    295,
+    478
+   ],
+   "hip": [
+    270,
+    520
+   ],
+   "knee": [
+    490,
+    490
+   ],
+   "ankle": [
+    515,
+    600
+   ],
+   "toe": [
+    588,
+    560
+   ],
+   "far_shoulder": [
+    150,
+    240
+   ],
+   "far_elbow": [],
+   "far_wrist": [
+    430,
+    415
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     240,
+     395,
+     335,
+     500
+    ],
+    "near": true,
+    "note": "near hand gripping the lower left of the open paper/book, fingers curled over the edge, seen from above/side"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     420,
+     385,
+     500,
+     435
+    ],
+    "near": false,
+    "note": "far hand holding upper right edge of the paper, fingers pointing right"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     95,
+     405,
+     250,
+     485
+    ],
+    "near": true,
+    "note": "near forearm sleeve, striped, extends from elbow at left to wrist, horizontal"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     70,
+     205,
+     175,
+     295
+    ],
+    "near": false,
+    "note": "far shoulder/upper arm sleeve at the left edge, behind the torso"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     430,
+     455,
+     530,
+     540
+    ],
+    "near": true,
+    "note": "knee, bent, rounded black trouser top at right"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     230,
+     490,
+     330,
+     600
+    ],
+    "near": true,
+    "note": "buttocks and rear thigh in black trousers, mostly hidden by the chair arm"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     230,
+     450,
+     530,
+     700
+    ],
+    "near": true,
+    "note": "near leg in solid black trousers, thigh horizontal to the right, shin dropping down at right"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     515,
+     535,
+     592,
+     645
+    ],
+    "near": true,
+    "note": "shoe in side view, toe pointing right, sole down, tilted"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Seated in an armchair facing right, head tilted slightly down, holding a paper/book in both hands in front of his chest; thigh horizontal, shin angling down to a shoe at right. Lower body partly obscured by the chair arm; estimates are approximate.",
+  "name": "p235-08.png",
+  "width": 650,
+  "height": 752
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   385,
+   245
+  ],
+  "head_front": [
+   548,
+   285
+  ],
+  "joints": {
+   "shoulder": [
+    330,
+    262
+   ],
+   "elbow": [
+    335,
+    450
+   ],
+   "wrist": [
+    455,
+    468
+   ],
+   "fingertips": [
+    525,
+    500
+   ],
+   "hip": [
+    190,
+    545
+   ],
+   "knee": [
+    400,
+    545
+   ],
+   "ankle": [
+    390,
+    670
+   ],
+   "toe": [],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [
+    520,
+    430
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "seat",
+    "box": [
+     90,
+     510,
+     250,
+     690
+    ],
+    "near": true,
+    "note": "rounded buttocks at far left, crouching low, outlined bulge with black trousers fill"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     140,
+     530,
+     430,
+     700
+    ],
+    "near": true,
+    "note": "solid black trouser mass, thigh running horizontally right from hip toward knee, shin going down to the right"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     350,
+     505,
+     450,
+     600
+    ],
+    "near": true,
+    "note": "knee at right end of black thigh, bent forward"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     190,
+     235,
+     470,
+     520
+    ],
+    "near": true,
+    "note": "striped long shirt sleeve and torso, hunched forward, stripes running diagonally down-left; forearm leading to the right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     455,
+     440,
+     560,
+     545
+    ],
+    "near": true,
+    "note": "near hand gripping the gas can top, fingers curled, pointing right and down"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     495,
+     412,
+     568,
+     455
+    ],
+    "near": false,
+    "note": "far hand raised above the can, fist with fingers curled, holding bag or dollar"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     95,
+     610,
+     190,
+     690
+    ],
+    "near": false,
+    "note": "partial shoe/heel outline at lower left, side view, sole down; uncertain"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Dad is in a deep crouch hunched forward, facing right, with his back rounded in a striped shirt. His seat is low at the far left and his black trousers fill the bottom. One arm reaches forward to a gas can on the right. Legs are mostly hidden by the black fill, so the knee, ankle and toe positions are estimates.",
+  "name": "p237-03.png",
+  "width": 668,
+  "height": 799
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   350,
+   483
+  ],
+  "head_front": [
+   176,
+   502
+  ],
+  "joints": {
+   "shoulder": [
+    335,
+    608
+   ],
+   "elbow": [
+    380,
+    780
+   ],
+   "wrist": [
+    300,
+    826
+   ],
+   "fingertips": [
+    167,
+    722
+   ],
+   "hip": [
+    378,
+    890
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     155,
+     694,
+     240,
+     806
+    ],
+    "near": true,
+    "note": "hand gripping the left edge of the open book, fingers curled around the cover, facing left"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     305,
+     744,
+     417,
+     856
+    ],
+    "near": true,
+    "note": "striped shirt sleeve, bent forearm angled down-left from elbow toward the book hand"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad is seated, in left-facing profile/three-quarter view, head tilted down toward a book held in his left-pointing hand. Legs, knees and feet are hidden by the black bed covers and panel bottom, so only the upper body is measurable. Seat, knee and shoe are not visible.",
+  "name": "p245-01.png",
+  "width": 773,
+  "height": 1232
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   120,
+   455
+  ],
+  "head_front": [
+   303,
+   455
+  ],
+  "joints": {
+   "shoulder": [
+    230,
+    610
+   ],
+   "elbow": [
+    251,
+    834
+   ],
+   "wrist": [
+    321,
+    797
+   ],
+   "fingertips": [
+    396,
+    850
+   ],
+   "hip": [
+    160,
+    920
+   ],
+   "knee": [
+    417,
+    925
+   ],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     230,
+     630,
+     310,
+     855
+    ],
+    "near": true,
+    "note": "striped sleeve hanging from shoulder, bent forward at the elbow with a cuff at the bottom"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     320,
+     738,
+     422,
+     872
+    ],
+    "near": true,
+    "note": "hand holding the open book edge, fingers curled at the lower right, seen from the side"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     64,
+     898,
+     235,
+     989
+    ],
+    "near": true,
+    "note": "dark trouser seat at the lower left, partly cropped by the panel border"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     353,
+     888,
+     444,
+     995
+    ],
+    "near": true,
+    "note": "rounded dark knee at the right end of the thigh, pointing right"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     64,
+     888,
+     444,
+     1000
+    ],
+    "near": true,
+    "note": "dark thigh running horizontally from the seat to the knee, lower leg and shoe cropped out"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Seated in profile facing right, reading a book held in front of his chest. Torso is upright with a striped shirt. Only the thigh and knee are visible, and the lower legs and feet are cropped out. Hip and knee positions are estimates from the dark trouser mass.",
+  "name": "p245-03.png",
+  "width": 562,
+  "height": 1175
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   592,
+   247
+  ],
+  "head_front": [
+   442,
+   250
+  ],
+  "joints": {
+   "shoulder": [
+    468,
+    415
+   ],
+   "elbow": [
+    447,
+    542
+   ],
+   "wrist": [
+    564,
+    553
+   ],
+   "fingertips": [
+    665,
+    484
+   ],
+   "hip": [
+    510,
+    681
+   ],
+   "knee": [
+    553,
+    883
+   ],
+   "ankle": [
+    566,
+    1070
+   ],
+   "toe": [
+    510,
+    1106
+   ],
+   "far_shoulder": [
+    580,
+    351
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [
+    649,
+    1064
+   ],
+   "far_toe": [
+    691,
+    1085
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     505,
+     1055,
+     640,
+     1115
+    ],
+    "near": true,
+    "note": "shoe in side view, toe pointing left, sole down, black"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     600,
+     1040,
+     720,
+     1110
+    ],
+    "near": false,
+    "note": "far shoe, toe pointing right, splayed outward, sole down"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     595,
+     440,
+     705,
+     535
+    ],
+    "near": true,
+    "note": "hands clasped together at chest holding the tie, fingers curled, viewed from front"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     410,
+     400,
+     580,
+     600
+    ],
+    "near": true,
+    "note": "white shirt sleeve, upper arm vertical then forearm bent horizontally to cuff at wrist"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     500,
+     650,
+     640,
+     1085
+    ],
+    "near": true,
+    "note": "near dark trouser leg, straight vertical, slightly wider at the bottom"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     600,
+     650,
+     700,
+     1075
+    ],
+    "near": false,
+    "note": "far dark trouser leg, behind near one, straight vertical"
+   }
+  ],
+  "facing": "three_quarter_left",
+  "pose_note": "Standing upright, head turned to the left toward Calvin, hands clasped at chest in front of tie, jacket draped dark on far side to the right; legs straight with feet slightly apart. Coordinates estimated by scaling grid labels (displayed image ~0.95 of original).",
+  "name": "p112-01.png",
+  "width": 821,
+  "height": 1170
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   1435,
+   170
+  ],
+  "head_front": [
+   1283,
+   172
+  ],
+  "joints": {
+   "shoulder": [
+    1264,
+    346
+   ],
+   "elbow": [
+    1312,
+    531
+   ],
+   "wrist": [
+    1349,
+    652
+   ],
+   "fingertips": [
+    1368,
+    695
+   ],
+   "hip": [
+    1310,
+    650
+   ],
+   "knee": [
+    1425,
+    813
+   ],
+   "ankle": [
+    1489,
+    890
+   ],
+   "toe": [
+    1570,
+    905
+   ],
+   "far_shoulder": [
+    1385,
+    322
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    1208,
+    829
+   ],
+   "far_ankle": [
+    1135,
+    894
+   ],
+   "far_toe": [
+    1119,
+    934
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     1417,
+     861,
+     1570,
+     958
+    ],
+    "near": true,
+    "note": "bare foot, side view, toes right, sole down, striding forward"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     1119,
+     894,
+     1167,
+     950
+    ],
+    "near": false,
+    "note": "bare back foot, toes pointing down/left, heel lifted, narrow"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     1328,
+     636,
+     1385,
+     708
+    ],
+    "near": true,
+    "note": "hand hanging at side, fingers pointing down, brushing shorts"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     1220,
+     555,
+     1420,
+     725
+    ],
+    "near": true,
+    "note": "baggy shorts, hem at upper thigh, hatched shading on left"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     1390,
+     780,
+     1460,
+     850
+    ],
+    "near": true,
+    "note": "front leg knee, slightly bent, leg angled forward-right"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     1180,
+     790,
+     1240,
+     860
+    ],
+    "near": false,
+    "note": "rear leg knee, leg angled back-left"
+   }
+  ],
+  "facing": "three_quarter_left",
+  "pose_note": "Shirtless, walking right with body nearly frontal; head turned left toward Calvin; arm hanging with hand near shorts; front leg stepping right, rear leg trailing left. No sleeves or seat visible.",
+  "name": "p113-08.png",
+  "width": 1771,
+  "height": 1087
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   270,
+   60
+  ],
+  "head_front": [
+   135,
+   90
+  ],
+  "joints": {
+   "shoulder": [
+    300,
+    200
+   ],
+   "elbow": [
+    330,
+    330
+   ],
+   "wrist": [
+    400,
+    340
+   ],
+   "fingertips": [
+    430,
+    270
+   ],
+   "hip": [
+    280,
+    400
+   ],
+   "knee": [
+    470,
+    540
+   ],
+   "ankle": [
+    340,
+    730
+   ],
+   "toe": [
+    215,
+    795
+   ],
+   "far_shoulder": [
+    190,
+    215
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    600,
+    578
+   ],
+   "far_ankle": [
+    525,
+    720
+   ],
+   "far_toe": [
+    620,
+    770
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     200,
+     760,
+     440,
+     840
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, flat on ground"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     410,
+     720,
+     625,
+     800
+    ],
+    "near": false,
+    "note": "shoe in side view, toe right, laces visible, sole down"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     140,
+     190,
+     390,
+     260
+    ],
+    "near": true,
+    "note": "short white sleeve at upper left of torso, arm bent"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     405,
+     225,
+     490,
+     360
+    ],
+    "near": true,
+    "note": "hand hanging/open, fingers curled, near torso right side"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     180,
+     390,
+     300,
+     480
+    ],
+    "near": true,
+    "note": "rear of shorts at left, bulging back"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     430,
+     500,
+     540,
+     590
+    ],
+    "near": true,
+    "note": "bent knee pointing right, shorts hem above"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     190,
+     400,
+     520,
+     620
+    ],
+    "near": true,
+    "note": "white shorts leg running down-right from hip, thigh angled forward"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     430,
+     540,
+     610,
+     720
+    ],
+    "near": false,
+    "note": "far leg: thigh/shin extending right then down to shoe"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Head is mostly cropped at the top, so the head marks are rough. Dad leans forward, facing left, in a wide-stepping stance. I'm unsure which limbs are his. The long arm reaching right toward x=700 looks like it belongs to another figure, so I marked only the arm nearer his torso. Hand, elbow and wrist positions are approximate.",
+  "name": "p122-07.png",
+  "width": 818,
+  "height": 914
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   132,
+   505
+  ],
+  "head_front": [
+   286,
+   510
+  ],
+  "joints": {
+   "shoulder": [
+    116,
+    632
+   ],
+   "elbow": [
+    84,
+    832
+   ],
+   "wrist": [
+    200,
+    879
+   ],
+   "fingertips": [
+    195,
+    1016
+   ],
+   "hip": [
+    116,
+    926
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     32,
+     621,
+     242,
+     895
+    ],
+    "near": true,
+    "note": "long shirt sleeve hanging from shoulder down to bent elbow, forearm angling right toward the hip"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     142,
+     879,
+     226,
+     1016
+    ],
+    "near": true,
+    "note": "hand at hip level, fingers pointing down, seen from the side"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     32,
+     900,
+     242,
+     1105
+    ],
+    "near": true,
+    "note": "dark trousers filling the lower left, cropped at the panel bottom; legs not fully visible"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Standing, upper body in profile facing right, leaning slightly forward, hand near his tie/belt. Only the upper body and trousers are visible, so knees, ankles and shoes are cropped out. Positions are estimated from the grid with approximate accuracy.",
+  "name": "p139-03.png",
+  "width": 863,
+  "height": 1157
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   423,
+   432
+  ],
+  "head_front": [
+   610,
+   425
+  ],
+  "joints": {
+   "shoulder": [
+    405,
+    600
+   ],
+   "elbow": [
+    395,
+    800
+   ],
+   "wrist": [
+    410,
+    945
+   ],
+   "fingertips": [],
+   "hip": [
+    490,
+    880
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    585,
+    625
+   ],
+   "far_elbow": [
+    598,
+    800
+   ],
+   "far_wrist": [
+    640,
+    820
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     365,
+     585,
+     450,
+     960
+    ],
+    "near": true,
+    "note": "white shirt sleeve hanging down at his right side, cuff at bottom around y=940, seen from front"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     560,
+     600,
+     612,
+     900
+    ],
+    "near": false,
+    "note": "far side shirt sleeve/arm edge hanging beside torso, right edge of the figure"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     610,
+     780,
+     695,
+     885
+    ],
+    "near": false,
+    "note": "hand gripping a mug at right, fingers curled around the mug, likely his far arm"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     430,
+     870,
+     600,
+     1106
+    ],
+    "near": true,
+    "note": "dark trousers front view, both legs merged, running off the bottom of the crop"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Standing upright, head turned toward the right, torso mostly frontal with white shirt and striped tie. Arms hang at his sides; the far hand appears to hold a mug. Legs below the knees and shoes are outside the crop.",
+  "name": "p142-04.png",
+  "width": 1067,
+  "height": 1106
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   731,
+   368
+  ],
+  "head_front": [
+   563,
+   357
+  ],
+  "joints": {
+   "shoulder": [
+    533,
+    459
+   ],
+   "elbow": [
+    469,
+    619
+   ],
+   "wrist": [
+    565,
+    619
+   ],
+   "fingertips": [
+    683,
+    581
+   ],
+   "hip": [
+    540,
+    700
+   ],
+   "knee": [
+    629,
+    853
+   ],
+   "ankle": [
+    640,
+    992
+   ],
+   "toe": [
+    597,
+    1029
+   ],
+   "far_shoulder": [
+    651,
+    455
+   ],
+   "far_elbow": [],
+   "far_wrist": [
+    725,
+    629
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     420,
+     470,
+     640,
+     680
+    ],
+    "near": true,
+    "note": "short sleeve of spotted shirt, upper arm angled down-left to elbow then forearm back right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     530,
+     540,
+     720,
+     660
+    ],
+    "near": true,
+    "note": "hand with fingers curled, palm toward viewer, pointing right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     710,
+     545,
+     870,
+     680
+    ],
+    "near": false,
+    "note": "far hand with spread fingers, palm out, gesturing"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     595,
+     985,
+     780,
+     1060
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     630,
+     740,
+     860,
+     1010
+    ],
+    "near": true,
+    "note": "dark solid black trouser leg hanging vertically"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     420,
+     690,
+     600,
+     1010
+    ],
+    "near": false,
+    "note": "spotted/dotted trouser leg, vertical, left of dark leg"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     590,
+     720,
+     700,
+     800
+    ],
+    "near": true,
+    "note": "knee area under shirt hem, roughly facing viewer"
+   }
+  ],
+  "facing": "three_quarter_left",
+  "pose_note": "Standing, torso leaning slightly forward toward left, head turned three-quarter left, both hands raised in front of chest gesturing; coordinates estimated from the scaled grid (about 0.9375 scale), moderate uncertainty on lower body.",
+  "name": "p175-02.png",
+  "width": 907,
+  "height": 1175
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   629,
+   322
+  ],
+  "head_front": [
+   492,
+   322
+  ],
+  "joints": {
+   "shoulder": [
+    469,
+    413
+   ],
+   "elbow": [
+    440,
+    610
+   ],
+   "wrist": [
+    497,
+    705
+   ],
+   "fingertips": [
+    487,
+    725
+   ],
+   "hip": [
+    515,
+    830
+   ],
+   "knee": [
+    440,
+    905
+   ],
+   "ankle": [
+    430,
+    990
+   ],
+   "toe": [
+    362,
+    1040
+   ],
+   "far_shoulder": [
+    585,
+    418
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    640,
+    925
+   ],
+   "far_ankle": [
+    640,
+    1000
+   ],
+   "far_toe": [
+    745,
+    962
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     350,
+     985,
+     500,
+     1070
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, flat on ground"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     605,
+     945,
+     750,
+     1065
+    ],
+    "near": false,
+    "note": "shoe in side view, toe pointing right and raised, heel dark, mid-stride"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     470,
+     705,
+     620,
+     800
+    ],
+    "near": true,
+    "note": "hand gripping briefcase handle, mostly hidden by dark cuff and case top"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     415,
+     560,
+     610,
+     780
+    ],
+    "near": true,
+    "note": "overcoat sleeve hanging down and bent forward at elbow toward briefcase"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     385,
+     895,
+     470,
+     1000
+    ],
+    "near": true,
+    "note": "near leg mostly covered by overcoat hem, dark trouser visible above shoe"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     600,
+     920,
+     680,
+     1000
+    ],
+    "near": false,
+    "note": "far leg dark trouser, slanted forward, behind coat hem and briefcase"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Dad walks left in profile in a long overcoat and fedora, carrying a briefcase at his side in his near hand. Most of the body is hidden by the coat. The hip, knee and ankle positions are estimates read through the coat. The far arm is hidden.",
+  "name": "p177-10.png",
+  "width": 889,
+  "height": 1175
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   449,
+   473
+  ],
+  "head_front": [
+   650,
+   473
+  ],
+  "joints": {
+   "shoulder": [
+    356,
+    638
+   ],
+   "elbow": [
+    324,
+    850
+   ],
+   "wrist": [
+    319,
+    1050
+   ],
+   "fingertips": [],
+   "hip": [],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    659,
+    627
+   ],
+   "far_elbow": [
+    733,
+    903
+   ],
+   "far_wrist": [
+    702,
+    1020
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     303,
+     638,
+     415,
+     1065
+    ],
+    "near": true,
+    "note": "coat sleeve hanging straight down along the body on the viewer's left, cuff at the bottom"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     680,
+     638,
+     771,
+     1035
+    ],
+    "near": false,
+    "note": "coat sleeve on the right side hanging down, slightly bent at the elbow, cuff near the bottom"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     303,
+     1058,
+     409,
+     1105
+    ],
+    "near": true,
+    "note": "dark shoe, mostly cut off by the panel border, seen from the front/three-quarter, sole down"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     680,
+     1015,
+     745,
+     1100
+    ],
+    "near": false,
+    "note": "dark shape at the bottom of the right sleeve, possibly hand or shoe, mostly cropped by the panel border"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Standing, three-quarter view facing right, head tilted slightly down with eyes closed and a smile. Long overcoat hides hips and legs, and the bottom of the crop cuts off the legs. Arms hang at his sides. Coordinates are approximate, converted from the scaled view using the grid labels.",
+  "name": "p177-11.png",
+  "width": 925,
+  "height": 1175
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   458,
+   160
+  ],
+  "head_front": [
+   625,
+   150
+  ],
+  "joints": {
+   "shoulder": [
+    520,
+    275
+   ],
+   "elbow": [
+    565,
+    425
+   ],
+   "wrist": [
+    595,
+    520
+   ],
+   "fingertips": [
+    640,
+    605
+   ],
+   "hip": [
+    505,
+    525
+   ],
+   "knee": [
+    595,
+    775
+   ],
+   "ankle": [
+    655,
+    935
+   ],
+   "toe": [
+    760,
+    893
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    435,
+    725
+   ],
+   "far_ankle": [
+    385,
+    935
+   ],
+   "far_toe": [
+    332,
+    972
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     625,
+     888,
+     762,
+     1002
+    ],
+    "near": true,
+    "note": "shoe in side view, toe pointing up-right, lifted forward foot, sole angled"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     330,
+     943,
+     507,
+     998
+    ],
+    "near": false,
+    "note": "low flat shoe in side view, toe left, sole down, trailing foot"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     568,
+     520,
+     658,
+     628
+    ],
+    "near": true,
+    "note": "hand hanging at side, fingers curled, pointing down-right, knuckles forward"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     425,
+     215,
+     620,
+     520
+    ],
+    "near": true,
+    "note": "light shirt torso and short rolled sleeve ending at cuff near wrist, arm hanging down along body"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     545,
+     720,
+     650,
+     830
+    ],
+    "near": true,
+    "note": "front leg knee, slightly bent, trouser fabric"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     420,
+     500,
+     540,
+     620
+    ],
+    "near": true,
+    "note": "buttocks under shirt hem, trousers dark, behind"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     530,
+     600,
+     690,
+     950
+    ],
+    "near": true,
+    "note": "front leg dark trouser, angled down-right with cuff above lifted shoe"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     355,
+     590,
+     540,
+     945
+    ],
+    "near": false,
+    "note": "rear leg dark trouser, angled down-left, cuff at ankle"
+   }
+  ],
+  "facing": "right",
+  "pose_note": "Profile walking to the right, grimacing, torso upright, arm hanging with curled hand, front foot lifted heel-first with toe up, rear foot trailing flat.",
+  "name": "p186-07.png",
+  "width": 831,
+  "height": 1111
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   272,
+   160
+  ],
+  "head_front": [
+   135,
+   135
+  ],
+  "joints": {
+   "shoulder": [
+    110,
+    295
+   ],
+   "elbow": [
+    110,
+    400
+   ],
+   "wrist": [
+    225,
+    385
+   ],
+   "fingertips": [
+    272,
+    318
+   ],
+   "hip": [
+    190,
+    545
+   ],
+   "knee": [
+    190,
+    760
+   ],
+   "ankle": [
+    195,
+    950
+   ],
+   "toe": [
+    100,
+    985
+   ],
+   "far_shoulder": [
+    290,
+    285
+   ],
+   "far_elbow": [
+    385,
+    460
+   ],
+   "far_wrist": [
+    405,
+    510
+   ],
+   "far_knee": [
+    255,
+    760
+   ],
+   "far_ankle": [
+    265,
+    950
+   ],
+   "far_toe": [
+    328,
+    972
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     100,
+     950,
+     235,
+     997
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     225,
+     945,
+     332,
+     992
+    ],
+    "near": false,
+    "note": "far shoe in side view, toe right, partly behind near shoe"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     238,
+     280,
+     310,
+     390
+    ],
+    "near": true,
+    "note": "fist with thumb up held at chest, outlined in white"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     385,
+     500,
+     430,
+     548
+    ],
+    "near": false,
+    "note": "far hand at right, resting on or gripping door edge"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     62,
+     270,
+     235,
+     480
+    ],
+    "near": true,
+    "note": "white short sleeve, forearm folded across torso"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     290,
+     280,
+     420,
+     495
+    ],
+    "near": false,
+    "note": "dark sleeve of far arm hanging down to right, filled black"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     110,
+     570,
+     290,
+     960
+    ],
+    "near": true,
+    "note": "dark trouser, straight vertical, black fill"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     200,
+     570,
+     300,
+     950
+    ],
+    "near": false,
+    "note": "far leg overlapped by near leg, black fill"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     75,
+     520,
+     230,
+     600
+    ],
+    "near": true,
+    "note": "back of hips at left edge of trousers, covered by shirt hem"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Standing upright, head turned left in profile, mouth open shouting I'm home; torso three-quarter, near forearm folded across chest with thumb-up fist, far arm hanging to the right with hand near door edge. Estimates are approximate.",
+  "name": "p186-09.png",
+  "width": 822,
+  "height": 1106
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   300,
+   190
+  ],
+  "head_front": [
+   442,
+   198
+  ],
+  "joints": {
+   "shoulder": [
+    262,
+    300
+   ],
+   "elbow": [
+    475,
+    420
+   ],
+   "wrist": [
+    500,
+    365
+   ],
+   "fingertips": [
+    535,
+    325
+   ],
+   "hip": [
+    340,
+    530
+   ],
+   "knee": [],
+   "ankle": [
+    400,
+    955
+   ],
+   "toe": [
+    470,
+    975
+   ],
+   "far_shoulder": [
+    390,
+    275
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [
+    290,
+    950
+   ],
+   "far_toe": [
+    262,
+    985
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     318,
+     945,
+     475,
+     995
+    ],
+    "near": true,
+    "note": "shoe in side view, toe pointing right, sole down, black"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     248,
+     945,
+     320,
+     995
+    ],
+    "near": false,
+    "note": "far shoe mostly hidden behind near one, toe pointing left/right ambiguous, sole down"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     455,
+     310,
+     550,
+     385
+    ],
+    "near": true,
+    "note": "hand reaching up/forward against door frame, fingers spread upward-right, seen from back"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     235,
+     255,
+     530,
+     470
+    ],
+    "near": true,
+    "note": "white shirt sleeve, upper arm bulging at left back, forearm bent up toward door, cuff at wrist near 490,380"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     250,
+     500,
+     420,
+     620
+    ],
+    "near": true,
+    "note": "buttocks/hips under shirt tail, black trousers, back view"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     248,
+     540,
+     420,
+     960
+    ],
+    "near": true,
+    "note": "black trouser legs together, back view, straight down to shoes"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     400,
+     430,
+     500,
+     860
+    ],
+    "near": false,
+    "note": "far side black trouser merging with dark doorway, partly hidden"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Standing at the doorway seen largely from behind, body turned right toward the door, head in profile facing right with glasses and big nose; near arm bent up with hand on door edge; legs straight, black trousers, feet together at bottom.",
+  "name": "p186-10.png",
+  "width": 808,
+  "height": 1106
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   547,
+   83
+  ],
+  "head_front": [
+   365,
+   78
+  ],
+  "joints": {
+   "shoulder": [
+    417,
+    198
+   ],
+   "elbow": [
+    313,
+    167
+   ],
+   "wrist": [
+    234,
+    172
+   ],
+   "fingertips": [
+    167,
+    208
+   ],
+   "hip": [
+    500,
+    448
+   ],
+   "knee": [
+    458,
+    542
+   ],
+   "ankle": [
+    417,
+    646
+   ],
+   "toe": [
+    359,
+    630
+   ],
+   "far_shoulder": [
+    563,
+    104
+   ],
+   "far_elbow": [
+    646,
+    94
+   ],
+   "far_wrist": [
+    708,
+    57
+   ],
+   "far_knee": [
+    667,
+    542
+   ],
+   "far_ankle": [
+    635,
+    625
+   ],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     145,
+     100,
+     250,
+     235
+    ],
+    "near": true,
+    "note": "dark mitten-like fist/hand at end of outstretched left arm, thumb up, mostly black"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     230,
+     130,
+     470,
+     240
+    ],
+    "near": true,
+    "note": "red jacket sleeve of arm stretched horizontally left, tapering to cuff at wrist"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     540,
+     40,
+     715,
+     330
+    ],
+    "near": false,
+    "note": "far arm sleeve rising to upper right, cropped at panel edge"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     355,
+     610,
+     480,
+     680
+    ],
+    "near": true,
+    "note": "dark shoe, toe pointing left, sole down, half buried in snow, black mass"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     600,
+     640,
+     710,
+     700
+    ],
+    "near": false,
+    "note": "far shoe mostly hidden by snow, toe right, black"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     415,
+     460,
+     540,
+     665
+    ],
+    "near": true,
+    "note": "black trouser leg, wide stance, going down-left to near shoe"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     540,
+     460,
+     700,
+     660
+    ],
+    "near": false,
+    "note": "black trouser leg going down-right to far foot, with snow gaps"
+   },
+   {
+    "kind": "knee",
+    "box": [
+     420,
+     520,
+     500,
+     600
+    ],
+    "near": true,
+    "note": "near knee bent outward in black trousers, approximate"
+   }
+  ],
+  "facing": "three_quarter_left",
+  "pose_note": "Standing in a wide stance with both arms flung out; near arm goes horizontally left, far arm goes up and right. Head tilted back, mouth open, glasses visible. Torso and legs largely black and cropped at right; joint positions are estimates.",
+  "name": "p191-11.png",
+  "width": 743,
+  "height": 1142
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   765,
+   352
+  ],
+  "head_front": [
+   598,
+   352
+  ],
+  "joints": {
+   "shoulder": [
+    450,
+    480
+   ],
+   "elbow": [
+    470,
+    610
+   ],
+   "wrist": [
+    345,
+    635
+   ],
+   "fingertips": [
+    270,
+    590
+   ],
+   "hip": [
+    520,
+    790
+   ],
+   "knee": [
+    580,
+    910
+   ],
+   "ankle": [
+    690,
+    1010
+   ],
+   "toe": [
+    720,
+    1030
+   ],
+   "far_shoulder": [
+    690,
+    480
+   ],
+   "far_elbow": [
+    735,
+    690
+   ],
+   "far_wrist": [
+    765,
+    800
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     318,
+     595,
+     400,
+     690
+    ],
+    "near": true,
+    "note": "black mitten gripping shovel handle end, left side"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     715,
+     765,
+     805,
+     860
+    ],
+    "near": false,
+    "note": "black mitten gripping shovel shaft at lower right"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     335,
+     430,
+     500,
+     780
+    ],
+    "near": true,
+    "note": "bulky light sleeve and shoulder hunched at left, arm reaching down-left to shovel"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     660,
+     590,
+     800,
+     820
+    ],
+    "near": false,
+    "note": "far arm sleeve hanging down right side, cuff at glove"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     405,
+     760,
+     720,
+     1035
+    ],
+    "near": true,
+    "note": "dark trousers as one solid black mass, legs merged, front view slightly angled"
+   }
+  ],
+  "facing": "three_quarter_left",
+  "pose_note": "Standing hunched, bending toward Calvin at lower left, head turned left with a smile, holding a snow shovel diagonally with both mittened hands. Legs are a merged black mass; feet mostly hidden in snow.",
+  "name": "p202-01.png",
+  "width": 845,
+  "height": 1097
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   165,
+   480
+  ],
+  "head_front": [
+   348,
+   500
+  ],
+  "joints": {
+   "shoulder": [
+    200,
+    590
+   ],
+   "elbow": [
+    440,
+    700
+   ],
+   "wrist": [
+    350,
+    740
+   ],
+   "fingertips": [
+    390,
+    640
+   ],
+   "hip": [
+    130,
+    850
+   ],
+   "knee": [
+    130,
+    945
+   ],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    350,
+    610
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     320,
+     600,
+     410,
+     660
+    ],
+    "near": false,
+    "note": "gloved hand gripping top of shovel handle, fingers curled over, right of torso"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     290,
+     640,
+     465,
+     770
+    ],
+    "near": true,
+    "note": "bulky puffy coat sleeve forming a loop from elbow back toward shovel handle"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     60,
+     940,
+     210,
+     1080
+    ],
+    "near": true,
+    "note": "solid black trouser leg, vertical, cropped at bottom of panel, no shoe visible"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Dad in bulky winter coat and knit hat, leaning forward over a shovel whose shaft is the thin vertical at x~265. Torso heavily bundled; only lower trouser leg visible at bottom; feet cropped. Joint positions are rough estimates because of the heavy coat.",
+  "name": "p202-02.png",
+  "width": 832,
+  "height": 1097
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   106,
+   468
+  ],
+  "head_front": [
+   278,
+   470
+  ],
+  "joints": {
+   "shoulder": [
+    150,
+    590
+   ],
+   "elbow": [
+    105,
+    745
+   ],
+   "wrist": [
+    215,
+    768
+   ],
+   "fingertips": [
+    295,
+    735
+   ],
+   "hip": [
+    110,
+    800
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    225,
+    600
+   ],
+   "far_elbow": [],
+   "far_wrist": [
+    265,
+    705
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "sleeve",
+    "box": [
+     70,
+     640,
+     215,
+     775
+    ],
+    "near": true,
+    "note": "near suit sleeve, upper arm hanging then forearm angled right toward the papers"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     200,
+     720,
+     300,
+     790
+    ],
+    "near": true,
+    "note": "hand holding papers at lower centre, fingers pointing right"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     215,
+     600,
+     285,
+     710
+    ],
+    "near": false,
+    "note": "far sleeve/forearm beside tie, narrow, angled down-right"
+   }
+  ],
+  "facing": "three_quarter_right",
+  "pose_note": "Dad is actually seated in a patterned armchair, not standing, reading papers on his lap and looking right toward Calvin. Legs, knees, feet and seat are hidden by the chair, so those joints are left empty. Head, shoulder, arm and hand positions are estimated from the grid.",
+  "name": "p208-05.png",
+  "width": 825,
+  "height": 1106
+ },
+ {
+  "head_back": [
+   403,
+   131
+  ],
+  "head_front": [
+   243,
+   128
+  ],
+  "is_dad": true,
+  "facing": "three_quarter_left",
+  "joints": {
+   "shoulder": [
+    215,
+    283
+   ],
+   "elbow": [
+    168,
+    419
+   ],
+   "wrist": [
+    141,
+    508
+   ],
+   "fingertips": [
+    45,
+    534
+   ],
+   "hip": [
+    345,
+    586
+   ],
+   "knee": [
+    314,
+    754
+   ],
+   "ankle": [
+    325,
+    942
+   ],
+   "toe": [
+    283,
+    974
+   ],
+   "far_shoulder": [
+    440,
+    241
+   ],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [],
+   "far_ankle": [
+    429,
+    969
+   ],
+   "far_toe": [
+    471,
+    984
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     277,
+     958,
+     377,
+     990
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, white highlights"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     377,
+     948,
+     476,
+     995
+    ],
+    "near": false,
+    "note": "far shoe, side view, toe pointing right, partly behind near leg"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     29,
+     476,
+     136,
+     571
+    ],
+    "near": true,
+    "note": "hand gripping door knob/handle, fingers curled left, four knuckles visible"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     110,
+     272,
+     267,
+     524
+    ],
+    "near": true,
+    "note": "dark suit sleeve running down and left from shoulder, bent at elbow, forearm reaching toward door"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     262,
+     586,
+     492,
+     963
+    ],
+    "near": true,
+    "note": "dark trousers, both legs merged as a black mass, straight and vertical"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     350,
+     570,
+     492,
+     680
+    ],
+    "near": true,
+    "note": "back of trousers/jacket hem at right, merged into black mass"
+   }
+  ],
+  "pose_note": "Standing upright at open door, body three-quarter toward the left, head tilted down looking left; near arm bent reaching to the door handle at left; legs straight and together; feet pointing left.",
+  "name": "p217-09.png",
+  "width": 555,
+  "height": 1151
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   684,
+   214
+  ],
+  "head_front": [
+   556,
+   213
+  ],
+  "joints": {
+   "shoulder": [
+    655,
+    330
+   ],
+   "elbow": [
+    752,
+    510
+   ],
+   "wrist": [
+    728,
+    660
+   ],
+   "fingertips": [
+    735,
+    705
+   ],
+   "hip": [
+    655,
+    580
+   ],
+   "knee": [
+    640,
+    800
+   ],
+   "ankle": [
+    570,
+    975
+   ],
+   "toe": [
+    497,
+    1015
+   ],
+   "far_shoulder": [],
+   "far_elbow": [],
+   "far_wrist": [],
+   "far_knee": [
+    760,
+    800
+   ],
+   "far_ankle": [
+    735,
+    965
+   ],
+   "far_toe": [
+    845,
+    978
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     490,
+     975,
+     610,
+     1050
+    ],
+    "near": true,
+    "note": "shoe in side view, toe pointing left, sole down, dark"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     690,
+     960,
+     850,
+     1010
+    ],
+    "near": false,
+    "note": "shoe in side view, toe pointing right, partly white outlined"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     705,
+     640,
+     775,
+     720
+    ],
+    "near": true,
+    "note": "hand gripping top of gas can handle, hanging at side"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     690,
+     300,
+     790,
+     490
+    ],
+    "near": true,
+    "note": "short striped sleeve ending above the elbow, shoulder to mid-upper arm"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     700,
+     570,
+     770,
+     640
+    ],
+    "near": true,
+    "note": "buttocks hidden by shirt hem and dark trousers, to the right of torso"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     520,
+     590,
+     720,
+     990
+    ],
+    "near": true,
+    "note": "dark near leg, straight, angled slightly left down to shoe"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     700,
+     590,
+     790,
+     960
+    ],
+    "near": false,
+    "note": "far leg mostly hidden behind gas can, dark, straight down"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Standing in profile facing left, looking down at Calvin; right arm hangs holding gas can; legs straight, near foot pointing left, far foot pointing right.",
+  "name": "p237-01.png",
+  "width": 886,
+  "height": 1123
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   700,
+   165
+  ],
+  "head_front": [
+   528,
+   165
+  ],
+  "joints": {
+   "shoulder": [
+    565,
+    300
+   ],
+   "elbow": [
+    508,
+    450
+   ],
+   "wrist": [
+    574,
+    578
+   ],
+   "fingertips": [
+    596,
+    598
+   ],
+   "hip": [
+    650,
+    595
+   ],
+   "knee": [
+    645,
+    830
+   ],
+   "ankle": [
+    640,
+    1018
+   ],
+   "toe": [
+    572,
+    1040
+   ],
+   "far_shoulder": [
+    722,
+    292
+   ],
+   "far_elbow": [
+    782,
+    445
+   ],
+   "far_wrist": [
+    728,
+    560
+   ],
+   "far_knee": [
+    725,
+    830
+   ],
+   "far_ankle": [
+    725,
+    1015
+   ],
+   "far_toe": [
+    785,
+    1035
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     566,
+     1015,
+     725,
+     1078
+    ],
+    "near": true,
+    "note": "shoe in side view, toe left, sole down, flat wide"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     713,
+     1010,
+     790,
+     1065
+    ],
+    "near": false,
+    "note": "shoe in side view, toe right, sole down, partly behind near shoe"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     491,
+     393,
+     605,
+     486
+    ],
+    "near": true,
+    "note": "short striped sleeve, elbow bent out to left, forearm going down into pocket"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     718,
+     382,
+     801,
+     496
+    ],
+    "near": false,
+    "note": "short sleeve on far arm, elbow out to right"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     560,
+     555,
+     602,
+     603
+    ],
+    "near": true,
+    "note": "hand tucked into trouser pocket, mostly hidden"
+   },
+   {
+    "kind": "seat",
+    "box": [
+     723,
+     579,
+     782,
+     665
+    ],
+    "near": false,
+    "note": "rear/buttocks bulge of dark trousers at right"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     568,
+     590,
+     690,
+     1030
+    ],
+    "near": true,
+    "note": "long straight dark trouser leg, hanging, baggy folds at left edge"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     690,
+     590,
+     782,
+     1030
+    ],
+    "near": false,
+    "note": "far trouser leg, mostly merged with near leg as solid black"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Standing upright, head turned left and tilted down toward Calvin; hands in trouser pockets with elbows bent out; feet apart in side view.",
+  "name": "p245-13.png",
+  "width": 892,
+  "height": 1137
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   713,
+   160
+  ],
+  "head_front": [
+   597,
+   165
+  ],
+  "joints": {
+   "shoulder": [
+    723,
+    294
+   ],
+   "elbow": [
+    733,
+    537
+   ],
+   "wrist": [
+    708,
+    672
+   ],
+   "fingertips": [
+    764,
+    651
+   ],
+   "hip": [
+    640,
+    589
+   ],
+   "knee": [
+    646,
+    785
+   ],
+   "ankle": [
+    640,
+    976
+   ],
+   "toe": [
+    491,
+    1023
+   ],
+   "far_shoulder": [
+    594,
+    300
+   ],
+   "far_elbow": [
+    568,
+    496
+   ],
+   "far_wrist": [],
+   "far_knee": [
+    610,
+    785
+   ],
+   "far_ankle": [
+    599,
+    976
+   ],
+   "far_toe": [
+    713,
+    1018
+   ]
+  },
+  "parts": [
+   {
+    "kind": "shoe",
+    "box": [
+     486,
+     971,
+     610,
+     1049
+    ],
+    "near": true,
+    "note": "shoe in side view, toe pointing left, sole down, large rounded"
+   },
+   {
+    "kind": "shoe",
+    "box": [
+     610,
+     981,
+     718,
+     1038
+    ],
+    "near": false,
+    "note": "shoe in side view, toe pointing right, partly behind other shoe"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     687,
+     630,
+     773,
+     713
+    ],
+    "near": true,
+    "note": "open hand hanging at side, fingers pointing right and slightly down, thumb towards the body"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     640,
+     269,
+     759,
+     475
+    ],
+    "near": true,
+    "note": "short striped sleeve on right of image, ending mid-upper-arm with ragged cuff"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     563,
+     289,
+     661,
+     537
+    ],
+    "near": false,
+    "note": "striped shirt body/left sleeve, hanging down on left of image"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     553,
+     568,
+     630,
+     981
+    ],
+    "near": false,
+    "note": "dark filled trouser leg, vertical, slightly widening to the hem"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     630,
+     599,
+     723,
+     981
+    ],
+    "near": true,
+    "note": "dark filled trouser leg, vertical, with a ragged right edge"
+   }
+  ],
+  "facing": "three_quarter_left",
+  "pose_note": "Standing upright, arms hanging straight at sides, hand on right open; feet planted apart with toes pointing outward, left toe left and right toe right. Coordinates are approximate, converted from a downscaled view.",
+  "name": "p245-15.png",
+  "width": 886,
+  "height": 1137
+ },
+ {
+  "is_dad": true,
+  "head_back": [
+   723,
+   300
+  ],
+  "head_front": [
+   544,
+   306
+  ],
+  "joints": {
+   "shoulder": [
+    538,
+    431
+   ],
+   "elbow": [
+    395,
+    420
+   ],
+   "wrist": [
+    518,
+    277
+   ],
+   "fingertips": [
+    656,
+    220
+   ],
+   "hip": [
+    615,
+    759
+   ],
+   "knee": [],
+   "ankle": [],
+   "toe": [],
+   "far_shoulder": [
+    754,
+    451
+   ],
+   "far_elbow": [
+    764,
+    615
+   ],
+   "far_wrist": [
+    754,
+    862
+   ],
+   "far_knee": [],
+   "far_ankle": [],
+   "far_toe": []
+  },
+  "parts": [
+   {
+    "kind": "hand",
+    "box": [
+     513,
+     200,
+     677,
+     297
+    ],
+    "near": true,
+    "note": "raised hand spread over eyes and forehead, fingers pointing right, thumb at left near x 515"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     364,
+     390,
+     482,
+     456
+    ],
+    "near": true,
+    "note": "short sleeve cuff of the raised arm, elbow pointing left, bare forearm rises up-right to the face"
+   },
+   {
+    "kind": "sleeve",
+    "box": [
+     718,
+     554,
+     810,
+     718
+    ],
+    "near": false,
+    "note": "rolled/short sleeve of the hanging arm at right, bunched folds"
+   },
+   {
+    "kind": "hand",
+    "box": [
+     759,
+     882,
+     826,
+     974
+    ],
+    "near": false,
+    "note": "hanging hand at right edge, relaxed, partly cut off by the panel border"
+   },
+   {
+    "kind": "trouser_leg",
+    "box": [
+     523,
+     738,
+     738,
+     1097
+    ],
+    "near": true,
+    "note": "dark trousers, both legs merged into one black mass, front view legs straight down; knees, feet and shoes cut off/not visible"
+   }
+  ],
+  "facing": "left",
+  "pose_note": "Standing, head in profile facing left, one hand clamped over eyes with elbow pointing out left, other arm hanging at right side; legs below the hip are a solid black mass, no knees or shoes visible, no seat visible.",
+  "name": "p249-06.png",
+  "width": 879,
+  "height": 1128
+ }
+]
