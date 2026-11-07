@@ -1,0 +1,7170 @@
+[
+ {
+  "file": "crops/p008-01.png",
+  "page": 8,
+  "panel": 1,
+  "scan_box": [
+   1977,
+   2385,
+   3190,
+   4372
+  ],
+  "pose": "kneeling",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "knees",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Dad kneeling on the floor in a striped short-sleeved shirt and dark trousers, round glasses, holding a lamp aloft in one hand while the other grips Calvin. Mom is the figure on the left in the polka-dot top and shorts. Clearly Dad, high confidence.",
+  "verified": true,
+  "legs": "Dad kneels on the floor at the right of the panel in a three-quarter view facing left. His torso leans forward and left over Calvin. The thigh runs from the seat toward the lower left, and the knee sits on the floor at roughly x 0.74-0.82, y 0.90-0.94. The shin and lower leg fold back toward the right along the floor. Both feet are tucked under and behind him, with the soles turned up and toward the viewer. They appear at the lower right (about x 0.84-0.96, y 0.86-0.96) as two large rounded sneaker soles with heels raised, and they overlap each other. A light sock or ankle band shows above the shoes. His seat is lifted slightly and sits near the heels, with the back-pocket area of the trousers visible at about x 0.88-0.97, y 0.78-0.86. The trousers are wrinkled and folded at the knee and thigh.",
+  "trousers": "Not solid black. They are light to mid grey or khaki with soft wash shading and heavy fold lines, plus a visible back pocket and a belt line. The darkest areas are only the shadow folds at the knee and the crease behind it.",
+  "useful_for": [
+   "kneeling_or_floor_legs",
+   "shoes",
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 3
+ },
+ {
+  "file": "crops/p010-09.png",
+  "page": 10,
+  "panel": 9,
+  "scan_box": [
+   67,
+   3443,
+   873,
+   4259
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "small",
+  "notes": "LOW CONFIDENCE. Adult on the stairs shouting 'CALVIN, WHERE ARE YOU? GET OUT HERE!' in a pale top and dark trousers. No glasses visible and the hair looks full and dark, so this more likely reads as Mom. Flagged for manual check only.",
+  "verified": false
+ },
+ {
+  "file": "crops/p015-12.png",
+  "page": 15,
+  "panel": 12,
+  "scan_box": [
+   2793,
+   3297,
+   3380,
+   4365
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Behind tripod camera taking Calvin's photo; round glasses, receding hair, light shirt, dark trousers",
+  "verified": false
+ },
+ {
+  "file": "crops/p016-01.png",
+  "page": 16,
+  "panel": 1,
+  "scan_box": [
+   33,
+   317,
+   907,
+   1449
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Operating camera on tripod, says 'READY? OK, GIVE ME A NICE SMILE'; glasses, short-sleeved shirt, dark trousers",
+  "verified": false
+ },
+ {
+  "file": "crops/p016-04.png",
+  "page": 16,
+  "panel": 4,
+  "scan_box": [
+   2487,
+   271,
+   3361,
+   1359
+  ],
+  "pose": "running",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Lunging/running toward Calvin, arms out; shirt and dark trousers; 'MY HAIR'S GETTING MESSED UP, DAD!'",
+  "verified": false
+ },
+ {
+  "file": "crops/p016-05.png",
+  "page": 16,
+  "panel": 5,
+  "scan_box": [
+   67,
+   1721,
+   941,
+   2854
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Behind tripod camera, says 'I DON'T HAVE MUCH FILM LEFT'; glasses, light shirt, dark trousers",
+  "verified": false
+ },
+ {
+  "file": "crops/p016-06.png",
+  "page": 16,
+  "panel": 6,
+  "scan_box": [
+   873,
+   1721,
+   1714,
+   2854
+  ],
+  "pose": "bending",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Bent over camera taking the photo, 'YOU COULD'VE BEEN DONE 20 MINUTES AGO'",
+  "verified": false
+ },
+ {
+  "file": "crops/p016-08.png",
+  "page": 16,
+  "panel": 8,
+  "scan_box": [
+   2487,
+   1721,
+   3293,
+   2854
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Shaking fists in exasperation, 'CALVIN!'; rolled-up sleeves, dark trousers",
+  "verified": false
+ },
+ {
+  "file": "crops/p016-13.png",
+  "page": 16,
+  "panel": 13,
+  "scan_box": [
+   2520,
+   3217,
+   3058,
+   4259
+  ],
+  "pose": "other",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Left side of speech panel, glasses and tie, holding Christmas card prints beside Mom; 'WE CAN'T SEND THESE...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p018-06.png",
+  "page": 18,
+  "panel": 6,
+  "scan_box": [
+   1176,
+   1767,
+   1680,
+   2854
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Pointing at Calvin, 'I HAVE A BETTER IDEA. C'MERE.'; dark sweater",
+  "verified": false
+ },
+ {
+  "file": "crops/p018-07.png",
+  "page": 18,
+  "panel": 7,
+  "scan_box": [
+   1646,
+   1721,
+   2151,
+   2854
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Standing at the door, 'OK, STEP OUTSIDE'; dark top and pale trousers",
+  "verified": false
+ },
+ {
+  "file": "crops/p018-09.png",
+  "page": 18,
+  "panel": 9,
+  "scan_box": [
+   470,
+   3171,
+   941,
+   4259
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Sitting on bed in checked shirt, 'OH, I DON'T WANT TO READ THAT AGAIN'",
+  "verified": false
+ },
+ {
+  "file": "crops/p018-10.png",
+  "page": 18,
+  "panel": 10,
+  "scan_box": [
+   1142,
+   3171,
+   1680,
+   4259
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sitting on bed holding a book, checked shirt, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p018-11.png",
+  "page": 18,
+  "panel": 11,
+  "scan_box": [
+   1915,
+   3171,
+   2487,
+   4259
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sitting on bed reading an open book aloud, checked shirt",
+  "verified": false
+ },
+ {
+  "file": "crops/p018-12.png",
+  "page": 18,
+  "panel": 12,
+  "scan_box": [
+   2756,
+   3171,
+   3327,
+   4259
+  ],
+  "pose": "other",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Sitting on bed in checked shirt, 'YOU'LL DO THE SQUEAKY VOICES...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p020-01.png",
+  "page": 20,
+  "panel": 1,
+  "scan_box": [
+   2554,
+   135,
+   3361,
+   1132
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "small",
+  "notes": "In armchair reading a book, patterned sweater, round glasses; banner panel 'THAT'S NICE.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p020-02.png",
+  "page": 20,
+  "panel": 2,
+  "scan_box": [
+   235,
+   1178,
+   1142,
+   2220
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "In armchair with book, patterned sweater; 'WHAT DO YOU THINK HE'D LIKE WITH THAT?' and 'DEAR!'",
+  "verified": false
+ },
+ {
+  "file": "crops/p024-03.png",
+  "page": 24,
+  "panel": 3,
+  "scan_box": [
+   1680,
+   317,
+   2251,
+   1449
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "In doorway holding a small object, striped top, round glasses; 'IT BUILDS CHARACTER. KEEP AT IT.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p027-05.png",
+  "page": 27,
+  "panel": 5,
+  "scan_box": [
+   344,
+   1764,
+   827,
+   2879
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Stands at bed side reading a paper to Calvin; striped shirt, dark trousers, round glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p027-06.png",
+  "page": 27,
+  "panel": 6,
+  "scan_box": [
+   1034,
+   1811,
+   1690,
+   2879
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Sits on bed edge holding paper, rubbing his glasses; striped shirt",
+  "verified": false
+ },
+ {
+  "file": "crops/p027-07.png",
+  "page": 27,
+  "panel": 7,
+  "scan_box": [
+   1724,
+   2322,
+   2276,
+   2879
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Head and shoulders in lower part of panel, reading paper in a dark bed or couch; glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p027-08.png",
+  "page": 27,
+  "panel": 8,
+  "scan_box": [
+   2517,
+   1718,
+   3000,
+   2693
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated on bed with paper, striped shirt, dark trousers, glasses",
+  "verified": true,
+  "legs": "Dad sits on the edge of Calvin's bed, seen from the front-left, holding a sheet of paper in both hands at chest height. His hips and upper thighs show as a dark mass at the bed edge, with the thighs running back toward the left behind the rumpled blanket. The knee area is roughly at the lower left of his torso and is largely hidden by bedclothes. The shins and feet are not visible, because the bed and covers hide everything below the knees. Only a short stretch of thigh is readable, and it gives no clear knee bend.",
+  "trousers": "Dark, nearly solid black with no visible folds or highlights. The visible part is small.",
+  "useful_for": [
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p031-10.png",
+  "page": 31,
+  "panel": 10,
+  "scan_box": [
+   827,
+   3622,
+   1345,
+   4365
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Seated at breakfast table reading newspaper; glasses, tie, striped shirt; Mom standing at right",
+  "verified": false
+ },
+ {
+  "file": "crops/p031-11.png",
+  "page": 31,
+  "panel": 11,
+  "scan_box": [
+   1655,
+   3575,
+   2172,
+   4365
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Leaning at the window, pointing left with glasses; Mom beside him",
+  "verified": false
+ },
+ {
+  "file": "crops/p034-05.png",
+  "page": 34,
+  "panel": 5,
+  "scan_box": [
+   67,
+   1767,
+   907,
+   2854
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Tall, standing and holding a shovel; glasses, dark jacket and trousers, talking to Calvin",
+  "verified": false
+ },
+ {
+  "file": "crops/p034-06.png",
+  "page": 34,
+  "panel": 6,
+  "scan_box": [
+   1142,
+   1767,
+   1680,
+   2854
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Puffy winter jacket, glasses, holding a shovel, looking down at Calvin",
+  "verified": false
+ },
+ {
+  "file": "crops/p035-03.png",
+  "page": 35,
+  "panel": 3,
+  "scan_box": [
+   1276,
+   1811,
+   1758,
+   2322
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "small",
+  "notes": "Seated at dinner table, glasses, looking down at his plate; Mom beside him",
+  "verified": false
+ },
+ {
+  "file": "crops/p035-07.png",
+  "page": 35,
+  "panel": 7,
+  "scan_box": [
+   2379,
+   2600,
+   2931,
+   3436
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Seated at table with Mom standing behind; glasses, bald top; cropped at bottom edge",
+  "verified": false
+ },
+ {
+  "file": "crops/p038-07.png",
+  "page": 38,
+  "panel": 7,
+  "scan_box": [
+   2453,
+   1948,
+   2957,
+   2854
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Seated at restaurant table in dark suit and glasses behind a newspaper; Mom and a waiter nearby",
+  "verified": false
+ },
+ {
+  "file": "crops/p040-01.png",
+  "page": 40,
+  "panel": 1,
+  "scan_box": [
+   100,
+   3126,
+   974,
+   4213
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Right side of panel, white shirt, striped tie, dark trousers; talking down to Calvin and Hobbes on the floor",
+  "verified": false
+ },
+ {
+  "file": "crops/p040-02.png",
+  "page": 40,
+  "panel": 2,
+  "scan_box": [
+   924,
+   3126,
+   1747,
+   4213
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Adjusting his striped tie, round glasses, white shirt, dark trousers",
+  "verified": false
+ },
+ {
+  "file": "crops/p040-03.png",
+  "page": 40,
+  "panel": 3,
+  "scan_box": [
+   2537,
+   3126,
+   3361,
+   4213
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Left of panel with round glasses and striped tie, Mom behind him on the right",
+  "verified": false
+ },
+ {
+  "file": "crops/p043-01.png",
+  "page": 43,
+  "panel": 1,
+  "scan_box": [
+   0,
+   3297,
+   862,
+   4458
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dark suit, round glasses, beside Mom in floral skirt; says Rosalyn we're home",
+  "verified": false
+ },
+ {
+  "file": "crops/p043-02.png",
+  "page": 43,
+  "panel": 2,
+  "scan_box": [
+   2517,
+   3297,
+   3449,
+   4458
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Dark suit and striped tie, round glasses, holding a cup, speaking to Mom at right",
+  "verified": false
+ },
+ {
+  "file": "crops/p046-01.png",
+  "page": 46,
+  "panel": 1,
+  "scan_box": [
+   47,
+   299,
+   934,
+   1449
+  ],
+  "pose": "walking",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Round glasses, light jacket, dark trousers, walking beside Mom in striped scarf; looking at snowman (identification less certain at this scale)",
+  "verified": false
+ },
+ {
+  "file": "crops/p046-02.png",
+  "page": 46,
+  "panel": 2,
+  "scan_box": [
+   867,
+   299,
+   1710,
+   1418
+  ],
+  "pose": "walking",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Round glasses, light jacket, one mitten in hand, walking next to Mom in striped scarf",
+  "verified": false
+ },
+ {
+  "file": "crops/p046-03.png",
+  "page": 46,
+  "panel": 3,
+  "scan_box": [
+   1683,
+   280,
+   2537,
+   1418
+  ],
+  "pose": "walking",
+  "facing": "back",
+  "visible": [
+   "head",
+   "torso",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Round glasses, dark trousers, walking away from camera beside Mom",
+  "verified": false
+ },
+ {
+  "file": "crops/p046-04.png",
+  "page": 46,
+  "panel": 4,
+  "scan_box": [
+   2503,
+   267,
+   3361,
+   1404
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "small",
+  "notes": "Left side of panel with round glasses, Mom at right; both looking at the snowmen",
+  "verified": false
+ },
+ {
+  "file": "crops/p049-01.png",
+  "page": 49,
+  "panel": 1,
+  "scan_box": [
+   0,
+   3297,
+   862,
+   4481
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Seated at breakfast table with round glasses and tie, saying Fine to Calvin",
+  "verified": false
+ },
+ {
+  "file": "crops/p049-02.png",
+  "page": 49,
+  "panel": 2,
+  "scan_box": [
+   820,
+   3297,
+   1696,
+   4481
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated at right reading newspaper, round glasses, tie, speaking to Calvin",
+  "verified": false
+ },
+ {
+  "file": "crops/p049-03.png",
+  "page": 49,
+  "panel": 3,
+  "scan_box": [
+   2517,
+   3297,
+   3449,
+   4481
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Left side reading newspaper, round glasses, tie; Mom standing at right with toast",
+  "verified": false
+ },
+ {
+  "file": "crops/p054-01.png",
+  "page": 54,
+  "panel": 1,
+  "scan_box": [
+   470,
+   498,
+   974,
+   1404
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Seated in an armchair in a striped shirt with round glasses, talking to Calvin on the floor at left; Dad is at the right of the panel.",
+  "verified": true,
+  "legs": "Dad sits in profile facing left on a striped armchair at the right of the panel. His thigh runs forward (left) from the seat, roughly horizontal. The knee is bent at about a right angle, and the shin drops down to the floor. The shoes sit at the bottom, pointing left, with light striped or white socks showing at the ankles. Calvin stands at left in front of a dresser, not on the floor. The legs are fairly small and partly overlapped by the chair arm and Calvin's speech balloon.",
+  "trousers": "Dark, solid black with no visible folds beyond a few white highlight lines.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p054-02.png",
+  "page": 54,
+  "panel": 2,
+  "scan_box": [
+   867,
+   271,
+   1683,
+   1404
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Bent over on the floor, gluing the beanie, with glasses and a striped shirt; Dad is at the right of the panel.",
+  "verified": false
+ },
+ {
+  "file": "crops/p054-03.png",
+  "page": 54,
+  "panel": 3,
+  "scan_box": [
+   1650,
+   271,
+   2356,
+   1404
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "large",
+  "notes": "Standing, holding up the repaired propeller beanie, glasses, short-sleeved shirt; lower body is cropped at the panel edge.",
+  "verified": false
+ },
+ {
+  "file": "crops/p054-04.png",
+  "page": 54,
+  "panel": 4,
+  "scan_box": [
+   2446,
+   271,
+   3307,
+   1404
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Shouting 'ALL RIGHT! THAT'S ENOUGH!' with arms raised in a striped shirt and glasses; Mom is only partly visible at the top edge.",
+  "verified": false
+ },
+ {
+  "file": "crops/p063-07.png",
+  "page": 63,
+  "panel": 7,
+  "scan_box": [
+   741,
+   1973,
+   1345,
+   2809
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Bent over a car washing it, in a plaid shirt with round glasses and dark trousers; Calvin is at the right holding a bucket.",
+  "verified": true,
+  "legs": "Legs are essentially not visible. Dad is bent forward at the waist behind the car, leaning on both straight arms on the hood. The hood and body of the car hide his lower half. Only a small sliver of dark trouser shows under the shirt hem at his hip/seat. No knees, seat shape or feet are drawn. Calvin and the bucket are at right, and the hose is at left.",
+  "trousers": "Dark/solid black, but only a tiny patch at the waist behind the plaid shirt hem; nearly all of it is hidden by the car.",
+  "useful_for": [
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p063-08.png",
+  "page": 63,
+  "panel": 8,
+  "scan_box": [
+   1600,
+   1769,
+   2490,
+   2925
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Standing and holding a hose, in a plaid shirt with glasses and dark trousers; facing Calvin, who is at the right.",
+  "verified": false
+ },
+ {
+  "file": "crops/p063-09.png",
+  "page": 63,
+  "panel": 9,
+  "scan_box": [
+   2445,
+   1769,
+   3324,
+   2925
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Standing with hose, smiling and holding out a hand for money, in a plaid shirt with glasses and dark trousers; Calvin is at the right.",
+  "verified": false
+ },
+ {
+  "file": "crops/p064-06.png",
+  "page": 64,
+  "panel": 6,
+  "scan_box": [
+   1488,
+   2174,
+   2201,
+   3239
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Standing at the dinner table in a white shirt with round glasses, watching Calvin eat; Dad is at the right of the panel.",
+  "verified": false
+ },
+ {
+  "file": "crops/p064-07.png",
+  "page": 64,
+  "panel": 7,
+  "scan_box": [
+   2198,
+   2174,
+   3287,
+   3239
+  ],
+  "pose": "other",
+  "facing": "front",
+  "visible": [
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Low confidence: only dark trousers and slippers are visible from the waist down, cropped at the top edge; the speaker is off-panel and could be Dad or Mom.",
+  "verified": false
+ },
+ {
+  "file": "crops/p064-08.png",
+  "page": 64,
+  "panel": 8,
+  "scan_box": [
+   110,
+   3180,
+   830,
+   4195
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Standing by a TV set in a cardigan-style shirt with round glasses, telling Calvin to go to bed; Calvin is at the bottom left.",
+  "verified": false
+ },
+ {
+  "file": "crops/p065-01.png",
+  "page": 65,
+  "panel": 1,
+  "scan_box": [
+   275,
+   232,
+   827,
+   1207
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Sitting on the edge of the bed in striped pajamas, reading a book to Calvin; glasses and receding hair.",
+  "verified": true,
+  "legs": "Dad sits on the edge of Calvin's bed, seen from the side facing left and cropped by the page edge. Only a small part of the legs shows: a solid black mass of trouser at the bottom of the shirt, with the thigh running horizontally on the mattress edge. The knee is at the right of that mass, which is hidden by the panel border and bedding. No lower leg, shin or feet are visible. The bed edge itself is not shown clearly. Dad is not wearing pajamas, as the first pass said.",
+  "trousers": "Solid black, with no folds or highlights. They are a dark silhouette blob against the white shirt and the bedding.",
+  "useful_for": [
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p065-02.png",
+  "page": 65,
+  "panel": 2,
+  "scan_box": [
+   831,
+   278,
+   1669,
+   1439
+  ],
+  "pose": "other",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Close-up of Dad holding an open book and saying 'BECAUSE READING THE BEDTIME STORY IS THE DADS JOB.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p065-03.png",
+  "page": 65,
+  "panel": 3,
+  "scan_box": [
+   1690,
+   232,
+   2414,
+   1346
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Sitting up in bed in striped pajamas reading, next to a lamp; glasses.",
+  "verified": true,
+  "legs": "Confirmed as Dad: a thin man with large round glasses, big nose, receding hair, and a striped button shirt. He is not in a chair. He sits on the edge of Calvin's bed, in three-quarter view facing left toward Calvin, with a book in his lap. Only his upper body is drawn clearly. His lap and thighs show as a dark mass under the open book, roughly at the panel's lower middle. The thighs seem to run toward the right, with the seat on the mattress edge. The knees, shins and feet are cut off by the panel bottom or hidden behind the bed and bedclothes, so no knee bend, shin or shoe is visible. This panel is a poor reference for leg structure.",
+  "trousers": "Dark, near-solid black in the small lap area visible, with no pattern. The area is shaded and partly merges with the dark bed shadow, so it is hard to separate from the background.",
+  "useful_for": [
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p065-04.png",
+  "page": 65,
+  "panel": 4,
+  "scan_box": [
+   2469,
+   278,
+   3355,
+   1439
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Reading aloud from a book in striped pajamas, glasses, with the title 'Why Prince Charming Stayed Single' in the speech bubble.",
+  "verified": false
+ },
+ {
+  "file": "crops/p070-13.png",
+  "page": 70,
+  "panel": 13,
+  "scan_box": [
+   2241,
+   3284,
+   3354,
+   4331
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Thin man with round glasses in a dark jacket and trousers, standing by the door holding a paper bag. Speech: 'Oh, I can't NAIT to hear THIS one explained.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p071-06.png",
+  "page": 71,
+  "panel": 6,
+  "scan_box": [
+   786,
+   1797,
+   1696,
+   2962
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Driving the car, glasses, shirt, seatbelt across chest. Speech: 'We can't turn around, Calvin, we're late already.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p071-07.png",
+  "page": 71,
+  "panel": 7,
+  "scan_box": [
+   1662,
+   1797,
+   2535,
+   2962
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Close-up at the wheel, round glasses, large nose, receding hair, collared shirt and tie. Speech: 'You could've been ready on time...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p071-08.png",
+  "page": 71,
+  "panel": 8,
+  "scan_box": [
+   2517,
+   1797,
+   3407,
+   2962
+  ],
+  "pose": "sitting_chair",
+  "facing": "back",
+  "visible": [
+   "head"
+  ],
+  "size": "small",
+  "notes": "Seen from behind in the front seat, back of head with glasses visible. Speech: 'You'd turn around if we'd forgotten MOM!'",
+  "verified": false
+ },
+ {
+  "file": "crops/p071-09.png",
+  "page": 71,
+  "panel": 9,
+  "scan_box": [
+   0,
+   3306,
+   807,
+   4472
+  ],
+  "pose": "other",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso"
+  ],
+  "size": "medium",
+  "notes": "Cropped at the left page edge, seated beside Mom in the wedding pew, round glasses and dark suit. Medium confidence on identity because of the crop.",
+  "verified": false
+ },
+ {
+  "file": "crops/p071-12.png",
+  "page": 71,
+  "panel": 12,
+  "scan_box": [
+   2490,
+   3315,
+   3407,
+   4472
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dark suit and tie, round glasses, standing at left in the house doorway beside Mom. Speech in panel is Calvin's ('I think I'll let Dad go into the house first').",
+  "verified": false
+ },
+ {
+  "file": "crops/p072-08.png",
+  "page": 72,
+  "panel": 8,
+  "scan_box": [
+   2534,
+   1753,
+   3361,
+   2890
+  ],
+  "pose": "lying",
+  "facing": "back",
+  "visible": [
+   "head"
+  ],
+  "size": "small",
+  "notes": "Low confidence. Only a head on a pillow at the left edge of the panel, Calvin says Dad is snoring. Likely Dad in bed.",
+  "verified": false
+ },
+ {
+  "file": "crops/p072-09.png",
+  "page": 72,
+  "panel": 9,
+  "scan_box": [
+   84,
+   2446,
+   571,
+   3398
+  ],
+  "pose": "standing",
+  "facing": "back",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Medium confidence. Man in shirt and dark trousers leaning into the car trunk to unload; appears to be Dad. Speech: 'Well, we're finally home!'",
+  "verified": true,
+  "legs": "Dad is standing upright at the left edge of the panel, side-on to the viewer, with one arm raised to hold up the open van hatch; he is not really bending. His torso and thighs are partly hidden by the van's front, so only a short stretch of trouser leg shows. No knees, seat or shoes are clearly drawn, and there is no sitting or kneeling.",
+  "trousers": "Dark, close to solid black with little or no linework visible. His top is also dark, with a short sleeve on the raised arm.",
+  "useful_for": [
+   "sleeves"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p072-10.png",
+  "page": 72,
+  "panel": 10,
+  "scan_box": [
+   930,
+   3176,
+   1734,
+   4268
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Round glasses, shirt, large nose, facing Mom. Speech: 'Boy, I didn't think we'd ever get home...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p072-11.png",
+  "page": 72,
+  "panel": 11,
+  "scan_box": [
+   1717,
+   3176,
+   2470,
+   4268
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Round glasses, shirt and dark trousers, carrying a box in the middle of the panel. Speech in panel is 'Gosh, it's drafty in here...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p073-01.png",
+  "page": 73,
+  "panel": 1,
+  "scan_box": [
+   0,
+   287,
+   810,
+   1486
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Round glasses, shirt, hand raised. Speech: 'I'll call the police!'",
+  "verified": false
+ },
+ {
+  "file": "crops/p073-05.png",
+  "page": 73,
+  "panel": 5,
+  "scan_box": [
+   0,
+   1797,
+   810,
+   2962
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Cropped at left page edge, round glasses, shirt. Speech: 'The police say they'll send someone over. Have you figured out what all is missing?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p073-06.png",
+  "page": 73,
+  "panel": 6,
+  "scan_box": [
+   772,
+   1797,
+   1679,
+   2962
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Round glasses, shirt, hand on forehead. Speech: 'I feel a little hysterical myself.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p073-07.png",
+  "page": 73,
+  "panel": 7,
+  "scan_box": [
+   1679,
+   1797,
+   3393,
+   2962
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Standing beside Mom in shirt and dark trousers, round glasses, large nose. Speech: 'This is one of those things you always figure will happen to someone else...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p074-04.png",
+  "page": 74,
+  "panel": 4,
+  "scan_box": [
+   2534,
+   280,
+   3361,
+   1449
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso"
+  ],
+  "size": "small",
+  "notes": "Low confidence. Cropped at the right page edge, round glasses visible, partially hidden. Likely Dad.",
+  "verified": false
+ },
+ {
+  "file": "crops/p074-05.png",
+  "page": 74,
+  "panel": 5,
+  "scan_box": [
+   114,
+   1753,
+   951,
+   2859
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "At the left edge, round glasses, shirt, talking to the police officer. Speech: '...and the television's gone, too.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p074-06.png",
+  "page": 74,
+  "panel": 6,
+  "scan_box": [
+   914,
+   1753,
+   1751,
+   2859
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Arms folded, round glasses, shirt. Speech: 'Calvin, not now, OK? I'm busy.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p074-07.png",
+  "page": 74,
+  "panel": 7,
+  "scan_box": [
+   1717,
+   1753,
+   2601,
+   2859
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Pointing toward the door, round glasses, shirt. Speech: 'Right. Why don't you go tell your Mom?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p074-09.png",
+  "page": 74,
+  "panel": 9,
+  "scan_box": [
+   114,
+   3194,
+   964,
+   4250
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "At the right of the panel next to Mom with a broom, round glasses, shirt and dark trousers. Speech in panel is Dad's: 'OK, I'll get something to cover up the hole.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p074-10.png",
+  "page": 74,
+  "panel": 10,
+  "scan_box": [
+   914,
+   3194,
+   1751,
+   4268
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso"
+  ],
+  "size": "small",
+  "notes": "At the right edge, round glasses, shirt. Speech: 'The police said they'd drive by, and we'll leave lots of lights on.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p074-11.png",
+  "page": 74,
+  "panel": 11,
+  "scan_box": [
+   1717,
+   3194,
+   2571,
+   4268
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Round glasses, shirt, on the right of the panel. Speech: 'I know. And this must really be scary for a little kid like Calvin.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-01.png",
+  "page": 75,
+  "panel": 1,
+  "scan_box": [
+   0,
+   273,
+   765,
+   1453
+  ],
+  "pose": "other",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Cropped at the left page edge, round glasses, seated on the bed edge beside Mom. Speech: '...sleep?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-02.png",
+  "page": 75,
+  "panel": 2,
+  "scan_box": [
+   738,
+   273,
+   1638,
+   1453
+  ],
+  "pose": "other",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Sitting up in bed, round glasses, hands on blanket, Mom at right. Speech: 'Boy, I don't know how I'm ever going to sleep.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-04.png",
+  "page": 75,
+  "panel": 4,
+  "scan_box": [
+   2466,
+   273,
+   3393,
+   1453
+  ],
+  "pose": "other",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Sitting up in bed beside sleeping Mom, round glasses. Speech: 'So what do I get to snuggle? How come I'm the grown-up??'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-05.png",
+  "page": 75,
+  "panel": 5,
+  "scan_box": [
+   0,
+   1797,
+   776,
+   2962
+  ],
+  "pose": "other",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso"
+  ],
+  "size": "medium",
+  "notes": "Cropped at the left page edge, round glasses, in bed. Speech: '...is going to be a long night.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-06.png",
+  "page": 75,
+  "panel": 6,
+  "scan_box": [
+   738,
+   1797,
+   1638,
+   2962
+  ],
+  "pose": "lying",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Propped up on elbows in bed, round glasses, large nose. Speech: 'My heart jumps at the slightest sound...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-07.png",
+  "page": 75,
+  "panel": 7,
+  "scan_box": [
+   1610,
+   1797,
+   2503,
+   2962
+  ],
+  "pose": "other",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso"
+  ],
+  "size": "medium",
+  "notes": "Dark silhouette against a black background, profile with large nose. Low contrast. Speech: 'When someone breaks into your home...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-08.png",
+  "page": 75,
+  "panel": 8,
+  "scan_box": [
+   2466,
+   1797,
+   3393,
+   2962
+  ],
+  "pose": "lying",
+  "facing": "front",
+  "visible": [
+   "head",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Lying in bed with hands on the blanket, round glasses. Speech: 'A man's home is his castle...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-09.png",
+  "page": 75,
+  "panel": 9,
+  "scan_box": [
+   0,
+   3306,
+   779,
+   4472
+  ],
+  "pose": "lying",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso"
+  ],
+  "size": "medium",
+  "notes": "In bed at right of the panel, round glasses, Calvin at left. Speech: 'Mm-hmm. I was thinking.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-10.png",
+  "page": 75,
+  "panel": 10,
+  "scan_box": [
+   755,
+   3306,
+   1645,
+   4472
+  ],
+  "pose": "lying",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head"
+  ],
+  "size": "small",
+  "notes": "Head only, bottom-right of the panel, looking up with round glasses. Speech: 'It's funny... when I was a kid...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-11.png",
+  "page": 75,
+  "panel": 11,
+  "scan_box": [
+   1610,
+   3306,
+   2503,
+   4472
+  ],
+  "pose": "other",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Sitting up in bed at the right of the panel, round glasses, Calvin at left. Speech: 'I figured that once you grew up, you automatically knew what to do...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p075-12.png",
+  "page": 75,
+  "panel": 12,
+  "scan_box": [
+   2466,
+   3306,
+   3359,
+   4472
+  ],
+  "pose": "other",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Sitting up in bed at the right of the panel, round glasses, Calvin at left. Speech: 'I don't think I'd have been in such a hurry to reach adulthood...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p087-01.png",
+  "page": 87,
+  "panel": 1,
+  "scan_box": [
+   0,
+   417,
+   709,
+   1462
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated in armchair reading a notebook/poll, round glasses, dark trousers, shirt; Calvin standing beside him on the left",
+  "verified": true,
+  "legs": "Dad sits in a low armchair at the left edge, facing right in profile, torso upright. His thighs run horizontally to the right from the seat, a single solid black mass with a few thin white fold lines. The knee is at about the lamp table's front, then the shin drops almost vertically in black to the floor. The legs read as together or overlapping, not crossed. A white sneaker-type shoe with a sole line sits flat on the floor at the bottom, pointing right and slightly out. A second leg or foot is hidden or merged into the black mass and the chair front. The armchair's rolled arm and a white cushion lie behind and under the thighs. His elbow rests on the chair arm with a short rolled sleeve. His right hand holds a small open notebook at chest height, with pale fingers wrapped around it.",
+  "trousers": "Solid black, with only a few thin white crease or fold lines at the knee and shin.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 3
+ },
+ {
+  "file": "crops/p087-04.png",
+  "page": 87,
+  "panel": 4,
+  "scan_box": [
+   2587,
+   278,
+   3470,
+   1439
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Seated at the lamp table in a shirt with round glasses, hands busy with a paper; only the left part of him is in the panel. Pose is inferred from a small image, so it is uncertain",
+  "verified": false
+ },
+ {
+  "file": "crops/p095-13.png",
+  "page": 95,
+  "panel": 13,
+  "scan_box": [
+   1689,
+   3260,
+   2555,
+   4383
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Seated in armchair under lamp, holding open book, glasses, light shirt; says 'MM.' to Calvin at left",
+  "verified": false
+ },
+ {
+  "file": "crops/p095-14.png",
+  "page": 95,
+  "panel": 14,
+  "scan_box": [
+   2803,
+   3436,
+   3442,
+   4411
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Reclined in armchair reading a book, glasses, shirt and dark trousers with shoes visible; Calvin partly visible at bottom left",
+  "verified": true,
+  "legs": "Dad sits deep in a floral armchair, facing the viewer in three-quarter view, reading an open book held in both hands. His legs are crossed, one over the other. The upper (crossing) knee is a big rounded dark mass at the left-centre of the lower half, rising toward the left edge of his body near the chair arm and lamp table. From that knee the thigh runs back and the shin/calf slopes down and to the right in solid black. The lower leg ends in a light, rounded shoe at lower right, toe pointing down and right with a visible sole/welt line and laces/tongue hinted. The other leg and foot are hidden behind or beside the crossing leg and chair upholstery. The book covers his torso and the thighs are mostly foreshortened. Calvin's head and spiky hair sit at the bottom left, in front of the chair.",
+  "trousers": "Solid black, essentially flat dark fill with almost no fold lines, only a few small white highlight flecks near the knee",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p099-05.png",
+  "page": 99,
+  "panel": 5,
+  "scan_box": [
+   0,
+   1787,
+   851,
+   2944
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "At right edge of panel at dinner table, glasses, shirt, speaking to Calvin; Mom at left edge",
+  "verified": false
+ },
+ {
+  "file": "crops/p099-06.png",
+  "page": 99,
+  "panel": 6,
+  "scan_box": [
+   816,
+   1787,
+   1696,
+   2944
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Seated at right of panel reading a book at the dinner table, glasses, light shirt",
+  "verified": false
+ },
+ {
+  "file": "crops/p099-08.png",
+  "page": 99,
+  "panel": 8,
+  "scan_box": [
+   2498,
+   1787,
+   3389,
+   2944
+  ],
+  "pose": "sitting_chair",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Seated at left in profile facing Mom across the table, glasses, side-parted hair, shirt",
+  "verified": false
+ },
+ {
+  "file": "crops/p101-01.png",
+  "page": 101,
+  "panel": 1,
+  "scan_box": [
+   35,
+   325,
+   851,
+   1393
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Reclined in armchair reading a newspaper, legs stretched out to the left with shoes; Calvin at left edge asking about light bulbs",
+  "verified": true,
+  "legs": "Dad is semi-reclined in a floral armchair seen from the front-left, holding an open book or newspaper up at chest level with his left-side hand while peering over it. His seat is at the right, sunk into the cushion. Both legs, in solid black trousers, run together as one long diagonal mass from the hips down and to the left toward Calvin, roughly straight with only a slight rise at the knees. Calvin's head and shoulders sit just below and to the left of the thighs. The legs are stacked or crossed so they read as a single thick black band. At the far left end the feet are propped up and cocked upward, with shoes pointing up and left and the soles or heels visible, near Calvin's face. The knees are only slightly bent and are not drawn as a distinct angular joint. The lower legs are foreshortened toward the viewer.",
+  "trousers": "Solid black, filled flat with no visible folds or highlights apart from a few thin white crease lines near the knee. Dark socks or shoes merge with them at the ankles.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p101-02.png",
+  "page": 101,
+  "panel": 2,
+  "scan_box": [
+   805,
+   278,
+   1689,
+   1453
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Seated in patterned armchair, grinning, glasses, holding a book; Calvin small at lower left",
+  "verified": false
+ },
+ {
+  "file": "crops/p101-03.png",
+  "page": 101,
+  "panel": 3,
+  "scan_box": [
+   1657,
+   278,
+   2526,
+   1453
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated in patterned armchair with glasses and a smile, facing Calvin at left",
+  "verified": false
+ },
+ {
+  "file": "crops/p104-07.png",
+  "page": 104,
+  "panel": 7,
+  "scan_box": [
+   1966,
+   3304,
+   3405,
+   4355
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Holding a camera up to his face on the left of the panel, glasses, dark shirt; legs cut off by panel bottom; shouting at Calvin at right",
+  "verified": false
+ },
+ {
+  "file": "crops/p107-08.png",
+  "page": 107,
+  "panel": 8,
+  "scan_box": [
+   2548,
+   1769,
+   3435,
+   2925
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Driving the van, round glasses, striped shirt; Mom and Calvin in back",
+  "verified": false
+ },
+ {
+  "file": "crops/p107-09.png",
+  "page": 107,
+  "panel": 9,
+  "scan_box": [
+   35,
+   3529,
+   674,
+   4365
+  ],
+  "pose": "crouching",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated on a log beside Calvin, striped shirt, round glasses ('TA DA! WE'RE HERE!')",
+  "verified": true,
+  "legs": "Yes, this is Dad: bald on top, round glasses, big nose, striped short-sleeved shirt over a plaid collar. He is not sitting on the floor or a log. He is a low crouch or squat, leaning forward and to the left, perched on the rim of a canoe or boat hull at the lower left, with his torso tilted toward Calvin. The thigh is the large rounded mass in light grey, with the knee bulging at the lower middle of the figure. The shin runs down and left from the knee, and a big sneaker with a sole line sits near the bottom, pointing down-left, so the foot is foreshortened and planted on the hull. The seat is tucked right behind the heels, with no chair or floor under it. His right hand grips the canoe gunwale or pole at lower left, with the arm braced down on it. The far leg is mostly hidden behind the near one. The lower part of the body is partly overlapped by the canoe rim and lines.",
+  "trousers": "Light, not solid black. The trousers are light grey or white with only a few contour and fold lines. Only the shadowed canoe area at the very bottom left is black.",
+  "useful_for": [
+   "crouching_legs",
+   "shoes",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p107-10.png",
+  "page": 107,
+  "panel": 10,
+  "scan_box": [
+   834,
+   3366,
+   1597,
+   4318
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Leaning over Calvin, striped shirt, glasses ('BUG BITES BUILD CHARACTER')",
+  "verified": true,
+  "legs": "Not visible. This is a tight close-up. Dad is cropped at about the waist or hip by the bottom panel border and by a dark rock or shape at lower left. No knees, seat or feet are drawn.",
+  "trousers": "Not visible. At most a sliver of dark cloth at the bottom edge, with no usable trouser detail.",
+  "useful_for": [
+   "sleeves"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p107-11.png",
+  "page": 107,
+  "panel": 11,
+  "scan_box": [
+   1668,
+   3575,
+   2271,
+   4086
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Bent over with Calvin in front, striped shirt and trousers, glasses",
+  "verified": true,
+  "legs": "Small, wide-view panel. Dad is at the left, bent forward at the waist with his torso angled down and to the right toward Calvin, one hand reaching to Calvin's head. His knees are flexed and splayed in a half-squat: the near knee juts out to the left, the thighs drop steeply and the shins go down to shoes planted flat on the rocky ground, feet spread apart with the seat pushed back and low. This is a stooped, knees-bent stance rather than a true kneel or sit. The legs are small and drawn in few lines. Feet are small sneaker-like shoes with simple outlines.",
+  "trousers": "Dark, mostly solid black fill with only minimal highlight lines at the knees; shirt is striped (pinstripe) with short sleeves.",
+  "useful_for": [
+   "crouching_legs",
+   "shoes"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p107-12.png",
+  "page": 107,
+  "panel": 12,
+  "scan_box": [
+   2523,
+   3241,
+   3421,
+   4393
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Standing by the duffel bag, striped shirt, glasses ('OPEN THE DUFFEL BAG')",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-01.png",
+  "page": 108,
+  "panel": 1,
+  "scan_box": [
+   92,
+   292,
+   903,
+   1462
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Pointing toward the lake, striped shirt, glasses, Mom at right",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-02.png",
+  "page": 108,
+  "panel": 2,
+  "scan_box": [
+   869,
+   292,
+   1690,
+   1462
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Plain shirt, round glasses, arm extended ('AW, C'MON')",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-03.png",
+  "page": 108,
+  "panel": 3,
+  "scan_box": [
+   1653,
+   292,
+   2478,
+   1462
+  ],
+  "pose": "walking",
+  "facing": "unclear",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Walking toward the water in striped shirt, Calvin at right",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-04.png",
+  "page": 108,
+  "panel": 4,
+  "scan_box": [
+   2447,
+   292,
+   3299,
+   1462
+  ],
+  "pose": "other",
+  "facing": "unclear",
+  "visible": [
+   "head"
+  ],
+  "size": "small",
+  "notes": "Tiny swimmer in the lake at right, probably Dad; low confidence",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-05.png",
+  "page": 108,
+  "panel": 5,
+  "scan_box": [
+   68,
+   1919,
+   647,
+   2833
+  ],
+  "pose": "crouching",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "knees"
+  ],
+  "size": "medium",
+  "notes": "Crouched at the tent flap waking Calvin, striped shirt, glasses",
+  "verified": true,
+  "legs": "Dad is in a deep squat or crouch at the left of the tent flap, seen in side or three-quarter view facing right. The thighs are folded tight against the torso and the knee points up and forward at about chest height. The seat is low, close to the ground, with the heel lifted. The lower leg angles back down to a shoe at the bottom left, with a light sole and laces. The foot is flat or on its toes and tucked under the body. One arm rests on or near the knee. The other hand is cupped to his mouth, calling to Calvin. The leg mass is a compact bundle of overlapping folds, so the knee and shin are only partly distinguishable. The lower-left edge of the panel is cluttered with ground and rock lines.",
+  "trousers": "Dark, essentially solid black with only a few white fold highlights, so the folds read mainly from the silhouette and not from interior lines.",
+  "useful_for": [
+   "crouching_legs",
+   "shoes",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p108-06.png",
+  "page": 108,
+  "panel": 6,
+  "scan_box": [
+   876,
+   1759,
+   1690,
+   2865
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Arms spread on the lakeshore at dawn, glasses, plain shirt",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-07.png",
+  "page": 108,
+  "panel": 7,
+  "scan_box": [
+   1663,
+   1759,
+   2474,
+   2865
+  ],
+  "pose": "bending",
+  "facing": "unclear",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Leaning toward the tent where Calvin is, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-08.png",
+  "page": 108,
+  "panel": 8,
+  "scan_box": [
+   2447,
+   1759,
+   3299,
+   2865
+  ],
+  "pose": "sitting_floor",
+  "facing": "unclear",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "small",
+  "notes": "Small figure seated in the canoe fishing, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-09.png",
+  "page": 108,
+  "panel": 9,
+  "scan_box": [
+   98,
+   3157,
+   913,
+   4250
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Holding fishing rod and net, striped shirt, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-10.png",
+  "page": 108,
+  "panel": 10,
+  "scan_box": [
+   876,
+   3157,
+   1690,
+   4250
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Standing in the canoe with a paddle, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-11.png",
+  "page": 108,
+  "panel": 11,
+  "scan_box": [
+   1653,
+   3157,
+   2474,
+   4250
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Shouting while holding up a fish, plain shirt, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p108-12.png",
+  "page": 108,
+  "panel": 12,
+  "scan_box": [
+   2447,
+   3157,
+   3299,
+   4250
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Arms spread holding a fish, plain shirt, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p109-02.png",
+  "page": 109,
+  "panel": 2,
+  "scan_box": [
+   177,
+   1904,
+   904,
+   2972
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated on a rock painting at an easel in a patterned shirt, round glasses, Calvin at left",
+  "verified": true,
+  "legs": "Dad is perched on a low flat rock, torso upright and turned three-quarters to the right, with a sketch board across his lap. Thighs run roughly horizontally to the right from the seat, and the knees are bent about 90 degrees. The knees sit under the board edge near the right of the panel. The shins drop nearly vertically from the knees and are drawn as two overlapping tube-like trouser legs, the near leg in front of the far one. Both feet are flat on the ground and point right, in big rounded sneakers or shoes with thick soles and a lace area. The near shoe is a large oval at bottom right and the far shoe peeks out behind it. The trousers have rumpled fold lines at the knees and ankles. Only the left side of the leg is lightly shaded. The seat is a lumpy rock drawn under and behind his rear.",
+  "trousers": "Not solid black. They are drawn mostly light or white, with thin ink fold lines and a little hatching, so they read as light khaki or grey trousers. The Hawaiian floral shirt is patterned and busy.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 3
+ },
+ {
+  "file": "crops/p109-03.png",
+  "page": 109,
+  "panel": 3,
+  "scan_box": [
+   993,
+   1811,
+   1739,
+   2972
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated painting, patterned shirt, glasses, Calvin peering in from left",
+  "verified": true,
+  "legs": "Yes, this is Calvin's dad. He has round glasses, a big nose, a bald top with a few tufts, and a floral Hawaiian-style short-sleeved shirt. He is not sitting on the floor. He sits on a rock or stump in profile, facing right, and is hunched forward over a flat board on his lap. The board is drawn as a long thin wedge that sticks out to the right. His thighs run roughly horizontally to the right from the seat at left. The knees are bent about 90 degrees and sit at the right end of the thighs, under the board. His shins drop nearly straight down from the knees. The near leg overlaps the far leg, so there are two stacked shin and sock shapes. The ankles are short, with a sock band or light cuff showing. He wears big rounded sneakers, both pointing right. The feet sit flat on the ground at the bottom right of the panel, slightly ahead of the knees. Calvin stands at the left and the board hides Dad's lap, so the seat itself is only partly visible. The panel to the right, the third in the row, is almost the same pose with the knee and shoe drawn slightly differently.",
+  "trousers": "Not solid black. The trousers are light or mid-tone, drawn with outline and a few hatch and fold lines, and they read as khaki-like. There are dark crease and shadow lines at the knee and under the thigh, but the fabric is not filled in.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 3
+ },
+ {
+  "file": "crops/p109-04.png",
+  "page": 109,
+  "panel": 4,
+  "scan_box": [
+   1809,
+   1927,
+   2590,
+   2948
+  ],
+  "pose": "sitting_floor",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated painting, patterned shirt, glasses",
+  "verified": true,
+  "legs": "Dad is seated on a low boulder in three-quarter view facing right, painting on a board across his lap. The thighs run forward (right) roughly horizontally from the seat, partly hidden behind the lap board. The knees are bent, with the shins dropping nearly straight down to the ground. Two knee shapes are drawn side by side, with the nearer leg overlapping the farther. Below the knees there are bare or sock-clad lower legs with short ankle lines. The feet are large, rounded sneakers or shoes planted flat on the ground at the right of the panel, toes pointing right. They are heavily outlined with sole lines and laces. The seat is a flat, compact bottom on the rock, mostly behind the board and shirt hem. It is a seated-on-a-rock pose, not a floor-sitting or kneeling pose.",
+  "trousers": "Not solid black. The trousers are light, mostly white with a few fold lines, and look like khaki shorts or light trousers. They contrast with the busy floral Hawaiian shirt and the large dark shoes.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 3
+ },
+ {
+  "file": "crops/p109-05.png",
+  "page": 109,
+  "panel": 5,
+  "scan_box": [
+   2750,
+   1950,
+   3460,
+   2925
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated painting facing Calvin at left, patterned shirt, glasses ('YOU'RE GIVING YOUR HARMONICA SKILLS...')",
+  "verified": true,
+  "legs": "He is Dad, but he sits on a low rock rather than on the floor. This is the fourth panel of the middle row, where Calvin stands at left. Dad is turned three-quarters to the left. His thighs run roughly horizontally from the seat at the rock's right edge. The knees are bent, with the left knee thrust forward under the sketchboard. The shins drop nearly vertically, and the large rounded shoes rest flat on the ground at the lower right of the panel with toes pointing left. The long diagonal board and his forearm cover much of the lap and thighs. The trouser legs are drawn with light fill and a few fold lines, with sock or ankle hints above the shoes. The legs are partly hidden by the board, so treat the leg detail as approximate, not precise.",
+  "trousers": "Light, not solid black. They are mostly white or very light with a few fold and shading lines, plus slightly hatched shadow under the knees.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p110-05.png",
+  "page": 110,
+  "panel": 5,
+  "scan_box": [
+   92,
+   1759,
+   896,
+   2847
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Holding a camera up to take a family photo, Hawaiian-print shirt, shorts, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p110-06.png",
+  "page": 110,
+  "panel": 6,
+  "scan_box": [
+   876,
+   1759,
+   1690,
+   2847
+  ],
+  "pose": "crouching",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Crouched with a camera, Hawaiian-print shirt, glasses ('BUT DON'T YOU WANT SOMETHING TO REMEMBER')",
+  "verified": false
+ },
+ {
+  "file": "crops/p110-08.png",
+  "page": 110,
+  "panel": 8,
+  "scan_box": [
+   2447,
+   1759,
+   3299,
+   2847
+  ],
+  "pose": "walking",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Walking with a camera, Hawaiian-print shirt, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p110-09.png",
+  "page": 110,
+  "panel": 9,
+  "scan_box": [
+   204,
+   3473,
+   749,
+   4204
+  ],
+  "pose": "bending",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Seated on the ground in a striped shirt, round glasses, Mom at right",
+  "verified": true,
+  "legs": "Legs are essentially not visible. Dad is hunched forward at the waist on the ground, a tent pole or stick gripped in both hands at the bottom-left. His striped torso fills the middle and the panel's bottom edge crops everything below the waist. At most a bit of thigh or knee outline shows lower left, under the arm. No clear seat, knee or shoes. The sitting-floor label is only loosely supported, and he may be kneeling or squatting over the gear.",
+  "trousers": "Not clearly visible. No dark trousers are shown, and no solid black legs.",
+  "useful_for": [
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p110-10.png",
+  "page": 110,
+  "panel": 10,
+  "scan_box": [
+   920,
+   3199,
+   1704,
+   4295
+  ],
+  "pose": "sitting_floor",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated on the ground with a stick, striped shirt, glasses ('AFTER BEING OUT HERE')",
+  "verified": true,
+  "legs": "Not visible. Panel 10 is a close, cropped shot of Dad from the head to about the waist. He faces left and slightly toward the viewer. He leans forward over a stick held in his lowered right hand at bottom left. The panel edge cuts him off before any seat, knees or feet appear. Whether he is sitting is only implied by the neighbouring panels and the low viewpoint. His legs, knees, seat and shoes cannot be traced from this panel.",
+  "trousers": "Not visible in this panel. In the neighbouring panels 9, 11 and 12 on the same row, he wears a striped shirt and dark trousers. Panel 10 shows only the striped shirt.",
+  "useful_for": [
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p110-11.png",
+  "page": 110,
+  "panel": 11,
+  "scan_box": [
+   2045,
+   3473,
+   2624,
+   4295
+  ],
+  "pose": "sitting_floor",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Seated on the ground, glasses, Calvin at left ('MAN, I CAN'T WAIT TO GET IN THE CAR')",
+  "verified": true,
+  "legs": "Dad sits on the ground in three-quarter view facing right, torso upright and slightly leaning. His legs are folded in a loose cross-legged or kneeling-sit arrangement. The near leg is bent with the knee pointing forward and right, and the thigh runs along the ground to the right. The shin is tucked back under or in front of him. His left shoe shows at the lower left as a sneaker with sole and laces seen from the side, sitting on the ground behind his seat. At the lower right the other lower leg and foot angle out toward the panel edge and are partly cropped by the panel border. The seat sits low on the ground at the lower left of the torso. His forearms rest over his knee, with the hands clasped or draped on the knee at the right edge, and the hands are large and rounded with outlined fingers. The legs are not much foreshortened, and the thigh and shin fold sits within a roughly triangular mass.",
+  "trousers": "Light, not black. The trousers are drawn as pale or light grey with only thin outlines and a few fold lines. They are not solid black fill.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p110-12.png",
+  "page": 110,
+  "panel": 12,
+  "scan_box": [
+   2590,
+   3496,
+   3170,
+   4204
+  ],
+  "pose": "sitting_floor",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Seated with hand on chin, striped shirt, glasses ('SOMEDAY I'M GOING TO GET MY DNA TESTED')",
+  "verified": true,
+  "legs": "Dad sits on the ground in three-quarter view, facing left and angled toward the viewer, with the speech balloon above him. His right hand is raised to his chin, and the other forearm rests on his knee or thigh. His thigh comes toward the viewer, foreshortened. It is a light, mostly unshaded outline shape, and the knee is only implied by the contour where the thigh turns down into the shin. The shin runs down and to the left. Near the bottom edge there is a light trouser or shorts hem with a few stripe or cuff lines, and below it a low shoe or foot pointing left, with sole lines and laces. The panel crops the legs at the bottom. A large sneaker (Calvin's, with lettering on it) overlaps the lower edge next to him. Dad's seat is not visible. The legs read as bent and drawn up, not stretched out flat, and the feet are partly cut off or tangled with the sneaker.",
+  "trousers": "Light, not solid black. They are outline only, with white or grey fill, and perhaps a few cuff or stripe lines at the hem. His striped shirt is the dark mass. Calvin's mom, beside him, wears a dotted shirt and light trousers.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p112-01.png",
+  "page": 112,
+  "panel": 1,
+  "scan_box": [
+   92,
+   278,
+   913,
+   1448
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Suit and tie, round glasses, facing Calvin at left ('OFF TO WORK, EH, DAD?')",
+  "verified": false
+ },
+ {
+  "file": "crops/p112-02.png",
+  "page": 112,
+  "panel": 2,
+  "scan_box": [
+   869,
+   278,
+   1701,
+   1448
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Suit and tie, glasses, talking to Calvin at left ('IT SURE IS A NICE DAY')",
+  "verified": false
+ },
+ {
+  "file": "crops/p113-01.png",
+  "page": 113,
+  "panel": 1,
+  "scan_box": [
+   0,
+   51,
+   3453,
+   1174
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Title panel, Hawaiian shirt and shorts, round glasses, at right behind Mom with umbrella ('AHH... A DAY AT THE LAKE!')",
+  "verified": false
+ },
+ {
+  "file": "crops/p113-03.png",
+  "page": 113,
+  "panel": 3,
+  "scan_box": [
+   1774,
+   1161,
+   2590,
+   2089
+  ],
+  "pose": "sitting_floor",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Seated on the beach towel at top right, glasses, Mom reading beside him",
+  "verified": true,
+  "legs": "Dad is the shirtless man at the top right of the panel, seen mostly from behind and in side profile, propped up on the beach towel. His bare back and shoulder rise to the right, with his head turned left, glasses visible and hair short. His lower body, waist, trunks and legs, is mostly hidden behind Mom's reclining body and her arm in the foreground. A small dark patch of his swim trunks shows near his hip beside Mom's head, which suggests he sits on the towel with his legs extended or bent toward the lower left. No knees, shins, feet or seat are drawn clearly, and no shoes. Mom lies in front of him, propped on her elbow with her legs stretched back to the right, reading a booklet.",
+  "trousers": "Swim trunks, not solid black. A small dark gray patch is visible at the hip and is largely covered by Mom. They are not a clear reference for trousers.",
+  "useful_for": [
+   "none"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p113-06.png",
+  "page": 113,
+  "panel": 6,
+  "scan_box": [
+   851,
+   2322,
+   1916,
+   3297
+  ],
+  "pose": "kneeling",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Kneeling, shirtless, putting lotion on Calvin, round glasses ('THIS LOTION MAKES ME GREASY')",
+  "verified": true,
+  "legs": "Dad is on the left of the panel, kneeling on the sand and leaning forward over Calvin, who is bent over on the ground. He is seen in three-quarter side view, facing right. His thighs are in dark swim shorts, with the seat and thigh low and near the ground. The bare knee and shin are pale and folded back along the sand to the lower left of the panel. The knee is bent sharply, and the shin and foot trail behind him toward the left edge. The foot is mostly hidden or cropped at the panel edge, so no clear shoe or foot is visible. He is barefoot at the beach. His right arm reaches down and forward to pull the dark shirt off Calvin's head. His shirtless torso is bare with chest hair, and his round glasses are visible. He is not rubbing lotion on Calvin. The bottle sits on the sand at the lower right, and the action is removing the shirt.",
+  "trousers": "Dark grey swim shorts, not solid black. They have fold lines and a hatched, textured look with lighter patches, and they end above the knee.",
+  "useful_for": [
+   "kneeling_or_floor_legs",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p113-08.png",
+  "page": 113,
+  "panel": 8,
+  "scan_box": [
+   3,
+   3343,
+   1774,
+   4430
+  ],
+  "pose": "walking",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Walking barefoot on the sand, shirtless, shorts, glasses, Calvin at left ('I HATE WALKING!')",
+  "verified": false
+ },
+ {
+  "file": "crops/p113-09.png",
+  "page": 113,
+  "panel": 9,
+  "scan_box": [
+   2306,
+   3483,
+   3016,
+   4411
+  ],
+  "pose": "crouching",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Crouched with Mom by the picnic basket, shirtless, glasses ('WHAT? ARE WE GOING ALREADY?')",
+  "verified": true,
+  "legs": "Dad squats low on the beach, seen in three-quarter view facing left toward Mom, leaning forward over the picnic basket. His bent knee rises high toward the viewer and his thighs fold tight against his torso. His seat is close to the ground, with his rear on or just above the sand. His bare back and arm reach down to the dark blanket, so the legs are partly hidden behind his arm and the basket. A bare foot or sandal shows in the lower centre, near the bottom edge of the panel, next to the blanket. Mom's leg and sandal sit just to his left, which makes the two figures overlap. Calvin stands separately on the right.",
+  "trousers": "Dark swim trunks or shorts, mid-grey to near-black with some fold-line detail and a lighter patch at the thigh. They are not solid black, and they read as shorts rather than long trousers. His lower legs are bare.",
+  "useful_for": [
+   "crouching_legs",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p115-01.png",
+  "page": 115,
+  "panel": 1,
+  "scan_box": [
+   283,
+   1300,
+   1100,
+   2322
+  ],
+  "pose": "sitting_floor",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Sitting on the porch step with a mug, glasses, Calvin at left ('WHY DOES THE SKY TURN RED')",
+  "verified": true,
+  "legs": "Dad is seated on the porch step, seen in three-quarter view and turned slightly toward Calvin, who is at lower left. His torso leans forward and left. One large knee is drawn up and bent in the lower centre of the panel, with the thigh coming toward the viewer. The lower leg and shin drop away behind the knee. The step edge or the ground cuts off the lower legs, so the feet and shoes are mostly hidden or cropped by the panel border. His seat is low on the step. The thigh and knee are drawn as a big rounded light mass with a few fold lines at the knee and hip. His mug hand rests on or near the raised knee.",
+  "trousers": "Light, not solid black. They are drawn pale grey or cream with a few fold lines, with only light shading in the creases. The scan does not show them as black.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p115-02.png",
+  "page": 115,
+  "panel": 2,
+  "scan_box": [
+   1206,
+   1207,
+   2058,
+   2275
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Sitting on the porch step with a mug, glasses, Calvin in front ('WHERE DOES THE SUN GO')",
+  "verified": true,
+  "legs": "Dad sits on the porch step and leans back, with his torso at a slant, in a three-quarter view from the left. His thighs run down and to the right, with the knees bent and the lower legs dropping to the step below. A rounded knee and thigh mass sits in front of the torso, and the bent leg goes down to a light, flat-soled sneaker at the lower right. The sneaker is large, pale and low-profile, with a visible sole edge and laces, and it rests on the step edge. His seat is on the upper step near the porch door. Calvin sits in front of him at lower left, and Calvin's body hides part of Dad's near leg. The far leg is mostly hidden behind the near one. The sun is behind Dad on the right. The legs are drawn fairly large and clearly, but the near thigh and the knee overlap with Calvin and the step lines.",
+  "trousers": "Light, pale grey or white with only line-work and shading folds, not solid black. His shirt is lighter with a collar and short sleeves, and the sleeve is clear on the arm holding the mug.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p115-03.png",
+  "page": 115,
+  "panel": 3,
+  "scan_box": [
+   2839,
+   1184,
+   3502,
+   2322
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Sitting on the step, glasses, Calvin at left ('THAT'S WHY THE ROCKS THERE ARE SO RED')",
+  "verified": true,
+  "legs": "Dad sits on the step at the right of the panel, cropped by the panel edge. His head is at upper right with glasses and closed eyes, and he holds a mug up to his mouth. His thigh runs forward toward the viewer to a large raised bent knee at lower right (about x 0.91-0.97, y 0.38-0.45 of the page). The trouser leg from knee to hip is drawn as light fabric with a few fold lines and is not black. The lower legs and shoes are cropped by or hidden at the bottom and right panel edges, so there are no usable feet. Calvin sits at lower left, facing front. Dad's seat sits behind and above Calvin, but the step itself is only faintly indicated.",
+  "trousers": "Light, almost white with a few fold lines. Not solid black.",
+  "useful_for": [
+   "sitting_legs",
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p115-04.png",
+  "page": 115,
+  "panel": 4,
+  "scan_box": [
+   106,
+   2507,
+   603,
+   3390
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Sitting on the step, glasses, Calvin at left ('DON'T THE PEOPLE GET BURNED UP?')",
+  "verified": true,
+  "legs": "Dad sits on a low porch step, drawn from the front and slightly above, with his torso turned toward the left. His near thigh/knee is a big rounded light-grey bulge that rises toward the viewer at the centre-right. The shin drops steeply from the knee to a flat light sneaker at the bottom, about x=0.11-0.15 and y=0.69-0.70, planted on the lower step. The second foot is hidden behind the knee. His seat is hidden behind Calvin and the knee. There is a lot of loose fabric folding on the trousers. The far leg is mostly occluded. Calvin sits in front of him at left. Dad holds a mug at chest height in his right hand, forearm resting on the knee.",
+  "trousers": "Light grey/white, not solid black. They are baggy, with a few fold lines, and drawn as open light shapes with a dark outline.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p115-05.png",
+  "page": 115,
+  "panel": 5,
+  "scan_box": [
+   830,
+   2270,
+   2292,
+   3352
+  ],
+  "pose": "sitting_floor",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated and pointing, glasses, dark shading, Calvin at left ('DOESN'T THE SUN CRUSH THE WHOLE STATE')",
+  "verified": false
+ },
+ {
+  "file": "crops/p115-06.png",
+  "page": 115,
+  "panel": 6,
+  "scan_box": [
+   2484,
+   2414,
+   3229,
+   3343
+  ],
+  "pose": "sitting_floor",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated on the step, glasses, Calvin at left ('I THOUGHT I READ THAT THE SUN WAS REALLY BIG')",
+  "verified": true,
+  "legs": "Dad sits on the porch step in three-quarter view, facing left toward Calvin. His near knee is raised high and pushed out to the right as a big rounded bulge. The thigh runs from the seat up and right to that knee, and the shin drops back down and left. The far leg is mostly hidden behind it. His feet are at the bottom edge and low on the step, and are small and partly cropped. He holds a mug in his right hand at chest level. The lower legs and feet are small and unclear in this panel.",
+  "trousers": "Light, pale grey or white with soft fold lines. They are not solid black. Only the far-side shadow is darker.",
+  "useful_for": [
+   "sitting_legs",
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p115-07.png",
+  "page": 115,
+  "panel": 7,
+  "scan_box": [
+   461,
+   3343,
+   1348,
+   4435
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated on the step at right, glasses, Calvin at left ('SO HOW DOES THE SUN RISE IN THE EAST')",
+  "verified": true,
+  "legs": "Dad sits on the raised step/stoop at right, facing left toward Calvin, in a three-quarter view from the front-left. His torso leans forward and he hunches over his lap, with both hands clasped or fiddling at the knee. His near thigh runs forward and toward the viewer from the seat, and the knee is drawn bent and raised, high and bulky in front of his belly. The shin drops steeply from that knee to a shoe that points right and down at the bottom right, on the step edge or just below it, with a large white-ish sneaker sole. A second leg is mostly hidden behind the first, with a foot peeking out lower left near the mug, next to Calvin. Fold lines and baggy cloth show at the knee and thigh. The seat is on the stoop edge and the legs fold forward and down at roughly 90 degrees. This is the same sitting-on-stoop pose as panels 2 to 6, drawn slightly from the front-left and foreshortened.",
+  "trousers": "Light, not black: pale or white-ish baggy trousers with fold lines and thin outlines, with some shading around the folds. The shoes are light sneakers with white soles.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p116-01.png",
+  "page": 116,
+  "panel": 1,
+  "scan_box": [
+   34,
+   274,
+   715,
+   1416
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Seated in an armchair reading a newspaper, glasses, Calvin standing at right ('I PERFORMED A SCIENTIFIC EXPERIMENT')",
+  "verified": true,
+  "legs": "Dad sits well back in a floral-upholstered armchair, seen in side/three-quarter view facing right toward Calvin. His legs are crossed: one thigh runs roughly horizontally from the seat toward the right as a solid black mass, with the knee at its right end, and the other leg tucks beneath it. The shins drop down and slightly back toward the lower right, ending in light, roughly oval shoes with a visible sole and heel resting at the bottom of the panel, near Calvin's feet. The seat cushion and chair arm sit just behind his hip, and the patterned chair covers some of the thigh and lower leg on the left. Overall the legs are fairly small, compressed and partly overlapped by the chair, but the crossed-knee silhouette is readable.",
+  "trousers": "Solid black, filled with no pattern or folds beyond a few thin white highlight lines. They contrast strongly with the white floral chair.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p116-03.png",
+  "page": 116,
+  "panel": 3,
+  "scan_box": [
+   1670,
+   319,
+   2522,
+   1508
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Bent over pointing at Calvin, glasses ('WHAT DID YOU FIND OUT?')",
+  "verified": true,
+  "legs": "Not bending or pointing. Dad is seated in the floral armchair, as in panel 1, shown in a close, cropped view. His torso is upright or slightly leaning, with his face in profile and glasses on. His arm rests on the chair arm, and the hand hangs limp over the front edge near the bottom left. Only a large black thigh and knee mass is visible at the bottom right, running toward the right under the speech balloon. The shins and feet are cut off by the panel border. Calvin stands at lower right, looking up.",
+  "trousers": "Solid dark/black trousers. The thigh and knee form one large flat black shape with no visible folds or detail.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p116-04.png",
+  "page": 116,
+  "panel": 4,
+  "scan_box": [
+   2522,
+   45,
+   3034,
+   1462
+  ],
+  "pose": "bending",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Bent over at left, glasses, Calvin at right ('LET ME KNOW WHEN YOU GET A NEW ONE')",
+  "verified": true,
+  "legs": "Dad leans forward from the hips at the left of the panel, holding a book or papers against his chest. Seen from the side, facing right toward Calvin. His dark trousers run from a short-sleeved patterned shirt hem down to a bent knee that juts forward and right, then a shin angles back down and left to shoes at the bottom left of the panel. There is no seat; he is standing and stooping. Floral chair upholstery from the earlier panels may show near his lower body. The foot detail is small and partly cropped by the panel edge. This is a rough reading of a low-resolution scan.",
+  "trousers": "Mostly solid black or very dark, with only a little pattern near the hem and cuffs where the shirt or chair overlaps. They read as dark solid trousers.",
+  "useful_for": [
+   "crouching_legs",
+   "sleeves",
+   "shoes"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p116-09.png",
+  "page": 116,
+  "panel": 9,
+  "scan_box": [
+   74,
+   3157,
+   913,
+   4250
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso"
+  ],
+  "size": "small",
+  "notes": "Only partly visible through the van window at right, probably the driver; low confidence",
+  "verified": false
+ },
+ {
+  "file": "crops/p116-10.png",
+  "page": 116,
+  "panel": 10,
+  "scan_box": [
+   876,
+   3157,
+   1690,
+   4250
+  ],
+  "pose": "other",
+  "facing": "unclear",
+  "visible": [
+   "head"
+  ],
+  "size": "small",
+  "notes": "Only the head is visible at the top right of the van, glasses; low confidence",
+  "verified": false
+ },
+ {
+  "file": "crops/p116-11.png",
+  "page": 116,
+  "panel": 11,
+  "scan_box": [
+   1653,
+   3157,
+   2478,
+   4250
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Standing beside Mom in a striped shirt, glasses ('IT'S CERTAINLY BEEN A WHILE SINCE WE'VE BEEN HERE')",
+  "verified": false
+ },
+ {
+  "file": "crops/p116-12.png",
+  "page": 116,
+  "panel": 12,
+  "scan_box": [
+   2447,
+   3157,
+   3286,
+   4250
+  ],
+  "pose": "walking",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Walking at left in a striped shirt, glasses ('AT THE MUSEUM'S REQUEST, YES')",
+  "verified": false
+ },
+ {
+  "file": "crops/p117-04.png",
+  "page": 117,
+  "panel": 4,
+  "scan_box": [
+   2558,
+   315,
+   3438,
+   1486
+  ],
+  "pose": "walking",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dark suit and tie, round glasses, walking behind Mom at right ('LOOK, TRY NOT TO EMBARRASS ME')",
+  "verified": false
+ },
+ {
+  "file": "crops/p122-07.png",
+  "page": 122,
+  "panel": 7,
+  "scan_box": [
+   2352,
+   3427,
+   3170,
+   4341
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Bald on top with side tufts, round glasses, white shirt and shorts (not dark trousers), sneakers. Grabbing Calvin from behind and shouting 'THE HAMBURGERS ARE COOKING! NOW GET OFF ME!' Grill at right. Bbox is approximate.",
+  "verified": false
+ },
+ {
+  "file": "crops/p123-05.png",
+  "page": 123,
+  "panel": 5,
+  "scan_box": [
+   0,
+   1950,
+   496,
+   2972
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Seated on bed edge reading a book aloud to Calvin, who lies in bed at right. Round glasses, receding hair. Bbox approximate; figure is cut off by the left page edge.",
+  "verified": true,
+  "legs": "Dad sits on the edge of Calvin's bed, seen in side/three-quarter profile facing left, torso upright and slightly leaning toward the book. His thighs run toward the left page edge as a solid black mass under the book, with the knee cut off by the page edge and panel border, so no clear knee outline is visible. The seat/hip is at the bed edge just left of Calvin, under the shirt hem. Below the thigh, a rounded light shoe or shoe-toe shape (outlined white oval with a sole line) sits at the lower left, resting near the floor beside the bed ruffle/valance, partly cropped by the left edge. Shin and lower leg are mostly cropped or merged into black fill. Only the thigh and one shoe are readable. The legs are not crossed and not tucked.",
+  "trousers": "Solid black, filled as a large dark mass from hip to knee at lower left, with no fold lines inside.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p123-06.png",
+  "page": 123,
+  "panel": 6,
+  "scan_box": [
+   816,
+   1904,
+   1348,
+   2925
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Waist-up, round glasses, looking down toward Calvin at right who asks 'WHAT'S THE MATTER?' Bbox approximate.",
+  "verified": false
+ },
+ {
+  "file": "crops/p123-08.png",
+  "page": 123,
+  "panel": 8,
+  "scan_box": [
+   2502,
+   2182,
+   2910,
+   2879
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated on bed edge in a shirt, round glasses, next to Calvin at right asking 'HAS THIS BOOK BEEN MADE INTO A MOVIE?' Bbox approximate.",
+  "verified": true,
+  "legs": "Not visible. Only head, shoulders and upper torso are drawn, cut off at the bottom of the panel/bed edge. No lap, knees, seat or feet appear in panel 8. The earlier 'seated on bed edge' reading comes from panel 5, where legs are only partly shown.",
+  "trousers": "Not visible in panel 8 (torso is cropped at the waist). His shirt is a light, plain long-sleeved shirt.",
+  "useful_for": [
+   "none"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p127-05.png",
+  "page": 127,
+  "panel": 5,
+  "scan_box": [
+   301,
+   1811,
+   958,
+   2693
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated in a patterned armchair at right, round glasses, answering Calvin's 'HEY, DAD, I'M INVENTING A ROBOT' with 'YOU INVENTED A ROBOT?'. Calvin stands at left. Bbox approximate.",
+  "verified": true,
+  "legs": "Dad sits deep in a floral armchair, torso upright and angled three-quarter toward the left (Calvin). His legs are seen from the side and are only partly drawn: the thigh runs from the hip at the chair seat out to the left as a short dark wedge, with the knee bent roughly 90 degrees at the lower right of the lap and the shin dropping behind or below the chair's front edge. His forearm and notepad rest on the lap and cover much of the thigh. The lower legs and feet are mostly hidden or cropped by the panel's lower area and the armchair's patterned arm and base, so no clear shoes are visible. The knee and thigh read as one dark mass, not articulated.",
+  "trousers": "Dark, essentially solid black with no visible folds or pattern, contrasting with his light short-sleeved shirt and the busy floral chair.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p127-07.png",
+  "page": 127,
+  "panel": 7,
+  "scan_box": [
+   1703,
+   1811,
+   2271,
+   2739
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated in patterned armchair in dark trousers, round glasses, hands together, saying 'THAT'S THE PROBLEM. WE HAVEN'T FIGURED OUT HOW TO MAKE IT DO WHAT WE WANT.' Calvin and robot at right. Bbox approximate.",
+  "verified": true,
+  "legs": "Dad sits in a floral-patterned armchair, seen from the side and slightly front, cropped by the panel's left edge. His thigh runs forward from the seat, with the knee bent and pointing out toward the lower right where Calvin stands. The lower leg is mostly hidden or cropped by the bottom of the panel. The legs are a large dark mass in the lower left of the panel, and no individual shoe is clearly drawn in this panel. The seat cushion sits below him with floral pattern around it. This is a coarse scan with little leg detail.",
+  "trousers": "Dark, essentially solid black with little or no fold detail visible, at least in the scan.",
+  "useful_for": [
+   "sitting_legs",
+   "sleeves"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p127-08.png",
+  "page": 127,
+  "panel": 8,
+  "scan_box": [
+   2537,
+   1904,
+   3229,
+   2856
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated in patterned armchair reading a book, round glasses, speaking 'YOUR MOM AND I GOT THE SAME RESULTS AFTER WORKING ON YOU FOR SIX YEARS.' Calvin at right. Bbox approximate.",
+  "verified": true,
+  "legs": "Confirmed as Dad (glasses, big round nose, tuft of hair, short-sleeved patterned shirt with collar). He sits back in a floral armchair holding an open book in both hands at chest level, in a three-quarter view facing left. His legs are crossed: one knee is raised and pushed toward the viewer at centre-right, with the other leg's shin/foot hanging at the right edge. The knee and thigh are a big dark mass, and the rounded pale shape just below it (around x 0.80-0.84, y 0.55-0.57) is his shoe's side/sole, foreshortened. A dark lower leg drops down to the floor at the bottom right, behind and below Dad. The seat is partly hidden by the chair cushion, and the patterned chair arm and cushion fill the bottom left. The scan is low resolution and the legs merge into black blobs, so the feet and the leg overlap are hard to read.",
+  "trousers": "Solid black/dark trousers with no pattern or highlights, forming a single large dark mass across the lap and lower leg.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p129-12.png",
+  "page": 129,
+  "panel": 12,
+  "scan_box": [
+   2803,
+   3483,
+   3442,
+   4318
+  ],
+  "pose": "other",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sitting up in bed in pajama top at right, round glasses, bald with side tufts, saying 'I'M GOING TO THE OFFICE AND GET SOME SLEEP.' Mom at left in bed. Bbox approximate.",
+  "verified": false
+ },
+ {
+  "file": "crops/p131-01.png",
+  "page": 131,
+  "panel": 1,
+  "scan_box": [
+   46,
+   3274,
+   933,
+   4416
+  ],
+  "pose": "other",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Dad seated on bed edge at left, striped shirt and glasses, talking to Calvin about the report card",
+  "verified": false
+ },
+ {
+  "file": "crops/p131-02.png",
+  "page": 131,
+  "panel": 2,
+  "scan_box": [
+   897,
+   3274,
+   1770,
+   4416
+  ],
+  "pose": "other",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Dad close-up, striped shirt, glasses, gesturing with open hand",
+  "verified": false
+ },
+ {
+  "file": "crops/p131-03.png",
+  "page": 131,
+  "panel": 3,
+  "scan_box": [
+   1731,
+   3274,
+   2601,
+   4416
+  ],
+  "pose": "other",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Dad at left in striped shirt and glasses, leaning toward Calvin on the bed",
+  "verified": false
+ },
+ {
+  "file": "crops/p131-04.png",
+  "page": 131,
+  "panel": 4,
+  "scan_box": [
+   2565,
+   3274,
+   3463,
+   4416
+  ],
+  "pose": "other",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Dad seated at left in striped shirt and glasses, Calvin lying on bed at right",
+  "verified": false
+ },
+ {
+  "file": "crops/p133-01.png",
+  "page": 133,
+  "panel": 1,
+  "scan_box": [
+   2313,
+   3366,
+   3438,
+   4430
+  ],
+  "pose": "sitting_chair",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "small",
+  "notes": "Dad at the dinner table at far left of the panel, glasses, facing Mom; only head and shoulders visible, Calvin at far right edge",
+  "verified": false
+ },
+ {
+  "file": "crops/p137-01.png",
+  "page": 137,
+  "panel": 1,
+  "scan_box": [
+   124,
+   3599,
+   993,
+   4435
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Dad in patterned armchair reading a book, glasses, shirt and dark trousers; Calvin standing at left asking about squid",
+  "verified": true,
+  "legs": "Dad sits well back in a polka-dot armchair, torso leaning back and turned slightly toward Calvin at left. Only the thigh/knee is visible: a heavy solid-black trouser mass runs from his hip at lower right toward the lower left. It is one foreshortened thigh and knee pointing toward the viewer and Calvin, with the open book propped on it. The lower leg, shin and feet are cut off by the bottom panel border, so no shoes or feet are visible. The chair's polka-dot cushion and arm sit above and behind the thigh. It is not crossed, and only one leg mass is readable.",
+  "trousers": "Solid black / very dark, filled almost entirely black with only a faint highlight line along the thigh",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p137-02.png",
+  "page": 137,
+  "panel": 2,
+  "scan_box": [
+   1171,
+   3390,
+   1809,
+   4318
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes",
+   "seat"
+  ],
+  "size": "large",
+  "notes": "Dad in armchair reading, glasses, shirt, dark trousers; Calvin standing at left saying they are gross",
+  "verified": true,
+  "legs": "Dad is seated well back in a polka-dot armchair, torso reclined and seen three-quarter from the front-left. His thighs run from the seat down and to the right as solid black shapes, with the knee of the near leg pushed forward and up toward the lower right of the panel. The shins drop from the knees towards the panel's right edge and bottom, so they are foreshortened. The feet and shoes are small, mostly hidden or cropped at the lower right behind the chair front and the panel border. The legs are loosely together, slightly crossed or stacked, not tucked under him. A book rests on his lap and thigh, held in both hands. This is a relaxed lounging seat with a slight recline, not upright. I could not zoom in (no PIL available), so I judged this from the full-page view. The exact shoe and ankle detail is uncertain.",
+  "trousers": "Solid black, drawn as a flat dark mass with no visible folds or highlights except a few thin white fold lines at the knee.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p137-03.png",
+  "page": 137,
+  "panel": 3,
+  "scan_box": [
+   1863,
+   3204,
+   2626,
+   4388
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad in armchair, glasses, dropping or raising a book, legs and shoes visible; no speech bubble",
+  "verified": true,
+  "legs": "Dad sits well back in a polka-dot armchair, facing the viewer in a three-quarter view. His legs are crossed, with the near knee raised and pointing toward the lower right. The thigh runs forward and down from the seat. The crossed lower leg and shin sweep down and to the right, ending in shoes at the lower right near the panel's bottom-right corner, with the toes pointing right. The other leg is mostly hidden behind the crossed one. The seat is partly hidden by his thighs and the chair cushion. The legs are drawn as one large dark mass, with a couple of thin white fold highlights at the knee. He is leaning back and holding a dark book in his right hand while raising or dropping his glasses with the other. The foot and shoe detail is small and sits close to the panel edge, so it is hard to read.",
+  "trousers": "Solid black, with only a few thin white fold lines at the knee and shin.",
+  "useful_for": [
+   "sitting_legs",
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p137-04.png",
+  "page": 137,
+  "panel": 4,
+  "scan_box": [
+   2626,
+   3436,
+   3371,
+   4388
+  ],
+  "pose": "bending",
+  "facing": "unclear",
+  "visible": [
+   "torso",
+   "legs",
+   "feet_shoes",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Dad mostly hidden behind Calvin, who is climbing over the armchair back; Dad's legs, shoes and part of torso visible",
+  "verified": true,
+  "legs": "Not sitting; the first pass was wrong. Dad is standing and bent forward at the waist, seen from behind and slightly from the left. He faces right toward the polka-dot armchair and Calvin, who is mostly hidden behind or over the chair back. Both legs are planted wide apart. The left leg (viewer's left) is straight and heavy, running down to a foot at the lower left. The right leg is bent at the knee and slopes down to the right to a second foot. The two legs form a wide inverted-V stance under the seat. The seat sticks out to the left of the chair. The trousers are a solid black mass with only a few thin white crease or fold lines at the knees and thighs. Both shoes are visible at the bottom: low, rounded sneaker-like shoes with white outlined soles and a laced or toe-cap line. They sit flat on a ground line at the bottom of the panel. One hand rests on the lower back or hip on the left, with the elbow out, while the other arm reaches over the chair back with a rolled or bunched sleeve.",
+  "trousers": "Solid black, essentially filled dark with a few thin white crease lines; no pattern. The shirt is a light grey/white short-sleeved shirt, with bunched sleeve cuffs on both arms.",
+  "useful_for": [
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p139-02.png",
+  "page": 139,
+  "panel": 2,
+  "scan_box": [
+   912,
+   297,
+   1785,
+   1453
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad at left in shirt, tie and glasses, facing Mom who asks about her shoes",
+  "verified": false
+ },
+ {
+  "file": "crops/p139-03.png",
+  "page": 139,
+  "panel": 3,
+  "scan_box": [
+   1756,
+   297,
+   2619,
+   1453
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad standing at left in shirt, tie and glasses, adjusting his tie while Mom searches the bed",
+  "verified": false
+ },
+ {
+  "file": "crops/p139-03.png",
+  "page": 139,
+  "panel": 3,
+  "scan_box": [
+   1756,
+   1764,
+   2619,
+   2921
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad at left in tie and glasses, standing at the front door with Rosalyn outside (row 2 panel 3)",
+  "verified": false
+ },
+ {
+  "file": "crops/p139-04.png",
+  "page": 139,
+  "panel": 4,
+  "scan_box": [
+   2580,
+   1764,
+   3463,
+   2921
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Dad in tie and glasses with arms crossed, questioning Calvin; Rosalyn at right",
+  "verified": false
+ },
+ {
+  "file": "crops/p141-01.png",
+  "page": 141,
+  "panel": 1,
+  "scan_box": [
+   28,
+   3260,
+   1763,
+   4397
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Dad at right side of restaurant table in dark suit and glasses, sitting across from Mom with wine glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p142-04.png",
+  "page": 142,
+  "panel": 4,
+  "scan_box": [
+   2416,
+   292,
+   3272,
+   1430
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad in the middle of the group with glasses, dark shirt and trousers, standing between Rosalyn and Mom while Calvin apologizes",
+  "verified": false
+ },
+ {
+  "file": "crops/p142-04.png",
+  "page": 142,
+  "panel": 4,
+  "scan_box": [
+   2205,
+   1741,
+   3272,
+   2847
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Dad in tie and glasses, facing Rosalyn at left, saying sorry and mentioning an extra five dollars",
+  "verified": false
+ },
+ {
+  "file": "crops/p148-01.png",
+  "page": 148,
+  "panel": 1,
+  "scan_box": [
+   122,
+   91,
+   978,
+   1462
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated on edge of Calvin's bed at right, talking to Calvin ('I've got an idea, Dad'). Striped shirt, dark trousers, round glasses.",
+  "verified": false
+ },
+ {
+  "file": "crops/p148-02.png",
+  "page": 148,
+  "panel": 2,
+  "scan_box": [
+   954,
+   91,
+   1779,
+   1462
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [],
+  "size": "medium",
+  "notes": "Dad is NOT drawn here, only his speech bubble ('Maybe I'd get better grades...') is shown over Calvin in bed.",
+  "verified": false
+ },
+ {
+  "file": "crops/p148-03.png",
+  "page": 148,
+  "panel": 3,
+  "scan_box": [
+   1759,
+   91,
+   2611,
+   1462
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Seated on bed edge with hands on knees, leaning toward Calvin ('I'm not going to bribe you'). Striped shirt, dark trousers.",
+  "verified": false
+ },
+ {
+  "file": "crops/p151-01.png",
+  "page": 151,
+  "panel": 1,
+  "scan_box": [
+   1703,
+   92,
+   3052,
+   1253
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "small",
+  "notes": "Banner splash: Dad seated on back step at top right with a coffee mug, saying 'Wow, honey, you're missing a beautiful sunset'. Small in frame.",
+  "verified": true,
+  "legs": "Dad sits on a low step or ledge at the right of the banner panel, seen in side and three-quarter view and facing left. His thigh runs forward (left) from the seat, and a bent knee shows near the left of the stoop with the lower leg dropping down to the step. The light, tan-gray trousers look baggy, with a few fold lines at the knee and thigh. The feet are small and mostly hidden or cropped at the bottom edge by the bush and the step, so the shoes are not readable. The seat, knee and lower-leg arrangement is small and not very detailed.",
+  "trousers": "Light tan or gray, not solid black. They are drawn with mid-gray tone and fold lines. His top is a dark, near-black sweatshirt or sweater.",
+  "useful_for": [
+   "sitting_legs"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p151-03.png",
+  "page": 151,
+  "panel": 3,
+  "scan_box": [
+   1632,
+   1300,
+   2342,
+   2275
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated on back step with mug, answering Calvin ('Dad, how come old photographs...'). Calvin stands at left.",
+  "verified": true,
+  "legs": "Dad sits on the back step or ledge in three-quarter side view, facing left toward Calvin. The seat is at the left of his body, and his light trousers run from there to the right as a thigh. A knee is bent and pushed forward toward the right of the panel. His shin and foot are crossed or tucked at the lower right. The foot is a dark shoe, and I judge it to be the near foot resting on the step edge. The second leg is mostly hidden behind the first. His torso is a dark sweater leaning slightly forward, and one forearm holds a mug at chest height. The step is a pale block under him. I did not zoom in, so the exact feet arrangement is my best reading from the full-page view.",
+  "trousers": "Light, not solid black: pale khaki-grey with only a few fold lines. The shirt or sweater above is the dark solid. The shoe is dark.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p151-04.png",
+  "page": 151,
+  "panel": 4,
+  "scan_box": [
+   2516,
+   1179,
+   3407,
+   2289
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "large",
+  "notes": "Close-up of Dad's head and shoulders, glasses and large nose visible ('Sure they did...'). Hand at bottom right.",
+  "verified": false
+ },
+ {
+  "file": "crops/p151-05.png",
+  "page": 151,
+  "panel": 5,
+  "scan_box": [
+   354,
+   2414,
+   1100,
+   3343
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Seated on steps with Calvin, gesturing ('Yep. The world didn't turn color...'). Striped shirt, dark trousers.",
+  "verified": true,
+  "legs": "Dad sits on the edge of a low step or ledge, seen from the front and slightly to the side, facing left towards Calvin. Only the thighs and knees are drawn. The thigh comes forward and to the right from the hip, with the knee at roughly (240,960) in the page image. The trouser leg is short or rides up, so the leg is a pale shape without a visible shin. The lower legs and shoes are cut off by the bottom panel border or hidden behind the step, so there are no feet or shoes. His forearm rests on the knee while he holds a mug at about chest height. Calvin stands to the left, on a plate-like patch on the ground.",
+  "trousers": "Light, a pale tan or grey with a few fold lines, not solid black. The dark shape is his sweater or shirt on the upper body. The first pass description of dark trousers is wrong for this panel.",
+  "useful_for": [
+   "sitting_legs",
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p151-06.png",
+  "page": 151,
+  "panel": 6,
+  "scan_box": [
+   1369,
+   2275,
+   2274,
+   3366
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Profile of Dad sipping from a mug ('Well, truth is stranger than fiction').",
+  "verified": false
+ },
+ {
+  "file": "crops/p151-07.png",
+  "page": 151,
+  "panel": 7,
+  "scan_box": [
+   2253,
+   2275,
+   3407,
+   3366
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "large",
+  "notes": "Dad at right in profile, facing Calvin ('Not necessarily. A lot of great artists were insane').",
+  "verified": false
+ },
+ {
+  "file": "crops/p151-08.png",
+  "page": 151,
+  "panel": 8,
+  "scan_box": [
+   14,
+   3376,
+   1377,
+   4481
+  ],
+  "pose": "sitting_floor",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Dad seated, hand to his face, at right of panel ('But...but how could they have painted in color anyway?').",
+  "verified": false
+ },
+ {
+  "file": "crops/p151-09.png",
+  "page": 151,
+  "panel": 9,
+  "scan_box": [
+   1330,
+   3376,
+   2193,
+   4481
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Dad seated with mug, looking down at Calvin ('So why didn't old black and white photos turn color too?').",
+  "verified": false
+ },
+ {
+  "file": "crops/p152-01.png",
+  "page": 152,
+  "panel": 1,
+  "scan_box": [
+   272,
+   297,
+   954,
+   1485
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated in armchair reading a newspaper, Calvin standing at left.",
+  "verified": true,
+  "legs": "Dad sits well back in a polka-dot armchair in near side profile, body facing left toward Calvin, holding a small book or paper in both hands at chest height. His legs are crossed: one thigh runs from the seat out to the right, and the other leg lies over it, so the knee forms a bent, angular peak at the right-centre of the figure. The shin and foot then drop down to the floor at the lower right, with a shoe resting flat on a rug or floor oval at the panel's bottom right. The solid dark trouser mass has few fold lines, and one shoe is visible with the lower leg partly hidden by the chair's skirt and arm. The seat is hidden behind his thigh and the chair cushion. The pose is shown in a calm, relaxed way.",
+  "trousers": "Solid black, essentially filled flat dark with only a few thin white highlight or fold lines at the knee.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 3
+ },
+ {
+  "file": "crops/p152-02.png",
+  "page": 152,
+  "panel": 2,
+  "scan_box": [
+   1142,
+   365,
+   1738,
+   1393
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated in armchair still reading, Calvin walking away at left.",
+  "verified": true,
+  "legs": "Dad sits well back in a polka-dotted armchair, seen in three-quarter view facing left toward his book. His legs are crossed: one thigh runs from the seat out to the right and the other leg crosses over it at the knee. The raised knee is a rounded bump about level with his lap, and the shin drops down to the right of the chair front. The foot appears as a dark shoe low at the bottom right, near the chair's base and the panel edge. The legs are chunky dark masses with little interior detail. Calvin stands at left with arms out, not walking away.",
+  "trousers": "Solid black, with essentially no fold lines or texture. The legs read as flat black shapes.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p152-03.png",
+  "page": 152,
+  "panel": 3,
+  "scan_box": [
+   1663,
+   310,
+   2491,
+   1462
+  ],
+  "pose": "other",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad flipped up out of the armchair with legs and feet in the air, Calvin knocked down at bottom left.",
+  "verified": false
+ },
+ {
+  "file": "crops/p152-04.png",
+  "page": 152,
+  "panel": 4,
+  "scan_box": [
+   2590,
+   319,
+   3409,
+   1508
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Dad leaning forward in the armchair toward Calvin ('Pay attention to me').",
+  "verified": true,
+  "legs": "Dad sits in the polka-dot armchair, leaning forward and turned toward Calvin, who is at lower left. His torso and head are large and clear (round glasses, big nose, receding hair, striped short-sleeved shirt with a visible arm and a book in his hands). His legs are mostly cut off by the right edge of the panel and the page. Only a solid black thigh and knee show, running right and slightly up from the seat. A shin and shoe appear tiny at the bottom right edge, partly clipped. The legs are not drawn clearly enough to show how the knees, seat and feet are arranged.",
+  "trousers": "Solid black, with little or no fold detail visible, and clipped by the panel edge.",
+  "useful_for": [
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p157-05.png",
+  "page": 157,
+  "panel": 5,
+  "scan_box": [
+   0,
+   1811,
+   922,
+   2972
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "large",
+  "notes": "Dad at his desk on the phone ('HELLO?'), striped tie, shirt sleeves, round glasses, receding hair",
+  "verified": false
+ },
+ {
+  "file": "crops/p157-06.png",
+  "page": 157,
+  "panel": 6,
+  "scan_box": [
+   887,
+   1811,
+   1739,
+   2972
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "large",
+  "notes": "Dad on the phone at desk, saying 'I AM at school'; striped tie, glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p157-07.png",
+  "page": 157,
+  "panel": 7,
+  "scan_box": [
+   1703,
+   1811,
+   2590,
+   2972
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "large",
+  "notes": "Dad leaning over desk with phone, 'ARE YOU ALL RIGHT?'; glasses, tie. Facing direction is approximate",
+  "verified": false
+ },
+ {
+  "file": "crops/p167-01.png",
+  "page": 167,
+  "panel": 1,
+  "scan_box": [
+   0,
+   376,
+   872,
+   1504
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Dad bent over at right side of panel, glasses, striped shirt, talking to Calvin ('WHEN ARE WE GOING TO GET A CHRISTMAS TREE?')",
+  "verified": false
+ },
+ {
+  "file": "crops/p167-02.png",
+  "page": 167,
+  "panel": 2,
+  "scan_box": [
+   872,
+   376,
+   1744,
+   1504
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Dad at lower right, glasses and shirt, answering 'SURE. WE CAN JUST GO UP THE STREET...'; partly cropped",
+  "verified": false
+ },
+ {
+  "file": "crops/p167-03.png",
+  "page": 167,
+  "panel": 3,
+  "scan_box": [
+   1674,
+   376,
+   2546,
+   1504
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Dad at right kneeling or bent over, glasses, striped shirt, reacting to Calvin ('TINSEL ON THE TREE'); partly cropped",
+  "verified": false
+ },
+ {
+  "file": "crops/p168-01.png",
+  "page": 168,
+  "panel": 1,
+  "scan_box": [
+   460,
+   1233,
+   1261,
+   2275
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad in armchair reading beside a lamp, sweater, dark trousers, glasses; Calvin asks him to fax the Christmas list",
+  "verified": true,
+  "legs": "Dad sits deep in an armchair on the right of the panel, in near side profile facing left. His back is against the chair and his thighs run horizontally forward (left) from the seat, with a bent knee at the front and the lower legs dropping nearly vertically to the floor. The two dark legs overlap and read as one stacked mass, so one leg may be crossed over the other. The feet are big, pale, rounded shoes with dark soles at the bottom left, pointing left and resting on the floor in front of the chair. The arm of the chair hides some of the seat and hip. Calvin's papers and the chair edge partly overlap the near legs. The legs are drawn fairly large, but the knee and shin overlap is hard to resolve at this scan resolution.",
+  "trousers": "Dark, essentially solid black with only a few thin white highlight lines, plus slightly lighter edges at the knee. They are not light, shorts or pyjamas.",
+  "useful_for": [
+   "sitting_legs",
+   "shoes",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p169-08.png",
+  "page": 169,
+  "panel": 8,
+  "scan_box": [
+   2511,
+   1833,
+   3383,
+   3008
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Dad at the dinner table, striped shirt, round glasses, 'HEY, I LIKE IT!'. Mom partly visible at left edge",
+  "verified": false
+ },
+ {
+  "file": "crops/p175-01.png",
+  "page": 175,
+  "panel": 1,
+  "scan_box": [
+   244,
+   611,
+   924,
+   1410
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "knees",
+   "feet_shoes",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Seated in armchair reading a paper, round glasses, large nose, patterned shirt, dark trousers; Calvin standing in front",
+  "verified": true,
+  "legs": "Not visible. Dad is cropped by the panel edge at the lap, so no knees, shins, seat or feet are drawn. He sits in a floral-patterned armchair, upper body turned toward Calvin, with a small dark book held low in his hand at the bottom right of the panel. The only lower-body hint is the chair arm and the book near his lap.",
+  "trousers": "Not visible in this panel. No trousers are drawn, so there is nothing to confirm as solid black. His shirt is a plain light sweater or shirt, not patterned (the pattern belongs to the chair).",
+  "useful_for": [
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p175-02.png",
+  "page": 175,
+  "panel": 2,
+  "scan_box": [
+   837,
+   329,
+   1744,
+   1504
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Dad in a dotted/spotted short-sleeved shirt and dark trousers, gesturing while saying 15 bucks",
+  "verified": false
+ },
+ {
+  "file": "crops/p175-03.png",
+  "page": 175,
+  "panel": 3,
+  "scan_box": [
+   1848,
+   282,
+   2476,
+   1410
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Dad seated, grinning, patterned shirt, round glasses, Dopey Dad speech",
+  "verified": true,
+  "legs": "Dad sits back in a patterned (floral) armchair, facing the viewer almost frontally. Thighs come forward from the seat toward the viewer, foreshortened, with the knees as two dark rounded masses at about the mid-lower part of the panel. Lower legs drop roughly straight down from the knees, close together, and the feet are at or just beyond the bottom edge of the panel, so shoes are barely visible or cropped. His hands rest on or near his thighs and a belt or lap line crosses his middle. Calvin stands in front at left, overlapping the chair edge but not Dad's legs. This is a front-on seated view, not a side profile.",
+  "trousers": "Solid black, filled flat ink with few or no fold lines; the chair's floral pattern contrasts against them.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p175-09.png",
+  "page": 175,
+  "panel": 9,
+  "scan_box": [
+   0,
+   3267,
+   889,
+   4418
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Tall thin Dad at left edge in sweater with glasses, asking Calvin what story he wants",
+  "verified": false
+ },
+ {
+  "file": "crops/p175-10.png",
+  "page": 175,
+  "panel": 10,
+  "scan_box": [
+   837,
+   3267,
+   1744,
+   4418
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad with round glasses and large nose, sweater and dark trousers, saying Oh no not again",
+  "verified": false
+ },
+ {
+  "file": "crops/p175-11.png",
+  "page": 175,
+  "panel": 11,
+  "scan_box": [
+   1726,
+   3713,
+   2232,
+   4418
+  ],
+  "pose": "bending",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad bending over Calvin's bed, glasses, sweater; saying C'mon we'll read a new story",
+  "verified": true,
+  "legs": "Dad is bent forward and down at the left of panel 11, in a deep crouch or stoop beside Calvin's bed. The back is hunched, the head is low with glasses and a big nose, and the sweater sleeve reaches forward toward the bookshelf. The legs are mostly hidden behind the folded torso and the panel's bottom edge. The thigh and bent knee push forward and the lower leg drops straight to the floor, with the foot tucked low. There is no clear seat, and no sitting surface is drawn. This is a squat or stoop, not kneeling on the floor. I did not manage to zoom in (the image crop failed), so the exact knee and foot arrangement is read from the full-page view and is approximate.",
+  "trousers": "Dark trousers drawn as a mostly solid black mass, with little or no fold detail.",
+  "useful_for": [
+   "crouching_legs",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p177-10.png",
+  "page": 177,
+  "panel": 10,
+  "scan_box": [
+   0,
+   3243,
+   889,
+   4418
+  ],
+  "pose": "walking",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad walking away to work in long overcoat and fedora, carrying briefcase; Calvin small in the left foreground; Dad says Yep",
+  "verified": false
+ },
+ {
+  "file": "crops/p177-11.png",
+  "page": 177,
+  "panel": 11,
+  "scan_box": [
+   819,
+   3243,
+   1744,
+   4418
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Dad in long overcoat, fedora and round glasses, smiling, saying So do I",
+  "verified": false
+ },
+ {
+  "file": "crops/p180-13.png",
+  "page": 180,
+  "panel": 13,
+  "scan_box": [
+   2522,
+   3153,
+   3409,
+   4250
+  ],
+  "pose": "bending",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Dad leaning over the window sill at right edge, cut off by the page edge, glasses and large nose visible; says Let me show you an interesting gadget",
+  "verified": false
+ },
+ {
+  "file": "crops/p186-06.png",
+  "page": 186,
+  "panel": 6,
+  "scan_box": [
+   917,
+   1800,
+   1728,
+   2911
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Dad bent over, hand on Calvin's head, glasses and tie visible. Says I DON'T WANT TO HEAR ABOUT IT. NOW MOVE!",
+  "verified": false
+ },
+ {
+  "file": "crops/p186-07.png",
+  "page": 186,
+  "panel": 7,
+  "scan_box": [
+   1718,
+   1800,
+   2549,
+   2911
+  ],
+  "pose": "walking",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad walking away with a grimace, glasses and dark trousers. Says OOH, SOME DAYS THAT KID OF MINE...",
+  "verified": false
+ },
+ {
+  "file": "crops/p186-09.png",
+  "page": 186,
+  "panel": 9,
+  "scan_box": [
+   146,
+   3217,
+   968,
+   4323
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad home from work: round glasses, tie, white shirt, dark trousers, suit jacket over arm. Says I'M HOME!",
+  "verified": false
+ },
+ {
+  "file": "crops/p186-10.png",
+  "page": 186,
+  "panel": 10,
+  "scan_box": [
+   920,
+   3217,
+   1728,
+   4323
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Dad at the front door, back to viewer, turned toward Calvin. Says HI, CALVIN.",
+  "verified": false
+ },
+ {
+  "file": "crops/p186-11.png",
+  "page": 186,
+  "panel": 11,
+  "scan_box": [
+   1718,
+   3217,
+   2549,
+   4323
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Dad at the door in profile with glasses, speaking to Calvin. Says I SAID HI.",
+  "verified": false
+ },
+ {
+  "file": "crops/p186-12.png",
+  "page": 186,
+  "panel": 12,
+  "scan_box": [
+   2515,
+   3217,
+   3361,
+   4323
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Dad at the door, glasses, speaking to Calvin. Says KNOCK IT OFF, CALVIN. Also says DEAR, HAVE A TALK WITH HIM.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-02.png",
+  "page": 191,
+  "panel": 2,
+  "scan_box": [
+   1137,
+   1226,
+   1859,
+   2364
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad at a desk writing, round glasses, light shirt.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-03.png",
+  "page": 191,
+  "panel": 3,
+  "scan_box": [
+   1855,
+   1226,
+   2657,
+   2364
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad at a desk, Calvin under the desk at his feet, glasses visible.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-04.png",
+  "page": 191,
+  "panel": 4,
+  "scan_box": [
+   2647,
+   1226,
+   3379,
+   2364
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad seated at the desk turned toward Calvin, glasses and shirt visible.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-05.png",
+  "page": 191,
+  "panel": 5,
+  "scan_box": [
+   0,
+   2345,
+   680,
+   3474
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad seated at desk with arms spread, Calvin small at bottom-left.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-06.png",
+  "page": 191,
+  "panel": 6,
+  "scan_box": [
+   680,
+   2345,
+   1506,
+   3474
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad resting his chin on one hand at the desk, round glasses visible.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-07.png",
+  "page": 191,
+  "panel": 7,
+  "scan_box": [
+   1503,
+   2345,
+   2239,
+   3474
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad smiling and looking down at papers, glasses visible.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-08.png",
+  "page": 191,
+  "panel": 8,
+  "scan_box": [
+   2221,
+   2345,
+   2776,
+   3474
+  ],
+  "pose": "sitting_chair",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad leaning back in the chair, head turned away, glasses visible.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-09.png",
+  "page": 191,
+  "panel": 9,
+  "scan_box": [
+   2772,
+   2345,
+   3379,
+   3474
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad head down looking at papers, glasses visible.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-11.png",
+  "page": 191,
+  "panel": 11,
+  "scan_box": [
+   690,
+   3469,
+   1433,
+   4611
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad in a red jacket with arms spread, glasses visible, in the snow with Calvin.",
+  "verified": false
+ },
+ {
+  "file": "crops/p191-13.png",
+  "page": 191,
+  "panel": 13,
+  "scan_box": [
+   2256,
+   3469,
+   3379,
+   4611
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sunday strip. Dad seated at the desk with Calvin hugging him from behind, glasses visible.",
+  "verified": false
+ },
+ {
+  "file": "crops/p192-01.png",
+  "page": 192,
+  "panel": 1,
+  "scan_box": [
+   2556,
+   91,
+   3374,
+   1233
+  ],
+  "pose": "walking",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "legs"
+  ],
+  "size": "small",
+  "notes": "Title strip. Dad walking away in the snow beside Mom, glasses visible, small in the frame.",
+  "verified": false
+ },
+ {
+  "file": "crops/p192-03.png",
+  "page": 192,
+  "panel": 3,
+  "scan_box": [
+   1206,
+   1160,
+   2529,
+   2248
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad in a scarf and grey jacket with glasses, speaking to Calvin. Says THIS IS JUST A LITTLE WALK, CALVIN.",
+  "verified": false
+ },
+ {
+  "file": "crops/p192-04.png",
+  "page": 192,
+  "panel": 4,
+  "scan_box": [
+   2519,
+   1160,
+   3361,
+   2248
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad at right in scarf and mittens, glasses visible. Says NUMB TOES BUILD CHARACTER.",
+  "verified": false
+ },
+ {
+  "file": "crops/p192-06.png",
+  "page": 192,
+  "panel": 6,
+  "scan_box": [
+   1005,
+   2239,
+   2321,
+   3308
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Dad in a dark cap and scarf, glasses, towering over Calvin. Says CALVIN, WILL YOU PLEASE STOP GRIPING? Identification is slightly less certain than the others.",
+  "verified": false
+ },
+ {
+  "file": "crops/p192-08.png",
+  "page": 192,
+  "panel": 8,
+  "scan_box": [
+   126,
+   3235,
+   1377,
+   4355
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad at right in a dark coat with glasses, walking beside Mom. Says WE'RE HOME.",
+  "verified": false
+ },
+ {
+  "file": "crops/p199-01.png",
+  "page": 199,
+  "panel": 1,
+  "scan_box": [
+   2511,
+   587,
+   3488,
+   1574
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "torso",
+   "arms",
+   "legs",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Seated in armchair behind a newspaper (face hidden), dark trousers, says 'I DON'T WANT TO KNOW'. Dad, identified by the newspaper and speech; face not visible.",
+  "verified": true,
+  "legs": "Dad is seated in an armchair, turned three-quarters, holding the newspaper up in both hands and hiding his face and head. His body is a mostly solid black mass (dark top and lap). His legs are only partly visible at the bottom of the panel. They are crossed or stacked, with the thigh running across the lap toward the right and the lower leg or foot disappearing under or behind the dropped newspaper sections on the floor. The knee is a rounded dark bulge at lower left. No distinct shoe or sock is clearly drawn, and the feet are cropped or obscured by the newspaper pages. The seat is the armchair, with its back and arm visible at left.",
+  "trousers": "Solid black or near-solid black, with no pattern. It is hard to separate trousers from the dark shirt or sweater, since both read as one black mass.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p202-01.png",
+  "page": 202,
+  "panel": 1,
+  "scan_box": [
+   143,
+   1786,
+   988,
+   2883
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Round glasses, knit hat, striped/light sweater, dark trousers, holding a shovel; Calvin asks 'DAD, IF YOU THREW A SNOWBALL...'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p202-02.png",
+  "page": 202,
+  "panel": 2,
+  "scan_box": [
+   944,
+   1786,
+   1776,
+   2883
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Glasses and knit hat, leaning on a shovel with both hands, dark trousers; speaking 'WELL, I SUPPOSE THAT WOULD BE PROVOKING'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p202-03.png",
+  "page": 202,
+  "panel": 3,
+  "scan_box": [
+   1738,
+   1873,
+   2352,
+   2879
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Bent over digging with a shovel, glasses, dark trousers, hat; says 'NO, NOT THAT BAD, BUT WORSE THAN IF YOU HADN'T THROWN IT AT ALL'.",
+  "verified": true,
+  "legs": "Dad is bent forward at the waist, facing left, raking snow. He holds a rake in both gloved hands, with its head at lower left in the snow. His torso is angled down and forward. His legs are a short solid dark mass beneath the puffy jacket hem. They are slightly apart and nearly straight, with only a slight knee flex, and are seen from the side and front. The seat is not shown as a separate shape. The lower legs vanish into the snow line, so no knees are articulated and the feet and shoes are not visible. Calvin is standing at right.",
+  "trousers": "Solid black with no folds or highlights, a filled dark silhouette. The trousers are only a short stretch between the jacket hem and the snow.",
+  "useful_for": [
+   "sleeves"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p202-04.png",
+  "page": 202,
+  "panel": 4,
+  "scan_box": [
+   2539,
+   1786,
+   3409,
+   2883
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "sleeves"
+  ],
+  "size": "small",
+  "notes": "Dad cropped by the right page edge; glasses and hat visible with shovel handle. Panel's left side shows Calvin only.",
+  "verified": false
+ },
+ {
+  "file": "crops/p208-01.png",
+  "page": 208,
+  "panel": 1,
+  "scan_box": [
+   98,
+   1800,
+   940,
+   2901
+  ],
+  "pose": "other",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Seated on the edge of Calvin's bed reading a storybook aloud, round glasses, sweater, dark trousers. Says 'ONCE UPON A TIME, THERE WAS A...'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p208-03.png",
+  "page": 208,
+  "panel": 3,
+  "scan_box": [
+   1687,
+   1800,
+   2522,
+   2901
+  ],
+  "pose": "other",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated on the bed, round glasses, light sweater, facing the viewer; says 'TELL ME A STORY LIKE THAT, OK?'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p208-04.png",
+  "page": 208,
+  "panel": 4,
+  "scan_box": [
+   2505,
+   1987,
+   3136,
+   2879
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Seated on the couch with round glasses and sweater; says 'AND HOW SHOULD HANSEL AND GRETEL MEET THEIR UNTIMELY DEMISE?'.",
+  "verified": true,
+  "legs": "Not visible. Panel 4 is a close crop of Dad from head to roughly the hips, sitting on the edge of Calvin's bed (not a couch). The panel's bottom edge cuts him off at the waist or seat, so no knees, shins, seat or feet are drawn. The only lower-body hint is the bed's rumpled blanket at the bottom left of the panel.",
+  "trousers": "Not visible. The torso is cropped above the trousers, so there is nothing to judge about whether they are solid black.",
+  "useful_for": [
+   "sleeves"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p208-05.png",
+  "page": 208,
+  "panel": 5,
+  "scan_box": [
+   920,
+   3217,
+   1745,
+   4323
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Standing in a suit with tie and round glasses, facing Calvin at right; says 'WHAT ON EARTH FOR? IT'S 8:00 AT NIGHT!'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p208-06.png",
+  "page": 208,
+  "panel": 6,
+  "scan_box": [
+   1704,
+   3217,
+   2536,
+   4323
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Lower confidence: seated in an armchair reading a book, dark side-parted hair, profile facing left; says 'NO, YOU CAN'T DO THAT! DON'T BE RIDICULOUS!'. Identity inferred from the strip and his reading pose; face is partly hidden.",
+  "verified": false
+ },
+ {
+  "file": "crops/p208-07.png",
+  "page": 208,
+  "panel": 7,
+  "scan_box": [
+   2491,
+   3217,
+   3364,
+   4323
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Seated on the couch, round glasses, hand on forehead; says 'I DON'T EVEN WANT TO KNOW WHAT HE INTENDED TO WRITE.'",
+  "verified": false
+ },
+ {
+  "file": "crops/p211-01.png",
+  "page": 211,
+  "panel": 1,
+  "scan_box": [
+   0,
+   1903,
+   852,
+   3079
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "sleeves",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Thin man with glasses and dark trousers at left edge, with Calvin in bed to his right. Panel 'HOW'S YOUR MATH COMING?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p211-02.png",
+  "page": 211,
+  "panel": 2,
+  "scan_box": [
+   814,
+   1903,
+   1698,
+   3079
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad standing at Calvin's bed in profile, glasses visible. Panel 'I DON'T DO MATH ANY MORE'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p211-03.png",
+  "page": 211,
+  "panel": 3,
+  "scan_box": [
+   1663,
+   1903,
+   2564,
+   3079
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad with arms folded, glasses, dark trousers, at left of the panel. Panel 'GOOD. VISUALIZE BEING THE ONLY 45-YEAR-OLD'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p215-01.png",
+  "page": 215,
+  "panel": 1,
+  "scan_box": [
+   2634,
+   423,
+   3431,
+   1269
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Dad on the right of the banner, sitting on the couch in glasses, reading a newspaper. Mom is at left. 'ISN'T THIS A NICE WAY TO SPEND THE EVENING?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p215-02.png",
+  "page": 215,
+  "panel": 2,
+  "scan_box": [
+   623,
+   1269,
+   1143,
+   2397
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Dad at right of panel, glasses, holding a newspaper. Panel 'I STILL THINK ONE OF YOU BROKE THE RABBIT EARS'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p215-03.png",
+  "page": 215,
+  "panel": 3,
+  "scan_box": [
+   1767,
+   1269,
+   2183,
+   2397
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Dad on the couch at right, glasses, reading a newspaper. Panel 'IT'S GETTING LATE, CALVIN'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p215-04.png",
+  "page": 215,
+  "panel": 4,
+  "scan_box": [
+   2911,
+   1269,
+   3466,
+   2397
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Dad on the right, glasses, in profile on the couch. Panel 'I DON'T THINK SO. YOU SEE, WE DON'T WANT YOU TO GET TOO SMART'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p215-05.png",
+  "page": 215,
+  "panel": 5,
+  "scan_box": [
+   0,
+   2303,
+   2356,
+   3525
+  ],
+  "pose": "other",
+  "facing": "unclear",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Low confidence and probably exclude: the parents are drawn as bug-eyed aliens in Calvin's fake story. The alien Dad sits at the centre-right of the panel. Not a human Dad.",
+  "verified": false
+ },
+ {
+  "file": "crops/p215-06.png",
+  "page": 215,
+  "panel": 6,
+  "scan_box": [
+   2252,
+   2303,
+   3431,
+   3525
+  ],
+  "pose": "other",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Low confidence and probably exclude: alien-headed figure holding Calvin ('LET ME GO!', 'DUNK THE KID!'). Not a human Dad.",
+  "verified": false
+ },
+ {
+  "file": "crops/p215-09.png",
+  "page": 215,
+  "panel": 9,
+  "scan_box": [
+   1940,
+   3455,
+   2530,
+   4559
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Dad on the right of the panel, glasses, sitting, Mom at left. 'I WASN'T ASLEEP! I'M NOT TIRED!'",
+  "verified": false
+ },
+ {
+  "file": "crops/p215-10.png",
+  "page": 215,
+  "panel": 10,
+  "scan_box": [
+   2876,
+   3502,
+   3396,
+   4559
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Dad standing at right, glasses, newspaper under arm, looking down at Calvin asleep. 'LOOK, HIS FACE WAS PUSHED INTO YOUR LEG'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p217-06.png",
+  "page": 217,
+  "panel": 6,
+  "scan_box": [
+   814,
+   1786,
+   1178,
+   3055
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Dad at left edge in a dark suit and striped tie, with glasses, facing Rosalyn. Another partly visible figure at the right edge is not counted.",
+  "verified": false
+ },
+ {
+  "file": "crops/p217-07.png",
+  "page": 217,
+  "panel": 7,
+  "scan_box": [
+   1698,
+   1833,
+   2183,
+   3008
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Dad at left in a striped tie and glasses, facing Mom. 'AN ADVANCE? BUT... BUT...'",
+  "verified": false
+ },
+ {
+  "file": "crops/p217-08.png",
+  "page": 217,
+  "panel": 8,
+  "scan_box": [
+   2530,
+   1833,
+   2980,
+   3008
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Dad at left, glasses and tie, face in profile, next to Mom. 'BUT WE GAVE HER AN ADVANCE'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p217-09.png",
+  "page": 217,
+  "panel": 9,
+  "scan_box": [
+   311,
+   3361,
+   866,
+   4512
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Dad in a dark suit and tie, glasses, at the open front door, looking down at Calvin. 'OK, WE'RE GOING... AND CALVIN?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p217-10.png",
+  "page": 217,
+  "panel": 10,
+  "scan_box": [
+   1143,
+   3384,
+   1698,
+   4512
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Dad in a dark suit, glasses, lunging to grab Calvin by the collar. 'GCKKHHK!'",
+  "verified": false
+ },
+ {
+  "file": "crops/p219-06.png",
+  "page": 219,
+  "panel": 6,
+  "scan_box": [
+   866,
+   1880,
+   1421,
+   3008
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Medium confidence: adult man in a white shirt and dark trousers, shouting 'ALL RIGHT, CALVIN! WHERE'D YOU GO?!' in the doorway. Identity inferred from the outfit.",
+  "verified": false
+ },
+ {
+  "file": "crops/p219-08.png",
+  "page": 219,
+  "panel": 8,
+  "scan_box": [
+   2530,
+   1880,
+   2911,
+   3008
+  ],
+  "pose": "sitting_chair",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Dad at left, glasses, in a suit, seated at the dinner table, gesturing. 'SEE, IF WE HAD BOUGHT A DOG INSTEAD'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p222-06.png",
+  "page": 222,
+  "panel": 6,
+  "scan_box": [
+   443,
+   1873,
+   1022,
+   2879
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "seat"
+  ],
+  "size": "medium",
+  "notes": "Seated behind desk holding a mug, talking to Calvin; shirt, glasses, large nose",
+  "verified": false
+ },
+ {
+  "file": "crops/p222-07.png",
+  "page": 222,
+  "panel": 7,
+  "scan_box": [
+   1056,
+   1873,
+   1806,
+   2879
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "'It's because you keep changing time zones'; holding a mug, round glasses",
+  "verified": false
+ },
+ {
+  "file": "crops/p222-08.png",
+  "page": 222,
+  "panel": 8,
+  "scan_box": [
+   1909,
+   2376,
+   2624,
+   2879
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "large",
+  "notes": "Close-up, finger raised, 'So if you go at the speed of light'",
+  "verified": false
+ },
+ {
+  "file": "crops/p222-09.png",
+  "page": 222,
+  "panel": 9,
+  "scan_box": [
+   2659,
+   2239,
+   3409,
+   2879
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Right side of panel, 'Well, we men are better at abstract reasoning'; Calvin at lower left",
+  "verified": false
+ },
+ {
+  "file": "crops/p225-10.png",
+  "page": 225,
+  "panel": 10,
+  "scan_box": [
+   935,
+   3243,
+   1663,
+   4371
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "'Well, sports are good for you...' round glasses, shirt; speaking to unseen Calvin",
+  "verified": false
+ },
+ {
+  "file": "crops/p225-12.png",
+  "page": 225,
+  "panel": 12,
+  "scan_box": [
+   2530,
+   3290,
+   3050,
+   4465
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Hands on hips, striped tie, replies 'When you grow up, it's not allowed'; Calvin at lower right. Facing is approximate",
+  "verified": false
+ },
+ {
+  "file": "crops/p226-01.png",
+  "page": 226,
+  "panel": 1,
+  "scan_box": [
+   374,
+   319,
+   988,
+   1462
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Top-left, holding bat over shoulder, 'C'mon, let's go outside and try some catches'",
+  "verified": false
+ },
+ {
+  "file": "crops/p226-03.png",
+  "page": 226,
+  "panel": 3,
+  "scan_box": [
+   1738,
+   319,
+   2624,
+   1462
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Full figure with bat, glasses, shirt, dark trousers; 'Ready? Now, be sure to run up to the ball'",
+  "verified": false
+ },
+ {
+  "file": "crops/p226-04.png",
+  "page": 226,
+  "panel": 4,
+  "scan_box": [
+   2590,
+   365,
+   3068,
+   1371
+  ],
+  "pose": "kneeling",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "small",
+  "notes": "Kneeling in the dirt beside Calvin, 'Are you OK?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p226-05.png",
+  "page": 226,
+  "panel": 5,
+  "scan_box": [
+   443,
+   1827,
+   1022,
+   2879
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Standing behind Mom and Calvin at the kitchen door, 'Goodness, what happened?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p226-08.png",
+  "page": 226,
+  "panel": 8,
+  "scan_box": [
+   2556,
+   1782,
+   2999,
+   2696
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "small",
+  "notes": "Left side of panel, hands on hips, 'I guess we can forget having a millionaire baseball player'; partly obscured, identity fairly confident",
+  "verified": false
+ },
+ {
+  "file": "crops/p232-01.png",
+  "page": 232,
+  "panel": 1,
+  "scan_box": [
+   2878,
+   45,
+   3324,
+   1187
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "small",
+  "notes": "Banner panel, right edge; 'Only if it's not that awful Hamster Huey and the Gooey Kablooie'",
+  "verified": false
+ },
+ {
+  "file": "crops/p232-03.png",
+  "page": 232,
+  "panel": 3,
+  "scan_box": [
+   1336,
+   1187,
+   2227,
+   2237
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Sitting on bed edge reading to Calvin, 'What story would you like tonight, Calvin?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p232-04.png",
+  "page": 232,
+  "panel": 4,
+  "scan_box": [
+   2570,
+   1187,
+   3324,
+   2237
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Hand on chin, 'OK...hmm... once there was a boy named Calvin'",
+  "verified": false
+ },
+ {
+  "file": "crops/p232-05.png",
+  "page": 232,
+  "panel": 5,
+  "scan_box": [
+   274,
+   2237,
+   1165,
+   3013
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Arms spread wide, 'Yeah, then the big bad dad yelled...'; glasses, shirt",
+  "verified": false
+ },
+ {
+  "file": "crops/p232-06.png",
+  "page": 232,
+  "panel": 6,
+  "scan_box": [
+   1542,
+   2328,
+   2330,
+   3013
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Seated on bed edge, 'Who's telling this story, you or me?'",
+  "verified": false
+ },
+ {
+  "file": "crops/p232-07.png",
+  "page": 232,
+  "panel": 7,
+  "scan_box": [
+   2364,
+   2328,
+   3324,
+   3013
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "large",
+  "notes": "Finger at temple, 'So finally, Calvin got the hint... to rot his brain watching cartoons'",
+  "verified": false
+ },
+ {
+  "file": "crops/p232-08.png",
+  "page": 232,
+  "panel": 8,
+  "scan_box": [
+   137,
+   3515,
+   822,
+   4292
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Leaning over the bed toward Calvin, 'At last Calvin and Hobbes went outside'",
+  "verified": false
+ },
+ {
+  "file": "crops/p232-09.png",
+  "page": 232,
+  "panel": 9,
+  "scan_box": [
+   1199,
+   3333,
+   1953,
+   4337
+  ],
+  "pose": "bending",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Leaning over Calvin for the goodnight, 'That's right... it's not the end of the story'",
+  "verified": false
+ },
+ {
+  "file": "crops/p233-04.png",
+  "page": 233,
+  "panel": 4,
+  "scan_box": [
+   2634,
+   376,
+   3223,
+   1504
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Unbuttoning shirt, 'Women! Always changing their clothes! After I get that kid, you're next'; glasses visible",
+  "verified": false
+ },
+ {
+  "file": "crops/p233-09.png",
+  "page": 233,
+  "panel": 9,
+  "scan_box": [
+   2252,
+   3384,
+   2668,
+   4512
+  ],
+  "pose": "standing",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "UNCERTAIN: tall man in plaid shirt and cap, arms crossed, watching Calvin and Hobbes in the wagon; no glasses visible at this scale, so may not be Dad",
+  "verified": false
+ },
+ {
+  "file": "crops/p235-07.png",
+  "page": 235,
+  "panel": 7,
+  "scan_box": [
+   0,
+   3408,
+   667,
+   4277
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad seated in patterned armchair reading a book, glasses, dark trousers; Calvin standing at right",
+  "verified": true,
+  "legs": "Dad sits well back in a polka-dot armchair seen in side/three-quarter view facing right. His thigh runs forward roughly horizontally from the hip at the left, and the other leg is crossed over it, with the knee raised near the centre of the panel. The lower leg and shoe drop down and forward at the right edge of the chair, at about the height of the chair's front. The seat is hidden beneath his thighs and the chair cushion. The feet are small, dark, and close together at the chair front, with the shoe/ankle partly lost in the black trouser mass. The legs read as one large dark silhouette, so the individual shapes are hard to tell apart.",
+  "trousers": "Solid black, filled with no folds or highlights except small white gaps where the leg shapes overlap.",
+  "useful_for": [
+   "sitting_legs",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p235-08.png",
+  "page": 235,
+  "panel": 8,
+  "scan_box": [
+   825,
+   3384,
+   1475,
+   4136
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Same armchair scene as previous panel, Calvin says KA; Dad still reading",
+  "verified": true,
+  "legs": "Side view facing right. Seated far back in the polka-dot armchair. Thighs run roughly horizontal forward across the seat cushion. Knee bent near the front edge of the cushion and pointing right. Shin drops from the knee, angled slightly forward, in front of the chair front. Feet are small dark shapes near the floor at the front of the chair, partly hidden. Legs not crossed or tucked.",
+  "trousers": "Solid black, flat fill with no visible folds.",
+  "useful_for": [
+   "sitting_legs",
+   "hands_at_rest",
+   "sleeves"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p237-01.png",
+  "page": 237,
+  "panel": 1,
+  "scan_box": [
+   10,
+   3281,
+   896,
+   4404
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Dad in striped short-sleeved shirt and dark trousers pushing a lawn mower, Calvin at left",
+  "verified": false
+ },
+ {
+  "file": "crops/p237-02.png",
+  "page": 237,
+  "panel": 2,
+  "scan_box": [
+   889,
+   3281,
+   1711,
+   4404
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "large",
+  "notes": "Close-up of Dad's head and shoulders, glasses, striped shirt, answering no to the bug-eating offer",
+  "verified": false
+ },
+ {
+  "file": "crops/p237-03.png",
+  "page": 237,
+  "panel": 3,
+  "scan_box": [
+   1879,
+   3643,
+   2547,
+   4442
+  ],
+  "pose": "crouching",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Dad crouched with a bag, striped shirt, offering a dollar to pick up sticks",
+  "verified": true,
+  "legs": "Dad is in a deep squat or crouch, seen in side/three-quarter view and facing right, toward a red gas can marked GAS at the lower right. His seat is low, near the bottom-left of his figure and close to the ground. A big folded dark thigh mass rises from the seat to a bent knee in the middle of his lower body. His torso leans forward and down over the knee, with the striped shirt hanging in front of it. His shin drops from the knee toward the can. The lower legs and feet are mostly hidden by the can and the panel's bottom edge and are not clearly drawn. No distinct shoes are readable. The whole leg is one merged dark shape with no inner linework, so it works as a silhouette of a folded squat. It does not show feet tucked under him or a kneeling pose.",
+  "trousers": "Solid black, filled in with no folds or highlights except a few small white gaps at the thigh edge.",
+  "useful_for": [
+   "crouching_legs",
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 2
+ },
+ {
+  "file": "crops/p245-01.png",
+  "page": 245,
+  "panel": 1,
+  "scan_box": [
+   0,
+   272,
+   773,
+   1504
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "medium",
+  "notes": "Dad in striped shirt and dark trousers sitting by bed reading a story to Calvin",
+  "verified": true,
+  "legs": "Dad sits on the edge of Calvin's bed in three-quarter side view, torso upright and turned right toward Calvin. His thighs run roughly horizontally along the bed edge, drawn as one solid black wedge at the lower left of the panel that is cut off by the panel border. The knee is only a rounded black mass pointing left or down-left and is not defined. Little or no lower leg or shin shows, and no feet or shoes are visible. The seat is on the mattress with the bedspread and a fold of blanket overlapping the thigh. It reads as sitting on a bed, not a chair, and the leg is too cropped to be a reliable reference.",
+  "trousers": "Solid black with no visible folds or highlights. Only the thigh and seat are visible, as a single filled black shape.",
+  "useful_for": [
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p245-02.png",
+  "page": 245,
+  "panel": 2,
+  "scan_box": [
+   889,
+   296,
+   1771,
+   1471
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "large",
+  "notes": "Dad close-up beside bed, glasses, striped shirt, asking about shoot-outs and violence",
+  "verified": false
+ },
+ {
+  "file": "crops/p245-03.png",
+  "page": 245,
+  "panel": 3,
+  "scan_box": [
+   1704,
+   329,
+   2266,
+   1504
+  ],
+  "pose": "sitting_chair",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad reading from a book at bedside, striped shirt, dark trousers, listing content questions",
+  "verified": true,
+  "legs": "Dad is seated on the edge of Calvin's bed, turned in three-quarter profile to the left and looking down toward the book in his hands. His legs are mostly cropped. Only a large solid-black mass at the lower left of the panel is visible, which is the thigh and knee as it bends over the bed edge. The seat is hidden against the bedclothes. No lower legs, shins or feet are drawn in this panel. The panel only shows that he sits on the mattress edge with his thigh roughly horizontal.",
+  "trousers": "Solid, filled black with no folds or texture, though only a small lower-left patch is visible.",
+  "useful_for": [
+   "sleeves",
+   "hands_at_rest"
+  ],
+  "quality": 1
+ },
+ {
+  "file": "crops/p245-04.png",
+  "page": 245,
+  "panel": 4,
+  "scan_box": [
+   2565,
+   296,
+   3440,
+   1471
+  ],
+  "pose": "sitting_chair",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "medium",
+  "notes": "Dad at bedside with book, striped shirt, saying Of course not",
+  "verified": false
+ },
+ {
+  "file": "crops/p245-13.png",
+  "page": 245,
+  "panel": 13,
+  "scan_box": [
+   35,
+   3267,
+   927,
+   4404
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Dad standing in striped shirt and dark trousers, greeting a sleepy Calvin",
+  "verified": false
+ },
+ {
+  "file": "crops/p245-14.png",
+  "page": 245,
+  "panel": 14,
+  "scan_box": [
+   892,
+   3267,
+   1704,
+   4404
+  ],
+  "pose": "standing",
+  "facing": "left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "legs"
+  ],
+  "size": "large",
+  "notes": "Dad in striped shirt holding a mug, saying he has been up since 6:30",
+  "verified": false
+ },
+ {
+  "file": "crops/p245-15.png",
+  "page": 245,
+  "panel": 15,
+  "scan_box": [
+   1735,
+   3267,
+   2621,
+   4404
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Dad standing in striped shirt and dark trousers, saying he can tell the difference on a day off",
+  "verified": false
+ },
+ {
+  "file": "crops/p245-16.png",
+  "page": 245,
+  "panel": 16,
+  "scan_box": [
+   2582,
+   3267,
+   3440,
+   4404
+  ],
+  "pose": "standing",
+  "facing": "right",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "legs"
+  ],
+  "size": "medium",
+  "notes": "Dad standing in striped shirt, smiling, remarking on the bassinets",
+  "verified": false
+ },
+ {
+  "file": "crops/p248-05.png",
+  "page": 248,
+  "panel": 5,
+  "scan_box": [
+   2535,
+   3287,
+   3427,
+   4337
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Seated at a desk on the right edge, glasses, collared shirt, tie; speaking to Calvin who stands below him ('YOU'RE STILL WRONG, DAD.'). Bbox is approximate, panel is cut off at the right page edge.",
+  "verified": false
+ },
+ {
+  "file": "crops/p249-01.png",
+  "page": 249,
+  "panel": 1,
+  "scan_box": [
+   35,
+   329,
+   913,
+   1504
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Seated at a desk holding a phone, glasses, light shirt; says 'HELLO?'. Calvin's 'HI DAD!' is answered on the phone.",
+  "verified": false
+ },
+ {
+  "file": "crops/p249-02.png",
+  "page": 249,
+  "panel": 2,
+  "scan_box": [
+   948,
+   329,
+   1757,
+   1504
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands"
+  ],
+  "size": "medium",
+  "notes": "Close-up of Dad on the phone, glasses, shirt; 'CALVIN, IS THIS IMPORTANT?'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p249-03.png",
+  "page": 249,
+  "panel": 3,
+  "scan_box": [
+   1721,
+   329,
+   2600,
+   1504
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Seated at a desk on the phone, glasses, striped tie; 'CALVIN, I'VE GOT WORK TO DO'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p249-06.png",
+  "page": 249,
+  "panel": 6,
+  "scan_box": [
+   1721,
+   1833,
+   2600,
+   2961
+  ],
+  "pose": "standing",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves",
+   "legs",
+   "feet_shoes"
+  ],
+  "size": "large",
+  "notes": "Standing, hand over his eyes, glasses, light short-sleeved shirt, dark trousers; '...OR MAKE IT SWING FROM SIDE TO SIDE!'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p249-08.png",
+  "page": 249,
+  "panel": 8,
+  "scan_box": [
+   2530,
+   3290,
+   3373,
+   4418
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head",
+   "torso",
+   "arms"
+  ],
+  "size": "small",
+  "notes": "Seated at the dinner table behind Mom, glasses, leaning in; 'WHAT DID HE SEE?' with Mom's 'AN OPPORTUNITY.' Partly hidden by Mom.",
+  "verified": false
+ },
+ {
+  "file": "crops/p254-05.png",
+  "page": 254,
+  "panel": 5,
+  "scan_box": [
+   68,
+   1826,
+   959,
+   2922
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Seated in an armchair with a paper, glasses, short-sleeved shirt; 'WELL DAD, IT'S TOO BAD YOU WEREN'T ANY NICER'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p254-06.png",
+  "page": 254,
+  "panel": 6,
+  "scan_box": [
+   891,
+   1780,
+   1713,
+   2922
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Seated on a sofa reading a booklet, glasses, shirt; 'BEG PARDON?' and 'YEP, I CAN'T SAY I'M PARTICULARLY INCLINED...'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p254-07.png",
+  "page": 254,
+  "panel": 7,
+  "scan_box": [
+   1713,
+   1780,
+   2535,
+   2922
+  ],
+  "pose": "sitting_chair",
+  "facing": "front",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Seated on the sofa holding a paper, glasses, shirt; 'DINOSAURS?'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p254-08.png",
+  "page": 254,
+  "panel": 8,
+  "scan_box": [
+   2501,
+   1780,
+   3358,
+   2922
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "hands",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Seated on the sofa with a newspaper and a toy in his hand, glasses, shirt; 'HEY, WHAT ARE YOU INSINUATING?'.",
+  "verified": false
+ },
+ {
+  "file": "crops/p255-13.png",
+  "page": 255,
+  "panel": 13,
+  "scan_box": [
+   0,
+   3384,
+   878,
+   4512
+  ],
+  "pose": "sitting_chair",
+  "facing": "three_quarter_left",
+  "visible": [
+   "head",
+   "torso",
+   "arms",
+   "sleeves"
+  ],
+  "size": "medium",
+  "notes": "Seated in a chair at lower-left, glasses, collared shirt; 'THERE'S DAD! LEAN! LEAN!'. Calvin's paper plane is at upper right.",
+  "verified": false
+ },
+ {
+  "file": "crops/p255-14.png",
+  "page": 255,
+  "panel": 14,
+  "scan_box": [
+   878,
+   3384,
+   1757,
+   4512
+  ],
+  "pose": "other",
+  "facing": "three_quarter_right",
+  "visible": [
+   "head"
+  ],
+  "size": "large",
+  "notes": "Extreme close-up; only his head and round glasses at the right edge are visible; 'YES! CALVIN IS ABLE TO STEER!'.",
+  "verified": false
+ }
+]
