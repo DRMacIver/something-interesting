@@ -21,7 +21,7 @@
     "panel": 2,
     "size": [
       3182,
-      3660
+      2060
     ],
     "originalOffset": [
       800,
@@ -31,15 +31,15 @@
       1582,
       2060
     ],
-    "changedOriginalPixels": 24401,
-    "originalMatchFraction": 0.992512550169995,
-    "changedOriginalInkPixels": 9957
+    "changedOriginalPixels": 0,
+    "originalMatchFraction": 1.0,
+    "changedOriginalInkPixels": 0
   },
   {
     "panel": 3,
     "size": [
       3174,
-      3660
+      2690
     ],
     "originalOffset": [
       800,

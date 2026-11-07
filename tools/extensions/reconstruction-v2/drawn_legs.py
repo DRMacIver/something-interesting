@@ -1,19 +1,12 @@
-"""Dad's figure outside the scanned close-ups of panels 2 and 3, drawn in code.
+"""Dad's figure outside the scanned close-up of panel 3, drawn in code.
 
-The scan stops at Dad's waist in panel 2 and at his chest in panel 3, so
-everything of him beyond the crops is drawn here rather than generated:
-his legs and shoes in both, and in panel 3 also his back, shirt, sleeves,
-arms and the hand resting on his thigh. Where Watterson drew the same
-thing elsewhere in the strip it is reused instead (see transplant): panel
-2's trailing shoe is panel 1's planted shoe turned sole up, and panel 3's
-resting hand is his own gesturing hand turned palm down. The drawing follows the
-strip itself: Dad's trousers are a flat black silhouette with a few thin
-white folds, as in panel 1, and his shoes are panel 1's white shoes with a
-heavy outline, a sole line just inside it and a small heel notch. Sizes come
-from panel 1 scaled to each close-up by head width (Dad's head is about
-290px wide in panel 1, 493px in panel 2 and 562px in panel 3). He sits back
-on his heels, as in Watterson's kneeling Dad on page 8, with his feet laid
-flat behind him and the soles turned up.
+The scan stops at his chest, so his back, shirt, sleeves and arms beyond it
+are drawn here, down to the panel's foot just above his trousers: his legs
+are never drawn. Where Watterson drew the same thing elsewhere in the strip
+it is reused instead (see transplant): the resting hand is his own
+gesturing hand turned palm down. Sizes come from panel 1 scaled to the
+close-up by head width (Dad's head is about 290px wide in panel 1 and
+562px in panel 3). `shoe` and `transplant` are also used for panel 2 (dad2.py).
 
 All coordinates are pixels of the full-panel exports.
 """
@@ -55,70 +48,6 @@ def shoe(ink, heel, angle, scale=1.0, flip=False, foreshorten=1.0, width=22):
     ink.stroke(parts['sole'], [3, 12, 13, 10, 3])
     ink.stroke(parts['heel_notch'], [4, 12, 4])
     ink.stroke(parts['toe_cap'], [3, 11, 10, 2])
-
-
-def thin_underarm(image):
-    """Bring the line under Dad's arm in panel 2 back to the scan's weight.
-
-    The earlier elbow repair (upper-2.png) thickened the arm's underside
-    into a wedge of black that read as a stray bit of trouser above a gap.
-    In the scan the line is about 20px; keep that much of it, from its top.
-    """
-    a = np.asarray(image).copy()
-    for x in range(UNDERARM[0], UNDERARM[1]):
-        column = a[UNDERARM[2]:UNDERARM[3], x] < 128
-        top = np.argmax(column)
-        if not column[top]:
-            continue
-        end = top + np.argmin(column[top:]) if not column[top:].all() else len(column)
-        # Taper into the shirt's hem at the left, where the gap closes.
-        weight = 21 + max(0, 790 - x) * 0.9
-        if end - top > weight and end < len(column):
-            a[UNDERARM[2] + top + int(weight):UNDERARM[2] + end + 2, x] = 255
-    from PIL import Image, ImageFilter
-    # Smooth the new edge as the rest of the art is smoothed.
-    result = Image.fromarray(a)
-    box = (UNDERARM[0] - 4, UNDERARM[2], UNDERARM[1] + 4, UNDERARM[3])
-    edge = result.crop(box).filter(ImageFilter.GaussianBlur(2))
-    edge = edge.point(lambda v: 0 if v < 100 else 255 if v > 156 else int((v - 100) * 255 / 56))
-    result.paste(edge, box[:2])
-    return result
-
-
-# Columns and rows of the underarm line in the panel 2 export.
-UNDERARM = (730, 1000, 1880, 1960)
-PANEL2_SHOE = (300, 2256)
-PANEL2_SHOE_TURN = 180
-PANEL2_SHOE_SCALE = (1.7, 1.7)
-
-
-def panel_two(image):
-    """Dad sits back on his heels facing right, knee by the record player."""
-    w, h = image.size
-    ink = Ink((w, h), seed=2)
-    # His near foot trails behind him, toe on the floor and heel up under his
-    # seat, the sole turned back: the same shoe as in panel 3, seen side on.
-    shoe(ink, heel=(450, 2214), angle=150, scale=0.84, flip=True, foreshorten=0.62)
-    # The trousers. In the scan the top of his knee is just under his
-    # forearm, its front already turning down at the crop's foot (x=1051),
-    # so the knee comes straight down to the floor there. His seat rounds
-    # out behind him over his heels and the shin lies under the thigh.
-    ink.fill([(428, 1962), (420, 2000), (400, 2048), (378, 2104), (366, 2160),
-              (370, 2214), (392, 2252), (432, 2262), (452, 2290), (452, 2340),
-              (466, 2380), (700, 2385), (900, 2386), (990, 2383), (1040, 2370),
-              (1076, 2338), (1096, 2280), (1100, 2210), (1088, 2140), (1068, 2092),
-              (1051, 2058), (1033, 2040), (980, 2000), (720, 1990), (720, 1962)],
-             wobble=1.2)
-    # Folds: where the thigh lies on the shin, the front of the knee and the seat.
-    ink.stroke([(1066, 2262), (960, 2240), (820, 2234), (680, 2246)],
-               [3, 14, 12, 8, 3], colour=255, wobble=0.8)
-    ink.stroke([(1030, 2120), (1056, 2170), (1064, 2222)],
-               [2, 9, 3], colour=255, wobble=0.6)
-    ink.stroke([(470, 2120), (560, 2160), (640, 2172)],
-               [2, 9, 2], colour=255, wobble=0.6)
-    yy, xx = np.mgrid[:h, :w]
-    region = ((yy >= 2060) & (xx < 1540)) | ((yy >= 1966) & (xx < 700))
-    return composite(thin_underarm(image), ink.mask(), region)
 
 
 def outlined(ink, points, width=OUTLINE + 2):
@@ -228,31 +157,6 @@ def resting_thumb(image, target, angle, scale, bend):
     return ink, shape
 
 
-# Dad's planted back shoe in panel 1, in side view, in the coordinates of
-# the full panel 1 export. Only the part inside the scanned crop (x >= 400)
-# is used; the trouser leg covers its top at the heel, so `keep` stops just
-# under the trouser's hem.
-PANEL1_SHOE_KEEP = [(400, 1872), (520, 1866), (670, 1866), (670, 2016), (400, 2016)]
-PANEL1_SHOE_CLOSE = [((400, 1872), (400, 2016)), ((400, 1874), (520, 1868))]
-PANEL1_SHOE_CENTRE = (530, 1940)
-PANEL1_SHOE_HIDDEN_TOP = [(380, 1874), (450, 1871), (520, 1872), (560, 1880)]
-
-
-def panel_one_shoe(target, angle, scale, size):
-    """Panel 1's planted shoe, turned over to lie behind Dad, sole up."""
-    from pathlib import Path
-    from PIL import Image
-    locked = Image.open(Path(__file__).resolve().parent / 'locked-1.png').convert('L')
-    source = Image.new('L', (locked.width + 400, locked.height), 255)
-    source.paste(locked, (400, 0))
-    ink, shape, move = transplant(source, PANEL1_SHOE_KEEP, PANEL1_SHOE_CLOSE,
-                                  PANEL1_SHOE_CENTRE, target, angle, scale=scale, size=size)
-    # Ink the top of the shoe where panel 1's trouser hem hid it.
-    edge = Ink(size, seed=5)
-    edge.stroke([move(p) for p in PANEL1_SHOE_HIDDEN_TOP], [18, 22, 22, 20])
-    return ink | edge.mask(), shape
-
-
 HAND_WRIST = (1000, 2700)
 HAND_TILT = 28
 HAND_SCALE = 0.95
@@ -264,35 +168,14 @@ def panel_three(image):
     the near one on his thigh.
 
     Everything of him outside the scanned crop (left of x=800 and below
-    y=2060) is drawn here: his back and shirt, the rolled near sleeve, the
-    hanging arm and hand, the far side of his shirt, the far sleeve and the
-    gesturing arm down to its elbow, and his trousers and shoe. Lines that
-    leave the crop are continued from where they cross its edge.
+    y=2060) down to the panel's foot, just above his trousers, is drawn
+    here: his back and shirt, the rolled near sleeve, the hanging arm, the
+    far side of his shirt, the far sleeve and the gesturing arm down to its
+    elbow. Lines that leave the crop are continued from where they cross
+    its edge.
     """
     w, h = image.size
     ink = Ink((w, h), seed=3)
-    # The near foot trails behind him, toe on the floor and its sole turned
-    # back towards the left, so we see it foreshortened under his seat.
-    shoe(ink, heel=(610, 2980), angle=124, scale=1.08, flip=True, foreshorten=0.6)
-    # The seat, the thigh running towards us to the knee and the shin folded
-    # back under it to the cuff.
-    # Panel 1 makes his legs about 3.4 head widths long, so on his heels his
-    # hip is about a head width above the floor. He is nearer us than Calvin,
-    # so he meets the floor lower in the panel than Calvin does.
-    ink.fill([(458, 2580), (446, 2642), (457, 2700), (452, 2780), (450, 2860),
-              (462, 2940), (490, 3010), (540, 3062), (600, 3110), (680, 3170),
-              (780, 3230), (900, 3272), (1050, 3290), (1200, 3292), (1300, 3280),
-              (1370, 3245), (1410, 3185), (1425, 3110), (1415, 3030), (1380, 2955),
-              (1320, 2885), (1240, 2825), (1140, 2775), (1040, 2745), (950, 2725),
-              (880, 2712), (700, 2700), (600, 2650)], wobble=1.2)
-    # Folds: the thigh's underside lying on the shin, and round the knee.
-    ink.stroke([(1330, 3256), (1150, 3226), (950, 3180), (780, 3120)],
-               [3, 14, 12, 6, 2], colour=255, wobble=0.8)
-    ink.stroke([(1270, 2930), (1350, 2982), (1394, 3060), (1404, 3130)],
-               [2, 10, 11, 3], colour=255, wobble=0.6)
-    ink.stroke([(560, 2810), (640, 2846), (720, 2860)],
-               [2, 9, 2], colour=255, wobble=0.6)
-
     # The shirt, hanging loose over the trousers. Its back runs on from the
     # shoulder where it leaves the crop at (800, 1796); its far side from the
     # placket line crossing the crop's foot at x=1210.

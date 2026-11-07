@@ -1,8 +1,12 @@
-"""Panel 2 draft A refined over six Codex A/B rounds (best: variant 4, Codex 5/10 vs A 4/10).
+"""Dad's back and near sleeve in panel 2, left of Watterson's crop.
 
-Run from this directory: python dad2_refine.py 4
+Draft A (dad2.py) refined over six Codex A/B rounds; variant 4 was the best
+(Codex 5/10 against draft A's 4). Panel 2 ends at the scan's foot, which
+already reaches his knee, so only his back, sleeve, elbow and the top of his
+trousers show; the legs and shoe these variants also draw fall outside it.
+
+Render a variant over the current export: python dad2_refine.py N [OUTDIR]
 """
-"""Refined panel 2. Usage: python draw.py N  (run from reconstruction-v2)."""
 import sys, copy
 sys.path.insert(0, '/Users/drmaciver/Projects/calvins-dad/tools/extensions/reconstruction-v2')
 import numpy as np
@@ -11,8 +15,7 @@ import dad2
 from ink import Ink
 
 ROOT = '/Users/drmaciver/Projects/calvins-dad'
-OUT = sys.argv[2] if len(sys.argv) > 2 else '.'
-base = Image.open(ROOT + '/assets/full-panels/panel2.png').convert('L')
+BEST = '4'
 
 def panel(image, d):
     """dad2.panel_two with the shoe drawn after the trousers (in front of the seat)."""
@@ -186,8 +189,15 @@ def variant6():
     return d
 
 
+def panel_two(image):
+    """The best refinement, drawn over the panel as assemble builds it."""
+    return panel(image, variant(BEST))
+
+
 if __name__ == '__main__':
     n = sys.argv[1]
+    OUT = sys.argv[2] if len(sys.argv) > 2 else '.'
+    base = Image.open(ROOT + '/assets/full-panels/panel2.png').convert('L')
     out = panel(base, variant(n))
     out.save(f'{OUT}/v{n}.png')
     out.crop((0, 1100, 1700, 2500)).save(f'{OUT}/v{n}-lower.png')

@@ -4,17 +4,13 @@
   "stripDate": "1990-06-05",
   "sourceProcessing": "Existing build_assets.py ink/background extraction, lettering removal, and ART_SCALE=2 smoothing.",
   "references": {
-    "8": "Two-knee pose with folded shins and trailing shoes, mirrored for the scene",
-    "110": "Bottom strip, panels 3 and 4. Folded-leg reference and directly sampled sneaker ink.",
-    "226": "Compact folded lower legs and shoes",
-    "237": "Crouching hip, diagonal thigh and torso",
-    "247": "Original four panels, seated Calvin, portable record player"
+    "247": "Original four panels: panel 1's sleeve for panel 2's, and the seated Calvin"
   },
-  "generation": "No generated imagery remains in Dad's figure: everything of him outside the panel 2 upper and the panel 3 crop is drawn programmatically by drawn_legs.py with the ink.py brush kit, modelled on panel 1's trousers and shoes and the kneeling Dad on page 8.",
+  "generation": "No generated imagery remains in Dad's figure: everything of him outside the scanned crops is drawn programmatically with the ink.py brush kit (dad2_refine.py for panel 2, drawn_legs.py for panel 3). The close-ups stop above his legs, which are not drawn.",
   "directReuse": {
     "1": "Entire cleaned original panel; existing left extension retained.",
-    "2": "Prior repaired upper artwork, including original head, hands, record and Calvin expression. The legs and shoe below the crop are drawn by drawn_legs.py. The grille and paired knobs come from panel 1, with the seated pose and player as drawing guides.",
-    "3": "Entire cleaned scan crop retained. Dad outside the crop (back, shirt, both sleeves, the gesturing arm's elbow, the resting arm and hand, trousers and shoe) is drawn by drawn_legs.py. Calvin and the player from panel 1 are enlarged 1.56\u00d7. The original upward-looking head joins the reflected seated body at its collar. The shoes point toward the player in both close-ups.",
+    "2": "Entire cleaned scan crop retained, ending at its own foot. Dad's back and near sleeve to the left are drawn by dad2_refine.py; the rest of Calvin's head to the right comes from the prior repaired upper artwork.",
+    "3": "Entire cleaned scan crop retained. Dad outside the crop (back, shirt, both sleeves, the gesturing arm's elbow and the hanging arm) is drawn by drawn_legs.py, down to just above his trousers, where the panel ends. Calvin from panel 1 is enlarged 1.56\u00d7; the original upward-looking head joins the reflected seated body at its collar.",
     "4": "Entire cleaned original night panel; existing left bed extension retained."
   },
   "scaleCheck": {
@@ -56,7 +52,7 @@
       "panel": 2,
       "size": [
         3182,
-        3660
+        2060
       ],
       "originalOffset": [
         800,
@@ -66,15 +62,15 @@
         1582,
         2060
       ],
-      "changedOriginalPixels": 24401,
-      "originalMatchFraction": 0.992512550169995,
-      "changedOriginalInkPixels": 9957
+      "changedOriginalPixels": 0,
+      "originalMatchFraction": 1.0,
+      "changedOriginalInkPixels": 0
     },
     {
       "panel": 3,
       "size": [
         3174,
-        3660
+        2690
       ],
       "originalOffset": [
         800,
