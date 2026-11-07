@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_assets as b
 import dad2_refine
-import drawn_legs
+import dad3
 
 HERE = Path(__file__).resolve().parent
 OUT = b.ROOT / 'assets/full-panels'
@@ -24,8 +24,8 @@ CALVIN_TORSO_MIDDLE = 67
 # source pixels are exactly 312 export pixels), the player beyond his toes.
 CALVIN_SHIFT = 100
 CALVIN_AT = (2422 - round(CALVIN_SHIFT * 2 * CALVIN_SCALE), 2024)
-# Panel 3 ends just above Dad's trousers, so his legs are never drawn.
-PANEL3_HEIGHT = 2690
+PLAYER_AT = (1560, 2714)
+PANEL3_HEIGHT = 3660
 
 
 def panel_two():
@@ -68,18 +68,27 @@ def calvin_insert():
     return art.resize(tuple(round(s * CALVIN_SCALE) for s in art.size), RESAMPLE)
 
 
+def player_insert():
+    """Panel 1's record player at close-up scale, cut free of Calvin's shoe."""
+    source = Image.open(HERE / 'calvin-player-source.png').convert('L')
+    player = source.crop((218, 226, 415, 349))
+    ImageDraw.Draw(player).polygon([(0, 84), (5, 84), (7, 101), (0, 101)], fill=255)
+    player = player.crop(ImageChops.invert(player).getbbox())
+    art = b.smooth(np.asarray(player) < 128)
+    return art.resize(tuple(round(s * CALVIN_SCALE) for s in art.size), RESAMPLE)
+
+
 def panel_three(original):
-    # Everything of Dad outside the scan is drawn by drawn_legs.panel_three.
+    # Dad outside the scan comes from dad3.panel_three.
     staged = Image.new('L', (1587, PANEL3_HEIGHT // 2), 255)
     staged.paste(Image.open(HERE / 'original-3.png'), (400, 0))
     result = b.smooth(np.asarray(staged) < 128)
     result.paste(original, (800, 0))
-    # Calvin as far down as the panel goes (the player sits below its foot).
-    child = calvin_insert()
-    child = child.crop((0, 0, child.width, PANEL3_HEIGHT - CALVIN_AT[1]))
-    # Ink him over the panel, so his white surround leaves the scan alone.
-    box = (*CALVIN_AT, CALVIN_AT[0] + child.width, CALVIN_AT[1] + child.height)
-    result.paste(ImageChops.darker(result.crop(box), child), box)
+    # Ink Calvin and the player over the panel, so their white surround
+    # leaves the scan alone.
+    for art, at in ((calvin_insert(), CALVIN_AT), (player_insert(), PLAYER_AT)):
+        box = (*at, at[0] + art.width, at[1] + art.height)
+        result.paste(ImageChops.darker(result.crop(box), art), box)
     return result
 
 
@@ -95,7 +104,7 @@ def build():
         if number == 2:
             image = panel_two()
         elif number == 3:
-            image = drawn_legs.panel_three(panel_three(original))
+            image = dad3.panel_three(panel_three(original))
         else:
             ink = np.asarray(Image.open(HERE / f'original-{number}.png')) < 128
             extended, _ = b.extended(ink, b.PANELS[number - 1])

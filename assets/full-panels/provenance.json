@@ -4,13 +4,13 @@
   "stripDate": "1990-06-05",
   "sourceProcessing": "Existing build_assets.py ink/background extraction, lettering removal, and ART_SCALE=2 smoothing.",
   "references": {
-    "247": "Original four panels: panel 1's sleeve for panel 2's, and the seated Calvin"
+    "247": "Original four panels: panel 1's sleeve for panel 2's, and the seated Calvin and record player"
   },
-  "generation": "No generated imagery remains in Dad's figure: everything of him outside the scanned crops is drawn programmatically with the ink.py brush kit (dad2_refine.py for panel 2, drawn_legs.py for panel 3). The close-ups stop above his legs, which are not drawn.",
+  "generation": "Panel 2: Dad outside the scanned crop is drawn programmatically with the ink.py brush kit (dad2_refine.py); the close-up stops at the scan's foot, above his legs. Panel 3: Dad outside the scanned crop comes from a ChatGPT drawing (dad3-chatgpt.webp), registered to the scan and warped by dad3.py, with its floor marks removed.",
   "directReuse": {
     "1": "Entire cleaned original panel; existing left extension retained.",
     "2": "Entire cleaned scan crop retained, ending at its own foot. Dad's back and near sleeve to the left are drawn by dad2_refine.py; the rest of Calvin's head to the right comes from the prior repaired upper artwork.",
-    "3": "Entire cleaned scan crop retained. Dad outside the crop (back, shirt, both sleeves, the gesturing arm's elbow and the hanging arm) is drawn by drawn_legs.py, down to just above his trousers, where the panel ends. Calvin from panel 1 is enlarged 1.56\u00d7; the original upward-looking head joins the reflected seated body at its collar.",
+    "3": "Entire cleaned scan crop retained. Dad outside the crop is the ChatGPT drawing warped by dad3.py. Calvin and the record player from panel 1 are enlarged 1.56\u00d7; Calvin's original upward-looking head joins the reflected seated body at its collar.",
     "4": "Entire cleaned original night panel; existing left bed extension retained."
   },
   "scaleCheck": {
@@ -70,7 +70,7 @@
       "panel": 3,
       "size": [
         3174,
-        2690
+        3660
       ],
       "originalOffset": [
         800,

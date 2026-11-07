@@ -55,40 +55,48 @@ def test_calvin_keeps_his_scale_relative_to_dad():
     assert abs(ratios[1] / ratios[0] - 1) < 0.02
 
 
-def test_dad_outside_the_crops_is_the_programmatic_drawing():
+def test_dad_outside_the_crops_is_the_drawing_code_s():
     import sys
     sys.path.insert(0, str(ROOT / 'tools/extensions/reconstruction-v2'))
     import dad2_refine
-    import drawn_legs
+    import dad3
     # Redrawing over the export changes nothing: Dad outside each crop is
-    # exactly what the drawing code draws.
-    for number, draw in ((2, dad2_refine.panel_two), (3, drawn_legs.panel_three)):
+    # exactly what the drawing code puts there.
+    for number, draw in ((2, dad2_refine.panel_two), (3, dad3.panel_three)):
         image = Image.open(OUT / f'panel{number}.png').convert('L')
         assert np.array_equal(np.asarray(draw(image)), np.asarray(image))
 
 
-def test_close_ups_stop_above_dads_legs():
-    # Panel 2's crop already reaches his knee, so it is not extended below
-    # the scan; panel 3 stops just above the top of his trousers.
+def test_panel2_is_not_extended_below_the_scan():
+    # Panel 2's crop already reaches his knee.
     assert Image.open(OUT / 'panel2.png').height == Image.open(OUT / 'original2.png').height
-    image = np.asarray(Image.open(OUT / 'panel3.png')) < 128
-    assert image.shape[0] > 2060
-    # His trousers are a solid black mass; below the crop only brush lines
-    # (at most about 50px across where strokes meet) show, and they erode away.
+
+
+def test_panel3_shows_dad_kneeling_on_the_floor():
     from scipy import ndimage
-    assert not ndimage.binary_erosion(image[2060:, :1300], iterations=25).any()
+    image = np.asarray(Image.open(OUT / 'panel3.png')) < 128
+    # His trousers are a solid black mass below the crop, reaching the floor
+    # where Calvin and the player sit.
+    trousers = ndimage.binary_erosion(image[2060:, :1600], iterations=25)
+    rows = np.nonzero(trousers.any(1))[0] + 2060
+    assert rows.min() < 2800 and rows.max() > 3000
+    floor = np.nonzero(image[:, :1600].any(1))[0].max()
+    assert 3050 < floor < 3150
+    # No floor marks: nothing of him or anything else to the left of his shoe
+    # on the floor line.
+    assert not image[2950:, :300].any()
 
 
+def test_panel3_lines_meet_the_scan_at_the_crop_s_edges():
+    # Every line of the scan that runs out of the crop goes on outside it.
+    image = np.asarray(Image.open(OUT / 'panel3.png')) < 128
+    scan = np.asarray(Image.open(OUT / 'original3.png')) < 128
 
-def test_panel3_near_sleeve_is_watterson_s_from_panel_one():
-    # The near sleeve below the crop is panel 1's sleeve moved into place,
-    # not a drawn one: its shape, and a single-line hem with no cuff.
-    import sys
-    sys.path.insert(0, str(ROOT / 'tools/extensions/reconstruction-v2'))
-    import drawn_legs
-    image = np.asarray(Image.open(OUT / 'panel3.png').convert('L')) < 128
-    ink, shape = drawn_legs.near_sleeve(image.shape[::-1])
-    region = shape.copy()
-    region[:2060, 800:] = False
-    assert region.sum() > 50_000
-    assert (image[region] == ink[region]).all()
+    def crossings(line):
+        edges = np.flatnonzero(np.diff(np.r_[0, line.astype(int), 0]))
+        return [(a + b - 1) // 2 for a, b in zip(edges[::2], edges[1::2])]
+
+    for x in crossings(scan[-1]):
+        assert image[2066:2072, 800 + x - 10:800 + x + 11].any(), x + 800
+    for y in crossings(scan[:, 0]):
+        assert image[y - 10:y + 11, 792:796].any(), y

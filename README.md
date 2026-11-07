@@ -30,12 +30,13 @@ The [completed panel artwork](panels.html), at
 <http://localhost:8765/panels.html>, includes all four full-resolution exports
 and an adjustable overlay of each original crop. The reconstructed lower scenes
 are in `assets/full-panels/`; their source comparisons and rebuild commands are
-recorded in `assets/full-panels/provenance.json`. The two close-ups stop
-above Dad's legs, which are never drawn: panel 2 ends at its scan's foot,
-which already reaches his knee, and panel 3 just above his trousers. What
-of Dad lies outside the crops (his back, shirt, sleeves and arms) is drawn
-in code by `tools/extensions/reconstruction-v2/dad2_refine.py` (panel 2) and
-`drawn_legs.py` (panel 3). These artwork exports are
+recorded in `assets/full-panels/provenance.json`. Panel 2 ends at its
+scan's foot, which already reaches Dad's knee; what of him lies left of the
+crop (his back and sleeve) is drawn in code by
+`tools/extensions/reconstruction-v2/dad2_refine.py`. In panel 3 he kneels in
+full: outside the crop he comes from a ChatGPT drawing of the pose
+(`dad3-chatgpt.webp`), which `dad3.py` places over the scan by his head and
+warps so its lines meet the scan's at the crop's edges. These artwork exports are
 separate from the editor's layout assets.
 
 The [Unicode sampler](sampler.html), at <http://localhost:8765/sampler.html>,
