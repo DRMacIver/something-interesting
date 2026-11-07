@@ -63,6 +63,39 @@ FLOOR_MARKS = [[(25, 1138), (93, 1138), (93, 1182), (25, 1182)],
                [(703, 1128), (830, 1128), (830, 1178), (703, 1178)]]
 
 
+# The drawing's far sleeve ended in a long straight hem and a pointed corner
+# hanging below the arm, so it read as a flap laid over it. Its hem,
+# underside and the elbow are erased (paths, widths) and redrawn: a shorter
+# sleeve with a rounded cap running on from the scan's shoulder line, a hem
+# the arm fills, a short stretch of upper arm from the hem to the inside of
+# the elbow, and one curve under the elbow into the forearm. Chosen over
+# five rounds of Codex A/B critique.
+FAR_SLEEVE_ERASE = [
+    ([(1165, 2215), (1225, 2250), (1290, 2300)], 48),
+    ([(1290, 2300), (1360, 2242), (1420, 2192), (1452, 2163)], 46),
+    ([(1352, 2262), (1400, 2283), (1445, 2310), (1486, 2340), (1530, 2318),
+      (1565, 2296), (1598, 2278), (1626, 2262)], 46),
+    ([(1490, 2108), (1490, 2150), (1530, 2162), (1560, 2152)], 40),
+    ([(1452, 2130), (1468, 2142)], 22),
+    ([(1436, 2078), (1462, 2100), (1482, 2116)], 34),
+]
+FAR_SLEEVE_DRAW = [
+    # Underside, from the shirt's far side.
+    ([(1118, 2196), (1170, 2204), (1226, 2210), (1272, 2212), (1294, 2208)], [18, 18, 19, 19, 18]),
+    # Hem.
+    ([(1288, 2214), (1330, 2206), (1376, 2186), (1416, 2162), (1448, 2142)], [20, 21, 21, 20, 19]),
+    # Cap, from the scan's shoulder line.
+    ([(1420, 2060), (1440, 2074), (1458, 2092), (1462, 2114), (1450, 2140)], [19, 19, 19, 19, 18]),
+    # The upper arm's top, out of the hem to the inside of the elbow.
+    ([(1436, 2158), (1464, 2167), (1494, 2172)], [11, 12, 13]),
+    # The forearm's top edge, down to the inside of the elbow.
+    ([(1600, 2128), (1566, 2148), (1530, 2163), (1494, 2172)], [20, 20, 19, 18]),
+    # Under the upper arm and elbow, into the forearm.
+    ([(1302, 2214), (1356, 2248), (1414, 2278), (1462, 2298), (1490, 2300), (1516, 2291),
+      (1556, 2273), (1600, 2255), (1640, 2241), (1662, 2232)], [18, 19, 19, 20, 20, 20, 20, 20, 20, 20]),
+]
+
+
 def registered(size):
     """The drawing placed over the scan by its head, as a grey image."""
     r = REGISTRATION
@@ -108,14 +141,23 @@ def cleaned(ink):
 
 
 def panel_three(image):
-    """Ink Dad outside the scanned crop over `image`: the warped drawing, plus
-    the ends of the two shirt folds that the scan cuts off at its foot."""
+    """Ink Dad outside the scanned crop over `image`: the warped drawing with
+    its far sleeve redrawn, plus the ends of the two shirt folds that the
+    scan cuts off at its foot."""
     w, h = image.size
     drawing = cleaned(warped((w, h)))
     folds = Ink((w, h), seed=5)
     folds.stroke([(1345, 2000), (1330, 2059), (1310, 2080), (1282, 2094)], [10, 10, 8, 3])
-    folds.stroke([(1372, 2045), (1384, 2059), (1394, 2082), (1400, 2104)], [12, 11, 4])
+    folds.stroke([(1372, 2045), (1384, 2059), (1389, 2072), (1392, 2082)], [12, 11, 6, 2])
     drawing |= folds.mask()
+    erase = Ink((w, h), seed=11)
+    for path, width in FAR_SLEEVE_ERASE:
+        erase.stroke(path, [width] * len(path), wobble=0)
+    drawing &= ~erase.mask()
+    sleeve = Ink((w, h), seed=12)
+    for path, widths in FAR_SLEEVE_DRAW:
+        sleeve.stroke(path, widths)
+    drawing |= sleeve.mask()
     a = np.asarray(image).copy()
     yy, xx = np.mgrid[:h, :w]
     x0, y0, x1, y1 = CROP

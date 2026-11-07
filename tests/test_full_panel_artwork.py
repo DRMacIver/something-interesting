@@ -100,3 +100,11 @@ def test_panel3_lines_meet_the_scan_at_the_crop_s_edges():
         assert image[2066:2072, 800 + x - 10:800 + x + 11].any(), x + 800
     for y in crossings(scan[:, 0]):
         assert image[y - 10:y + 11, 792:796].any(), y
+
+
+def test_panel3_far_sleeve_has_no_pointed_flap():
+    # The drawing's far sleeve ended in a long straight hem and a pointed
+    # corner hanging below the arm (around (1283, 2300)), so it read as a
+    # flap of cloth; the sleeve is redrawn shorter, with the arm filling it.
+    image = np.asarray(Image.open(OUT / 'panel3.png')) < 128
+    assert not image[2270:2320, 1250:1310].any()
