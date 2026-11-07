@@ -36,7 +36,8 @@ crop (his back and sleeve) is drawn in code by
 `tools/extensions/reconstruction-v2/dad2_refine.py`. In panel 3 he kneels in
 full: outside the crop he comes from a ChatGPT drawing of the pose
 (`dad3-chatgpt.webp`), which `dad3.py` places over the scan by his head and
-warps so its lines meet the scan's at the crop's edges. These artwork exports are
+warps so its lines meet the scan's at the crop's edges. Its far sleeve,
+trouser folds and line weights are then redrawn (`dad3-edits.json`). These artwork exports are
 separate from the editor's layout assets.
 
 The [Unicode sampler](sampler.html), at <http://localhost:8765/sampler.html>,

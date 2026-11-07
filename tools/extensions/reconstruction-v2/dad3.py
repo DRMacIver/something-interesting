@@ -11,6 +11,7 @@ is kept exactly.
 All coordinates are pixels of the full-panel export, where the scan sits
 at (800, 0) and is 1574 x 2060.
 """
+import json
 from pathlib import Path
 
 import numpy as np
@@ -22,6 +23,8 @@ from ink import Ink
 
 HERE = Path(__file__).resolve().parent
 SOURCE = HERE / 'dad3-chatgpt.webp'
+# Later redrawing of parts of Dad, one stage per part, applied in order.
+EDITS = HERE / 'dad3-edits.json'
 CROP = (800, 0, 2374, 2060)
 
 # The drawing's pixel (u, v) lands at s*R(theta)(u, v) + (tx, ty).
@@ -140,10 +143,46 @@ def cleaned(ink):
     return ink
 
 
+def edit_ops(shape, stage, seed):
+    """One stage of EDITS as (mask, ink?) pairs, in order: erase strokes
+    ("erase": [path, width]) and polygons ("erase_poly"), solid black then
+    white polygons ("black_poly", "white_poly"), then ink and white brush
+    strokes ("draw", "white": [path, widths]). Edits only reach Dad: left of
+    the record player (x < 1560) and outside the crop."""
+    h, w = shape
+    ok = np.zeros(shape, bool)
+    ok[:, :1560] = True
+    x0, y0, x1, y1 = CROP
+    ok[:y1, x0:x1] = False
+    out = []
+    if stage.get('erase') or stage.get('erase_poly'):
+        e = Ink((w, h), seed=seed)
+        for path, width in stage.get('erase', []):
+            e.stroke(path, [width] * len(path), wobble=0)
+        for poly in stage.get('erase_poly', []):
+            e.fill(poly, wobble=0)
+        out.append((e.mask() & ok, False))
+    for key, value in (('black_poly', True), ('white_poly', False)):
+        if stage.get(key):
+            f = Ink((w, h), seed=seed)
+            for poly in stage[key]:
+                f.fill(poly, wobble=0)
+            out.append((f.mask() & ok, value))
+    for key, value in (('draw', True), ('white', False)):
+        if stage.get(key):
+            d = Ink((w, h), seed=seed)
+            for path, widths in stage[key]:
+                d.stroke(path, widths)
+            out.append((d.mask() & ok, value))
+    return out
+
+
 def panel_three(image):
     """Ink Dad outside the scanned crop over `image`: the warped drawing with
     its far sleeve redrawn, plus the ends of the two shirt folds that the
-    scan cuts off at its foot."""
+    scan cuts off at its foot, then the stages in EDITS: the trousers' knee
+    and folds, then every thin line retraced with brush-like weight. Each
+    stage was made by an agent and kept only when Codex judged it better."""
     w, h = image.size
     drawing = cleaned(warped((w, h)))
     folds = Ink((w, h), seed=5)
@@ -158,6 +197,9 @@ def panel_three(image):
     for path, widths in FAR_SLEEVE_DRAW:
         sleeve.stroke(path, widths)
     drawing |= sleeve.mask()
+    for i, stage in enumerate(json.loads(EDITS.read_text()) if EDITS.exists() else []):
+        for mask, value in edit_ops(drawing.shape, stage, 100 + i):
+            drawing[mask] = value
     a = np.asarray(image).copy()
     yy, xx = np.mgrid[:h, :w]
     x0, y0, x1, y1 = CROP

@@ -108,3 +108,13 @@ def test_panel3_far_sleeve_has_no_pointed_flap():
     # flap of cloth; the sleeve is redrawn shorter, with the arm filling it.
     image = np.asarray(Image.open(OUT / 'panel3.png')) < 128
     assert not image[2270:2320, 1250:1310].any()
+
+
+def test_panel3_trousers_fold_divides_shin_from_thigh():
+    # The trousers were one undivided black mound; a long white fold now
+    # runs inside them from the cuff towards the knee.
+    from scipy import ndimage
+    ink = np.asarray(Image.open(OUT / 'panel3.png').convert('L'))[2500:3150, 350:1560] < 128
+    holes = ndimage.binary_fill_holes(ink) & ~ink
+    widths = [s[1].stop - s[1].start for s in ndimage.find_objects(ndimage.label(holes)[0])]
+    assert max(widths) > 450
