@@ -3,41 +3,27 @@
   "sourcePage": 247,
   "stripDate": "1990-06-05",
   "sourceProcessing": "Existing build_assets.py ink/background extraction, lettering removal, and ART_SCALE=2 smoothing.",
-  "references": {
-    "247": "Original four panels: panel 1's sleeve for panel 2's, and the seated Calvin and record player"
-  },
-  "generation": "Panel 2: Dad outside the scanned crop is drawn programmatically with the ink.py brush kit (dad2_refine.py); the close-up stops at the scan's foot, above his legs. Panel 3: Dad outside the scanned crop comes from a ChatGPT drawing (dad3-chatgpt.webp), registered to the scan and warped by dad3.py, with its floor marks removed.",
+  "generation": "Panels 1 to 3: everything outside the scanned crop comes from one whole-scene drawing per panel made by Codex's image generation from the scan (prompts in tools/extensions/graft/prompts, chosen drawings in tools/extensions/graft/picks). graft.py registers each drawing to the scan, bends it to agree with the scan inside the crop, joins its lines to the scan's at the crop's edges, and re-inks it at the scan's line weight and smoothing. The scan itself is pasted back unchanged.",
   "directReuse": {
-    "1": "Entire cleaned original panel; existing left extension retained.",
-    "2": "Entire cleaned scan crop retained, ending at its own foot. Dad's back and near sleeve to the left are drawn by dad2_refine.py; the rest of Calvin's head to the right comes from the prior repaired upper artwork.",
-    "3": "Entire cleaned scan crop retained. Dad outside the crop is the ChatGPT drawing warped by dad3.py. Calvin and the record player from panel 1 are enlarged 1.56\u00d7; Calvin's original upward-looking head joins the reflected seated body at its collar.",
+    "1": "Entire cleaned original panel.",
+    "2": "Entire cleaned scan crop. Dad's shoe is panel 1's planted shoe, mirrored and enlarged by the ratio of his head widths (shoe.py); the join with his trousers is from a tidied redraw (patch.py).",
+    "3": "Entire cleaned scan crop. Dad's shoe is panel 1's planted shoe, as in panel 2.",
     "4": "Entire cleaned original night panel; existing left bed extension retained."
   },
-  "scaleCheck": {
-    "metric": "Calvin head width / Dad head width, thresholded ink at full resolution",
-    "panel2": [
-      602,
-      493
-    ],
-    "panel3": [
-      693,
-      562
-    ]
-  },
   "rebuild": [
-    ".venv/bin/python tools/extensions/reconstruction-v2/prepare_inputs.py",
-    ".venv/bin/python tools/extensions/reconstruction-v2/assemble.py",
-    ".venv/bin/python tools/extensions/reconstruction-v2/build_review.py"
+    "uv run tools/extensions/reconstruction-v2/prepare_inputs.py",
+    "uv run tools/extensions/graft/build.py",
+    "uv run tools/extensions/reconstruction-v2/build_review.py"
   ],
   "outputs": [
     {
       "panel": 1,
       "size": [
-        2834,
+        2134,
         2066
       ],
       "originalOffset": [
-        400,
+        500,
         0
       ],
       "originalSize": [
@@ -46,16 +32,33 @@
       ],
       "changedOriginalPixels": 0,
       "originalMatchFraction": 1.0,
-      "changedOriginalInkPixels": 0
+      "changedOriginalInkPixels": 0,
+      "graft": {
+        "scale": 1.0876349709082687,
+        "theta": -0.0003696028787084566,
+        "tx": -456.08282664516094,
+        "ty": -42.83612650403793,
+        "fit_rigid": 0.14469717064454252,
+        "fit_warped": 0.07893345810071101,
+        "edges_matched": 4,
+        "edges_lost": 0,
+        "edges_extra": 0,
+        "weight_scan": 7.2896898469377955,
+        "weight_before": 8.709475747390325,
+        "weight_after": 7.3182494291057205,
+        "seam": 11,
+        "clipped": false,
+        "candidate": "p1-walk-1.png"
+      }
     },
     {
       "panel": 2,
       "size": [
-        3182,
-        2060
+        3382,
+        3060
       ],
       "originalOffset": [
-        800,
+        900,
         0
       ],
       "originalSize": [
@@ -64,16 +67,51 @@
       ],
       "changedOriginalPixels": 0,
       "originalMatchFraction": 1.0,
-      "changedOriginalInkPixels": 0
+      "changedOriginalInkPixels": 0,
+      "graft": {
+        "scale": 1.0,
+        "theta": 0.0,
+        "tx": -329.0,
+        "ty": 299.0,
+        "fit_rigid": 1.0246002754152501,
+        "fit_warped": 0.7272435213528445,
+        "edges_matched": 15,
+        "edges_lost": 7,
+        "edges_extra": 11,
+        "weight_scan": 7.755626901167768,
+        "weight_before": 10.036864862578101,
+        "weight_after": 8.065322160405788,
+        "seam": 274,
+        "clipped": false,
+        "candidate": "p2-kneel-19.png",
+        "head": 493,
+        "old_shoe": [
+          290,
+          2110,
+          670,
+          2420
+        ],
+        "shoe_at": [
+          800,
+          2410
+        ],
+        "tidy": "p2-tidy-1.png",
+        "region": [
+          0,
+          1560,
+          1680,
+          2680
+        ]
+      }
     },
     {
       "panel": 3,
       "size": [
-        3174,
+        3774,
         3660
       ],
       "originalOffset": [
-        800,
+        900,
         0
       ],
       "originalSize": [
@@ -82,7 +120,42 @@
       ],
       "changedOriginalPixels": 0,
       "originalMatchFraction": 1.0,
-      "changedOriginalInkPixels": 0
+      "changedOriginalInkPixels": 0,
+      "graft": {
+        "scale": 1.1869180995060964,
+        "theta": 0.0008733291470369086,
+        "tx": -306.63295925991906,
+        "ty": 470.4428017635643,
+        "fit_rigid": 0.9405230559519706,
+        "fit_warped": 0.6762313133290792,
+        "edges_matched": 9,
+        "edges_lost": 11,
+        "edges_extra": 5,
+        "weight_scan": 7.643695130601757,
+        "weight_before": 9.868333643623094,
+        "weight_after": 7.897608705187964,
+        "seam": 186,
+        "clipped": false,
+        "candidate": "p3-kneel-3.png",
+        "head": 562,
+        "old_shoe": [
+          480,
+          2880,
+          940,
+          3240
+        ],
+        "shoe_at": [
+          1030,
+          3205
+        ],
+        "tidy": "p3-tidy-2.png",
+        "region": [
+          150,
+          2300,
+          2100,
+          3600
+        ]
+      }
     },
     {
       "panel": 4,

@@ -1,18 +1,33 @@
-"""The reconstructed exports must preserve their independently extracted art."""
+"""The full-panel exports: Watterson's scan, with a drawing grafted round it."""
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageOps
+import pytest
+from PIL import Image
+from scipy import ndimage
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'assets/full-panels'
+sys.path.insert(0, str(ROOT / 'tools/extensions/graft'))
+import build  # noqa: E402
+import graft  # noqa: E402
+import shoe  # noqa: E402
+
+
+def export(number):
+    return Image.open(OUT / f'panel{number}.png')
+
+
+def ink(number):
+    return np.asarray(export(number)) < 128
 
 
 def test_original_crops_are_preserved():
     for item in json.loads((OUT / 'verification.json').read_text()):
         number = item['panel']
-        image = Image.open(OUT / f'panel{number}.png')
+        image = export(number)
         source = np.asarray(Image.open(OUT / f'original{number}.png'))
         x, y = item['originalOffset']
         width, height = item['originalSize']
@@ -20,101 +35,61 @@ def test_original_crops_are_preserved():
         assert image.size == tuple(item['size'])
         # Every panel keeps Watterson's crop exactly.
         assert np.array_equal(overlap, source)
+        assert item['changedOriginalPixels'] == 0
 
 
-def test_panel3_reuses_the_scanned_child_at_closeup_scale():
-    image = Image.open(OUT / 'panel3.png')
-    pair = Image.open(OUT / 'reused-calvin-player.png')
-    scale = 1.56
-
-    def scaled(art):
-        return art.resize(tuple(round(v * scale) for v in art.size), Image.Resampling.LANCZOS)
-
-    # Calvin's head is exactly as in panel 1, looking up towards Dad.
-    def agreement(art, x, y):
-        actual = image.crop((x, y, x + art.width, y + art.height))
-        return np.mean((np.asarray(actual) < 128) == (np.asarray(art) < 128))
-
-    head = scaled(pair.crop((6, 16, 452, 420)))
-    assert agreement(head, 2422, 2024) > 0.98
+@pytest.fixture(scope='module')
+def rebuilt():
+    one, _ = build.panel(1)
+    return {1: one, 2: build.panel(2, one)[0], 3: build.panel(3, one)[0]}
 
 
-def test_calvin_keeps_his_scale_relative_to_dad():
-    ratios = []
-    # Windows enclose the widest hair/ear contours, clear of shoulders and hands.
-    for number, windows in [
-        (2, [(880, 790, 1550, 1110), (1880, 1320, 2600, 1750)]),
-        (3, [(970, 1172, 1700, 1552), (2394, 2000, 3174, 2620)]),
-    ]:
-        image = Image.open(OUT / f'panel{number}.png')
-        widths = []
-        for window in windows:
-            _, x = np.nonzero(np.asarray(image.crop(window)) < 128)
-            widths.append(x.max() - x.min() + 1)
-        ratios.append(widths[1] / widths[0])
-    assert abs(ratios[1] / ratios[0] - 1) < 0.02
+@pytest.mark.parametrize('number', [1, 2, 3])
+def test_exports_are_what_the_build_makes(rebuilt, number):
+    assert np.array_equal(np.asarray(rebuilt[number]), np.asarray(export(number)))
 
 
-def test_dad_outside_the_crops_is_the_drawing_code_s():
-    import sys
-    sys.path.insert(0, str(ROOT / 'tools/extensions/reconstruction-v2'))
-    import dad2_refine
-    import dad3
-    # Redrawing over the export changes nothing: Dad outside each crop is
-    # exactly what the drawing code puts there.
-    for number, draw in ((2, dad2_refine.panel_two), (3, dad3.panel_three)):
-        image = Image.open(OUT / f'panel{number}.png').convert('L')
-        assert np.array_equal(np.asarray(draw(image)), np.asarray(image))
+@pytest.mark.parametrize('number, limit', [(1, 60), (2, 350), (3, 250)])
+def test_drawing_joins_the_scan_at_the_crop_s_edges(number, limit):
+    # export px of the crop's edge with ink on one side and paper on the
+    # other: lines that cross it add little, anything cut off along it a lot
+    x0, _, x1, y1 = build.scan_box(number)
+    assert graft.seam_mismatch(export(number), (x1 - x0, y1), x0, build.FRAMES[number]) < limit
 
 
-def test_panel2_is_not_extended_below_the_scan():
-    # Panel 2's crop already reaches his knee.
-    assert Image.open(OUT / 'panel2.png').height == Image.open(OUT / 'original2.png').height
+@pytest.mark.parametrize('number', [2, 3])
+def test_closeups_show_dad_kneeling_on_the_floor(number):
+    drawing = ink(number)
+    _, _, _, foot = build.scan_box(number)
+    below = drawing[foot:]
+    # his trousers: one solid black mass below the scan, about two of his
+    # head widths long
+    solid = ndimage.binary_opening(below[::4, ::4], iterations=8)
+    labels, count = ndimage.label(solid)
+    sizes = ndimage.sum(solid, labels, range(1, count + 1))
+    xs = np.nonzero(labels == int(np.argmax(sizes)) + 1)[1] * 4
+    head = build.PICKS[number]['head']
+    assert 1.6 < (xs.max() - xs.min()) / head < 2.4
+    # and a floor: everything he, Calvin and the player rest on ends within
+    # a third of a head of one level, with blank paper beneath
+    columns = np.nonzero(below.any(0))[0]
+    bottoms = np.array([np.nonzero(below[:, x])[0].max() for x in columns])
+    floor = np.percentile(bottoms, 90)
+    assert bottoms.max() - floor < head / 3
+    assert not below[int(bottoms.max()) + 1:].any()
 
 
-def test_panel3_shows_dad_kneeling_on_the_floor():
-    from scipy import ndimage
-    image = np.asarray(Image.open(OUT / 'panel3.png')) < 128
-    # His trousers are a solid black mass below the crop, reaching the floor
-    # where Calvin and the player sit.
-    trousers = ndimage.binary_erosion(image[2060:, :1600], iterations=25)
-    rows = np.nonzero(trousers.any(1))[0] + 2060
-    assert rows.min() < 2800 and rows.max() > 3000
-    floor = np.nonzero(image[:, :1600].any(1))[0].max()
-    assert 3050 < floor < 3150
-    # No floor marks: nothing of him or anything else to the left of his shoe
-    # on the floor line.
-    assert not image[2950:, :300].any()
-
-
-def test_panel3_lines_meet_the_scan_at_the_crop_s_edges():
-    # Every line of the scan that runs out of the crop goes on outside it.
-    image = np.asarray(Image.open(OUT / 'panel3.png')) < 128
-    scan = np.asarray(Image.open(OUT / 'original3.png')) < 128
-
-    def crossings(line):
-        edges = np.flatnonzero(np.diff(np.r_[0, line.astype(int), 0]))
-        return [(a + b - 1) // 2 for a, b in zip(edges[::2], edges[1::2])]
-
-    for x in crossings(scan[-1]):
-        assert image[2066:2072, 800 + x - 10:800 + x + 11].any(), x + 800
-    for y in crossings(scan[:, 0]):
-        assert image[y - 10:y + 11, 792:796].any(), y
-
-
-def test_panel3_far_sleeve_has_no_pointed_flap():
-    # The drawing's far sleeve ended in a long straight hem and a pointed
-    # corner hanging below the arm (around (1283, 2300)), so it read as a
-    # flap of cloth; the sleeve is redrawn shorter, with the arm filling it.
-    image = np.asarray(Image.open(OUT / 'panel3.png')) < 128
-    assert not image[2270:2320, 1250:1310].any()
-
-
-def test_panel3_trousers_fold_divides_shin_from_thigh():
-    # The trousers were one undivided black mound; a long white fold now
-    # runs inside them from the cuff towards the knee.
-    from scipy import ndimage
-    ink = np.asarray(Image.open(OUT / 'panel3.png').convert('L'))[2500:3150, 350:1560] < 128
-    holes = ndimage.binary_fill_holes(ink) & ~ink
-    widths = [s[1].stop - s[1].start for s in ndimage.find_objects(ndimage.label(holes)[0])]
-    assert max(widths) > 450
+@pytest.mark.parametrize('number', [2, 3])
+def test_dads_shoe_is_panel_one_s(number):
+    pick = build.PICKS[number]
+    alpha, shoe_ink, _ = shoe.panel_one_shoe(export(1), pick['head'] / shoe.PANEL1_HEAD)
+    h, w = alpha.shape
+    x0, y0 = pick['shoe_at'][0] - w, pick['shoe_at'][1] - h
+    # the toe: the front two fifths of the shoe, clear of his trousers
+    toe = (slice(y0, y0 + h), slice(x0, x0 + 2 * w // 5))
+    drawn = ink(number)[toe]
+    his = shoe_ink[:, :2 * w // 5]
+    assert drawn.sum() > 0.5 * his.sum()
+    # the same shape, to within the thinning of its line
+    assert ndimage.distance_transform_edt(~his)[drawn].mean() < 6
+    assert ndimage.distance_transform_edt(~drawn)[his].mean() < 12

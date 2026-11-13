@@ -1,0 +1,5 @@
+Style: the original cartoonist's brush-and-ink line: bold, slightly irregular black brush outlines whose thickness swells and tapers, solid flat black for the trousers with at most two or three short white fold nicks, pure white fills. Shoes are big, plain, rounded white shoes with a simple sole line, no laces or tread. Short sleeves are loose, end in a plain single-line hem with no cuff, and reach nearly to the elbow. Hands are four-fingered cartoon hands (thumb and three fingers). Strictly black and white: no grey, no shading, no hatching, no colour, no floor line, no ground marks, no shadows, no motion lines, no text, no speech balloons, no panel border, no furniture.
+
+Framing: landscape, as large as your tool allows. The first attached image shows where the close-up sits in the frame and how big it is: match that placement and size, so the scene fills the frame with only a small white margin, and every figure, hand and shoe is completely inside the image.
+
+Save the result as OUTNAME in the current directory and reply with one line saying it is saved.

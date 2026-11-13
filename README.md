@@ -30,14 +30,15 @@ The [completed panel artwork](panels.html), at
 <http://localhost:8765/panels.html>, includes all four full-resolution exports
 and an adjustable overlay of each original crop. The reconstructed lower scenes
 are in `assets/full-panels/`; their source comparisons and rebuild commands are
-recorded in `assets/full-panels/provenance.json`. Panel 2 ends at its
-scan's foot, which already reaches Dad's knee; what of him lies left of the
-crop (his back and sleeve) is drawn in code by
-`tools/extensions/reconstruction-v2/dad2_refine.py`. In panel 3 he kneels in
-full: outside the crop he comes from a ChatGPT drawing of the pose
-(`dad3-chatgpt.webp`), which `dad3.py` places over the scan by his head and
-warps so its lines meet the scan's at the crop's edges. Its far sleeve,
-trouser folds and line weights are then redrawn (`dad3-edits.json`). These artwork exports are
+recorded in `assets/full-panels/provenance.json`. In panels 1 to 3 the scan
+is kept pixel for pixel and everything outside it comes from one whole-scene
+drawing per panel, made by Codex's image generation and fitted to the scan in
+code: registered, bent to agree with the scan inside the crop, joined to its
+lines at the crop's edges and re-inked at its line weight. In the two
+close-ups Dad's shoe is Watterson's own from panel 1. The method, the fit
+measurements and what was tried before are in
+[tools/extensions/graft](tools/extensions/graft/README.md); rebuild with
+`uv run tools/extensions/graft/build.py`. These artwork exports are
 separate from the editor's layout assets.
 
 The [Unicode sampler](sampler.html), at <http://localhost:8765/sampler.html>,

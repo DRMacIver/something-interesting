@@ -1,0 +1,11 @@
+Use your image generation tool (do not draw with code) to make ONE edited image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. Attached is REGION.png: part of a finished black-and-white ink drawing of a man kneeling on the floor in black trousers, with his white shoe on the floor behind him at the lower left.
+
+The shoe is correct: it is the cartoonist's own drawing. Keep its outline, its size, its position, its rounded toe and the brush mark across its top EXACTLY as they are. Do not smooth it, restyle it, lengthen it or move it.
+
+Redraw the image exactly as it is, same canvas and positions, changing ONLY the small place where the back of the shoe meets his black trouser leg: remove any stray specks, flecks or broken bits of line floating there, and let the ragged black hem of the trouser leg sit over the back of the shoe so that the shoe's outline runs cleanly into the trousers with no gap.
+
+Everything else stays where it is. Pure black and white, no grey.
+
+Save the result as OUTNAME in the current directory, 1536x1024, and reply with one line saying it is saved.

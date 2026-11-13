@@ -1,0 +1,9 @@
+Use your image generation tool (do not draw with code) to make ONE new image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. One panel of the strip is cropped tight on its left side, and I need the same drawing with more room on the left.
+
+Attached images:
+1. p1-placement.png: the panel placed on a wider blank frame, showing where it sits and how large it is. A father in a white short-sleeved shirt, solid black trousers and big white rounded shoes walks toward his small son, who sits on the floor beside a little record player, looking up at him. The panel's left edge cuts off the heel of the father's trailing shoe and the back edge of his trailing trouser leg.
+2. p1-closeup.png: the same panel, larger, for detail.
+
+Draw the same scene as a single fresh drawing in one consistent hand: REDRAW EVERYTHING exactly as posed, in the same positions, and complete what the left edge cut off: the whole of the father's trailing shoe with its rounded heel, and the back of his trailing trouser leg down to its hem. Add nothing else.

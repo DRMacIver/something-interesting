@@ -1,0 +1,14 @@
+Use your image generation tool (do not draw with code) to make ONE new image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. I need the wide shot of a moment the strip only shows in close-up.
+
+Attached images:
+1. p3-placement.png: the close-up placed on the full blank frame, showing where it sits and how large it is in the wide shot. A father, turned three-quarters toward us and leaning forward, is explaining something to his small son, one hand held out palm-up toward the lower right. Only his head, collar, shoulder and that hand are in the close-up.
+2. p3-closeup.png: the same close-up, larger, for detail.
+3. panel1-reference.png: an earlier panel of the same strip, showing the same father full length (white short-sleeved shirt, solid black trousers, big white rounded shoes), the boy sitting on the floor looking up at him with his shoe soles toward us, and a little record player on the floor. This is the style, proportion and costume reference.
+4. legs-reference.png: the father's trousers and shoes from that panel, enlarged. Draw his legs and shoes to these proportions, measured against his head: each shoe is as long as his whole head is wide (1.1 head widths) and nearly half a head high; each trouser leg is baggy, three-quarters of a head wide; his thigh is one and a half head widths long. The shoes are plain white with ONE heavy black outline and a thin sole line along the bottom only: no second outline or rim running round the shoe, no laces, no tread.
+
+Draw the complete wide shot as a single fresh drawing in one consistent hand: REDRAW EVERYTHING, including the parts the close-up already shows, keeping the father's head, glasses, expression, collar and open gesturing hand exactly as posed in the close-up and in the same relative positions. Then complete it:
+- his loose white shirt and both short sleeves;
+- the gesturing arm, bending naturally at the elbow below the close-up and rising to the open hand;
+- at the lower right, the boy sitting on the floor in his striped T-shirt, looking up at his father, with the little record player on the floor between them;

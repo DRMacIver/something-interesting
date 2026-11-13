@@ -1,0 +1,17 @@
+Use your image generation tool (do not draw with code) to make ONE edited image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. Attached:
+1. REGION.png: part of a finished black-and-white drawing: a father kneeling on the floor in black trousers, his shoe showing behind him at the lower left.
+2. shoe-style.png: how this strip's cartoonist actually draws this man's shoes: (A) his shoes in this very strip, (B) the same shoes in side view elsewhere, (C) a sole turned toward us.
+
+Redraw image 1 exactly as it is, same canvas, same positions, same line weight, changing ONLY the shoe behind him. The shoe there now is wrong: it is too small, and it is a smooth oval with a second line running round inside its outline, which this cartoonist never draws.
+
+Draw his shoe the way image 2 shows:
+- BIG: LENGTH pixels long in this image (a little longer than his head is wide), and about 0.4 times that deep;
+- a long, low, slightly lumpy bean shape with a bulbous rounded toe, in ONE heavy, uneven brush outline, heavier underneath;
+- the foot lies stretched out behind him, toe pointing away from him to the left, resting on the floor, the heel end hidden under the ragged hem of his black trouser leg;
+- inside the outline, only this cartoonist's own marks: a small oval near the ankle where the shoe opens, and one or two short curved brush strokes sweeping from it forward over the instep toward the toe, as in (A) and (B). No line parallel to the outline, no rim, no tread, no row of laces.
+
+Keep the black trousers, the shirt, hands and everything else pixel-for-pixel where they are; the shoe stays behind the trousers. Pure black and white, no grey.
+
+Save the result as OUTNAME in the current directory, 1536x1024, and reply with one line saying it is saved.
