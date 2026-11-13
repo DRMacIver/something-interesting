@@ -316,11 +316,13 @@ def match_edges(scan_line, cand_line, reach, solid_reach=110):
     unmatched. Matches are mutual nearest neighbours of the same polarity.
     The edges of solid blacks are matched first and may be far apart: a
     black the candidate draws too large would otherwise be cut off flat by
-    the crop. Then any match that would fold the drawing over is dropped,
-    lines before solids."""
+    the crop. A thin line matched by one edge takes its other edge with it,
+    so it keeps its thickness (two thin lines can then close onto one thick
+    one). Then any match that would fold the drawing over, or squeeze it to
+    less than a quarter, is dropped, lines before solids."""
     ours, theirs = edges(scan_line), edges(cand_line)
     pairs = []  # (position, shift, solid)
-    taken_a, taken_b = set(), set()
+    taken_a, taken_b = {}, {}
     for solid, limit in ((True, solid_reach), (False, reach)):
         for polarity in (1, -1):
             a = [(i, p) for i, (p, s, big) in enumerate(ours)
@@ -332,15 +334,25 @@ def match_edges(scan_line, cand_line, reach, solid_reach=110):
             gaps = np.abs(np.array([p for _, p in a])[:, None] - np.array([p for _, p in b])[None, :])
             for row, col in enumerate(gaps.argmin(1)):
                 if gaps[row, col] <= limit and gaps[:, col].argmin() == row:
-                    pairs.append((a[row][1], b[col][1] - a[row][1], solid))
-                    taken_a.add(a[row][0])
-                    taken_b.add(b[col][0])
+                    shift = b[col][1] - a[row][1]
+                    pairs.append((a[row][1], shift, solid))
+                    taken_a[a[row][0]] = taken_b[b[col][0]] = shift
+    matched = len(pairs)
+    # the other edge of each thin line goes where its matched edge goes
+    for j, shift in list(taken_b.items()):
+        position, polarity, big = theirs[j]
+        other = j + polarity  # ink starts: its end is the next edge; ink ends: the one before
+        if big or not 0 <= other < len(theirs) or other in taken_b or theirs[other][1] == polarity:
+            continue
+        pairs.append((theirs[other][0] - shift, shift, False))
+        taken_b[other] = shift
     pairs.sort()
     folded = True
     while folded:
         folded = False
         for first, second in zip(pairs, pairs[1:]):
-            if abs(second[1] - first[1]) > 0.6 * (second[0] - first[0]) + 1.0:
+            apart, change = second[0] - first[0], second[1] - first[1]
+            if change < -0.6 * apart - 1.0 or change > 3.0 * apart + 1.0:
                 if first[2] != second[2]:
                     drop = second if first[2] else first
                 else:
@@ -348,7 +360,8 @@ def match_edges(scan_line, cand_line, reach, solid_reach=110):
                 pairs.remove(drop)
                 folded = True
                 break
-    return [(p, d) for p, d, _ in pairs], len(ours) - len(pairs), len(theirs) - len(pairs)
+    kept = min(matched, len(pairs))
+    return [(p, d) for p, d, _ in pairs], len(ours) - kept, len(theirs) - kept
 
 
 def shift_profile(pairs, length, tail=40):

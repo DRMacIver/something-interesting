@@ -238,3 +238,29 @@ def test_a_line_drawn_along_the_crop_s_edge_is_moved_clear_of_it():
     assert after[64, 90:100].all() and after[224, 90:100].all()   # the crossing lines still arrive
     # a solid black is not a line: it is left for `snap`
     assert np.array_equal(pushed(solid), solid > 0.5)
+
+
+def test_two_thin_lines_can_close_onto_one_thick_one():
+    """Panel 2's sleeve: the drawing has two thin lines with paper between
+    (a hem drawn as a band) where the scan has one thick line. Both must
+    come to the thick line's edges, keeping their own thickness, or the
+    upper one arrives too high and the join zig-zags."""
+    scan = np.zeros(200, bool)
+    cand = np.zeros(200, bool)
+    scan[43:60] = True
+    cand[31:36] = cand[58:64] = True
+    pairs, lost, extra = graft.match_edges(scan, cand, reach=14)
+    assert pairs == [(42.5, -12.0), (47.5, -12.0), (53.5, 4.0), (59.5, 4.0)]
+    assert lost == 0 and extra == 2
+
+
+def test_match_edges_still_refuses_to_fold():
+    # the candidate's lines in the opposite order to the scan's nearest ones
+    scan = np.zeros(200, bool)
+    cand = np.zeros(200, bool)
+    scan[50:56] = scan[62:68] = True
+    cand[58:64] = True          # 8 below the first scan line
+    cand[52:58] = True          # joins it: one thick line where the scan has two
+    pairs, _, _ = graft.match_edges(scan, cand, reach=14)
+    positions = [p + d for p, d in pairs]
+    assert positions == sorted(positions)
