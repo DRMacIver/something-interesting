@@ -86,17 +86,17 @@ tags if it isn't.
   solid blacks (Dad's trousers, the night in panel 4) are only in the
   scan's low resolution background layer, so they're merged in from there.
   Panels can widen to any width, so wherever the art runs off a panel's
-  edge it is finished off: Dad's back and trailing leg in panel 1
-  (`tools/extensions/panel1-left.png`), Dad kneeling by the record player and the
-  rest of Calvin in panel 2 (`tools/extensions/panel2-{left,right}.png`), Dad's
-  shoulder in panel 3 (`tools/extensions/panel3-left.png`) and, below it,
-  the whole scene of Dad down on one knee and Calvin on the floor
-  (`tools/extensions/panel3-below.png`, shown as far as the lettering
-  leaves room), and the far end
-  of Calvin's bed in panel 4 (`tools/extensions/panel4-left.png`), drawn by
-  Codex's image generation
-  from the panel and thresholded to the scan's 1-bit ink so that they're
-  smoothed like the rest. Beyond that the panels are plain background, as
+  edge it is finished off: Dad's trailing heel in panel 1, and in panels 2
+  and 3 the whole scene the close-ups leave out, Dad kneeling by the record
+  player with Calvin sitting on the floor (shown to the sides when a panel
+  widens, and below as far as the lettering leaves room). These come from
+  the [full-panel artwork](tools/extensions/graft/README.md): whole-scene
+  drawings by Codex's image generation, fitted to the scan in code, from
+  which `tools/extensions/graft/editor.py` cuts the 1-bit extensions
+  `tools/extensions/panel{1,2,3}-*.png`. The far end of Calvin's bed in
+  panel 4 (`tools/extensions/panel4-left.png`) is an earlier Codex drawing.
+  All are on the scan's own grid, so they're smoothed like the rest.
+  Beyond the artwork the panels are plain background, as
   far as they need to go; panel 4's bed stays in the middle. Watterson's
   signature is cut out of panel 4 (`assets/signature.png`) so it can sit in
   the corner however wide the panel is.

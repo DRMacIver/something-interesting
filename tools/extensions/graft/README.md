@@ -33,6 +33,16 @@ uv run tools/extensions/graft/build.py
 uv run tools/extensions/reconstruction-v2/build_review.py
 ```
 
+The comic editor uses the same drawings: `editor.py` cuts its panel
+extensions (`tools/extensions/panelN-SIDE.png`) from the exports, and
+`tools/build_assets.py` builds the editor's panels from those:
+
+```sh
+uv run tools/extensions/graft/editor.py
+uv run tools/build_assets.py calvin-and-hobbes.pdf
+uv run tools/version_assets.py
+```
+
 `generate.py` needs the `codex` CLI. Each image takes a few minutes; four
 run at once. The scans come from `../reconstruction-v2/locked-N.png`.
 

@@ -43,8 +43,9 @@ EXTENSIONS = ROOT / "tools" / "extensions"
 PANELS = [
     {
         "box": (62, 1870, 879, 2903),
-        # Dad's back and trailing leg run off the left edge; the rest of him
-        # is drawn in tools/extensions/panel1-left.png.
+        # Dad's trailing heel runs off the left edge; the rest of it is in
+        # tools/extensions/panel1-left.png. (The extensions of panels 1 to 3
+        # are cut from the full-panel exports by tools/extensions/graft/editor.py.)
         "extend": {"left": EXTEND // 2, "right": EXTEND},
         "extensions": {"left": "panel1-left.png"},
         # Dad's balloon and lettering. Only ink lying entirely inside these
@@ -58,10 +59,13 @@ PANELS = [
     },
     {
         "box": (926, 1877, 1717, 2907),
-        # Dad runs off the left edge and Calvin off the right; the rest of
-        # them is drawn in tools/extensions/panel2-{left,right}.png.
-        "extend": {"left": EXTEND // 2, "right": EXTEND},
-        "extensions": {"left": "panel2-left.png", "right": "panel2-right.png"},
+        # Dad runs off the left edge, Calvin off the right and both off the
+        # foot: the rest of the scene, Dad kneeling by the record player and
+        # Calvin sitting, is in tools/extensions/panel2-{left,right,below}.png,
+        # the part below shown when there's room.
+        "extend": {"left": EXTEND, "right": EXTEND, "below": 260},
+        "extensions": {"left": "panel2-left.png", "right": "panel2-right.png",
+                       "below": "panel2-below.png"},
         # Both balloons and their lettering, steering around Dad's head and
         # Calvin's hair.
         "erase": [[(924, 1877), (1720, 1877), (1720, 2545), (1612, 2545),
@@ -89,12 +93,14 @@ PANELS = [
     },
     {
         "box": (1763, 1877, 2550, 2907),
-        # Dad's shoulder runs off the left edge; the rest of it is drawn in
-        # tools/extensions/panel3-left.png. Below is the rest of the scene,
-        # Dad down on one knee and Calvin on the floor
-        # (tools/extensions/panel3-below.png), shown when there's room.
-        "extend": {"left": EXTEND // 2, "right": EXTEND, "below": 800},
-        "extensions": {"left": "panel3-left.png", "below": "panel3-below.png"},
+        # Dad's shoulder runs off the left edge and the rest of him off the
+        # foot: the rest of the scene, Dad kneeling and Calvin on the floor
+        # with the record player between them, is in
+        # tools/extensions/panel3-{left,right,below}.png, the part below
+        # shown when there's room.
+        "extend": {"left": 320, "right": 480, "below": 640},
+        "extensions": {"left": "panel3-left.png", "right": "panel3-right.png",
+                       "below": "panel3-below.png"},
         "erase": [[(1755, 1877), (2550, 1877), (2550, 2620), (2220, 2620),
                    (2220, 2460), (1755, 2460)]],
         "speakers": {"dad": (2010, 2770)},

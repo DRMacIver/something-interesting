@@ -211,3 +211,30 @@ def test_patch_takes_only_the_part_that_was_redrawn():
     assert not mask[:200].any()                            # the line elsewhere was left alone
     assert (before[~mask] == after[~mask]).all()           # and so was everything outside the part
     assert not mask[:, 500:].any()
+
+
+def test_a_line_drawn_along_the_crop_s_edge_is_moved_clear_of_it():
+    """The drawing has a line running down the crop's left edge, half in
+    and half out (a sleeve hem, say), where the scan has only paper. Pasting
+    the scan back would slice it lengthways; it should stand whole just
+    outside the crop instead."""
+    frame = graft.Frame(left=100, right=0, below=0)
+    scan = np.zeros((300, 200), bool)
+    scan[60:68] = scan[220:228] = True             # two lines that cross the edge
+    drawing = np.zeros((300, 300), np.float32)
+    drawing[60:68] = drawing[220:228] = 1
+    drawing[60:228, 96:104] = 1                    # the hem, centred on the edge
+    solid = drawing.copy()
+    solid[100:180, 40:104] = 1                     # in another drawing, a black cut by the crop
+
+    def pushed(candidate):
+        return graft.warp(candidate, graft.push_out(scan, candidate, frame, weight=8.0)) > 0.5
+
+    before, after = drawing > 0.5, pushed(drawing)
+    middle = slice(90, 200)                        # between the crossing lines
+    assert before[middle, 98:100].all()            # sliced: ink right up to the crop
+    assert not after[middle, 98:100].any()         # now there is air beside the crop
+    assert (after[middle, 60:100].sum(1) >= 7).all()   # and the hem is whole (it was 8 wide)
+    assert after[64, 90:100].all() and after[224, 90:100].all()   # the crossing lines still arrive
+    # a solid black is not a line: it is left for `snap`
+    assert np.array_equal(pushed(solid), solid > 0.5)

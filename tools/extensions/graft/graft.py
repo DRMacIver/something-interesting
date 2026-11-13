@@ -12,7 +12,9 @@ fitted to the scan here instead:
 2. `flow` measures how the candidate still differs from the scan inside
    the crop and bends it to agree, fading the bend out away from the crop.
 3. `snap` slides the candidate along each edge of the crop so its lines
-   leave the crop exactly where the scan's do.
+   leave the crop exactly where the scan's do; `push_out` moves clear of
+   the crop any line the candidate draws along its edge, which pasting the
+   scan back would otherwise slice lengthways.
 4. `reink` gives what is left of the candidate the scan's line weight, cuts
    it to the scan's 1-bit grid and smooths it as the scan was smoothed.
 
@@ -415,6 +417,60 @@ def snap(scan, warped, frame, reach=14, depth=50.0, solid_reach=110):
     return field, int(counts[0]), int(counts[1]), int(counts[2])
 
 
+def runs(line, least):
+    """[(start, end)] of the stretches of a 1-D boolean profile at least
+    `least` long."""
+    step = np.diff(np.concatenate([[0], line.astype(np.int8), [0]]))
+    return [(a, b) for a, b in zip(np.flatnonzero(step > 0), np.flatnonzero(step < 0)) if b - a >= least]
+
+
+def push_out(scan, warped, frame, weight, least=24, ease=12, depth=40.0):
+    """A field that moves clear of the crop any line the candidate draws
+    *along* its edge, where the scan has only paper: pasting the scan back
+    would slice such a line lengthways (a sleeve hem drawn down the crop's
+    side, say). It is slid outward until it stands whole just outside,
+    easing to nothing at the ends of the stretch, where real lines cross."""
+    h, w = scan.shape
+    left = frame.left
+    cand = warped > 0.5
+    field = np.zeros((2,) + warped.shape, np.float32)
+    rows, cols = np.mgrid[0:warped.shape[0], 0:warped.shape[1]]
+    # per side: the scan along its edge, and the candidate going outward
+    # and inward from that edge
+    found = []
+    inner = cand[:h, left:left + w]
+    if frame.left:
+        found.append((scan[:, :3].any(1), cand[:h, left - 40:left][:, ::-1], inner[:, :40], 'left'))
+    if frame.right:
+        found.append((scan[:, -3:].any(1), cand[:h, left + w:left + w + 40], inner[:, -40:][:, ::-1], 'right'))
+    if frame.below:
+        found.append((scan[-3:].any(0), cand[h:h + 40, left:left + w].T, inner[-40:][::-1].T, 'below'))
+
+    def reach(profile):
+        """How far the ink runs from the edge, along the stretch (median)."""
+        return float(np.median(np.where(profile.all(1), profile.shape[1], profile.argmin(1))))
+
+    for paper, outward, inward, side in found:
+        paper = ~ndimage.binary_dilation(paper, iterations=2)
+        for a, b in runs(outward[:, 0] & paper, least):
+            showing, hidden = reach(outward[a:b]), reach(inward[a:b])
+            if showing + hidden > 2.2 * weight:
+                continue  # a solid black, not a line
+            shift = hidden + max(3.0, weight / 2)  # what the crop hides of it, and some air
+            along = np.arange(len(paper))
+            taper = np.clip(np.minimum(along - a, b - along) / ease, 0, 1)
+            if side == 'below':
+                away = np.maximum(rows - h, 0)
+                field[0] -= shift * taper[np.clip(cols - left, 0, w - 1)] * np.exp(-away / depth) * (rows >= h - 1)
+            else:
+                edge = left if side == 'left' else left + w
+                away = np.abs(cols - edge)
+                outside = cols < edge if side == 'left' else cols >= edge
+                sign = 1 if side == 'left' else -1
+                field[1] += sign * shift * taper[np.clip(rows, 0, h - 1)] * np.exp(-away / depth) * outside * (rows < h)
+    return field
+
+
 # --- 4. the scan's ink ------------------------------------------------------
 
 def line_weight(ink):
@@ -544,6 +600,10 @@ def graft(scan_image, cand_image, frame, scales=None):
     far = snapped(110)
     if far[3] < cut and far[2] <= fit_warped + 0.15:
         field, warped, fit_warped, cut = far
+    outside = np.ones(shape, bool)
+    outside[crop] = False
+    field = field + push_out(scan, warped, frame, line_weight((warped > 0.5) & outside))
+    warped = warp(placed, field)
     _, matched, lost, extra = snap(scan, warped, frame)
 
     # again at twice the size, where the ink is finally cut
@@ -552,8 +612,6 @@ def graft(scan_image, cand_image, frame, scales=None):
         np.asarray(Image.fromarray(f).resize(big_shape[::-1], Image.BILINEAR)) * 2 for f in field])
     coverage = ndimage.gaussian_filter(warp(place(cand, params, big_shape, origin, zoom=2), big_field), 1.0)
 
-    outside = np.ones(shape, bool)
-    outside[crop] = False
     weight_scan = line_weight(scan)
     before = line_weight((warped > 0.5) & outside)
     ink = reink(coverage, weight_scan, outside)
