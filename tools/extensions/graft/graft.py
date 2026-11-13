@@ -387,34 +387,39 @@ def shift_profile(pairs, length, tail=40):
     return ndimage.gaussian_filter1d(profile, 2.0).astype(np.float32)
 
 
-def sides(scan, cand, frame):
+def sides(scan, cand, frame, outside=False):
     """For each side of the crop the candidate continues past: the scan's
-    profile just inside it and the candidate's on the same line."""
+    profile just inside it and the candidate's on the same line (or, with
+    `outside`, the candidate's just outside the crop)."""
     h, w = scan.shape
     left = frame.left
     inner = cand[:h, left:left + w]
     found = []
     if frame.below:
-        found.append(('bottom', scan[h - 2], inner[h - 2]))
+        found.append(('bottom', scan[h - 2], cand[h + 1, left:left + w] if outside else inner[h - 2]))
     if frame.left:
-        found.append(('left', scan[:, 1], inner[:, 1]))
+        found.append(('left', scan[:, 1], cand[:h, left - 2] if outside else inner[:, 1]))
     if frame.right:
-        found.append(('right', scan[:, w - 2], inner[:, w - 2]))
+        found.append(('right', scan[:, w - 2], cand[:h, left + w + 1] if outside else inner[:, w - 2]))
     return found
 
 
-def snap(scan, warped, frame, reach=14, depth=50.0, solid_reach=110):
+def snap(scan, warped, frame, reach=14, depth=50.0, solid_reach=110, outside=False, only=None):
     """A field that slides the candidate along each side of the crop so its
     lines cross where the scan's do, dying away with distance from the
     side. Returns (field, matched, scan edges unmatched, candidate edges
-    unmatched)."""
+    unmatched). With `outside` the candidate is read just outside the crop
+    (for a panel that already has the scan pasted in), and `only` limits
+    the joining to parts of each side."""
     h, w = scan.shape
     left = frame.left
     field = np.zeros((2,) + warped.shape, np.float32)
     counts = np.zeros(3, int)
     rows, cols = np.mgrid[0:warped.shape[0], 0:warped.shape[1]]
-    for side, scan_line, cand_line in sides(scan, warped > 0.5, frame):
+    for side, scan_line, cand_line in sides(scan, warped > 0.5, frame, outside):
         pairs, lost, extra = match_edges(scan_line, cand_line, reach, solid_reach)
+        if only is not None:  # {side: mask along it} of where to join
+            pairs = [(p, d) for p, d in pairs if only[side][int(p)]]
         counts += (len(pairs), lost, extra)
         profile = shift_profile(pairs, len(scan_line))
         deep = np.maximum(depth, 2 * np.abs(profile))  # a long slide dies away slowly

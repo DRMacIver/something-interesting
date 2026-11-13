@@ -52,6 +52,37 @@ def changed(edit, panel, jitter=9, margin=30):
     return ndimage.binary_fill_holes(labels == int(np.argmax(sizes)) + 1)
 
 
+def meet_scan(panel, mask, protect):
+    """The panel (grey, export px) with the lines of a just-patched part
+    slid to meet the scan's where they reach the crop `protect`. A redraw
+    has not been through the graft's own joining, so its lines can arrive
+    a little off: thinner than the scan's, or to one side."""
+    x0, y0, x1, y1 = protect
+    h2, w2 = panel.shape[0] // 2, panel.shape[1] // 2
+    even = (slice(0, h2 * 2), slice(0, w2 * 2))
+    half = lambda a: a[even].reshape(h2, 2, w2, 2).mean((1, 3))  # noqa: E731
+    cover = half((panel < 128).astype(np.float32))
+    near = ndimage.binary_dilation(half(mask.astype(np.float32)) > 0, iterations=25)
+    left, top = x0 // 2, y0 // 2
+    scan = cover[top:y1 // 2, left:x1 // 2] > 0.5
+    frame = graft.Frame(left=left, right=w2 - x1 // 2, below=h2 - y1 // 2)
+    crop = (slice(top, y1 // 2), slice(left, x1 // 2))
+    only = {'left': near[crop][:, 0], 'right': near[crop][:, -1], 'bottom': near[crop][-1]}
+    field = np.zeros((2, h2, w2), np.float32)
+    for _ in range(3):
+        field += graft.snap(scan, graft.warp(cover, field), frame, outside=True, only=only)[0]
+    if not np.abs(field).max() > 0.25:
+        return panel
+    big = np.stack([np.asarray(Image.fromarray(f).resize((w2 * 2, h2 * 2), Image.BILINEAR)) * 2 for f in field])
+    moved = graft.warp((panel[even] < 128).astype(np.float32), big) > 0.5
+    smooth = np.asarray(build_assets.smooth(half(moved.astype(np.float32)) >= 0.5))
+    change = ndimage.binary_dilation(np.abs(big).max(0) > 0.25, iterations=4)
+    change[y0:y1, x0:x1] = False
+    out = panel.copy()
+    out[even][change] = smooth[change]
+    return out
+
+
 def patch(panel_image, edit_image, box, protect=None):
     """(patched panel, mask of what changed). `protect` is a box of the
     panel that must not change (the scan)."""
@@ -80,6 +111,8 @@ def patch(panel_image, edit_image, box, protect=None):
     panel[y0:y1, x0:x1] = out
     whole = np.zeros(panel.shape, bool)
     whole[y0:y1, x0:x1] = mask
+    if protect:
+        panel = meet_scan(panel, whole, protect)
     return Image.fromarray(panel), whole
 
 

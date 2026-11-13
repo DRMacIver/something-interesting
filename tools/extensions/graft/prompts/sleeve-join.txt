@@ -1,0 +1,17 @@
+Use your image generation tool (do not draw with code) to make ONE edited image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. Attached:
+1. region.png: part of a black-and-white ink drawing: a man in a loose short-sleeved shirt leaning to the right, his near forearm reaching off to the right. His near shoulder and short sleeve are on the left; the sleeve's hem and his elbow are in the middle.
+2. region-marked.png: the same image with a red vertical line down the middle. Everything to the RIGHT of the red line is the cartoonist's original drawing and must stay exactly as it is. Everything to the left was added later. (The red line is only a guide: do not draw it.)
+
+The problem is in the middle, just left of the red line, where the added sleeve meets the original arm. The sleeve's hem is drawn as a clumsy double band ending in a thick blocky post, and from the bottom of the sleeve a line wobbles down in a zig-zag: left, then right to the red line, where the original line then heads off in another direction. It reads as a kink, not as an arm coming out of a sleeve.
+
+Redraw ONLY that junction, left of the red line, so it reads cleanly:
+- the short sleeve ends in ONE plain brush line for its hem (no double band, no post), loose around the arm;
+- the bare arm comes out of the sleeve and bends at the elbow into the forearm;
+- every line that reaches the red line from the right is continued to the left in the SAME direction it is travelling, as one smooth brush stroke with no corner, kink or zig-zag where they meet, and no thick blob at the join;
+- the small rounded loop that touches the red line from the right is the inside of his elbow: finish it on the left as a smooth rounded shape, not a pointed leaf.
+
+Keep the long outer line of the sleeve and shoulder, the shirt's fold lines at the far left, and everything right of the red line where they are. Same line weight as the rest. Pure black and white, no grey.
+
+Save the result as OUTNAME in the current directory, 1536x1024, and reply with one line saying it is saved.

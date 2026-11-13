@@ -264,3 +264,26 @@ def test_match_edges_still_refuses_to_fold():
     pairs, _, _ = graft.match_edges(scan, cand, reach=14)
     positions = [p + d for p, d in pairs]
     assert positions == sorted(positions)
+
+
+def test_a_redrawn_line_is_brought_to_the_scan_s_line_at_the_crop():
+    """A part taken from a redraw has not been through the graft's own
+    joining, so its lines can arrive at the crop a little off the scan's:
+    thinner, or lower. They are slid to meet the scan's lines exactly."""
+    import patch
+    panel = Image.new('L', (800, 600), 255)
+    draw = ImageDraw.Draw(panel)
+    draw.rectangle((400, 200, 799, 235), fill=0)        # the scan's line: thick, at the crop's left edge
+    draw.rectangle((400, 400, 799, 415), fill=0)        # and another the redraw did not touch
+    draw.rectangle((0, 400, 399, 415), fill=0)
+    edit = panel.copy()
+    draw.rectangle((100, 150, 399, 165), fill=0)        # the panel's old line there, well off
+    ImageDraw.Draw(edit).rectangle((100, 222, 399, 235), fill=0)   # the redraw's: thin, low
+    patched, mask = patch.patch(panel, edit, (0, 0, 800, 600), protect=(400, 0, 800, 600))
+    ink = np.asarray(patched) < 128
+    just_outside = np.flatnonzero(ink[100:300, 394])
+    assert abs(just_outside.min() + 100 - 200) <= 4 and abs(just_outside.max() + 100 - 235) <= 4
+    far_out = np.flatnonzero(ink[100:300, 150])
+    assert far_out.max() - far_out.min() < 20            # still the thin line, away from the crop
+    assert np.array_equal(np.asarray(patched)[:, 400:], np.asarray(panel)[:, 400:])   # scan untouched
+    assert ink[400:416, 300:400].all()                   # the other join is left alone

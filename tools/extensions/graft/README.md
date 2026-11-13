@@ -113,7 +113,10 @@ region of the grafted panel and ask it to redraw only that part
 drawings of the part as a second image: for the shoe, a sheet of panel 1's
 shoes and side views from `docs/dad-reference/parts/shoe/`. `patch.py`
 then takes from the redraw only the place where its ink really moved, and
-re-inks it; the rest of the panel is untouched.
+re-inks it; the rest of the panel is untouched. Where the redrawn part
+reaches the crop, its lines are slid to meet the scan's exactly, since a
+redraw has not been through the graft's own joining (panel 2's sleeve,
+`prompts/sleeve-join.txt`, arrived thinner and lower than the scan's line).
 
 ```sh
 uv run tools/extensions/graft/patch.py PANEL.png EDIT.png OUT.png X0 Y0 X1 Y1 --protect <scan box>
