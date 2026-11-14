@@ -32,12 +32,14 @@ OUT = b.ROOT / 'assets/full-panels'
 # the redraws of single parts to take back, in order, each with the region
 # of the panel it was made from: where the shoe meets his trousers
 # (prompts/join-tidy.txt) and, in panel 2, where his sleeve meets his arm at
-# the crop's edge (prompts/sleeve-join.txt).
+# the crop's edge (prompts/sleeve-join.txt, then prompts/sleeve-simplify.txt,
+# which was made from the panel as the first left it).
 PICKS = {
     1: dict(candidate='p1-walk-1.png'),
     2: dict(candidate='p2-kneel-19.png', head=493, old_shoe=(290, 2110, 670, 2420),
             shoe_at=(800, 2410), redraws=[('p2-tidy-1.png', (0, 1560, 1680, 2680)),
-                                           ('p2-sleeve-2.png', (450, 1400, 1350, 2000))]),
+                                           ('p2-sleeve-2.png', (450, 1400, 1350, 2000)),
+                                           ('p2-sleeve-3.png', (450, 1400, 1350, 2000))]),
     3: dict(candidate='p3-kneel-3.png', head=562, old_shoe=(480, 2880, 940, 3240),
             shoe_at=(1030, 3205), redraws=[('p3-tidy-2.png', (150, 2300, 2100, 3600))]),
 }

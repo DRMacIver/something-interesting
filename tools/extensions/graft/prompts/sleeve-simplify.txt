@@ -1,0 +1,18 @@
+Use your image generation tool (do not draw with code) to make ONE edited image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. Attached:
+1. region.png: part of a black-and-white ink drawing: a man in a loose short-sleeved shirt leaning to the right, his near forearm reaching off to the right. His short sleeve is on the left; his forearm comes out of it in the middle and runs right.
+2. region-marked.png: the same image with a red vertical line down the middle. Everything to the RIGHT of the red line is the cartoonist's original drawing and must stay exactly as it is. Everything to the left was added later. (The red line is only a guide: do not draw it.)
+
+The area just left of the red line, under the short sleeve, is confusing: below the sleeve's hem a long curved line sweeps down to the red line, making a leaf-shaped patch that does not read as anything.
+
+Simplify it, left of the red line only:
+- keep the sleeve's back edge (the tall line with the small fork at its top);
+- the sleeve's hem is ONE simple, slightly curved brush line from the bottom corner of that back edge across to the thick line at the red line, as it is now;
+- REMOVE the long curved line that sweeps from the hem down to the red line, and leave the space under the sleeve plain white;
+- lower down, where a line reaches the red line from the right, let it run on to the left for only a short way (about the length of the small loop beside it) and taper out to nothing, like the end of a brush stroke;
+- leave the shirt's two curved fold lines further left as they are.
+
+Keep the long outer line of the shirt's back at the far left and everything right of the red line exactly where they are. Same brush line weight as the rest. Pure black and white, no grey.
+
+Save the result as OUTNAME in the current directory, 1536x1024, and reply with one line saying it is saved.
