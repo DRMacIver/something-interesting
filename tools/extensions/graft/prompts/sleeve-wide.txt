@@ -1,0 +1,19 @@
+Use your image generation tool (do not draw with code) to make ONE edited image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. Attached:
+1. region.png: part of a black-and-white ink drawing: a man in a loose short-sleeved shirt leaning forward to the right, his near forearm reaching off to the right. His near shoulder and short sleeve are on the left.
+2. region-marked.png: the same image with a red vertical line down the middle. Everything to the RIGHT of the red line is the cartoonist's original drawing and must stay exactly as it is. Everything to the left was added later. (The red line is only a guide: do not draw it.)
+3. panel1-sleeve.png: the SAME man's short sleeve as the cartoonist really draws it, from another panel of the strip, where he is standing. This is the model for the sleeve.
+
+The problem: left of the red line, the short sleeve is too narrow. It tapers down to a little loop no wider than his arm, like a tight tube. In image 3 his sleeve is a loose, boxy shape: two nearly parallel edges hanging from the shoulder, ending in a plain hem that is a single, slightly curved line between two clear corners, and the hem is more than twice as wide as the bare arm that comes out from under it.
+
+Redraw the sleeve left of the red line to match image 3:
+- a loose, boxy short sleeve hanging from his shoulder, its two edges roughly parallel, about as long as in image 3 relative to his body;
+- the hem is ONE plain, slightly curved brush line between two corners, about 520 pixels long in this image (more than twice the thickness of his arm), entirely left of the red line;
+- his bare arm comes out from under the hem and runs to the red line, where its upper and lower outlines join the two places where lines reach the red line from the right, smoothly, with no kink or blob;
+- the small loop touching the red line from the right is the crease inside his elbow: leave it as it is, without closing it or adding to it;
+- remove the lines of the old narrow sleeve; keep one or two short fold strokes at most.
+
+Keep the long outer line of the shirt's back at the far left and everything right of the red line exactly where they are. Same brush line weight as the rest. Pure black and white, no grey.
+
+Save the result as OUTNAME in the current directory, 1536x1024, and reply with one line saying it is saved.
