@@ -39,7 +39,9 @@ OUT = b.ROOT / 'assets/full-panels'
 # In panel 3, four of his shirt's lines stopped or jogged at the bottom of
 # the scan; one redraw carries them on (prompts/seam-lines.txt, inked over
 # picks/p3-seam-guide.png). A third number is how many separate places the
-# redraw changed, when more than one.
+# redraw changed, when more than one. `weigh` boxes hold a drawn line that
+# left the scan thinner than the scan's line arrived (the upper line of his
+# raised arm): `patch.weigh_in` starts it at the scan's weight.
 PICKS = {
     1: dict(candidate='p1-walk-1.png'),
     2: dict(candidate='p2-kneel-19.png', head=493, old_shoe=(290, 2110, 670, 2420),
@@ -47,7 +49,8 @@ PICKS = {
                                            ('p2-sleeve-hem.png', (450, 1400, 1350, 2000))]),
     3: dict(candidate='p3-kneel-3.png', head=562, old_shoe=(480, 2880, 940, 3240),
             shoe_at=(1030, 3205), redraws=[('p3-tidy-2.png', (150, 2300, 2100, 3600)),
-                                            ('p3-seam.png', (850, 1800, 1750, 2400), 2)]),
+                                            ('p3-seam.png', (850, 1800, 1750, 2400), 2)],
+            weigh=[(1640, 2060, 1810, 2195)]),
 }
 
 
@@ -68,6 +71,8 @@ def panel(number, panel_one=None):
         for name, region, *parts in pick['redraws']:
             image, _ = patch.patch(image, Image.open(HERE / 'picks' / name), region,
                                    protect=scan_box(number), parts=parts[0] if parts else 1)
+        for box in pick.get('weigh', []):
+            image = Image.fromarray(patch.weigh_in(np.asarray(image), box, scan_box(number)))
     return image, report
 
 

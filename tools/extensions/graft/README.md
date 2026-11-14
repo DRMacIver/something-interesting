@@ -128,6 +128,14 @@ too differently for the graft's snapping to reach: panel 3's shirt had
 four along the bottom of the scan (`prompts/seam-lines.txt`). A redraw
 that changes several separate places needs `--parts`.
 
+Re-inking gives every drawn line the scan's typical weight, so a drawn
+line that carries on a heavier stroke of the scan steps in width at the
+crop. `patch.weigh_in` starts such a line at the scan's weight and eases
+it back to its own along a box (`weigh` in `build.py`'s `PICKS`; the upper
+line of panel 3's raised arm). Sliding its edges with `meet_scan` instead
+leaves a short knot on a slanting line, because the slide follows the
+crop's edge and the line does not.
+
 ## Checking that a drawing reads
 
 Ask the model to describe the picture, not to rate it. Show it the whole

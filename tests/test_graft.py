@@ -332,3 +332,34 @@ def test_patch_can_take_several_parts_from_one_redraw():
     assert ink(one)[380:400, 240:270].any() and not ink(one)[280:300, 740:770].any()
     assert ink(both)[380:400, 240:270].any() and ink(both)[280:300, 740:770].any()
     assert not mask[500:].any()                                  # the line elsewhere was left alone
+
+
+def test_a_thin_drawn_line_takes_the_scan_line_s_weight_at_the_crop():
+    """Panel 3's raised arm: a slanting line of the scan arrives at the
+    crop's bottom edge heavy, and the drawing carries it on thinner, so its
+    width steps at the edge. Weighed in, the drawn line starts as heavy as
+    the scan's and eases back to its own weight by the far end of the box."""
+    import patch
+
+    image = Image.new('L', (600, 600), 255)
+    draw = ImageDraw.Draw(image)
+    draw.line([(500, 0), (250, 250)], fill=0, width=26)          # the scan's line, cut by the crop at y=200
+    draw.rectangle((0, 200, 600, 600), fill=255)
+    draw.line([(302, 198), (100, 400)], fill=0, width=12)        # the drawing's, thinner
+    draw.line([(450, 300), (450, 560)], fill=0, width=12)        # another drawn line, outside the box
+    scan = (0, 0, 600, 200)
+    panel = np.asarray(image).copy()
+    panel[:200] = np.asarray(image)[:200]
+
+    def width(array, y):
+        return int((array[y, :400] < 128).sum())
+
+    assert width(panel, 198) - width(panel, 203) > 12            # the step
+    weighed = patch.weigh_in(panel, (150, 200, 420, 360), scan)
+    assert abs(width(weighed, 198) - width(weighed, 203)) <= 4   # gone
+    widths = [width(weighed, y) for y in range(205, 355, 10)]
+    assert all(b <= a + 2 for a, b in zip(widths, widths[1:]))   # easing, never swelling again
+    assert abs(widths[-1] - width(panel, 350)) <= 3              # back to its own weight
+    assert np.array_equal(weighed[:200], panel[:200])            # the scan is untouched
+    assert np.array_equal(weighed[:, 430:], panel[:, 430:])      # and so is the other line
+    assert np.array_equal(weighed[365:], panel[365:])

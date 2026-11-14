@@ -124,3 +124,21 @@ def test_panel_three_s_lines_carry_on_below_the_scan():
     stopped = [int(np.nonzero(labels == index)[0][0]) + left for index in range(1, count + 1)
                if not below[labels == index].any()]
     assert stopped == []
+
+
+def test_panel_three_s_lines_keep_their_weight_below_the_scan():
+    # a line that crosses the bottom of the scan is as wide just below it as
+    # just above: the raised arm's upper line used to halve there
+    drawing = ink(3)
+    left, _, right, foot = build.scan_box(3)
+    above, _ = ndimage.label(drawing[foot - 1, left:right])
+    below, _ = ndimage.label(drawing[foot, left:right])
+    stepped = []
+    for index in range(1, above.max() + 1):
+        run = above == index
+        under = np.unique(below[run])
+        under = under[under > 0]
+        if run.sum() >= 15 and len(under) == 1:
+            if abs(int(run.sum()) - int((below == under[0]).sum())) > 8:
+                stepped.append(int(np.nonzero(run)[0][0]) + left)
+    assert stepped == []

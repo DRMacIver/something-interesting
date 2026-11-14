@@ -84,6 +84,50 @@ def meet_scan(panel, mask, protect):
     return out
 
 
+def weigh_in(panel, box, protect, strip=16):
+    """The panel (grey, export px) with the drawn line in `box` as heavy,
+    where it leaves the crop `protect`, as the scan's line that it carries
+    on, easing back to its own weight by the far end of the box. Re-inking
+    gives every drawn line the scan's typical weight, so one that continues
+    a heavier stroke of the scan steps in width at the crop's edge."""
+    x0, y0, x1, y1 = box
+    px0, py0, px1, py1 = protect
+    pad = 40
+    window = (slice(max(0, y0 - pad), y1 + pad), slice(max(0, x0 - pad), x1 + pad))
+    ink = panel[window] < 128
+    inside = np.zeros(panel.shape, bool)
+    inside[py0:py1, px0:px1] = True
+    inside = inside[window]
+    place = np.zeros(panel.shape, bool)
+    place[y0:y1, x0:x1] = True
+    place = place[window] & ~inside
+    away = ndimage.distance_transform_edt(~inside)           # px outside the crop
+    into = ndimage.distance_transform_edt(inside)            # px inside it
+    half = ndimage.distance_transform_edt(ink)               # half a line's width, at its middle
+    # the scan's line just inside the crop, beside the drawn line's first few px
+    start = place & ink & (away <= strip)
+    if not start.any():
+        return panel
+    beside = ndimage.binary_dilation(start, iterations=2 * strip) & inside & ink & (into <= strip)
+    if not beside.any():
+        return panel
+    extra = float(half[beside].max() - half[start].max())    # px to add on each side
+    if extra <= 0.5:
+        return panel
+    signed = ndimage.distance_transform_edt(~(ink & ~inside)) - half   # from the drawn ink alone
+    ease = np.clip(1 - away / max(1.0, float(away[place].max())), 0, 1)
+    heavier = (signed < extra * ease) & place
+    grown = ink | heavier
+    h2, w2 = grown.shape[0] // 2, grown.shape[1] // 2
+    even = (slice(0, h2 * 2), slice(0, w2 * 2))
+    smooth = np.asarray(build_assets.smooth(grown[even].reshape(h2, 2, w2, 2).mean((1, 3)) >= 0.5))
+    change = ndimage.binary_dilation(heavier, iterations=3) & place
+    out = panel.copy()
+    view = out[window]
+    view[even][change[even]] = smooth[change[even]]
+    return out
+
+
 def stubs(before, after, mask, small=1500, near=60):
     """Loose ends left beside a patched part: small pieces of ink close to
     it that were part of something larger before the patch (the end of a
