@@ -142,3 +142,48 @@ def test_panel_three_s_lines_keep_their_weight_below_the_scan():
             if abs(int(run.sum()) - int((below == under[0]).sum())) > 8:
                 stepped.append(int(np.nonzero(run)[0][0]) + left)
     assert stepped == []
+
+
+def test_scans_are_what_the_strip_s_page_gives():
+    pdf = ROOT / 'calvin-and-hobbes.pdf'
+    if not pdf.exists():
+        pytest.skip('needs the scan of the book, which is not in the repository')
+    import scans
+    made = scans.prepare(pdf)
+    assert sorted(made) == sorted(path.name for path in scans.SCANS.glob('*.png'))
+    for name, image in made.items():
+        assert np.array_equal(np.asarray(image), np.asarray(Image.open(scans.SCANS / name))), name
+
+
+def local_links(page):
+    import re
+    for link in re.findall(r'(?:href|src)="([^"#]+)', (ROOT / page).read_text()):
+        if '://' not in link:
+            yield link.split('?')[0]
+
+
+def test_review_page_links_only_to_files_in_the_repository():
+    # the site is served from the repository, so a link to anything git
+    # ignores (output/, say) is dead there
+    import subprocess
+    links = sorted(set(local_links('panels.html')))
+    assert 'assets/full-panels/panel2.png' in links
+    assert [link for link in links if not (ROOT / link).is_file()] == []
+    ignored = subprocess.run(['git', 'check-ignore', *links], cwd=ROOT, capture_output=True, text=True)
+    assert ignored.stdout.split() == []
+
+
+def test_download_bundle_holds_the_current_exports():
+    import zipfile
+    with zipfile.ZipFile(ROOT / 'assets/full-panels.zip') as bundle:
+        names = bundle.namelist()
+        for number in range(1, 5):
+            name = f'assets/full-panels/panel{number}.png'
+            assert bundle.read(name) == (ROOT / name).read_bytes()
+        assert 'panels.html' in names
+        # the page inside works offline: every file it links to is beside it
+        page = bundle.read('panels.html').decode()
+    import re
+    for link in re.findall(r'(?:href|src)="([^"#]+)', page):
+        if '://' not in link:
+            assert link.split('?')[0] in names, link

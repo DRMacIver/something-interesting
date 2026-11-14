@@ -144,6 +144,13 @@ npm test
 uv run pytest
 ```
 
+The Python suite takes over an hour, nearly all of it the font's tests.
+The panels' own are quick:
+
+```bash
+uv run pytest tests/test_full_panel_artwork.py tests/test_graft.py tests/test_build_assets.py tests/test_versions.py
+```
+
 ## The font
 
 The Unicode typography beta is ready for human playtesting. The
@@ -267,10 +274,3 @@ uv run tools/font/build_font.py build/glyphs.pkl assets/fonts/dad-lettering.woff
    others, and symbols the book has none of (`` # $ % & * + < = > @ [ \ ] ^
    _ ` { | } ~ ``) were lettered by Codex's image generation from the
    glyphs above (`tools/font/drawn.png`).
-
-## Tests
-
-```bash
-npm test
-uv run pytest
-```

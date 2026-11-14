@@ -4,7 +4,7 @@
 
 When one part of a grafted panel is wrong (a shoe, say), the image model is
 shown the region X0..X1, Y0..Y1 of the panel and asked to redraw it with
-only that part changed (`prompts/part-edit.txt`). It redraws the whole
+only that part changed (`prompts/shoe-edit.txt`). It redraws the whole
 region, a little differently everywhere, so only what it really changed is
 taken: the edit is laid back over the region, the places where its ink
 lies well away from the panel's (or the panel's from its) are found, and inside

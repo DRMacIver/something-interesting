@@ -11,9 +11,9 @@
     "4": "Entire cleaned original night panel; existing left bed extension retained."
   },
   "rebuild": [
-    "uv run tools/extensions/reconstruction-v2/prepare_inputs.py",
+    "uv run tools/extensions/graft/scans.py",
     "uv run tools/extensions/graft/build.py",
-    "uv run tools/extensions/reconstruction-v2/build_review.py"
+    "uv run tools/extensions/graft/review.py"
   ],
   "outputs": [
     {

@@ -16,7 +16,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import graft  # noqa: E402
 
-LOCKED = Path(__file__).resolve().parent.parent / 'reconstruction-v2'
+SCANS = Path(__file__).resolve().parent / 'scans'
 
 # paper around each scan crop (scan px) and the empty rows above the art
 FRAMES = {
@@ -28,7 +28,7 @@ FRAMES = {
 
 def one(job):
     panel, out, path = job
-    scan = Image.open(LOCKED / f'locked-{panel}.png')
+    scan = Image.open(SCANS / f'locked-{panel}.png')
     image, report = graft.graft(scan, Image.open(path), FRAMES[panel])
     stem = Path(path).stem
     image.save(Path(out) / f'{stem}.png')

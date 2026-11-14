@@ -16,7 +16,7 @@ from pathlib import Path
 from PIL import Image
 
 HERE = Path(__file__).resolve().parent
-LOCKED = HERE.parent / 'reconstruction-v2'
+SCANS = HERE / 'scans'
 FRAME = (1536, 1024)  # what the image tool returns
 
 # rows of empty paper to cut from the scan's top, the scale at which the
@@ -31,7 +31,7 @@ PANELS = {
 def prepare(panel, out):
     """The images each prompt refers to, written into `out`."""
     spec = PANELS[panel]
-    scan = Image.open(LOCKED / f'locked-{panel}.png').convert('L')
+    scan = Image.open(SCANS / f'locked-{panel}.png').convert('L')
     art = scan.crop((0, spec['top'], scan.width, scan.height))
     frame = Image.new('L', FRAME, 255)
     small = art.resize((round(art.width * spec['scale']), round(art.height * spec['scale'])), Image.LANCZOS)
@@ -42,12 +42,12 @@ def prepare(panel, out):
     closeup.save(out / f'p{panel}-closeup.png')
     inputs = [f'p{panel}-placement.png', f'p{panel}-closeup.png']
     if spec['reference']:
-        reference = Image.open(LOCKED / 'locked-1.png').convert('L')
+        reference = Image.open(SCANS / 'locked-1.png').convert('L')
         reference.thumbnail((1024, 1024))
         reference.save(out / 'panel1-reference.png')
         inputs.append('panel1-reference.png')
         # his legs and shoes large: words alone get shoes a third too small
-        legs = Image.open(LOCKED / 'locked-1.png').convert('L').crop((0, 930, 760, 2066))
+        legs = Image.open(SCANS / 'locked-1.png').convert('L').crop((0, 930, 760, 2066))
         legs.save(out / 'legs-reference.png')
         inputs.append('legs-reference.png')
     return inputs

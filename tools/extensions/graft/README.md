@@ -30,8 +30,12 @@ Once a drawing is chosen for each panel it goes in `picks/` and is named in
 
 ```sh
 uv run tools/extensions/graft/build.py
-uv run tools/extensions/reconstruction-v2/build_review.py
+uv run tools/extensions/graft/review.py
 ```
+
+`review.py` writes `panels.html`, the page for looking the full panels
+over against the scan, and `assets/full-panels.zip`, which that page
+offers for download.
 
 The comic editor uses the same drawings: `editor.py` cuts its panel
 extensions (`tools/extensions/panelN-SIDE.png`) from the exports, and
@@ -44,7 +48,9 @@ uv run tools/version_assets.py
 ```
 
 `generate.py` needs the `codex` CLI. Each image takes a few minutes; four
-run at once. The scans come from `../reconstruction-v2/locked-N.png`.
+run at once. The scans are `scans/locked-N.png`, cut from the book by
+`scans.py`; they change only if `tools/build_assets.py`'s treatment of
+the page does.
 
 ## What the graft does (`graft.py`)
 
@@ -152,8 +158,13 @@ uv run tools/extensions/graft/patch.py PANEL.png EDIT.png OUT.png X0 Y0 X1 Y1 --
 
 ## What didn't work
 
-Recorded so it isn't tried again. Details are in `docs/dad-practice/` and
-the git history of `../reconstruction-v2/`.
+Recorded so it isn't tried again. The code and the write-ups of the
+earlier attempts were removed once the graft replaced them; they are in
+the git history up to commit `86f975bd2`, under `docs/dad-practice/`,
+`docs/dad-drawing-spec.md`, `tools/extensions/reconstruction-v2/`,
+`tools/extensions/poses/` and `tools/extensions/parts/`. Watterson's own
+drawings of Dad, catalogued for those attempts, are still in
+`docs/dad-reference/`.
 
 - **Outpainting** ("keep these pixels, fill the blank part"): the model
   cannot hold pixels fixed, so its output never lined up with the scan.

@@ -79,5 +79,4 @@ On thin strokes (excluding solid blacks):
 | Knee | 52 |
 
 Each records its source crop, box, side (near or far), orientation note,
-the head width it was drawn at (to scale it) and the facing. They can be
-posed onto a skeleton with `drawn_legs.transplant`.
+the head width it was drawn at (to scale it) and the facing.

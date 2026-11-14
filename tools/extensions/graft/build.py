@@ -5,9 +5,11 @@
 Panels 1 to 3 are the scan with a whole-scene drawing grafted round it
 (`graft.py`); `PICKS` names the drawing chosen for each, kept in `picks/`.
 In the two close-ups Dad's shoe is then panel 1's own (`shoe.py`), and a
-few single parts are taken from redraws of them (`patch.py`). Panel 4 is the scan with its existing left extension.
+few single parts are taken from redraws of them (`patch.py`). Panel 4 is
+the scan with its existing left extension.
 
-Then run ../reconstruction-v2/build_review.py for panels.html.
+The scans are in `scans/` (`scans.py` cuts them from the book). Then run
+review.py for panels.html.
 """
 import json
 import sys
@@ -24,7 +26,7 @@ from graft import build_assets as b  # noqa: E402
 from run import FRAMES  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
-LOCKED = HERE.parent / 'reconstruction-v2'
+SCANS = HERE / 'scans'
 OUT = b.ROOT / 'assets/full-panels'
 
 # For the close-ups: Dad's head width (export px), the box holding the shoe
@@ -55,7 +57,7 @@ PICKS = {
 
 
 def scan_box(number):
-    scan = Image.open(LOCKED / f'locked-{number}.png')
+    scan = Image.open(SCANS / f'locked-{number}.png')
     left = FRAMES[number].left * 2
     return (left, 0, left + scan.width, scan.height)
 
@@ -64,7 +66,7 @@ def panel(number, panel_one=None):
     """(image, fit report) for panel 1, 2 or 3. The close-ups need the
     built panel 1, for its shoe."""
     pick = PICKS[number]
-    scan = Image.open(LOCKED / f'locked-{number}.png').convert('L')
+    scan = Image.open(SCANS / f'locked-{number}.png').convert('L')
     image, report = graft.graft(scan, Image.open(HERE / 'picks' / pick['candidate']), FRAMES[number])
     if 'shoe_at' in pick:
         image = shoe.tuck(image, panel_one, pick['head'], pick['old_shoe'], pick['shoe_at'])
@@ -77,8 +79,8 @@ def panel(number, panel_one=None):
 
 
 def panel_four():
-    scan = Image.open(LOCKED / 'locked-4.png').convert('L')
-    ink = np.asarray(Image.open(LOCKED / 'original-4.png')) < 128
+    scan = Image.open(SCANS / 'locked-4.png').convert('L')
+    ink = np.asarray(Image.open(SCANS / 'original-4.png')) < 128
     extended, _ = b.extended(ink, b.PANELS[3])
     image = b.smooth(extended)
     image.paste(scan, (400, 0))
@@ -91,7 +93,7 @@ def build():
     overview = Image.new('L', (1600, 2100), 235)
     one = None
     for number in range(1, 5):
-        scan = Image.open(LOCKED / f'locked-{number}.png').convert('L')
+        scan = Image.open(SCANS / f'locked-{number}.png').convert('L')
         if number == 4:
             image, report, x = panel_four(), None, 400
         else:
