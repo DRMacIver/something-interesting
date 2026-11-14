@@ -83,6 +83,24 @@ def meet_scan(panel, mask, protect):
     return out
 
 
+def stubs(before, after, mask, small=1500, near=60):
+    """Loose ends left beside a patched part: small pieces of ink close to
+    it that were part of something larger before the patch (the end of a
+    line the redraw removed, running on past the region it covered)."""
+    close = ndimage.binary_dilation(mask, iterations=near) & ~mask
+    labels, count = ndimage.label(after)
+    sizes = ndimage.sum(after, labels, range(1, count + 1))
+    was, _ = ndimage.label(before)
+    was_size = np.concatenate([[0], np.bincount(was.ravel())[1:]])
+    loose = np.zeros(after.shape, bool)
+    for index in np.unique(labels[close & after]):
+        piece = labels == index
+        mostly_outside = (piece & ~mask).sum() >= 0.5 * sizes[index - 1] if index else False  # not the redraw's own
+        if mostly_outside and sizes[index - 1] < small and was_size[was[piece]].max() >= 2 * sizes[index - 1]:
+            loose |= piece
+    return loose
+
+
 def patch(panel_image, edit_image, box, protect=None):
     """(patched panel, mask of what changed). `protect` is a box of the
     panel that must not change (the scan)."""
@@ -108,9 +126,11 @@ def patch(panel_image, edit_image, box, protect=None):
     smooth = np.asarray(build_assets.smooth(ink))
     out = region.copy()
     out[even][mask[even]] = smooth[mask[even]]
+    before = panel < 128
     panel[y0:y1, x0:x1] = out
     whole = np.zeros(panel.shape, bool)
     whole[y0:y1, x0:x1] = mask
+    panel[stubs(before, panel < 128, whole)] = 255
     if protect:
         panel = meet_scan(panel, whole, protect)
     return Image.fromarray(panel), whole

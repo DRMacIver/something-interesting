@@ -287,3 +287,21 @@ def test_a_redrawn_line_is_brought_to_the_scan_s_line_at_the_crop():
     assert far_out.max() - far_out.min() < 20            # still the thin line, away from the crop
     assert np.array_equal(np.asarray(patched)[:, 400:], np.asarray(panel)[:, 400:])   # scan untouched
     assert ink[400:416, 300:400].all()                   # the other join is left alone
+
+
+def test_patch_leaves_no_stub_of_a_line_the_redraw_removed():
+    """The redraw covers a region of the panel. A line it removes may run
+    on a little past the region's edge; that leftover end goes too."""
+    import patch
+    panel = Image.new('L', (900, 600), 255)
+    draw = ImageDraw.Draw(panel)
+    draw.line([(100, 100), (800, 120)], fill=0, width=14)            # stays
+    draw.line([(200, 250), (500, 438)], fill=0, width=14)            # runs 30 px past the region's foot
+    edit = Image.new('L', (900, 400), 255)
+    draw = ImageDraw.Draw(edit)
+    draw.line([(100, 100), (800, 120)], fill=0, width=14)
+    draw.line([(150, 330), (700, 300)], fill=0, width=14)            # something else, elsewhere
+    patched, _ = patch.patch(panel, edit, (0, 0, 900, 400))
+    ink = np.asarray(patched) < 128
+    assert not ink[400:].any()                                       # no stub below the region
+    assert ink[95:125, 300:600].any() and ink[290:340, 300:600].any()

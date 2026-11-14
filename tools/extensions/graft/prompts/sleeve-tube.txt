@@ -1,0 +1,18 @@
+Use your image generation tool (do not draw with code) to make ONE edited image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. Attached:
+1. region.png: part of a black-and-white ink drawing: a man in a loose short-sleeved shirt leaning to the right, his near forearm reaching off to the right. His short sleeve is on the left; his forearm comes out of it in the middle and runs right.
+2. region-marked.png: the same image with a red vertical line down the middle. Everything to the RIGHT of the red line is the cartoonist's original drawing and must stay exactly as it is. Everything to the left was added later. (The red line is only a guide: do not draw it.)
+
+The short sleeve is drawn wrongly left of the red line. In the original, the small rounded loop that touches the red line from the right is the open end of his short sleeve, the hem, with the bare forearm coming out of it to the right. So the sleeve is a loose tube of cloth running from that loop back and up to his shoulder at the upper left.
+
+Redraw the sleeve left of the red line to say that, simply:
+- REMOVE the tall line with the small fork at its top, the short horizontal hem beside it, and the long curved line sweeping down under them;
+- the sleeve's TOP edge is one smooth brush line that carries on from the thick line at the red line (the upper of the two places where lines reach it), running up and to the left toward the shoulder;
+- the sleeve's BOTTOM edge is one smooth brush line that carries on from the lower place where a line reaches the red line, running left and a little down, then fading out against the body;
+- between them, at the red line, finish the small loop as ONE simple, slightly curved line joining those two places: the hem of the sleeve;
+- one or two short curved fold strokes in the cloth are enough; nothing else.
+
+Keep the long outer line of the shirt's back at the far left and everything right of the red line exactly where they are. Same brush line weight as the rest. Pure black and white, no grey.
+
+Save the result as OUTNAME in the current directory, 1536x1024, and reply with one line saying it is saved.
