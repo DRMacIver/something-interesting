@@ -1,0 +1,15 @@
+Use your image generation tool (do not draw with code) to make ONE edited image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. Attached:
+1. clean.png: part of a black-and-white brush-and-ink drawing of a man in a short-sleeved shirt and tie, seen from the front and a little to one side: his collar at the top, his chest and both sleeves below. About two fifths of the way down, four lines coming from above stop dead on the same level, cut off square. Each should carry on.
+2. guide.png: the same image with the four missing pieces of line shown in red.
+
+Redraw clean.png exactly as it is, same canvas, same positions, adding ONLY those four pieces of line, in black ink, exactly where the red lines are. From left to right:
+- the front edge of his near sleeve: carries straight on down from the heavy stroke above, then bends gently to the right to run into the line below it;
+- one edge of his tie: a long, nearly straight line running down and to the left, closing in on the line to its left so the two meet in a point at that line's lower tip;
+- the edge of his shirt front: a short piece joining the line above to the thin line that starts just below it, so they become one line;
+- the top of his far sleeve: carries on from the heavy stroke above in a smooth curve round to the corner of the sleeve below.
+
+Each piece starts at the full width of the line it continues and joins it with no step, gap or blob; where it meets a thinner line below, it tapers to that line's width. Nothing else changes: do not move, add, remove or restyle any other line. Do not draw anything in red. Pure black and white, no grey.
+
+Save the result as OUTNAME in the current directory, 1536x1024, and reply with one line saying it is saved.

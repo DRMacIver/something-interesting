@@ -122,7 +122,11 @@ When the model keeps misreading a place, stop describing it and show it:
 erase the wrong strokes from the region, mark the lines that are missing
 in red, and ask the model to ink exactly those
 (`prompts/sleeve-hem.txt`, `picks/p2-sleeve-hem-guide.png`). All five
-redraws made that way followed the guide.
+redraws made that way followed the guide. The same mends lines that stop
+or restart to one side at the crop, where the candidate drew that place
+too differently for the graft's snapping to reach: panel 3's shirt had
+four along the bottom of the scan (`prompts/seam-lines.txt`). A redraw
+that changes several separate places needs `--parts`.
 
 ## Checking that a drawing reads
 

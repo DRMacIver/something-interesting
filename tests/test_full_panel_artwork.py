@@ -109,3 +109,18 @@ def test_panel_two_has_one_near_sleeve():
         column = drawing[1700:1900, x].astype(np.int8)
         assert (np.diff(column) == 1).sum() == 1
         assert column.sum() <= drawing[1700:1900, left + 2].sum() + 4
+
+
+def test_panel_three_s_lines_carry_on_below_the_scan():
+    # every line of Dad's shirt that reaches the bottom of the scan has ink
+    # directly beneath it in the drawing: none stops dead at the crop, and
+    # none restarts to one side
+    drawing = ink(3)
+    left, _, right, foot = build.scan_box(3)
+    above = drawing[foot - 1, left:right]
+    below = ndimage.binary_dilation(drawing[foot:foot + 3, left:right].any(0), iterations=8)
+    labels, count = ndimage.label(above)
+    assert count >= 6
+    stopped = [int(np.nonzero(labels == index)[0][0]) + left for index in range(1, count + 1)
+               if not below[labels == index].any()]
+    assert stopped == []

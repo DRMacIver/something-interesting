@@ -36,13 +36,18 @@ OUT = b.ROOT / 'assets/full-panels'
 # the thick line at the crop's left edge), so the redraw only joins the
 # drawn back edge to it with one plain line, and adds a fold below
 # (prompts/sleeve-hem.txt, inked over picks/p2-sleeve-hem-guide.png).
+# In panel 3, four of his shirt's lines stopped or jogged at the bottom of
+# the scan; one redraw carries them on (prompts/seam-lines.txt, inked over
+# picks/p3-seam-guide.png). A third number is how many separate places the
+# redraw changed, when more than one.
 PICKS = {
     1: dict(candidate='p1-walk-1.png'),
     2: dict(candidate='p2-kneel-19.png', head=493, old_shoe=(290, 2110, 670, 2420),
             shoe_at=(800, 2410), redraws=[('p2-tidy-1.png', (0, 1560, 1680, 2680)),
                                            ('p2-sleeve-hem.png', (450, 1400, 1350, 2000))]),
     3: dict(candidate='p3-kneel-3.png', head=562, old_shoe=(480, 2880, 940, 3240),
-            shoe_at=(1030, 3205), redraws=[('p3-tidy-2.png', (150, 2300, 2100, 3600))]),
+            shoe_at=(1030, 3205), redraws=[('p3-tidy-2.png', (150, 2300, 2100, 3600)),
+                                            ('p3-seam.png', (850, 1800, 1750, 2400), 2)]),
 }
 
 
@@ -60,8 +65,9 @@ def panel(number, panel_one=None):
     image, report = graft.graft(scan, Image.open(HERE / 'picks' / pick['candidate']), FRAMES[number])
     if 'shoe_at' in pick:
         image = shoe.tuck(image, panel_one, pick['head'], pick['old_shoe'], pick['shoe_at'])
-        for name, region in pick['redraws']:
-            image, _ = patch.patch(image, Image.open(HERE / 'picks' / name), region, protect=scan_box(number))
+        for name, region, *parts in pick['redraws']:
+            image, _ = patch.patch(image, Image.open(HERE / 'picks' / name), region,
+                                   protect=scan_box(number), parts=parts[0] if parts else 1)
     return image, report
 
 

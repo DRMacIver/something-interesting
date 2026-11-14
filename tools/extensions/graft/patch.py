@@ -38,18 +38,19 @@ def settle(edit, panel, reach=16):
     return np.roll(edit, best[1:], (0, 1)), best[1:]
 
 
-def changed(edit, panel, jitter=9, margin=30):
+def changed(edit, panel, jitter=9, margin=30, parts=1):
     """Where the edit really differs from the panel: ink in one that is more
     than `jitter` px from any ink in the other, grown by `margin`, with the
-    holes filled. Only the largest such place is kept: the one part that
-    was asked for."""
+    holes filled. Only the `parts` largest such places are kept: the parts
+    that were asked for."""
     far = (edit & (ndimage.distance_transform_edt(~panel) > jitter)) \
         | (panel & (ndimage.distance_transform_edt(~edit) > jitter))
     labels, count = ndimage.label(ndimage.binary_dilation(far, iterations=margin))
     if not count:
         return np.zeros(edit.shape, bool)
     sizes = ndimage.sum(far, labels, range(1, count + 1))
-    return ndimage.binary_fill_holes(labels == int(np.argmax(sizes)) + 1)
+    largest = np.argsort(sizes)[::-1][:parts] + 1
+    return ndimage.binary_fill_holes(np.isin(labels, largest))
 
 
 def meet_scan(panel, mask, protect):
@@ -101,15 +102,16 @@ def stubs(before, after, mask, small=1500, near=60):
     return loose
 
 
-def patch(panel_image, edit_image, box, protect=None):
+def patch(panel_image, edit_image, box, protect=None, parts=1):
     """(patched panel, mask of what changed). `protect` is a box of the
-    panel that must not change (the scan)."""
+    panel that must not change (the scan). `parts` is how many separate
+    places the redraw was asked to change."""
     panel = np.asarray(panel_image.convert('L')).copy()
     x0, y0, x1, y1 = box
     region = panel[y0:y1, x0:x1]
     edit = np.asarray(edit_image.convert('L').resize((x1 - x0, y1 - y0), Image.LANCZOS))
     edit_ink, _ = settle(edit < 128, region < 128)
-    mask = changed(edit_ink, region < 128)
+    mask = changed(edit_ink, region < 128, parts=parts)
     if protect:
         px0, py0, px1, py1 = protect
         guard = np.zeros(panel.shape, bool)
@@ -143,8 +145,9 @@ def main():
     ap.add_argument('out')
     ap.add_argument('box', type=int, nargs=4)
     ap.add_argument('--protect', type=int, nargs=4)
+    ap.add_argument('--parts', type=int, default=1)
     args = ap.parse_args()
-    image, mask = patch(Image.open(args.panel), Image.open(args.edit), args.box, args.protect)
+    image, mask = patch(Image.open(args.panel), Image.open(args.edit), args.box, args.protect, args.parts)
     image.save(args.out)
     ys, xs = np.nonzero(mask)
     print(f'changed {int(mask.sum())} px in ({xs.min()}, {ys.min()}, {xs.max()}, {ys.max()})'

@@ -305,3 +305,30 @@ def test_patch_leaves_no_stub_of_a_line_the_redraw_removed():
     ink = np.asarray(patched) < 128
     assert not ink[400:].any()                                       # no stub below the region
     assert ink[95:125, 300:600].any() and ink[290:340, 300:600].any()
+
+
+def test_patch_can_take_several_parts_from_one_redraw():
+    """Panel 3: one redraw mends several lines along the scan's bottom edge,
+    well apart from each other. Asked for two parts, both are taken; asked
+    for one, only the larger."""
+    import patch
+
+    def drawing(first, second):
+        image = Image.new('L', (900, 600), 255)
+        draw = ImageDraw.Draw(image)
+        draw.line([(50, 550), (850, 560)], fill=0, width=14)     # a line elsewhere
+        draw.line(first, fill=0, width=14)
+        draw.line(second, fill=0, width=14)
+        return image
+
+    panel = drawing([(150, 100), (150, 400)], [(700, 100), (700, 300)])
+    edit = drawing([(150, 100), (260, 400)], [(700, 100), (760, 300)])
+    one, _ = patch.patch(panel, edit, (0, 0, 900, 600))
+    both, mask = patch.patch(panel, edit, (0, 0, 900, 600), parts=2)
+
+    def ink(image):
+        return np.asarray(image) < 128
+
+    assert ink(one)[380:400, 240:270].any() and not ink(one)[280:300, 740:770].any()
+    assert ink(both)[380:400, 240:270].any() and ink(both)[280:300, 740:770].any()
+    assert not mask[500:].any()                                  # the line elsewhere was left alone
