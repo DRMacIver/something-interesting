@@ -115,8 +115,24 @@ shoes and side views from `docs/dad-reference/parts/shoe/`. `patch.py`
 then takes from the redraw only the place where its ink really moved, and
 re-inks it; the rest of the panel is untouched. Where the redrawn part
 reaches the crop, its lines are slid to meet the scan's exactly, since a
-redraw has not been through the graft's own joining (panel 2's sleeve,
-`prompts/sleeve-join.txt`, arrived thinner and lower than the scan's line).
+redraw has not been through the graft's own joining (the hem of panel 2's
+sleeve arrived thinner and lower than the scan's line).
+
+When the model keeps misreading a place, stop describing it and show it:
+erase the wrong strokes from the region, mark the lines that are missing
+in red, and ask the model to ink exactly those
+(`prompts/sleeve-hem.txt`, `picks/p2-sleeve-hem-guide.png`). All five
+redraws made that way followed the guide.
+
+## Checking that a drawing reads
+
+Ask the model to describe the picture, not to rate it. Show it the whole
+figure without saying what it is meant to be, and ask what each part is
+and whether anything is drawn twice, missing or unidentifiable. Do the
+same for the scan before extending it, to learn what Watterson's lines
+at the crop's edge are. A sleeve in panel 2 that measured well and joined
+the scan to the pixel was described as "a very large sleeve" beside a
+second one, with a muddle beneath: which is what it was.
 
 ```sh
 uv run tools/extensions/graft/patch.py PANEL.png EDIT.png OUT.png X0 Y0 X1 Y1 --protect <scan box>
@@ -142,5 +158,10 @@ the git history of `../reconstruction-v2/`.
   a kneeling man's folded legs, and upside down it reads as a hook. The
   same shoe mirrored but left upright, with the model tidying only the
   join, does work: see `shoe.py`.
+- **Redrawing panel 2's sleeve left of the crop** (four rounds: a tidied
+  join, a tube, a boxy sleeve, a new arm): the scan already holds that
+  sleeve's front edge and most of its hem, so every new sleeve was a
+  second one beside it. The first graft had it right apart from a clumsy
+  join; the fix was one hem line and a fold.
 - **Having the model redraw the shoe from Watterson's examples**: right
   marks, but soft, tapering shapes that barely read as shoes.

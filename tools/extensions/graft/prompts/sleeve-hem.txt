@@ -1,0 +1,13 @@
+Use your image generation tool (do not draw with code) to make ONE edited image, then save it.
+
+Context: a personal, non-commercial meme generator built on a newspaper comic strip. Attached:
+1. clean.png: part of a black-and-white brush-and-ink drawing of a kneeling man in a loose short-sleeved shirt, facing right. His near sleeve hangs from his shoulder: its back edge is the heavy vertical line left of centre, and its hem runs to the right from the bottom of that line. His bare forearm reaches off to the right. Two short pieces of line are MISSING just left of centre, where there are gaps.
+2. guide.png: the same image with the two missing lines shown in red.
+
+Redraw clean.png exactly as it is, same canvas, same positions, adding ONLY those two lines, in black ink, exactly where the red lines are:
+- The sleeve's hem: ONE plain, very slightly curved brush stroke from the foot of the heavy vertical line across to the thick black line that comes in from the right, so that they become one continuous hem. Normal line weight, swelling a little where it runs into the thick line. No double line, no hook, no blob.
+- A fold in his shirt below the sleeve: ONE short brush stroke that carries on leftwards and a little downwards from the black line below the hem, and tapers to a point. It does not touch anything else.
+
+Nothing else changes: do not move, add, remove or restyle any other line. Do not draw anything in red. Same brush line weight as the neighbouring lines. Pure black and white, no grey.
+
+Save the result as OUTNAME in the current directory, 1536x1024, and reply with one line saying it is saved.

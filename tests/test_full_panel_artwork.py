@@ -93,3 +93,19 @@ def test_dads_shoe_is_panel_one_s(number):
     # the same shape, to within the thinning of its line
     assert ndimage.distance_transform_edt(~his)[drawn].mean() < 6
     assert ndimage.distance_transform_edt(~drawn)[his].mean() < 12
+
+
+def test_panel_two_has_one_near_sleeve():
+    # Watterson's scan already holds Dad's near sleeve: its front edge, and
+    # most of its hem, the thick line that reaches the crop's left edge. The
+    # drawing adds only the sleeve's back edge and the last of the hem.
+    drawing = ink(2)
+    left = build.scan_box(2)[0]
+    # so between that back edge and the crop there is blank shirt above the
+    # hem, not the edge of a second sleeve
+    assert not drawing[1450:1780, left - 80:left].any()
+    # and the hem arrives at the crop as one line no heavier than the scan's
+    for x in (left - 12, left - 40):
+        column = drawing[1700:1900, x].astype(np.int8)
+        assert (np.diff(column) == 1).sum() == 1
+        assert column.sum() <= drawing[1700:1900, left + 2].sum() + 4
